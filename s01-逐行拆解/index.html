@@ -1,0 +1,1273 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>s01 - Agent Loop 逐行拆解 - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s01-agent-loop" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              s01 - Agent Loop 逐行拆解
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全局变量（运行前初始化）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="全局变量（运行前初始化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOOLS 详细结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_bash-65-77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        run_bash 函数（第 65-77 行）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agent_loop 逐行拆解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="agent_loop 逐行拆解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数签名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循环体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：调用 Claude API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：把模型回复存入历史
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：判断是否继续
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：执行工具，收集结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五步：结果追加到历史，循环回去
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整流程图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 语法备忘（本项目涉及的）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s03-todo-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s05-skill-loading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全局变量（运行前初始化）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="全局变量（运行前初始化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOOLS 详细结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_bash-65-77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        run_bash 函数（第 65-77 行）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        agent_loop 逐行拆解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="agent_loop 逐行拆解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数签名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循环体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一步：调用 Claude API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二步：把模型回复存入历史
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三步：判断是否继续
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四步：执行工具，收集结果
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五步：结果追加到历史，循环回去
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整流程图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 语法备忘（本项目涉及的）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="s01-agent-loop">s01 - Agent Loop 逐行拆解</h1>
+<h2 id="_1">核心思想</h2>
+<p>一个 <code>while True</code> 循环 + 一个工具 = 一个 Agent。</p>
+<p>模型决定什么时候调工具、什么时候停止。代码只负责执行模型的要求。</p>
+<hr />
+<h2 id="_2">全局变量（运行前初始化）</h2>
+<p>代码运行 <code>agent_loop()</code> 之前，先创建了 4 个全局变量：</p>
+<pre><code class="language-python">from anthropic import Anthropic
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+client = Anthropic(base_url=os.getenv(&quot;ANTHROPIC_BASE_URL&quot;))
+MODEL  = os.environ[&quot;MODEL_ID&quot;]
+SYSTEM = f&quot;You are a coding agent at {os.getcwd()}. Use bash to solve tasks. Act, don't explain.&quot;
+TOOLS  = [{ ... }]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>类型</th>
+<th>是什么</th>
+<th>类比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client</code></td>
+<td>Anthropic 对象</td>
+<td>API 客户端，发请求用的</td>
+<td>你和 Claude 之间的电话</td>
+</tr>
+<tr>
+<td><code>MODEL</code></td>
+<td>字符串</td>
+<td>模型名，如 <code>"claude-sonnet-4-6"</code></td>
+<td>打电话给谁</td>
+</tr>
+<tr>
+<td><code>SYSTEM</code></td>
+<td>字符串</td>
+<td>系统提示词，定义角色</td>
+<td>岗位说明书</td>
+</tr>
+<tr>
+<td><code>TOOLS</code></td>
+<td>列表[字典]</td>
+<td>可用工具定义（只有 bash）</td>
+<td>工具箱里唯一的工具</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tools">TOOLS 详细结构</h3>
+<pre><code class="language-python">TOOLS = [{
+    &quot;name&quot;: &quot;bash&quot;,                  # 工具名
+    &quot;description&quot;: &quot;Run a shell command.&quot;,  # 告诉模型这工具干嘛的
+    &quot;input_schema&quot;: {                # 参数定义（JSON Schema 格式）
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;command&quot;: {&quot;type&quot;: &quot;string&quot;}  # 一个参数：command，类型字符串
+        },
+        &quot;required&quot;: [&quot;command&quot;],     # command 是必填
+    },
+}]
+</code></pre>
+<hr />
+<h2 id="run_bash-65-77">run_bash 函数（第 65-77 行）</h2>
+<p>模型的"手"——唯一能做的事就是执行 bash 命令。</p>
+<pre><code class="language-python">def run_bash(command: str) -&gt; str:       # 输入字符串，返回字符串
+    # 安全检查：拦截危险命令
+    dangerous = [&quot;rm -rf /&quot;, &quot;sudo&quot;, &quot;shutdown&quot;, &quot;reboot&quot;, &quot;&gt; /dev/&quot;]
+    if any(d in command for d in dangerous):
+        return &quot;Error: Dangerous command blocked&quot;
+
+    # 执行命令
+    r = subprocess.run(
+        command,              # 要执行的命令
+        shell=True,           # 通过 shell 执行（支持管道 |、重定向 &gt; 等）
+        cwd=os.getcwd(),      # 在当前目录执行
+        capture_output=True,  # 捕获输出（stdout + stderr）
+        text=True,            # 输出是字符串不是字节
+        timeout=120           # 120 秒超时
+    )
+    out = (r.stdout + r.stderr).strip()    # 拼接正常输出和错误输出
+    return out[:50000] if out else &quot;(no output)&quot;  # 最多返回 50000 字符
+</code></pre>
+<hr />
+<h2 id="agent_loop">agent_loop 逐行拆解</h2>
+<h3 id="_3">函数签名</h3>
+<pre><code class="language-python">def agent_loop(messages: list):   # 接收对话历史列表
+</code></pre>
+<p><code>messages</code> 初始状态示例：</p>
+<pre><code class="language-python">messages = [
+    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;帮我创建一个 hello.py 文件&quot;}
+]
+</code></pre>
+<h3 id="_4">循环体</h3>
+<pre><code class="language-python">while True:    # 死循环，模型说不调工具才退出
+</code></pre>
+<h3 id="claude-api">第一步：调用 Claude API</h3>
+<pre><code class="language-python">response = client.messages.create(
+    model=MODEL,            # 哪个模型
+    system=SYSTEM,          # 系统提示词
+    messages=messages,      # 对话历史
+    tools=TOOLS,            # 可用工具
+    max_tokens=8000,        # 最大回复长度
+)
+</code></pre>
+<p><code>client.messages.create()</code> 是 Anthropic SDK 的方法，本质发了一个 HTTP POST 请求。</p>
+<p>返回的 <code>response</code> 对象：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>response.content</code></td>
+<td>列表</td>
+<td>模型返回的内容块（可能包含文字 + 工具调用）</td>
+</tr>
+<tr>
+<td><code>response.stop_reason</code></td>
+<td>字符串</td>
+<td><code>"tool_use"</code> = 想调工具，<code>"end_turn"</code> = 说完了</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">第二步：把模型回复存入历史</h3>
+<pre><code class="language-python">messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
+</code></pre>
+<p>此时 messages：</p>
+<pre><code class="language-python">[
+    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: &quot;帮我创建 hello.py&quot;},      # 用户
+    {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: [ ... ]}                    # 模型回复（新增）
+]
+</code></pre>
+<h3 id="_6">第三步：判断是否继续</h3>
+<pre><code class="language-python">if response.stop_reason != &quot;tool_use&quot;:   # 不是想调工具？
+    return                                # 退出，循环结束
+</code></pre>
+<h3 id="_7">第四步：执行工具，收集结果</h3>
+<pre><code class="language-python">results = []                             # 存放工具执行结果
+for block in response.content:           # 遍历每个内容块
+    if block.type == &quot;tool_use&quot;:         # 只处理工具调用块
+        output = run_bash(block.input[&quot;command&quot;])  # 执行命令
+        results.append({
+            &quot;type&quot;: &quot;tool_result&quot;,       # 类型标记
+            &quot;tool_use_id&quot;: block.id,     # 配对 ID（哪个调用对应哪个结果）
+            &quot;content&quot;: output,           # 实际输出
+        })
+</code></pre>
+<p><code>block</code>（ToolUseBlock）的结构：</p>
+<pre><code class="language-python">block.type   == &quot;tool_use&quot;            # 块类型
+block.id     == &quot;toolu_xxx&quot;           # 唯一 ID，用于配对
+block.name   == &quot;bash&quot;                # 工具名
+block.input  == {&quot;command&quot;: &quot;ls&quot;}     # 传入参数
+</code></pre>
+<h3 id="_8">第五步：结果追加到历史，循环回去</h3>
+<pre><code class="language-python">messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
+# 回到 while True 开头，带着完整历史再次调 API
+</code></pre>
+<p>此时 messages：</p>
+<pre><code class="language-python">[
+    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: &quot;帮我创建 hello.py&quot;},        # 1. 用户提问
+    {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: [tool_use_block]},            # 2. 模型：我要执行 bash
+    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: [tool_result]}               # 3. 执行结果（新增）
+]
+</code></pre>
+<hr />
+<h2 id="_9">完整流程图</h2>
+<pre><code>用户输入 &quot;帮我创建 hello.py&quot;
+        │
+        ▼
+   ┌─ messages ───────────────┐
+   │ [user: 帮我创建 hello.py] │
+   └──────────┬───────────────┘
+              │  发给 Claude API
+              ▼
+   Claude: &quot;我要执行 echo 'hello' &gt; hello.py&quot;
+   stop_reason = &quot;tool_use&quot;
+              │
+              ▼
+   run_bash(&quot;echo 'hello' &gt; hello.py&quot;)  →  &quot;(no output)&quot;
+              │
+              ▼
+   结果追加到 messages，再发 API
+              │
+              ▼
+   Claude: &quot;文件已创建完成。&quot;
+   stop_reason = &quot;end_turn&quot;
+              │
+              ▼
+   退出循环 → 返回
+</code></pre>
+<hr />
+<h2 id="_10">关键理解</h2>
+<ol>
+<li><strong>messages 是唯一的状态</strong>：整个循环就是在不断往这个列表里追加消息</li>
+<li><strong>模型做决策</strong>：什么时候调工具、调什么、什么时候停，全是模型决定的</li>
+<li><strong>代码只执行</strong>：循环体不做任何判断，只是忠实地执行模型的要求</li>
+<li><strong>tool_use_id 配对</strong>：每次工具调用有唯一 ID，结果必须带上这个 ID，API 才能对上号</li>
+</ol>
+<hr />
+<h2 id="python">Python 语法备忘（本项目涉及的）</h2>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f"..."</code></td>
+<td>f-string，嵌入变量</td>
+<td><code>f"路径是{os.getcwd()}"</code></td>
+</tr>
+<tr>
+<td><code>dict["key"]</code></td>
+<td>字典取值</td>
+<td><code>block.input["command"]</code></td>
+</tr>
+<tr>
+<td><code>list.append(x)</code></td>
+<td>列表追加元素</td>
+<td><code>results.append({...})</code></td>
+</tr>
+<tr>
+<td><code>any(... for ... in ...)</code></td>
+<td>任意一个满足则为 True</td>
+<td><code>any(d in cmd for d in dangerous)</code></td>
+</tr>
+<tr>
+<td><code>a if cond else b</code></td>
+<td>三元表达式</td>
+<td><code>out[:50000] if out else "(empty)"</code></td>
+</tr>
+<tr>
+<td><code>str.strip()</code></td>
+<td>去首尾空白</td>
+<td><code>"  hello  ".strip()</code> → <code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>str[:N]</code></td>
+<td>切片，取前 N 个</td>
+<td><code>"hello"[:3]</code> → <code>"hel"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="langpython-domainagent-type-sessions01">Lang/Python #Domain/Agent #Type/原理 #Session/s01</h1>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

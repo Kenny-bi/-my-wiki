@@ -1,0 +1,1543 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/s05-skill-loading/">
+      
+      
+        <link rel="prev" href="../s04-subagent/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>s05 - Skill Loading 按需加载技能 - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s05-skill-loading" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              s05 - Skill Loading 按需加载技能
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s03-todo-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 1-36 行：文件头注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-55-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 38-55 行：import 和初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-107-skillloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 58-107 行：SkillLoader 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 58-107 行：SkillLoader 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_load_all-65-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _load_all 方法（第 65-72 行）：扫描所有技能文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_parse_frontmatter-74-83-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _parse_frontmatter 方法（第 74-83 行）：解析 YAML 头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_descriptions-85-97-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_descriptions 方法（第 85-97 行）：生成 Layer 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_content-99-104-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_content 方法（第 99-104 行）：返回 Layer 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 107 行：全局实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-114-system-prompt-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 109-114 行：System Prompt（注入 Layer 1）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 117-163 行：五个工具函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#166-172-tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 166-172 行：TOOL_HANDLERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-185-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 174-185 行：TOOLS 定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#188-208-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 188-208 行：agent_loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-227-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 211-227 行：main 入口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整数据流示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04-s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s04 → s05 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s05 的设计智慧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        和 Claude Code 真实产品的对应
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 1-36 行：文件头注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-55-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 38-55 行：import 和初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-107-skillloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 58-107 行：SkillLoader 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 58-107 行：SkillLoader 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_load_all-65-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _load_all 方法（第 65-72 行）：扫描所有技能文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_parse_frontmatter-74-83-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _parse_frontmatter 方法（第 74-83 行）：解析 YAML 头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_descriptions-85-97-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_descriptions 方法（第 85-97 行）：生成 Layer 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_content-99-104-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_content 方法（第 99-104 行）：返回 Layer 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 107 行：全局实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-114-system-prompt-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 109-114 行：System Prompt（注入 Layer 1）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 117-163 行：五个工具函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#166-172-tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 166-172 行：TOOL_HANDLERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-185-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 174-185 行：TOOLS 定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#188-208-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 188-208 行：agent_loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-227-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 211-227 行：main 入口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整数据流示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04-s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s04 → s05 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s05 的设计智慧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        和 Claude Code 真实产品的对应
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="s05-skill-loading">s05 - Skill Loading 按需加载技能</h1>
+<h2 id="_1">核心思想</h2>
+<p>s05 解决的问题是：<strong>不要把所有专业知识都塞进 system prompt，而是在模型需要时按需加载。</strong></p>
+<p>两层注入架构：</p>
+<pre><code>Layer 1（便宜）：system prompt 只放技能名 + 一句话描述（~100 tokens/skill）
+Layer 2（按需）：模型调用 load_skill(&quot;pdf&quot;) 时，完整技能指令通过 tool_result 返回
+
+┌─────────────────────────────────┐
+│ System Prompt                   │
+│                                 │
+│ Skills available:               │
+│   - pdf: Process PDF files...   │  ← Layer 1: 只有名字和描述
+│   - code-review: Review code... │     每轮对话都会发送，所以要短
+│                                 │
+└─────────────────────────────────┘
+
+模型决定需要 PDF 技能 → 调用 load_skill(&quot;pdf&quot;)
+
+┌─────────────────────────────────┐
+│ tool_result                     │
+│ &lt;skill name=&quot;pdf&quot;&gt;              │
+│   Full PDF processing instrs    │  ← Layer 2: 完整的几十行技能指令
+│   Step 1: ...                   │     只在需要时加载一次
+│   Step 2: ...                   │
+│ &lt;/skill&gt;                        │
+└─────────────────────────────────┘
+</code></pre>
+<p><strong>为什么要分两层</strong>：system prompt 里的每个 token 在<strong>每一轮对话</strong>都会发送。一个技能可能几百行，塞 10 个技能就是几千 token 的固定开销，大部分任务只用 1-2 个，完全浪费。</p>
+<hr />
+<h2 id="1-36">第 1-36 行：文件头注释</h2>
+<pre><code class="language-python">&quot;&quot;&quot;
+s05_skill_loading.py - Skills
+
+Two-layer skill injection that avoids bloating the system prompt:
+
+    Layer 1 (cheap): skill names in system prompt (~100 tokens/skill)
+    Layer 2 (on demand): full skill body in tool_result
+
+    skills/
+      pdf/
+        SKILL.md          &lt;-- frontmatter (name, description) + body
+      code-review/
+        SKILL.md
+
+Key insight: &quot;Don't put everything in the system prompt. Load on demand.&quot;
+&quot;&quot;&quot;
+</code></pre>
+<p>注释里画了两层架构的图，最后一句总结：<strong>不要把所有东西放 system prompt，按需加载。</strong></p>
+<hr />
+<h2 id="38-55-import">第 38-55 行：import 和初始化</h2>
+<pre><code class="language-python">import os
+import re
+import subprocess
+import yaml
+from pathlib import Path
+
+from anthropic import Anthropic
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+if os.getenv(&quot;ANTHROPIC_BASE_URL&quot;):
+    os.environ.pop(&quot;ANTHROPIC_AUTH_TOKEN&quot;, None)
+
+WORKDIR = Path.cwd()
+client = Anthropic(base_url=os.getenv(&quot;ANTHROPIC_BASE_URL&quot;))
+MODEL = os.environ[&quot;MODEL_ID&quot;]
+SKILLS_DIR = WORKDIR / &quot;skills&quot;
+</code></pre>
+<p>和 s03/s04 一样的初始化。<strong>新增两样</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>新增</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>import re</code></td>
+<td>正则表达式，用来解析 SKILL.md 的 YAML 头</td>
+</tr>
+<tr>
+<td><code>import yaml</code></td>
+<td>PyYAML 库，把 YAML 文本变成 Python 字典</td>
+</tr>
+<tr>
+<td><code>SKILLS_DIR</code></td>
+<td>技能文件目录，<code>Path.cwd() / "skills"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>re</code> 是什么</strong>：Python 内置的正则表达式模块。<code>re.match(正则, 文本)</code> 从文本开头匹配。</p>
+<p><strong><code>yaml</code> 是什么</strong>：第三方库，<code>pip install pyyaml</code>。<code>yaml.safe_load("name: pdf")</code> 返回 <code>{"name": "pdf"}</code>。带 <code>safe</code> 的版本只解析基本类型，不执行任意代码，比 <code>yaml.load()</code> 安全。</p>
+<hr />
+<h2 id="58-107-skillloader">第 58-107 行：SkillLoader 类（本期重点）</h2>
+<pre><code class="language-python">class SkillLoader:
+    def __init__(self, skills_dir: Path):
+        self.skills_dir = skills_dir
+        self.skills = {}           # 字典: {技能名: {meta, body, path}}
+        self._load_all()
+</code></pre>
+<p><strong>类的职责</strong>：扫描 <code>skills/</code> 目录下的所有 <code>SKILL.md</code>，解析后存在内存里。</p>
+<p><strong><code>_load_all</code> 前面的下划线</strong>：Python 约定，以 <code>_</code> 开头的方法表示"内部方法，外部不要直接调用"。这只是约定，Python 不会强制。</p>
+<hr />
+<h3 id="_load_all-65-72"><code>_load_all</code> 方法（第 65-72 行）：扫描所有技能文件</h3>
+<pre><code class="language-python">def _load_all(self):
+    if not self.skills_dir.exists():
+        return
+    for f in sorted(self.skills_dir.rglob(&quot;SKILL.md&quot;)):
+        text = f.read_text()
+        meta, body = self._parse_frontmatter(text)
+        name = meta.get(&quot;name&quot;, f.parent.name)
+        self.skills[name] = {&quot;meta&quot;: meta, &quot;body&quot;: body, &quot;path&quot;: str(f)}
+</code></pre>
+<p>逐行拆解：</p>
+<p><strong>第 66-67 行</strong>：目录不存在就直接返回，不报错。防御性编程。</p>
+<p><strong>第 68 行</strong>：<code>rglob("SKILL.md")</code> 递归搜索所有子目录中叫 <code>SKILL.md</code> 的文件。</p>
+<pre><code>skills/
+├── pdf/SKILL.md              ← 找到
+├── code-review/SKILL.md      ← 找到
+├── agent-builder/SKILL.md    ← 找到
+├── mcp-builder/SKILL.md      ← 找到
+└── agent-builder/references/ ← 没有 SKILL.md，跳过
+</code></pre>
+<p><strong><code>sorted()</code></strong>：保证每次加载顺序一致。不同操作系统 <code>rglob</code> 返回的顺序可能不同，sorted 消除这个不确定性。</p>
+<p><strong>第 71 行</strong>：<code>f.parent.name</code> 取父目录名作为备选技能名。</p>
+<pre><code class="language-python"># 如果 SKILL.md 里没有写 name: xxx，就用文件夹名
+# skills/pdf/SKILL.md → f.parent = skills/pdf → f.parent.name = &quot;pdf&quot;
+</code></pre>
+<p><strong>第 72 行</strong>：每个技能存三个字段：</p>
+<pre><code class="language-python">{
+    &quot;meta&quot;: {&quot;name&quot;: &quot;pdf&quot;, &quot;description&quot;: &quot;Process PDF files...&quot;},  # YAML 头解析出的字典
+    &quot;body&quot;: &quot;# PDF Processing Skill\nYou now have...&quot;,              # 正文（去掉 YAML 头后的部分）
+    &quot;path&quot;: &quot;D:/AI_Projects/learn-claude-code/skills/pdf/SKILL.md&quot;  # 文件路径，调试用
+}
+</code></pre>
+<hr />
+<h3 id="_parse_frontmatter-74-83-yaml"><code>_parse_frontmatter</code> 方法（第 74-83 行）：解析 YAML 头</h3>
+<pre><code class="language-python">def _parse_frontmatter(self, text: str) -&gt; tuple:
+    match = re.match(r&quot;^---\n(.*?)\n---\n(.*)&quot;, text, re.DOTALL)
+    if not match:
+        return {}, text
+    try:
+        meta = yaml.safe_load(match.group(1)) or {}
+    except yaml.YAMLError:
+        meta = {}
+    return meta, match.group(2).strip()
+</code></pre>
+<p><strong>SKILL.md 的结构</strong>：</p>
+<pre><code>---                        ← 开始分隔线
+name: pdf                  ← YAML frontmatter
+description: Process PDF files...
+---                        ← 结束分隔线
+
+# PDF Processing Skill     ← 正文 body
+You now have expertise...
+</code></pre>
+<p><strong>正则拆解</strong>：<code>r"^---\n(.*?)\n---\n(.*)"</code> </p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>匹配什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^---\n</code></td>
+<td>开头的 <code>---</code> 加换行</td>
+</tr>
+<tr>
+<td><code>(.*?)</code></td>
+<td>第 1 组：YAML 内容，非贪婪（尽可能少匹配）</td>
+</tr>
+<tr>
+<td><code>\n---\n</code></td>
+<td>中间的 <code>---</code> 分隔线</td>
+</tr>
+<tr>
+<td><code>(.*)</code></td>
+<td>第 2 组：正文 body</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>re.DOTALL</code></strong>：让 <code>.</code> 也能匹配换行符。没有这个标志，<code>.</code> 只匹配非换行字符，<code>(.*?)</code> 就匹配不了跨行的 YAML 内容。</p>
+<p><strong>第 78 行</strong>：<code>match.group(1)</code> 是第 1 组（YAML），<code>match.group(2)</code> 是第 2 组（正文）。</p>
+<p><strong>第 79-81 行</strong>：双重防御：
+- <code>yaml.safe_load(...)</code> 解析 YAML → 字典
+- <code>or {}</code>：如果 <code>safe_load</code> 返回 None（空 YAML），用空字典
+- <code>try/except</code>：YAML 格式错误也不崩溃，返回空字典</p>
+<p><strong>返回值</strong>：<code>(meta字典, 正文字符串)</code>。s03 学过 Python 函数可以返回 tuple。</p>
+<hr />
+<h3 id="get_descriptions-85-97-layer-1"><code>get_descriptions</code> 方法（第 85-97 行）：生成 Layer 1</h3>
+<pre><code class="language-python">def get_descriptions(self) -&gt; str:
+    if not self.skills:
+        return &quot;(no skills available)&quot;
+    lines = []
+    for name, skill in self.skills.items():
+        desc = skill[&quot;meta&quot;].get(&quot;description&quot;, &quot;No description&quot;)
+        tags = skill[&quot;meta&quot;].get(&quot;tags&quot;, &quot;&quot;)
+        line = f&quot;  - {name}: {desc}&quot;
+        if tags:
+            line += f&quot; [{tags}]&quot;
+        lines.append(line)
+    return &quot;\n&quot;.join(lines)
+</code></pre>
+<p><strong>输出示例</strong>：</p>
+<pre><code>  - pdf: Process PDF files - extract text, create PDFs, merge documents. Use when user asks to read PDF, create PDF, or work with PDF files.
+  - code-review: Perform thorough code reviews with security, performance, and maintainability analysis. Use when user asks to review code, check for bugs, or audit a codebase.
+  - agent-builder: ...
+  - mcp-builder: ...
+</code></pre>
+<p>每条一行，name + description + 可选的 tags。这些会被插入 system prompt。</p>
+<hr />
+<h3 id="get_content-99-104-layer-2"><code>get_content</code> 方法（第 99-104 行）：返回 Layer 2</h3>
+<pre><code class="language-python">def get_content(self, name: str) -&gt; str:
+    skill = self.skills.get(name)
+    if not skill:
+        return f&quot;Error: Unknown skill '{name}'. Available: {', '.join(self.skills.keys())}&quot;
+    return f&quot;&lt;skill name=\&quot;{name}\&quot;&gt;\n{skill['body']}\n&lt;/skill&gt;&quot;
+</code></pre>
+<p><strong>第 102 行</strong>：<code>self.skills.get(name)</code> 找不到返回 None，不会报 KeyError。</p>
+<p><strong>第 103 行</strong>：错误消息里列出所有可用技能名，帮助模型（或开发者）知道能加载哪些。</p>
+<p><strong>第 104 行</strong>：用 <code>&lt;skill&gt;</code> XML 标签包裹正文。Claude API 推荐用 XML 标签结构化内容，模型更容易理解边界。</p>
+<pre><code class="language-xml">&lt;skill name=&quot;pdf&quot;&gt;
+  # PDF Processing Skill
+  You now have expertise in PDF manipulation...
+  ...（完整的几十行指令）
+&lt;/skill&gt;
+</code></pre>
+<hr />
+<h2 id="107">第 107 行：全局实例</h2>
+<pre><code class="language-python">SKILL_LOADER = SkillLoader(SKILLS_DIR)
+</code></pre>
+<p>程序启动时创建一个 SkillLoader，扫描所有 SKILL.md 并加载到内存。之后 <code>load_skill</code> 工具直接从内存取，不用重复读文件。</p>
+<hr />
+<h2 id="109-114-system-prompt-layer-1">第 109-114 行：System Prompt（注入 Layer 1）</h2>
+<pre><code class="language-python">SYSTEM = f&quot;&quot;&quot;You are a coding agent at {WORKDIR}.
+Use load_skill to access specialized knowledge before tackling unfamiliar topics.
+
+Skills available:
+{SKILL_LOADER.get_descriptions()}&quot;&quot;&quot;
+</code></pre>
+<p>f-string 里直接嵌入 <code>get_descriptions()</code> 的输出。模型在第一轮对话就能看到有哪些技能可用。</p>
+<p>效果：</p>
+<pre><code>You are a coding agent at D:\AI_Projects\learn-claude-code.
+Use load_skill to access specialized knowledge before tackling unfamiliar topics.
+
+Skills available:
+  - pdf: Process PDF files...
+  - code-review: Perform thorough code reviews...
+  - agent-builder: ...
+</code></pre>
+<hr />
+<h2 id="117-163">第 117-163 行：五个工具函数</h2>
+<p>和 s04 完全一样：<code>safe_path</code>, <code>run_bash</code>, <code>run_read</code>, <code>run_write</code>, <code>run_edit</code>。不重复。</p>
+<hr />
+<h2 id="166-172-tool_handlers">第 166-172 行：TOOL_HANDLERS</h2>
+<pre><code class="language-python">TOOL_HANDLERS = {
+    &quot;bash&quot;:       lambda **kw: run_bash(kw[&quot;command&quot;]),
+    &quot;read_file&quot;:  lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;)),
+    &quot;write_file&quot;: lambda **kw: run_write(kw[&quot;path&quot;], kw[&quot;content&quot;]),
+    &quot;edit_file&quot;:  lambda **kw: run_edit(kw[&quot;path&quot;], kw[&quot;old_text&quot;], kw[&quot;new_text&quot;]),
+    &quot;load_skill&quot;: lambda **kw: SKILL_LOADER.get_content(kw[&quot;name&quot;]),   # ← 新增！
+}
+</code></pre>
+<p><strong>关键区别</strong>：<code>load_skill</code> 不执行任何命令，不读文件，不做 IO——只是从内存字典里取一段预加载好的文本。所以它是五个工具里最快的。</p>
+<hr />
+<h2 id="174-185-tools">第 174-185 行：TOOLS 定义</h2>
+<pre><code class="language-python">TOOLS = [
+    {&quot;name&quot;: &quot;bash&quot;, ...},
+    {&quot;name&quot;: &quot;read_file&quot;, ...},
+    {&quot;name&quot;: &quot;write_file&quot;, ...},
+    {&quot;name&quot;: &quot;edit_file&quot;, ...},
+    {&quot;name&quot;: &quot;load_skill&quot;,
+     &quot;description&quot;: &quot;Load specialized knowledge by name.&quot;,
+     &quot;input_schema&quot;: {
+         &quot;type&quot;: &quot;object&quot;,
+         &quot;properties&quot;: {
+             &quot;name&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;Skill name to load&quot;}
+         },
+         &quot;required&quot;: [&quot;name&quot;]
+     }},
+]
+</code></pre>
+<p><strong><code>name</code> 参数有 description</strong>：<code>"Skill name to load"</code>。这是给模型看的提示，帮助模型理解应该传什么值。之前四个工具的参数没有 description，因为 <code>command</code>、<code>path</code> 这些已经足够自明。</p>
+<hr />
+<h2 id="188-208-agent_loop">第 188-208 行：agent_loop</h2>
+<pre><code class="language-python">def agent_loop(messages: list):
+    while True:
+        response = client.messages.create(
+            model=MODEL, system=SYSTEM, messages=messages,
+            tools=TOOLS, max_tokens=8000,
+        )
+        messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
+        if response.stop_reason != &quot;tool_use&quot;:
+            return
+        results = []
+        for block in response.content:
+            if block.type == &quot;tool_use&quot;:
+                handler = TOOL_HANDLERS.get(block.name)
+                try:
+                    output = handler(**block.input) if handler else f&quot;Unknown tool: {block.name}&quot;
+                except Exception as e:
+                    output = f&quot;Error: {e}&quot;
+                print(f&quot;&gt; {block.name}:&quot;)
+                print(str(output)[:200])
+                results.append({&quot;type&quot;: &quot;tool_result&quot;, &quot;tool_use_id&quot;: block.id, &quot;content&quot;: str(output)})
+        messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
+</code></pre>
+<p>和 s02 的循环结构一样，没有新逻辑。<code>load_skill</code> 工具的处理走的是同一个 <code>TOOL_HANDLERS</code> 分发表。</p>
+<hr />
+<h2 id="211-227-main">第 211-227 行：main 入口</h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    history = []
+    while True:
+        try:
+            query = input(&quot;\033[36ms05 &gt;&gt; \033[0m&quot;)
+        except (EOFError, KeyboardInterrupt):
+            break
+        if query.strip().lower() in (&quot;q&quot;, &quot;exit&quot;, &quot;&quot;):
+            break
+        history.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: query})
+        agent_loop(history)
+        response_content = history[-1][&quot;content&quot;]
+        if isinstance(response_content, list):
+            for block in response_content:
+                if hasattr(block, &quot;text&quot;):
+                    print(block.text)
+        print()
+</code></pre>
+<p>和 s03/s04 完全一样，只是提示符从 <code>s03 &gt;&gt;</code> 变成了 <code>s05 &gt;&gt;</code>。</p>
+<hr />
+<h2 id="_2">完整数据流示例</h2>
+<p>用户问 "帮我 review 一下 main.py"：</p>
+<pre><code>1. 用户输入 → history.append(user message)
+
+2. API 调用，system prompt 包含 Layer 1:
+   &quot;Skills available:
+     - pdf: Process PDF files...
+     - code-review: Perform thorough code reviews...&quot;
+
+3. 模型思考: &quot;我需要 code-review 技能&quot;
+   → 调用 load_skill(&quot;code-review&quot;)
+
+4. handler 执行: SKILL_LOADER.get_content(&quot;code-review&quot;)
+   → 返回完整的 code-review 检查清单（Layer 2，100+ 行）
+
+5. tool_result 发回 API
+   → 模型现在有了完整的 review 方法论
+
+6. 模型再调用 read_file(&quot;main.py&quot;) 读取代码
+
+7. 模型根据技能指令 + 代码内容，输出 review 结果
+</code></pre>
+<p><strong>关键点</strong>：如果用户问的是 "帮我写个脚本"，模型可能根本不调用 load_skill——省下了加载 code-review 技能的 token。<strong>按需加载的核心价值：用不到就不花钱。</strong></p>
+<hr />
+<h2 id="s04-s05">s04 → s05 变化对比</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>s04</th>
+<th>s05</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增 import</td>
+<td>无</td>
+<td><code>re</code>, <code>yaml</code></td>
+</tr>
+<tr>
+<td>新增类</td>
+<td>无</td>
+<td><code>SkillLoader</code>（扫描/解析/查询）</td>
+</tr>
+<tr>
+<td>新增工具</td>
+<td>task（派子 agent）</td>
+<td>load_skill（加载技能文本）</td>
+</tr>
+<tr>
+<td>System Prompt</td>
+<td>静态文本</td>
+<td>动态拼接技能描述</td>
+</tr>
+<tr>
+<td>Agent 数量</td>
+<td>2（父子）</td>
+<td>1</td>
+</tr>
+<tr>
+<td>外部数据</td>
+<td>无</td>
+<td><code>skills/</code> 目录下的 SKILL.md 文件</td>
+</tr>
+<tr>
+<td>新 Python</td>
+<td><code>_</code> 占位符, 列表相加</td>
+<td><code>re.match()</code>, <code>yaml.safe_load()</code>, <code>rglob()</code>, <code>re.DOTALL</code></td>
+</tr>
+<tr>
+<td>核心机制</td>
+<td>上下文隔离</td>
+<td>延迟加载（Lazy Loading）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="s05">s05 的设计智慧</h2>
+<ol>
+<li><strong>延迟加载</strong>：只在实际需要时才加载完整知识，节省 token 成本</li>
+<li><strong>关注点分离</strong>：技能定义（SKILL.md）和 Agent 逻辑（Python 代码）完全解耦</li>
+<li><strong>零代码扩展</strong>：添加新技能只需在 <code>skills/</code> 下新建文件夹 + SKILL.md，不改一行 Python</li>
+<li><strong>YAML frontmatter</strong>：用标准格式存元数据，解析简单，人类可读</li>
+</ol>
+<hr />
+<h2 id="claude-code">和 Claude Code 真实产品的对应</h2>
+<table>
+<thead>
+<tr>
+<th>s05 概念</th>
+<th>Claude Code 对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>skills/</code> 目录</td>
+<td>Claude Code 的 Skills 插件系统</td>
+</tr>
+<tr>
+<td><code>SKILL.md</code> 的 frontmatter</td>
+<td>Skills 列表里看到的名称和描述</td>
+</tr>
+<tr>
+<td><code>get_descriptions()</code> → system prompt</td>
+<td>系统提示中列出的可用 Skills</td>
+</tr>
+<tr>
+<td><code>load_skill()</code> 工具调用</td>
+<td>模型决定使用某个 Skill 时的加载动作</td>
+</tr>
+<tr>
+<td><code>get_content()</code> 返回的 body</td>
+<td>完整的技能指令（如 PDF 处理步骤）</td>
+</tr>
+</tbody>
+</table>
+<p>Claude Code 的 <code>/skill</code> 命令触发就是这个模式的完整实现。</p>
+<hr />
+<h1 id="langpython-domainagent-type-sessions05">Lang/Python #Domain/Agent #Type/原理 #Session/s05</h1>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

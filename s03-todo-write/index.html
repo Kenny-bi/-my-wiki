@@ -1,0 +1,1357 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/s03-todo-write/">
+      
+      
+        <link rel="prev" href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/">
+      
+      
+        <link rel="next" href="../s04-subagent/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>s03 - TodoWrite 与 Nag 提醒 - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s03-todowrite-nag" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              s03 - TodoWrite 与 Nag 提醒
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-37-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 30-37 行：import 和环境
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-40-base_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 39-40 行：base_url 特殊处理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 42-48 行：全局初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-86-todomanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 52-86 行：TodoManager 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 52-86 行：TodoManager 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-56-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update() 方法（第 56-75 行）：验证 + 更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render-77-86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        render() 方法（第 77-86 行）：格式化为文本
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#89-todomanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 89 行：全局 TodoManager 实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-139" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 93-139 行：四个文件/命令工具
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-160-tool_handlers-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 141-160 行：TOOL_HANDLERS + TOOLS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164-192-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 164-192 行：agent_loop（本期核心变化）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 164-192 行：agent_loop（本期核心变化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s01s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对比 s01/s02 的变化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176-188-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 176-188 行：执行工具，追踪 todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#189-191-nag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 189-191 行：Nag 提醒机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#195-211-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 195-211 行：main 交互
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02-s03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s02 → s03 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s05-skill-loading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-37-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 30-37 行：import 和环境
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-40-base_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 39-40 行：base_url 特殊处理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 42-48 行：全局初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-86-todomanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 52-86 行：TodoManager 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 52-86 行：TodoManager 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-56-75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        update() 方法（第 56-75 行）：验证 + 更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#render-77-86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        render() 方法（第 77-86 行）：格式化为文本
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#89-todomanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 89 行：全局 TodoManager 实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-139" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 93-139 行：四个文件/命令工具
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#141-160-tool_handlers-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 141-160 行：TOOL_HANDLERS + TOOLS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164-192-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 164-192 行：agent_loop（本期核心变化）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 164-192 行：agent_loop（本期核心变化）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s01s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对比 s01/s02 的变化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176-188-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 176-188 行：执行工具，追踪 todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#189-191-nag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 189-191 行：Nag 提醒机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#195-211-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 195-211 行：main 交互
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s02-s03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s02 → s03 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="s03-todowrite-nag">s03 - TodoWrite 与 Nag 提醒</h1>
+<h2 id="_1">核心思想</h2>
+<p>s03 给 Agent 加了一个 <strong>todo 工具</strong>：模型可以自己维护任务列表，标记进度。</p>
+<p>加上一个 <strong>Nag 提醒机制</strong>：如果连续 3 轮没用 todo，就往对话里塞一句 "别忘了更新 todo"。</p>
+<pre><code>+----------+      +-------+      +---------+
+|   User   | ---&gt; |  LLM  | ---&gt; | Tools   |
+|  prompt  |      |       |      | + todo  |
++----------+      +---+---+      +----+----+
+                      ^               |
+                      |   tool_result |
+                      +---------------+
+                            |
+                +-----------+-----------+
+                | TodoManager state     |
+                | [ ] task A            |
+                | [&gt;] task B &lt;- doing   |
+                | [x] task C            |
+                +-----------------------+
+                            |
+                if rounds_since_todo &gt;= 3:
+                  inject &lt;reminder&gt;
+</code></pre>
+<p>对比 s02：s03 的循环体<strong>变了</strong>——多了 todo 计数器和 nag 提醒注入。</p>
+<hr />
+<h2 id="30-37-import">第 30-37 行：import 和环境</h2>
+<pre><code class="language-python">import os
+import subprocess
+from pathlib import Path
+
+from anthropic import Anthropic
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+</code></pre>
+<p>和 s01/s02 一样。<code>override=True</code> 意思是 .env 文件的配置覆盖已有的环境变量。</p>
+<hr />
+<h2 id="39-40-base_url">第 39-40 行：base_url 特殊处理</h2>
+<pre><code class="language-python">if os.getenv(&quot;ANTHROPIC_BASE_URL&quot;):
+    os.environ.pop(&quot;ANTHROPIC_AUTH_TOKEN&quot;, None)
+</code></pre>
+<p>如果用了自定义 base_url（比如代理），就删掉 <code>ANTHROPIC_AUTH_TOKEN</code>。因为自定义服务端可能用不同的鉴权方式，留着原来的 token 反而会冲突。<code>pop</code> 的第二个参数 <code>None</code> 意思是 key 不存在也不报错。</p>
+<hr />
+<h2 id="42-48">第 42-48 行：全局初始化</h2>
+<pre><code class="language-python">WORKDIR = Path.cwd()
+client = Anthropic(base_url=os.getenv(&quot;ANTHROPIC_BASE_URL&quot;))
+MODEL = os.environ[&quot;MODEL_ID&quot;]
+
+SYSTEM = f&quot;&quot;&quot;You are a coding agent at {WORKDIR}.
+Use the todo tool to plan multi-step tasks. Mark in_progress before starting, completed when done.
+Prefer tools over prose.&quot;&quot;&quot;
+</code></pre>
+<p>和 s01/s02 同样的结构，SYSTEM 提示词多了两句：
+- "用 todo 工具规划多步任务"
+- "开始前标 in_progress，完成后标 completed"
+- "优先用工具而非废话"</p>
+<hr />
+<h2 id="52-86-todomanager">第 52-86 行：TodoManager 类（本期重点）</h2>
+<pre><code class="language-python">class TodoManager:
+    def __init__(self):
+        self.items = []
+</code></pre>
+<p><strong><code>class</code> 是什么</strong>：定义一个类型，把数据和操作绑定在一起。</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class TodoManager:</code></td>
+<td>定义一个类</td>
+</tr>
+<tr>
+<td><code>def __init__(self):</code></td>
+<td>构造函数，创建对象时自动调用</td>
+</tr>
+<tr>
+<td><code>self</code></td>
+<td>代表"这个对象本身"，调用方法时 Python 自动传入</td>
+</tr>
+</tbody>
+</table>
+<p><strong>类比</strong>：类是蓝图，对象是按蓝图造出来的房子。
+- <code>self</code> = "这间房子"
+- <code>self.items</code> = "这间房子的 items 属性"</p>
+<hr />
+<h3 id="update-56-75"><code>update()</code> 方法（第 56-75 行）：验证 + 更新</h3>
+<pre><code class="language-python">def update(self, items: list) -&gt; str:
+    if len(items) &gt; 20:
+        raise ValueError(&quot;Max 20 todos allowed&quot;)
+</code></pre>
+<p>接收模型传来的 todo 列表，验证后存起来，返回格式化文本。</p>
+<p><strong>第 60 行</strong>：<code>in_progress_count = 0</code>，计数器，为了后面判断是否有多个 in_progress。</p>
+<p><strong>第 61-71 行</strong>：逐个验证每个 item：</p>
+<pre><code class="language-python">for i, item in enumerate(items):
+</code></pre>
+<p><code>enumerate()</code> 同时拿到索引和值：</p>
+<pre><code class="language-python">for i, item in enumerate([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]):
+    # i=0,item=&quot;a&quot;  →  i=1,item=&quot;b&quot;  →  i=2,item=&quot;c&quot;
+</code></pre>
+<p><strong>第 62-64 行</strong>：用 <code>.get()</code> 安全取值，给默认值：</p>
+<pre><code class="language-python">text   = str(item.get(&quot;text&quot;, &quot;&quot;)).strip()      # 没 text → &quot;&quot; → 转为空字符串
+status = str(item.get(&quot;status&quot;, &quot;pending&quot;)).lower()  # 没 status → &quot;pending&quot;
+item_id = str(item.get(&quot;id&quot;, str(i + 1)))       # 没 id → 用序号 &quot;1&quot;,&quot;2&quot;,&quot;3&quot;...
+</code></pre>
+<p><strong>为什么用 <code>.get()</code></strong>：s02 学过，key 不存在返回默认值而不报错。</p>
+<p><strong>第 65-68 行</strong>：校验 text 和 status：</p>
+<pre><code class="language-python">if not text:                                    # 空字符串 = False
+    raise ValueError(f&quot;Item {item_id}: text required&quot;)
+if status not in (&quot;pending&quot;, &quot;in_progress&quot;, &quot;completed&quot;):
+    raise ValueError(f&quot;Item {item_id}: invalid status '{status}'&quot;)
+</code></pre>
+<p><code>status not in (...)</code> 比 <code>status != ... and status != ...</code> 简洁。</p>
+<p><strong>第 69-73 行</strong>：最多一个 in_progress：</p>
+<pre><code class="language-python">if status == &quot;in_progress&quot;:
+    in_progress_count += 1
+# ... 循环结束后：
+if in_progress_count &gt; 1:
+    raise ValueError(&quot;Only one task can be in_progress at a time&quot;)
+</code></pre>
+<p><strong>第 74-75 行</strong>：验证通过，保存并返回渲染文本：</p>
+<pre><code class="language-python">self.items = validated
+return self.render()
+</code></pre>
+<hr />
+<h3 id="render-77-86"><code>render()</code> 方法（第 77-86 行）：格式化为文本</h3>
+<pre><code class="language-python">def render(self) -&gt; str:
+    if not self.items:
+        return &quot;No todos.&quot;
+    lines = []
+    for item in self.items:
+        marker = {&quot;pending&quot;: &quot;[ ]&quot;, &quot;in_progress&quot;: &quot;[&gt;]&quot;, &quot;completed&quot;: &quot;[x]&quot;}[item[&quot;status&quot;]]
+        lines.append(f&quot;{marker} #{item['id']}: {item['text']}&quot;)
+    done = sum(1 for t in self.items if t[&quot;status&quot;] == &quot;completed&quot;)
+    lines.append(f&quot;\n({done}/{len(self.items)} completed)&quot;)
+    return &quot;\n&quot;.join(lines)
+</code></pre>
+<p><strong>第 82 行</strong>：字典映射状态到图标：</p>
+<pre><code class="language-python"># status → marker
+# &quot;pending&quot;     → &quot;[ ]&quot;
+# &quot;in_progress&quot; → &quot;[&gt;]&quot;
+# &quot;completed&quot;   → &quot;[x]&quot;
+</code></pre>
+<p><strong>第 84 行</strong>：<code>sum(1 for ... if ...)</code> 计数模式：</p>
+<pre><code class="language-python">sum(1 for t in self.items if t[&quot;status&quot;] == &quot;completed&quot;)
+</code></pre>
+<p>生成器表达式产生 <code>1, 1, 1,...</code> 然后 sum 加起来，就是 completed 的个数。</p>
+<p>等价于：</p>
+<pre><code class="language-python">count = 0
+for t in self.items:
+    if t[&quot;status&quot;] == &quot;completed&quot;:
+        count += 1
+</code></pre>
+<p><strong>渲染效果</strong>：</p>
+<pre><code>[ ] #1: 读代码
+[&gt;] #2: 写笔记     ← 当前正在做的
+[x] #3: 配置环境   ← 已完成
+
+(1/3 completed)
+</code></pre>
+<hr />
+<h2 id="89-todomanager">第 89 行：全局 TodoManager 实例</h2>
+<pre><code class="language-python">TODO = TodoManager()
+</code></pre>
+<p>只创建一个，整个 agent loop 共用。状态在循环轮次之间保持。</p>
+<hr />
+<h2 id="93-139">第 93-139 行：四个文件/命令工具</h2>
+<p>和 s02 完全一样：<code>safe_path</code>, <code>run_bash</code>, <code>run_read</code>, <code>run_write</code>, <code>run_edit</code>。s02 已详细解释，不重复。</p>
+<p>唯一区别是 s03 的 <code>run_bash</code> 多了 try/except 处理超时：</p>
+<pre><code class="language-python">try:
+    r = subprocess.run(...)
+except subprocess.TimeoutExpired:
+    return &quot;Error: Timeout (120s)&quot;
+</code></pre>
+<hr />
+<h2 id="141-160-tool_handlers-tools">第 141-160 行：TOOL_HANDLERS + TOOLS</h2>
+<p>和 s02 结构一样，只是<strong>多了 todo</strong>：</p>
+<pre><code class="language-python">TOOL_HANDLERS = {
+    &quot;bash&quot;:       lambda **kw: run_bash(kw[&quot;command&quot;]),
+    &quot;read_file&quot;:  lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;)),
+    &quot;write_file&quot;: lambda **kw: run_write(kw[&quot;path&quot;], kw[&quot;content&quot;]),
+    &quot;edit_file&quot;:  lambda **kw: run_edit(kw[&quot;path&quot;], kw[&quot;old_text&quot;], kw[&quot;new_text&quot;]),
+    &quot;todo&quot;:       lambda **kw: TODO.update(kw[&quot;items&quot;]),   # ← 新增
+}
+</code></pre>
+<p><code>TODO.update()</code> 接收 items 列表，验证后存起来，返回格式化文本给模型看。</p>
+<p>TOOLS 定义里，todo 是唯一一个复杂嵌套结构的工具：</p>
+<pre><code class="language-python">{&quot;name&quot;: &quot;todo&quot;, &quot;description&quot;: &quot;Update task list...&quot;,
+ &quot;input_schema&quot;: {
+     &quot;type&quot;: &quot;object&quot;,
+     &quot;properties&quot;: {
+         &quot;items&quot;: {                          # 参数名：items
+             &quot;type&quot;: &quot;array&quot;,                # 数组类型
+             &quot;items&quot;: {                      # 数组里每个元素的 schema
+                 &quot;type&quot;: &quot;object&quot;,
+                 &quot;properties&quot;: {
+                     &quot;id&quot;:     {&quot;type&quot;: &quot;string&quot;},
+                     &quot;text&quot;:   {&quot;type&quot;: &quot;string&quot;},
+                     &quot;status&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;enum&quot;: [&quot;pending&quot;, &quot;in_progress&quot;, &quot;completed&quot;]}
+                 },
+                 &quot;required&quot;: [&quot;id&quot;, &quot;text&quot;, &quot;status&quot;]
+             }
+         }
+     },
+     &quot;required&quot;: [&quot;items&quot;]
+ }}
+</code></pre>
+<p><code>"enum"</code> 限定了 status 只能是这三个值之一。API 层面就限制了，模型不会传别的。</p>
+<hr />
+<h2 id="164-192-agent_loop">第 164-192 行：agent_loop（本期核心变化）</h2>
+<pre><code class="language-python">def agent_loop(messages: list):
+    rounds_since_todo = 0              # 新增：计数器
+</code></pre>
+<h3 id="s01s02">对比 s01/s02 的变化</h3>
+<pre><code>s01/s02 的循环：
+  while True → call API → 收回复 → 执行工具 → 追加结果 → 循环
+
+s03 的循环：
+  while True → call API → 收回复 → 执行工具，记录是否用了 todo
+           → rounds_since_todo++ 或归零
+           → 如果 &gt;= 3，往 results 塞 reminder
+           → 追加结果 → 循环
+</code></pre>
+<h3 id="176-188-todo">第 176-188 行：执行工具，追踪 todo</h3>
+<pre><code class="language-python">used_todo = False                      # 新变量
+for block in response.content:
+    if block.type == &quot;tool_use&quot;:
+        handler = TOOL_HANDLERS.get(block.name)
+        try:
+            output = handler(**block.input) if handler else f&quot;Unknown tool: {block.name}&quot;
+        except Exception as e:
+            output = f&quot;Error: {e}&quot;
+        print(f&quot;&gt; {block.name}:&quot;)
+        print(str(output)[:200])       # 终端打印，最多 200 字符
+        results.append(...)
+        if block.name == &quot;todo&quot;:        # 用了 todo？
+            used_todo = True            # 标记一下
+</code></pre>
+<p><strong>第 179 行</strong>：<code>handler = TOOL_HANDLERS.get(block.name)</code>，如果模型调了一个不存在的工具，handler 是 None，然后被 <code>if handler else f"Unknown tool"</code> 兜底。</p>
+<p><strong>第 180-183 行</strong>：try/except 包装执行，即使 handler 抛异常也不会炸掉整个循环。</p>
+<h3 id="189-191-nag">第 189-191 行：Nag 提醒机制</h3>
+<pre><code class="language-python">rounds_since_todo = 0 if used_todo else rounds_since_todo + 1
+if rounds_since_todo &gt;= 3:
+    results.append({&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;&lt;reminder&gt;Update your todos.&lt;/reminder&gt;&quot;})
+</code></pre>
+<p><strong>逻辑</strong>：</p>
+<pre><code>用 todo 了 → rounds_since_todo = 0      （归零）
+没用 todo  → rounds_since_todo + 1     （累加）
+                      ↓
+           如果 &gt;= 3，塞一句提醒到 results
+</code></pre>
+<p><strong>为什么需要这个</strong>：模型经常"忘记"用 todo。如果连续 3 轮都在干别的没更新任务列表，系统就主动提醒一句。这个提醒是以 <code>"user"</code> 角色的 <code>"text"</code> 类型注入的——模型收到后就会想起来更新 todo。</p>
+<p><strong>注意</strong>：reminder 追加到 <code>results</code> 列表中，和其他 <code>tool_result</code> 一起作为 <code>user</code> 消息发给模型。</p>
+<hr />
+<h2 id="195-211-main">第 195-211 行：main 交互</h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    history = []
+    while True:
+        try:
+            query = input(&quot;\033[36ms03 &gt;&gt; \033[0m&quot;)
+        except (EOFError, KeyboardInterrupt):
+            break
+        if query.strip().lower() in (&quot;q&quot;, &quot;exit&quot;, &quot;&quot;):
+            break
+        history.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: query})
+        agent_loop(history)
+        response_content = history[-1][&quot;content&quot;]
+        if isinstance(response_content, list):
+            for block in response_content:
+                if hasattr(block, &quot;text&quot;):
+                    print(block.text)
+        print()
+</code></pre>
+<p><strong><code>\033[36m</code></strong>：ANSI 转义码，青色文字。<code>\033[0m</code> 重置颜色。效果是终端显示青色的 <code>s03 &gt;&gt;</code> 提示符。</p>
+<p><strong><code>isinstance(response_content, list)</code></strong>：安全检查。因为 Anthropic API 返回的 content 有时是字符串有时是列表。如果是列表就逐个打印 block.text。</p>
+<p><strong><code>hasattr(block, "text")</code></strong>：检查 block 对象是否有 <code>text</code> 属性。因为有的 block 只有 tool_use 没有 text。</p>
+<hr />
+<h2 id="s02-s03">s02 → s03 变化对比</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>s02</th>
+<th>s03</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工具数</td>
+<td>4</td>
+<td>5 (+ todo)</td>
+</tr>
+<tr>
+<td>新 Python 概念</td>
+<td>lambda, **kw, .get()</td>
+<td>class, self, <code>__init__</code>, enumerate(), sum(1 for...)</td>
+</tr>
+<tr>
+<td>循环体</td>
+<td>不变</td>
+<td>变了：多了 todo 追踪 + nag 提醒</td>
+</tr>
+<tr>
+<td>新机制</td>
+<td>TOOL_HANDLERS 分发表</td>
+<td>TodoManager 状态管理 + rounds_since_todo 计数器</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>无（每次循环无状态）</td>
+<td>有（TodoManager 跨轮次保持）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>s03 的教训</strong>：Agent 不只需要"执行"，还需要"规划"。加上一个 todo 工具，模型就能自己管理进度。但模型会忘，所以用 nag 提醒兜底。</p>
+<hr />
+<h1 id="langpython-domainagent-type-sessions03">Lang/Python #Domain/Agent #Type/原理 #Session/s03</h1>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

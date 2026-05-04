@@ -1,0 +1,1414 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/">
+      
+      
+        <link rel="prev" href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/">
+      
+      
+        <link rel="next" href="../s03-todo-write/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>s02 - 工具调度与 Python 语法 - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s02-python" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              s02 - 工具调度与 Python 语法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s02 的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 语法详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 语法详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-p-str-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 类型注解（p: str、-&gt; Path）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Path 的 / 不是除法，是路径拼接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. lambda 表达式（匿名函数）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. **kw（关键字参数打包）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-limit-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 默认参数值（limit: int = None）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-kwgetlimit-vs-kwlimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. kw.get("limit") vs kw["limit"]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOOL_HANDLERS 分发表详解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safe_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safe_path 安全检查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01-s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s01 → s02 的变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：SDK 是什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：SDK 是什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01subprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：subprocess 是什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：subprocess 是什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01anyd-in-command-for-d-in-dangerous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：any(d in command for d in dangerous) 拆解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：any(d in command for d in dangerous) 拆解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s03-todo-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s05-skill-loading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s02 的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 语法详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python 语法详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-p-str-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 类型注解（p: str、-&gt; Path）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Path 的 / 不是除法，是路径拼接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. lambda 表达式（匿名函数）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. **kw（关键字参数打包）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-limit-int-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 默认参数值（limit: int = None）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-kwgetlimit-vs-kwlimit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. kw.get("limit") vs kw["limit"]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOOL_HANDLERS 分发表详解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safe_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safe_path 安全检查
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s01-s02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s01 → s02 的变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：SDK 是什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：SDK 是什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01subprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：subprocess 是什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：subprocess 是什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01anyd-in-command-for-d-in-dangerous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：any(d in command for d in dangerous) 拆解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：any(d in command for d in dangerous) 拆解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="s02-python">s02 - 工具调度与 Python 语法</h1>
+<h2 id="s02">s02 的核心思想</h2>
+<p>s01 的循环体完全没变。只是多加了工具 + 一个分发表。</p>
+<pre><code>s01: 1 个工具 (bash)  → 硬编码调用 run_bash
+s02: 4 个工具          → 用字典 TOOL_HANDLERS 分发
+</code></pre>
+<hr />
+<h2 id="python">Python 语法详解</h2>
+<h3 id="1-p-str-path">1. 类型注解（<code>p: str</code>、<code>-&gt; Path</code>）</h3>
+<pre><code class="language-python">def safe_path(p: str) -&gt; Path:
+</code></pre>
+<p>纯给人看的提示，Python 运行时完全忽略：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p: str</code></td>
+<td>参数 p 是字符串类型</td>
+</tr>
+<tr>
+<td><code>-&gt; Path</code></td>
+<td>函数返回 Path 对象</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python"># 这两个完全等价
+def safe_path(p: str) -&gt; Path:   # 有注解
+def safe_path(p):                 # 没注解，一样跑
+</code></pre>
+<hr />
+<h3 id="2-path">2. Path 的 <code>/</code> 不是除法，是路径拼接</h3>
+<pre><code class="language-python">WORKDIR = Path.cwd()          # Path 对象，不是字符串
+path = (WORKDIR / p).resolve()
+</code></pre>
+<p><code>pathlib</code> 库重载了 <code>/</code> 运算符，用来拼接路径：</p>
+<pre><code class="language-python">Path(&quot;D:/proj&quot;) / &quot;notes/a.md&quot;
+# → Path(&quot;D:/proj/notes/a.md&quot;)
+
+# 等价于
+os.path.join(&quot;D:/proj&quot;, &quot;notes/a.md&quot;)
+</code></pre>
+<p><code>.resolve()</code> 把路径绝对化，解析掉 <code>..</code> 和 <code>.</code>：</p>
+<pre><code class="language-python">Path(&quot;D:/proj/../test&quot;).resolve()   # → Path(&quot;D:/test&quot;)
+</code></pre>
+<hr />
+<h3 id="3-lambda">3. lambda 表达式（匿名函数）</h3>
+<pre><code class="language-python">lambda **kw: run_bash(kw[&quot;command&quot;])
+</code></pre>
+<p><code>lambda</code> 就是一行写完的匿名函数。等价于：</p>
+<pre><code class="language-python">def 匿名函数(**kw):
+    return run_bash(kw[&quot;command&quot;])
+</code></pre>
+<p><strong>语法</strong>：<code>lambda 参数: 返回值</code></p>
+<p>示例对比：</p>
+<pre><code class="language-python"># lambda 写法
+f = lambda x: x * 2
+f(5)    # → 10
+
+# def 等价写法
+def f(x):
+    return x * 2
+f(5)    # → 10
+</code></pre>
+<p><strong>为什么这里用 lambda？</strong> 因为每个工具的处理逻辑就一行，没必要单独定义函数。</p>
+<hr />
+<h3 id="4-kw">4. <code>**kw</code>（关键字参数打包）</h3>
+<pre><code class="language-python">lambda **kw: run_bash(kw[&quot;command&quot;])
+</code></pre>
+<p><code>**kw</code> 把所有传入的参数打包成一个字典：</p>
+<pre><code class="language-python">def f(**kw):
+    print(kw)
+
+f(a=1, b=2)    # → {&quot;a&quot;: 1, &quot;b&quot;: 2}
+f(name=&quot;test&quot;)  # → {&quot;name&quot;: &quot;test&quot;}
+</code></pre>
+<p>反向操作是 <code>**dict</code> 拆开：</p>
+<pre><code class="language-python">d = {&quot;command&quot;: &quot;ls&quot;}
+run_bash(**d)   # 等价于 run_bash(command=&quot;ls&quot;)
+</code></pre>
+<hr />
+<h3 id="5-limit-int-none">5. 默认参数值（<code>limit: int = None</code>）</h3>
+<pre><code class="language-python">def run_read(path: str, limit: int = None) -&gt; str:
+</code></pre>
+<p><code>limit = None</code> 意味着调用时可以不传这个参数：</p>
+<pre><code class="language-python">run_read(&quot;a.txt&quot;)           # limit 取默认值 None，读全部
+run_read(&quot;a.txt&quot;, limit=10) # limit 取 10，只读前 10 行
+</code></pre>
+<hr />
+<h3 id="6-kwgetlimit-vs-kwlimit">6. <code>kw.get("limit")</code> vs <code>kw["limit"]</code></h3>
+<pre><code class="language-python">lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;))
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>key 不存在时</th>
+<th>用在</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kw["limit"]</code></td>
+<td>报 KeyError</td>
+<td>必填参数</td>
+</tr>
+<tr>
+<td><code>kw.get("limit")</code></td>
+<td>返回 None</td>
+<td>可选参数</td>
+</tr>
+</tbody>
+</table>
+<p><code>path</code> 是必填的所以用 <code>kw["path"]</code>，<code>limit</code> 可选所以用 <code>kw.get("limit")</code>。</p>
+<hr />
+<h2 id="tool_handlers">TOOL_HANDLERS 分发表详解</h2>
+<pre><code class="language-python">TOOL_HANDLERS = {
+    &quot;bash&quot;:       lambda **kw: run_bash(kw[&quot;command&quot;]),
+    &quot;read_file&quot;:  lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;)),
+    &quot;write_file&quot;: lambda **kw: run_write(kw[&quot;path&quot;], kw[&quot;content&quot;]),
+    &quot;edit_file&quot;:  lambda **kw: run_edit(kw[&quot;path&quot;], kw[&quot;old_text&quot;], kw[&quot;new_text&quot;]),
+}
+</code></pre>
+<p>本质：字典，键是工具名，值是处理函数。</p>
+<p>调用时（第 126-127 行）：</p>
+<pre><code class="language-python">handler = TOOL_HANDLERS.get(block.name)          # 按名字找到对应函数
+output = handler(**block.input)                  # 拆开参数字典传入
+# 例：block.name = &quot;bash&quot;, block.input = {&quot;command&quot;: &quot;ls&quot;}
+# → handler = lambda **kw: run_bash(kw[&quot;command&quot;])
+# → handler(command=&quot;ls&quot;) → run_bash(&quot;ls&quot;)
+</code></pre>
+<p>如果不用 lambda + **kw，等价写法：</p>
+<pre><code class="language-python">def handle_bash(**kw):
+    return run_bash(kw[&quot;command&quot;])
+
+def handle_read(**kw):
+    return run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;))
+
+TOOL_HANDLERS = {
+    &quot;bash&quot;: handle_bash,
+    &quot;read_file&quot;: handle_read,
+    ...
+}
+</code></pre>
+<hr />
+<h2 id="safe_path">safe_path 安全检查</h2>
+<pre><code class="language-python">def safe_path(p: str) -&gt; Path:
+    path = (WORKDIR / p).resolve()
+    if not path.is_relative_to(WORKDIR):
+        raise ValueError(f&quot;Path escapes workspace: {p}&quot;)
+    return path
+</code></pre>
+<p>防止模型读取项目外的文件：</p>
+<pre><code class="language-python"># 正常情况
+safe_path(&quot;notes/a.md&quot;)
+# → Path(&quot;D:/proj/notes/a.md&quot;)  ✓ 在工作目录内
+
+# 恶意情况
+safe_path(&quot;../../etc/passwd&quot;)
+# → Path(&quot;C:/etc/passwd&quot;)
+# → is_relative_to(WORKDIR) = False → 报错拦截！
+</code></pre>
+<hr />
+<h2 id="s01-s02">s01 → s02 的变化对比</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>s01</th>
+<th>s02</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工具数量</td>
+<td>1 (bash)</td>
+<td>4 (bash/read/write/edit)</td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>硬编码 <code>if block.type == "tool_use"</code></td>
+<td><code>TOOL_HANDLERS[block.name](**input)</code></td>
+</tr>
+<tr>
+<td>循环体</td>
+<td>不变</td>
+<td>不变</td>
+</tr>
+</tbody>
+</table>
+<p><strong>s02 的教训</strong>：加工具不需要改循环，只需要 1) 写处理函数 2) 加到分发表 3) 加到 TOOLS 定义。</p>
+<hr />
+<h2 id="2026-05-01sdk">2026-05-01：SDK 是什么</h2>
+<h3 id="_1">问题</h3>
+<p>Anthropic SDK 是啥？跟 API 什么关系？</p>
+<h3 id="_2">答案</h3>
+<p><strong>SDK</strong> = Software Development Kit（软件开发工具包），就是别人写好的代码库，让你直接调用，不用从零写。</p>
+<p><strong>调用链</strong>：</p>
+<pre><code>你的代码: client.messages.create(...)   ← 一行调用
+    │
+    ▼
+Anthropic SDK: 把参数转成 HTTP 请求       ← SDK 干的事
+    │
+    ▼
+网络: POST https://api.anthropic.com/...  ← 发到服务器
+    │
+    ▼
+Claude 服务器: 推理，返回结果              ← API 干活
+</code></pre>
+<p><strong>没有 SDK 的话</strong>，你得自己写 HTTP 请求：</p>
+<pre><code class="language-python">import requests
+response = requests.post(
+    &quot;https://api.anthropic.com/v1/messages&quot;,
+    headers={&quot;x-api-key&quot;: &quot;...&quot;, &quot;anthropic-version&quot;: &quot;2023-06-01&quot;},
+    json={&quot;model&quot;: &quot;claude-sonnet-4-6&quot;, &quot;messages&quot;: [...], &quot;max_tokens&quot;: 8000}
+)
+</code></pre>
+<p>SDK 把 HTTP 请求、认证、重试、错误处理这些琐碎细节封装好，给你干净的 <code>client.messages.create()</code> 用。</p>
+<p><strong>类比</strong>：SDK 是现成的工具箱，API 是工具箱里的工具，你不需要自己打铁造工具。</p>
+<hr />
+<h2 id="2026-05-01subprocess">2026-05-01：subprocess 是什么</h2>
+<h3 id="_3">问题</h3>
+<p><code>subprocess</code> 是啥？</p>
+<h3 id="_4">答案</h3>
+<p>Python 标准库模块，作用：<strong>在 Python 代码里执行 shell 命令</strong>。</p>
+<pre><code class="language-python">r = subprocess.run(
+    command,             # 要执行的命令，比如 &quot;ls&quot;
+    shell=True,          # 通过 shell 执行（支持管道 |、重定向 &gt;）
+    cwd=os.getcwd(),     # 在哪个目录执行
+    capture_output=True, # 抓取命令的输出
+    text=True,           # 输出是字符串（不然是字节 bytes）
+    timeout=120          # 超过 120 秒就杀掉
+)
+</code></pre>
+<p>本质：Python → 开一个子进程 → 执行命令 → 把结果拿回来。</p>
+<p>类比：你在终端里敲 <code>ls</code> 看结果，<code>subprocess.run()</code> 就是 Python 替你敲了这个命令，然后把终端显示的文字抓回 Python 变量里。</p>
+<hr />
+<h2 id="2026-05-01anyd-in-command-for-d-in-dangerous">2026-05-01：<code>any(d in command for d in dangerous)</code> 拆解</h2>
+<h3 id="_5">问题</h3>
+<p>这行判断啥意思？</p>
+<pre><code class="language-python">if any(d in command for d in dangerous):
+</code></pre>
+<h3 id="_6">答案</h3>
+<p>逐层拆解：</p>
+<pre><code class="language-python">dangerous = [&quot;rm -rf /&quot;, &quot;sudo&quot;, &quot;shutdown&quot;, &quot;reboot&quot;, &quot;&gt; /dev/&quot;]
+
+# 1. for d in dangerous → 遍历危险词列表
+# 2. d in command      → 检查这个危险词是否出现在用户命令里
+# 3. any(...)          → 只要有一个 True，整体就是 True
+</code></pre>
+<p>手动等价写法：</p>
+<pre><code class="language-python">def 手动版(command):
+    for d in dangerous:       # 逐个检查
+        if d in command:      # 出现在命令里？
+            return True       # 中一个就立刻 True（短路）
+    return False              # 全没中，False
+</code></pre>
+<p><code>any()</code> 就是把这个循环压缩成一行，<strong>短路逻辑</strong>：一旦找到匹配就立即返回 True，后面不再检查。</p>
+<hr />
+<h1 id="langpython-domainagent-type-sessions02">Lang/Python #Domain/Agent #Type/原理 #Session/s02</h1>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
