@@ -1,25 +1,59 @@
 site_name: Kenny's Wiki
 site_url: https://kenny-bi.github.io/my-wiki
+site_author: Kenny-bi
+repo_url: https://github.com/Kenny-bi/-my-wiki
+repo_name: Kenny-bi/-my-wiki
 
 theme:
   name: material
   language: zh
+  icon:
+    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: 切换暗色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: 切换亮色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
   features:
     - navigation.tabs
     - navigation.indexes
+    - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
+    - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Kenny-bi
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - codehilite
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search:
