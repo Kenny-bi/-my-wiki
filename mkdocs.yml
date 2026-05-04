@@ -17,8 +17,7 @@ theme:
         name: 切换亮色模式
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - navigation.indexes
     - search.suggest
     - search.highlight
 
@@ -36,3 +35,101 @@ nav:
     - s03 - TodoWrite 与 Nag 提醒: s03-todo-write.md
     - s04 - Subagent 子代理: s04-subagent.md
     - s05 - Skill Loading: s05-skill-loading.md
+  - Codeforces:
+    - 比赛整理: Codeforces 比赛整理/index.md
+    - "989 (Div.4)":
+      - E Building an Aquarium: "Codeforces 比赛整理/989  (Div.4)/E Building an Aquarium.md"
+      - F Money Trees: "Codeforces 比赛整理/989  (Div.4)/F Money Trees.md"
+      - G ABBC or BACB: "Codeforces 比赛整理/989  (Div.4)/G ABBC or BACB.md"
+    - "1063 (Div.2)":
+      - "A. Souvlaki VS. Kalamaki": "Codeforces 比赛整理/1063 (Div.2)/A. Souvlaki VS. Kalamaki.md"
+      - "B. Siga ta Kymata": "Codeforces 比赛整理/1063 (Div.2)/B. Siga ta Kymata.md"
+      - "C. Monopati": "Codeforces 比赛整理/1063 (Div.2)/C. Monopati.md"
+      - "D1. Diadrash (Easy Version)": "Codeforces 比赛整理/1063 (Div.2)/D1. Diadrash (Easy Version).md"
+      - "D2. Diadrash (Hard Version)": "Codeforces 比赛整理/1063 (Div.2)/D2. Diadrash (Hard Version).md"
+    - "1064 (Div.2)":
+      - "A. Same Difference": "Codeforces 比赛整理/1064 (Div.2)/A. Same Difference.md"
+      - "B. Tab Closing": "Codeforces 比赛整理/1064 (Div.2)/B. Tab Closing.md"
+      - "C. Cyclic Merging": "Codeforces 比赛整理/1064 (Div.2)/C. Cyclic Merging.md"
+      - "D. Marble Council": "Codeforces 比赛整理/1064 (Div.2)/D. Marble Council.md"
+    - "1065 (Div.3)":
+      - "B. Yuu Koito and Minimum Absolute Sum": "Codeforces 比赛整理/1065 (Div.3)/B. Yuu Koito and Minimum Absolute Sum.md"
+      - "C1. Renako Amaori and XOR Game (easy version)": "Codeforces 比赛整理/1065 (Div.3)/C1. Renako Amaori and XOR Game (easy version).md"
+      - "C2. Renako Amaori and XOR Game (hard version)": "Codeforces 比赛整理/1065 (Div.3)/C2. Renako Amaori and XOR Game (hard version).md"
+      - "D. Rae Taylor and Trees (easy version)": "Codeforces 比赛整理/1065 (Div.3)/D. Rae Taylor and Trees (easy version).md"
+      - "F. Rae Taylor and Trees (hard version)": "Codeforces 比赛整理/1065 (Div.3)/F. Rae Taylor and Trees (hard version).md"
+    - "1066 (Div.1+Div.2)":
+      - "A. Dungeon Equilibrium": "Codeforces 比赛整理/1066 (Div.1+Div.2)/A. Dungeon Equilibrium.md"
+      - "B. Expansion Plan 2": "Codeforces 比赛整理/1066 (Div.1+Div.2)/B. Expansion Plan 2.md"
+      - "C. Meximum Array 2": "Codeforces 比赛整理/1066 (Div.1+Div.2)/C. Meximum Array 2.md"
+      - "D. Billion Players Game": "Codeforces 比赛整理/1066 (Div.1+Div.2)/D. Billion Players Game.md"
+      - "E. Adjusting Drones": "Codeforces 比赛整理/1066 (Div.1+Div.2)/E. Adjusting Drones.md"
+      - "F. Git Gud": "Codeforces 比赛整理/1066 (Div.1+Div.2)/F. Git Gud.md"
+    - "1070 (Div.2)":
+      - "B. Optimal Shifts": "Codeforces 比赛整理/1070 (Div.2)/B. Optimal Shifts.md"
+      - "C. Odd Process": "Codeforces 比赛整理/1070 (Div.2)/C. Odd Process.md"
+      - "D. Fibonacci Paths": "Codeforces 比赛整理/1070 (Div.2)/D. Fibonacci Paths.md"
+    - "1071 (Div.3)":
+      - "A. Blackslex and Password": "Codeforces 比赛整理/1071 (Div.3)/A. Blackslex and Password.md"
+      - "B. Blackslex and Showering": "Codeforces 比赛整理/1071 (Div.3)/B. Blackslex and Showering.md"
+      - "C. Blackslex and Number Theory": "Codeforces 比赛整理/1071 (Div.3)/C. Blackslex and Number Theory.md"
+      - "D. Blackslex and Penguin Civilization": "Codeforces 比赛整理/1071 (Div.3)/D. Blackslex and Penguin Civilization.md"
+      - "E. Blackslex and Girls": "Codeforces 比赛整理/1071 (Div.3)/E. Blackslex and Girls.md"
+      - "H. Blackslex and Plants": "Codeforces 比赛整理/1071 (Div.3)/H. Blackslex and Plants.md"
+    - "1072 (Div.3)":
+      - "A. Social Experiment": "Codeforces 比赛整理/1072 (Div.3)/A. Social Experiment.md"
+      - "B. Hourglass": "Codeforces 比赛整理/1072 (Div.3)/B. Hourglass.md"
+      - "C. Huge Pile": "Codeforces 比赛整理/1072 (Div.3)/C. Huge Pile.md"
+      - "D. Unfair Game": "Codeforces 比赛整理/1072 (Div.3)/D. Unfair Game.md"
+      - "E. Exquisite Array": "Codeforces 比赛整理/1072 (Div.3)/E. Exquisite Array.md"
+    - "1078 (Div.2)":
+      - "B. Offshores": "Codeforces 比赛整理/1078 (Div.2)/B. Offshores.md"
+      - "C. Secret message": "Codeforces 比赛整理/1078 (Div.2)/C. Secret message.md"
+      - "D. Table Cut": "Codeforces 比赛整理/1078 (Div.2)/D. Table Cut.md"
+    - "1079 (Div.2)":
+      - "A. Friendly Numbers": "Codeforces 比赛整理/1079 (Div.2)/A. Friendly Numbers.md"
+      - "B. Array and Permutation": "Codeforces 比赛整理/1079 (Div.2)/B. Array and Permutation.md"
+      - "C. Game with a Fraction": "Codeforces 比赛整理/1079 (Div.2)/C. Game with a Fraction.md"
+      - "D. Another Problem about Beautiful Pairs": "Codeforces 比赛整理/1079 (Div.2)/D. Another Problem about Beautiful Pairs.md"
+      - "E1. Interactive Graph (Simple Version)": "Codeforces 比赛整理/1079 (Div.2)/E1. Interactive Graph (Simple Version).md"
+    - "1083 (Div.2)":
+      - "B. Simons and Cakes for Success": "Codeforces 比赛整理/1083 (Div.2)/B. Simons and Cakes for Success.md"
+      - "C. Simons and Posting Blogs": "Codeforces 比赛整理/1083 (Div.2)/C. Simons and Posting Blogs.md"
+      - "D. Simons and Beating Peaks": "Codeforces 比赛整理/1083 (Div.2)/D. Simons and Beating Peaks.md"
+    - "1088 (Div. 1 + Div. 2)":
+      - "A. Antimedian Deletion": "Codeforces 比赛整理/1088 (Div. 1 + Div. 2)/A. Antimedian Deletion.md"
+      - "B. Mickey Mouse Constructive": "Codeforces 比赛整理/1088 (Div. 1 + Div. 2)/B. Mickey Mouse Constructive.md"
+      - "C1. Equal Multisets (Easy Version)": "Codeforces 比赛整理/1088 (Div. 1 + Div. 2)/C1. Equal Multisets (Easy Version).md"
+    - "1094 (Div. 1 + Div. 2)":
+      - "A. Wonderful Contest": "Codeforces 比赛整理/1094 (Div. 1 + Div. 2)/A. Wonderful Contest.md"
+      - "B. Artistic Balance Tree": "Codeforces 比赛整理/1094 (Div. 1 + Div. 2)/B. Artistic Balance Tree.md"
+      - "C. Median Partition": "Codeforces 比赛整理/1094 (Div. 1 + Div. 2)/C. Median Partition.md"
+    - "184 (Rated for Div. 2)":
+      - "A. Alice and Bob": "Codeforces 比赛整理/184 (Rated for Div. 2)/A. Alice and Bob.md"
+      - "B. Drifting Away": "Codeforces 比赛整理/184 (Rated for Div. 2)/B. Drifting Away.md"
+      - "C. Range Operation": "Codeforces 比赛整理/184 (Rated for Div. 2)/C. Range Operation.md"
+      - "D1. Removal of a Sequences (Easy Version)": "Codeforces 比赛整理/184 (Rated for Div. 2)/D1. Removal of a Sequences (Easy Version).md"
+      - "D2. Removal of a Sequence (Hard Version)": "Codeforces 比赛整理/184 (Rated for Div. 2)/D2. Removal of a Sequence (Hard Version).md"
+    - "185 (Rated for Div. 2)":
+      - "A. Maximum Neighborhood": "Codeforces 比赛整理/185 (Rated for Div. 2)/A. Maximum Neighborhood.md"
+      - "B. Addition on a Segment": "Codeforces 比赛整理/185 (Rated for Div. 2)/B. Addition on a Segment.md"
+      - "C. Quotient and Remainder": "Codeforces 比赛整理/185 (Rated for Div. 2)/C. Quotient and Remainder.md"
+    - "186 (Rated for Div. 2)":
+      - "C. Production of Snowmen": "Codeforces 比赛整理/186 (Rated for Div. 2)/C. Production of Snowmen.md"
+      - "D. Christmas Tree Decoration": "Codeforces 比赛整理/186 (Rated for Div. 2)/D. Christmas Tree Decoration.md"
+      - "E. New Year's Gifts": "Codeforces 比赛整理/186 (Rated for Div. 2)/E. New Year's Gifts.md"
+    - "187 (Rated for Div.2)":
+      - "C. Test Generator": "Codeforces 比赛整理/187 (Rated for Div.2)/C. Test Generator.md"
+      - "D. Divisibility Game": "Codeforces 比赛整理/187 (Rated for Div.2)/D. Divisibility Game.md"
+    - "188 Rated for (Div.2)":
+      - "C. Spring": "Codeforces 比赛整理/188 Rated for (Div.2)/C. Spring.md"
+      - "D. Alternating Path": "Codeforces 比赛整理/188 Rated for (Div.2)/D. Alternating Path.md"
+      - "E. Sum of Digits (and Again)": "Codeforces 比赛整理/188 Rated for (Div.2)/E. Sum of Digits (and Again).md"
+    - "Good Bye 2025":
+      - "A. Yes or Yes": "Codeforces 比赛整理/Good Bye 2025/A. Yes or Yes.md"
+      - "B. Impost or Sus": "Codeforces 比赛整理/Good Bye 2025/B. Impost or Sus.md"
+      - "C. First or Second": "Codeforces 比赛整理/Good Bye 2025/C. First or Second.md"
+      - "D. Xmas or Hysteria": "Codeforces 比赛整理/Good Bye 2025/D. Xmas or Hysteria.md"
+    - "Hello 2026":
+      - "C. War Strategy": "Codeforces 比赛整理/Hello 2026/C. War Strategy.md"
+      - "D1 Tree Coloring (Easy Version)": "Codeforces 比赛整理/Hello 2026/D1 Tree Coloring (Easy Version).md"
