@@ -2,19 +2,15 @@
 
 个人学习笔记与知识库。
 
-## 内容导航
+## 板块
 
-### Learn Claude Code
+### [Learn Claude Code](Learn%20Claude%20Code/index.md)
 
-Agent Harness 工程逐行拆解笔记，从零理解 Claude Code 的架构设计。
+Agent Harness 工程逐行拆解笔记，从零理解 Claude Code 的架构设计。共 5 个 Session，涵盖 Agent 循环、工具调度、子代理、技能加载等核心机制。
 
-| Session | 主题 |
-|---------|------|
-| [s01](s01-逐行拆解.md) | 逐行拆解 — 最小 Agent 循环 |
-| [s02](s02-工具调度与Python语法.md) | 工具调度与 Python 语法 |
-| [s03](s03-todo-write.md) | TodoWrite 与 Nag 提醒 |
-| [s04](s04-subagent.md) | Subagent 子代理 |
-| [s05](s05-skill-loading.md) | Skill Loading 按需加载 |
+### [Codeforces 比赛整理](Codeforces%20比赛整理/index.md)
+
+Codeforces 竞赛笔记，20 场比赛的题解与思路总结，按场次分组。
 
 ---
 
