@@ -1,0 +1,5629 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/C.%20Monopati/">
+      
+      
+        <link rel="prev" href="../B.%20Siga%20ta%20Kymata/">
+      
+      
+        <link rel="next" href="../D1.%20Diadrash%20%28Easy%20Version%29/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>C. Monopati - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-monopati" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C. Monopati
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s03-todo-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s05-skill-loading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codeforces
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Codeforces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    989 (Div.4)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    989 (Div.4)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E Building an Aquarium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F Money Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G ABBC or BACB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1063 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1063 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A.%20Souvlaki%20VS.%20Kalamaki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Souvlaki VS. Kalamaki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B.%20Siga%20ta%20Kymata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Siga ta Kymata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Monopati
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Monopati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c-monopati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Monopati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赛时WA 2代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        抄哥哥AC 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 对于jiangly 思路以及我的代码分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI 对于jiangly 思路以及我的代码分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 1：分析路径 (Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lr-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 2：分析 $(l,r)$ 的条件 (Condition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wa2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 3：分析你的 WA2 代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：如何正确统计“并集”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 5：jiangly 的代码如何实现？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结与提升
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对于细节问题的考量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对于细节问题的考量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fl-minr-fl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. f[L] = min(R, f[L]); 这一步
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fi-minfi-fi1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 后缀最小值步骤：f[i] = min(f[i], f[i+1]);
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-indexed-1-0-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 为什么 1-Indexed 要 +1，而 0-Indexed 不需要
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        这道题目在考什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="这道题目在考什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧐 这道题在考验什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 为了上 1600，你应该做哪些努力？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1. Diadrash (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D2. Diadrash (Hard Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1064 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1064 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Same Difference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Tab Closing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Cyclic Merging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Marble Council
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1065 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1065 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Yuu Koito and Minimum Absolute Sum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C1. Renako Amaori and XOR Game (easy version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2. Renako Amaori and XOR Game (hard version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Rae Taylor and Trees (easy version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F. Rae Taylor and Trees (hard version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1066 (Div.1+Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1066 (Div.1+Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Dungeon Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Expansion Plan 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Meximum Array 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Billion Players Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Adjusting Drones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F. Git Gud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1070 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1070 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Optimal Shifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Odd Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Fibonacci Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1071 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1071 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Blackslex and Password
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Blackslex and Showering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Blackslex and Number Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Blackslex and Penguin Civilization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Blackslex and Girls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    H. Blackslex and Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1072 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1072 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Social Experiment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Hourglass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Huge Pile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Unfair Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Exquisite Array
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1078 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1078 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/B.%20Offshores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Offshores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/C.%20Secret%20message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Secret message
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/D.%20Table%20Cut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Table Cut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1079 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1079 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Friendly Numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Array and Permutation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Game with a Fraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Another Problem about Beautiful Pairs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E1. Interactive Graph (Simple Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1083 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1083 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Simons and Cakes for Success
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Simons and Posting Blogs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Simons and Beating Peaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1088 (Div. 1 + Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1088 (Div. 1 + Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Antimedian Deletion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Mickey Mouse Constructive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C1. Equal Multisets (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1094 (Div. 1 + Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1094 (Div. 1 + Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Wonderful Contest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Artistic Balance Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Median Partition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    184 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    184 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Alice and Bob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Drifting Away
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Range Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1. Removal of a Sequences (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D2. Removal of a Sequence (Hard Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    185 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    185 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Maximum Neighborhood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Addition on a Segment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Quotient and Remainder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    186 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    186 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Production of Snowmen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Christmas Tree Decoration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. New Year's Gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    187 (Rated for Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    187 (Rated for Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Test Generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Divisibility Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    188 Rated for (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    188 Rated for (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Alternating Path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Sum of Digits (and Again)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Bye 2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Good Bye 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Yes or Yes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Impost or Sus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. First or Second
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Xmas or Hysteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hello 2026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hello 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. War Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1 Tree Coloring (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c-monopati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Monopati
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赛时WA 2代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        抄哥哥AC 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI 对于jiangly 思路以及我的代码分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI 对于jiangly 思路以及我的代码分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 1：分析路径 (Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-lr-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 2：分析 $(l,r)$ 的条件 (Condition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wa2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 3：分析你的 WA2 代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 4：如何正确统计“并集”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤 5：jiangly 的代码如何实现？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总结与提升
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对于细节问题的考量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对于细节问题的考量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fl-minr-fl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. f[L] = min(R, f[L]); 这一步
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fi-minfi-fi1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 后缀最小值步骤：f[i] = min(f[i], f[i+1]);
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-1-indexed-1-0-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 为什么 1-Indexed 要 +1，而 0-Indexed 不需要
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        这道题目在考什么
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="这道题目在考什么">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧐 这道题在考验什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 为了上 1600，你应该做哪些努力？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="c-monopati">C. Monopati</h2>
+<p>时间限制：每个测试 2 秒<br />
+内存限制：每个测试 256 MB</p>
+<h2 id="_1">问题描述</h2>
+<p>给定一个 2 行 $n$ 列的网格 $a$，其中每个单元格的值在 $1$ 到 $2n$ 之间。</p>
+<p>定义 $f(l,r)$，其中 $1 \leq l \leq r \leq 2n$，表示一个 2 行 $n$ 列的二进制网格 $b$，使得 $b_{i,j} = 1$ 当且仅当 $l \leq a_{i,j} \leq r$。注意单元格 $(i,j)$ 表示从上往下第 $i$ 行、从左往右第 $j$ 列的单元格。</p>
+<p>计算满足 $1 \leq l \leq r \leq 2n$ 的整数对 $(l,r)$ 的数量，使得在 $f(l,r)$ 中存在一条从单元格 $(1,1)$ 到 $(2,n)$ 的右下路径，该路径由值为 1 的相邻单元格组成。</p>
+<p>$*$ 当且仅当网格的每个单元格的值都是 0 或 1 时，该网格被认为是二进制网格。</p>
+<p>$†$ 相邻单元格的右下路径是一个单元格序列，使得序列中的每个单元格与序列中的前一个单元格共享其顶部或左侧的一条边。</p>
+<h2 id="_2">输入格式</h2>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 $t$ ($1 \leq t \leq 10^4$)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 $n$ ($2 \leq n \leq 2 \cdot 10^5$) —— 网格中的列数。</p>
+<p>第二行包含恰好 $n$ 个整数 $a_{1,1}, a_{1,2}, \dots, a_{1,n}$ ($1 \leq a_{1,i} \leq 2n$) —— 网格第一行单元格的值。</p>
+<p>第三行包含恰好 $n$ 个整数 $a_{2,1}, a_{2,2}, \dots, a_{2,n}$ ($1 \leq a_{2,i} \leq 2n$) —— 网格第二行单元格的值。</p>
+<p>保证所有测试用例的 $n$ 的总和不超过 $2 \cdot 10^5$。</p>
+<h2 id="_3">输出格式</h2>
+<p>对于每个测试用例，在单独一行输出一个整数，表示满足条件的整数对 $(l,r)$ 的数量。</p>
+<h2 id="_4">样例输入</h2>
+<pre><code>5
+2
+1 3
+3 1
+3
+1 2 3
+3 2 1
+4
+1 5 5 5
+5 3 1 2
+4
+8 8 8 8
+8 8 8 8
+6
+6 6 5 7 9 12
+1 4 2 8 5 6
+</code></pre>
+<h2 id="_5">样例输出</h2>
+<pre><code>2
+5
+4
+8
+25
+</code></pre>
+<h2 id="_6">样例说明</h2>
+<p>考虑第一个样例。</p>
+<p>网格 $f(1,1)$ 和 $f(1,2)$ 如下所示：</p>
+<pre><code>10
+01
+</code></pre>
+<p>不存在从左上角单元格到右下角单元格的 1 的路径，因此不计算 $(1,1)$ 和 $(1,2)$ 对。</p>
+<p>网格 $f(1,3)$ 和 $f(1,4)$ 如下所示：</p>
+<pre><code>11
+11
+</code></pre>
+<p>由于存在从 $(1,1)$ 到 $(2,2)$ 的有效路径，因此计算 $(1,3)$ 和 $(1,4)$ 对。</p>
+<p>网格 $f(2,2)$ 和 $f(4,4)$ 如下：</p>
+<pre><code>00
+00
+</code></pre>
+<p>网格 $f(2,3)$、$f(2,4)$、$f(3,3)$ 和 $f(3,4)$ 如下所示：</p>
+<pre><code>01
+10
+</code></pre>
+<p>因此不计算 $(2,3)$、$(2,4)$、$(3,3)$ 和 $(3,4)$ 对。</p>
+<p>仅计算 $(1,3)$ 和 $(1,4)$ 对，因此答案是 $2$。</p>
+<h1 id="wa-2">赛时WA 2代码</h1>
+<pre><code class="language-cpp">// Problem: CF 2163 C
+// Contest: Codeforces - Codeforces Round 1063 (Div. 2)
+// URL: https://codeforces.com/contest/2163/problem/C
+// Memory Limit: 256 MB
+// Time Limit: 2000 ms
+// 
+// Powered by CP Editor (https://cpeditor.org)
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+typedef long long LL;
+typedef pair&lt;LL,LL&gt; PII;
+const int N=1e9+7,INF=0x3f3f3f3f;
+
+
+void solve() {
+    int n;
+    cin&gt;&gt;n;
+    vector&lt;int&gt; premax(n+3,0),premin(n+3,INF);
+    vector&lt;int&gt; sufmax(n+3,0),sufmin(n+3,INF);
+    vector&lt;int&gt; a(n+3),b(n+3);
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;b[i];
+    for(int i=1;i&lt;=n;i++){
+        premax[i]=max(a[i],premax[i-1]);
+        premin[i]=min(a[i],premin[i-1]);
+    }
+    for(int i=n;i&gt;=1;i--){
+        sufmax[i]=max(b[i],sufmax[i+1]);
+        sufmin[i]=min(b[i],sufmin[i+1]);
+    }
+
+    int l=0,r=2*n;
+    for(int i=1;i&lt;=n;i++){
+        int mi=min(premin[i],sufmin[i]);
+        int mx=max(premax[i],sufmax[i]);
+        l=max(l,mi),r=min(r,mx);
+    }
+   // printf(&quot;%d %d\n&quot;,l,r);
+    printf(&quot;%lld\n&quot;,l*(n*2-r+1));
+
+    return;
+}
+
+signed main() {
+    int t;
+    cin &gt;&gt; t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+</code></pre>
+<h1 id="ac">抄哥哥AC 代码</h1>
+<pre><code class="language-cpp">// Problem: CF 2163 C
+// Contest: Codeforces - Codeforces Round 1063 (Div. 2)
+// URL: https://codeforces.com/contest/2163/problem/C
+// Memory Limit: 256 MB
+// Time Limit: 2000 ms
+// 
+// Powered by CP Editor (https://cpeditor.org)
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define int long long
+typedef long long LL;
+typedef pair&lt;LL,LL&gt; PII;
+const int N=1e9+7,INF=0x3f3f3f3f;
+
+
+void solve() {
+    int n;
+    cin&gt;&gt;n;
+    vector&lt;int&gt; premax(n+3,0),premin(n+3,INF);
+    vector&lt;int&gt; sufmax(n+3,0),sufmin(n+3,INF);
+    vector&lt;int&gt; a(n+3),b(n+3);
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;b[i];
+    for(int i=1;i&lt;=n;i++){
+        premax[i]=max(a[i],premax[i-1]);
+        premin[i]=min(a[i],premin[i-1]);
+    }
+    for(int i=n;i&gt;=1;i--){
+        sufmax[i]=max(b[i],sufmax[i+1]);
+        sufmin[i]=min(b[i],sufmin[i+1]);
+    }
+
+   vector&lt;int&gt; f(n*2+3,n*2+3);
+   for(int i=1;i&lt;=n;i++){
+        int L=min(premin[i],sufmin[i]);
+        int R=max(premax[i],sufmax[i]);
+        f[L]=min(R,f[L]);//注意这里是L
+   }
+    for(int i=2*n;i&gt;=0;i--){
+        f[i]=min(f[i],f[i+1]);
+    }
+    LL ans=0;
+    for(int i=2*n;i&gt;=1;i--){
+        ans+=max((2*n-f[i]+1),0LL);
+    }
+    printf(&quot;%lld\n&quot;,ans);
+    return;
+}
+
+signed main() {
+    int t;
+    cin &gt;&gt; t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+</code></pre>
+<h1 id="jiangly">jiangly 代码</h1>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+
+using i64 = long long;
+using u64 = unsigned long long;
+using u32 = unsigned;
+
+using u128 = unsigned __int128;
+using i128 = __int128;
+
+void solve() {
+    int n;
+    std::cin &gt;&gt; n;
+
+    std::vector a(2, std::vector&lt;int&gt;(n));
+    for (int i = 0; i &lt; 2; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            std::cin &gt;&gt; a[i][j];
+            a[i][j]--;
+        }
+    }
+
+    auto pmin = a[0], pmax = a[0], smin = a[1], smax = a[1];
+    for (int i = 1; i &lt; n; i++) {
+        pmin[i] = std::min(pmin[i - 1], pmin[i]);
+        pmax[i] = std::max(pmax[i - 1], pmax[i]);
+    }
+    for (int i = n - 2; i &gt;= 0; i--) {
+        smin[i] = std::min(smin[i + 1], smin[i]);
+        smax[i] = std::max(smax[i + 1], smax[i]);
+    }
+
+    std::vector&lt;int&gt; f(2 * n, 2 * n);
+
+    for (int i = 0; i &lt; n; i++) {
+        int L = std::min(pmin[i], smin[i]);
+        int R = std::max(pmax[i], smax[i]);
+        f[L] = std::min(f[L], R);
+    }
+    for (int i = 2 * n - 2; i &gt;= 0; i--) {
+        f[i] = std::min(f[i], f[i + 1]);
+    }
+    i64 ans = 0;
+    for (int i = 0; i &lt; 2 * n; i++) {
+        ans += 2 * n - f[i];
+    }
+    std::cout &lt;&lt; ans &lt;&lt; &quot;\n&quot;;
+}
+
+int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
+    int t;
+    std::cin &gt;&gt; t;
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
+</code></pre>
+<h1 id="ai-jiangly">AI  对于jiangly 思路以及我的代码分析</h1>
+<p>你好！我们来分析这道题。</p>
+<p>你这道题的 WA2 和 <code>jiangly</code> 的 AC 代码，思路差异非常大。你的代码尝试寻找一个“通用”的 $l$ 和 $r$，而 <code>jiangly</code> 的代码则在计算 $n$ 种可能路径的“并集”。</p>
+<p>这道题的核心是<strong>如何正确地对“至少存在一个”这种条件进行计数</strong>。你的 WA 表明你可能在计算“对于所有都成立”的“交集”，这是一个根本性的误解。</p>
+<p>让我们一步步拆解 <code>jiangly</code> 的正确思路。</p>
+<h3 id="1-path">步骤 1：分析路径 (Path)</h3>
+<p>我们首先要搞清楚“从 $(1,1)$ 到 $(2,n)$ 的右下路径”长什么样。</p>
+<p>在一个 $2 \times n$ 的网格里，从 $(1,1)$ 出发，你只能向右或向下。要想到达 $(2,n)$，你的路径_必须_在某一列 $k$（$1 \le k \le n$）从第一行“掉到”第二行。</p>
+<p>这个路径看起来就像：</p>
+<ol>
+<li>
+<p>先在第一行，从 $(1,1)$ 走到 $(1,k)$。</p>
+</li>
+<li>
+<p>然后从 $(1,k)$ 掉到 $(2,k)$。</p>
+</li>
+<li>
+<p>最后在第二行，从 $(2,k)$ 走到 $(2,n)$。</p>
+</li>
+</ol>
+<p><em>(注：$k=1$ 或 $k=n$ 是这个模型的特例，也是成立的)</em></p>
+<p>所以，一个 $f(l,r)$ 中存在路径，<strong>当且仅当存在至少一个 $k \in [1, n]$</strong>，使得<strong>路径 $k$</strong> 上的所有格子都为 $1$。</p>
+<p><strong>路径 $k$</strong> 包含了哪些格子？</p>
+<ul>
+<li>
+<p>第一行的前 $k$ 个：$(1,1), (1,2), \dots, (1,k)$</p>
+</li>
+<li>
+<p>第二行的后 $n-k+1$ 个：$(2,k), (2,k+1), \dots, (2,n)$</p>
+</li>
+</ul>
+<h3 id="2-lr-condition">步骤 2：分析 $(l,r)$ 的条件 (Condition)</h3>
+<p>对于一个<strong>固定</strong>的 $k$，要让“路径 $k$”上所有格子都为 $1$， $l$ 和 $r$ 必须满足什么条件？</p>
+<ul>
+<li>
+<p>$b_{i,j}$ 为 $1$ $\iff$ $l \le a_{i,j} \le r$</p>
+</li>
+<li>
+<p>所以，对于路径 $k$ 上的<strong>所有</strong>格子 $(i,j)$，都必须满足 $l \le a_{i,j} \le r$。</p>
+</li>
+</ul>
+<p>这等价于：</p>
+<ol>
+<li>
+<p>$l \le$ 路径 $k$ 上所有 $a_{i,j}$ 的<strong>最小值</strong>。</p>
+</li>
+<li>
+<p>$r \ge$ 路径 $k$ 上所有 $a_{i,j}$ 的<strong>最大值</strong>。</p>
+</li>
+</ol>
+<p>我们来定义两个值：</p>
+<ul>
+<li>
+<p>$L(k) = \min(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})$</p>
+</li>
+<li>
+<p>$R(k) = \max(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})$</p>
+</li>
+</ul>
+<p>所以，一个 $(l,r)$ 对能<strong>激活路径 $k$</strong> $\iff$ $l \le L(k)$ 且 $r \ge R(k)$。</p>
+<h3 id="3-wa2">步骤 3：分析你的 WA2 代码</h3>
+<p>我们先来看看你WA的代码里计算了什么：</p>
+<ul>
+<li>
+<p><code>premax[i]</code> / <code>premin[i]</code> 是 $a_{1,1}, \dots, a_{1,i}$ 的最大/最小值。</p>
+</li>
+<li>
+<p><code>sufmax[i]</code> / <code>sufmin[i]</code> 是 $a_{2,i}, \dots, a_{2,n}$ 的最大/最小值。</p>
+</li>
+</ul>
+<p>你在循环里计算的：</p>
+<ul>
+<li>
+<p><code>mi = min(premin[i], sufmin[i])</code> 这就是 $L(i)$！</p>
+</li>
+<li>
+<p><code>mx = max(premax[i], sufmax[i])</code> 这就是 $R(i)$！</p>
+</li>
+</ul>
+<p><strong>非常好！</strong> 你的代码<strong>正确地</strong>计算出了所有 $n$ 个路径的 $L(k)$ 和 $R(k)$。</p>
+<p><strong>但你的错误在这里：</strong></p>
+<p>C++</p>
+<pre><code>l=max(l,mi), r=min(r,mx);
+</code></pre>
+<p>你最后计算的 <code>l</code> 是 $\max(L(1), \dots, L(n))$，而 <code>r</code> 是 $\min(R(1), \dots, R(n))$。</p>
+<p>这组 $(l,r)$ 没有任何意义。题目要求我们统计的是：</p>
+<p>“所有在 $k=1$ 的 $(l,r)$ 集合” $\cup$ “所有在 $k=2$ 的 $(l,r)$ 集合” $\cup$ ... $\cup$ “所有在 $k=n$ 的 $(l,r)$ 集合”</p>
+<p>这个并集的大小。</p>
+<p>你计算的不是并集，也不是交集，而是一个不相关的奇怪值。</p>
+<hr />
+<h3 id="4">步骤 4：如何正确统计“并集”？</h3>
+<p>直接计算 $n$ 个“矩形区域” $(l \le L(k), r \ge R(k))$ 的并集很复杂（需要容斥原理）。</p>
+<p><code>jiangly</code> 的代码用了一个极其巧妙的<strong>逐行扫描</strong>思想，把一个二维的“面积并”问题，转换成了一个一维的求和问题。</p>
+<p>我们不直接统计 $(l,r)$ 对，我们换个角度：</p>
+<p>遍历所有的 $l \in [1, 2n]$，对于每个 $l$，我们去数有多少个 $r$ 能和它配对。</p>
+<p>一个 $(l,r)$ 对是合法的，当且仅当：</p>
+<p>$\exists k$ 使得 $l \le L(k)$ 且 $r \ge R(k)$。</p>
+<p>固定 $l$：</p>
+<ul>
+<li>
+<p>$l$ 必须“支持”至少一条路径。我们只关心那些 $k$，使得 $L(k) \ge l$。</p>
+</li>
+<li>
+<p>对于所有 $l$ 支持的 $k$ (即 $L(k) \ge l$ )， $r$ 只要 $\ge$ 它们中<strong>任意一个</strong> $R(k)$ 就行了。</p>
+</li>
+<li>
+<p>为了让 $r$ 的选择尽可能多，$r$ 只需要 $\ge \min { R(k) \mid L(k) \ge l }$。</p>
+</li>
+<li>
+<p>(我们还知道 $r \ge l$。但因为 $R(k) \ge L(k) \ge l$，所以 $\min { \dots } \ge l$ 自动成立。所以 $r \ge l$ 这个条件可以忽略)。</p>
+</li>
+</ul>
+<p>我们定义一个函数 $f(l) = \min { R(k) \mid L(k) \ge l }$。</p>
+<p>如果不存在 $k$ 使得 $L(k) \ge l$，我们就让 $f(l) = 2n+1$ (一个哨兵值)。</p>
+<ul>
+<li>
+<p>对于一个 $l$，只要 $r \ge f(l)$ 且 $r \le 2n$，这对 $(l,r)$ 就是合法的。</p>
+</li>
+<li>
+<p>所以，对于 $l$，合法的 $r$ 的数量是：$2n - f(l) + 1$ (如果是负数，则为 0)。</p>
+</li>
+</ul>
+<p><strong>最终答案 = $\sum_{l=1}^{2n} \max(0, 2n - f(l) + 1)$</strong></p>
+<h3 id="5jiangly">步骤 5：<code>jiangly</code> 的代码如何实现？</h3>
+<p>jiangly 的代码就是为了高效计算 $f(l)$ 函数。</p>
+<p>(注意：jiangly 的代码将所有 $a_{i,j}$ 都减了 $1$，所以他是 0-indexed，值域是 $0 \sim 2n-1$。我们的 $f(l)$ 对应他的 $f[i]$)</p>
+<ol>
+<li>
+<p><strong>初始化 <code>f</code> 数组：</strong></p>
+<p>C++</p>
+<p><code>std::vector&lt;int&gt; f(2 * n, 2 * n);</code></p>
+<p><code>f</code> 数组的下标代表 $l$，值代表 $f(l)$。初始化为 $2n$ (他的“无穷大”)。</p>
+</li>
+<li>
+<p><strong>计算 $L(k)$ 和 $R(k)$，并更新 <code>f</code>：</strong></p>
+<p>C++</p>
+<p><code>for (int i = 0; i &lt; n; i++) {
+    int L = std::min(pmin[i], smin[i]); // 这就是 L(k)
+    int R = std::max(pmax[i], smax[i]); // 这就是 R(k)
+    f[L] = std::min(f[L], R);
+}</code></p>
+<p>这一步之后，f[l] 存储的是 $\min { R(k) \mid L(k) = l }$。</p>
+<p>(即：所有 $L(k)$ 恰好等于 $l$ 的路径 $k$ 中，最小的那个 $R(k)$)</p>
+</li>
+<li>
+<p>计算 $f(l)$：</p>
+<p>我们想要的 $f(l) = \min { R(k) \mid L(k) \ge l }$。</p>
+<p>而我们现在有 $f'[l] = \min { R(k) \mid L(k) = l }$。</p>
+<p>$f(l)$ 其实就是 $f'[l], f'[l+1], f'[l+2], \dots$ 里的最小值。</p>
+<p>这不就是后缀最小值 (Suffix Minimum) 吗！</p>
+<p>C++</p>
+<p><code>for (int i = 2 * n - 2; i &gt;= 0; i--) {
+    f[i] = std::min(f[i], f[i + 1]);
+}</code></p>
+<p>这个循环跑完，<code>f[i]</code> 就存着 $f(i)$ 的真正值了。</p>
+</li>
+<li>
+<p><strong>求和：</strong></p>
+<p>C++</p>
+<p><code>i64 ans = 0;
+for (int i = 0; i &lt; 2 * n; i++) {
+    ans += 2 * n - f[i];
+}</code></p>
+<p>(因为 $f[i]$ 不可能 $&gt; 2n$，所以 $\max(0, \dots)$ 可以省略。$2n - f[i]$ 就对应 1-indexed 的 $2n - f(l) + 1$)。</p>
+</li>
+</ol>
+<h3 id="_7">总结与提升</h3>
+<ol>
+<li>
+<p><strong>你的 WA2 原因：</strong> 你正确计算了 $n$ 个 $(L(k), R(k))$ 对，但你错误地将它们“合并”了。你没有意识到你要求的是 $n$ 个条件集的<strong>并集</strong>。</p>
+</li>
+<li>
+<p><strong>本题核心能力：</strong></p>
+<ul>
+<li>
+<p><strong>模型转换：</strong> 将一个二维的“路径”问题，转换为 $n$ 个一维的“路径 $k$”问题。</p>
+</li>
+<li>
+<p><strong>计数问题转换：</strong> 将一个“二维区域并集”的计数问题，转换为“一维逐行扫描”的求和问题。 (即 $\sum_{l} \text{count}(r)$)</p>
+</li>
+<li>
+<p><strong>算法实现：</strong> 利用“后缀最小值”来快速计算 $\min { R(k) \mid L(k) \ge l }$。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>这个思维转换（从 <code>count(l,r)</code> 转换到 $\sum_l \text{count}(r)$）在 $1600 \sim 1900$ 分段的计数题中极其常见。这个技巧一定要掌握。</p>
+<p>这个分析对你有帮助吗？你想不想把你 WA 的代码，按照这个思路修改一下试试？</p>
+<h1 id="_8">对于细节问题的考量</h1>
+<h3 id="1-fl-minr-fl">1. <code>f[L] = min(R, f[L]);</code> 这一步</h3>
+<ul>
+<li>
+<p><strong>目的：</strong> 这个循环把 <code>f</code> 数组当作一个“桶”或“映射表”来使用。</p>
+</li>
+<li>
+<p><strong>索引 (<code>L</code>)：</strong> 索引 <code>L</code> 代表一个特定的<strong>最小 $l$ 需求</strong>（即路径 $k$ 的 $L(k)$ 值）。</p>
+</li>
+<li>
+<p><strong>值 (<code>R</code>)：</strong> 存储的值 <code>f[L]</code>，代表在所有 $L(k)$ 正好等于 <code>L</code> 的路径 $k$ 中，那个<strong>最小的 $R(k)$ 需求</strong>是多少。</p>
+</li>
+<li>
+<p><strong>示例：</strong> 如果路径 3 的 $(L=5, R=10)$，路径 7 的 $(L=5, R=8)$，那么这个循环跑完后，<code>f[5]</code> 的值会是 8。这只是一个中间步骤。</p>
+</li>
+</ul>
+<h3 id="2-fi-minfi-fi1">2. 后缀最小值步骤：<code>f[i] = min(f[i], f[i+1]);</code></h3>
+<ul>
+<li>
+<p><strong>目的：</strong> 这个循环将 <code>f</code> 数组从它的中间状态（上一步的结果）转换为我们计数所需的最终状态。</p>
+</li>
+<li>
+<p><strong>之前：</strong> <code>f[i]</code> = $\min { R(k) \mid L(k) = i }$ （只考虑那些 $L(k)$ <em>等于</em> $i$ 的路径）。</p>
+</li>
+<li>
+<p><strong>之后：</strong> <code>f[i]</code> = $\min { R(k) \mid L(k) \ge i }$ （考虑所有 $L(k)$ 是 $i, i+1, i+2, \dots$ 的路径）。</p>
+</li>
+<li>
+<p><strong>原因：</strong> 当我们检查一个给定的 $l=i$ 时，我们<strong>被允许使用任何一条</strong> $L(k)$ 需求被满足的路径 $k$（即 $L(k) \ge l=i$）。这个循环的目的就是从所有这些合法的路径中，找出那个要求最低的 $R(k)$（即最小的 $R(k)$）。</p>
+</li>
+</ul>
+<h3 id="3-1-indexed-1-0-indexed">3. 为什么 1-Indexed 要 <code>+1</code>，而 0-Indexed 不需要</h3>
+<p>这是一个非常经典的、关于计算闭区间 $[A, B]$ 内整数个数的“差一”细节。计算公式永远是：<strong>$\text{个数} = B - A + 1$</strong>。</p>
+<ul>
+<li>
+<p><strong>你的 1-Indexed（1 为起始）代码：</strong></p>
+<ul>
+<li>
+<p>数值范围：$[1, 2n]$</p>
+</li>
+<li>
+<p>$l$ 是 $i$，$r$ 必须在 $[f[i], 2n]$ 范围内</p>
+</li>
+<li>
+<p>$A = f[i]$, $B = 2n$</p>
+</li>
+<li>
+<p>个数 = $(2n) - f[i] + 1$</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>jiangly</code> 的 0-Indexed（0 为起始）代码：</strong></p>
+<ul>
+<li>
+<p>数值范围：$[0, 2n-1]$</p>
+</li>
+<li>
+<p>$l$ 是 $i$，$r$ 必须在 $[f[i], 2n-1]$ 范围内</p>
+</li>
+<li>
+<p>$A = f[i]$, $B = 2n-1$</p>
+</li>
+<li>
+<p>个数 = $(2n-1) - f[i] + 1$</p>
+</li>
+<li>
+<p>化简后：$2n - f[i]$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>那个 <code>+1</code> 并没有消失；它只是在 0-Indexed 的情况下，被上界 $2n-1$ 中的那个 <code>-1</code> 给数学上抵消了。两种方法都正确地应用了同一个计数原理。</p>
+<h1 id="_9">这道题目在考什么</h1>
+<p>这是一个非常好的问题。你开始从“做对一道题”转向“从一道题学到东西”，这是冲上 1600 分最关键的思维转变。</p>
+<p>这道 <code>Monopati</code> 题是<strong>一道绝佳的 1600 分“守门员”题</strong>。它不（直接）考察你背诵的某个复杂算法（比如 KMP 或 Dijkstra），而是<strong>纯粹考验你的思维能力</strong>。</p>
+<hr />
+<h3 id="_10">🧐 这道题在考验什么？</h3>
+<p>它主要考验你三个层次的能力：</p>
+<ol>
+<li>
+<p><strong>问题建模能力 (Modeling)：</strong></p>
+<ul>
+<li>
+<p>这是最重要的一步。一个“从 (1,1) 到 (2,n) 的右下路径”听起来很复杂，可能有成千上万条。</p>
+</li>
+<li>
+<p>你的<strong>第一个突破</strong>是必须意识到，任何这样的路径都必然是在某一列 $k$ 从第一行“掉到”第二行。</p>
+</li>
+<li>
+<p>因此，这个模糊的“路径”问题被你<strong>转化（model）</strong>成了 $n$ 个清晰、具体、独立的“路径 $k$”问题。<strong>这是从 1200 到 1600 的最大思维鸿沟之一：将模糊的描述转化为清晰的数学/逻辑模型。</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>约束分析能力 (Constraint Analysis)：</strong></p>
+<ul>
+<li>
+<p>当你有了 $n$ 个“路径 $k$”模型后，你对每一个模型进行了分析。</p>
+</li>
+<li>
+<p>“路径 $k$ 上的所有格子都为 1”这个条件，被你<strong>转化</strong>成了一个数学约束：$l \le L(k)$ 且 $r \ge R(k)$。</p>
+</li>
+<li>
+<p>这又是一次转化，你把一个网格问题，变成了 $n$ 个二维平面上的“矩形区域”问题。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>高效计数能力 (Efficient Counting)：</strong></p>
+<ul>
+<li>
+<p>这是最精妙的一步，也是区分 1400 和 1600+ 的地方。</p>
+</li>
+<li>
+<p><strong>（慢速思路）</strong> 遍历 $O(n^2)$ 个 $(l,r)$ 对，看每个 $(l,r)$ 是否满足<strong>至少一个</strong> $k$ 的约束。 $\rightarrow$ 太慢。</p>
+</li>
+<li>
+<p><strong>（你的 AC 思路）</strong> 题目要求的是 $n$ 个“矩形区域”的<strong>并集</strong>面积。直接求并集很复杂。</p>
+</li>
+<li>
+<p>你采用了我们讨论的<strong>“逐行扫描”</strong>思想：<strong>不直接数 $(l,r)$ 对，而是去 $\sum_{l=1}^{2n} \text{count}(r)$</strong>。</p>
+</li>
+<li>
+<p>为了高效计算 $\text{count}(r)$，你又用了 $O(n)$ 预处理 + $O(n)$ 后缀最小值，最终用 $O(n)$ 时间解决了问题。这背后的“后缀最小值”和“桶排序”的思想，都是非常高级的技巧。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>总结：</strong> 这道题考验你<strong>连续两次将问题转化的能力</strong>，以及<strong>用一个巧妙的（基于后缀的）数据处理技巧来优化计数</strong>的能力。</p>
+<hr />
+<h3 id="1600">🚀 为了上 1600，你应该做哪些努力？</h3>
+<p>基于你对这道题的分析，你已经具备了冲 1600 的潜力。你需要的是把这种能力系统化：</p>
+<ol>
+<li>
+<p><strong>掌握核心“思维工具”（而不只是算法模板）</strong></p>
+<ul>
+<li>
+<p>你现在处在 1200 分，你可能已经会了 <code>sort</code>, <code>binary_search</code> (函数), <code>vector</code>, <code>map</code>。</p>
+</li>
+<li>
+<p>1600 分要求你<strong>在“想不到”的地方</strong>使用它们。</p>
+</li>
+<li>
+<p><strong>二分答案 (Binary Search on Answer)：</strong> 当题目要求“最大化最小值”或“最小化最大值”时，几乎总是二分答案。</p>
+</li>
+<li>
+<p><strong>双指针 (Two Pointers / Sliding Window)：</strong> 在 $O(n)$ 时间内处理“满足某个条件的连续子数组”问题。</p>
+</li>
+<li>
+<p><strong>前缀和/差分 (Prefix Sums / Difference Arrays)：</strong> $O(1)$ 查询区间和， $O(1)$ 区间修改（配合差分）。这是 <code>Monopati</code> 中 $L(k)$ 和 $R(k)$ 能快速计算的基础。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>练习“建模”能力（就像这道题一样）</strong></p>
+<ul>
+<li>
+<p>1600 分的题很少会直接说“请用 DP”或“请用二分”。</p>
+</li>
+<li>
+<p>题目会是一个故事，比如“小明种花”、“怪兽入侵”。你的<strong>首要任务</strong>是把故事扒掉，看它是不是在描述一个你熟悉的模型（如图论、DP、二分）。</p>
+</li>
+<li>
+<p><strong>练习方法：</strong> 专门去做 CF 1400-1700 分的 C 题和 D 题。看题解时，不要只看代码，要看题解的<strong>第一句话</strong>（比如：“我们可以注意到...这是一个二分问题”）。然后关掉题解，自己想<strong>为什么</strong>这是一个二分问题。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>坚持“Upsolving”（补题）</strong></p>
+<ul>
+<li>
+<p>这是<strong>最最最重要</strong>的一条。你的 rating 提升<strong>不是</strong>发生在比赛中，而是发生在比赛后。</p>
+</li>
+<li>
+<p><strong>规则：</strong> 每打完一场 CF 比赛，你必须（在 2-3 天内）把<strong>你没做出来的、以及你做出来了但比别人慢的</strong>题，全部看懂并重写一遍。</p>
+</li>
+<li>
+<p>特别是 C 题和 D 题。你今天对 <code>Monopati</code> (C 题) 的深入分析，就是一次完美的 Upsolving。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>学习基础数据结构</strong></p>
+<ul>
+<li>
+<p>要稳定在 1600，有一些工具你必须会用：</p>
+</li>
+<li>
+<p><strong>并查集 (DSU):</strong> 维护连通性问题（“A 和 B 是不是亲戚？”）。</p>
+</li>
+<li>
+<p><strong>树状数组 (BIT) / 线段树 (Segment Tree):</strong> 它们是“前缀和”的超级升级版。能做到 $O(\log n)$ 单点修改 和 $O(\log n)$ 区间查询。<code>Monopati</code> 里的后缀最小值，其实也可以用线段树来 $O(n \log n)$ 解决（虽然 $O(n)$ 更好）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>你今天对 C 题的深入分析（特别是你问的 3 个细节问题）非常棒，这<strong>正是</strong> 1600 分选手所具备的思考能力。你已经走在正确的路上了。</p>
+<p>我们是继续分析下一道题，还是你想选一个刚才提到的“思维工具”（比如“二分答案”或“双指针”），我们找一道题来专门练习一下？</p>
+<h1 id="cf">CF 题解思路</h1>
+<p>我们称一对整数 $(l, r)$ 是好的，当且仅当 $1 \le l \le r \le 2n$ 并且在 $f(l, r)$ 中存在一条从 $(1, 1)$ 到 $(2, n)$ 的、由值为 $1$ 的单元格组成的右下路径。对于某个固定的左端点 $l$（从 $1$ 到 $2n$），令 $r_l$ 表示使得数对 $(l, r_l)$ 是好的最小整数。如果不存在这样的整数，为方便起见，我们记 $r_l = n+1$。</p>
+<p>第一个观察是：如果 $(l, r)$ 是好的，并且 $r &lt; 2n$，那么 $(l, r+1)$ 也是好的。原因很明显：在 $f(l, r)$ 中值为 $1$ 的每个单元格，在 $f(l, r+1)$ 中值也为 $1$。因此，如果我们找到了 $r_1, r_2, \ldots, r_{2n}$，那么答案将是 $(2n - r_1 + 1) + (2n - r_2 + 1) + \ldots + (2n - r_{2n} + 1)$。（换句话说，我们是在计算所有数对 $(l, r_l), (l, r_l+1), \ldots, (l, 2n)$，其中 $1 \le l \le 2n$）。</p>
+<p>第二个观察随之而来：$r_1 \le r_2 \le \ldots \le r_{2n}$。很明显，网格 $f(l, r_l)$ 和 $f(l+1, r_l)$ 之间的唯一区别是，$f(l+1, r_l)$ 中值为 $0$ 的单元格数量相同或更多，并且如果某个单元格在 $f(l+1, r_l)$ 中值为 $1$，那么它在 $f(l, r_l)$ 中值也为 $1$。如果我们在 $f(l+1, r_l)$ 中不再有右下路径，那么对于所有 $r \le r_l$，在 $f(l+1, r)$ 中都没有右下路径。由此可得 $r_{l+1} \ge r_l$。</p>
+<p>这个观察允许我们使用双指针。对于某个固定的 $l$ 和 $r$，如果 $(l, r)$ 不是好的，我们将持续增加 $r$ 直到它变成好的，换句话说就是找到 $r_l$。我们激活所有值为 $r+1$ 的单元格。为了检查数对 $(l, r+1)$ 是否是好的，我们找到第一行中第一个未激活的单元格和最后一行中最后一个未激活的单元格（如果一个单元格不在我们当前考虑的范围内，则它是未激活的）。这可以通过维护两组未激活的单元格来完成，每组对应一行。假设它们分别位于列 $a$ 和 $b$。那么，在 $f(l, r+1)$ 中存在一条右下路径当且仅当 $a - 1 &gt; b$（我们可以到达单元格 $(1, a-1)$，然后转到单元格 $(2, a-1)$，再继续到 $(2, n)$）。一旦我们找到 $r_l$，我们将增加 $l$，停用所有值为 $l$ 的单元格，并持续增加 $r_l$ 直到我们找到 $r_{l+1}$，依此类推。</p>
+<h1 id="cf_1">CF 题解代码</h1>
+<pre><code class="language-cpp">// nifeshe
+
+#ifdef LOCAL
+    #include &lt;bits/include_all.h&gt;
+#else
+    #include &lt;bits/stdc++.h&gt;
+    #include &lt;ext/pb_ds/assoc_container.hpp&gt;
+    #include &lt;ext/pb_ds/tree_policy.hpp&gt;
+#endif
+
+#pragma GCC target (&quot;avx2&quot;)
+#pragma GCC optimize (&quot;Ofast&quot;)
+#pragma GCC optimize (&quot;unroll-loops&quot;)
+
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define int long long
+
+using namespace std;
+using namespace __gnu_pbds;
+
+template &lt;typename T&gt; using oset = tree&lt;T, null_type, less&lt;T&gt;, rb_tree_tag, tree_order_statistics_node_update&gt;;
+template &lt;typename T&gt; inline bool umin(T &amp;a, const T &amp;b) { if(a &gt; b) { a = b; return 1; } return 0; }
+template &lt;typename T&gt; inline bool umax(T &amp;a, const T &amp;b) { if(a &lt; b) { a = b; return 1; } return 0; }
+
+typedef long long ll;
+typedef long double ld;
+typedef pair&lt;int, int&gt; pii;
+
+const ll mod = 998244353;
+const ll inf = 1e18;
+const int MAX = 2e5 + 42;
+
+random_device rd;
+mt19937 gen(rd());
+uniform_int_distribution&lt;ll&gt; dis(1, inf);
+
+void solve() {
+    int n;
+    cin &gt;&gt; n;
+    vector&lt;vector&lt;int&gt;&gt; a(2, vector&lt;int&gt;(n));
+    for(auto &amp;i : a) {
+        for(auto &amp;j : i) {
+            cin &gt;&gt; j;
+        }
+    }
+
+    vector&lt;vector&lt;pii&gt;&gt; pos(2 * n + 1);
+    for(int i = 0; i &lt; 2; i++) {
+        for(int j = 0; j &lt; n; j++) {
+            pos[a[i][j]].push_back({i, j});
+        }
+    }
+
+
+    array&lt;set&lt;int&gt;, 2&gt; st;
+    st[0].insert(inf);
+    st[1].insert(-inf);
+    for(int i = 0; i &lt; n; i++) st[0].insert(i);
+    for(int i = 0; i &lt; n; i++) st[1].insert(i);
+
+    auto add = [&amp;](int x) {
+        for(auto [i, j] : pos[x]) {
+            st[i].erase(j);
+        }
+    };
+
+    auto del = [&amp;](int x) {
+        for(auto [i, j] : pos[x]) {
+            st[i].insert(j);
+        }
+    };
+
+    auto check = [&amp;]() {
+        if(st[0].count(0)) return false;
+        if(st[1].count(n - 1)) return false;
+        if(*st[0].begin() - 1 &lt;= *st[1].rbegin()) return false;
+
+        return true;
+    };
+
+    int ans = 0;
+    int r = 0;
+    for(int l = 1; l &lt;= 2 * n; l++) {
+        while(r + 1 &lt;= 2 * n &amp;&amp; !check()) {
+            add(++r);
+        }
+        if(!check()) break;
+
+        ans += 2 * n - r + 1;
+        del(l);
+    }
+
+    cout &lt;&lt; ans &lt;&lt; '\n';
+}
+
+signed main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int ttt = 1;
+    cin &gt;&gt; ttt;
+    while(ttt--) {
+        solve();
+    }
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

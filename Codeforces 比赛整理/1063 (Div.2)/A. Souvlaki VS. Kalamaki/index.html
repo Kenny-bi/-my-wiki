@@ -1,0 +1,5174 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/A.%20Souvlaki%20VS.%20Kalamaki/">
+      
+      
+        <link rel="prev" href="../../989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/">
+      
+      
+        <link rel="next" href="../B.%20Siga%20ta%20Kymata/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>A. Souvlaki VS. Kalamaki - Kenny's Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-souvlaki-vs-kalamaki" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kenny's Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A. Souvlaki VS. Kalamaki
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn Claude Code
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kenny's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Claude Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learn Claude Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s01 - 逐行拆解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s02 - 工具调度与Python语法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s03-todo-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s03 - TodoWrite 与 Nag 提醒
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s04-subagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../s05-skill-loading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codeforces
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Codeforces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    989 (Div.4)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    989 (Div.4)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E Building an Aquarium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F Money Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G ABBC or BACB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1063 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1063 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Souvlaki VS. Kalamaki
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Souvlaki VS. Kalamaki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-souvlaki-vs-kalamaki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Souvlaki VS. Kalamaki
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赛时AC代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对题目的解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对题目的解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧐 这道题在考验什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 核心思路拆解 (Step-by-Step)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 核心思路拆解 (Step-by-Step)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 问题的核心：谁在“捣乱”，谁能“修复”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-souvlaki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Souvlaki 的必胜策略是什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 关键的推论
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 如何从代码对比中提高？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 如何从代码对比中提高？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        你的代码：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jiangly-0-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 的代码 (0-indexed)：
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 你的提高点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../B.%20Siga%20ta%20Kymata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Siga ta Kymata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C.%20Monopati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Monopati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1. Diadrash (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D2. Diadrash (Hard Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1064 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1064 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Same Difference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Tab Closing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Cyclic Merging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Marble Council
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1065 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1065 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Yuu Koito and Minimum Absolute Sum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C1. Renako Amaori and XOR Game (easy version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C2. Renako Amaori and XOR Game (hard version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Rae Taylor and Trees (easy version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F. Rae Taylor and Trees (hard version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1066 (Div.1+Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1066 (Div.1+Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Dungeon Equilibrium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Expansion Plan 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Meximum Array 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Billion Players Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Adjusting Drones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    F. Git Gud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1070 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1070 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Optimal Shifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Odd Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Fibonacci Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1071 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1071 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Blackslex and Password
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Blackslex and Showering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Blackslex and Number Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Blackslex and Penguin Civilization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Blackslex and Girls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    H. Blackslex and Plants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1072 (Div.3)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1072 (Div.3)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Social Experiment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Hourglass
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Huge Pile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Unfair Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Exquisite Array
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1078 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1078 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/B.%20Offshores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Offshores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/C.%20Secret%20message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Secret message
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1078%20%28Div.2%29/D.%20Table%20Cut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Table Cut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1079 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1079 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Friendly Numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Array and Permutation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Game with a Fraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Another Problem about Beautiful Pairs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E1. Interactive Graph (Simple Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1083 (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1083 (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Simons and Cakes for Success
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Simons and Posting Blogs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Simons and Beating Peaks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1088 (Div. 1 + Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1088 (Div. 1 + Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Antimedian Deletion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Mickey Mouse Constructive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C1. Equal Multisets (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1094 (Div. 1 + Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1094 (Div. 1 + Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Wonderful Contest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Artistic Balance Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Median Partition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    184 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    184 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Alice and Bob
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Drifting Away
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Range Operation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1. Removal of a Sequences (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D2. Removal of a Sequence (Hard Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    185 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    185 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Maximum Neighborhood
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Addition on a Segment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Quotient and Remainder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    186 (Rated for Div. 2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    186 (Rated for Div. 2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Production of Snowmen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Christmas Tree Decoration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. New Year's Gifts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    187 (Rated for Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    187 (Rated for Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Test Generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Divisibility Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    188 Rated for (Div.2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    188 Rated for (Div.2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Alternating Path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E. Sum of Digits (and Again)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Bye 2025
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_20">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Good Bye 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. Yes or Yes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B. Impost or Sus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. First or Second
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D. Xmas or Hysteria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hello 2026
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_21">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hello 2026
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C. War Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    D1 Tree Coloring (Easy Version)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-souvlaki-vs-kalamaki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Souvlaki VS. Kalamaki
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输入格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例输出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        赛时AC代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiangly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对题目的解析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对题目的解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧐 这道题在考验什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 核心思路拆解 (Step-by-Step)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 核心思路拆解 (Step-by-Step)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 问题的核心：谁在“捣乱”，谁能“修复”？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-souvlaki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Souvlaki 的必胜策略是什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 关键的推论
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 如何从代码对比中提高？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 如何从代码对比中提高？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        你的代码：
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jiangly-0-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jiangly 的代码 (0-indexed)：
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 你的提高点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解思路
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CF 题解代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>[[构造]]</p>
+<h2 id="a-souvlaki-vs-kalamaki">A. Souvlaki VS. Kalamaki</h2>
+<p>时间限制：每个测试 1 秒<br />
+内存限制：每个测试 256 MB</p>
+<h2 id="_1">问题描述</h2>
+<p>两个玩家 Souvlaki 和 Kalamaki 被给定一个包含 $n$ 个整数的序列 $a$。</p>
+<p>他们将进行一个包含 $n-1$ 轮的游戏，轮次编号从 $1$ 到 $n-1$。Souvlaki 在奇数轮行动，Kalamaki 在偶数轮行动。</p>
+<p>在第 $i$ 轮中，当前玩家可以选择执行以下操作之一：</p>
+<ul>
+<li>跳过他的回合，进入第 $i+1$ 轮（如果第 $i$ 轮是最后一轮，则结束游戏）。</li>
+<li>交换元素 $a_i$ 和 $a_{i+1}$。</li>
+</ul>
+<p>如果在最后一轮结束后，$a$ 按非递减顺序排序（即对于每个 $1 \leq i &lt; n$，都有 $a_i \leq a_{i+1}$），则 Souvlaki 获胜。否则，Kalamaki 获胜。</p>
+<p>然而，Souvlaki 不喜欢输，所以在游戏开始前，他可以用任何他想要的方式重新排列 $a$ 的元素。他是否可能通过重新排列元素，使得他有一个保证获胜的策略？</p>
+<h2 id="_2">输入格式</h2>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 $t$ ($1 \leq t \leq 100$)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 $n$ ($3 \leq n \leq 100$) —— 序列 $a$ 中的整数个数。</p>
+<p>第二行包含恰好 $n$ 个整数 $a_1, a_2, \dots, a_n$ ($1 \leq a_i \leq n$) —— 表示 $a$ 的第 $i$ 个元素。</p>
+<h2 id="_3">输出格式</h2>
+<p>对于每个测试用例，如果 Souvlaki 能够通过重新排列 $a$ 的元素来获得保证获胜的策略，则在单独一行输出 "YES"，否则输出 "NO"。</p>
+<p>你可以以任何大小写形式输出答案。例如，字符串 "yEs"、"yes"、"Yes" 和 "YES" 都会被识别为肯定回答。</p>
+<h2 id="_4">样例输入</h2>
+<pre><code>5
+4
+4 2 2 1
+4
+1 1 1 1
+5
+1 5 1 5 1
+3
+1 2 3
+5
+1 3 2 3 5
+</code></pre>
+<h2 id="_5">样例输出</h2>
+<pre><code>YES
+YES
+YES
+NO
+NO
+</code></pre>
+<h2 id="_6">样例说明</h2>
+<p>在第一个样例中，$a = [4, 2, 2, 1]$。一种可能的重新排列方式是 $a = [2, 1, 2, 4]$。然后游戏可能按如下进行：</p>
+<ul>
+<li>第 1 轮是 Souvlaki 的回合。他选择交换 $a_1$ 和 $a_2$，现在 $a = [1, 2, 2, 4]$。</li>
+<li>第 2 轮是 Kalamaki 的回合。无论他选择跳过回合还是交换元素 $a_2$ 和 $a_3$，$a$ 都将保持不变。假设他跳过回合。</li>
+<li>第 3 轮是 Souvlaki 的回合。他也可以选择跳过回合，因为如果他交换最后两个元素，他可能会输。</li>
+</ul>
+<p>在每一轮之后，$a = [1, 2, 2, 4]$，按非递减顺序排序，所以无论 Kalamaki 如何选择，Souvlaki 都会获胜。</p>
+<p>在第二个样例中，由于所有元素都相等，$a$ 总是按非递减顺序排序，因此 Souvlaki 总是获胜。</p>
+<h1 id="ac">赛时AC代码</h1>
+<ul>
+<li>赛时思路，</li>
+<li>假如 1-6</li>
+<li>对于偶数们直接判断类似 2-3  4-5；</li>
+<li>对于技术直接判断（1-5） 2 -3     4-5</li>
+</ul>
+<pre><code class="language-cpp">// Problem: CF 2163 A
+// Contest: Codeforces - Codeforces Round 1063 (Div. 2)
+// URL: https://codeforces.com/contest/2163/problem/A
+// Memory Limit: 256 MB
+// Time Limit: 1000 ms
+// 
+// Powered by CP Editor (https://cpeditor.org)
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long LL;
+typedef pair&lt;LL,LL&gt; PII;
+const int N=1e9+7,INF=0x3f3f3f3f;
+
+
+void solve() {
+    int n;
+    cin&gt;&gt;n;
+    vector&lt;int&gt; a(n+1);
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    sort(a.begin()+1,a.end());
+    if(n&amp;1)
+    {
+        for(int i=2;i&lt;n;i+=2){
+            if(a[i]!=a[i+1]){
+                printf(&quot;NO\n&quot;);
+                return ;
+            }
+        }
+    }else{
+        for(int i=3;i&lt;n;i+=2){
+            if(a[i]!=a[i-1]){
+                printf(&quot;NO\n&quot;);
+                return ;
+            }
+        }
+    }
+    printf(&quot;YES\n&quot;);
+    return;
+}
+
+int main() {
+    int t;
+    cin &gt;&gt; t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+</code></pre>
+<h1 id="jiangly">jiangly 代码</h1>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+
+using i64 = long long;
+using u64 = unsigned long long;
+using u32 = unsigned;
+
+using u128 = unsigned __int128;
+using i128 = __int128;
+
+void solve() {
+    int n;
+    std::cin &gt;&gt; n;
+
+    std::vector&lt;int&gt; a(n);
+    for (int i = 0; i &lt; n; i++) {
+        std::cin &gt;&gt; a[i];
+    }
+
+    std::sort(a.begin(), a.end());
+
+    for (int i = 2; i &lt; n; i += 2) {
+        if (a[i] != a[i - 1]) {
+            std::cout &lt;&lt; &quot;NO\n&quot;;
+            return;
+        }
+    }
+
+    std::cout &lt;&lt; &quot;YES\n&quot;;
+}
+
+int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
+    int t;
+    std::cin &gt;&gt; t;
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
+</code></pre>
+<h1 id="_7">对题目的解析</h1>
+<p>很高兴能帮你分析这个问题！你能在比赛中AC这道题，说明你对问题有不错的直觉和实现能力。</p>
+<p>你提供的两份代码，你自己的AC代码和jiangly的代码，在<strong>核心逻辑上是完全一致且正确的</strong>。这道题表面上是一个博弈论问题，但实际上是一个巧妙的<strong>构造和条件检查问题</strong>。</p>
+<p>下面我来帮你分析这道题在考验什么，以及如何从对比中提高。</p>
+<hr />
+<h3 id="_8">🧐 这道题在考验什么？</h3>
+<p>这道题主要在考验你以下几种能力：</p>
+<ol>
+<li>
+<p><strong>博弈论问题的简化能力：</strong> 能否看穿游戏规则的表象，找到问题的“死穴”。</p>
+</li>
+<li>
+<p><strong>非对称性分析能力：</strong> 识别出两个玩家的行动（Souvlaki在奇数位，Kalamaki在偶数位）是_非对称_且_互不干涉_的。</p>
+</li>
+<li>
+<p><strong>最优策略的构造能力：</strong> 意识到Souvlaki的_唯一_制胜机会在于游戏开始前的“重新排列”。</p>
+</li>
+<li>
+<p><strong>将策略转化为代码的能力：</strong> 把“必胜策略”翻译成一个简单的、可执行的检查条件（即排序后检查特定位置的元素是否相等）。</p>
+</li>
+</ol>
+<hr />
+<h3 id="step-by-step">💡 核心思路拆解 (Step-by-Step)</h3>
+<p>让我们来一步步拆解这个游戏，看看为什么最后会变成一个简单的 <code>sort</code> + <code>check</code>。</p>
+<h4 id="1">1. 问题的核心：谁在“捣乱”，谁能“修复”？</h4>
+<ul>
+<li>
+<p><strong>Souvlaki (S, 玩家1)</strong>：在第 $1, 3, 5, \dots$ 轮行动。他可以交换 $(a_1, a_2), (a_3, a_4), (a_5, a_6), \dots$。</p>
+</li>
+<li>
+<p><strong>Kalamaki (K, 玩家2)</strong>：在第 $2, 4, 6, \dots$ 轮行动。他可以交换 $(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots$。</p>
+</li>
+</ul>
+<p>这里最关键的洞察是：<strong>S 和 K 的行动“领地”是错开的！</strong></p>
+<ul>
+<li>
+<p>K 可以制造 $(a_2, a_3)$ 之间的逆序。</p>
+</li>
+<li>
+<p>S <em>永远</em> 无法通过他的行动（交换 $a_1, a_2$ 或 $a_3, a_4$）来_修复_ $(a_2, a_3)$ 之间的逆序。</p>
+</li>
+</ul>
+<h4 id="2-souvlaki">2. Souvlaki 的必胜策略是什么？</h4>
+<p>Souvlaki (S) 的目标是让数组最终有序。Kalamaki (K) 的目标是阻止这件事。</p>
+<p>S 拥有一个巨大的优势：游戏开始前可以任意排列数组。</p>
+<p>S 显然应该先把数组排成非递减顺序，即 $a_1 \le a_2 \le a_3 \le \dots \le a_n$。这是他的目标状态。</p>
+<p>现在，游戏开始。</p>
+<ul>
+<li>
+<p><strong>第 1 轮 (S)</strong>：S 看到 $(a_1, a_2)$。因为 $a_1 \le a_2$，S 绝对不会交换。他选择“跳过”。</p>
+</li>
+<li>
+<p><strong>第 2 轮 (K)</strong>：K 看到 $(a_2, a_3)$。</p>
+<ul>
+<li>
+<p><strong>情况 A (K 的机会)：</strong> 如果 $a_2 &lt; a_3$，K 就可以选择“交换”，数组变为 $a_1, a_3, a_2, a_4, \dots$。此时 $a_3 \ge a_2$，数组出现了一个逆序。</p>
+</li>
+<li>
+<p><strong>情况 B (K 的绝望)：</strong> 如果 $a_2 = a_3$，K 无论“交换”还是“跳过”，数组都保持 $a_1, a_2, a_3, a_4, \dots$。K 无法制造逆序。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3">3. 关键的推论</h4>
+<p>在第 2 轮，如果 $a_2 &lt; a_3$，K 就可以制造一个 S _永远无法修复_的逆序，S 必败。</p>
+<p>因此，S 要想_保证获胜_，他必须在游戏开始前，就确保 K _没有任何机会_制造逆序。</p>
+<p>S 必须让 K 的所有可能行动都变得“无效”。K 的行动有哪些？</p>
+<ul>
+<li>
+<p>第 2 轮，K 威胁 $(a_2, a_3)$。S 必须保证 $a_2 = a_3$。</p>
+</li>
+<li>
+<p>第 4 轮，K 威胁 $(a_4, a_5)$。S 必须保证 $a_4 = a_5$。</p>
+</li>
+<li>
+<p>第 6 轮，K 威胁 $(a_6, a_7)$。S 必须保证 $a_6 = a_7$。</p>
+</li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>第 $2k$ 轮，K 威胁 $(a_{2k}, a_{2k+1})$。S 必须保证 $a_{2k} = a_{2k+1}$。</p>
+</li>
+</ul>
+<p><strong>结论：</strong> Souvlaki 的必胜策略是：</p>
+<ol>
+<li>
+<p>将 $a$ 数组排序。</p>
+</li>
+<li>
+<p>检查所有 K 可能行动的位置，即 $(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots$。</p>
+</li>
+<li>
+<p>如果这些对中的_所有_元素都相等，S 就能获胜。</p>
+</li>
+<li>
+<p>只要有_任何一个_ $a_{2k} &lt; a_{2k+1}$，K 就可以在那一轮进行交换，S 必败。</p>
+</li>
+</ol>
+<hr />
+<h3 id="_9">📈 如何从代码对比中提高？</h3>
+<p>你的代码和 jiangly 的代码都正确实现了这个逻辑。区别在于<strong>实现的简洁性</strong>。</p>
+<h4 id="_10">你的代码：</h4>
+<p>C++</p>
+<pre><code>    sort(a.begin()+1,a.end());
+    if(n&amp;1) // n 是奇数
+    {
+        for(int i=2;i&lt;n;i+=2){ // i = 2, 4, ... n-1
+            if(a[i]!=a[i+1]){ // 检查 (a[2],a[3]), (a[4],a[5]), ... (a[n-1],a[n])
+                printf(&quot;NO\n&quot;);
+                return ;
+            }
+        }
+    }else{ // n 是偶数
+        for(int i=3;i&lt;n;i+=2){ // i = 3, 5, ... n-1
+            if(a[i]!=a[i-1]){ // 检查 (a[2],a[3]), (a[4],a[5]), ... (a[n-2],a[n-1])
+                printf(&quot;NO\n&quot;);
+                return ;
+            }
+        }
+    }
+    printf(&quot;YES\n&quot;);
+</code></pre>
+<ul>
+<li>
+<p><strong>优点：</strong> 逻辑正确。你很可能通过分析奇数（如n=5）和偶数（如n=4或n=6）的例子，分别得出了循环的边界，这是非常扎实的做法。</p>
+</li>
+<li>
+<p><strong>可提高点：</strong> 你对 <code>n</code> 的奇偶性进行了分类讨论。虽然正确，但这通常暗示着可能存在一个更统一的表达方式。</p>
+</li>
+</ul>
+<h4 id="jiangly-0-indexed">jiangly 的代码 (0-indexed)：</h4>
+<p>C++</p>
+<pre><code>    std::sort(a.begin(), a.end());
+
+    // i = 2, 4, 6, ...
+    for (int i = 2; i &lt; n; i += 2) { 
+        // 检查 a[1] vs a[2], a[3] vs a[4], a[5] vs a[6], ...
+        if (a[i] != a[i - 1]) { 
+            std::cout &lt;&lt; &quot;NO\n&quot;;
+            return;
+        }
+    }
+
+    std::cout &lt;&lt; &quot;YES\n&quot;;
+</code></pre>
+<ul>
+<li>
+<p><strong>优点：</strong> 非常简洁。它用一个循环就处理了所有情况。</p>
+</li>
+<li>
+<p><strong>为什么这一个循环就够了？</strong></p>
+<ul>
+<li>
+<p><code>jiangly</code> 的代码是 0-indexed。他检查的是 <code>a[i]</code> 和 <code>a[i-1]</code>。</p>
+</li>
+<li>
+<p>当 <code>i=2</code>，检查 <code>a[2]</code> 和 <code>a[1]</code>。(对应 1-indexed 的 $a_3$ 和 $a_2$)</p>
+</li>
+<li>
+<p>当 <code>i=4</code>，检查 <code>a[4]</code> 和 <code>a[3]</code>。(对应 1-indexed 的 $a_5$ 和 $a_4$)</p>
+</li>
+<li>
+<p>...</p>
+</li>
+<li>
+<p>这个循环的<strong>终止条件</strong> <code>i &lt; n</code> 自动处理了奇偶性：</p>
+<ul>
+<li>
+<p><strong>如果 n=5 (奇数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 $(a_2,a_3)$ 和 $(a_4,a_5)$。 <code>i=6</code> 时 <code>6 &lt; 5</code> 不成立，循环结束。正确。</p>
+</li>
+<li>
+<p><strong>如果 n=6 (偶数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 $(a_2,a_3)$ 和 $(a_4,a_5)$。 <code>i=6</code> 时 <code>6 &lt; 6</code> 不成立，循环结束。正确。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_11">🚀 你的提高点</h3>
+<ol>
+<li>
+<p><strong>相信统一的规律：</strong> 当你发现需要按奇偶性分类讨论时，可以多花 10 秒钟想一想：“这两个 case 的循环体是不是在做本质相同的事？它们的起止点是否能用一个关于 <code>n</code> 的表达式统一起来？”</p>
+</li>
+<li>
+<p><strong>抓住循环的本质：</strong> 你的两个 <code>for</code> 循环，本质都是在检查“第2、3个元素”，“第4、5个元素”...</p>
+<ul>
+<li>
+<p>(1-indexed) <code>for (int i = 2; i + 1 &lt;= n; i += 2)</code></p>
+</li>
+<li>
+<p>这个循环 <code>i</code> 会取 $2, 4, 6, \dots$</p>
+</li>
+<li>
+<p>它会检查 <code>a[i]</code> 和 <code>a[i+1]</code></p>
+</li>
+<li>
+<p><code>i</code> 的上界是 <code>i+1 &lt;= n</code> (即 $i$ 最大可以是 $n-1$)。</p>
+</li>
+<li>
+<p><strong>如果 n=5</strong>：<code>i</code> 取 2 (检查 <code>a[2],a[3]</code>)，<code>i</code> 取 4 (检查 <code>a[4],a[5]</code>)。<code>i=6</code> 时 <code>6+1 &lt;= 5</code> 不成立。</p>
+</li>
+<li>
+<p><strong>如果 n=6</strong>：<code>i</code> 取 2 (检查 <code>a[2],a[3]</code>)，<code>i</code> 取 4 (检查 <code>a[4],a[5]</code>)。<code>i=6</code> 时 <code>6+1 &lt;= 6</code> 不成立。</p>
+</li>
+<li>
+<p>你看，这一个循环就可以替代你的 <code>if/else</code> 结构了。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，你对问题的核心洞察是完全正确的，这最重要。下一步的提高就是在实现时，寻找更简洁、更统一的表达，这能减少边界错误，也让代码更清晰。</p>
+<p>这个分析对你有帮助吗？你想不想再看一个类似的、关于博弈论和策略简化的题目？</p>
+<h1 id="cf">CF 题解思路</h1>
+<ul>
+<li>假设轮到卡拉马基在某个偶数轮 $2k$ 上。Kalamaki可以将元素 $a_{2k}$ 与 $a_{2k+1}$ 交换。如果 $a_{2k} &gt; a_{2k+1}$ ，他将不交换元素，但如果 $a_{2k} &lt; a_{2k+1}$ ，他将交换元素。在这两种情况下，他都赢得了游戏，因为数组永远不会被排序。因此，如果 $a_{2k} \neq a_{2k+1}$ ，卡拉马基无论如何都会赢。现在假设Kalamaki每次玩游戏时，他可以交换的两个元素具有相同的值，否则我们就会证明他赢了。</li>
+</ul>
+<p>假设轮到Souvlaki的回合 $2k+1$ 。根据前面的假设，我们知道 $a_{2k} = a_{2k+1}$ 。如果 $a_{2k+1} &gt; a_{2k+2}$ ，我们知道 $a_{2k+1} = a_{2k} &gt; a_{2k+2}$ ，但他无法交换 $a_{2k}$ 和 $a_{2k+2}$ ，因此他输了。否则，如果 $a_{2k+1} \le a_{2k+2}$ ，他将什么也不做，并进入下一轮。从这些观察中，我们看到 $a$ 可被Souvlaki赢得，当且仅当： $a_1 \le a_2 = a_3 \le a_4 = a_5 \le \ldots$ ，或 $a_2 \le a_1 = a_3 \le a_4 = a_5 \le \ldots$ 。</p>
+<p>现在很明显，在游戏开始之前，Souvlaki将以非递减顺序排序 $a$ 。要确定Souvlaki是否获胜，只需检查排序后是否满足上述条件即可。</p>
+<h1 id="cf_1">CF 题解代码</h1>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+void solve() {
+    int n; cin &gt;&gt; n;
+    int a[n+1];
+    for (int i = 1; i &lt;= n; i++) cin &gt;&gt; a[i];
+    sort(a+1, a+n+1);
+    for (int i = 2; i &lt;= n - 1; i+=2) {
+        if (a[i] != a[i+1]) {
+            cout &lt;&lt; &quot;NO\n&quot;;
+            return;
+        }
+    }
+    cout &lt;&lt; &quot;YES\n&quot;;
+}
+
+int main() {
+    int t; cin &gt;&gt; t;
+    while (t--) solve();
+    return 0;
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
