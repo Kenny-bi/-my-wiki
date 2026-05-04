@@ -4678,20 +4678,20 @@
 <p>时间限制：2 秒<br />
 内存限制：256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>这是该问题的简单版本。两个版本的区别在于：在本版本中，数组 <span class="arithmatex">\(a\)</span> 保证是一个排列。只有解决了本题所有版本的选手才能进行 hack。</p>
-<p>给定一个大小为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(a\)</span> 和一个参数 <span class="arithmatex">\(k\)</span>，称数组 <span class="arithmatex">\(b\)</span> 是 <strong>cool</strong> 的，如果满足以下条件：</p>
+<p>这是该问题的简单版本。两个版本的区别在于：在本版本中，数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 保证是一个排列。只有解决了本题所有版本的选手才能进行 hack。</p>
+<p>给定一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和一个参数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，称数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是 <strong>cool</strong> 的，如果满足以下条件：</p>
 <ul>
-<li>对于每个 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(k\)</span> 到 <span class="arithmatex">\(n\)</span>，区间 <span class="arithmatex">\([a_{i-k+1}, a_{i-k+2}, \dots, a_i]\)</span> 是 <span class="arithmatex">\([b_{i-k+1}, b_{i-k+2}, \dots, b_i]\)</span> 的一个重排列。</li>
+<li>对于每个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，区间 <span class="arithmatex"><span class="MathJax_Preview">[a_{i-k+1}, a_{i-k+2}, \dots, a_i]</span><script type="math/tex">[a_{i-k+1}, a_{i-k+2}, \dots, a_i]</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">[b_{i-k+1}, b_{i-k+2}, \dots, b_i]</span><script type="math/tex">[b_{i-k+1}, b_{i-k+2}, \dots, b_i]</script></span> 的一个重排列。</li>
 </ul>
-<p>给你两个大小为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>，以及一个整数 <span class="arithmatex">\(k\)</span>。数组 <span class="arithmatex">\(a\)</span> 保证是一个排列 <span class="arithmatex">\(^*\)</span>。数组 <span class="arithmatex">\(b\)</span> 只包含 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 之间的整数以及 <span class="arithmatex">\(-1\)</span>。</p>
-<p>判断是否可以将 <span class="arithmatex">\(b\)</span> 中所有的 <span class="arithmatex">\(-1\)</span> 替换为 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 之间的某个整数，使得 <span class="arithmatex">\(b\)</span> 关于 <span class="arithmatex">\(k\)</span> 是 cool 的。</p>
-<p><span class="arithmatex">\(^*\)</span> 一个长度为 <span class="arithmatex">\(n\)</span> 的排列是由 <span class="arithmatex">\(n\)</span> 个从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的不同整数按任意顺序组成的数组。例如，<span class="arithmatex">\([2,3,1,5,4]\)</span> 是一个排列，但 <span class="arithmatex">\([1,2,2]\)</span> 不是排列（<span class="arithmatex">\(2\)</span> 在数组中出现两次），<span class="arithmatex">\([1,3,4]\)</span> 也不是排列（<span class="arithmatex">\(n=3\)</span> 但数组中有 <span class="arithmatex">\(4\)</span>）。</p>
+<p>给你两个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，以及一个整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 保证是一个排列 <span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span>。数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 只包含 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之间的整数以及 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
+<p>判断是否可以将 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中所有的 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 替换为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之间的某个整数，使得 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 关于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 cool 的。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span> 一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列是由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的不同整数按任意顺序组成的数组。例如，<span class="arithmatex"><span class="MathJax_Preview">[2,3,1,5,4]</span><script type="math/tex">[2,3,1,5,4]</script></span> 是一个排列，但 <span class="arithmatex"><span class="MathJax_Preview">[1,2,2]</span><script type="math/tex">[1,2,2]</script></span> 不是排列（<span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 在数组中出现两次），<span class="arithmatex"><span class="MathJax_Preview">[1,3,4]</span><script type="math/tex">[1,3,4]</script></span> 也不是排列（<span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span> 但数组中有 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>）。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span>（<span class="arithmatex">\(1 \le k \le n \le 2 \cdot 10^5\)</span>）。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>（<span class="arithmatex">\(1 \le a_i \le n\)</span>）。在本版本中，保证 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的每个数恰好出现一次。</p>
-<p>每个测试用例的第三行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(b_1, b_2, \dots, b_n\)</span>（<span class="arithmatex">\(1 \le b_i \le n\)</span> 或 <span class="arithmatex">\(b_i = -1\)</span>）。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le k \le n \le 2 \cdot 10^5</span><script type="math/tex">1 \le k \le n \le 2 \cdot 10^5</script></span>）。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le a_i \le n</span><script type="math/tex">1 \le a_i \le n</script></span>）。在本版本中，保证 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的每个数恰好出现一次。</p>
+<p>每个测试用例的第三行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">b_1, b_2, \dots, b_n</span><script type="math/tex">b_1, b_2, \dots, b_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le b_i \le n</span><script type="math/tex">1 \le b_i \le n</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">b_i = -1</span><script type="math/tex">b_i = -1</script></span>）。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，如果可能则输出 <code>YES</code>，否则输出 <code>NO</code>。每个字母可以大写或小写。</p>
 <h2 id="_4">样例输入</h2>
@@ -4716,8 +4716,8 @@ YES
 NO
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，<span class="arithmatex">\(k = 5\)</span>。唯一的大小为 <span class="arithmatex">\(5\)</span> 的子数组是 <span class="arithmatex">\([1,5]\)</span>。可以看到 <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(a\)</span> 的一个重排列，因此答案为 <code>YES</code>。</p>
-<p>在第二个测试用例中，可以证明无法替换 <span class="arithmatex">\(b\)</span> 中所有的 <span class="arithmatex">\(-1\)</span> 使得每个大小为 <span class="arithmatex">\(k = 4\)</span> 的子数组互为重排列。</p>
+<p>在第一个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">k = 5</span><script type="math/tex">k = 5</script></span>。唯一的大小为 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 的子数组是 <span class="arithmatex"><span class="MathJax_Preview">[1,5]</span><script type="math/tex">[1,5]</script></span>。可以看到 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的一个重排列，因此答案为 <code>YES</code>。</p>
+<p>在第二个测试用例中，可以证明无法替换 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中所有的 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 使得每个大小为 <span class="arithmatex"><span class="MathJax_Preview">k = 4</span><script type="math/tex">k = 4</script></span> 的子数组互为重排列。</p>
 <h1 id="wa-2">WA 2 代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2211 C1</span>
 <span class="c1">// Contest: Codeforces - Nebius Round 2 (Codeforces Round 1088, Div. 1 + Div. 2)</span>
@@ -4841,17 +4841,17 @@ NO
 <h2 id="1-the-model">1. 经典模型 (The Model)</h2>
 <ul>
 <li>
-<p><strong>题目特征</strong>：给定一个数组 <span class="arithmatex">\(A\)</span>（通常是排列或元素唯一），要求构造或验证另一个数组 <span class="arithmatex">\(B\)</span>，使得对于所有长度为 <span class="arithmatex">\(K\)</span> 的滑动窗口，<span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 在该窗口内的元素集合（Multiset）完全相同。</p>
+<p><strong>题目特征</strong>：给定一个数组 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>（通常是排列或元素唯一），要求构造或验证另一个数组 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，使得对于所有长度为 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的滑动窗口，<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 在该窗口内的元素集合（Multiset）完全相同。</p>
 </li>
 <li>
 <p><strong>思维误区</strong>：试图用线段树、哈希表或复杂的双指针去动态维护每一个窗口的具体内容（复杂度极高且容易写错边界）。</p>
 </li>
 <li>
-<p><strong>破局视角</strong>：从窗口 <span class="arithmatex">\(W_i\)</span> 滑动到 <span class="arithmatex">\(W_{i+1}\)</span> 时，发生变化的只有<strong>“出去的那个元素”</strong>和<strong>“进来的那个元素”</strong>。因为元素具有唯一性，这迫使两个数组在绝大多数位置上必须<strong>完全一致</strong>。</p>
+<p><strong>破局视角</strong>：从窗口 <span class="arithmatex"><span class="MathJax_Preview">W_i</span><script type="math/tex">W_i</script></span> 滑动到 <span class="arithmatex"><span class="MathJax_Preview">W_{i+1}</span><script type="math/tex">W_{i+1}</script></span> 时，发生变化的只有<strong>“出去的那个元素”</strong>和<strong>“进来的那个元素”</strong>。因为元素具有唯一性，这迫使两个数组在绝大多数位置上必须<strong>完全一致</strong>。</p>
 </li>
 </ul>
 <h2 id="2-interval-slicing">2. 核心推论：区间切割定理 (Interval Slicing)</h2>
-<p>对于一个长度为 <span class="arithmatex">\(N\)</span>、滑动窗口大小为 <span class="arithmatex">\(K\)</span> 的数组，它天然会被切割成两种性质完全不同的区域：</p>
+<p>对于一个长度为 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>、滑动窗口大小为 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 的数组，它天然会被切割成两种性质完全不同的区域：</p>
 <h3 id="locked-zone">🔒 绝对锁定区 (Locked Zone)</h3>
 <ul>
 <li>
@@ -4861,7 +4861,7 @@ NO
 <p><strong>性质</strong>：这些位置的元素，有的只在某些特定窗口出现，有的在特定时刻进入或退出窗口。它们具有<strong>全场唯一的“窗口覆盖生命周期”</strong>。</p>
 </li>
 <li>
-<p><strong>结论</strong>：为了保证 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 的窗口集合严格一致，这一区域完全没有自由度，必须严格满足 <strong><code>B[i] == A[i]</code></strong>。</p>
+<p><strong>结论</strong>：为了保证 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的窗口集合严格一致，这一区域完全没有自由度，必须严格满足 <strong><code>B[i] == A[i]</code></strong>。</p>
 </li>
 </ul>
 <h3 id="free-zone">🕊️ 自由重排区 (Free Zone)</h3>
@@ -4880,7 +4880,7 @@ NO
 </li>
 </ul>
 <h2 id="3-code-paradigm">3. 代码范式 (Code Paradigm)</h2>
-<p>对于此类验证问题，只需 <span class="arithmatex">\(O(N)\)</span> 的时间复杂度即可完成判定，核心分为三步检查：</p>
+<p>对于此类验证问题，只需 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 的时间复杂度即可完成判定，核心分为三步检查：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>// 1. 划定边界
 int L = N - K + 1;
@@ -4911,7 +4911,7 @@ for (int i = 1; i &lt;= N; i++) {
 }
 </code></pre></div>
 <h2 id="4">4. 教练复盘点评</h2>
-<p>这类问题的本质是<strong>寻找不变量 (Invariants)</strong>。在算法竞赛中，当约束条件看似多到“爆炸”（例如要求 <span class="arithmatex">\(N-K+1\)</span> 个窗口全都相等）时，通常意味着<strong>解空间极度狭窄</strong>。不要去模拟约束，而去反推：<strong>在如此严苛的约束下，谁还拥有自由？</strong> 找到那个唯一的“自由区”，题目就迎刃而解了。</p>
+<p>这类问题的本质是<strong>寻找不变量 (Invariants)</strong>。在算法竞赛中，当约束条件看似多到“爆炸”（例如要求 <span class="arithmatex"><span class="MathJax_Preview">N-K+1</span><script type="math/tex">N-K+1</script></span> 个窗口全都相等）时，通常意味着<strong>解空间极度狭窄</strong>。不要去模拟约束，而去反推：<strong>在如此严苛的约束下，谁还拥有自由？</strong> 找到那个唯一的“自由区”，题目就迎刃而解了。</p>
 <hr />
 <h3 id="_7">下一步训练建议</h3>
 <p>这两道题（B题的前缀和单调性、C1的差分锁定区）都在考察你对<strong>连续变化结构（前缀和、滑动窗口）</strong>的敏锐度。 接下来的几场训练，你可以有意识地去刷一些带有标签 <code>constructive algorithms</code> 并且 Rating 在 1500-1700 区间的题目。做题时，强迫自己<strong>在写下第一行代码前，先在纸上证明出解的下界或自由度边界</strong>。</p>

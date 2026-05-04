@@ -4446,14 +4446,14 @@
 <h2 id="_1">问题描述</h2>
 <p>在他的 IMO 奖牌得主朋友“为了这周不用再洗澡”而洗了两个小时澡之后，Blackslex 要上课迟到了！</p>
 <p>为了去上课，Blackslex 必须按照特定顺序乘坐拥挤的电梯前往许多楼层。因为他是一名黑客，他可以在其他人不知情的情况下<strong>跳过访问至多一个楼层</strong>。他所花费的时间是<strong>连续楼层号之间绝对差值的总和</strong>。在允许跳过至多一个楼层的情况下，求所需的最小时间。</p>
-<p>更正式地说，给定一个包含 <span class="arithmatex">\(n\)</span> 个整数的数组 <span class="arithmatex">\(a=[a_1, a_2, \dots, a_n]\)</span>，你可以选择至多一个索引 <span class="arithmatex">\(k \in \{1, 2, \dots, n\}\)</span> 来删除元素 <span class="arithmatex">\(a_k\)</span>，使得和式
+<p>更正式地说，给定一个包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数的数组 <span class="arithmatex"><span class="MathJax_Preview">a=[a_1, a_2, \dots, a_n]</span><script type="math/tex">a=[a_1, a_2, \dots, a_n]</script></span>，你可以选择至多一个索引 <span class="arithmatex"><span class="MathJax_Preview">k \in \{1, 2, \dots, n\}</span><script type="math/tex">k \in \{1, 2, \dots, n\}</script></span> 来删除元素 <span class="arithmatex"><span class="MathJax_Preview">a_k</span><script type="math/tex">a_k</script></span>，使得和式
 $$ \sum_{i=1}^{n-2} |b_i - b_{i+1}| $$
-最小化，其中 <span class="arithmatex">\(b=[a_1, \dots, a_{k-1}, a_{k+1}, \dots, a_n]\)</span> 是删除元素 <span class="arithmatex">\(a_k\)</span> 后的数组。请输出这个最小和。</p>
+最小化，其中 <span class="arithmatex"><span class="MathJax_Preview">b=[a_1, \dots, a_{k-1}, a_{k+1}, \dots, a_n]</span><script type="math/tex">b=[a_1, \dots, a_{k-1}, a_{k+1}, \dots, a_n]</script></span> 是删除元素 <span class="arithmatex"><span class="MathJax_Preview">a_k</span><script type="math/tex">a_k</script></span> 后的数组。请输出这个最小和。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span> —— 测试用例的数量。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> <span class="arithmatex">\((3 \le n \le 2 \cdot 10^5)\)</span> —— 数组的大小。</p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> <span class="arithmatex">\((1 \le a_i \le 100)\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span> —— 测试用例的数量。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(3 \le n \le 2 \cdot 10^5)</span><script type="math/tex">(3 \le n \le 2 \cdot 10^5)</script></span> —— 数组的大小。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le a_i \le 100)</span><script type="math/tex">(1 \le a_i \le 100)</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个实数 —— 所需的最小时间。</p>
 <h2 id="_4">样例输入</h2>
@@ -4471,9 +4471,9 @@ $$ \sum_{i=1}^{n-2} |b_i - b_{i+1}| $$
 12
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>对于第一个测试用例，从数组 <span class="arithmatex">\([4, 15, 1, 7, 19]\)</span> 中删除的最佳索引是 <span class="arithmatex">\(k=2\)</span>。数组变为 <span class="arithmatex">\([4, 1, 7, 19]\)</span>，所需时间为 <span class="arithmatex">\(|4-1| + |1-7| + |7-19| = 3 + 6 + 12 = 21\)</span>？等一下，这个计算似乎有问题。让我们重新检查一下：</p>
-<p>删除 <span class="arithmatex">\(a_2=15\)</span> 后，数组变为 <span class="arithmatex">\([4, 1, 7, 9]\)</span>（注意原数组最后一个是 9，不是 19）。那么和为 <span class="arithmatex">\(|4-1| + |1-7| + |7-9| = 3 + 6 + 2 = 11\)</span>，与输出 11 一致。</p>
-<p>对于第二个测试用例，删除的最佳索引是 <span class="arithmatex">\(k=3\)</span>。</p>
+<p>对于第一个测试用例，从数组 <span class="arithmatex"><span class="MathJax_Preview">[4, 15, 1, 7, 19]</span><script type="math/tex">[4, 15, 1, 7, 19]</script></span> 中删除的最佳索引是 <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>。数组变为 <span class="arithmatex"><span class="MathJax_Preview">[4, 1, 7, 19]</span><script type="math/tex">[4, 1, 7, 19]</script></span>，所需时间为 <span class="arithmatex"><span class="MathJax_Preview">|4-1| + |1-7| + |7-19| = 3 + 6 + 12 = 21</span><script type="math/tex">|4-1| + |1-7| + |7-19| = 3 + 6 + 12 = 21</script></span>？等一下，这个计算似乎有问题。让我们重新检查一下：</p>
+<p>删除 <span class="arithmatex"><span class="MathJax_Preview">a_2=15</span><script type="math/tex">a_2=15</script></span> 后，数组变为 <span class="arithmatex"><span class="MathJax_Preview">[4, 1, 7, 9]</span><script type="math/tex">[4, 1, 7, 9]</script></span>（注意原数组最后一个是 9，不是 19）。那么和为 <span class="arithmatex"><span class="MathJax_Preview">|4-1| + |1-7| + |7-9| = 3 + 6 + 2 = 11</span><script type="math/tex">|4-1| + |1-7| + |7-9| = 3 + 6 + 2 = 11</script></span>，与输出 11 一致。</p>
+<p>对于第二个测试用例，删除的最佳索引是 <span class="arithmatex"><span class="MathJax_Preview">k=3</span><script type="math/tex">k=3</script></span>。</p>
 <h1 id="ac">AC  代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2179 B</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1071 (Div. 3)</span>

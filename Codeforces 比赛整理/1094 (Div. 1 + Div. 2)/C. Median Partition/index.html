@@ -4444,17 +4444,17 @@
 <p>时间限制：2 秒<br />
 内存限制：256 MB  </p>
 <h2 id="_1">问题描述</h2>
-<p>你有一个长度为奇数 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(a\)</span>，由正整数组成。你需要将序列划分为若干个子数组<em>，每个子数组的长度为奇数且</em><em>中位数</em><em>† 相同。你的任务是找出</em><em>子数组的最大数量</em>*。  </p>
-<p>更正式地说，你需要找到一个长度为 <span class="arithmatex">\(p+1\)</span> 的严格递增序列 <span class="arithmatex">\(k\)</span>，满足 <span class="arithmatex">\(k_1 = 1\)</span> 且 <span class="arithmatex">\(k_{p+1} = n+1\)</span>，使得对于每个 <span class="arithmatex">\(1 \le i \le p\)</span>，序列 <span class="arithmatex">\([a_{k_i}, a_{k_i+1}, \dots, a_{k_{i+1}-1}]\)</span> 的中位数全相等。同时 <span class="arithmatex">\(k_i\)</span> 和 <span class="arithmatex">\(k_{i+1}\)</span> 的奇偶性应不同。你的任务是找出最大的可能的 <span class="arithmatex">\(p\)</span> 值。  </p>
+<p>你有一个长度为奇数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，由正整数组成。你需要将序列划分为若干个子数组<em>，每个子数组的长度为奇数且</em><em>中位数</em><em>† 相同。你的任务是找出</em><em>子数组的最大数量</em>*。  </p>
+<p>更正式地说，你需要找到一个长度为 <span class="arithmatex"><span class="MathJax_Preview">p+1</span><script type="math/tex">p+1</script></span> 的严格递增序列 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，满足 <span class="arithmatex"><span class="MathJax_Preview">k_1 = 1</span><script type="math/tex">k_1 = 1</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">k_{p+1} = n+1</span><script type="math/tex">k_{p+1} = n+1</script></span>，使得对于每个 <span class="arithmatex"><span class="MathJax_Preview">1 \le i \le p</span><script type="math/tex">1 \le i \le p</script></span>，序列 <span class="arithmatex"><span class="MathJax_Preview">[a_{k_i}, a_{k_i+1}, \dots, a_{k_{i+1}-1}]</span><script type="math/tex">[a_{k_i}, a_{k_i+1}, \dots, a_{k_{i+1}-1}]</script></span> 的中位数全相等。同时 <span class="arithmatex"><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k_{i+1}</span><script type="math/tex">k_{i+1}</script></span> 的奇偶性应不同。你的任务是找出最大的可能的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 值。  </p>
 <ul>
-<li>数组 <span class="arithmatex">\(b\)</span> 是数组 <span class="arithmatex">\(a\)</span> 的子数组，如果 <span class="arithmatex">\(b\)</span> 可以通过删除 <span class="arithmatex">\(a\)</span> 开头若干个（可能为零或全部）元素以及末尾若干个（可能为零或全部）元素得到。  </li>
+<li>数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的子数组，如果 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 可以通过删除 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 开头若干个（可能为零或全部）元素以及末尾若干个（可能为零或全部）元素得到。  </li>
 </ul>
-<p>† 奇数长度 <span class="arithmatex">\(x\)</span> 的数组的中位数是数组按非递减顺序排序后的第 <span class="arithmatex">\(\lceil \frac{x}{2} \rceil\)</span> 个元素。  </p>
+<p>† 奇数长度 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的数组的中位数是数组按非递减顺序排序后的第 <span class="arithmatex"><span class="MathJax_Preview">\lceil \frac{x}{2} \rceil</span><script type="math/tex">\lceil \frac{x}{2} \rceil</script></span> 个元素。  </p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 1000\)</span>），表示测试用例的数量。接下来是每个测试用例的描述。  </p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \le n &lt; 5000\)</span>，<span class="arithmatex">\(n\)</span> 为奇数）——数组 <span class="arithmatex">\(a\)</span> 的长度。  </p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>（<span class="arithmatex">\(1 \le a_i \le 10^9\)</span>）——数组 <span class="arithmatex">\(a\)</span> 的元素。  </p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n^2\)</span> 之和不超过 <span class="arithmatex">\(5000^2\)</span>。  </p>
+<p>每个测试包含多个测试用例。第一行包含整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 1000</span><script type="math/tex">1 \le t \le 1000</script></span>），表示测试用例的数量。接下来是每个测试用例的描述。  </p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n &lt; 5000</span><script type="math/tex">1 \le n < 5000</script></span>，<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 为奇数）——数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的长度。  </p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le a_i \le 10^9</span><script type="math/tex">1 \le a_i \le 10^9</script></span>）——数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素。  </p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">5000^2</span><script type="math/tex">5000^2</script></span>。  </p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数——子数组的最大数量。  </p>
 <h2 id="_4">样例输入</h2>
@@ -4493,8 +4493,8 @@
 5
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p><strong>第一个测试用例</strong>：最优划分方式为 <span class="arithmatex">\([3,3,2,4,3]\)</span>。——（注：原文说明似乎不完整，根据输出推断划分成了 <span class="arithmatex">\([3,3]\)</span> 和 <span class="arithmatex">\([2,4,3]\)</span> 等，但需实际验证。此处按题意理解。）  </p>
-<p><strong>第二个测试用例</strong>：最优划分方式为 <span class="arithmatex">\([9,5,7]\)</span>、<span class="arithmatex">\([7]\)</span>、<span class="arithmatex">\([4,7,7]\)</span>。  </p>
+<p><strong>第一个测试用例</strong>：最优划分方式为 <span class="arithmatex"><span class="MathJax_Preview">[3,3,2,4,3]</span><script type="math/tex">[3,3,2,4,3]</script></span>。——（注：原文说明似乎不完整，根据输出推断划分成了 <span class="arithmatex"><span class="MathJax_Preview">[3,3]</span><script type="math/tex">[3,3]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[2,4,3]</span><script type="math/tex">[2,4,3]</script></span> 等，但需实际验证。此处按题意理解。）  </p>
+<p><strong>第二个测试用例</strong>：最优划分方式为 <span class="arithmatex"><span class="MathJax_Preview">[9,5,7]</span><script type="math/tex">[9,5,7]</script></span>、<span class="arithmatex"><span class="MathJax_Preview">[7]</span><script type="math/tex">[7]</script></span>、<span class="arithmatex"><span class="MathJax_Preview">[4,7,7]</span><script type="math/tex">[4,7,7]</script></span>。  </p>
 <p><strong>第三个测试用例</strong>：由于所有元素相同，可以将每个元素单独划分为一个子数组。</p>
 <h1 id="ac">AC 代码</h1>
 <ul>

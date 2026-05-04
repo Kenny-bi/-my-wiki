@@ -4466,29 +4466,29 @@
 <p>时间限制：1.5 秒<br />
 内存限制：256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个数组 <span class="arithmatex">\(a\)</span>，令 <span class="arithmatex">\(f(a)\)</span> 表示将 <span class="arithmatex">\(a\)</span> 划分成一个或多个子数组 <span class="arithmatex">\(^*\)</span> 的方式数，满足：</p>
+<p>给定一个数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，令 <span class="arithmatex"><span class="MathJax_Preview">f(a)</span><script type="math/tex">f(a)</script></span> 表示将 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 划分成一个或多个子数组 <span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span> 的方式数，满足：</p>
 <ul>
 <li>每个元素恰好属于一个子数组。</li>
 <li>所有子数组的和相等。</li>
 </ul>
-<p>例如，如果 <span class="arithmatex">\(a=[1,1]\)</span>，那么 <span class="arithmatex">\(f(a)=2\)</span>，因为存在两种划分 <span class="arithmatex">\([1,1]\)</span> 的方式：</p>
+<p>例如，如果 <span class="arithmatex"><span class="MathJax_Preview">a=[1,1]</span><script type="math/tex">a=[1,1]</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">f(a)=2</span><script type="math/tex">f(a)=2</script></span>，因为存在两种划分 <span class="arithmatex"><span class="MathJax_Preview">[1,1]</span><script type="math/tex">[1,1]</script></span> 的方式：</p>
 <ul>
-<li><span class="arithmatex">\([1,1]\)</span>，其中唯一的子数组和为 <span class="arithmatex">\(2\)</span>。</li>
-<li><span class="arithmatex">\([1]+[1]\)</span>，两个子数组的和均为 <span class="arithmatex">\(1\)</span>。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">[1,1]</span><script type="math/tex">[1,1]</script></span>，其中唯一的子数组和为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">[1]+[1]</span><script type="math/tex">[1]+[1]</script></span>，两个子数组的和均为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
 </ul>
-<p>给你两个整数 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>。考虑所有长度为 <span class="arithmatex">\(x+y\)</span> 的数组 <span class="arithmatex">\(a\)</span>，其中包含 <span class="arithmatex">\(x\)</span> 个 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(y\)</span> 个 <span class="arithmatex">\(-1\)</span>（顺序任意）。求 <span class="arithmatex">\(f(a)\)</span> 的最小值。由于答案可能很大，请输出答案对 <span class="arithmatex">\(676767677\)</span> 取模的结果。此外，你需要构造一个达到该最小值的数组。</p>
-<p><span class="arithmatex">\(^*\)</span> 数组 <span class="arithmatex">\(b\)</span> 是数组 <span class="arithmatex">\(c\)</span> 的子数组，如果 <span class="arithmatex">\(b\)</span> 可以通过从 <span class="arithmatex">\(c\)</span> 的开头删除若干（可能为零或全部）元素以及从结尾删除若干（可能为零或全部）元素得到。</p>
+<p>给你两个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>。考虑所有长度为 <span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，其中包含 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 个 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 个 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>（顺序任意）。求 <span class="arithmatex"><span class="MathJax_Preview">f(a)</span><script type="math/tex">f(a)</script></span> 的最小值。由于答案可能很大，请输出答案对 <span class="arithmatex"><span class="MathJax_Preview">676767677</span><script type="math/tex">676767677</script></span> 取模的结果。此外，你需要构造一个达到该最小值的数组。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span> 数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是数组 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的子数组，如果 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 可以通过从 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 的开头删除若干（可能为零或全部）元素以及从结尾删除若干（可能为零或全部）元素得到。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>（<span class="arithmatex">\(0 \le x, y \le 2 \cdot 10^5\)</span>）。保证 <span class="arithmatex">\(x + y \ge 1\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(x\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>，所有测试用例的 <span class="arithmatex">\(y\)</span> 之和也不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>（<span class="arithmatex"><span class="MathJax_Preview">0 \le x, y \le 2 \cdot 10^5</span><script type="math/tex">0 \le x, y \le 2 \cdot 10^5</script></span>）。保证 <span class="arithmatex"><span class="MathJax_Preview">x + y \ge 1</span><script type="math/tex">x + y \ge 1</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>，所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 之和也不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出两行：</p>
 <ul>
-<li>第一行：在所有有效数组 <span class="arithmatex">\(a\)</span> 中 <span class="arithmatex">\(f(a)\)</span> 的最小值对 <span class="arithmatex">\(676767677\)</span> 取模的结果。</li>
+<li>第一行：在所有有效数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中 <span class="arithmatex"><span class="MathJax_Preview">f(a)</span><script type="math/tex">f(a)</script></span> 的最小值对 <span class="arithmatex"><span class="MathJax_Preview">676767677</span><script type="math/tex">676767677</script></span> 取模的结果。</li>
 <li>第二行：一个达到该最小值的示例数组。</li>
 </ul>
-<p>注意：你需要先最小化 <span class="arithmatex">\(f(a)\)</span>，然后将该最小值对 <span class="arithmatex">\(676767677\)</span> 取模输出，而不是寻找 <span class="arithmatex">\(f(a) \bmod 676767677\)</span> 的最小可能值。</p>
+<p>注意：你需要先最小化 <span class="arithmatex"><span class="MathJax_Preview">f(a)</span><script type="math/tex">f(a)</script></span>，然后将该最小值对 <span class="arithmatex"><span class="MathJax_Preview">676767677</span><script type="math/tex">676767677</script></span> 取模输出，而不是寻找 <span class="arithmatex"><span class="MathJax_Preview">f(a) \bmod 676767677</span><script type="math/tex">f(a) \bmod 676767677</script></span> 的最小可能值。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 2 0
@@ -4507,8 +4507,8 @@
 -1 -1 -1 1
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，<span class="arithmatex">\(x=2, y=0\)</span>。唯一可能的数组是 <span class="arithmatex">\(a=[1,1]\)</span>，如上所述 <span class="arithmatex">\(f(a)=2\)</span>。</p>
-<p>在第二个测试用例中，<span class="arithmatex">\(x=1, y=1\)</span>。一个最小化 <span class="arithmatex">\(f(a)\)</span> 的可行数组是 <span class="arithmatex">\(a=[1,-1]\)</span>，此时 <span class="arithmatex">\(f(a)=1\)</span>（唯一的划分方式是 <span class="arithmatex">\([[1,-1]]\)</span>）。</p>
+<p>在第一个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">x=2, y=0</span><script type="math/tex">x=2, y=0</script></span>。唯一可能的数组是 <span class="arithmatex"><span class="MathJax_Preview">a=[1,1]</span><script type="math/tex">a=[1,1]</script></span>，如上所述 <span class="arithmatex"><span class="MathJax_Preview">f(a)=2</span><script type="math/tex">f(a)=2</script></span>。</p>
+<p>在第二个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">x=1, y=1</span><script type="math/tex">x=1, y=1</script></span>。一个最小化 <span class="arithmatex"><span class="MathJax_Preview">f(a)</span><script type="math/tex">f(a)</script></span> 的可行数组是 <span class="arithmatex"><span class="MathJax_Preview">a=[1,-1]</span><script type="math/tex">a=[1,-1]</script></span>，此时 <span class="arithmatex"><span class="MathJax_Preview">f(a)=1</span><script type="math/tex">f(a)=1</script></span>（唯一的划分方式是 <span class="arithmatex"><span class="MathJax_Preview">[[1,-1]]</span><script type="math/tex">[[1,-1]]</script></span>）。</p>
 <h1 id="_7">我真服了，我感觉这就是对的</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2211 B</span>
 <span class="c1">// Contest: Codeforces - Nebius Round 2 (Codeforces Round 1088, Div. 1 + Div. 2)</span>

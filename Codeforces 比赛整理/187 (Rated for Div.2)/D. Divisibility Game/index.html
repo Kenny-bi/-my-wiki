@@ -4700,23 +4700,23 @@
 <p>时间限制：每个测试2秒
 内存限制：每个测试512 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>爱丽丝和鲍勃正在玩游戏。他们有一个包含 <span class="arithmatex">\(n\)</span> 个元素的数组 <span class="arithmatex">\(a\)</span> 和一个包含 <span class="arithmatex">\(m\)</span> 个元素的数组 <span class="arithmatex">\(b\)</span>。</p>
-<p>玩家轮流行动。爱丽丝先手。在每个玩家的回合中，他们从数组 <span class="arithmatex">\(a\)</span> 中选择一个数字 <span class="arithmatex">\(x\)</span>，并从数组 <span class="arithmatex">\(b\)</span> 中选择一个数字 <span class="arithmatex">\(y\)</span>。爱丽丝选择 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 有自己的规则，鲍勃也有自己的规则：</p>
+<p>爱丽丝和鲍勃正在玩游戏。他们有一个包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个元素的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和一个包含 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个元素的数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>。</p>
+<p>玩家轮流行动。爱丽丝先手。在每个玩家的回合中，他们从数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中选择一个数字 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，并从数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中选择一个数字 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>。爱丽丝选择 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 有自己的规则，鲍勃也有自己的规则：</p>
 <ul>
-<li>爱丽丝必须选择 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，使得 <span class="arithmatex">\(y\)</span> 能被 <span class="arithmatex">\(x\)</span> 整除。</li>
-<li>鲍勃必须选择 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，使得 <span class="arithmatex">\(y\)</span> <strong>不能</strong> 被 <span class="arithmatex">\(x\)</span> 整除。</li>
+<li>爱丽丝必须选择 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 整除。</li>
+<li>鲍勃必须选择 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> <strong>不能</strong> 被 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 整除。</li>
 </ul>
-<p>选择 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 之后，<span class="arithmatex">\(y\)</span> 会从数组 <span class="arithmatex">\(b\)</span> 中移除（但 <span class="arithmatex">\(x\)</span> 保留在 <span class="arithmatex">\(a\)</span> 中）。当 <span class="arithmatex">\(y\)</span> 从 <span class="arithmatex">\(b\)</span> 中被移除时，如果 <span class="arithmatex">\(y\)</span> 出现了多次，则只移除一个。无法行动的玩家输掉游戏。</p>
+<p>选择 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 之后，<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 会从数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中移除（但 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 保留在 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中）。当 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中被移除时，如果 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 出现了多次，则只移除一个。无法行动的玩家输掉游戏。</p>
 <p>如果双方都采取最优策略，谁会获胜？</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。接下来是测试用例的描述。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(m\)</span> (<span class="arithmatex">\(1 \leq n, m \leq 10^6\)</span>)。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_i\)</span> (<span class="arithmatex">\(1 \leq a_i \leq n+m\)</span>) — 数组 <span class="arithmatex">\(a\)</span> 的元素。</p>
-<p>每个测试用例的最后一行包含 <span class="arithmatex">\(m\)</span> 个整数 <span class="arithmatex">\(b_i\)</span> (<span class="arithmatex">\(1 \leq b_i \leq n+m\)</span>) — 数组 <span class="arithmatex">\(b\)</span> 的元素。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。接下来是测试用例的描述。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq n, m \leq 10^6</span><script type="math/tex">1 \leq n, m \leq 10^6</script></span>)。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq n+m</span><script type="math/tex">1 \leq a_i \leq n+m</script></span>) — 数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素。</p>
+<p>每个测试用例的最后一行包含 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq b_i \leq n+m</span><script type="math/tex">1 \leq b_i \leq n+m</script></span>) — 数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的元素。</p>
 <p>输入的附加约束：</p>
 <ul>
-<li>所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(10^6\)</span>；</li>
-<li>所有测试用例的 <span class="arithmatex">\(m\)</span> 之和不超过 <span class="arithmatex">\(10^6\)</span>。</li>
+<li>所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span>；</li>
+<li>所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span>。</li>
 </ul>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个词：</p>
@@ -4744,9 +4744,9 @@ Alice
 <h2 id="_6">样例说明</h2>
 <p>考虑第一个测试用例。让我们展示爱丽丝如何通过以下步骤获胜：</p>
 <ol>
-<li>爱丽丝的回合：<span class="arithmatex">\(x=3\)</span>, <span class="arithmatex">\(y=6\)</span> （之后，<span class="arithmatex">\(6\)</span> 将从 <span class="arithmatex">\(b\)</span> 中移除，得到 <span class="arithmatex">\(b=[7,12]\)</span>）</li>
-<li>鲍勃的回合：<span class="arithmatex">\(x=3\)</span>, <span class="arithmatex">\(y=7\)</span> （鲍勃无论如何都会在他的回合选择 <span class="arithmatex">\(y=7\)</span>，因为在这个回合之后 <span class="arithmatex">\(b=[12]\)</span>，不存在不能整除 <span class="arithmatex">\(y=12\)</span> 的 <span class="arithmatex">\(x\)</span>）</li>
-<li>爱丽丝的回合：<span class="arithmatex">\(x=4\)</span>, <span class="arithmatex">\(y=12\)</span> （此回合后，<span class="arithmatex">\(b\)</span> 变为空）</li>
+<li>爱丽丝的回合：<span class="arithmatex"><span class="MathJax_Preview">x=3</span><script type="math/tex">x=3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=6</span><script type="math/tex">y=6</script></span> （之后，<span class="arithmatex"><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 将从 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中移除，得到 <span class="arithmatex"><span class="MathJax_Preview">b=[7,12]</span><script type="math/tex">b=[7,12]</script></span>）</li>
+<li>鲍勃的回合：<span class="arithmatex"><span class="MathJax_Preview">x=3</span><script type="math/tex">x=3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=7</span><script type="math/tex">y=7</script></span> （鲍勃无论如何都会在他的回合选择 <span class="arithmatex"><span class="MathJax_Preview">y=7</span><script type="math/tex">y=7</script></span>，因为在这个回合之后 <span class="arithmatex"><span class="MathJax_Preview">b=[12]</span><script type="math/tex">b=[12]</script></span>，不存在不能整除 <span class="arithmatex"><span class="MathJax_Preview">y=12</span><script type="math/tex">y=12</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>）</li>
+<li>爱丽丝的回合：<span class="arithmatex"><span class="MathJax_Preview">x=4</span><script type="math/tex">x=4</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=12</span><script type="math/tex">y=12</script></span> （此回合后，<span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 变为空）</li>
 <li>鲍勃的回合：鲍勃输了，因为他无法行动</li>
 </ol>
 <h1 id="tle">TLE   代码</h1>
@@ -5001,17 +5001,17 @@ Alice
 <hr />
 <h1 id="cf-2203-d-divisibility-game">算法总结：CF 2203 D - Divisibility Game</h1>
 <h2 id="_7">一、 题目本质（问题抽象）</h2>
-<p>在两个数组 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 中，Alice 想要 <span class="arithmatex">\(x \mid y\)</span>（能整除），Bob 想要 <span class="arithmatex">\(x \nmid y\)</span>（不能整除）。每次选中的 <span class="arithmatex">\(y\)</span> 会被拿走，谁先无路可走谁输。</p>
-<p>博弈论的精髓在于<strong>对资源进行分类</strong>。我们站在 <span class="arithmatex">\(y \in b\)</span> 的视角，可以将数组 <span class="arithmatex">\(b\)</span> 中的数字分为三大类：</p>
+<p>在两个数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中，Alice 想要 <span class="arithmatex"><span class="MathJax_Preview">x \mid y</span><script type="math/tex">x \mid y</script></span>（能整除），Bob 想要 <span class="arithmatex"><span class="MathJax_Preview">x \nmid y</span><script type="math/tex">x \nmid y</script></span>（不能整除）。每次选中的 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 会被拿走，谁先无路可走谁输。</p>
+<p>博弈论的精髓在于<strong>对资源进行分类</strong>。我们站在 <span class="arithmatex"><span class="MathJax_Preview">y \in b</span><script type="math/tex">y \in b</script></span> 的视角，可以将数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中的数字分为三大类：</p>
 <ol>
 <li>
-<p><strong>Alice 的私有资源 (<code>cnta</code>)</strong>：<span class="arithmatex">\(y\)</span> 能被 <span class="arithmatex">\(a\)</span> 中的<strong>所有</strong>元素整除。只有 Alice 能拿，Bob 拿不了。</p>
+<p><strong>Alice 的私有资源 (<code>cnta</code>)</strong>：<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的<strong>所有</strong>元素整除。只有 Alice 能拿，Bob 拿不了。</p>
 </li>
 <li>
-<p><strong>Bob 的私有资源 (<code>cntb</code>)</strong>：<span class="arithmatex">\(y\)</span> 不能被 <span class="arithmatex">\(a\)</span> 中的<strong>任何</strong>元素整除。只有 Bob 能拿，Alice 拿不了。</p>
+<p><strong>Bob 的私有资源 (<code>cntb</code>)</strong>：<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 不能被 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的<strong>任何</strong>元素整除。只有 Bob 能拿，Alice 拿不了。</p>
 </li>
 <li>
-<p><strong>公共共享资源 (<code>same</code>)</strong>：<span class="arithmatex">\(y\)</span> 能被 <span class="arithmatex">\(a\)</span> 中的<strong>部分</strong>元素整除。双方都能通过选择合适的 <span class="arithmatex">\(x\)</span> 来拿走它。</p>
+<p><strong>公共共享资源 (<code>same</code>)</strong>：<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的<strong>部分</strong>元素整除。双方都能通过选择合适的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 来拿走它。</p>
 </li>
 </ol>
 <hr />
@@ -5026,37 +5026,37 @@ Alice
 <p><strong>如果 <code>same</code> 是偶数</strong>：Alice 先手抢，但 Bob 会拿到最后一个公共资源。接下来轮到 Alice 动用私有资源。此时 Bob 占了便宜，只要 Bob 的私有资源不比 Alice 少（<code>cntb &gt;= cnta</code>），Bob 必胜；否则 Alice 胜。</p>
 </li>
 </ul>
-<p><strong>结论</strong>：博弈论部分的时间复杂度是 <span class="arithmatex">\(O(1)\)</span>。胜负仅取决于 <code>same % 2</code> 以及 <code>cnta</code> 和 <code>cntb</code> 的大小关系。</p>
+<p><strong>结论</strong>：博弈论部分的时间复杂度是 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>。胜负仅取决于 <code>same % 2</code> 以及 <code>cnta</code> 和 <code>cntb</code> 的大小关系。</p>
 <hr />
 <h2 id="_9">三、 算法核心：如何极速分类？（降维打击）</h2>
-<p>最直观的分类方法是双重循环（遍历 <span class="arithmatex">\(b\)</span> 中的每个元素，再去遍历 <span class="arithmatex">\(a\)</span> 测试整除性），复杂度为 <span class="arithmatex">\(O(N \times M)\)</span>。在 <span class="arithmatex">\(N, M \le 10^6\)</span> 的数据下必定超时（TLE）。</p>
-<p><strong>破局点</strong>：题目隐藏了一个极强的约束条件——<strong><span class="arithmatex">\(a_i, b_i \le n+m\)</span></strong>。</p>
-<p>这意味着数值的上限 <span class="arithmatex">\(V \le 2 \times 10^6\)</span>。我们可以利用<strong>值域</strong>的特性，用数论方法预处理，将复杂度降维！</p>
+<p>最直观的分类方法是双重循环（遍历 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中的每个元素，再去遍历 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 测试整除性），复杂度为 <span class="arithmatex"><span class="MathJax_Preview">O(N \times M)</span><script type="math/tex">O(N \times M)</script></span>。在 <span class="arithmatex"><span class="MathJax_Preview">N, M \le 10^6</span><script type="math/tex">N, M \le 10^6</script></span> 的数据下必定超时（TLE）。</p>
+<p><strong>破局点</strong>：题目隐藏了一个极强的约束条件——<strong><span class="arithmatex"><span class="MathJax_Preview">a_i, b_i \le n+m</span><script type="math/tex">a_i, b_i \le n+m</script></span></strong>。</p>
+<p>这意味着数值的上限 <span class="arithmatex"><span class="MathJax_Preview">V \le 2 \times 10^6</span><script type="math/tex">V \le 2 \times 10^6</script></span>。我们可以利用<strong>值域</strong>的特性，用数论方法预处理，将复杂度降维！</p>
 <h3 id="1-cnta-lcm">1. 极速求 <code>cnta</code>：最小公倍数 (LCM)</h3>
 <ul>
 <li>
-<p><strong>原理</strong>：一个数能被 <span class="arithmatex">\(a\)</span> 中所有数整除，等价于它是 <span class="arithmatex">\(a\)</span> 中所有数的<strong>最小公倍数</strong>的倍数。</p>
+<p><strong>原理</strong>：一个数能被 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中所有数整除，等价于它是 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中所有数的<strong>最小公倍数</strong>的倍数。</p>
 </li>
 <li>
-<p><strong>操作</strong>：遍历数组 <span class="arithmatex">\(a\)</span>，求出整体的 LCM。如果 <span class="arithmatex">\(y \bmod \text{LCM} == 0\)</span>，它就是 <code>cnta</code>。</p>
+<p><strong>操作</strong>：遍历数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，求出整体的 LCM。如果 <span class="arithmatex"><span class="MathJax_Preview">y \bmod \text{LCM} == 0</span><script type="math/tex">y \bmod \text{LCM} == 0</script></span>，它就是 <code>cnta</code>。</p>
 </li>
 <li>
 <p><strong>致命坑点（防爆护盾）</strong>：LCM 的增长速度呈指数级，极易溢出 <code>long long</code> 导致变负数或 0，引发除零错误（RE）。</p>
 <ul>
-<li><em>解法</em>：由于 <span class="arithmatex">\(y \le n+m\)</span>，如果 LCM 在计算过程中<strong>超过了 <span class="arithmatex">\(n+m\)</span></strong>，说明 <span class="arithmatex">\(b\)</span> 中绝不可能有它的倍数。此时直接截断（设为一个大于 <span class="arithmatex">\(n+m\)</span> 的常数并 <code>break</code>），完美防溢出！</li>
+<li><em>解法</em>：由于 <span class="arithmatex"><span class="MathJax_Preview">y \le n+m</span><script type="math/tex">y \le n+m</script></span>，如果 LCM 在计算过程中<strong>超过了 <span class="arithmatex"><span class="MathJax_Preview">n+m</span><script type="math/tex">n+m</script></span></strong>，说明 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中绝不可能有它的倍数。此时直接截断（设为一个大于 <span class="arithmatex"><span class="MathJax_Preview">n+m</span><script type="math/tex">n+m</script></span> 的常数并 <code>break</code>），完美防溢出！</li>
 </ul>
 </li>
 </ul>
 <h3 id="2-cntb">2. 极速求 <code>cntb</code>：调和级数 / 埃氏筛法</h3>
 <ul>
 <li>
-<p><strong>原理</strong>：我们需要知道 <span class="arithmatex">\(y\)</span> 是否是 <span class="arithmatex">\(a\)</span> 中<strong>任意</strong>元素的倍数。</p>
+<p><strong>原理</strong>：我们需要知道 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 是否是 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中<strong>任意</strong>元素的倍数。</p>
 </li>
 <li>
-<p><strong>操作</strong>：开一个大小为 <span class="arithmatex">\(n+m+1\)</span> 的布尔数组 <code>is_mul</code>。遍历 <span class="arithmatex">\(a\)</span> 中的每个元素 <span class="arithmatex">\(x\)</span>，将 <span class="arithmatex">\(x, 2x, 3x, \dots\)</span> 标记为 <code>true</code>。</p>
+<p><strong>操作</strong>：开一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n+m+1</span><script type="math/tex">n+m+1</script></span> 的布尔数组 <code>is_mul</code>。遍历 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的每个元素 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，将 <span class="arithmatex"><span class="MathJax_Preview">x, 2x, 3x, \dots</span><script type="math/tex">x, 2x, 3x, \dots</script></span> 标记为 <code>true</code>。</p>
 </li>
 <li>
-<p><strong>复杂度</strong>：<span class="arithmatex">\(\frac{V}{a_1} + \frac{V}{a_2} + \dots \le V \ln V\)</span>。这个过程的时间复杂度大约是 <span class="arithmatex">\(O(V \log V)\)</span>，运行速度极快。</p>
+<p><strong>复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">\frac{V}{a_1} + \frac{V}{a_2} + \dots \le V \ln V</span><script type="math/tex">\frac{V}{a_1} + \frac{V}{a_2} + \dots \le V \ln V</script></span>。这个过程的时间复杂度大约是 <span class="arithmatex"><span class="MathJax_Preview">O(V \log V)</span><script type="math/tex">O(V \log V)</script></span>，运行速度极快。</p>
 </li>
 <li>
 <p>如果 <code>is_mul[y]</code> 为 <code>false</code>，说明它不是任何人的倍数，它就是 <code>cntb</code>。</p>
@@ -5069,28 +5069,28 @@ Alice
 <p><strong>时间复杂度</strong>：</p>
 <ul>
 <li>
-<p>去重排序：<span class="arithmatex">\(O(N \log N)\)</span></p>
+<p>去重排序：<span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span></p>
 </li>
 <li>
-<p>求 LCM：<span class="arithmatex">\(O(N)\)</span></p>
+<p>求 LCM：<span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span></p>
 </li>
 <li>
-<p>筛法标记倍数：<span class="arithmatex">\(O(V \log V)\)</span> （<span class="arithmatex">\(V = n+m\)</span>）</p>
+<p>筛法标记倍数：<span class="arithmatex"><span class="MathJax_Preview">O(V \log V)</span><script type="math/tex">O(V \log V)</script></span> （<span class="arithmatex"><span class="MathJax_Preview">V = n+m</span><script type="math/tex">V = n+m</script></span>）</p>
 </li>
 <li>
-<p>遍历判定：<span class="arithmatex">\(O(M)\)</span></p>
+<p>遍历判定：<span class="arithmatex"><span class="MathJax_Preview">O(M)</span><script type="math/tex">O(M)</script></span></p>
 </li>
 <li>
-<p><strong>总体时间复杂度</strong>：<span class="arithmatex">\(\approx O(V \log V)\)</span>，在 2 秒时限内可谓降维打击。</p>
+<p><strong>总体时间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">\approx O(V \log V)</span><script type="math/tex">\approx O(V \log V)</script></span>，在 2 秒时限内可谓降维打击。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>空间复杂度</strong>：<span class="arithmatex">\(O(V)\)</span> 用于开布尔标记数组。</p>
+<p><strong>空间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(V)</span><script type="math/tex">O(V)</script></span> 用于开布尔标记数组。</p>
 </li>
 </ul>
 <h3 id="_11">🌟 实战模板提炼：值域筛法查倍数</h3>
-<p>以后如果在比赛中遇到 <strong>“判断数组 B 中的数是否是数组 A 中元素的倍数/约数”</strong>，且<strong>最大数值 <span class="arithmatex">\(V\)</span> 不超过 <span class="arithmatex">\(10^7\)</span></strong>，直接默写这段模板：</p>
+<p>以后如果在比赛中遇到 <strong>“判断数组 B 中的数是否是数组 A 中元素的倍数/约数”</strong>，且<strong>最大数值 <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> 不超过 <span class="arithmatex"><span class="MathJax_Preview">10^7</span><script type="math/tex">10^7</script></span></strong>，直接默写这段模板：</p>
 <p>这道题是结合了<strong>博弈论分析 + 数据范围敏感度 + 筛法优化</strong>的综合好题，掌握这个套路，以后遇到类似的值域限制题都能秒杀！</p>
 
 

@@ -4633,14 +4633,14 @@
 <p>时间限制：每个测试 2 秒
 内存限制：每个测试 512 兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个长度为 <span class="arithmatex">\(n\)</span> 的整数数组 <span class="arithmatex">\(a\)</span>。</p>
-<p>你可以执行以下操作：选择一个区间 <span class="arithmatex">\([l,r]\)</span>（<span class="arithmatex">\(1 \le l \le r \le n\)</span>），并将元素 <span class="arithmatex">\(a_l, a_{l+1}, \dots, a_r\)</span> 的值替换为 <span class="arithmatex">\((l+r)\)</span>。</p>
+<p>给定一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的整数数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
+<p>你可以执行以下操作：选择一个区间 <span class="arithmatex"><span class="MathJax_Preview">[l,r]</span><script type="math/tex">[l,r]</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le l \le r \le n</span><script type="math/tex">1 \le l \le r \le n</script></span>），并将元素 <span class="arithmatex"><span class="MathJax_Preview">a_l, a_{l+1}, \dots, a_r</span><script type="math/tex">a_l, a_{l+1}, \dots, a_r</script></span> 的值替换为 <span class="arithmatex"><span class="MathJax_Preview">(l+r)</span><script type="math/tex">(l+r)</script></span>。</p>
 <p>你的任务是计算如果最多执行一次上述操作，可能获得的最大数组总和。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）——测试用例的数量。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \le n \le 2 \cdot 10^5\)</span>）。</p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>（<span class="arithmatex">\(0 \le a_i \le 2n\)</span>）。</p>
-<p>输入数据的额外约束：所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）——测试用例的数量。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 2 \cdot 10^5</span><script type="math/tex">1 \le n \le 2 \cdot 10^5</script></span>）。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">0 \le a_i \le 2n</span><script type="math/tex">0 \le a_i \le 2n</script></span>）。</p>
+<p>输入数据的额外约束：所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数——如果最多执行一次操作，可能获得的最大数组总和。</p>
 <h2 id="_4">样例输入</h2>
@@ -4661,10 +4661,10 @@
 32
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，你可以对子数组 <span class="arithmatex">\([3,3]\)</span> 执行操作，得到数组 <span class="arithmatex">\([2,5,6]\)</span>，总和为 <span class="arithmatex">\(13\)</span>。</p>
+<p>在第一个样例中，你可以对子数组 <span class="arithmatex"><span class="MathJax_Preview">[3,3]</span><script type="math/tex">[3,3]</script></span> 执行操作，得到数组 <span class="arithmatex"><span class="MathJax_Preview">[2,5,6]</span><script type="math/tex">[2,5,6]</script></span>，总和为 <span class="arithmatex"><span class="MathJax_Preview">13</span><script type="math/tex">13</script></span>。</p>
 <p>在第二个样例中，不需要执行任何操作。</p>
-<p>在第三个样例中，你可以对子数组 <span class="arithmatex">\([1,4]\)</span> 执行操作，得到数组 <span class="arithmatex">\([5,5,5,5]\)</span>，总和为 <span class="arithmatex">\(20\)</span>。</p>
-<p>在第四个样例中，你可以对子数组 <span class="arithmatex">\([2,3]\)</span> 执行操作，得到数组 <span class="arithmatex">\([3,5,5,9,10]\)</span>，总和为 <span class="arithmatex">\(32\)</span>。</p>
+<p>在第三个样例中，你可以对子数组 <span class="arithmatex"><span class="MathJax_Preview">[1,4]</span><script type="math/tex">[1,4]</script></span> 执行操作，得到数组 <span class="arithmatex"><span class="MathJax_Preview">[5,5,5,5]</span><script type="math/tex">[5,5,5,5]</script></span>，总和为 <span class="arithmatex"><span class="MathJax_Preview">20</span><script type="math/tex">20</script></span>。</p>
+<p>在第四个样例中，你可以对子数组 <span class="arithmatex"><span class="MathJax_Preview">[2,3]</span><script type="math/tex">[2,3]</script></span> 执行操作，得到数组 <span class="arithmatex"><span class="MathJax_Preview">[3,5,5,9,10]</span><script type="math/tex">[3,5,5,9,10]</script></span>，总和为 <span class="arithmatex"><span class="MathJax_Preview">32</span><script type="math/tex">32</script></span>。</p>
 <h1 id="_7">第一版</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2169 C</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 184 (Rated for Div. 2)</span>
@@ -4782,7 +4782,7 @@
 <p>你遇到的情况非常微妙，我来帮你梳理一下：</p>
 <ol>
 <li>
-<p>你贴的<strong>题目描述 (C. Range Operation)</strong> 和你贴的<strong>第一版 <span class="arithmatex">\(O(N^2)\)</span> 代码</strong>是<strong>完全对应的</strong>。</p>
+<p>你贴的<strong>题目描述 (C. Range Operation)</strong> 和你贴的<strong>第一版 <span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span> 代码</strong>是<strong>完全对应的</strong>。</p>
 <ul>
 <li>
 <p><code>pre[n]</code>：原始总和。</p>
@@ -4799,13 +4799,13 @@
 </ul>
 </li>
 <li>
-<p>你的<strong>第二版 <span class="arithmatex">\(O(N)\)</span> 代码</strong>（使用 <code>mxb</code> 的那个）的<strong>优化逻辑是完全正确的</strong>。</p>
+<p>你的<strong>第二版 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 代码</strong>（使用 <code>mxb</code> 的那个）的<strong>优化逻辑是完全正确的</strong>。</p>
 <ul>
-<li>你正确地将 <span class="arithmatex">\(O(N^2)\)</span> 暴力解法化简为了 <span class="arithmatex">\(O(N)\)</span> 的动态规划。</li>
+<li>你正确地将 <span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span> 暴力解法化简为了 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 的动态规划。</li>
 </ul>
 </li>
 <li>
-<p><strong>那为什么你的 <span class="arithmatex">\(O(N)\)</span> 代码还是错的？</strong></p>
+<p><strong>那为什么你的 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 代码还是错的？</strong></p>
 <ul>
 <li>答案是：<strong>整数溢出 (Integer Overflow)</strong>。</li>
 </ul>
@@ -4813,7 +4813,7 @@
 </ol>
 <hr />
 <h3 id="bugii">🐞 隐藏的 Bug：<code>i*i</code> 溢出</h3>
-<p>你看你 <span class="arithmatex">\(O(N)\)</span> 代码的这个循环和里面的两行：</p>
+<p>你看你 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 代码的这个循环和里面的两行：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>void solve() {
     LL n;
@@ -4835,10 +4835,10 @@
 <p>你的循环变量 <code>i</code> 是一个 <code>int</code>。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(N\)</span> 最大是 <span class="arithmatex">\(2 \cdot 10^5\)</span>。当 <code>i</code> 比较大时，比如 <code>i = 50000</code> (五万)，<code>i*i</code> 等于 <span class="arithmatex">\(25 \cdot 10^8\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 最大是 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。当 <code>i</code> 比较大时，比如 <code>i = 50000</code> (五万)，<code>i*i</code> 等于 <span class="arithmatex"><span class="MathJax_Preview">25 \cdot 10^8</span><script type="math/tex">25 \cdot 10^8</script></span>。</p>
 </li>
 <li>
-<p>一个 32 位 <code>int</code> 的最大值大约是 <span class="arithmatex">\(21 \cdot 10^8\)</span> (即 <code>2147483647</code>)。</p>
+<p>一个 32 位 <code>int</code> 的最大值大约是 <span class="arithmatex"><span class="MathJax_Preview">21 \cdot 10^8</span><script type="math/tex">21 \cdot 10^8</script></span> (即 <code>2147483647</code>)。</p>
 </li>
 <li>
 <p><strong>在 <code>i*i+i</code> 这行代码中，<code>i*i</code> 会首先作为 <code>int</code> 类型来计算。</strong></p>
@@ -4850,7 +4850,7 @@
 <p>这个溢出的、错误的 <code>int</code> 值，随后才被用于 <code>LL</code>（long long）的加法运算（如 <code>-pre[i] + ...</code>）。</p>
 </li>
 <li>
-<p>因此，你的 <code>A[i]</code> 和 <code>B[i]</code> 数组从源头上就是错误的，导致你虽然通过了所有样例（因为样例的 <span class="arithmatex">\(N\)</span> 很小），但提交后会 WA 隐藏的大数据。</p>
+<p>因此，你的 <code>A[i]</code> 和 <code>B[i]</code> 数组从源头上就是错误的，导致你虽然通过了所有样例（因为样例的 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 很小），但提交后会 WA 隐藏的大数据。</p>
 </li>
 </ul>
 <hr />
@@ -4876,7 +4876,7 @@
     res = max(res, mxb+A[i]);
 }
 </code></pre></div>
-<p>你只要修复了这个溢出问题，你的 <span class="arithmatex">\(O(N)\)</span> 代码就是正确的了。你之前的 <code>mxb=-INF</code> 和 <code>res=0</code> 的初始化逻辑是<strong>完全正确</strong>的（它完美地处理了“可以不操作”的情况）。</p>
+<p>你只要修复了这个溢出问题，你的 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 代码就是正确的了。你之前的 <code>mxb=-INF</code> 和 <code>res=0</code> 的初始化逻辑是<strong>完全正确</strong>的（它完美地处理了“可以不操作”的情况）。</p>
 <h1 id="ac">赛时AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2169 C</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 184 (Rated for Div. 2)</span>
@@ -5006,9 +5006,9 @@
 <span class="p">}</span>
 </code></pre></div>
 <h1 id="cf">CF 题解思路</h1>
-<p>让我们将 <span class="arithmatex">\(S_i\)</span> 定义为数组 <span class="arithmatex">\(a\)</span> 中前 <span class="arithmatex">\(i\)</span> 个元素的和。当我们对范围 <span class="arithmatex">\([l, r]\)</span> 执行操作时，总和将更改 <span class="arithmatex">\((l + r)(r - l + 1) - (S_r - S_{l-1})\)</span> 。该表达式可简化为 <span class="arithmatex">\(f(r) - f(l-1)\)</span> ，其中 <span class="arithmatex">\(f(x) = x^2 + x - S_x\)</span> 。因此，我们可以迭代 <span class="arithmatex">\(r\)</span> 的值，</p>
-<p>跟踪我们到目前为止遇到的 <span class="arithmatex">\(f(l)\)</span> 的最小值（让我们称之为 <span class="arithmatex">\(mn\)</span> ）. 然后我们可以用 <span class="arithmatex">\(S_n + f(r) - mn\)</span> 更新答案。还有另一种解决方案：如果将段 <span class="arithmatex">\([l, r]\)</span> 上的每个元素替换为 <span class="arithmatex">\((l + r)\)</span> ，</p>
-<p>段上的和等于 <span class="arithmatex">\(2l + 2(l+1) + \dots + 2r\)</span> （因为 <span class="arithmatex">\((l + r)(r - l + 1)\)</span> 可以被视为从 <span class="arithmatex">\(2l\)</span> 到的算术级数的和 <span class="arithmatex">\(2r\)</span> （步骤 <span class="arithmatex">\(2\)</span> ）. 因此，您可以将该操作视为将 <span class="arithmatex">\(a_i\)</span> 替换为 <span class="arithmatex">\(2i\)</span> 。您可以使用它来形成另一个数组 <span class="arithmatex">\(b\)</span> ，其中 <span class="arithmatex">\(b_i = 2i - a_i\)</span> ，并找到其中具有最大总和的子段。</p>
+<p>让我们将 <span class="arithmatex"><span class="MathJax_Preview">S_i</span><script type="math/tex">S_i</script></span> 定义为数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中前 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个元素的和。当我们对范围 <span class="arithmatex"><span class="MathJax_Preview">[l, r]</span><script type="math/tex">[l, r]</script></span> 执行操作时，总和将更改 <span class="arithmatex"><span class="MathJax_Preview">(l + r)(r - l + 1) - (S_r - S_{l-1})</span><script type="math/tex">(l + r)(r - l + 1) - (S_r - S_{l-1})</script></span> 。该表达式可简化为 <span class="arithmatex"><span class="MathJax_Preview">f(r) - f(l-1)</span><script type="math/tex">f(r) - f(l-1)</script></span> ，其中 <span class="arithmatex"><span class="MathJax_Preview">f(x) = x^2 + x - S_x</span><script type="math/tex">f(x) = x^2 + x - S_x</script></span> 。因此，我们可以迭代 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的值，</p>
+<p>跟踪我们到目前为止遇到的 <span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span> 的最小值（让我们称之为 <span class="arithmatex"><span class="MathJax_Preview">mn</span><script type="math/tex">mn</script></span> ）. 然后我们可以用 <span class="arithmatex"><span class="MathJax_Preview">S_n + f(r) - mn</span><script type="math/tex">S_n + f(r) - mn</script></span> 更新答案。还有另一种解决方案：如果将段 <span class="arithmatex"><span class="MathJax_Preview">[l, r]</span><script type="math/tex">[l, r]</script></span> 上的每个元素替换为 <span class="arithmatex"><span class="MathJax_Preview">(l + r)</span><script type="math/tex">(l + r)</script></span> ，</p>
+<p>段上的和等于 <span class="arithmatex"><span class="MathJax_Preview">2l + 2(l+1) + \dots + 2r</span><script type="math/tex">2l + 2(l+1) + \dots + 2r</script></span> （因为 <span class="arithmatex"><span class="MathJax_Preview">(l + r)(r - l + 1)</span><script type="math/tex">(l + r)(r - l + 1)</script></span> 可以被视为从 <span class="arithmatex"><span class="MathJax_Preview">2l</span><script type="math/tex">2l</script></span> 到的算术级数的和 <span class="arithmatex"><span class="MathJax_Preview">2r</span><script type="math/tex">2r</script></span> （步骤 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> ）. 因此，您可以将该操作视为将 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 替换为 <span class="arithmatex"><span class="MathJax_Preview">2i</span><script type="math/tex">2i</script></span> 。您可以使用它来形成另一个数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> ，其中 <span class="arithmatex"><span class="MathJax_Preview">b_i = 2i - a_i</span><script type="math/tex">b_i = 2i - a_i</script></span> ，并找到其中具有最大总和的子段。</p>
 <p>要解决这个问题，您可以使用Kadane的算法或前缀和。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>

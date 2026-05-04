@@ -4766,24 +4766,24 @@
 <p><strong>时间限制：</strong> 2 秒<br />
 <strong>内存限制：</strong> 512 MB  </p>
 <h2 id="_1">问题描述</h2>
-<p>Monocarp 有 <span class="arithmatex">\(n\)</span> 个朋友，并决定送给每个朋友一份新年礼物。他还准备了 <span class="arithmatex">\(m\)</span> 个盒子来放置礼物；第 <span class="arithmatex">\(i\)</span> 个盒子的美观度为 <span class="arithmatex">\(a_i\)</span>。每个盒子最多只能装一份礼物。</p>
-<p>Monocarp 想送给第 <span class="arithmatex">\(i\)</span> 个朋友至少价值 <span class="arithmatex">\(y_i\)</span> 个硬币的礼物。此外，他还知道，如果<strong>至少满足以下条件之一</strong>，那么第 <span class="arithmatex">\(i\)</span> 个朋友就会感到高兴：</p>
+<p>Monocarp 有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个朋友，并决定送给每个朋友一份新年礼物。他还准备了 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个盒子来放置礼物；第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个盒子的美观度为 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>。每个盒子最多只能装一份礼物。</p>
+<p>Monocarp 想送给第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个朋友至少价值 <span class="arithmatex"><span class="MathJax_Preview">y_i</span><script type="math/tex">y_i</script></span> 个硬币的礼物。此外，他还知道，如果<strong>至少满足以下条件之一</strong>，那么第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个朋友就会感到高兴：</p>
 <ol>
-<li>礼物被放置在一个美观度<strong>至少</strong>为 <span class="arithmatex">\(x_i\)</span> 的盒子中；</li>
-<li>礼物本身的价值<strong>至少</strong>为 <span class="arithmatex">\(z_i\)</span>（这里 <span class="arithmatex">\(z_i &gt; y_i\)</span>）。</li>
+<li>礼物被放置在一个美观度<strong>至少</strong>为 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 的盒子中；</li>
+<li>礼物本身的价值<strong>至少</strong>为 <span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span>（这里 <span class="arithmatex"><span class="MathJax_Preview">z_i &gt; y_i</span><script type="math/tex">z_i > y_i</script></span>）。</li>
 </ol>
-<p>你的任务是帮助 Monocarp 计算，如果他拥有 <span class="arithmatex">\(k\)</span> 个硬币，他最多能让多少个朋友开心。注意，Monocarp <strong>必须</strong>为每个朋友购买一份礼物，并且礼物<strong>不一定</strong>要装在盒子里。</p>
+<p>你的任务是帮助 Monocarp 计算，如果他拥有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个硬币，他最多能让多少个朋友开心。注意，Monocarp <strong>必须</strong>为每个朋友购买一份礼物，并且礼物<strong>不一定</strong>要装在盒子里。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）—— 测试用例的数量。</p>
-<p>每个测试用例的第一行包含三个整数 <span class="arithmatex">\(n\)</span>、<span class="arithmatex">\(m\)</span> 和 <span class="arithmatex">\(k\)</span>（<span class="arithmatex">\(1 \le n, m \le 2 \cdot 10^5\)</span>；<span class="arithmatex">\(1 \le k \le 10^{15}\)</span>）。</p>
-<p>第二行包含 <span class="arithmatex">\(m\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_m\)</span>（<span class="arithmatex">\(1 \le a_i \le m\)</span>）。</p>
-<p>接下来 <span class="arithmatex">\(n\)</span> 行，每行包含三个整数 <span class="arithmatex">\(x_i\)</span>、<span class="arithmatex">\(y_i\)</span> 和 <span class="arithmatex">\(z_i\)</span>（<span class="arithmatex">\(1 \le x_i \le m\)</span>；<span class="arithmatex">\(1 \le y_i &lt; z_i \le 10^9\)</span>）。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）—— 测试用例的数量。</p>
+<p>每个测试用例的第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>、<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n, m \le 2 \cdot 10^5</span><script type="math/tex">1 \le n, m \le 2 \cdot 10^5</script></span>；<span class="arithmatex"><span class="MathJax_Preview">1 \le k \le 10^{15}</span><script type="math/tex">1 \le k \le 10^{15}</script></span>）。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_m</span><script type="math/tex">a_1, a_2, \ldots, a_m</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le a_i \le m</span><script type="math/tex">1 \le a_i \le m</script></span>）。</p>
+<p>接下来 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行，每行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span>、<span class="arithmatex"><span class="MathJax_Preview">y_i</span><script type="math/tex">y_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le x_i \le m</span><script type="math/tex">1 \le x_i \le m</script></span>；<span class="arithmatex"><span class="MathJax_Preview">1 \le y_i &lt; z_i \le 10^9</span><script type="math/tex">1 \le y_i < z_i \le 10^9</script></span>）。</p>
 <p>输入数据的附加约束：
-- <span class="arithmatex">\(\sum_{i=1}^{n} y_i \le k\)</span>。
-- 所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。
-- 所有测试用例的 <span class="arithmatex">\(m\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+- <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n} y_i \le k</span><script type="math/tex">\sum_{i=1}^{n} y_i \le k</script></span>。
+- 所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。
+- 所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个整数——在拥有 <span class="arithmatex">\(k\)</span> 个硬币的情况下，Monocarp 最多能让多少个朋友开心。</p>
+<p>对于每个测试用例，输出一个整数——在拥有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个硬币的情况下，Monocarp 最多能让多少个朋友开心。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 2 1 6
@@ -4806,9 +4806,9 @@
 2
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，Monocarp 可以让两个朋友都开心，操作如下：送给第一个朋友一份价值 <span class="arithmatex">\(3\)</span> 个硬币的礼物，送给第二个朋友一份价值 <span class="arithmatex">\(2\)</span> 个硬币、放在美观度为 <span class="arithmatex">\(1\)</span> 的盒子里的礼物。</p>
-<p>在第二个样例中，Monocarp 不能让任何一个朋友开心，因为他没有足够的钱为任何一个朋友购买价值 <span class="arithmatex">\(z_i\)</span> 个硬币的礼物；同时，所有盒子的美观度都低于任何一个 <span class="arithmatex">\(x_i\)</span>。</p>
-<p>在第三个样例中，Monocarp 可以让两个朋友（第 2 个和第 3 个）开心，操作如下：送给第一个朋友一份价值 <span class="arithmatex">\(2\)</span> 个硬币的礼物，送给第二个朋友一份价值 <span class="arithmatex">\(6\)</span> 个硬币的礼物，送给第三个朋友一份价值 <span class="arithmatex">\(3\)</span> 个硬币的礼物。</p>
+<p>在第一个样例中，Monocarp 可以让两个朋友都开心，操作如下：送给第一个朋友一份价值 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个硬币的礼物，送给第二个朋友一份价值 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个硬币、放在美观度为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的盒子里的礼物。</p>
+<p>在第二个样例中，Monocarp 不能让任何一个朋友开心，因为他没有足够的钱为任何一个朋友购买价值 <span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span> 个硬币的礼物；同时，所有盒子的美观度都低于任何一个 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span>。</p>
+<p>在第三个样例中，Monocarp 可以让两个朋友（第 2 个和第 3 个）开心，操作如下：送给第一个朋友一份价值 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个硬币的礼物，送给第二个朋友一份价值 <span class="arithmatex"><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 个硬币的礼物，送给第三个朋友一份价值 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个硬币的礼物。</p>
 <h1 id="wa-2">WA  2代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2182 E</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 186 (Rated for Div. 2)</span>
@@ -4969,29 +4969,29 @@
 <p>首先，我们需要剥离题目的“故事外壳”，将其转化为纯粹的数学/资源模型。</p>
 <ul>
 <li>
-<p><strong>基础消耗</strong>：无论朋友是否开心，必须送礼物，花费 <span class="arithmatex">\(y_i\)</span>。</p>
+<p><strong>基础消耗</strong>：无论朋友是否开心，必须送礼物，花费 <span class="arithmatex"><span class="MathJax_Preview">y_i</span><script type="math/tex">y_i</script></span>。</p>
 <ul>
-<li><strong>预处理</strong>：令 <span class="arithmatex">\(K' = K - \sum y_i\)</span>。如果 <span class="arithmatex">\(K' &lt; 0\)</span>，直接输出 0。</li>
+<li><strong>预处理</strong>：令 <span class="arithmatex"><span class="MathJax_Preview">K' = K - \sum y_i</span><script type="math/tex">K' = K - \sum y_i</script></span>。如果 <span class="arithmatex"><span class="MathJax_Preview">K' &lt; 0</span><script type="math/tex">K' < 0</script></span>，直接输出 0。</li>
 </ul>
 </li>
 <li>
 <p><strong>开心的方式（二选一）</strong>：</p>
 <ol>
 <li>
-<p><strong>用盒子（Option Box）</strong>：需要盒子美观度 <span class="arithmatex">\(a_j \ge x_i\)</span>。<strong>额外花费：0</strong>。</p>
+<p><strong>用盒子（Option Box）</strong>：需要盒子美观度 <span class="arithmatex"><span class="MathJax_Preview">a_j \ge x_i</span><script type="math/tex">a_j \ge x_i</script></span>。<strong>额外花费：0</strong>。</p>
 </li>
 <li>
-<p><strong>用钱（Option Money）</strong>：将礼物价值提升到 <span class="arithmatex">\(z_i\)</span>。<strong>额外花费：<span class="arithmatex">\(c_i = z_i - y_i\)</span></strong>。</p>
+<p><strong>用钱（Option Money）</strong>：将礼物价值提升到 <span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span>。<strong>额外花费：<span class="arithmatex"><span class="MathJax_Preview">c_i = z_i - y_i</span><script type="math/tex">c_i = z_i - y_i</script></span></strong>。</p>
 </li>
 </ol>
 </li>
 </ul>
-<p><strong>目标</strong>：在预算 <span class="arithmatex">\(K'\)</span> 内，让尽可能多的人开心。</p>
+<p><strong>目标</strong>：在预算 <span class="arithmatex"><span class="MathJax_Preview">K'</span><script type="math/tex">K'</script></span> 内，让尽可能多的人开心。</p>
 <h2 id="2">2. 核心难点：为什么普通贪心会错？</h2>
 <h3 id="wa">❌ 错误的贪心（你的 WA 思路）</h3>
 <ul>
 <li>
-<p><strong>策略</strong>：按盒子需求 <span class="arithmatex">\(x_i\)</span> 从小到大排序，优先把盒子给需求小的人。</p>
+<p><strong>策略</strong>：按盒子需求 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 从小到大排序，优先把盒子给需求小的人。</p>
 </li>
 <li>
 <p><strong>漏洞</strong>：<strong>忽略了“替代成本”</strong>。</p>
@@ -5000,18 +5000,18 @@
 <p>例子：</p>
 <ul>
 <li>
-<p>A 需要 <span class="arithmatex">\(x_A=1\)</span> 的盒子，或者花 <span class="arithmatex">\(1\)</span> 元 (<span class="arithmatex">\(c_A=1\)</span>)。</p>
+<p>A 需要 <span class="arithmatex"><span class="MathJax_Preview">x_A=1</span><script type="math/tex">x_A=1</script></span> 的盒子，或者花 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 元 (<span class="arithmatex"><span class="MathJax_Preview">c_A=1</span><script type="math/tex">c_A=1</script></span>)。</p>
 </li>
 <li>
-<p>B 需要 <span class="arithmatex">\(x_B=100\)</span> 的盒子，或者花 <span class="arithmatex">\(10000\)</span> 元 (<span class="arithmatex">\(c_B=10000\)</span>)。</p>
+<p>B 需要 <span class="arithmatex"><span class="MathJax_Preview">x_B=100</span><script type="math/tex">x_B=100</script></span> 的盒子，或者花 <span class="arithmatex"><span class="MathJax_Preview">10000</span><script type="math/tex">10000</script></span> 元 (<span class="arithmatex"><span class="MathJax_Preview">c_B=10000</span><script type="math/tex">c_B=10000</script></span>)。</p>
 </li>
 <li>
-<p>只有一个 <span class="arithmatex">\(a=100\)</span> 的盒子。</p>
+<p>只有一个 <span class="arithmatex"><span class="MathJax_Preview">a=100</span><script type="math/tex">a=100</script></span> 的盒子。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>按错误策略：盒子给 A（因为 <span class="arithmatex">\(x_A\)</span> 小）。结果 B 没盒子，必须花 10000 元，预算瞬间爆炸。</p>
+<p>按错误策略：盒子给 A（因为 <span class="arithmatex"><span class="MathJax_Preview">x_A</span><script type="math/tex">x_A</script></span> 小）。结果 B 没盒子，必须花 10000 元，预算瞬间爆炸。</p>
 </li>
 <li>
 <p>最优策略：盒子给 B（省下 10000 元），花 1 元解决 A。</p>
@@ -5025,7 +5025,7 @@
 <p><strong>策略</strong>：优先用盒子满足所有人，当盒子不够分时，<strong>踢掉那个“最便宜”的人</strong>去用钱解决。</p>
 </li>
 <li>
-<p><strong>核心逻辑</strong>：盒子是“免费”的资源，用盒子等同于省下了 <span class="arithmatex">\(c_i\)</span> 的钱。为了省最多的钱，盒子应该留给 <span class="arithmatex">\(c_i\)</span> 大的人。</p>
+<p><strong>核心逻辑</strong>：盒子是“免费”的资源，用盒子等同于省下了 <span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 的钱。为了省最多的钱，盒子应该留给 <span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 大的人。</p>
 </li>
 </ul>
 <hr />
@@ -5034,23 +5034,23 @@
 <p>为了线性地统计可用盒子，我们需要利用单调性：</p>
 <ul>
 <li>
-<p><strong>朋友</strong>：按盒子需求 <span class="arithmatex">\(x_i\)</span> <strong>从大到小</strong>排序。</p>
+<p><strong>朋友</strong>：按盒子需求 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> <strong>从大到小</strong>排序。</p>
 </li>
 <li>
-<p><strong>盒子</strong>：按美观度 <span class="arithmatex">\(a_i\)</span> <strong>从大到小</strong>排序。</p>
+<p><strong>盒子</strong>：按美观度 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> <strong>从大到小</strong>排序。</p>
 </li>
 </ul>
 <p>为什么？</p>
-<p>如果一个盒子能满足 <span class="arithmatex">\(x=100\)</span> 的朋友，那它一定能满足 <span class="arithmatex">\(x=50\)</span> 的朋友。从大到小遍历朋友，随着 <span class="arithmatex">\(x_i\)</span> 降低，可用的盒子数量（ok）是单调增加的。</p>
+<p>如果一个盒子能满足 <span class="arithmatex"><span class="MathJax_Preview">x=100</span><script type="math/tex">x=100</script></span> 的朋友，那它一定能满足 <span class="arithmatex"><span class="MathJax_Preview">x=50</span><script type="math/tex">x=50</script></span> 的朋友。从大到小遍历朋友，随着 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 降低，可用的盒子数量（ok）是单调增加的。</p>
 <h3 id="_10">步骤二：维护“反悔堆”</h3>
-<p>我们维护一个<strong>小根堆（Min-Priority Queue）</strong>，里面存放<strong>当前分配到盒子的人的额外花费 <span class="arithmatex">\(c_i\)</span></strong>。</p>
-<p>遍历每个朋友（<span class="arithmatex">\(x_i\)</span> 降序）：</p>
+<p>我们维护一个<strong>小根堆（Min-Priority Queue）</strong>，里面存放<strong>当前分配到盒子的人的额外花费 <span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span></strong>。</p>
+<p>遍历每个朋友（<span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 降序）：</p>
 <ol>
 <li>
-<p><strong>解锁盒子</strong>：将所有 <span class="arithmatex">\(a_j \ge x_i\)</span> 的盒子加入可用计数 <code>ok</code>。</p>
+<p><strong>解锁盒子</strong>：将所有 <span class="arithmatex"><span class="MathJax_Preview">a_j \ge x_i</span><script type="math/tex">a_j \ge x_i</script></span> 的盒子加入可用计数 <code>ok</code>。</p>
 </li>
 <li>
-<p><strong>尝试入队</strong>：假设当前朋友用盒子满足，将他的花费 <span class="arithmatex">\(c_i\)</span> 放入堆。</p>
+<p><strong>尝试入队</strong>：假设当前朋友用盒子满足，将他的花费 <span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 放入堆。</p>
 </li>
 <li>
 <p><strong>反悔（关键）</strong>：</p>
@@ -5059,10 +5059,10 @@
 <p>检查：如果 <code>堆的大小</code>（想用盒子的人数） &gt; <code>ok</code>（实际可用盒子数）。</p>
 </li>
 <li>
-<p>操作：<strong>必须踢走一个人</strong>。踢谁？踢堆顶元素（<span class="arithmatex">\(c_i\)</span> 最小的人）。</p>
+<p>操作：<strong>必须踢走一个人</strong>。踢谁？踢堆顶元素（<span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 最小的人）。</p>
 </li>
 <li>
-<p>意义：这个人用盒子“最不划算”，让他去用钱解决吧。被踢出的 <span class="arithmatex">\(c_i\)</span> 存入 <code>money</code> 列表。</p>
+<p>意义：这个人用盒子“最不划算”，让他去用钱解决吧。被踢出的 <span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 存入 <code>money</code> 列表。</p>
 </li>
 </ul>
 </li>
@@ -5083,7 +5083,7 @@
 <p>将 <code>money</code> 列表从小到大排序。</p>
 </li>
 <li>
-<p>用剩余预算 <span class="arithmatex">\(K'\)</span> 依次购买，能买几个算几个。</p>
+<p>用剩余预算 <span class="arithmatex"><span class="MathJax_Preview">K'</span><script type="math/tex">K'</script></span> 依次购买，能买几个算几个。</p>
 </li>
 </ul>
 </li>
@@ -5147,13 +5147,13 @@ for(auto c : money) {
 <li>
 <p><strong>预算判断</strong>：</p>
 <ul>
-<li>一定要先判断 <code>sum &gt; k</code>，如果连 <span class="arithmatex">\(y_i\)</span> 都付不起，直接 <code>return 0</code>。</li>
+<li>一定要先判断 <code>sum &gt; k</code>，如果连 <span class="arithmatex"><span class="MathJax_Preview">y_i</span><script type="math/tex">y_i</script></span> 都付不起，直接 <code>return 0</code>。</li>
 </ul>
 </li>
 <li>
 <p><strong>数据范围</strong>：</p>
 <ul>
-<li><span class="arithmatex">\(k\)</span> 高达 <span class="arithmatex">\(10^{15}\)</span>，必须全程使用 <code>long long</code> (<code>#define int long long</code>)。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 高达 <span class="arithmatex"><span class="MathJax_Preview">10^{15}</span><script type="math/tex">10^{15}</script></span>，必须全程使用 <code>long long</code> (<code>#define int long long</code>)。</li>
 </ul>
 </li>
 </ol>
@@ -5163,23 +5163,23 @@ for(auto c : money) {
 <p><strong>时间复杂度</strong>：</p>
 <ul>
 <li>
-<p>排序朋友和盒子：<span class="arithmatex">\(O(N \log N + M \log M)\)</span>。</p>
+<p>排序朋友和盒子：<span class="arithmatex"><span class="MathJax_Preview">O(N \log N + M \log M)</span><script type="math/tex">O(N \log N + M \log M)</script></span>。</p>
 </li>
 <li>
-<p>遍历朋友并操作堆：每个朋友最多进堆一次、出堆一次，堆操作 <span class="arithmatex">\(O(\log N)\)</span>。总计 <span class="arithmatex">\(O(N \log N)\)</span>。</p>
+<p>遍历朋友并操作堆：每个朋友最多进堆一次、出堆一次，堆操作 <span class="arithmatex"><span class="MathJax_Preview">O(\log N)</span><script type="math/tex">O(\log N)</script></span>。总计 <span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span>。</p>
 </li>
 <li>
-<p>最后贪心买单：<span class="arithmatex">\(O(N \log N)\)</span>。</p>
+<p>最后贪心买单：<span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span>。</p>
 </li>
 <li>
-<p>总计：<strong><span class="arithmatex">\(O(N \log N)\)</span></strong>。对于 <span class="arithmatex">\(2 \cdot 10^5\)</span> 的数据量，轻松通过（限制 2秒）。</p>
+<p>总计：<strong><span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span></strong>。对于 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span> 的数据量，轻松通过（限制 2秒）。</p>
 </li>
 </ul>
 </li>
 <li>
 <p><strong>空间复杂度</strong>：</p>
 <ul>
-<li>存储数组和堆：<span class="arithmatex">\(O(N + M)\)</span>。</li>
+<li>存储数组和堆：<span class="arithmatex"><span class="MathJax_Preview">O(N + M)</span><script type="math/tex">O(N + M)</script></span>。</li>
 </ul>
 </li>
 </ul>

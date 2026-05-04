@@ -4668,24 +4668,24 @@
 <p>时间限制：每个测试 2 秒
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定三个正整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span>, 和 <span class="arithmatex">\(q\)</span>。同时给出 <span class="arithmatex">\(q\)</span> 个元组 <span class="arithmatex">\((c,l,r)\)</span>，其中 <span class="arithmatex">\(1 \le c \le 2\)</span> 且 <span class="arithmatex">\(1 \le l \le r \le n\)</span>。</p>
-<p>一个数组 <span class="arithmatex">\(a_1,a_2,\dots,a_n\)</span> 被称为 <strong>meximum</strong> 如果对于每个 <span class="arithmatex">\(i \in [1,n]\)</span> 都有 <span class="arithmatex">\(0 \le a_i \le 10^9\)</span>，并且对于每个给定的元组 <span class="arithmatex">\((c,l,r)\)</span>：</p>
+<p>给定三个正整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>, 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>。同时给出 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个元组 <span class="arithmatex"><span class="MathJax_Preview">(c,l,r)</span><script type="math/tex">(c,l,r)</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">1 \le c \le 2</span><script type="math/tex">1 \le c \le 2</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">1 \le l \le r \le n</span><script type="math/tex">1 \le l \le r \le n</script></span>。</p>
+<p>一个数组 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\dots,a_n</span><script type="math/tex">a_1,a_2,\dots,a_n</script></span> 被称为 <strong>meximum</strong> 如果对于每个 <span class="arithmatex"><span class="MathJax_Preview">i \in [1,n]</span><script type="math/tex">i \in [1,n]</script></span> 都有 <span class="arithmatex"><span class="MathJax_Preview">0 \le a_i \le 10^9</span><script type="math/tex">0 \le a_i \le 10^9</script></span>，并且对于每个给定的元组 <span class="arithmatex"><span class="MathJax_Preview">(c,l,r)</span><script type="math/tex">(c,l,r)</script></span>：</p>
 <ul>
-<li>如果 <span class="arithmatex">\(c=1\)</span>，则 <span class="arithmatex">\(\min(a_l,a_{l+1},\dots,a_r) = k\)</span>；</li>
-<li>如果 <span class="arithmatex">\(c=2\)</span>，则 <span class="arithmatex">\(\mathrm{MEX}^*(a_l,a_{l+1},\dots,a_r) = k\)</span>。</li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">c=1</span><script type="math/tex">c=1</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\min(a_l,a_{l+1},\dots,a_r) = k</span><script type="math/tex">\min(a_l,a_{l+1},\dots,a_r) = k</script></span>；</li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">c=2</span><script type="math/tex">c=2</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{MEX}^*(a_l,a_{l+1},\dots,a_r) = k</span><script type="math/tex">\mathrm{MEX}^*(a_l,a_{l+1},\dots,a_r) = k</script></span>。</li>
 </ul>
-<p>注意参数 <span class="arithmatex">\(k\)</span> 对所有条件都是相同的。</p>
-<p>请找出一个长度为 <span class="arithmatex">\(n\)</span> 的 meximum 数组 <span class="arithmatex">\(a_1,a_2,\dots,a_n\)</span>。输入保证总是存在有效的数组。如果有多个可能的数组，你可以输出其中任意一个。</p>
-<p><span class="arithmatex">\(^*\)</span> 整数集合 <span class="arithmatex">\(a_1,a_2,\dots,a_k\)</span> 的<strong>最小排除值（MEX）</strong>定义为不在该集合中出现的最小非负整数 <span class="arithmatex">\(x\)</span>。</p>
+<p>注意参数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 对所有条件都是相同的。</p>
+<p>请找出一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的 meximum 数组 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\dots,a_n</span><script type="math/tex">a_1,a_2,\dots,a_n</script></span>。输入保证总是存在有效的数组。如果有多个可能的数组，你可以输出其中任意一个。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span> 整数集合 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\dots,a_k</span><script type="math/tex">a_1,a_2,\dots,a_k</script></span> 的<strong>最小排除值（MEX）</strong>定义为不在该集合中出现的最小非负整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 500\)</span>)。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 500</span><script type="math/tex">1 \le t \le 500</script></span>)。</p>
 <p>接下来是每个测试用例的描述：
-- 第一行包含三个整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(q\)</span> (<span class="arithmatex">\(1 \le k \le n \le 100\)</span>, <span class="arithmatex">\(1 \le q \le 100\)</span>) — 分别表示数组 <span class="arithmatex">\(a_1,a_2,\dots,a_n\)</span> 的长度、元组中描述的 <span class="arithmatex">\(\min\)</span> 和 <span class="arithmatex">\(\mathrm{MEX}\)</span> 计算结果、以及元组的数量
-- 接着 <span class="arithmatex">\(q\)</span> 行，第 <span class="arithmatex">\(i\)</span> 行包含一个元组 <span class="arithmatex">\((c,l,r)\)</span>，表示对 <span class="arithmatex">\(a_l,a_{l+1},\dots,a_r\)</span> 的约束条件</p>
+- 第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>, <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le k \le n \le 100</span><script type="math/tex">1 \le k \le n \le 100</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \le q \le 100</span><script type="math/tex">1 \le q \le 100</script></span>) — 分别表示数组 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\dots,a_n</span><script type="math/tex">a_1,a_2,\dots,a_n</script></span> 的长度、元组中描述的 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{MEX}</span><script type="math/tex">\mathrm{MEX}</script></span> 计算结果、以及元组的数量
+- 接着 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 行，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行包含一个元组 <span class="arithmatex"><span class="MathJax_Preview">(c,l,r)</span><script type="math/tex">(c,l,r)</script></span>，表示对 <span class="arithmatex"><span class="MathJax_Preview">a_l,a_{l+1},\dots,a_r</span><script type="math/tex">a_l,a_{l+1},\dots,a_r</script></span> 的约束条件</p>
 <p>保证存在与给定输入对应的有效数组。</p>
-<p>注意：题目没有对所有测试用例的 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span> 或 <span class="arithmatex">\(q\)</span> 之和设置约束。</p>
+<p>注意：题目没有对所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 之和设置约束。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一行包含一个 meximum 数组 <span class="arithmatex">\(a_1,a_2,\dots,a_n\)</span>。</p>
+<p>对于每个测试用例，输出一行包含一个 meximum 数组 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\dots,a_n</span><script type="math/tex">a_1,a_2,\dots,a_n</script></span>。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 6 2 2
@@ -4707,17 +4707,17 @@
 1 0 1
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，需要构建一个 <span class="arithmatex">\(n=6\)</span>, <span class="arithmatex">\(k=2\)</span> 的 meximum 数组，且有 <span class="arithmatex">\(q=2\)</span> 个约束条件：</p>
+<p>在第一个测试用例中，需要构建一个 <span class="arithmatex"><span class="MathJax_Preview">n=6</span><script type="math/tex">n=6</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span> 的 meximum 数组，且有 <span class="arithmatex"><span class="MathJax_Preview">q=2</span><script type="math/tex">q=2</script></span> 个约束条件：</p>
 <ul>
-<li>元组 <span class="arithmatex">\((1,1,3)\)</span>: <span class="arithmatex">\(\min(a_1,a_2,a_3)\)</span> 必须为 <span class="arithmatex">\(2\)</span></li>
-<li>元组 <span class="arithmatex">\((2,2,6)\)</span>: <span class="arithmatex">\(\mathrm{MEX}(a_2,a_3,a_4,a_5,a_6)\)</span> 必须为 <span class="arithmatex">\(2\)</span></li>
+<li>元组 <span class="arithmatex"><span class="MathJax_Preview">(1,1,3)</span><script type="math/tex">(1,1,3)</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\min(a_1,a_2,a_3)</span><script type="math/tex">\min(a_1,a_2,a_3)</script></span> 必须为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span></li>
+<li>元组 <span class="arithmatex"><span class="MathJax_Preview">(2,2,6)</span><script type="math/tex">(2,2,6)</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\mathrm{MEX}(a_2,a_3,a_4,a_5,a_6)</span><script type="math/tex">\mathrm{MEX}(a_2,a_3,a_4,a_5,a_6)</script></span> 必须为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span></li>
 </ul>
-<p>一个满足所有约束条件且元素在 <span class="arithmatex">\(0 \le a_i \le 10^9\)</span> 范围内的可能数组是 <span class="arithmatex">\([2,5,4,3,0,1]\)</span>。</p>
-<p>在第二个测试用例中，需要构建一个 <span class="arithmatex">\(n=3\)</span>, <span class="arithmatex">\(k=3\)</span> 的 meximum 数组，且有 <span class="arithmatex">\(q=1\)</span> 个约束条件：</p>
+<p>一个满足所有约束条件且元素在 <span class="arithmatex"><span class="MathJax_Preview">0 \le a_i \le 10^9</span><script type="math/tex">0 \le a_i \le 10^9</script></span> 范围内的可能数组是 <span class="arithmatex"><span class="MathJax_Preview">[2,5,4,3,0,1]</span><script type="math/tex">[2,5,4,3,0,1]</script></span>。</p>
+<p>在第二个测试用例中，需要构建一个 <span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k=3</span><script type="math/tex">k=3</script></span> 的 meximum 数组，且有 <span class="arithmatex"><span class="MathJax_Preview">q=1</span><script type="math/tex">q=1</script></span> 个约束条件：</p>
 <ul>
-<li>元组 <span class="arithmatex">\((2,1,3)\)</span>: <span class="arithmatex">\(\mathrm{MEX}(a_1,a_2,a_3)\)</span> 必须为 <span class="arithmatex">\(3\)</span></li>
+<li>元组 <span class="arithmatex"><span class="MathJax_Preview">(2,1,3)</span><script type="math/tex">(2,1,3)</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\mathrm{MEX}(a_1,a_2,a_3)</span><script type="math/tex">\mathrm{MEX}(a_1,a_2,a_3)</script></span> 必须为 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span></li>
 </ul>
-<p>一个满足此约束条件的可能数组是 <span class="arithmatex">\([2,0,1]\)</span>。</p>
+<p>一个满足此约束条件的可能数组是 <span class="arithmatex"><span class="MathJax_Preview">[2,0,1]</span><script type="math/tex">[2,0,1]</script></span>。</p>
 <h2 id="_7">💡 核心直觉 (一句话总结)</h2>
 <blockquote>
 <p>对于一组min   ,那就是这一组里面最小值一定是k而且k一定出现
@@ -4729,7 +4729,7 @@
 <ul>
 <li>我的想法是先构造mex,由于题目保证一定有解，所以我构造时候选择最简便的做法，直接下标%k</li>
 <li>接着就要看最小值了，首先是Min  mex  里的k值一定不冲突，所以我们开一个st  数组，把没填的位置先填一个k   然后没填过而且小于k的位置全部换成K</li>
-<li>最后对于全局位置扫一遍，没填过的填K,只要   <span class="arithmatex">\(\geq k\)</span>   都行</li>
+<li>最后对于全局位置扫一遍，没填过的填K,只要   <span class="arithmatex"><span class="MathJax_Preview">\geq k</span><script type="math/tex">\geq k</script></span>   都行</li>
 </ul>
 <h2 id="pattern">🧠 举一反三 (Pattern)</h2>
 <ul>
@@ -5005,7 +5005,7 @@ int cur_mex_cover = 0;</p>
 ```</p>
 <hr />
 <h3 id="_10">⚔️ 练手好题推荐</h3>
-<p>为了巩固这个技巧，我推荐一道非常经典、专门考察差分思维的题目。这道题如果只会暴力 <span class="arithmatex">\(O(NQ)\)</span> 会 TLE，必须用差分优化到 <span class="arithmatex">\(O(N+Q)\)</span>。
+<p>为了巩固这个技巧，我推荐一道非常经典、专门考察差分思维的题目。这道题如果只会暴力 <span class="arithmatex"><span class="MathJax_Preview">O(NQ)</span><script type="math/tex">O(NQ)</script></span> 会 TLE，必须用差分优化到 <span class="arithmatex"><span class="MathJax_Preview">O(N+Q)</span><script type="math/tex">O(N+Q)</script></span>。
 </p>
 <h4 id="codeforces-816b-karen-and-coffee"><strong>题目：Codeforces 816B - Karen and Coffee</strong></h4>
 <p>链接: CF 816B
@@ -5014,21 +5014,21 @@ int cur_mex_cover = 0;</p>
 
 题意描述：
 
-Karen 正在准备咖啡。她有 <span class="arithmatex">\(n\)</span> 本食谱（<span class="arithmatex">\(n \le 200,000\)</span>）。
+Karen 正在准备咖啡。她有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 本食谱（<span class="arithmatex"><span class="MathJax_Preview">n \le 200,000</span><script type="math/tex">n \le 200,000</script></span>）。
 
-第 <span class="arithmatex">\(i\)</span> 本食谱建议在 <span class="arithmatex">\([l_i, r_i]\)</span> 温度范围内煮咖啡。
+第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 本食谱建议在 <span class="arithmatex"><span class="MathJax_Preview">[l_i, r_i]</span><script type="math/tex">[l_i, r_i]</script></span> 温度范围内煮咖啡。
 
-一个温度被称为“可接受的 (Admissible)”，如果它至少被 <span class="arithmatex">\(k\)</span> 本食谱推荐（即被覆盖 <span class="arithmatex">\(\ge k\)</span> 次）。
+一个温度被称为“可接受的 (Admissible)”，如果它至少被 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 本食谱推荐（即被覆盖 <span class="arithmatex"><span class="MathJax_Preview">\ge k</span><script type="math/tex">\ge k</script></span> 次）。
 
-接下来有 <span class="arithmatex">\(q\)</span> 个查询，每个查询给你一个范围 <span class="arithmatex">\([a, b]\)</span>，问在这个范围内有多少个整数温度是“可接受的”？
+接下来有 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个查询，每个查询给你一个范围 <span class="arithmatex"><span class="MathJax_Preview">[a, b]</span><script type="math/tex">[a, b]</script></span>，问在这个范围内有多少个整数温度是“可接受的”？
 
 <strong>为什么推荐这道题？</strong>
 
-1. <strong>区间覆盖计数</strong>：你需要知道每个温度点被多少个食谱覆盖 <span class="arithmatex">\(\rightarrow\)</span> <strong>典型差分</strong>。
+1. <strong>区间覆盖计数</strong>：你需要知道每个温度点被多少个食谱覆盖 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> <strong>典型差分</strong>。
 
-2. <strong>二次前缀和</strong>：题目问的是“可接受温度”的<strong>数量</strong>。你需要先算出每个点是否可接受（0或1），然后再对结果做一次前缀和，以便 <span class="arithmatex">\(O(1)\)</span> 回答区间查询。
+2. <strong>二次前缀和</strong>：题目问的是“可接受温度”的<strong>数量</strong>。你需要先算出每个点是否可接受（0或1），然后再对结果做一次前缀和，以便 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 回答区间查询。
 
-3. <strong>数据范围</strong>：<span class="arithmatex">\(N, Q, \text{Coordinate} \le 200,000\)</span>，暴力必死，完美契合差分算法。</p>
+3. <strong>数据范围</strong>：<span class="arithmatex"><span class="MathJax_Preview">N, Q, \text{Coordinate} \le 200,000</span><script type="math/tex">N, Q, \text{Coordinate} \le 200,000</script></span>，暴力必死，完美契合差分算法。</p>
 <hr />
 <h3 id="_11">💻 参考代码 (先自己试试，不行再看)</h3>
 <p>```cpp</p>
@@ -5088,23 +5088,23 @@ int main() {
 <p><strong>Next Step</strong>: 你可以直接去切掉 CF 816B，验证一下这个板子。做完告诉我感觉如何？</p>
 <h1 id="cf">CF 解题思路</h1>
 <ul>
-<li>对于每个元素，确定它是否属于 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束、 <span class="arithmatex">\(\min\)</span> 约束、两者或无。</li>
-<li>如果一个元素同时属于 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束和 <span class="arithmatex">\(\min\)</span> 约束，则该元素对这两个约束都是无用的。</li>
-<li>如果元素仅属于 <span class="arithmatex">\(\min\)</span> 约束，则为方便起见，可以将其设置为 <span class="arithmatex">\(k\)</span> 。</li>
-<li>满足 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束的“最快”方法是什么？如果同时有几个约束呢？</li>
-<li>对于每个元素，确定它是否属于 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束、 <span class="arithmatex">\(\min\)</span> 约束、两者或无。-如果元素被 <span class="arithmatex">\(\min\)</span> 约束覆盖，则它必须是 <span class="arithmatex">\(\geq k\)</span> ，</li>
+<li>对于每个元素，确定它是否属于 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束、 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束、两者或无。</li>
+<li>如果一个元素同时属于 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束和 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束，则该元素对这两个约束都是无用的。</li>
+<li>如果元素仅属于 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束，则为方便起见，可以将其设置为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 。</li>
+<li>满足 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束的“最快”方法是什么？如果同时有几个约束呢？</li>
+<li>对于每个元素，确定它是否属于 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束、 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束、两者或无。-如果元素被 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束覆盖，则它必须是 <span class="arithmatex"><span class="MathJax_Preview">\geq k</span><script type="math/tex">\geq k</script></span> ，</li>
 </ul>
-<p>理想情况下，它应该是 <span class="arithmatex">\(= k\)</span> （以便立即满足约束）.-如果元素被 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束覆盖，则它必须是 <span class="arithmatex">\(\neq k\)</span> ，</p>
-<p>理想情况下，它应该是 <span class="arithmatex">\(&lt; k\)</span> （以使约束更容易满足）. </p>
+<p>理想情况下，它应该是 <span class="arithmatex"><span class="MathJax_Preview">= k</span><script type="math/tex">= k</script></span> （以便立即满足约束）.-如果元素被 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束覆盖，则它必须是 <span class="arithmatex"><span class="MathJax_Preview">\neq k</span><script type="math/tex">\neq k</script></span> ，</p>
+<p>理想情况下，它应该是 <span class="arithmatex"><span class="MathJax_Preview">&lt; k</span><script type="math/tex">< k</script></span> （以使约束更容易满足）. </p>
 <p>然后</p>
 <p>-如果元素未被任何约束覆盖，则没有关系，您可以将其设置为任何值。</p>
-<p>-如果一个元素同时属于 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束和 <span class="arithmatex">\(\min\)</span> 约束，则该元素对这两个约束都是无用的。</p>
-<p>但必须同时将其设置为 <span class="arithmatex">\(\neq k\)</span> 和 <span class="arithmatex">\(\geq k\)</span> 。例如，您可以将其设置为 <span class="arithmatex">\(k+1\)</span> 。</p>
-<p>-如果元素仅属于 <span class="arithmatex">\(\min\)</span> 约束，则最好将其设置为 <span class="arithmatex">\(k\)</span> 。-其余元素是仅由 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束覆盖的元素。</p>
-<p>为了得到满足， <span class="arithmatex">\(\texttt{MEX}\)</span> 约束必须至少包含 <span class="arithmatex">\(k\)</span> 个这样的元素（因为它必须包含 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(k-1\)</span> 之间的所有元素，这将违反 <span class="arithmatex">\(\min\)</span> 约束）.特别是，在第 <span class="arithmatex">\(i\)</span> 个此类元素处分配 <span class="arithmatex">\(i \text{ mod } k\)</span> 是可行的（如果 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束包含 <span class="arithmatex">\(k\)</span> 此类元素，它们的值是 <span class="arithmatex">\([0, 1, \ldots, k-1]\)</span> ，可能是移位的）. </p>
-<p>复杂性：每个测试用例 <span class="arithmatex">\(O(nq)\)</span> 或 <span class="arithmatex">\(O(n+q)\)</span> 。</p>
-<p>额外的好处：在上述解决方案中，我们将 <span class="arithmatex">\(i \text{ mod } k\)</span> 分配给第 <span class="arithmatex">\(i\)</span> 个仅由 <span class="arithmatex">\(\texttt{MEX}\)</span> 约束覆盖的元素。</p>
-<p>但是，将 <span class="arithmatex">\(a_i = i \text{ mod } k\)</span> 分配给这样的元素（其中 <span class="arithmatex">\(i\)</span> 是整个数组中的位置，而不是仅考虑这些元素的位置）也很有效。你能证明吗？</p>
+<p>-如果一个元素同时属于 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束和 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束，则该元素对这两个约束都是无用的。</p>
+<p>但必须同时将其设置为 <span class="arithmatex"><span class="MathJax_Preview">\neq k</span><script type="math/tex">\neq k</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">\geq k</span><script type="math/tex">\geq k</script></span> 。例如，您可以将其设置为 <span class="arithmatex"><span class="MathJax_Preview">k+1</span><script type="math/tex">k+1</script></span> 。</p>
+<p>-如果元素仅属于 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束，则最好将其设置为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 。-其余元素是仅由 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束覆盖的元素。</p>
+<p>为了得到满足， <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束必须至少包含 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个这样的元素（因为它必须包含 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> 之间的所有元素，这将违反 <span class="arithmatex"><span class="MathJax_Preview">\min</span><script type="math/tex">\min</script></span> 约束）.特别是，在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个此类元素处分配 <span class="arithmatex"><span class="MathJax_Preview">i \text{ mod } k</span><script type="math/tex">i \text{ mod } k</script></span> 是可行的（如果 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束包含 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 此类元素，它们的值是 <span class="arithmatex"><span class="MathJax_Preview">[0, 1, \ldots, k-1]</span><script type="math/tex">[0, 1, \ldots, k-1]</script></span> ，可能是移位的）. </p>
+<p>复杂性：每个测试用例 <span class="arithmatex"><span class="MathJax_Preview">O(nq)</span><script type="math/tex">O(nq)</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">O(n+q)</span><script type="math/tex">O(n+q)</script></span> 。</p>
+<p>额外的好处：在上述解决方案中，我们将 <span class="arithmatex"><span class="MathJax_Preview">i \text{ mod } k</span><script type="math/tex">i \text{ mod } k</script></span> 分配给第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个仅由 <span class="arithmatex"><span class="MathJax_Preview">\texttt{MEX}</span><script type="math/tex">\texttt{MEX}</script></span> 约束覆盖的元素。</p>
+<p>但是，将 <span class="arithmatex"><span class="MathJax_Preview">a_i = i \text{ mod } k</span><script type="math/tex">a_i = i \text{ mod } k</script></span> 分配给这样的元素（其中 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 是整个数组中的位置，而不是仅考虑这些元素的位置）也很有效。你能证明吗？</p>
 <h1 id="cf_1">CF  题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>

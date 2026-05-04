@@ -5226,19 +5226,19 @@
 <h2 id="_1">问题描述</h2>
 <p>PIXL - This Time<br />
 ⠀<br />
-您正在管理一个由 <span class="arithmatex">\(n\)</span> 架无人机组成的机队，每架无人机有一个能量等级 <span class="arithmatex">\(a_1,\ldots,a_n\)</span>。您还得到一个正整数 <span class="arithmatex">\(k\)</span>，表示允许共享相同能量等级的最大无人机数量。</p>
-<p>为了防止过载，无人机会自动执行能量平衡操作，过程如下：当存在一个能量等级出现次数严格大于 <span class="arithmatex">\(k\)</span> 次时，它们执行以下步骤：</p>
+您正在管理一个由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 架无人机组成的机队，每架无人机有一个能量等级 <span class="arithmatex"><span class="MathJax_Preview">a_1,\ldots,a_n</span><script type="math/tex">a_1,\ldots,a_n</script></span>。您还得到一个正整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，表示允许共享相同能量等级的最大无人机数量。</p>
+<p>为了防止过载，无人机会自动执行能量平衡操作，过程如下：当存在一个能量等级出现次数严格大于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次时，它们执行以下步骤：</p>
 <ol>
-<li>首先，每架无人机 <span class="arithmatex">\(i\)</span>，如果其能量 <span class="arithmatex">\(a_i\)</span> 在之前出现过（即存在 <span class="arithmatex">\(j&lt;i\)</span> 满足 <span class="arithmatex">\(a_j=a_i\)</span>），则被标记；</li>
-<li>然后，对于每个被标记的无人机，其能量增加 <span class="arithmatex">\(1\)</span> 单位；</li>
+<li>首先，每架无人机 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，如果其能量 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 在之前出现过（即存在 <span class="arithmatex"><span class="MathJax_Preview">j&lt;i</span><script type="math/tex">j<i</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">a_j=a_i</span><script type="math/tex">a_j=a_i</script></span>），则被标记；</li>
+<li>然后，对于每个被标记的无人机，其能量增加 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 单位；</li>
 <li>最后，移除所有标记。</li>
 </ol>
-<p>当没有任何能量等级出现次数超过 <span class="arithmatex">\(k\)</span> 次时，过程停止。确定将执行多少次能量平衡操作。</p>
+<p>当没有任何能量等级出现次数超过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次时，过程停止。确定将执行多少次能量平衡操作。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(1 \leq k \leq n \leq 2 \cdot 10^5\)</span>) — 无人机的数量和允许共享相同能量等级的最大无人机数量。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span> (<span class="arithmatex">\(1 \leq a_i \leq 2n\)</span>) — 无人机的初始能量等级。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq k \leq n \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq k \leq n \leq 2 \cdot 10^5</script></span>) — 无人机的数量和允许共享相同能量等级的最大无人机数量。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq 2n</span><script type="math/tex">1 \leq a_i \leq 2n</script></span>) — 无人机的初始能量等级。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一行包含一个整数：执行的能量平衡操作次数。</p>
 <h2 id="_4">样例输入</h2>
@@ -5264,13 +5264,13 @@
 <h2 id="_6">样例说明</h2>
 <p>在第一个测试用例中，无人机的能量等级演变如下：</p>
 <ul>
-<li>开始时，<span class="arithmatex">\([1,1,1,1,1,1]\)</span>；</li>
-<li>经过 <span class="arithmatex">\(1\)</span> 次操作后，<span class="arithmatex">\([1,2,2,2,2,2]\)</span>；</li>
-<li>经过 <span class="arithmatex">\(2\)</span> 次操作后，<span class="arithmatex">\([1,2,3,3,3,3]\)</span>；</li>
-<li>经过 <span class="arithmatex">\(3\)</span> 次操作后，<span class="arithmatex">\([1,2,3,4,4,4]\)</span>。</li>
+<li>开始时，<span class="arithmatex"><span class="MathJax_Preview">[1,1,1,1,1,1]</span><script type="math/tex">[1,1,1,1,1,1]</script></span>；</li>
+<li>经过 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 次操作后，<span class="arithmatex"><span class="MathJax_Preview">[1,2,2,2,2,2]</span><script type="math/tex">[1,2,2,2,2,2]</script></span>；</li>
+<li>经过 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 次操作后，<span class="arithmatex"><span class="MathJax_Preview">[1,2,3,3,3,3]</span><script type="math/tex">[1,2,3,3,3,3]</script></span>；</li>
+<li>经过 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 次操作后，<span class="arithmatex"><span class="MathJax_Preview">[1,2,3,4,4,4]</span><script type="math/tex">[1,2,3,4,4,4]</script></span>。</li>
 </ul>
-<p>经过 <span class="arithmatex">\(3\)</span> 次操作后，每个能量等级最多出现 <span class="arithmatex">\(3\)</span> 次，因此过程停止。</p>
-<p>在第二个测试用例中，能量等级变化如下：<span class="arithmatex">\([1,3,2,1,4] \rightarrow [1,3,2,2,4] \rightarrow [1,3,2,3,4] \rightarrow [1,3,2,4,4] \rightarrow [1,3,2,4,5]\)</span>。过程在 <span class="arithmatex">\(4\)</span> 次操作后停止。</p>
+<p>经过 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 次操作后，每个能量等级最多出现 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 次，因此过程停止。</p>
+<p>在第二个测试用例中，能量等级变化如下：<span class="arithmatex"><span class="MathJax_Preview">[1,3,2,1,4] \rightarrow [1,3,2,2,4] \rightarrow [1,3,2,3,4] \rightarrow [1,3,2,4,4] \rightarrow [1,3,2,4,5]</span><script type="math/tex">[1,3,2,1,4] \rightarrow [1,3,2,2,4] \rightarrow [1,3,2,3,4] \rightarrow [1,3,2,4,4] \rightarrow [1,3,2,4,5]</script></span>。过程在 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 次操作后停止。</p>
 <h1 id="_7">赛时错误代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2157 E</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1066 (Div. 1 + Div. 2)</span>
@@ -5492,14 +5492,14 @@
 <hr />
 <h3 id="_12">一、 题目到底在讲一个什么故事？</h3>
 <p>想象一条单行道（数轴），上面有很多无人机（车）。</p>
-<p>每个位置 <span class="arithmatex">\(i\)</span> 表示能量值（坐标）。</p>
+<p>每个位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 表示能量值（坐标）。</p>
 <p><strong>核心规则：</strong></p>
 <ol>
 <li>
-<p><strong>拥挤限制</strong>：任何一个坐标点上，最多只能停 <span class="arithmatex">\(k\)</span> 辆车。</p>
+<p><strong>拥挤限制</strong>：任何一个坐标点上，最多只能停 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 辆车。</p>
 </li>
 <li>
-<p><strong>受迫移动</strong>：如果某个坐标点停了超过 <span class="arithmatex">\(k\)</span> 辆车，多出来的车必须<strong>同时</strong>向前开 1 格（能量 +1）。</p>
+<p><strong>受迫移动</strong>：如果某个坐标点停了超过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 辆车，多出来的车必须<strong>同时</strong>向前开 1 格（能量 +1）。</p>
 </li>
 <li>
 <p><strong>连锁反应</strong>：这可能会导致下一个格子也变拥挤，于是下一轮大家又要继续往前开。</p>
@@ -5513,7 +5513,7 @@
 <p>这道题考察了三个层面的能力：</p>
 <ol>
 <li>
-<p><strong>转化能力（Simulation <span class="arithmatex">\(\to\)</span> Optimization）</strong>：</p>
+<p><strong>转化能力（Simulation <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> Optimization）</strong>：</p>
 <ul>
 <li>
 <p>题目描述的是一个<strong>动态模拟</strong>过程（第一秒走一步，第二秒走一步...）。</p>
@@ -5522,7 +5522,7 @@
 <p>如果直接写模拟，时间复杂度不可控（可能会走几十万步）。</p>
 </li>
 <li>
-<p>你需要把它转化为一个<strong>静态规划</strong>问题：<strong>“如果我限制每辆车最多只能走 <span class="arithmatex">\(x\)</span> 步，能不能把它们塞进合法的坑位里？”</strong></p>
+<p>你需要把它转化为一个<strong>静态规划</strong>问题：<strong>“如果我限制每辆车最多只能走 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 步，能不能把它们塞进合法的坑位里？”</strong></p>
 </li>
 </ul>
 </li>
@@ -5533,7 +5533,7 @@
 <p>显然，如果允许走 100 步能停好，那允许走 101 步肯定也能停好（单调性）。</p>
 </li>
 <li>
-<p>所以我们可以猜答案 <span class="arithmatex">\(x\)</span>，然后验证可行性。</p>
+<p>所以我们可以猜答案 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，然后验证可行性。</p>
 </li>
 </ul>
 </li>
@@ -5541,7 +5541,7 @@
 <p><strong>贪心构造（Greedy Strategy）</strong>：</p>
 <ul>
 <li>
-<p>这是最难的一点。在验证“<span class="arithmatex">\(x\)</span> 步是否够用”时，我们需要一种策略来安排车的位置。</p>
+<p>这是最难的一点。在验证“<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 步是否够用”时，我们需要一种策略来安排车的位置。</p>
 </li>
 <li>
 <p><strong>这里有两种流派，导致了你的困惑</strong>：</p>
@@ -5571,9 +5571,9 @@ if(cnt[i] &gt; 1){
 </code></pre></div>
 <p>场景模拟：</p>
 <p>假设位置 i=5 有 3 辆车 (cnt[5] = 3)。</p>
-<p>现在我们二分猜测 <span class="arithmatex">\(x=0\)</span>（即不允许移动）。</p>
+<p>现在我们二分猜测 <span class="arithmatex"><span class="MathJax_Preview">x=0</span><script type="math/tex">x=0</script></span>（即不允许移动）。</p>
 <p>正常逻辑：</p>
-<p>车子不能动。位置 5 有 3 个，如果 <span class="arithmatex">\(k=2\)</span>，那肯定不合法，check 应该返回 false。</p>
+<p>车子不能动。位置 5 有 3 个，如果 <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>，那肯定不合法，check 应该返回 false。</p>
 <p><strong>你的代码逻辑：</strong></p>
 <ol>
 <li>
@@ -5583,7 +5583,7 @@ if(cnt[i] &gt; 1){
 <p><code>cnt[i+x]</code> 等于 <code>cnt[5+0]</code> 即 <code>cnt[5]</code>。</p>
 </li>
 <li>
-<p>代码执行：<code>cnt[5] += cnt[5] - 1</code> <span class="arithmatex">\(\to\)</span> <code>3 + (3-1) = 5</code>。</p>
+<p>代码执行：<code>cnt[5] += cnt[5] - 1</code> <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> <code>3 + (3-1) = 5</code>。</p>
 </li>
 <li>
 <p>代码执行：<code>cnt[5] = 1</code>。</p>
@@ -5603,7 +5603,7 @@ if(cnt[i] &gt; 1){
 <p>你可能很疑惑：<em>“为什么官方题解要从右往左？为什么它要用 <code>&gt;1</code> 而不是 <code>&gt;k</code>？”</em></p>
 <p>这是一个<strong>“注水填坑”</strong>模型。</p>
 <p>想象地势图，柱子高度是无人机数量。</p>
-<p>官方思路是：如果不考虑 <span class="arithmatex">\(k\)</span> 的限制，我能不能把所有柱子的高度都削成 1？（极致的平铺）。</p>
+<p>官方思路是：如果不考虑 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的限制，我能不能把所有柱子的高度都削成 1？（极致的平铺）。</p>
 <ol>
 <li>
 <p><strong>从右往左扫</strong>：因为车子只能往右开（变大）。我们站在右边，看着左边的车过来。</p>
@@ -5632,10 +5632,10 @@ if(cnt[i] &gt; 1){
 <p><strong>最后审判</strong>：</p>
 <ul>
 <li>
-<p>虽然过程中我只保证了“尽量削成 1”，没有管 <span class="arithmatex">\(k\)</span>。</p>
+<p>虽然过程中我只保证了“尽量削成 1”，没有管 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 </li>
 <li>
-<p>但如果我把多余的都扔到了极限位置后，只要最终所有位置的高度都不超过 <span class="arithmatex">\(k\)</span>，那就成功了。</p>
+<p>但如果我把多余的都扔到了极限位置后，只要最终所有位置的高度都不超过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，那就成功了。</p>
 </li>
 </ul>
 </li>
@@ -5643,10 +5643,10 @@ if(cnt[i] &gt; 1){
 <p><strong>为什么这个思路容易写错？</strong></p>
 <ul>
 <li>
-<p>因为它把 <span class="arithmatex">\(k\)</span> 的限制后置了。</p>
+<p>因为它把 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的限制后置了。</p>
 </li>
 <li>
-<p>它对“空位”的定义很狭隘（必须是 0 才是空位，其实对于 <span class="arithmatex">\(k=3\)</span>，只有 1 个车的位置也是空位，但这个算法忽略了）。</p>
+<p>它对“空位”的定义很狭隘（必须是 0 才是空位，其实对于 <span class="arithmatex"><span class="MathJax_Preview">k=3</span><script type="math/tex">k=3</script></span>，只有 1 个车的位置也是空位，但这个算法忽略了）。</p>
 </li>
 <li>
 <p><strong>它极其依赖数组边界和覆盖逻辑</strong>（正如你遇到的 <code>cnt[i+x]</code> 越界和覆盖问题）。</p>
@@ -5679,7 +5679,7 @@ if(cnt[i] &gt; 1){
 <p>安排他在 <code>now</code>，计数器 +1。</p>
 </li>
 <li>
-<p>如果 <code>now</code> 满了 <span class="arithmatex">\(k\)</span> 个，<code>now++</code>。</p>
+<p>如果 <code>now</code> 满了 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个，<code>now++</code>。</p>
 </li>
 </ul>
 </li>
@@ -5702,83 +5702,83 @@ if(cnt[i] &gt; 1){
 <h1 id="check">关于题目为啥check函数这么写</h1>
 <p>这是一个非常深刻的问题！这触及到了<strong>贪心算法（Greedy）</strong>和<strong>网络流/动态规划</strong>之间最核心的区别。</p>
 <p>你的直觉是完全正确的：<strong>在物理世界（或者最小化最大值的优化问题）里，“平均分配”通常是最优解。</strong></p>
-<p>但是，在这个特定的题目验证逻辑（Check函数）中，<strong>“堆在极限位置”</strong>（即把多余的直接扔到 <span class="arithmatex">\(i+x\)</span>）之所以成立，是因为一个极其隐蔽的<strong>“等价性原理”</strong>。</p>
+<p>但是，在这个特定的题目验证逻辑（Check函数）中，<strong>“堆在极限位置”</strong>（即把多余的直接扔到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>）之所以成立，是因为一个极其隐蔽的<strong>“等价性原理”</strong>。</p>
 <p>我用一个生活化的例子来为你揭示为什么“堆在最后”和“平均分配”在这里是等价的，甚至前者更好算。</p>
 <hr />
 <h3 id="1-chain-reaction">1. 核心逻辑：多米诺骨牌效应（Chain Reaction）</h3>
-<p>假设 <span class="arithmatex">\(k=1\)</span>（每个位置只能停1辆车）。</p>
-<p>此时我们在位置 <span class="arithmatex">\(i\)</span> 有 3 辆车。</p>
-<p>允许的最大步数是 <span class="arithmatex">\(x=2\)</span>。</p>
+<p>假设 <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span>（每个位置只能停1辆车）。</p>
+<p>此时我们在位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 有 3 辆车。</p>
+<p>允许的最大步数是 <span class="arithmatex"><span class="MathJax_Preview">x=2</span><script type="math/tex">x=2</script></span>。</p>
 <h4 id="_16">你的直觉（平均分配）：</h4>
-<p>你觉得应该把多出来的 2 辆车，分别放到 <span class="arithmatex">\(i+1\)</span> 和 <span class="arithmatex">\(i+2\)</span>。</p>
+<p>你觉得应该把多出来的 2 辆车，分别放到 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span>。</p>
 <p>这样大家都不挤，对吧？</p>
-<p><strong>但是，如果 <span class="arithmatex">\(i+1\)</span> 和 <span class="arithmatex">\(i+2\)</span> 已经有车了呢？</strong></p>
+<p><strong>但是，如果 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span> 已经有车了呢？</strong></p>
 <ul>
 <li>
-<p><strong>位置 <span class="arithmatex">\(i\)</span></strong>：有 3 辆车（多 2 辆）。</p>
+<p><strong>位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></strong>：有 3 辆车（多 2 辆）。</p>
 </li>
 <li>
-<p><strong>位置 <span class="arithmatex">\(i+1\)</span></strong>：原有 1 辆车。</p>
+<p><strong>位置 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span></strong>：原有 1 辆车。</p>
 </li>
 <li>
-<p><strong>位置 <span class="arithmatex">\(i+2\)</span></strong>：原有 1 辆车。</p>
+<p><strong>位置 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span></strong>：原有 1 辆车。</p>
 </li>
 </ul>
-<p>如果你把 <span class="arithmatex">\(i\)</span> 的多余车辆移动到 <span class="arithmatex">\(i+1\)</span>：</p>
+<p>如果你把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的多余车辆移动到 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>：</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(i\)</span> 的车到了 <span class="arithmatex">\(i+1\)</span>，导致 <span class="arithmatex">\(i+1\)</span> 变成了 2 辆（超载）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车到了 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>，导致 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 变成了 2 辆（超载）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i+1\)</span> 原有的那辆车被迫继续往后动，去 <span class="arithmatex">\(i+2\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 原有的那辆车被迫继续往后动，去 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span>。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i+2\)</span> 变成 2 辆（超载），原有的车被迫去 <span class="arithmatex">\(i+3\)</span>……</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span> 变成 2 辆（超载），原有的车被迫去 <span class="arithmatex"><span class="MathJax_Preview">i+3</span><script type="math/tex">i+3</script></span>……</p>
 </li>
 </ol>
 <p>结论：</p>
-<p>把车从 <span class="arithmatex">\(i\)</span> 移到 <span class="arithmatex">\(i+1\)</span>，如果 <span class="arithmatex">\(i+1\)</span> 是满的，就等价于把 <span class="arithmatex">\(i+1\)</span> 的车挤到了 <span class="arithmatex">\(i+2\)</span>。</p>
-<p>这就像推多米诺骨牌：你在 <span class="arithmatex">\(i\)</span> 推一下，力量会一直传递下去。</p>
-<p>与其计算“<span class="arithmatex">\(i\)</span> 挤 <span class="arithmatex">\(i+1\)</span>，然后 <span class="arithmatex">\(i+1\)</span> 挤 <span class="arithmatex">\(i+2\)</span>”，不如直接把 <span class="arithmatex">\(i\)</span> 的车“瞬移”到它能到达的极限 <span class="arithmatex">\(i+x\)</span>。</p>
+<p>把车从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 移到 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>，如果 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 是满的，就等价于把 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的车挤到了 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span>。</p>
+<p>这就像推多米诺骨牌：你在 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 推一下，力量会一直传递下去。</p>
+<p>与其计算“<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 挤 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>，然后 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 挤 <span class="arithmatex"><span class="MathJax_Preview">i+2</span><script type="math/tex">i+2</script></span>”，不如直接把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车“瞬移”到它能到达的极限 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>。</p>
 <p>因为中间的每一个位置，如果它是满的，它自己会负责把它的车往后推。</p>
 <hr />
 <h3 id="2-reservation-principle">2. 为什么要“留白”？（Reservation Principle）</h3>
 <p>这是理解这个算法最重要的视角：<strong>把路留给别人走。</strong></p>
-<p>假设我们从左往右处理（遍历 <span class="arithmatex">\(i, i+1, \dots\)</span>）。当我们站在 <span class="arithmatex">\(i\)</span> 的时候：</p>
+<p>假设我们从左往右处理（遍历 <span class="arithmatex"><span class="MathJax_Preview">i, i+1, \dots</span><script type="math/tex">i, i+1, \dots</script></span>）。当我们站在 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的时候：</p>
 <ul>
 <li>
-<p>只有我们知道 <span class="arithmatex">\(i\)</span> 的车最多能走到 <span class="arithmatex">\(i+x\)</span>。</p>
+<p>只有我们知道 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车最多能走到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i+1\)</span> 的车还没开始处理，它最多能走到 <span class="arithmatex">\(i+1+x\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的车还没开始处理，它最多能走到 <span class="arithmatex"><span class="MathJax_Preview">i+1+x</span><script type="math/tex">i+1+x</script></span>。</p>
 </li>
 </ul>
-<p>如果你把 <span class="arithmatex">\(i\)</span> 的车停在 <span class="arithmatex">\(i+1\)</span>（平均分配）：</p>
-<p>你占用了 <span class="arithmatex">\(i+1\)</span> 的宝贵名额。等轮到处理 <span class="arithmatex">\(i+1\)</span> 的时候，它发现自己的位置被前面的 <span class="arithmatex">\(i\)</span> 占了，它就不得不往后跑得更远。</p>
-<p>如果你把 <span class="arithmatex">\(i\)</span> 的车直接扔到 <span class="arithmatex">\(i+x\)</span>（堆在极限）：</p>
-<p>你把 <span class="arithmatex">\(i+1, i+2, \dots, i+x-1\)</span> 这些中间地带全部空出来。</p>
-<p>这样，<span class="arithmatex">\(i+1\)</span> 的车就可以舒舒服服地停在 <span class="arithmatex">\(i+1\)</span>（或者它射程内的任何地方），而不会被 <span class="arithmatex">\(i\)</span> 挤走。</p>
+<p>如果你把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车停在 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>（平均分配）：</p>
+<p>你占用了 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的宝贵名额。等轮到处理 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的时候，它发现自己的位置被前面的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 占了，它就不得不往后跑得更远。</p>
+<p>如果你把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车直接扔到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>（堆在极限）：</p>
+<p>你把 <span class="arithmatex"><span class="MathJax_Preview">i+1, i+2, \dots, i+x-1</span><script type="math/tex">i+1, i+2, \dots, i+x-1</script></span> 这些中间地带全部空出来。</p>
+<p>这样，<span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的车就可以舒舒服服地停在 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>（或者它射程内的任何地方），而不会被 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 挤走。</p>
 <p><strong>贪心策略的核心：</strong></p>
 <blockquote>
-<p><strong>既然 <span class="arithmatex">\(i\)</span> 的车能力最差（射程终点 <span class="arithmatex">\(i+x\)</span> 最小），而 <span class="arithmatex">\(i+1\)</span> 的车射程更远（终点 <span class="arithmatex">\(i+1+x\)</span>），那么应该让 <span class="arithmatex">\(i\)</span> 尽早落地（或者去它的极限），尽量不要去干扰 <span class="arithmatex">\(i+1\)</span> 的生存空间。</strong></p>
+<p><strong>既然 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车能力最差（射程终点 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 最小），而 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的车射程更远（终点 <span class="arithmatex"><span class="MathJax_Preview">i+1+x</span><script type="math/tex">i+1+x</script></span>），那么应该让 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 尽早落地（或者去它的极限），尽量不要去干扰 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 的生存空间。</strong></p>
 <p>但在这个题的逻辑里，其实是反过来的：把困难留给未来。</p>
-<p>把 <span class="arithmatex">\(i\)</span> 的多余负载扔给 <span class="arithmatex">\(i+x\)</span>，是因为我们在 <span class="arithmatex">\(i\)</span> 的时候，根本不想管 <span class="arithmatex">\(i+1 \dots i+x\)</span> 的死活，我们假设中间的节点如果自己满了，它们自己会往后扔。</p>
-<p>我们只负责把 <span class="arithmatex">\(i\)</span> 的问题解决掉。既然 <span class="arithmatex">\(i\)</span> 的车只要在 <span class="arithmatex">\(i+x\)</span> 之前落地都算合法，那我就把它扔到最远，最大程度地减少对“近邻”的干扰。</p>
+<p>把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的多余负载扔给 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>，是因为我们在 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的时候，根本不想管 <span class="arithmatex"><span class="MathJax_Preview">i+1 \dots i+x</span><script type="math/tex">i+1 \dots i+x</script></span> 的死活，我们假设中间的节点如果自己满了，它们自己会往后扔。</p>
+<p>我们只负责把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的问题解决掉。既然 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的车只要在 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 之前落地都算合法，那我就把它扔到最远，最大程度地减少对“近邻”的干扰。</p>
 </blockquote>
 <hr />
 <h3 id="3">3. 为什么“堆在最后”不会导致最后爆掉？</h3>
-<p>你担心的点是：<em>“如果我把多余的都堆在 <span class="arithmatex">\(i+x\)</span>，那 <span class="arithmatex">\(i+x\)</span> 岂不是会堆得比山还高？超过 <span class="arithmatex">\(k\)</span> 怎么办？”</em></p>
+<p>你担心的点是：<em>“如果我把多余的都堆在 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>，那 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 岂不是会堆得比山还高？超过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 怎么办？”</em></p>
 <p>答案是：<strong>会处理的，但不是现在。</strong></p>
-<p>当循环（遍历）从 <span class="arithmatex">\(i\)</span> 走到 <span class="arithmatex">\(i+x\)</span> 的时候：</p>
+<p>当循环（遍历）从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 走到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 的时候：</p>
 <ol>
 <li>
-<p>我们会发现 <span class="arithmatex">\(i+x\)</span> 这里堆了很多车（有原有的，也有之前从 <span class="arithmatex">\(i\)</span> 扔过来的）。</p>
+<p>我们会发现 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 这里堆了很多车（有原有的，也有之前从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 扔过来的）。</p>
 </li>
 <li>
-<p>此时我们再对 <span class="arithmatex">\(i+x\)</span> 进行同样的判断：<strong>只要 <span class="arithmatex">\(i+x\)</span> 这里的车，能在它的射程 <span class="arithmatex">\((i+x) + x\)</span> 之内找到位置放下，那就是合法的。</strong></p>
+<p>此时我们再对 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 进行同样的判断：<strong>只要 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 这里的车，能在它的射程 <span class="arithmatex"><span class="MathJax_Preview">(i+x) + x</span><script type="math/tex">(i+x) + x</script></span> 之内找到位置放下，那就是合法的。</strong></p>
 </li>
 <li>
-<p>于是，<span class="arithmatex">\(i+x\)</span> 会再次把多余的车扔到 <span class="arithmatex">\(i+2x\)</span>。</p>
+<p>于是，<span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 会再次把多余的车扔到 <span class="arithmatex"><span class="MathJax_Preview">i+2x</span><script type="math/tex">i+2x</script></span>。</p>
 </li>
 </ol>
 <p><strong>只要能在数组尽头之前把车通过这种“接力”的方式疏散完，方案就是可行的。</strong></p>
@@ -5792,7 +5792,7 @@ if(cnt[i] &gt; 1){
 <p>试图让局部看起来平整。</p>
 </li>
 <li>
-<p>代码极难写：你需要遍历 <span class="arithmatex">\(i+1\)</span> 到 <span class="arithmatex">\(i+x\)</span>，一个个填坑。时间复杂度会爆炸（从 <span class="arithmatex">\(O(n)\)</span> 变成 <span class="arithmatex">\(O(n \cdot x)\)</span>）。</p>
+<p>代码极难写：你需要遍历 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>，一个个填坑。时间复杂度会爆炸（从 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 变成 <span class="arithmatex"><span class="MathJax_Preview">O(n \cdot x)</span><script type="math/tex">O(n \cdot x)</script></span>）。</p>
 </li>
 </ul>
 </li>
@@ -5803,10 +5803,10 @@ if(cnt[i] &gt; 1){
 <p>利用了<strong>连通性/传递性</strong>。</p>
 </li>
 <li>
-<p>既然 <span class="arithmatex">\(A\)</span> 占了 <span class="arithmatex">\(B\)</span> 的位子会导致 <span class="arithmatex">\(B\)</span> 往后移，那不如 <span class="arithmatex">\(A\)</span> 直接往后移。</p>
+<p>既然 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 占了 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的位子会导致 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 往后移，那不如 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 直接往后移。</p>
 </li>
 <li>
-<p>代码只需 <span class="arithmatex">\(O(1)\)</span>：<code>cnt[i+x] += excess</code>。</p>
+<p>代码只需 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>：<code>cnt[i+x] += excess</code>。</p>
 </li>
 <li>
 <p><strong>这是一种“懒惰计算”</strong>：我现在不处理细节，把多余的量扔到我的能力边界，等我遍历到那个边界时，再来处理这些量。</p>
@@ -5837,7 +5837,7 @@ if(cnt[i] &gt; 1){
 <p>一旦发现单调性，立刻要把“求最优解（Optimization）”转化为“判定性问题（Feasibility）”。</p>
 </li>
 <li>
-<p><strong>思维转变</strong>：不再想“怎么走最优”，而是想“如果规定只能走 <span class="arithmatex">\(X\)</span> 步，能不能走通？”</p>
+<p><strong>思维转变</strong>：不再想“怎么走最优”，而是想“如果规定只能走 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 步，能不能走通？”</p>
 </li>
 </ul>
 </li>
@@ -5857,7 +5857,7 @@ if(cnt[i] &gt; 1){
 <p><strong>高级思维</strong>：利用<strong>等价性</strong>（上一条回复提到的）。我不关心中间过程怎么走，我只关心<strong>“把包袱甩给极限位置”</strong>后，系统会不会崩。</p>
 </li>
 <li>
-<p>这是一种<strong>“延迟决策”</strong>的思想：现在的麻烦，能在截止日期（<span class="arithmatex">\(i+x\)</span>）前解决就行，不用现在立马解决。</p>
+<p>这是一种<strong>“延迟决策”</strong>的思想：现在的麻烦，能在截止日期（<span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>）前解决就行，不用现在立马解决。</p>
 </li>
 </ul>
 </li>
@@ -5868,7 +5868,7 @@ if(cnt[i] &gt; 1){
 <p><strong>考点</strong>：把数组看作水流。</p>
 </li>
 <li>
-<p>位置 <span class="arithmatex">\(i\)</span> 多出来的东西，流向 <span class="arithmatex">\(i+1\)</span>。如果把 <span class="arithmatex">\(i\)</span> 直接扔到 <span class="arithmatex">\(i+x\)</span>，其实相当于把这一段的“流动压力”瞬间传递过去了。</p>
+<p>位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 多出来的东西，流向 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>。如果把 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 直接扔到 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>，其实相当于把这一段的“流动压力”瞬间传递过去了。</p>
 </li>
 </ul>
 <hr />
@@ -5877,7 +5877,7 @@ if(cnt[i] &gt; 1){
 <h4 id="_20">第一步：能不能二分？</h4>
 <ul>
 <li>
-<p>问自己：如果我知道答案是 <span class="arithmatex">\(X\)</span>，判断“可行性”是否容易？</p>
+<p>问自己：如果我知道答案是 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>，判断“可行性”是否容易？</p>
 </li>
 <li>
 <p>如果判定比求解容易，<strong>无脑上二分</strong>。</p>
@@ -5897,13 +5897,13 @@ if(cnt[i] &gt; 1){
 <p><strong>贪心策略</strong>：</p>
 <ul>
 <li>
-<p><strong>当前位置 <span class="arithmatex">\(i\)</span> 的任务</strong>：必须处理掉，否则就没机会了（因为是从左往右扫，过了 <span class="arithmatex">\(i\)</span> 就回不来了）。</p>
+<p><strong>当前位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的任务</strong>：必须处理掉，否则就没机会了（因为是从左往右扫，过了 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 就回不来了）。</p>
 </li>
 <li>
 <p><strong>处理方式</strong>：尽最大努力向后“甩锅”。</p>
 <ul>
 <li>
-<p>如果你有多余的量：<strong>扔到最远合法的坑（<span class="arithmatex">\(i+mid\)</span>）</strong>。为什么？因为这样给中间留出的空位最多。</p>
+<p>如果你有多余的量：<strong>扔到最远合法的坑（<span class="arithmatex"><span class="MathJax_Preview">i+mid</span><script type="math/tex">i+mid</script></span>）</strong>。为什么？因为这样给中间留出的空位最多。</p>
 </li>
 <li>
 <p>如果你缺量（比如某些题要求每个位置必须有车）：<strong>从最近合法的坑拉过来</strong>。</p>
@@ -5916,17 +5916,17 @@ if(cnt[i] &gt; 1){
 <h4 id="_21">第三步：警惕边界</h4>
 <ul>
 <li>
-<p>是否越界？（你的 <span class="arithmatex">\(i+x\)</span> 可能会超过 <span class="arithmatex">\(N\)</span>）。</p>
+<p>是否越界？（你的 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span> 可能会超过 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>）。</p>
 </li>
 <li>
-<p>是否需要开大数组？（通常这种向后推的题，数组要开到 <span class="arithmatex">\(N + \text{max\_step}\)</span>）。</p>
+<p>是否需要开大数组？（通常这种向后推的题，数组要开到 <span class="arithmatex"><span class="MathJax_Preview">N + \text{max\_step}</span><script type="math/tex">N + \text{max\_step}</script></span>）。</p>
 </li>
 </ul>
 <hr />
 <h3 id="_22">三、 举一反三：类似题目的一通百通</h3>
 <p>为了让你彻底掌握，我举几个常见的类似模型（你可以去 Codeforces 或 LeetCode 找类似的题）：</p>
 <h4 id="1deadline">模型 1：任务截止日期（Deadline）</h4>
-<p>题目：你有 <span class="arithmatex">\(N\)</span> 个任务，每个任务要在 <span class="arithmatex">\(D_i\)</span> 天前完成，耗时 <span class="arithmatex">\(T_i\)</span>。问能不能做完？或者问最小的单位处理速度？</p>
+<p>题目：你有 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 个任务，每个任务要在 <span class="arithmatex"><span class="MathJax_Preview">D_i</span><script type="math/tex">D_i</script></span> 天前完成，耗时 <span class="arithmatex"><span class="MathJax_Preview">T_i</span><script type="math/tex">T_i</script></span>。问能不能做完？或者问最小的单位处理速度？</p>
 <p>思考：</p>
 <ul>
 <li>
@@ -5939,15 +5939,15 @@ if(cnt[i] &gt; 1){
 <p>当前任务做不完？把剩余的工作量推到下一天。</p>
 </li>
 <li>
-<p><strong>Check 逻辑</strong>：如果在某一天，堆积的工作量超过了这一天到最终截止日期的总容量，就 <code>return false</code>。这和无人机的“堆在 <span class="arithmatex">\(i+x\)</span>”是一模一样的道理。</p>
+<p><strong>Check 逻辑</strong>：如果在某一天，堆积的工作量超过了这一天到最终截止日期的总容量，就 <code>return false</code>。这和无人机的“堆在 <span class="arithmatex"><span class="MathJax_Preview">i+x</span><script type="math/tex">i+x</script></span>”是一模一样的道理。</p>
 </li>
 </ul>
 <h4 id="2">模型 2：青蛙跳荷叶 / 覆盖问题</h4>
-<p>题目：数轴上有几个坑，你有几个木板，木板长度为 <span class="arithmatex">\(L\)</span>，问最少几块木板能盖住所有坑？或者木板长度最少要是多少？</p>
+<p>题目：数轴上有几个坑，你有几个木板，木板长度为 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>，问最少几块木板能盖住所有坑？或者木板长度最少要是多少？</p>
 <p>思考：</p>
 <ul>
 <li>
-<p>二分长度 <span class="arithmatex">\(L\)</span>。</p>
+<p>二分长度 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>。</p>
 </li>
 <li>
 <p><strong>Check 逻辑</strong>：从左往右扫，遇到第一个坑，<strong>贪心地</strong>把木板的左端点对齐这个坑（或者让木板尽可能往右延伸）。</p>
@@ -5957,17 +5957,17 @@ if(cnt[i] &gt; 1){
 </li>
 </ul>
 <h4 id="3cf">模型 3：平整路面（CF 常见题）</h4>
-<p>题目：给你一堆土堆，你可以把土从 <span class="arithmatex">\(i\)</span> 移到 <span class="arithmatex">\(i+1\)</span>（花费 1），问把所有土堆高度变一样，最小花费？</p>
+<p>题目：给你一堆土堆，你可以把土从 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 移到 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>（花费 1），问把所有土堆高度变一样，最小花费？</p>
 <p>思考：</p>
 <ul>
 <li>
 <p>这就是一种“流”的模型。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i\)</span> 多出来的土，必须给 <span class="arithmatex">\(i+1\)</span>（因为 <span class="arithmatex">\(i\)</span> 只能和 <span class="arithmatex">\(i+1\)</span> 交互）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 多出来的土，必须给 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>（因为 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 只能和 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 交互）。</p>
 </li>
 <li>
-<p>如果在 <span class="arithmatex">\(i\)</span> 处堆积了 <span class="arithmatex">\(S\)</span> 的土，它对答案的贡献就是 <span class="arithmatex">\(|S|\)</span>（因为这 <span class="arithmatex">\(S\)</span> 的土至少要流过 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(i+1\)</span> 这段路）。</p>
+<p>如果在 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 处堆积了 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 的土，它对答案的贡献就是 <span class="arithmatex"><span class="MathJax_Preview">|S|</span><script type="math/tex">|S|</script></span>（因为这 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 的土至少要流过 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 这段路）。</p>
 </li>
 </ul>
 <hr />

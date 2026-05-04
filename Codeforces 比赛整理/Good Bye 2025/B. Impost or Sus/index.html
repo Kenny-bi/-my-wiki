@@ -4424,18 +4424,18 @@
 <p>时间限制：每个测试点 1 秒
 内存限制：每个测试点 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>一个由小写拉丁字母组成的字符串 <span class="arithmatex">\(w\)</span>，当且仅当满足以下所有条件时，被称为 <strong>可疑的</strong>：
+<p>一个由小写拉丁字母组成的字符串 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>，当且仅当满足以下所有条件时，被称为 <strong>可疑的</strong>：
 1. 字母 <code>s</code> 至少出现两次，且
 2. 对于字母 <code>u</code> 的每一次出现，离该 <code>u</code> 最近的两个 <code>s</code> 与该 <code>u</code> 的距离（字符数）是相同的。</p>
-<p>在看你完成一道字符串题目后，你的朋友 Aka 送给你一个仅由字母 <code>s</code> 和 <code>u</code> 组成的字符串 <span class="arithmatex">\(r\)</span>。你可以对 <span class="arithmatex">\(r\)</span> 执行以下操作：
-选择下标 <span class="arithmatex">\(i\)</span> <span class="arithmatex">\((1 \le i \le |r|)\)</span>，并将 <span class="arithmatex">\(r_i\)</span> 设为 <code>s</code>。</p>
-<p>请确定使 <span class="arithmatex">\(r\)</span> 变得可疑所需的最小操作次数。可以证明，在给定的限制下，总是可以将 <span class="arithmatex">\(r\)</span> 转换成一个可疑字符串。</p>
+<p>在看你完成一道字符串题目后，你的朋友 Aka 送给你一个仅由字母 <code>s</code> 和 <code>u</code> 组成的字符串 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>。你可以对 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 执行以下操作：
+选择下标 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le i \le |r|)</span><script type="math/tex">(1 \le i \le |r|)</script></span>，并将 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 设为 <code>s</code>。</p>
+<p>请确定使 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 变得可疑所需的最小操作次数。可以证明，在给定的限制下，总是可以将 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 转换成一个可疑字符串。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span>。接下来是每个测试用例的描述。</p>
-<p>每个测试用例只有一行，包含字符串 <span class="arithmatex">\(r\)</span> <span class="arithmatex">\((3 \le |r| \le 2 \cdot 10^5)\)</span>。保证 <span class="arithmatex">\(r_i\)</span> 是 <code>s</code> 或 <code>u</code>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(|r|\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span>。接下来是每个测试用例的描述。</p>
+<p>每个测试用例只有一行，包含字符串 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> <span class="arithmatex"><span class="MathJax_Preview">(3 \le |r| \le 2 \cdot 10^5)</span><script type="math/tex">(3 \le |r| \le 2 \cdot 10^5)</script></span>。保证 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 是 <code>s</code> 或 <code>u</code>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">|r|</span><script type="math/tex">|r|</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个整数 —— 使 <span class="arithmatex">\(r\)</span> 变得可疑所需的最小操作次数。</p>
+<p>对于每个测试用例，输出一个整数 —— 使 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 变得可疑所需的最小操作次数。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>9
 sus

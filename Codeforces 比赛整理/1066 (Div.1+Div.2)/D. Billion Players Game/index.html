@@ -4680,20 +4680,20 @@
 <h2 id="_1">问题描述</h2>
 <p>NemesisTheory - Rose At Nightfall<br />
 ⠀<br />
-您正在关注《十亿玩家游戏》的世界锦标赛。有 <span class="arithmatex">\(10^9\)</span> 名玩家参赛，您想要预测您最喜欢的主播Godflex的最终排名 <span class="arithmatex">\(p\)</span>。在分析最近的比赛后，您确定 <span class="arithmatex">\(l \leq p \leq r\)</span>，但除此之外您一无所知。</p>
-<p>游戏中的博彩公司提供了 <span class="arithmatex">\(n\)</span> 个报价。在第 <span class="arithmatex">\(i\)</span> 个报价中，博彩公司对Godflex的最终排名给出了估计值 <span class="arithmatex">\(a_i\)</span>。对于每个报价，您必须选择以下操作之一：</p>
+您正在关注《十亿玩家游戏》的世界锦标赛。有 <span class="arithmatex"><span class="MathJax_Preview">10^9</span><script type="math/tex">10^9</script></span> 名玩家参赛，您想要预测您最喜欢的主播Godflex的最终排名 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。在分析最近的比赛后，您确定 <span class="arithmatex"><span class="MathJax_Preview">l \leq p \leq r</span><script type="math/tex">l \leq p \leq r</script></span>，但除此之外您一无所知。</p>
+<p>游戏中的博彩公司提供了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个报价。在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个报价中，博彩公司对Godflex的最终排名给出了估计值 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>。对于每个报价，您必须选择以下操作之一：</p>
 <ul>
 <li>忽略该报价</li>
-<li>接受该报价，声称 <span class="arithmatex">\(p \leq a_i\)</span>。如果您正确，您将赚取 <span class="arithmatex">\(|p-a_i|\)</span> robocoins；否则您将损失 <span class="arithmatex">\(|p-a_i|\)</span> robocoins</li>
-<li>接受该报价，声称 <span class="arithmatex">\(p \geq a_i\)</span>。如果您正确，您将赚取 <span class="arithmatex">\(|p-a_i|\)</span> robocoins；否则您将损失 <span class="arithmatex">\(|p-a_i|\)</span> robocoins</li>
+<li>接受该报价，声称 <span class="arithmatex"><span class="MathJax_Preview">p \leq a_i</span><script type="math/tex">p \leq a_i</script></span>。如果您正确，您将赚取 <span class="arithmatex"><span class="MathJax_Preview">|p-a_i|</span><script type="math/tex">|p-a_i|</script></span> robocoins；否则您将损失 <span class="arithmatex"><span class="MathJax_Preview">|p-a_i|</span><script type="math/tex">|p-a_i|</script></span> robocoins</li>
+<li>接受该报价，声称 <span class="arithmatex"><span class="MathJax_Preview">p \geq a_i</span><script type="math/tex">p \geq a_i</script></span>。如果您正确，您将赚取 <span class="arithmatex"><span class="MathJax_Preview">|p-a_i|</span><script type="math/tex">|p-a_i|</script></span> robocoins；否则您将损失 <span class="arithmatex"><span class="MathJax_Preview">|p-a_i|</span><script type="math/tex">|p-a_i|</script></span> robocoins</li>
 </ul>
-<p>在您决定如何处理所有报价后，实际的《十亿玩家游戏》开始进行。Godflex获得一个在 <span class="arithmatex">\([l,r]\)</span> 范围内的位置 <span class="arithmatex">\(p\)</span>，然后所有报价都会结算。</p>
-<p>您的总分是您保证能赚取的robocoins数量，即在 <span class="arithmatex">\([l,r]\)</span> 中所有可能的 <span class="arithmatex">\(p\)</span> 值下，您赚取的最小robocoins数量。找出您能保证的最大可能分数。</p>
+<p>在您决定如何处理所有报价后，实际的《十亿玩家游戏》开始进行。Godflex获得一个在 <span class="arithmatex"><span class="MathJax_Preview">[l,r]</span><script type="math/tex">[l,r]</script></span> 范围内的位置 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，然后所有报价都会结算。</p>
+<p>您的总分是您保证能赚取的robocoins数量，即在 <span class="arithmatex"><span class="MathJax_Preview">[l,r]</span><script type="math/tex">[l,r]</script></span> 中所有可能的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 值下，您赚取的最小robocoins数量。找出您能保证的最大可能分数。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含三个整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(l\)</span>, <span class="arithmatex">\(r\)</span> (<span class="arithmatex">\(1 \leq n \leq 2 \cdot 10^5\)</span>, <span class="arithmatex">\(1 \leq l \leq r \leq 10^9\)</span>) — 报价的数量和Godflex最终排名的可能范围。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span> (<span class="arithmatex">\(1 \leq a_i \leq 10^9\)</span>) — 博彩公司在每个报价中对Godflex排名的估计值。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>, <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq n \leq 2 \cdot 10^5</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq 10^9</span><script type="math/tex">1 \leq l \leq r \leq 10^9</script></span>) — 报价的数量和Godflex最终排名的可能范围。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq 10^9</span><script type="math/tex">1 \leq a_i \leq 10^9</script></span>) — 博彩公司在每个报价中对Godflex排名的估计值。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一行包含一个整数：您能保证的最大可能分数。</p>
 <h2 id="_4">样例输入</h2>
@@ -4716,12 +4716,12 @@
 <h2 id="_6">样例说明</h2>
 <p>在第一个测试用例中，只有一个报价。</p>
 <ul>
-<li>如果您忽略该报价，您的分数是 <span class="arithmatex">\(0\)</span>；</li>
-<li>如果您接受该报价并声称 <span class="arithmatex">\(p \leq 3\)</span>，您的分数是 <span class="arithmatex">\(-2\)</span>（当 <span class="arithmatex">\(p=5\)</span> 时达到，这使您损失 <span class="arithmatex">\(|5-3|=2\)</span> robocoins）；</li>
-<li>如果您接受该报价并声称 <span class="arithmatex">\(p \geq 3\)</span>，您的分数是 <span class="arithmatex">\(-2\)</span>（当 <span class="arithmatex">\(p=1\)</span> 时达到，这使您损失 <span class="arithmatex">\(|1-3|=2\)</span> robocoins）。</li>
+<li>如果您忽略该报价，您的分数是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>；</li>
+<li>如果您接受该报价并声称 <span class="arithmatex"><span class="MathJax_Preview">p \leq 3</span><script type="math/tex">p \leq 3</script></span>，您的分数是 <span class="arithmatex"><span class="MathJax_Preview">-2</span><script type="math/tex">-2</script></span>（当 <span class="arithmatex"><span class="MathJax_Preview">p=5</span><script type="math/tex">p=5</script></span> 时达到，这使您损失 <span class="arithmatex"><span class="MathJax_Preview">|5-3|=2</span><script type="math/tex">|5-3|=2</script></span> robocoins）；</li>
+<li>如果您接受该报价并声称 <span class="arithmatex"><span class="MathJax_Preview">p \geq 3</span><script type="math/tex">p \geq 3</script></span>，您的分数是 <span class="arithmatex"><span class="MathJax_Preview">-2</span><script type="math/tex">-2</script></span>（当 <span class="arithmatex"><span class="MathJax_Preview">p=1</span><script type="math/tex">p=1</script></span> 时达到，这使您损失 <span class="arithmatex"><span class="MathJax_Preview">|1-3|=2</span><script type="math/tex">|1-3|=2</script></span> robocoins）。</li>
 </ul>
-<p>因此最大可能分数是 <span class="arithmatex">\(0\)</span>。</p>
-<p>在第二个测试用例中，最优策略是接受声称 <span class="arithmatex">\(p \geq 50\)</span> 和 <span class="arithmatex">\(p \leq 200\)</span> 的报价。由于 <span class="arithmatex">\(p\)</span> 必须是 <span class="arithmatex">\(100\)</span>，您赚取 <span class="arithmatex">\(|100-50| + |100-200| = 150\)</span> robocoins。</p>
+<p>因此最大可能分数是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p>在第二个测试用例中，最优策略是接受声称 <span class="arithmatex"><span class="MathJax_Preview">p \geq 50</span><script type="math/tex">p \geq 50</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p \leq 200</span><script type="math/tex">p \leq 200</script></span> 的报价。由于 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 必须是 <span class="arithmatex"><span class="MathJax_Preview">100</span><script type="math/tex">100</script></span>，您赚取 <span class="arithmatex"><span class="MathJax_Preview">|100-50| + |100-200| = 150</span><script type="math/tex">|100-50| + |100-200| = 150</script></span> robocoins。</p>
 <h2 id="_7">💡 核心直觉 (一句话总结)</h2>
 <blockquote>
 <p>中位数到所有点绝对值距离之和最小</p>
@@ -4786,19 +4786,19 @@ int a[N];</p>
 <p>这道题虽然代码短，但它包含了一个极其重要的数学模型。从这道题中，你可以提炼出以下三个层面的知识：</p>
 <h3 id="1-the-post-office-problem">1. 经典模型：绝对值不等式与中位数 (The "Post Office" Problem)</h3>
 <p>这是本题最核心的考点。</p>
-<p>题目最终转化为：寻找一个 <span class="arithmatex">\(x \in [l, r]\)</span>，使得 <span class="arithmatex">\(f(x) = \sum_{i=1}^{n} |a_i - x|\)</span> 最小。</p>
+<p>题目最终转化为：寻找一个 <span class="arithmatex"><span class="MathJax_Preview">x \in [l, r]</span><script type="math/tex">x \in [l, r]</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">f(x) = \sum_{i=1}^{n} |a_i - x|</span><script type="math/tex">f(x) = \sum_{i=1}^{n} |a_i - x|</script></span> 最小。</p>
 <ul>
 <li>
-<p><strong>结论</strong>：函数 <span class="arithmatex">\(f(x) = \sum |x - a_i|\)</span> 在 <span class="arithmatex">\(x\)</span> 取 <strong>中位数</strong> 时达到最小值。</p>
+<p><strong>结论</strong>：函数 <span class="arithmatex"><span class="MathJax_Preview">f(x) = \sum |x - a_i|</span><script type="math/tex">f(x) = \sum |x - a_i|</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 取 <strong>中位数</strong> 时达到最小值。</p>
 </li>
 <li>
 <p><strong>直观理解</strong>：</p>
 <ul>
 <li>
-<p>把 <span class="arithmatex">\(x\)</span> 想象成要在数轴上建一个邮局，所有 <span class="arithmatex">\(a_i\)</span> 是住户。</p>
+<p>把 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 想象成要在数轴上建一个邮局，所有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 是住户。</p>
 </li>
 <li>
-<p>如果邮局在最左边，往右挪一步，所有人的距离之和这就减少 <span class="arithmatex">\(n\)</span>（因为所有人都离你更近了）。</p>
+<p>如果邮局在最左边，往右挪一步，所有人的距离之和这就减少 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（因为所有人都离你更近了）。</p>
 </li>
 <li>
 <p>只要你的左边人数 $&lt; $ 右边人数，往右挪就是赚的。</p>
@@ -4812,31 +4812,31 @@ int a[N];</p>
 <p><strong>记忆口诀</strong>：</p>
 <ul>
 <li>
-<p><strong>曼哈顿距离</strong> (绝对值之和) <span class="arithmatex">\(\to\)</span> <strong>中位数</strong></p>
+<p><strong>曼哈顿距离</strong> (绝对值之和) <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> <strong>中位数</strong></p>
 </li>
 <li>
-<p><strong>欧几里得距离</strong> (平方和) <span class="arithmatex">\(\to\)</span> <strong>平均数</strong></p>
+<p><strong>欧几里得距离</strong> (平方和) <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> <strong>平均数</strong></p>
 </li>
 <li>
-<p><strong>切比雪夫距离</strong> (最大值最小) <span class="arithmatex">\(\to\)</span> <strong>极差中点</strong> <span class="arithmatex">\((\min+\max)/2\)</span></p>
+<p><strong>切比雪夫距离</strong> (最大值最小) <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> <strong>极差中点</strong> <span class="arithmatex"><span class="MathJax_Preview">(\min+\max)/2</span><script type="math/tex">(\min+\max)/2</script></span></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="2-convexity">2. 凸函数的性质 (Convexity)</h3>
-<p>你不仅用到了中位数，还用到了 <code>if(l&gt;pos) pos=l;</code> 这种边界判断。这背后是因为 <span class="arithmatex">\(f(x)\)</span> 是一个 <strong>凸函数 (Convex Function)</strong>。</p>
+<p>你不仅用到了中位数，还用到了 <code>if(l&gt;pos) pos=l;</code> 这种边界判断。这背后是因为 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 是一个 <strong>凸函数 (Convex Function)</strong>。</p>
 <ul>
 <li>
-<p><strong>碗状曲线</strong>：<span class="arithmatex">\(f(x) = \sum |x - a_i|\)</span> 的图像像一个碗（或者说 V 字形）。</p>
+<p><strong>碗状曲线</strong>：<span class="arithmatex"><span class="MathJax_Preview">f(x) = \sum |x - a_i|</span><script type="math/tex">f(x) = \sum |x - a_i|</script></span> 的图像像一个碗（或者说 V 字形）。</p>
 </li>
 <li>
-<p><strong>性质</strong>：对于凸函数，如果无约束的最小值点（坑底，即中位数）不在约束区间 <span class="arithmatex">\([l, r]\)</span> 内，那么约束区间上的最小值一定在<strong>距离坑底最近的那个端点</strong>取到。</p>
+<p><strong>性质</strong>：对于凸函数，如果无约束的最小值点（坑底，即中位数）不在约束区间 <span class="arithmatex"><span class="MathJax_Preview">[l, r]</span><script type="math/tex">[l, r]</script></span> 内，那么约束区间上的最小值一定在<strong>距离坑底最近的那个端点</strong>取到。</p>
 <ul>
 <li>
-<p>如果在区间左边，取 <span class="arithmatex">\(l\)</span>。</p>
+<p>如果在区间左边，取 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>。</p>
 </li>
 <li>
-<p>如果在区间右边，取 <span class="arithmatex">\(r\)</span>。</p>
+<p>如果在区间右边，取 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>。</p>
 </li>
 <li>
 <p>如果在区间中间，取中位数。</p>
@@ -4848,27 +4848,27 @@ int a[N];</p>
 </li>
 </ul>
 <h3 id="3-min-maxmax-min">3. 博弈论中的“Min-Max”转化为“Max-Min”</h3>
-<p>题目逻辑稍微绕了一下：你要选择策略，然后面对最差的 <span class="arithmatex">\(p\)</span>。</p>
+<p>题目逻辑稍微绕了一下：你要选择策略，然后面对最差的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
 <ul>
 <li>
-<p>通常这种题（赚取 <span class="arithmatex">\(|p - a_i|\)</span>），最优策略总是 <strong>“向中间下注”</strong>。</p>
+<p>通常这种题（赚取 <span class="arithmatex"><span class="MathJax_Preview">|p - a_i|</span><script type="math/tex">|p - a_i|</script></span>），最优策略总是 <strong>“向中间下注”</strong>。</p>
 <ul>
 <li>
-<p>对于小的 <span class="arithmatex">\(a_i\)</span>，猜 <span class="arithmatex">\(p \ge a_i\)</span>。</p>
+<p>对于小的 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>，猜 <span class="arithmatex"><span class="MathJax_Preview">p \ge a_i</span><script type="math/tex">p \ge a_i</script></span>。</p>
 </li>
 <li>
-<p>对于大的 <span class="arithmatex">\(a_i\)</span>，猜 <span class="arithmatex">\(p \le a_i\)</span>。</p>
+<p>对于大的 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>，猜 <span class="arithmatex"><span class="MathJax_Preview">p \le a_i</span><script type="math/tex">p \le a_i</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>这样你的收益函数就变成了 <span class="arithmatex">\(f(p) = \sum |p - a_i|\)</span>。</p>
+<p>这样你的收益函数就变成了 <span class="arithmatex"><span class="MathJax_Preview">f(p) = \sum |p - a_i|</span><script type="math/tex">f(p) = \sum |p - a_i|</script></span>。</p>
 </li>
 <li>
-<p>因为你无法控制 <span class="arithmatex">\(p\)</span>，最坏情况就是 <span class="arithmatex">\(p\)</span> 让这个收益最小。</p>
+<p>因为你无法控制 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，最坏情况就是 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 让这个收益最小。</p>
 </li>
 <li>
-<p>所以题目本质是求 <span class="arithmatex">\(\min_{p \in [l, r]} \sum |p - a_i|\)</span>。</p>
+<p>所以题目本质是求 <span class="arithmatex"><span class="MathJax_Preview">\min_{p \in [l, r]} \sum |p - a_i|</span><script type="math/tex">\min_{p \in [l, r]} \sum |p - a_i|</script></span>。</p>
 </li>
 </ul>
 <hr />
@@ -4876,21 +4876,21 @@ int a[N];</p>
 <p><strong>[[数学/最优化]] 一维距离最小化问题</strong></p>
 <ol>
 <li>
-<p><strong>问题模版</strong>：找一个点 <span class="arithmatex">\(x\)</span>，使得 <span class="arithmatex">\(\sum |x - a_i|\)</span> 最小。</p>
+<p><strong>问题模版</strong>：找一个点 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">\sum |x - a_i|</span><script type="math/tex">\sum |x - a_i|</script></span> 最小。</p>
 <ul>
-<li><strong>解法</strong>：<span class="arithmatex">\(x = \text{Median}(a)\)</span>。</li>
+<li><strong>解法</strong>：<span class="arithmatex"><span class="MathJax_Preview">x = \text{Median}(a)</span><script type="math/tex">x = \text{Median}(a)</script></span>。</li>
 </ul>
 </li>
 <li>
-<p><strong>问题模版变体</strong>：找一个点 <span class="arithmatex">\(x\)</span>，使得 <span class="arithmatex">\(\sum (x - a_i)^2\)</span> 最小。</p>
+<p><strong>问题模版变体</strong>：找一个点 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">\sum (x - a_i)^2</span><script type="math/tex">\sum (x - a_i)^2</script></span> 最小。</p>
 <ul>
-<li><strong>解法</strong>：<span class="arithmatex">\(x = \text{Mean}(a)\)</span> （平均值）。</li>
+<li><strong>解法</strong>：<span class="arithmatex"><span class="MathJax_Preview">x = \text{Mean}(a)</span><script type="math/tex">x = \text{Mean}(a)</script></span> （平均值）。</li>
 </ul>
 </li>
 <li>
-<p><strong>带约束情况</strong>：如果要求 <span class="arithmatex">\(x \in [L, R]\)</span>。</p>
+<p><strong>带约束情况</strong>：如果要求 <span class="arithmatex"><span class="MathJax_Preview">x \in [L, R]</span><script type="math/tex">x \in [L, R]</script></span>。</p>
 <ul>
-<li><strong>解法</strong>：先求出无约束的最优解 <span class="arithmatex">\(opt\)</span>，然后 <span class="arithmatex">\(ans = \max(L, \min(R, opt))\)</span> （即 clamp 操作）。</li>
+<li><strong>解法</strong>：先求出无约束的最优解 <span class="arithmatex"><span class="MathJax_Preview">opt</span><script type="math/tex">opt</script></span>，然后 <span class="arithmatex"><span class="MathJax_Preview">ans = \max(L, \min(R, opt))</span><script type="math/tex">ans = \max(L, \min(R, opt))</script></span> （即 clamp 操作）。</li>
 </ul>
 </li>
 </ol>

@@ -2185,10 +2185,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n3" class="md-nav__link">
+  <a href="#n3n3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        代码解析 (\(n=3\) 的例子)
+        代码解析 (n=3n=3 的例子)
       
     </span>
   </a>
@@ -4560,10 +4560,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#n3" class="md-nav__link">
+  <a href="#n3n3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        代码解析 (\(n=3\) 的例子)
+        代码解析 (n=3n=3 的例子)
       
     </span>
   </a>
@@ -4611,18 +4611,18 @@
 内存限制：每测试点 256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
 <p>企鹅是文明的生物，它们使用排列进行交流。作为企鹅研究者，Blackslex 必须研究它们的交流方式。</p>
-<p>对于一个给定的整数 <span class="arithmatex">\(n\)</span>，考虑数组 <span class="arithmatex">\([0, 1, \dots, 2^n - 1]\)</span> 的一个排列 <span class="arithmatex">\(p\)</span>。定义
+<p>对于一个给定的整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，考虑数组 <span class="arithmatex"><span class="MathJax_Preview">[0, 1, \dots, 2^n - 1]</span><script type="math/tex">[0, 1, \dots, 2^n - 1]</script></span> 的一个排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。定义
 $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; p_i), $$
-其中 <span class="arithmatex">\(\text{popcount}(z)\)</span> 表示 <span class="arithmatex">\(z\)</span> 的二进制表示中 <span class="arithmatex">\(1\)</span> 的个数（例如，<span class="arithmatex">\(\text{popcount}(5) = 2\)</span>，因为 <span class="arithmatex">\(5 = 101_2\)</span> 的二进制表示中有两个 <span class="arithmatex">\(1\)</span>），而 <span class="arithmatex">\(\&amp;\)</span> 表示按位与运算。</p>
-<p>如果一个排列能使 <span class="arithmatex">\(S(p)\)</span> 最大化，则它被认为是<strong>神圣的</strong>。请找出字典序最小的神圣排列。</p>
-<p>*长度 <span class="arithmatex">\(n\)</span> 的排列是一个由 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 这 <span class="arithmatex">\(n\)</span> 个不同的整数按任意顺序组成的数组。例如，<span class="arithmatex">\([2,3,1,5,4]\)</span> 是一个排列，但 <span class="arithmatex">\([1,2,2]\)</span> 不是排列（<span class="arithmatex">\(2\)</span> 在数组中出现了两次），<span class="arithmatex">\([1,3,4]\)</span> 也不是排列（<span class="arithmatex">\(n=3\)</span> 但数组中有 <span class="arithmatex">\(4\)</span>）。</p>
-<p>†如果两个相同大小的数组 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 在第一个不同的位置上，<span class="arithmatex">\(a\)</span> 的元素小于 <span class="arithmatex">\(b\)</span> 的对应元素，则称 <span class="arithmatex">\(a\)</span> 字典序小于 <span class="arithmatex">\(b\)</span>。</p>
+其中 <span class="arithmatex"><span class="MathJax_Preview">\text{popcount}(z)</span><script type="math/tex">\text{popcount}(z)</script></span> 表示 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 的二进制表示中 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的个数（例如，<span class="arithmatex"><span class="MathJax_Preview">\text{popcount}(5) = 2</span><script type="math/tex">\text{popcount}(5) = 2</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">5 = 101_2</span><script type="math/tex">5 = 101_2</script></span> 的二进制表示中有两个 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>），而 <span class="arithmatex"><span class="MathJax_Preview">\&amp;</span><script type="math/tex">\&</script></span> 表示按位与运算。</p>
+<p>如果一个排列能使 <span class="arithmatex"><span class="MathJax_Preview">S(p)</span><script type="math/tex">S(p)</script></span> 最大化，则它被认为是<strong>神圣的</strong>。请找出字典序最小的神圣排列。</p>
+<p>*长度 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列是一个由 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 这 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个不同的整数按任意顺序组成的数组。例如，<span class="arithmatex"><span class="MathJax_Preview">[2,3,1,5,4]</span><script type="math/tex">[2,3,1,5,4]</script></span> 是一个排列，但 <span class="arithmatex"><span class="MathJax_Preview">[1,2,2]</span><script type="math/tex">[1,2,2]</script></span> 不是排列（<span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 在数组中出现了两次），<span class="arithmatex"><span class="MathJax_Preview">[1,3,4]</span><script type="math/tex">[1,3,4]</script></span> 也不是排列（<span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span> 但数组中有 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>）。</p>
+<p>†如果两个相同大小的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 在第一个不同的位置上，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素小于 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的对应元素，则称 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 字典序小于 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 16)\)</span> —— 测试用例的数量。</p>
-<p>每个测试用例包含一个整数 <span class="arithmatex">\(n\)</span> <span class="arithmatex">\((1 \le n \le 16)\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(2^n\)</span> 之和不超过 <span class="arithmatex">\(2^{16}\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 16)</span><script type="math/tex">(1 \le t \le 16)</script></span> —— 测试用例的数量。</p>
+<p>每个测试用例包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le n \le 16)</span><script type="math/tex">(1 \le n \le 16)</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2^{16}</span><script type="math/tex">2^{16}</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出 <span class="arithmatex">\(2^n\)</span> 个整数 <span class="arithmatex">\(p_0, p_1, \dots, p_{2^n-1}\)</span> —— 要求的排列。</p>
+<p>对于每个测试用例，输出 <span class="arithmatex"><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">p_0, p_1, \dots, p_{2^n-1}</span><script type="math/tex">p_0, p_1, \dots, p_{2^n-1}</script></span> —— 要求的排列。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>2
 1
@@ -4634,9 +4634,9 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <p>对于第一个测试用例，有两种可能的排列：
-- <span class="arithmatex">\(p = [0, 1]\)</span>，<span class="arithmatex">\(S(p) = 0\)</span>
-- <span class="arithmatex">\(p = [1, 0]\)</span>，<span class="arithmatex">\(S(p) = 1\)</span></p>
-<p>对于第二个测试用例，<span class="arithmatex">\(S([3,1,0,2]) = 3\)</span> 是神圣的。存在其他神圣的排列 <span class="arithmatex">\(p\)</span>，例如 <span class="arithmatex">\(p = [3,2,0,1]\)</span>，但它们不是字典序最小的。</p>
+- <span class="arithmatex"><span class="MathJax_Preview">p = [0, 1]</span><script type="math/tex">p = [0, 1]</script></span>，<span class="arithmatex"><span class="MathJax_Preview">S(p) = 0</span><script type="math/tex">S(p) = 0</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">p = [1, 0]</span><script type="math/tex">p = [1, 0]</script></span>，<span class="arithmatex"><span class="MathJax_Preview">S(p) = 1</span><script type="math/tex">S(p) = 1</script></span></p>
+<p>对于第二个测试用例，<span class="arithmatex"><span class="MathJax_Preview">S([3,1,0,2]) = 3</span><script type="math/tex">S([3,1,0,2]) = 3</script></span> 是神圣的。存在其他神圣的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，例如 <span class="arithmatex"><span class="MathJax_Preview">p = [3,2,0,1]</span><script type="math/tex">p = [3,2,0,1]</script></span>，但它们不是字典序最小的。</p>
 <h1 id="_7">错误第一版</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2179 D</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1071 (Div. 3)</span>
@@ -4724,20 +4724,20 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 <span class="p">}</span>
 </code></pre></div>
 <h1 id="_9">确实是好题目</h1>
-<p>你的第二版解题思路（贪心法）<strong>不是最优的</strong>，虽然它在 <span class="arithmatex">\(n=2\)</span> 时能过样例，但在 <span class="arithmatex">\(n\)</span> 更大时无法得到最大分数。</p>
+<p>你的第二版解题思路（贪心法）<strong>不是最优的</strong>，虽然它在 <span class="arithmatex"><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span> 时能过样例，但在 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 更大时无法得到最大分数。</p>
 <h3 id="_10">为什么你的思路有问题？</h3>
-<p>你的思路是：<span class="arithmatex">\(7 \to 3 \to 1 \to 0\)</span>（每次去掉最高位的一个 1）。</p>
-<p>这种做法的问题在于过早地引入了 0。一旦排列中出现了 <span class="arithmatex">\(0\)</span>，前缀 AND 的结果就会永久变成 <span class="arithmatex">\(0\)</span>，后面的数字无论是什么，贡献都是 <span class="arithmatex">\(0\)</span>。</p>
-<p><strong>举个例子 (<span class="arithmatex">\(n=3\)</span>)：</strong></p>
+<p>你的思路是：<span class="arithmatex"><span class="MathJax_Preview">7 \to 3 \to 1 \to 0</span><script type="math/tex">7 \to 3 \to 1 \to 0</script></span>（每次去掉最高位的一个 1）。</p>
+<p>这种做法的问题在于过早地引入了 0。一旦排列中出现了 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，前缀 AND 的结果就会永久变成 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，后面的数字无论是什么，贡献都是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
+<p><strong>举个例子 (<span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span>)：</strong></p>
 <ul>
 <li>
 <p><strong>你的构造：</strong> <code>7, 3, 1, 0, 2, 4, 5, 6</code></p>
 <ul>
 <li>
-<p>前缀 AND：<span class="arithmatex">\(7, 3, 1, 0, 0, 0, 0, 0\)</span></p>
+<p>前缀 AND：<span class="arithmatex"><span class="MathJax_Preview">7, 3, 1, 0, 0, 0, 0, 0</span><script type="math/tex">7, 3, 1, 0, 0, 0, 0, 0</script></span></p>
 </li>
 <li>
-<p>Popcount：<span class="arithmatex">\(3 + 2 + 1 + 0 + \dots = 6\)</span></p>
+<p>Popcount：<span class="arithmatex"><span class="MathJax_Preview">3 + 2 + 1 + 0 + \dots = 6</span><script type="math/tex">3 + 2 + 1 + 0 + \dots = 6</script></span></p>
 </li>
 </ul>
 </li>
@@ -4748,47 +4748,47 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 <p>前缀 AND：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(7 \ (111) \to\)</span> pop 3</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">7 \ (111) \to</span><script type="math/tex">7 \ (111) \to</script></span> pop 3</p>
 </li>
 <li>
-<p><span class="arithmatex">\(3 \ (011) \to\)</span> 与上一个 <span class="arithmatex">\(111\)</span> 还是 <span class="arithmatex">\(011\)</span>，pop 2</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">3 \ (011) \to</span><script type="math/tex">3 \ (011) \to</script></span> 与上一个 <span class="arithmatex"><span class="MathJax_Preview">111</span><script type="math/tex">111</script></span> 还是 <span class="arithmatex"><span class="MathJax_Preview">011</span><script type="math/tex">011</script></span>，pop 2</p>
 </li>
 <li>
-<p><span class="arithmatex">\(1 \ (001) \to\)</span> 与上一个 <span class="arithmatex">\(011\)</span> 还是 <span class="arithmatex">\(001\)</span>，pop 1</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">1 \ (001) \to</span><script type="math/tex">1 \ (001) \to</script></span> 与上一个 <span class="arithmatex"><span class="MathJax_Preview">011</span><script type="math/tex">011</script></span> 还是 <span class="arithmatex"><span class="MathJax_Preview">001</span><script type="math/tex">001</script></span>，pop 1</p>
 </li>
 <li>
-<p><span class="arithmatex">\(5 \ (101) \to\)</span> 与上一个 <span class="arithmatex">\(001\)</span> AND 得到 <span class="arithmatex">\(001\)</span>，<strong>pop 还是 1</strong>（这是关键！虽然 5 没有 bit 1，但它有 bit 0，延续了 bit 0 的寿命）</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">5 \ (101) \to</span><script type="math/tex">5 \ (101) \to</script></span> 与上一个 <span class="arithmatex"><span class="MathJax_Preview">001</span><script type="math/tex">001</script></span> AND 得到 <span class="arithmatex"><span class="MathJax_Preview">001</span><script type="math/tex">001</script></span>，<strong>pop 还是 1</strong>（这是关键！虽然 5 没有 bit 1，但它有 bit 0，延续了 bit 0 的寿命）</p>
 </li>
 <li>
-<p><span class="arithmatex">\(0 \ (000) \to\)</span> pop 0</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">0 \ (000) \to</span><script type="math/tex">0 \ (000) \to</script></span> pop 0</p>
 </li>
 </ul>
 </li>
 <li>
-<p>总分：<span class="arithmatex">\(3 + 2 + 1 + 1 + 0 \dots = 7\)</span></p>
+<p>总分：<span class="arithmatex"><span class="MathJax_Preview">3 + 2 + 1 + 1 + 0 \dots = 7</span><script type="math/tex">3 + 2 + 1 + 1 + 0 \dots = 7</script></span></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="_11">正确的解题思路（分治/位保留策略）</h3>
 <p>为了让分数最大，我们需要让每一个二进制位尽可能长时间地保持为 1。</p>
-<p>为了让字典序最小，我们在选择“保留哪一位”时，应该优先保留低位（LSB），因为保留低位（如 bit 0）允许我们使用较小的奇数（1, 3...），而保留高位（如 bit <span class="arithmatex">\(n-1\)</span>）会强制我们使用较大的数（<span class="arithmatex">\(2^{n-1} \dots\)</span>）。</p>
+<p>为了让字典序最小，我们在选择“保留哪一位”时，应该优先保留低位（LSB），因为保留低位（如 bit 0）允许我们使用较小的奇数（1, 3...），而保留高位（如 bit <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>）会强制我们使用较大的数（<span class="arithmatex"><span class="MathJax_Preview">2^{n-1} \dots</span><script type="math/tex">2^{n-1} \dots</script></span>）。</p>
 <p><strong>构造策略如下：</strong></p>
 <ol>
 <li>
-<p><strong>第一个数</strong>必须是 <span class="arithmatex">\(2^n - 1\)</span>（全 1），以开启最大分数。</p>
+<p><strong>第一个数</strong>必须是 <span class="arithmatex"><span class="MathJax_Preview">2^n - 1</span><script type="math/tex">2^n - 1</script></span>（全 1），以开启最大分数。</p>
 </li>
 <li>
 <p><strong>接下来</strong>，我们按照“倒序剥离”的方式来生成序列。</p>
 <ul>
 <li>
-<p>所有的数可以分为两类：<span class="arithmatex">\(bit \ 0\)</span> 是 1 的，和 <span class="arithmatex">\(bit \ 0\)</span> 是 0 的。</p>
+<p>所有的数可以分为两类：<span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 是 1 的，和 <span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 是 0 的。</p>
 </li>
 <li>
-<p>为了让 <span class="arithmatex">\(bit \ 0\)</span> 活得最久（贡献最大），我们先把所有 <span class="arithmatex">\(bit \ 0\)</span> 为 1 的数放前面（递归处理），等这些都放完了，再放 <span class="arithmatex">\(bit \ 0\)</span> 为 0 的数。</p>
+<p>为了让 <span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 活得最久（贡献最大），我们先把所有 <span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 为 1 的数放前面（递归处理），等这些都放完了，再放 <span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 为 0 的数。</p>
 </li>
 <li>
-<p>在“<span class="arithmatex">\(bit \ 0\)</span> 为 1”的这一组里，我们再把 <span class="arithmatex">\(bit \ 1\)</span> 为 1 的放前面……</p>
+<p>在“<span class="arithmatex"><span class="MathJax_Preview">bit \ 0</span><script type="math/tex">bit \ 0</script></span> 为 1”的这一组里，我们再把 <span class="arithmatex"><span class="MathJax_Preview">bit \ 1</span><script type="math/tex">bit \ 1</script></span> 为 1 的放前面……</p>
 </li>
 <li>
 <p>这实际上形成了一个特定的输出顺序。</p>
@@ -4800,25 +4800,25 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 <p>观察发现，最优且字典序最小的序列遵循以下规律：</p>
 <ol>
 <li>
-<p>先输出 <span class="arithmatex">\(2^n - 1\)</span>。</p>
+<p>先输出 <span class="arithmatex"><span class="MathJax_Preview">2^n - 1</span><script type="math/tex">2^n - 1</script></span>。</p>
 </li>
 <li>
-<p>从 <span class="arithmatex">\(i = n-1\)</span> 循环到 <span class="arithmatex">\(0\)</span>：</p>
-<p>输出所有满足以下条件的数 <span class="arithmatex">\(x\)</span>（按从小到大排序）：</p>
+<p>从 <span class="arithmatex"><span class="MathJax_Preview">i = n-1</span><script type="math/tex">i = n-1</script></span> 循环到 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>：</p>
+<p>输出所有满足以下条件的数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>（按从小到大排序）：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(x\)</span> 的第 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(i-1\)</span> 位全是 1。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">i-1</span><script type="math/tex">i-1</script></span> 位全是 1。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(x\)</span> 的第 <span class="arithmatex">\(i\)</span> 位是 0。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位是 0。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(x\)</span> 的高于 <span class="arithmatex">\(i\)</span> 的位任意。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的高于 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的位任意。</p>
 </li>
 </ul>
 </li>
 </ol>
-<p>这个构造保证了第 <span class="arithmatex">\(0 \sim i-1\)</span> 位一直保持为 1，直到我们在这一轮把第 <span class="arithmatex">\(i\)</span> 位变成 0。</p>
+<p>这个构造保证了第 <span class="arithmatex"><span class="MathJax_Preview">0 \sim i-1</span><script type="math/tex">0 \sim i-1</script></span> 位一直保持为 1，直到我们在这一轮把第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位变成 0。</p>
 <h3 id="_12">优化后的代码</h3>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2179 D</span>
@@ -4874,22 +4874,22 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="n3">代码解析 (<span class="arithmatex">\(n=3\)</span> 的例子)</h3>
+<h3 id="n3n3">代码解析 (<span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span> 的例子)</h3>
 <ol>
 <li>
 <p>输出 <code>7</code> (111)。</p>
 </li>
 <li>
-<p>循环 <span class="arithmatex">\(i=2\)</span> (放弃 bit 2):</p>
+<p>循环 <span class="arithmatex"><span class="MathJax_Preview">i=2</span><script type="math/tex">i=2</script></span> (放弃 bit 2):</p>
 <ul>
 <li>
-<p>要求：低 2 位是 1 (mask <code>011</code> 的低 2 位 -&gt; <code>x11</code> ? 不，是 <code>suffix_mask</code> 长度为 <span class="arithmatex">\(i\)</span>)。</p>
+<p>要求：低 2 位是 1 (mask <code>011</code> 的低 2 位 -&gt; <code>x11</code> ? 不，是 <code>suffix_mask</code> 长度为 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>)。</p>
 </li>
 <li>
 <p>Wait, logic correction in explanation:</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i=2\)</span>: mask = <code>(1&lt;&lt;2)-1</code> = 3 (<code>011</code> 二进制).</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i=2</span><script type="math/tex">i=2</script></span>: mask = <code>(1&lt;&lt;2)-1</code> = 3 (<code>011</code> 二进制).</p>
 </li>
 <li>
 <p>生成的数：Bit 2 必须是 0。低 0,1 位必须是 1。即 <code>...011</code>。</p>
@@ -4903,7 +4903,7 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 </ul>
 </li>
 <li>
-<p>循环 <span class="arithmatex">\(i=1\)</span> (放弃 bit 1):</p>
+<p>循环 <span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span> (放弃 bit 1):</p>
 <ul>
 <li>
 <p>mask = <code>1</code> (<code>01</code> 二进制)。</p>
@@ -4926,7 +4926,7 @@ $$ S(p) = \sum_{i=0}^{2^n-1} \text{popcount}(p_0 \&amp; p_1 \&amp; \dots \&amp; 
 </ul>
 </li>
 <li>
-<p>循环 <span class="arithmatex">\(i=0\)</span> (放弃 bit 0):</p>
+<p>循环 <span class="arithmatex"><span class="MathJax_Preview">i=0</span><script type="math/tex">i=0</script></span> (放弃 bit 0):</p>
 <ul>
 <li>
 <p>mask = <code>0</code>。</p>

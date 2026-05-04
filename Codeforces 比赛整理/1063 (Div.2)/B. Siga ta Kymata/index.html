@@ -4889,24 +4889,24 @@
 <p>时间限制：每个测试 1.5 秒<br />
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的每个整数的排列 <span class="arithmatex">\(p\)</span>。你还拥有一个大小为 <span class="arithmatex">\(n\)</span> 的二进制字符串 <span class="arithmatex">\(s\)</span>，初始时对于所有 <span class="arithmatex">\(1 \leq i \leq n\)</span> 都有 <span class="arithmatex">\(s_i = 0\)</span>。你最多可以进行 <span class="arithmatex">\(5\)</span> 次以下操作：</p>
+<p>给定一个从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的每个整数的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。你还拥有一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，初始时对于所有 <span class="arithmatex"><span class="MathJax_Preview">1 \leq i \leq n</span><script type="math/tex">1 \leq i \leq n</script></span> 都有 <span class="arithmatex"><span class="MathJax_Preview">s_i = 0</span><script type="math/tex">s_i = 0</script></span>。你最多可以进行 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 次以下操作：</p>
 <ul>
-<li>选择任意两个整数 <span class="arithmatex">\(l\)</span> 和 <span class="arithmatex">\(r\)</span>，满足 <span class="arithmatex">\(1 \leq l \leq r \leq n\)</span>。</li>
-<li>然后，对于每个满足 <span class="arithmatex">\(l &lt; i &lt; r\)</span> 且 <span class="arithmatex">\(\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)\)</span> 同时成立的 <span class="arithmatex">\(i\)</span>，将 <span class="arithmatex">\(s_i\)</span> 设置为 <span class="arithmatex">\(1\)</span>。</li>
+<li>选择任意两个整数 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，满足 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq n</span><script type="math/tex">1 \leq l \leq r \leq n</script></span>。</li>
+<li>然后，对于每个满足 <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_i < \max(p_l, p_r)</script></span> 同时成立的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，将 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
 </ul>
-<p>你还会得到一个二进制字符串 <span class="arithmatex">\(x\)</span>，大小为 <span class="arithmatex">\(n\)</span>。在执行操作后，对于每个 <span class="arithmatex">\(1 \leq i \leq n\)</span>，如果 <span class="arithmatex">\(x_i = 1\)</span>，则必须有 <span class="arithmatex">\(s_i = 1\)</span>。注意如果 <span class="arithmatex">\(x_i = 0\)</span>，则 <span class="arithmatex">\(s_i\)</span> 可以是任意值。</p>
-<p>找出一个最多包含 <span class="arithmatex">\(5\)</span> 个操作的序列，使得上述条件得到满足，或者报告说不可能这样做。注意你不必最小化操作次数。</p>
-<p><span class="arithmatex">\(*\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的每个整数的排列 <span class="arithmatex">\(p\)</span> 是一个包含从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的元素的序列，其中每个元素恰好出现一次。</p>
-<p><span class="arithmatex">\(†\)</span> 当且仅当对于所有 <span class="arithmatex">\(1 \leq i \leq m\)</span> 都有 <span class="arithmatex">\(b_i = 0\)</span> 或 <span class="arithmatex">\(b_i = 1\)</span> 时，大小为 <span class="arithmatex">\(m\)</span> 的字符串 <span class="arithmatex">\(b\)</span> 被认为是二进制字符串。</p>
+<p>你还会得到一个二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。在执行操作后，对于每个 <span class="arithmatex"><span class="MathJax_Preview">1 \leq i \leq n</span><script type="math/tex">1 \leq i \leq n</script></span>，如果 <span class="arithmatex"><span class="MathJax_Preview">x_i = 1</span><script type="math/tex">x_i = 1</script></span>，则必须有 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span>。注意如果 <span class="arithmatex"><span class="MathJax_Preview">x_i = 0</span><script type="math/tex">x_i = 0</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 可以是任意值。</p>
+<p>找出一个最多包含 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 个操作的序列，使得上述条件得到满足，或者报告说不可能这样做。注意你不必最小化操作次数。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">*</span><script type="math/tex">*</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的每个整数的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是一个包含从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的元素的序列，其中每个元素恰好出现一次。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">†</span><script type="math/tex">†</script></span> 当且仅当对于所有 <span class="arithmatex"><span class="MathJax_Preview">1 \leq i \leq m</span><script type="math/tex">1 \leq i \leq m</script></span> 都有 <span class="arithmatex"><span class="MathJax_Preview">b_i = 0</span><script type="math/tex">b_i = 0</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">b_i = 1</span><script type="math/tex">b_i = 1</script></span> 时，大小为 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 被认为是二进制字符串。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(3 \leq n \leq 2 \cdot 10^5\)</span>) —— 数组的大小。</p>
-<p>第二行包含恰好 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> (<span class="arithmatex">\(1 \leq p_i \leq n\)</span>，<span class="arithmatex">\(p\)</span> 的元素两两不同) —— 表示排列的第 <span class="arithmatex">\(i\)</span> 个元素。</p>
-<p>第三行包含一个大小为 <span class="arithmatex">\(n\)</span> 的二进制字符串 <span class="arithmatex">\(x\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">3 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">3 \leq n \leq 2 \cdot 10^5</script></span>) —— 数组的大小。</p>
+<p>第二行包含恰好 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">p_1, p_2, \dots, p_n</span><script type="math/tex">p_1, p_2, \dots, p_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq p_i \leq n</span><script type="math/tex">1 \leq p_i \leq n</script></span>，<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的元素两两不同) —— 表示排列的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个元素。</p>
+<p>第三行包含一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，如果不可能执行操作以满足约束，则输出 <span class="arithmatex">\(-1\)</span>。</p>
-<p>否则，输出一个整数 <span class="arithmatex">\(0 \leq k \leq 5\)</span>，表示操作的数量。在接下来的 <span class="arithmatex">\(k\)</span> 行中，第 <span class="arithmatex">\(i\)</span> 行输出两个整数 <span class="arithmatex">\(1 \leq l_i \leq r_i \leq n\)</span>，表示第 <span class="arithmatex">\(i\)</span> 个操作的边界。如果有多个正确的解决方案，输出其中任何一个。</p>
+<p>对于每个测试用例，如果不可能执行操作以满足约束，则输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
+<p>否则，输出一个整数 <span class="arithmatex"><span class="MathJax_Preview">0 \leq k \leq 5</span><script type="math/tex">0 \leq k \leq 5</script></span>，表示操作的数量。在接下来的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 行中，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行输出两个整数 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l_i \leq r_i \leq n</span><script type="math/tex">1 \leq l_i \leq r_i \leq n</script></span>，表示第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个操作的边界。如果有多个正确的解决方案，输出其中任何一个。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
 3
@@ -4941,9 +4941,9 @@
 2 4
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，<span class="arithmatex">\(p = [1, 2, 3]\)</span>，<span class="arithmatex">\(x = 010\)</span>。我们可以执行一次操作，<span class="arithmatex">\(l = 1\)</span> 和 <span class="arithmatex">\(r = 3\)</span>。操作后，我们将 <span class="arithmatex">\(s_2\)</span> 设置为 <span class="arithmatex">\(1\)</span>，因为 <span class="arithmatex">\(l &lt; 2 &lt; r\)</span> 且 <span class="arithmatex">\(\min(p_l, p_r) &lt; p_2 = 2 &lt; \max(p_l, p_r)\)</span> 同时成立。结果，<span class="arithmatex">\(s = 010\)</span>。</p>
-<p>在第二个样例中，可以证明不存在最多 <span class="arithmatex">\(5\)</span> 个操作的正确序列，因此我们输出 <span class="arithmatex">\(-1\)</span>。</p>
-<p>在第三个样例中，<span class="arithmatex">\(p = [1, 3, 2, 4, 6, 5]\)</span> 且 <span class="arithmatex">\(x = 001100\)</span>。执行 <span class="arithmatex">\(l = 1\)</span> 和 <span class="arithmatex">\(r = 5\)</span> 的操作后，<span class="arithmatex">\(s = 011100\)</span>。如果我们再执行 <span class="arithmatex">\(l = 2\)</span> 和 <span class="arithmatex">\(r = 6\)</span> 的操作，<span class="arithmatex">\(s\)</span> 将保持不变。字符串 <span class="arithmatex">\(s = 011100\)</span> 是有效的，因为在 <span class="arithmatex">\(x\)</span> 为 <span class="arithmatex">\(1\)</span> 的每个位置上，<span class="arithmatex">\(s\)</span> 在该位置也是 <span class="arithmatex">\(1\)</span>。</p>
+<p>在第一个样例中，<span class="arithmatex"><span class="MathJax_Preview">p = [1, 2, 3]</span><script type="math/tex">p = [1, 2, 3]</script></span>，<span class="arithmatex"><span class="MathJax_Preview">x = 010</span><script type="math/tex">x = 010</script></span>。我们可以执行一次操作，<span class="arithmatex"><span class="MathJax_Preview">l = 1</span><script type="math/tex">l = 1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r = 3</span><script type="math/tex">r = 3</script></span>。操作后，我们将 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">l &lt; 2 &lt; r</span><script type="math/tex">l < 2 < r</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_2 = 2 &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_2 = 2 < \max(p_l, p_r)</script></span> 同时成立。结果，<span class="arithmatex"><span class="MathJax_Preview">s = 010</span><script type="math/tex">s = 010</script></span>。</p>
+<p>在第二个样例中，可以证明不存在最多 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 个操作的正确序列，因此我们输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
+<p>在第三个样例中，<span class="arithmatex"><span class="MathJax_Preview">p = [1, 3, 2, 4, 6, 5]</span><script type="math/tex">p = [1, 3, 2, 4, 6, 5]</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">x = 001100</span><script type="math/tex">x = 001100</script></span>。执行 <span class="arithmatex"><span class="MathJax_Preview">l = 1</span><script type="math/tex">l = 1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r = 5</span><script type="math/tex">r = 5</script></span> 的操作后，<span class="arithmatex"><span class="MathJax_Preview">s = 011100</span><script type="math/tex">s = 011100</script></span>。如果我们再执行 <span class="arithmatex"><span class="MathJax_Preview">l = 2</span><script type="math/tex">l = 2</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r = 6</span><script type="math/tex">r = 6</script></span> 的操作，<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 将保持不变。字符串 <span class="arithmatex"><span class="MathJax_Preview">s = 011100</span><script type="math/tex">s = 011100</script></span> 是有效的，因为在 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的每个位置上，<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 在该位置也是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <h1 id="wa2">赛时WA2代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2163 B</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1063 (Div. 2)</span>
@@ -5119,66 +5119,66 @@
 </code></pre></div>
 <h1 id="ai">AI 对于题目的分析</h1>
 <p>好的，我们来一起分析这道题。</p>
-<p>这是一道很棒的<strong>构造题</strong>。它的时间限制是 1.5 秒，但 <span class="arithmatex">\(n\)</span> 的总和达到了 <span class="arithmatex">\(2 \cdot 10^5\)</span>，这意味着我们的 <code>solve()</code> 函数需要是一个接近 <span class="arithmatex">\(O(n)\)</span> 的解法。</p>
+<p>这是一道很棒的<strong>构造题</strong>。它的时间限制是 1.5 秒，但 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和达到了 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>，这意味着我们的 <code>solve()</code> 函数需要是一个接近 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 的解法。</p>
 <p>你拿到了 WA2，并且 <code>jiangly</code> 的代码 A 了，这是提升的绝佳机会！我们来一步步拆解 <code>jiangly</code> 的思路。</p>
 <h3 id="1">步骤 1：理解这个操作的“死穴”</h3>
 <p>我们先来仔细分析这个操作：</p>
 <blockquote>
-<p>对于每个 <span class="arithmatex">\(l &lt; i &lt; r\)</span> 且 <span class="arithmatex">\(\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)\)</span>，将 <span class="arithmatex">\(s_i\)</span> 设置为 <span class="arithmatex">\(1\)</span>。</p>
+<p>对于每个 <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_i < \max(p_l, p_r)</script></span>，将 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </blockquote>
 <p>这里有两个_绝对_限制：</p>
 <ol>
 <li>
-<p><strong>位置限制:</strong> <span class="arithmatex">\(l &lt; i &lt; r\)</span>。</p>
+<p><strong>位置限制:</strong> <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span>。</p>
 <ul>
 <li>
-<p>这意味着 <span class="arithmatex">\(i\)</span> 永远不可能等于 <span class="arithmatex">\(l\)</span> 或 <span class="arithmatex">\(r\)</span>。</p>
+<p>这意味着 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 永远不可能等于 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>。</p>
 </li>
 <li>
-<p>更重要的是， <span class="arithmatex">\(i\)</span> 永远不可能等于 <span class="arithmatex">\(1\)</span>（因为它不能 <span class="arithmatex">\(&lt; l\)</span>）或 <span class="arithmatex">\(n\)</span>（因为它不能 <span class="arithmatex">\(&gt; r\)</span>）吗？不，这个推论是错的。比如 <span class="arithmatex">\(l=1, r=3\)</span>，<span class="arithmatex">\(i=2\)</span> 是可以的。</p>
+<p>更重要的是， <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 永远不可能等于 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>（因为它不能 <span class="arithmatex"><span class="MathJax_Preview">&lt; l</span><script type="math/tex">< l</script></span>）或 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（因为它不能 <span class="arithmatex"><span class="MathJax_Preview">&gt; r</span><script type="math/tex">> r</script></span>）吗？不，这个推论是错的。比如 <span class="arithmatex"><span class="MathJax_Preview">l=1, r=3</span><script type="math/tex">l=1, r=3</script></span>，<span class="arithmatex"><span class="MathJax_Preview">i=2</span><script type="math/tex">i=2</script></span> 是可以的。</p>
 </li>
 <li>
-<p>但是，如果我们选 <span class="arithmatex">\(l=1\)</span>，那么 <span class="arithmatex">\(i\)</span> 必须 <span class="arithmatex">\(\ge 2\)</span>。如果我们选 <span class="arithmatex">\(r=n\)</span>，那么 <span class="arithmatex">\(i\)</span> 必须 <span class="arithmatex">\(\le n-1\)</span>。</p>
+<p>但是，如果我们选 <span class="arithmatex"><span class="MathJax_Preview">l=1</span><script type="math/tex">l=1</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">\ge 2</span><script type="math/tex">\ge 2</script></span>。如果我们选 <span class="arithmatex"><span class="MathJax_Preview">r=n</span><script type="math/tex">r=n</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">\le n-1</span><script type="math/tex">\le n-1</script></span>。</p>
 </li>
 <li>
-<p>一个 <span class="arithmatex">\(i\)</span> 要被操作，它必须 <em>严格</em> 位于 <span class="arithmatex">\(l\)</span> 和 <span class="arithmatex">\(r\)</span> 之间。这意味着 <span class="arithmatex">\(s_1\)</span> 和 <span class="arithmatex">\(s_n\)</span> 永远无法被设为 <span class="arithmatex">\(1\)</span>，因为 <span class="arithmatex">\(i=1\)</span> 无法满足 <span class="arithmatex">\(l &lt; 1\)</span>，<span class="arithmatex">\(i=n\)</span> 无法满足 <span class="arithmatex">\(n &lt; r\)</span>。</p>
+<p>一个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 要被操作，它必须 <em>严格</em> 位于 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 之间。这意味着 <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">s_n</span><script type="math/tex">s_n</script></span> 永远无法被设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span> 无法满足 <span class="arithmatex"><span class="MathJax_Preview">l &lt; 1</span><script type="math/tex">l < 1</script></span>，<span class="arithmatex"><span class="MathJax_Preview">i=n</span><script type="math/tex">i=n</script></span> 无法满足 <span class="arithmatex"><span class="MathJax_Preview">n &lt; r</span><script type="math/tex">n < r</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>值限制:</strong> <span class="arithmatex">\(\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)\)</span>。</p>
+<p><strong>值限制:</strong> <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_i < \max(p_l, p_r)</script></span>。</p>
 <ul>
 <li>
-<p>这意味着 <span class="arithmatex">\(p_i\)</span> 的值必须 <em>严格</em> 位于 <span class="arithmatex">\(p_l\)</span> 和 <span class="arithmatex">\(p_r\)</span> 之间。</p>
+<p>这意味着 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 的值必须 <em>严格</em> 位于 <span class="arithmatex"><span class="MathJax_Preview">p_l</span><script type="math/tex">p_l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p_r</span><script type="math/tex">p_r</script></span> 之间。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(p_i\)</span> 永远不可能等于 <span class="arithmatex">\(\min(p_l, p_r)\)</span> 或 <span class="arithmatex">\(\max(p_l, p_r)\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 永远不可能等于 <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r)</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">\max(p_l, p_r)</span><script type="math/tex">\max(p_l, p_r)</script></span>。</p>
 </li>
 <li>
-<p>更重要的是，<span class="arithmatex">\(p\)</span> 是一个 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的排列。如果 <span class="arithmatex">\(p_i = 1\)</span>，它永远无法满足 <span class="arithmatex">\(p_i &gt; \min(p_l, p_r)\)</span>。</p>
+<p>更重要的是，<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是一个 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列。如果 <span class="arithmatex"><span class="MathJax_Preview">p_i = 1</span><script type="math/tex">p_i = 1</script></span>，它永远无法满足 <span class="arithmatex"><span class="MathJax_Preview">p_i &gt; \min(p_l, p_r)</span><script type="math/tex">p_i > \min(p_l, p_r)</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(p_i = n\)</span>，它永远无法满足 <span class="arithmatex">\(p_i &lt; \max(p_l, p_r)\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">p_i = n</span><script type="math/tex">p_i = n</script></span>，它永远无法满足 <span class="arithmatex"><span class="MathJax_Preview">p_i &lt; \max(p_l, p_r)</span><script type="math/tex">p_i < \max(p_l, p_r)</script></span>。</p>
 </li>
 </ul>
 </li>
 </ol>
 <h3 id="2-1">步骤 2：找到所有“不可能”的情况 ( <code>-1</code> )</h3>
-<p>根据上面的“死穴”，我们知道有些 <span class="arithmatex">\(s_i\)</span> 是永远无法被设为 <span class="arithmatex">\(1\)</span> 的。</p>
-<p><strong>因此，如果目标字符串 <span class="arithmatex">\(x\)</span> 要求我们在一个“不可能”的位置上设置 <span class="arithmatex">\(1\)</span>，我们就必须输出 <code>-1</code>。</strong></p>
-<p>“不可能”的位置 <span class="arithmatex">\(i\)</span> 满足以下<strong>任意</strong>一个条件：</p>
+<p>根据上面的“死穴”，我们知道有些 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 是永远无法被设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的。</p>
+<p><strong>因此，如果目标字符串 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 要求我们在一个“不可能”的位置上设置 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，我们就必须输出 <code>-1</code>。</strong></p>
+<p>“不可能”的位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 满足以下<strong>任意</strong>一个条件：</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(i = 1\)</span> (因为 <span class="arithmatex">\(i\)</span> 必须 <span class="arithmatex">\(&gt; l\)</span>)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i = 1</span><script type="math/tex">i = 1</script></span> (因为 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">&gt; l</span><script type="math/tex">> l</script></span>)</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i = n\)</span> (因为 <span class="arithmatex">\(i\)</span> 必须 <span class="arithmatex">\(&lt; r\)</span>)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i = n</span><script type="math/tex">i = n</script></span> (因为 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">&lt; r</span><script type="math/tex">< r</script></span>)</p>
 </li>
 <li>
-<p><span class="arithmatex">\(p_i = 1\)</span> (因为 <span class="arithmatex">\(p_i\)</span> 必须 <span class="arithmatex">\(&gt;\min\)</span>)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p_i = 1</span><script type="math/tex">p_i = 1</script></span> (因为 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">&gt;\min</span><script type="math/tex">>\min</script></span>)</p>
 </li>
 <li>
-<p><span class="arithmatex">\(p_i = n\)</span> (因为 <span class="arithmatex">\(p_i\)</span> 必须 <span class="arithmatex">\(&lt;\max\)</span>)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p_i = n</span><script type="math/tex">p_i = n</script></span> (因为 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 必须 <span class="arithmatex"><span class="MathJax_Preview">&lt;\max</span><script type="math/tex"><\max</script></span>)</p>
 </li>
 </ol>
 <p>现在，我们来看 <code>jiangly</code> 的代码：</p>
@@ -5200,46 +5200,46 @@
         return ;
     }
 </code></pre></div>
-<p>你只检查了条件 1 (<span class="arithmatex">\(i=1\)</span>) 和条件 2 (<span class="arithmatex">\(i=n\)</span>)。</p>
-<p><strong>你遗漏了条件 3 (<span class="arithmatex">\(p_i = 1\)</span>) 和条件 4 (<span class="arithmatex">\(p_i = n\)</span>)！</strong></p>
-<p>这就是你 WA2 的关键原因。你的代码没有判掉一种不可能的情况，而是进入了构造环节，但你构造的操作（基于前缀/后缀最大值）无法覆盖这种不可能的情况，导致最终 <span class="arithmatex">\(s_i\)</span> 仍然是 <span class="arithmatex">\(0\)</span> 而 <span class="arithmatex">\(x_i\)</span> 是 <span class="arithmatex">\(1\)</span>。</p>
+<p>你只检查了条件 1 (<span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span>) 和条件 2 (<span class="arithmatex"><span class="MathJax_Preview">i=n</span><script type="math/tex">i=n</script></span>)。</p>
+<p><strong>你遗漏了条件 3 (<span class="arithmatex"><span class="MathJax_Preview">p_i = 1</span><script type="math/tex">p_i = 1</script></span>) 和条件 4 (<span class="arithmatex"><span class="MathJax_Preview">p_i = n</span><script type="math/tex">p_i = n</script></span>)！</strong></p>
+<p>这就是你 WA2 的关键原因。你的代码没有判掉一种不可能的情况，而是进入了构造环节，但你构造的操作（基于前缀/后缀最大值）无法覆盖这种不可能的情况，导致最终 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 仍然是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 而 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <hr />
 <h3 id="3">步骤 3：构造一个“万能”解</h3>
 <blockquote>
 <p>"你最多可以进行 5 次以下操作"</p>
 <p>"你不必最小化操作次数"</p>
 </blockquote>
-<p>这是本题最强烈的<strong>提示</strong>。它暗示我们：不要去为 <span class="arithmatex">\(x\)</span> 里的每一个 <span class="arithmatex">\(1\)</span> 精确地构造操作，那太复杂了。我们应该找到一个<strong>固定</strong>的、<strong>数量很少</strong>（<span class="arithmatex">\(\le 5\)</span>）的操作组合，这个组合“火力强大”，<strong>足以覆盖所有“可能”被设为 <span class="arithmatex">\(1\)</span> 的位置</strong>。</p>
-<p>如果 <span class="arithmatex">\(x_i = 1\)</span>，我们必须让 <span class="arithmatex">\(s_i = 1\)</span>。</p>
-<p>如果 <span class="arithmatex">\(x_i = 0\)</span>，我们不在乎 <span class="arithmatex">\(s_i\)</span> 是 <span class="arithmatex">\(0\)</span> 还是 <span class="arithmatex">\(1\)</span>。</p>
-<p>所以，我们的目标是：用 5 次操作，把<strong>所有</strong>“可能”的 <span class="arithmatex">\(i\)</span>（即那 4 个条件都不满足的 <span class="arithmatex">\(i\)</span>）都设为 <span class="arithmatex">\(1\)</span>。</p>
+<p>这是本题最强烈的<strong>提示</strong>。它暗示我们：不要去为 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 里的每一个 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 精确地构造操作，那太复杂了。我们应该找到一个<strong>固定</strong>的、<strong>数量很少</strong>（<span class="arithmatex"><span class="MathJax_Preview">\le 5</span><script type="math/tex">\le 5</script></span>）的操作组合，这个组合“火力强大”，<strong>足以覆盖所有“可能”被设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置</strong>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">x_i = 1</span><script type="math/tex">x_i = 1</script></span>，我们必须让 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">x_i = 0</span><script type="math/tex">x_i = 0</script></span>，我们不在乎 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 还是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
+<p>所以，我们的目标是：用 5 次操作，把<strong>所有</strong>“可能”的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>（即那 4 个条件都不满足的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>）都设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <h4 id="_7">怎么构造最“强”的操作？</h4>
 <ul>
 <li>
-<p><strong>位置上:</strong> <span class="arithmatex">\(l=1, r=n\)</span> 是最强的，它覆盖了 <span class="arithmatex">\(i \in [2, n-1]\)</span>。</p>
+<p><strong>位置上:</strong> <span class="arithmatex"><span class="MathJax_Preview">l=1, r=n</span><script type="math/tex">l=1, r=n</script></span> 是最强的，它覆盖了 <span class="arithmatex"><span class="MathJax_Preview">i \in [2, n-1]</span><script type="math/tex">i \in [2, n-1]</script></span>。</p>
 </li>
 <li>
-<p><strong>值上:</strong> 要让 <span class="arithmatex">\(\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)\)</span> 尽量容易满足，我们应该让这个值的区间 <span class="arithmatex">\(\max - \min\)</span> 最大。</p>
+<p><strong>值上:</strong> 要让 <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_i < \max(p_l, p_r)</script></span> 尽量容易满足，我们应该让这个值的区间 <span class="arithmatex"><span class="MathJax_Preview">\max - \min</span><script type="math/tex">\max - \min</script></span> 最大。</p>
 </li>
 <li>
-<p>什么能让区间最大？当然是 <span class="arithmatex">\(p_l = 1\)</span> 和 <span class="arithmatex">\(p_r = n\)</span>。</p>
+<p>什么能让区间最大？当然是 <span class="arithmatex"><span class="MathJax_Preview">p_l = 1</span><script type="math/tex">p_l = 1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p_r = n</span><script type="math/tex">p_r = n</script></span>。</p>
 </li>
 </ul>
-<p><strong>核心思路：</strong> 解决方案一定与<strong>值为 <span class="arithmatex">\(1\)</span> 的位置</strong>和<strong>值为 <span class="arithmatex">\(n\)</span> 的位置</strong>有关。</p>
+<p><strong>核心思路：</strong> 解决方案一定与<strong>值为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置</strong>和<strong>值为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置</strong>有关。</p>
 <p>我们来看 <code>jiangly</code> 的构造：</p>
 <ol>
 <li>
-<p>他首先找到了 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(n\)</span> 的位置（1-indexed）：</p>
+<p>他首先找到了 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置（1-indexed）：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>int a = std::find(p.begin(), p.end(), 1) - p.begin() + 1;
 int b = std::find(p.begin(), p.end(), n) - p.begin() + 1;
 </code></pre></div>
 </li>
 <li>
-<p>他确保 <span class="arithmatex">\(a \le b\)</span> ( <span class="arithmatex">\(a\)</span> 是 <span class="arithmatex">\(1\)</span> 的位置, <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(n\)</span> 的位置)。</p>
+<p>他确保 <span class="arithmatex"><span class="MathJax_Preview">a \le b</span><script type="math/tex">a \le b</script></span> ( <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置, <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置)。</p>
 </li>
 <li>
-<p>然后他输出一个固定的“操作组合”，<strong>完全不看 <span class="arithmatex">\(x\)</span> 是什么</strong>：</p>
+<p>然后他输出一个固定的“操作组合”，<strong>完全不看 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是什么</strong>：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>std::cout &lt;&lt; 5 &lt;&lt; &quot;\n&quot;;
 std::cout &lt;&lt; 1 &lt;&lt; &quot; &quot; &lt;&lt; a &lt;&lt; &quot;\n&quot;;
@@ -5248,39 +5248,39 @@ std::cout &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; b &lt;&lt; &quot;\n&quot;;
 std::cout &lt;&lt; a &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 </code></pre></div>
-<p><em>(注意：如果 <span class="arithmatex">\(a=1\)</span> 或 <span class="arithmatex">\(b=n\)</span>，有些操作 (l,r) 可能会有 <span class="arithmatex">\(l=r\)</span> 或 <span class="arithmatex">\(l, r\)</span> 靠得太近，导致 <span class="arithmatex">\(l &lt; i &lt; r\)</span> 无法满足，但这些操作是无害的。)</em></p>
+<p><em>(注意：如果 <span class="arithmatex"><span class="MathJax_Preview">a=1</span><script type="math/tex">a=1</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">b=n</span><script type="math/tex">b=n</script></span>，有些操作 (l,r) 可能会有 <span class="arithmatex"><span class="MathJax_Preview">l=r</span><script type="math/tex">l=r</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">l, r</span><script type="math/tex">l, r</script></span> 靠得太近，导致 <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span> 无法满足，但这些操作是无害的。)</em></p>
 </li>
 </ol>
 <h4 id="_8">为什么这个“万能组合”有效？</h4>
-<p>这个组合是一个“火力网”。它试图覆盖所有 <span class="arithmatex">\(i\)</span> 可能在的区域：</p>
+<p>这个组合是一个“火力网”。它试图覆盖所有 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 可能在的区域：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(i\)</span> 在 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 之间：<code>cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; "\n";</code> 这一对是“主力”，它使用了 <span class="arithmatex">\(p_a=1\)</span> 和 <span class="arithmatex">\(p_b=n\)</span>，提供了 <span class="arithmatex">\(1 &lt; p_i &lt; n\)</span> 这个最强的范围。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 之间：<code>cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; "\n";</code> 这一对是“主力”，它使用了 <span class="arithmatex"><span class="MathJax_Preview">p_a=1</span><script type="math/tex">p_a=1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p_b=n</span><script type="math/tex">p_b=n</script></span>，提供了 <span class="arithmatex"><span class="MathJax_Preview">1 &lt; p_i &lt; n</span><script type="math/tex">1 < p_i < n</script></span> 这个最强的范围。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(i\)</span> 在 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(a\)</span> 之间：<code>cout &lt;&lt; 1 &lt;&lt; " " &lt;&lt; a &lt;&lt; "\n";</code></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 之间：<code>cout &lt;&lt; 1 &lt;&lt; " " &lt;&lt; a &lt;&lt; "\n";</code></p>
 </li>
 <li>
-<p><span class="arithmatex">\(i\)</span> 在 <span class="arithmatex">\(b\)</span> 和 <span class="arithmatex">\(n\)</span> 之间：<code>cout &lt;&lt; b &lt;&lt; " " &lt;&lt; n &lt;&lt; "\n";</code></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之间：<code>cout &lt;&lt; b &lt;&lt; " " &lt;&lt; n &lt;&lt; "\n";</code></p>
 </li>
 <li>
-<p>以及 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(b\)</span> / <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(n\)</span> 之间的组合。</p>
+<p>以及 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> / <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之间的组合。</p>
 </li>
 </ul>
-<p>这 5 对 <span class="arithmatex">\((l, r)\)</span> 共同构成了一个<strong>充分条件</strong>。出题人已经保证，只要一个 <span class="arithmatex">\(i\)</span> 不是那 4 种“不可能”的情况，那么它<strong>一定</strong>会被这 5 对 <span class="arithmatex">\((l, r)\)</span> 中的至少一个所覆盖并设为 <span class="arithmatex">\(1\)</span>。</p>
+<p>这 5 对 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 共同构成了一个<strong>充分条件</strong>。出题人已经保证，只要一个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 不是那 4 种“不可能”的情况，那么它<strong>一定</strong>会被这 5 对 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 中的至少一个所覆盖并设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <h3 id="_9">总结</h3>
 <ol>
 <li>
-<p><strong>你的 WA2 原因：</strong> <code>-1</code> 的条件判断不完整，<strong>漏掉了 <span class="arithmatex">\(p_i=1\)</span> 和 <span class="arithmatex">\(p_i=n\)</span> 这两种情况</strong>。</p>
+<p><strong>你的 WA2 原因：</strong> <code>-1</code> 的条件判断不完整，<strong>漏掉了 <span class="arithmatex"><span class="MathJax_Preview">p_i=1</span><script type="math/tex">p_i=1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p_i=n</span><script type="math/tex">p_i=n</script></span> 这两种情况</strong>。</p>
 </li>
 <li>
 <p><strong><code>jiangly</code> 的解题思路：</strong></p>
 <ul>
 <li>
-<p><strong>排除法：</strong> 先用 4 个条件把所有 <span class="arithmatex">\(x_i=1\)</span> 但不可能实现的情况判为 <code>-1</code>。</p>
+<p><strong>排除法：</strong> 先用 4 个条件把所有 <span class="arithmatex"><span class="MathJax_Preview">x_i=1</span><script type="math/tex">x_i=1</script></span> 但不可能实现的情况判为 <code>-1</code>。</p>
 </li>
 <li>
-<p><strong>构造法：</strong> 如果没判 <code>-1</code>，说明所有 <span class="arithmatex">\(x_i=1\)</span> 的位置都是“可能”的。此时，<strong>直接输出一个固定的、足够强大的 5 操作组合</strong>，这个组合是基于 <span class="arithmatex">\(1\)</span> 的位置 (<span class="arithmatex">\(a\)</span>) 和 <span class="arithmatex">\(n\)</span> 的位置 (<span class="arithmatex">\(b\)</span>) 构造的。</p>
+<p><strong>构造法：</strong> 如果没判 <code>-1</code>，说明所有 <span class="arithmatex"><span class="MathJax_Preview">x_i=1</span><script type="math/tex">x_i=1</script></span> 的位置都是“可能”的。此时，<strong>直接输出一个固定的、足够强大的 5 操作组合</strong>，这个组合是基于 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置 (<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>) 和 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置 (<span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>) 构造的。</p>
 </li>
 </ul>
 </li>
@@ -5288,7 +5288,7 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 <p><strong>你的代码和 <code>jiangly</code> 代码的差距：</strong></p>
 <ul>
 <li>
-<p>你的 <code>WA</code> 代码试图自己去构造 <span class="arithmatex">\((l,r)\)</span>（用了前缀后缀最大值），这太复杂了，而且因为 <code>-1</code> 判错了，所以这个构造一定也是错的。</p>
+<p>你的 <code>WA</code> 代码试图自己去构造 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span>（用了前缀后缀最大值），这太复杂了，而且因为 <code>-1</code> 判错了，所以这个构造一定也是错的。</p>
 </li>
 <li>
 <p><code>jiangly</code> 的 <code>AC</code> 代码意识到这道题的<strong>关键是“排除不可能”</strong>，而不是“构造可行解”。构造可行解的部分，直接用了题目给的 5 次机会扔了一个“万能”解。</p>
@@ -5296,9 +5296,9 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 </ul>
 </li>
 </ol>
-<p>这个分析清楚吗？你想不想试试用 <span class="arithmatex">\(a\)</span>（<span class="arithmatex">\(1\)</span> 的位置）和 <span class="arithmatex">\(b\)</span>（<span class="arithmatex">\(n\)</span> 的位置）来重新思考一下你自己的构造？</p>
+<p>这个分析清楚吗？你想不想试试用 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置）和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>（<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置）来重新思考一下你自己的构造？</p>
 <h1 id="_10">这道题目在考什么</h1>
-<p>这道题非常典型，它在 <span class="arithmatex">\(1500 \sim 1700\)</span> 分段很常见。你在这道题上遇到困难（WA）并不可怕，相反，<strong>攻克它对你冲上 1600 分极有价值</strong>。</p>
+<p>这道题非常典型，它在 <span class="arithmatex"><span class="MathJax_Preview">1500 \sim 1700</span><script type="math/tex">1500 \sim 1700</script></span> 分段很常见。你在这道题上遇到困难（WA）并不可怕，相反，<strong>攻克它对你冲上 1600 分极有价值</strong>。</p>
 <p>我们来总结一下。</p>
 <h3 id="_11">🧐 这一题主要在考验什么？</h3>
 <p>这道题表面上是“构造”，但<strong>核心是“分析与排除”</strong>。它主要考验你两种能力：</p>
@@ -5310,18 +5310,18 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 <p>绝大多数构造题的第一个突破口，不是“我怎么构造”，而是“<strong>我怎么构造都做不到什么？</strong>”</p>
 </li>
 <li>
-<p>这道题的操作 <span class="arithmatex">\((l, r)\)</span> 有两个硬性限制：</p>
+<p>这道题的操作 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 有两个硬性限制：</p>
 <ol>
 <li>
-<p><strong>位置限制:</strong> <span class="arithmatex">\(l &lt; i &lt; r\)</span>。这直接排除了 <span class="arithmatex">\(i=1\)</span> 和 <span class="arithmatex">\(i=n\)</span> 永远不可能被设为 <span class="arithmatex">\(1\)</span>。</p>
+<p><strong>位置限制:</strong> <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span>。这直接排除了 <span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i=n</span><script type="math/tex">i=n</script></span> 永远不可能被设为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </li>
 <li>
-<p><strong>值限制:</strong> <span class="arithmatex">\(\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)\)</span>。这直接排除了 <span class="arithmatex">\(p_i = 1\)</span> (因为它不可能 <span class="arithmatex">\(&gt; \min\)</span>) 和 <span class="arithmatex">\(p_i = n\)</span> (因为它不可能 <span class="arithmatex">\(&lt; \max\)</span>) 的位置。</p>
+<p><strong>值限制:</strong> <span class="arithmatex"><span class="MathJax_Preview">\min(p_l, p_r) &lt; p_i &lt; \max(p_l, p_r)</span><script type="math/tex">\min(p_l, p_r) < p_i < \max(p_l, p_r)</script></span>。这直接排除了 <span class="arithmatex"><span class="MathJax_Preview">p_i = 1</span><script type="math/tex">p_i = 1</script></span> (因为它不可能 <span class="arithmatex"><span class="MathJax_Preview">&gt; \min</span><script type="math/tex">> \min</script></span>) 和 <span class="arithmatex"><span class="MathJax_Preview">p_i = n</span><script type="math/tex">p_i = n</script></span> (因为它不可能 <span class="arithmatex"><span class="MathJax_Preview">&lt; \max</span><script type="math/tex">< \max</script></span>) 的位置。</p>
 </li>
 </ol>
 </li>
 <li>
-<p>你的<strong>首要任务</strong>就是找出这 4 种“死穴”。一旦 <span class="arithmatex">\(x\)</span> 字符串要求你在“死穴”上取 <span class="arithmatex">\(1\)</span>，你就必须立刻输出 <code>-1</code>。你 WA 的原因就是因为只判断了前两种。</p>
+<p>你的<strong>首要任务</strong>就是找出这 4 种“死穴”。一旦 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 字符串要求你在“死穴”上取 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，你就必须立刻输出 <code>-1</code>。你 WA 的原因就是因为只判断了前两种。</p>
 </li>
 </ul>
 </li>
@@ -5340,20 +5340,20 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 </ul>
 </li>
 <li>
-<p>当你看到这种话，要立刻在脑中拉响警报：<strong>“这题不需要我为 <span class="arithmatex">\(x\)</span> 精确构造，而是要我找一个‘万能’的、火力足够猛的固定操作组合！”</strong></p>
+<p>当你看到这种话，要立刻在脑中拉响警报：<strong>“这题不需要我为 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 精确构造，而是要我找一个‘万能’的、火力足够猛的固定操作组合！”</strong></p>
 </li>
 <li>
-<p>我们的目标变成了：用 <span class="arithmatex">\(\le 5\)</span> 次操作，<strong>覆盖所有“可能”被点亮的 <span class="arithmatex">\(i\)</span></strong>。既然 <span class="arithmatex">\(x_i=0\)</span> 时 <span class="arithmatex">\(s_i\)</span> 可以是 <span class="arithmatex">\(1\)</span>，那我们就“用力过猛”一点，把所有能点亮的 <span class="arithmatex">\(i\)</span> 全都点亮。</p>
+<p>我们的目标变成了：用 <span class="arithmatex"><span class="MathJax_Preview">\le 5</span><script type="math/tex">\le 5</script></span> 次操作，<strong>覆盖所有“可能”被点亮的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></strong>。既然 <span class="arithmatex"><span class="MathJax_Preview">x_i=0</span><script type="math/tex">x_i=0</script></span> 时 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 可以是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，那我们就“用力过猛”一点，把所有能点亮的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 全都点亮。</p>
 </li>
 <li>
-<p><code>jiangly</code> 的代码就是这么做的。他找到了排列中最重要的两个“锚点”—— <span class="arithmatex">\(1\)</span> 的位置 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(n\)</span> 的位置 <span class="arithmatex">\(b\)</span> ——然后用 <span class="arithmatex">\((1, a), (1, b), (a, b), (a, n), (b, n)\)</span> 这几组操作（或类似的组合）构成了一个“火力网”，确保把所有“非死穴”的位置全都覆盖了。</p>
+<p><code>jiangly</code> 的代码就是这么做的。他找到了排列中最重要的两个“锚点”—— <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的位置 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的位置 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> ——然后用 <span class="arithmatex"><span class="MathJax_Preview">(1, a), (1, b), (a, b), (a, n), (b, n)</span><script type="math/tex">(1, a), (1, b), (a, b), (a, n), (b, n)</script></span> 这几组操作（或类似的组合）构成了一个“火力网”，确保把所有“非死穴”的位置全都覆盖了。</p>
 </li>
 </ul>
 </li>
 </ol>
 <hr />
 <h3 id="_12">🚀 以后我如何提升？</h3>
-<p>要从 <span class="arithmatex">\(1200\)</span> 提升到 <span class="arithmatex">\(1600\)</span>，你必须学会<strong>超越“算法模板”</strong>，开始掌握这类<strong>“思维型”</strong>题目。</p>
+<p>要从 <span class="arithmatex"><span class="MathJax_Preview">1200</span><script type="math/tex">1200</script></span> 提升到 <span class="arithmatex"><span class="MathJax_Preview">1600</span><script type="math/tex">1600</script></span>，你必须学会<strong>超越“算法模板”</strong>，开始掌握这类<strong>“思维型”</strong>题目。</p>
 <h4 id="1_1">1. 训练你的“逆向思维”</h4>
 <ul>
 <li>
@@ -5372,13 +5372,13 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 <h4 id="2">2. 识别“提示性约束”</h4>
 <ul>
 <li>
-<p>"最多 <span class="arithmatex">\(k\)</span> 次" (且 <span class="arithmatex">\(k\)</span> 很小, 比如 5, 8, 20) <span class="arithmatex">\(\rightarrow\)</span> 提示你答案可能是一个固定的、小的操作集，或者是一个简单的搜索/暴力。</p>
+<p>"最多 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 次" (且 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 很小, 比如 5, 8, 20) <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 提示你答案可能是一个固定的、小的操作集，或者是一个简单的搜索/暴力。</p>
 </li>
 <li>
-<p>"时间限制 3.0 秒" <span class="arithmatex">\(\rightarrow\)</span> 提示算法复杂度可能比较高，比如 <span class="arithmatex">\(O(n \sqrt{n})\)</span> 或者 <span class="arithmatex">\(O(n \log^2 n)\)</span>。</p>
+<p>"时间限制 3.0 秒" <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 提示算法复杂度可能比较高，比如 <span class="arithmatex"><span class="MathJax_Preview">O(n \sqrt{n})</span><script type="math/tex">O(n \sqrt{n})</script></span> 或者 <span class="arithmatex"><span class="MathJax_Preview">O(n \log^2 n)</span><script type="math/tex">O(n \log^2 n)</script></span>。</p>
 </li>
 <li>
-<p>"你不必最小化/最大化" <span class="arithmatex">\(\rightarrow\)</span> 强提示！说明你<strong>只需要找到一个可行解</strong>，赶紧去找“万能”的、最暴力的构造方法。</p>
+<p>"你不必最小化/最大化" <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 强提示！说明你<strong>只需要找到一个可行解</strong>，赶紧去找“万能”的、最暴力的构造方法。</p>
 </li>
 </ul>
 <h4 id="3-obsidian">3. 将其纳入你的 Obsidian 知识库</h4>
@@ -5432,10 +5432,10 @@ std::cout &lt;&lt; b &lt;&lt; &quot; &quot; &lt;&lt; n &lt;&lt; &quot;\n&quot;;
 <p>通过这种方式，你下次再遇到构造题时，就可以先打开 <code>[[思维模式 - 构造题]]</code> 这个笔记，它会立刻提醒你正确的思考路径。</p>
 <p>你觉得这个总结有帮助吗？我们是继续分析下一道题，还是你想找一道类似的“构造题”来练习一下这种思维？</p>
 <h1 id="cf">CF 题解思路</h1>
-<p>设整数 <span class="arithmatex">\(x\)</span> 在置换 <span class="arithmatex">\(p\)</span> 中的位置为 <span class="arithmatex">\(pos_x\)</span> 。让我们看看对于哪些索引 <span class="arithmatex">\(i\)</span> ，我们永远不能将 <span class="arithmatex">\(s_i\)</span> 设置为 <span class="arithmatex">\(1\)</span> ，即使有无限多的操作。</p>
-<p>首先，在操作 <span class="arithmatex">\((l, r)\)</span> 中，我们只考虑索引 <span class="arithmatex">\(i\)</span> ，使得 <span class="arithmatex">\(l &lt; i &lt; r\)</span> 。这意味着我们永远不能将 <span class="arithmatex">\(s_1\)</span> 或 <span class="arithmatex">\(s_n\)</span> 设置为 <span class="arithmatex">\(1\)</span> 。此外，我们只考虑指数 <span class="arithmatex">\(i\)</span> ，使得 <span class="arithmatex">\(p_i\)</span> 在 <span class="arithmatex">\(p_l\)</span> 和 <span class="arithmatex">\(p_r\)</span> 之间，但不等于这些。这意味着我们永远不能将 <span class="arithmatex">\(s_{pos_1}\)</span> 或 <span class="arithmatex">\(s_{pos_n}\)</span> 设置为 <span class="arithmatex">\(1\)</span> 。通常，如果 <span class="arithmatex">\(x_1 = 1\)</span> 、 <span class="arithmatex">\(x_n = 1\)</span> 、 <span class="arithmatex">\(x_{pos_1} = 1\)</span> 或 <span class="arithmatex">\(x_{pos_n} = 1\)</span> ，则无法解决问题。现在我将证明，对于任何二进制串 <span class="arithmatex">\(x\)</span> ，使得 <span class="arithmatex">\(x_1 = x_n = x_{pos_1} = x_{pos_n} = 0\)</span> ，在 <span class="arithmatex">\(5\)</span> 运算中，该问题总是可解的。</p>
-<p>WLOG，假设 <span class="arithmatex">\(pos_1 &lt; pos_n\)</span> 。考虑使用 <span class="arithmatex">\(pos_1\)</span> 和 <span class="arithmatex">\(pos_n\)</span> 作为我们操作的端点是很自然的。</p>
-<p>例如，通过使用操作 <span class="arithmatex">\((1, pos_1)\)</span> 和 <span class="arithmatex">\((1, pos_n)\)</span> ，我们将为每个 <span class="arithmatex">\(1 &lt; i &lt; pos_1\)</span> 设置 <span class="arithmatex">\(s_i = 1\)</span> 。同样，对于操作 <span class="arithmatex">\((pos_1, n)\)</span> 和 <span class="arithmatex">\((pos_n, n)\)</span> ，我们将为每个 <span class="arithmatex">\(pos_n &lt; i &lt; n\)</span> 设置 <span class="arithmatex">\(s_i = 1\)</span> 。通过使用操作 <span class="arithmatex">\((pos_1, pos_n)\)</span> ，我们为每个 <span class="arithmatex">\(pos_1 &lt; i &lt; pos_n\)</span> 设置了 <span class="arithmatex">\(s_i = 1\)</span> 。通过这些 <span class="arithmatex">\(5\)</span> 操作，我们最终为 <span class="arithmatex">\((1, pos_1) \cup (pos_1, pos_n) \cup (pos_n, n)\)</span> 中的每个 <span class="arithmatex">\(i\)</span> 设置了 <span class="arithmatex">\(s_i = 1\)</span> ，这保证我们已经解决了问题。</p>
+<p>设整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 在置换 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 中的位置为 <span class="arithmatex"><span class="MathJax_Preview">pos_x</span><script type="math/tex">pos_x</script></span> 。让我们看看对于哪些索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> ，我们永远不能将 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> ，即使有无限多的操作。</p>
+<p>首先，在操作 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 中，我们只考虑索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> ，使得 <span class="arithmatex"><span class="MathJax_Preview">l &lt; i &lt; r</span><script type="math/tex">l < i < r</script></span> 。这意味着我们永远不能将 <span class="arithmatex"><span class="MathJax_Preview">s_1</span><script type="math/tex">s_1</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">s_n</span><script type="math/tex">s_n</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 。此外，我们只考虑指数 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> ，使得 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">p_l</span><script type="math/tex">p_l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p_r</span><script type="math/tex">p_r</script></span> 之间，但不等于这些。这意味着我们永远不能将 <span class="arithmatex"><span class="MathJax_Preview">s_{pos_1}</span><script type="math/tex">s_{pos_1}</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">s_{pos_n}</span><script type="math/tex">s_{pos_n}</script></span> 设置为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 。通常，如果 <span class="arithmatex"><span class="MathJax_Preview">x_1 = 1</span><script type="math/tex">x_1 = 1</script></span> 、 <span class="arithmatex"><span class="MathJax_Preview">x_n = 1</span><script type="math/tex">x_n = 1</script></span> 、 <span class="arithmatex"><span class="MathJax_Preview">x_{pos_1} = 1</span><script type="math/tex">x_{pos_1} = 1</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">x_{pos_n} = 1</span><script type="math/tex">x_{pos_n} = 1</script></span> ，则无法解决问题。现在我将证明，对于任何二进制串 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> ，使得 <span class="arithmatex"><span class="MathJax_Preview">x_1 = x_n = x_{pos_1} = x_{pos_n} = 0</span><script type="math/tex">x_1 = x_n = x_{pos_1} = x_{pos_n} = 0</script></span> ，在 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 运算中，该问题总是可解的。</p>
+<p>WLOG，假设 <span class="arithmatex"><span class="MathJax_Preview">pos_1 &lt; pos_n</span><script type="math/tex">pos_1 < pos_n</script></span> 。考虑使用 <span class="arithmatex"><span class="MathJax_Preview">pos_1</span><script type="math/tex">pos_1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">pos_n</span><script type="math/tex">pos_n</script></span> 作为我们操作的端点是很自然的。</p>
+<p>例如，通过使用操作 <span class="arithmatex"><span class="MathJax_Preview">(1, pos_1)</span><script type="math/tex">(1, pos_1)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(1, pos_n)</span><script type="math/tex">(1, pos_n)</script></span> ，我们将为每个 <span class="arithmatex"><span class="MathJax_Preview">1 &lt; i &lt; pos_1</span><script type="math/tex">1 < i < pos_1</script></span> 设置 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span> 。同样，对于操作 <span class="arithmatex"><span class="MathJax_Preview">(pos_1, n)</span><script type="math/tex">(pos_1, n)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(pos_n, n)</span><script type="math/tex">(pos_n, n)</script></span> ，我们将为每个 <span class="arithmatex"><span class="MathJax_Preview">pos_n &lt; i &lt; n</span><script type="math/tex">pos_n < i < n</script></span> 设置 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span> 。通过使用操作 <span class="arithmatex"><span class="MathJax_Preview">(pos_1, pos_n)</span><script type="math/tex">(pos_1, pos_n)</script></span> ，我们为每个 <span class="arithmatex"><span class="MathJax_Preview">pos_1 &lt; i &lt; pos_n</span><script type="math/tex">pos_1 < i < pos_n</script></span> 设置了 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span> 。通过这些 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 操作，我们最终为 <span class="arithmatex"><span class="MathJax_Preview">(1, pos_1) \cup (pos_1, pos_n) \cup (pos_n, n)</span><script type="math/tex">(1, pos_1) \cup (pos_1, pos_n) \cup (pos_n, n)</script></span> 中的每个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 设置了 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span> ，这保证我们已经解决了问题。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>

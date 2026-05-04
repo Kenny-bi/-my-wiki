@@ -4447,12 +4447,12 @@
 内存限制：256 MB</p>
 <h2 id="_1">问题描述</h2>
 <p>你盯着电脑屏幕太久了，是时候休息一下去活动活动了。</p>
-<p>你的屏幕是一条长度为 <span class="arithmatex">\(a\)</span> 的线段，上面显示着 <span class="arithmatex">\(n\)</span> 个标签页。你希望通过点击每个标签页右端点的 "x" 来关闭所有标签页。</p>
-<p>每个标签页的长度为 <span class="arithmatex">\(len = \min(b, \frac{a}{m})\)</span>，其中 <span class="arithmatex">\(m\)</span> 是当前剩余的标签页数量。这些标签页总是从屏幕左端点开始紧密排列，也就是说，"x" 的位置分别在距离左端点 <span class="arithmatex">\(len, 2 \cdot len, 3 \cdot len, \dots, m \cdot len\)</span> 单位处。请注意，当你关闭标签页时，每个标签页的长度会发生变化。</p>
+<p>你的屏幕是一条长度为 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的线段，上面显示着 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个标签页。你希望通过点击每个标签页右端点的 "x" 来关闭所有标签页。</p>
+<p>每个标签页的长度为 <span class="arithmatex"><span class="MathJax_Preview">len = \min(b, \frac{a}{m})</span><script type="math/tex">len = \min(b, \frac{a}{m})</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 是当前剩余的标签页数量。这些标签页总是从屏幕左端点开始紧密排列，也就是说，"x" 的位置分别在距离左端点 <span class="arithmatex"><span class="MathJax_Preview">len, 2 \cdot len, 3 \cdot len, \dots, m \cdot len</span><script type="math/tex">len, 2 \cdot len, 3 \cdot len, \dots, m \cdot len</script></span> 单位处。请注意，当你关闭标签页时，每个标签页的长度会发生变化。</p>
 <p>你的光标初始位于屏幕的左端点。你想知道关闭所有标签页所需的最少鼠标移动次数是多少。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例包含一行三个整数 <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \leq b \leq a \leq 10^9\)</span>, <span class="arithmatex">\(1 \leq n \leq 10^9\)</span>）。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例包含一行三个整数 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>, <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>, <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq b \leq a \leq 10^9</span><script type="math/tex">1 \leq b \leq a \leq 10^9</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 10^9</span><script type="math/tex">1 \leq n \leq 10^9</script></span>）。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数 —— 关闭所有标签页所需的最少鼠标移动次数。</p>
 <h2 id="_4">样例输入</h2>

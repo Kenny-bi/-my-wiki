@@ -4374,10 +4374,10 @@
 <p>典型的“枚举删除一个点”的问题。</p>
 </li>
 <li>
-<p><strong>优点</strong>：你把总和 <code>tot</code> 先算出来，然后 <span class="arithmatex">\(O(1)\)</span> 计算删除每个点后的变化，这是处理此类问题的标准解法。</p>
+<p><strong>优点</strong>：你把总和 <code>tot</code> 先算出来，然后 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 计算删除每个点后的变化，这是处理此类问题的标准解法。</p>
 </li>
 <li>
-<p><strong>代码细节</strong>：逻辑判断 <code>if(i==0)</code>, <code>else if(i==n-1)</code> 处理边界非常稳健。时间复杂度 <span class="arithmatex">\(O(N)\)</span>，没有任何问题。</p>
+<p><strong>代码细节</strong>：逻辑判断 <code>if(i==0)</code>, <code>else if(i==n-1)</code> 处理边界非常稳健。时间复杂度 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>，没有任何问题。</p>
 </li>
 </ul>
 </li>
@@ -4392,18 +4392,18 @@
 <p><strong>诊断</strong>：</p>
 <ul>
 <li>
-<p>你的做法是 <strong>二分答案 (Binary Search)</strong>。你二分了 <span class="arithmatex">\(x\)</span> 的大小，然后用 <code>check</code> 函数去验证。</p>
+<p>你的做法是 <strong>二分答案 (Binary Search)</strong>。你二分了 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的大小，然后用 <code>check</code> 函数去验证。</p>
 </li>
 <li>
 <p><strong>为什么险？</strong> 这道题其实是一个构造/数学题，不是典型的单调性题目（虽然在这个特定约束下，二分能过）。</p>
 </li>
 <li>
 <p>数学正解：</p>
-<p>题目要求 <span class="arithmatex">\(a_i \pmod x\)</span> 相同，其实就是要求所有 <span class="arithmatex">\(a_i\)</span> 对 <span class="arithmatex">\(x\)</span> 同余。这意味着任意两个数的差 <span class="arithmatex">\(|a_i - a_j|\)</span> 必须能被 <span class="arithmatex">\(x\)</span> 整除。</p>
-<p>要让 <span class="arithmatex">\(k\)</span> 最大，其实最简单的构造是：让所有数模 <span class="arithmatex">\(x\)</span> 后都等于 <span class="arithmatex">\(a_{min}\)</span>（最小值）。</p>
-<p>那么条件就变成了：对于所有 <span class="arithmatex">\(i\)</span>，<span class="arithmatex">\((a_i - a_{min})\)</span> 必须能被 <span class="arithmatex">\(x\)</span> 整除。</p>
-<p>所以，<span class="arithmatex">\(x\)</span> 必须是所有 <span class="arithmatex">\((a_i - a_{min})\)</span> 的公约数。</p>
-<p>实际上，只要取 <span class="arithmatex">\(x = a_2 - a_1\)</span> (排序后) 或者直接取 <span class="arithmatex">\(x=a_1\)</span> 往往就能找到最优解。</p>
+<p>题目要求 <span class="arithmatex"><span class="MathJax_Preview">a_i \pmod x</span><script type="math/tex">a_i \pmod x</script></span> 相同，其实就是要求所有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 对 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 同余。这意味着任意两个数的差 <span class="arithmatex"><span class="MathJax_Preview">|a_i - a_j|</span><script type="math/tex">|a_i - a_j|</script></span> 必须能被 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 整除。</p>
+<p>要让 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 最大，其实最简单的构造是：让所有数模 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 后都等于 <span class="arithmatex"><span class="MathJax_Preview">a_{min}</span><script type="math/tex">a_{min}</script></span>（最小值）。</p>
+<p>那么条件就变成了：对于所有 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，<span class="arithmatex"><span class="MathJax_Preview">(a_i - a_{min})</span><script type="math/tex">(a_i - a_{min})</script></span> 必须能被 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 整除。</p>
+<p>所以，<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 必须是所有 <span class="arithmatex"><span class="MathJax_Preview">(a_i - a_{min})</span><script type="math/tex">(a_i - a_{min})</script></span> 的公约数。</p>
+<p>实际上，只要取 <span class="arithmatex"><span class="MathJax_Preview">x = a_2 - a_1</span><script type="math/tex">x = a_2 - a_1</script></span> (排序后) 或者直接取 <span class="arithmatex"><span class="MathJax_Preview">x=a_1</span><script type="math/tex">x=a_1</script></span> 往往就能找到最优解。</p>
 </li>
 <li>
 <p><strong>总结</strong>：你的二分虽然过了，属于“乱拳打死老师傅”，但在更强的测试数据下可能会因为缺乏严格单调性而挂掉。不过在赛场上，<strong>能 AC 就是好代码</strong>。</p>
@@ -4432,18 +4432,18 @@
 <li>
 <p>正确策略（分层构造）：</p>
 <p>为了让总分最大，我们要让低位的 1 活得越久越好。</p>
-<p>比如 <span class="arithmatex">\(N=3\)</span>，我们希望 bit 0 (最后一位) 尽可能晚变成 0。</p>
+<p>比如 <span class="arithmatex"><span class="MathJax_Preview">N=3</span><script type="math/tex">N=3</script></span>，我们希望 bit 0 (最后一位) 尽可能晚变成 0。</p>
 <p>只要 bit 0 是 1，前缀 AND 的结果至少是 1。</p>
 <p>构造逻辑：</p>
 <ol>
 <li>
-<p>先输出全 1 (<span class="arithmatex">\(2^n-1\)</span>)。</p>
+<p>先输出全 1 (<span class="arithmatex"><span class="MathJax_Preview">2^n-1</span><script type="math/tex">2^n-1</script></span>)。</p>
 </li>
 <li>
-<p>然后，我们按“层”剥离。先剥离 bit <span class="arithmatex">\(n-1\)</span>，再剥离 bit <span class="arithmatex">\(n-2\)</span> ... 最后剥离 bit 0。</p>
+<p>然后，我们按“层”剥离。先剥离 bit <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>，再剥离 bit <span class="arithmatex"><span class="MathJax_Preview">n-2</span><script type="math/tex">n-2</script></span> ... 最后剥离 bit 0。</p>
 </li>
 <li>
-<p>在剥离 bit <span class="arithmatex">\(k\)</span> 时，我们输出所有 <strong>bit <span class="arithmatex">\(k\)</span> 为 0，但比 <span class="arithmatex">\(k\)</span> 低的位全是 1</strong> 的数。这样能保证低位的贡献一直延续到最后。</p>
+<p>在剥离 bit <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 时，我们输出所有 <strong>bit <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 为 0，但比 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 低的位全是 1</strong> 的数。这样能保证低位的贡献一直延续到最后。</p>
 </li>
 </ol>
 </li>
@@ -4496,13 +4496,13 @@
 <p><strong>核心逻辑</strong>：</p>
 <ol>
 <li>
-<p>如果总票数 <span class="arithmatex">\(x+y &lt; \sum p_i\)</span>，直接 <code>NO</code>。</p>
+<p>如果总票数 <span class="arithmatex"><span class="MathJax_Preview">x+y &lt; \sum p_i</span><script type="math/tex">x+y < \sum p_i</script></span>，直接 <code>NO</code>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(s\)</span> 全是 0 或全是 1（比如全是 B 党赢）：那么 B 党在每个区至少要比 A 党多 1 票。累加起来就是 <span class="arithmatex">\(y \ge x + n\)</span>。不满足就 <code>NO</code>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 全是 0 或全是 1（比如全是 B 党赢）：那么 B 党在每个区至少要比 A 党多 1 票。累加起来就是 <span class="arithmatex"><span class="MathJax_Preview">y \ge x + n</span><script type="math/tex">y \ge x + n</script></span>。不满足就 <code>NO</code>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(s\)</span> 有 0 也有 1（混合赢）：只要满足基本票数够分就行（即情况 1 的检查通过就是 <code>YES</code>）。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 有 0 也有 1（混合赢）：只要满足基本票数够分就行（即情况 1 的检查通过就是 <code>YES</code>）。</p>
 </li>
 </ol>
 </li>
@@ -4514,51 +4514,54 @@
 <h3 id="h-blackslex-and-plants-">H. Blackslex and Plants (差分 + 拆位) - <strong>重点解析</strong></h3>
 <p>这题是你最感兴趣的，也是最能提升你能力的一道题。</p>
 <h4 id="1">1. 题目本质分析</h4>
-<p>题目要求给区间 <span class="arithmatex">\([l, r]\)</span> 里的每个位置 <span class="arithmatex">\(i\)</span> 加上 <span class="arithmatex">\(f(i - l + 1)\)</span> 的水。</p>
-<p>公式是：<span class="arithmatex">\(f(x) = x \cdot \text{lowbit}(x)\)</span>。</p>
-<p>数据范围 <span class="arithmatex">\(N, Q \le 2 \cdot 10^5\)</span>，暴力 <span class="arithmatex">\(O(NQ)\)</span> 肯定超时。我们需要 <span class="arithmatex">\(O(N \log N)\)</span> 或 <span class="arithmatex">\(O(N)\)</span>。</p>
+<p>题目要求给区间 <span class="arithmatex"><span class="MathJax_Preview">[l, r]</span><script type="math/tex">[l, r]</script></span> 里的每个位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 加上 <span class="arithmatex"><span class="MathJax_Preview">f(i - l + 1)</span><script type="math/tex">f(i - l + 1)</script></span> 的水。</p>
+<p>公式是：<span class="arithmatex"><span class="MathJax_Preview">f(x) = x \cdot \text{lowbit}(x)</span><script type="math/tex">f(x) = x \cdot \text{lowbit}(x)</script></span>。</p>
+<p>数据范围 <span class="arithmatex"><span class="MathJax_Preview">N, Q \le 2 \cdot 10^5</span><script type="math/tex">N, Q \le 2 \cdot 10^5</script></span>，暴力 <span class="arithmatex"><span class="MathJax_Preview">O(NQ)</span><script type="math/tex">O(NQ)</script></span> 肯定超时。我们需要 <span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>。</p>
 <h4 id="2">2. 核心难点与突破口</h4>
-<p>函数 <span class="arithmatex">\(f(x)\)</span> 看起来很不规律：<span class="arithmatex">\(1\to1, 2\to4, 3\to3, 4\to16, 5\to5, 6\to12...\)</span></p>
+<p>函数 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 看起来很不规律：<span class="arithmatex"><span class="MathJax_Preview">1\to1, 2\to4, 3\to3, 4\to16, 5\to5, 6\to12...</span><script type="math/tex">1\to1, 2\to4, 3\to3, 4\to16, 5\to5, 6\to12...</script></span></p>
 <p>但是，位运算题目有个万能解法：拆位（按二进制位独立处理）。</p>
-<p>我们可以把 <span class="arithmatex">\(\text{lowbit}(x)\)</span> 的贡献拆开看。</p>
-<p><span class="arithmatex">\(\text{lowbit}(x)\)</span> 等于 <span class="arithmatex">\(x\)</span> 二进制下最低的那个 1 代表的值。</p>
+<p>我们可以把 <span class="arithmatex"><span class="MathJax_Preview">\text{lowbit}(x)</span><script type="math/tex">\text{lowbit}(x)</script></span> 的贡献拆开看。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{lowbit}(x)</span><script type="math/tex">\text{lowbit}(x)</script></span> 等于 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 二进制下最低的那个 1 代表的值。</p>
 <p>也就是说：</p>
 <ul>
 <li>
-<p>如果 <span class="arithmatex">\(x\)</span> 的第 0 位是 1（奇数），<span class="arithmatex">\(\text{lowbit}(x) = 2^0 = 1\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的第 0 位是 1（奇数），<span class="arithmatex"><span class="MathJax_Preview">\text{lowbit}(x) = 2^0 = 1</span><script type="math/tex">\text{lowbit}(x) = 2^0 = 1</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(x\)</span> 的第 1 位是 1 且第 0 位是 0（形如 ...10），<span class="arithmatex">\(\text{lowbit}(x) = 2^1 = 2\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的第 1 位是 1 且第 0 位是 0（形如 ...10），<span class="arithmatex"><span class="MathJax_Preview">\text{lowbit}(x) = 2^1 = 2</span><script type="math/tex">\text{lowbit}(x) = 2^1 = 2</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(x\)</span> 的第 <span class="arithmatex">\(k\)</span> 位是 1 且低于 <span class="arithmatex">\(k\)</span> 的位全是 0，<span class="arithmatex">\(\text{lowbit}(x) = 2^k\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 1 且低于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的位全是 0，<span class="arithmatex"><span class="MathJax_Preview">\text{lowbit}(x) = 2^k</span><script type="math/tex">\text{lowbit}(x) = 2^k</script></span>。</p>
 </li>
 </ul>
 <p>转化思路：</p>
-<p>我们不直接加 <span class="arithmatex">\(f(x)\)</span>，而是统计每一个 bit k 对区间的贡献。</p>
-<p>对于第 <span class="arithmatex">\(k\)</span> 位（值 <span class="arithmatex">\(2^k\)</span>），它什么时候会贡献？</p>
-<p>当 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(2^k\)</span> 的倍数，且不是 <span class="arithmatex">\(2^{k+1}\)</span> 的倍数时吗？</p>
+<p>我们不直接加 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>，而是统计每一个 bit k 对区间的贡献。</p>
+<p>对于第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位（值 <span class="arithmatex"><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>），它什么时候会贡献？</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 的倍数，且不是 <span class="arithmatex"><span class="MathJax_Preview">2^{k+1}</span><script type="math/tex">2^{k+1}</script></span> 的倍数时吗？</p>
 <p>其实有一个更方便的公式：</p>
-<div class="arithmatex">\[\text{lowbit}(x) = \sum_{k=0}^{18} (\text{若 } x \bmod 2^{k+1} == 2^k \text{ 则 } 2^k \text{ 否则 } 0)\]</div>
-<p>这意味着，我们可以建立 19 个差分数组（对应 <span class="arithmatex">\(k=0 \dots 18\)</span>）。</p>
-<p>对于第 <span class="arithmatex">\(k\)</span> 层，我们只关心那些满足 <span class="arithmatex">\(x \bmod 2^{k+1} == 2^k\)</span> 的 <span class="arithmatex">\(x\)</span>。</p>
-<p>在这些位置上，我们要加上 <span class="arithmatex">\(x \cdot 2^k\)</span>。</p>
-<p>注意 <span class="arithmatex">\(x = i - l + 1\)</span>，代入后变成：<span class="arithmatex">\((i - l + 1) \cdot 2^k\)</span>。</p>
-<p>这是一个等差数列（关于 <span class="arithmatex">\(i\)</span> 的线性函数），公差是 <span class="arithmatex">\(2^k\)</span>，但只加在特定步长的位置上。</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">\text{lowbit}(x) = \sum_{k=0}^{18} (\text{若 } x \bmod 2^{k+1} == 2^k \text{ 则 } 2^k \text{ 否则 } 0)</div>
+<script type="math/tex; mode=display">\text{lowbit}(x) = \sum_{k=0}^{18} (\text{若 } x \bmod 2^{k+1} == 2^k \text{ 则 } 2^k \text{ 否则 } 0)</script>
+</div>
+<p>这意味着，我们可以建立 19 个差分数组（对应 <span class="arithmatex"><span class="MathJax_Preview">k=0 \dots 18</span><script type="math/tex">k=0 \dots 18</script></span>）。</p>
+<p>对于第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 层，我们只关心那些满足 <span class="arithmatex"><span class="MathJax_Preview">x \bmod 2^{k+1} == 2^k</span><script type="math/tex">x \bmod 2^{k+1} == 2^k</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
+<p>在这些位置上，我们要加上 <span class="arithmatex"><span class="MathJax_Preview">x \cdot 2^k</span><script type="math/tex">x \cdot 2^k</script></span>。</p>
+<p>注意 <span class="arithmatex"><span class="MathJax_Preview">x = i - l + 1</span><script type="math/tex">x = i - l + 1</script></span>，代入后变成：<span class="arithmatex"><span class="MathJax_Preview">(i - l + 1) \cdot 2^k</span><script type="math/tex">(i - l + 1) \cdot 2^k</script></span>。</p>
+<p>这是一个等差数列（关于 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的线性函数），公差是 <span class="arithmatex"><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>，但只加在特定步长的位置上。</p>
 <h4 id="3-strided-difference-array">3. 步长差分数组 (Strided Difference Array)</h4>
-<p>对于第 <span class="arithmatex">\(k\)</span> 层，步长（stride）是 <span class="arithmatex">\(S = 2^{k+1}\)</span>。</p>
-<p>我们需要在满足条件的 <span class="arithmatex">\(i\)</span> 上加值。这些 <span class="arithmatex">\(i\)</span> 会形成一个等差数列：<span class="arithmatex">\(start, start+S, start+2S...\)</span></p>
-<p>如何在数组上给“每隔 <span class="arithmatex">\(S\)</span> 个位置”的数加上一个等差数列？</p>
+<p>对于第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 层，步长（stride）是 <span class="arithmatex"><span class="MathJax_Preview">S = 2^{k+1}</span><script type="math/tex">S = 2^{k+1}</script></span>。</p>
+<p>我们需要在满足条件的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 上加值。这些 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 会形成一个等差数列：<span class="arithmatex"><span class="MathJax_Preview">start, start+S, start+2S...</span><script type="math/tex">start, start+S, start+2S...</script></span></p>
+<p>如何在数组上给“每隔 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 个位置”的数加上一个等差数列？</p>
 <p>我们需要带步长的二阶差分。</p>
-<p>但这里有个更简单的做法，因为 <span class="arithmatex">\(N\)</span> 只有 <span class="arithmatex">\(2 \cdot 10^5\)</span>，总共 18 层。</p>
+<p>但这里有个更简单的做法，因为 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 只有 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>，总共 18 层。</p>
 <p>我们可以开 vector<int> D[20][N] 吗？内存会炸。</p>
-<p>但是！注意步长 <span class="arithmatex">\(S=2^{k+1}\)</span>。</p>
-<p>对于第 <span class="arithmatex">\(k\)</span> 层，我们其实是在对模 <span class="arithmatex">\(S\)</span> 同余的若干条“链”进行操作。</p>
+<p>但是！注意步长 <span class="arithmatex"><span class="MathJax_Preview">S=2^{k+1}</span><script type="math/tex">S=2^{k+1}</script></span>。</p>
+<p>对于第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 层，我们其实是在对模 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 同余的若干条“链”进行操作。</p>
 <p>最简单的实现方式：</p>
-<p>不开二维数组，而是开 19 个 vector，每个 vector 大小为 <span class="arithmatex">\(N\)</span>。</p>
-<p>D_val[k][i] 表示第 <span class="arithmatex">\(k\)</span> 层，位置 <span class="arithmatex">\(i\)</span> 的差分值。</p>
-<p>注意：这里的差分不是 <span class="arithmatex">\(a[i] - a[i-1]\)</span>，而是 <span class="arithmatex">\(a[i] - a[i-S]\)</span>（步长差分）。</p>
-<p>这样，区间修改就变成了 <span class="arithmatex">\(O(1)\)</span> 的端点操作。</p>
+<p>不开二维数组，而是开 19 个 vector，每个 vector 大小为 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>。</p>
+<p>D_val[k][i] 表示第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 层，位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的差分值。</p>
+<p>注意：这里的差分不是 <span class="arithmatex"><span class="MathJax_Preview">a[i] - a[i-1]</span><script type="math/tex">a[i] - a[i-1]</script></span>，而是 <span class="arithmatex"><span class="MathJax_Preview">a[i] - a[i-S]</span><script type="math/tex">a[i] - a[i-S]</script></span>（步长差分）。</p>
+<p>这样，区间修改就变成了 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 的端点操作。</p>
 <h4 id="4-h">4. H题 最终代码实现 (带详细注释)</h4>
 <p>建议仔细阅读这个代码，这是处理此类“周期性区间加法”的模板。</p>
 <p>C++</p>
@@ -4676,7 +4679,7 @@ signed main(){
 <p><strong>H (植物)</strong>: 这是一个经典的 <strong>按位拆分 + 步长差分</strong> 问题。</p>
 <ul>
 <li>
-<p><strong>技巧</strong>：遇到 <span class="arithmatex">\(f(x)\)</span> 与 <code>lowbit</code> 有关，或者与 <span class="arithmatex">\(2^k\)</span> 倍数有关的区间操作，第一反应就是<strong>按 bit 分层</strong>。</p>
+<p><strong>技巧</strong>：遇到 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 与 <code>lowbit</code> 有关，或者与 <span class="arithmatex"><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> 倍数有关的区间操作，第一反应就是<strong>按 bit 分层</strong>。</p>
 </li>
 <li>
 <p><strong>技巧</strong>：遇到“每隔 k 个数加一个数”，使用 <code>a[i] += a[i-k]</code> 这种步长前缀和。</p>

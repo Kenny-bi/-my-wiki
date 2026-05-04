@@ -2214,10 +2214,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p_i" class="md-nav__link">
+  <a href="#p_ip_i" class="md-nav__link">
     <span class="md-ellipsis">
       
-        条件二：总票数够填满所有 \(p_i\) 吗？
+        条件二：总票数够填满所有 p_ip_i 吗？
       
     </span>
   </a>
@@ -4589,10 +4589,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p_i" class="md-nav__link">
+  <a href="#p_ip_i" class="md-nav__link">
     <span class="md-ellipsis">
       
-        条件二：总票数够填满所有 \(p_i\) 吗？
+        条件二：总票数够填满所有 p_ip_i 吗？
       
     </span>
   </a>
@@ -4667,24 +4667,24 @@
 内存限制：每测试点 256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
 <p>在尝试使用固定长度的比特串的 De Bruijn 序列搭讪女孩失败后，Blackslex 将注意力转向了政治。</p>
-<p>由于其高魅力，他现在负责为自己的国家的 <span class="arithmatex">\(n\)</span> 个选区绘制边界。在 Blackslex 的国家，有 <span class="arithmatex">\(x\)</span> 个支持 A 党的选民和 <span class="arithmatex">\(y\)</span> 个支持 B 党的选民。凭借他惊人的绘图技巧，他可以将任何政党的选民分配到他选择的任何选区。</p>
-<p>他与比特串的渊源让他思考，是否能够分配选民，使得每个选区的胜者遵循某种特定的比特串模式。为了避免引起怀疑，他还必须为每个选区分配至少 <span class="arithmatex">\(p_i\)</span> 名选民。请告诉他这是否可能！</p>
-<p>形式化地，给定一个长度为 <span class="arithmatex">\(n\)</span> 的二进制字符串 <span class="arithmatex">\(s\)</span>，一个长度为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(p\)</span>，以及两个整数 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>。</p>
-<p>你需要判断是否存在两个长度为 <span class="arithmatex">\(n\)</span> 的非负整数数组 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>，满足以下条件：
-1. <span class="arithmatex">\(a_1 + a_2 + \dots + a_n = x\)</span>
-2. <span class="arithmatex">\(b_1 + b_2 + \dots + b_n = y\)</span>
-3. 对于每个 <span class="arithmatex">\(1 \le i \le n\)</span>，<span class="arithmatex">\(a_i + b_i \ge p_i\)</span>
-4. 对于每个 <span class="arithmatex">\(1 \le i \le n\)</span>：
-   - 如果 <span class="arithmatex">\(s_i = 0\)</span>，则 <span class="arithmatex">\(a_i &gt; b_i\)</span>
-   - 如果 <span class="arithmatex">\(s_i = 1\)</span>，则 <span class="arithmatex">\(b_i &gt; a_i\)</span></p>
+<p>由于其高魅力，他现在负责为自己的国家的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个选区绘制边界。在 Blackslex 的国家，有 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 个支持 A 党的选民和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 个支持 B 党的选民。凭借他惊人的绘图技巧，他可以将任何政党的选民分配到他选择的任何选区。</p>
+<p>他与比特串的渊源让他思考，是否能够分配选民，使得每个选区的胜者遵循某种特定的比特串模式。为了避免引起怀疑，他还必须为每个选区分配至少 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 名选民。请告诉他这是否可能！</p>
+<p>形式化地，给定一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，以及两个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>。</p>
+<p>你需要判断是否存在两个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的非负整数数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，满足以下条件：
+1. <span class="arithmatex"><span class="MathJax_Preview">a_1 + a_2 + \dots + a_n = x</span><script type="math/tex">a_1 + a_2 + \dots + a_n = x</script></span>
+2. <span class="arithmatex"><span class="MathJax_Preview">b_1 + b_2 + \dots + b_n = y</span><script type="math/tex">b_1 + b_2 + \dots + b_n = y</script></span>
+3. 对于每个 <span class="arithmatex"><span class="MathJax_Preview">1 \le i \le n</span><script type="math/tex">1 \le i \le n</script></span>，<span class="arithmatex"><span class="MathJax_Preview">a_i + b_i \ge p_i</span><script type="math/tex">a_i + b_i \ge p_i</script></span>
+4. 对于每个 <span class="arithmatex"><span class="MathJax_Preview">1 \le i \le n</span><script type="math/tex">1 \le i \le n</script></span>：
+   - 如果 <span class="arithmatex"><span class="MathJax_Preview">s_i = 0</span><script type="math/tex">s_i = 0</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; b_i</span><script type="math/tex">a_i > b_i</script></span>
+   - 如果 <span class="arithmatex"><span class="MathJax_Preview">s_i = 1</span><script type="math/tex">s_i = 1</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">b_i &gt; a_i</span><script type="math/tex">b_i > a_i</script></span></p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span> —— 测试用例的数量。</p>
-<p>每个测试用例的第一行包含三个整数 <span class="arithmatex">\(n\)</span>、<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> <span class="arithmatex">\((1 \le n \le 2 \cdot 10^5, 1 \le x, y \le 10^9)\)</span>。</p>
-<p>第二行包含一个长度为 <span class="arithmatex">\(n\)</span> 的二进制字符串 <span class="arithmatex">\(s\)</span>。</p>
-<p>第三行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> <span class="arithmatex">\((1 \le p_i \le 10^9)\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span> —— 测试用例的数量。</p>
+<p>每个测试用例的第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>、<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le n \le 2 \cdot 10^5, 1 \le x, y \le 10^9)</span><script type="math/tex">(1 \le n \le 2 \cdot 10^5, 1 \le x, y \le 10^9)</script></span>。</p>
+<p>第二行包含一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</p>
+<p>第三行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">p_1, p_2, \dots, p_n</span><script type="math/tex">p_1, p_2, \dots, p_n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le p_i \le 10^9)</span><script type="math/tex">(1 \le p_i \le 10^9)</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，如果存在满足所有条件的数组 <span class="arithmatex">\(a, b\)</span>，则输出 <code>"YES"</code>（不区分大小写），否则输出 <code>"NO"</code>。</p>
+<p>对于每个测试用例，如果存在满足所有条件的数组 <span class="arithmatex"><span class="MathJax_Preview">a, b</span><script type="math/tex">a, b</script></span>，则输出 <code>"YES"</code>（不区分大小写），否则输出 <code>"NO"</code>。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
 3 5 5
@@ -4717,8 +4717,8 @@ NO
 NO
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，一种可能的选民分配方案是：<span class="arithmatex">\(a = [2, 0, 3]\)</span> 和 <span class="arithmatex">\(b = [0, 4, 1]\)</span>。</p>
-<p>在第三个测试用例中，一种可能的选民分配方案是：<span class="arithmatex">\(a = [2, 2]\)</span> 和 <span class="arithmatex">\(b = [1, 1]\)</span>。</p>
+<p>在第一个测试用例中，一种可能的选民分配方案是：<span class="arithmatex"><span class="MathJax_Preview">a = [2, 0, 3]</span><script type="math/tex">a = [2, 0, 3]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b = [0, 4, 1]</span><script type="math/tex">b = [0, 4, 1]</script></span>。</p>
+<p>在第三个测试用例中，一种可能的选民分配方案是：<span class="arithmatex"><span class="MathJax_Preview">a = [2, 2]</span><script type="math/tex">a = [2, 2]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b = [1, 1]</span><script type="math/tex">b = [1, 1]</script></span>。</p>
 <p>对于其他测试用例，可以证明不存在满足条件的选民分配方案。</p>
 <h1 id="wa-2">WA  2了</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2179 E</span>
@@ -4857,7 +4857,7 @@ NO
 <p><strong>❌ 之前的错误思路（刚性填坑）：</strong></p>
 <ul>
 <li>
-<p>我认为：如果选区 <span class="arithmatex">\(i\)</span> 需要 10 票，赢家出了 6 票，那么输家<strong>必须</strong>出 4 票。</p>
+<p>我认为：如果选区 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 需要 10 票，赢家出了 6 票，那么输家<strong>必须</strong>出 4 票。</p>
 </li>
 <li>
 <p><strong>导致的问题：</strong> 这强制要求输家手里必须有票。但实际上，如果赢家很有钱，赢家可以一个人出 10 票，输家出 0 票，这也是合法的（10 &gt; 0 且 10+0 &gt;= 10）。</p>
@@ -4868,13 +4868,13 @@ NO
 <p><strong>✅ 正确的思路（总量池子）：</strong></p>
 <ul>
 <li>
-<p><strong>赢家的责任是刚性的：</strong> 想要赢，必须出 <span class="arithmatex">\(\lfloor p_i/2 \rfloor + 1\)</span> 票。这是门票，少一张都不行。</p>
+<p><strong>赢家的责任是刚性的：</strong> 想要赢，必须出 <span class="arithmatex"><span class="MathJax_Preview">\lfloor p_i/2 \rfloor + 1</span><script type="math/tex">\lfloor p_i/2 \rfloor + 1</script></span> 票。这是门票，少一张都不行。</p>
 </li>
 <li>
 <p><strong>输家的责任是弹性的：</strong> 输家<strong>不一定</strong>要出钱。</p>
 </li>
 <li>
-<p><strong>剩余的票数（<span class="arithmatex">\(p_i\)</span> 的缺口）：</strong> 只要 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 的<strong>总和</strong>足够大，能够填满所有选区的 <span class="arithmatex">\(p_i\)</span> 需求即可。不管是 A 出还是 B 出，只要填满了 <span class="arithmatex">\(p_i\)</span> 且不破坏赢家的地位就行。</p>
+<p><strong>剩余的票数（<span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 的缺口）：</strong> 只要 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的<strong>总和</strong>足够大，能够填满所有选区的 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 需求即可。不管是 A 出还是 B 出，只要填满了 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 且不破坏赢家的地位就行。</p>
 </li>
 </ul>
 </li>
@@ -4883,52 +4883,52 @@ NO
 <h3 id="2">2. 重新分析：三个独立判定条件</h3>
 <p>要把这道题做对，需要检查且仅需要检查以下三个维度的限制。只要满足，就是 <code>YES</code>，否则 <code>NO</code>。</p>
 <h4 id="_7">条件一：赢家付得起“门票费”吗？</h4>
-<p>这是最优先的。不管总票数多少，A 必须拿下所有 <span class="arithmatex">\(s_i=0\)</span> 的局，B 必须拿下所有 <span class="arithmatex">\(s_i=1\)</span> 的局。</p>
+<p>这是最优先的。不管总票数多少，A 必须拿下所有 <span class="arithmatex"><span class="MathJax_Preview">s_i=0</span><script type="math/tex">s_i=0</script></span> 的局，B 必须拿下所有 <span class="arithmatex"><span class="MathJax_Preview">s_i=1</span><script type="math/tex">s_i=1</script></span> 的局。</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(Cost_A = \sum_{s_i=0} (\lfloor p_i/2 \rfloor + 1)\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Cost_A = \sum_{s_i=0} (\lfloor p_i/2 \rfloor + 1)</span><script type="math/tex">Cost_A = \sum_{s_i=0} (\lfloor p_i/2 \rfloor + 1)</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(Cost_B = \sum_{s_i=1} (\lfloor p_i/2 \rfloor + 1)\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Cost_B = \sum_{s_i=1} (\lfloor p_i/2 \rfloor + 1)</span><script type="math/tex">Cost_B = \sum_{s_i=1} (\lfloor p_i/2 \rfloor + 1)</script></span></p>
 </li>
 <li>
-<p><strong>判定：</strong> 如果 <span class="arithmatex">\(x &lt; Cost_A\)</span> 或者 <span class="arithmatex">\(y &lt; Cost_B\)</span>，直接 <strong>NO</strong>。</p>
+<p><strong>判定：</strong> 如果 <span class="arithmatex"><span class="MathJax_Preview">x &lt; Cost_A</span><script type="math/tex">x < Cost_A</script></span> 或者 <span class="arithmatex"><span class="MathJax_Preview">y &lt; Cost_B</span><script type="math/tex">y < Cost_B</script></span>，直接 <strong>NO</strong>。</p>
 </li>
 </ul>
-<h4 id="p_i">条件二：总票数够填满所有 <span class="arithmatex">\(p_i\)</span> 吗？</h4>
-<p>赢家付完门票后，所有选区 <span class="arithmatex">\(i\)</span> 还剩下 <span class="arithmatex">\(Rem_i = p_i - (\lfloor p_i/2 \rfloor + 1)\)</span> 的票数缺口。这些缺口需要用 A 和 B 剩余的票来填。</p>
+<h4 id="p_ip_i">条件二：总票数够填满所有 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 吗？</h4>
+<p>赢家付完门票后，所有选区 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 还剩下 <span class="arithmatex"><span class="MathJax_Preview">Rem_i = p_i - (\lfloor p_i/2 \rfloor + 1)</span><script type="math/tex">Rem_i = p_i - (\lfloor p_i/2 \rfloor + 1)</script></span> 的票数缺口。这些缺口需要用 A 和 B 剩余的票来填。</p>
 <p>实际上不需要算这么细，宏观来看：</p>
 <ul>
-<li><strong>判定：</strong> 如果 <span class="arithmatex">\(x + y &lt; \sum p_i\)</span>，说明连最低总票数要求都达不到，直接 <strong>NO</strong>。</li>
+<li><strong>判定：</strong> 如果 <span class="arithmatex"><span class="MathJax_Preview">x + y &lt; \sum p_i</span><script type="math/tex">x + y < \sum p_i</script></span>，说明连最低总票数要求都达不到，直接 <strong>NO</strong>。</li>
 </ul>
 <h4 id="_8">条件三：防止“一边倒”的数学限制</h4>
 <p>这是唯一的特殊情况。</p>
 <ul>
 <li>
-<p><strong>如果 A 全赢（<span class="arithmatex">\(s\)</span> 全是 '0'）：</strong></p>
+<p><strong>如果 A 全赢（<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 全是 '0'）：</strong></p>
 <ul>
 <li>
-<p>因为每个选区都要求 <span class="arithmatex">\(a_i &gt; b_i\)</span>（即 <span class="arithmatex">\(a_i \ge b_i+1\)</span>）。</p>
+<p>因为每个选区都要求 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; b_i</span><script type="math/tex">a_i > b_i</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">a_i \ge b_i+1</span><script type="math/tex">a_i \ge b_i+1</script></span>）。</p>
 </li>
 <li>
-<p>累加起来：<span class="arithmatex">\(\sum a_i \ge \sum b_i + n\)</span>。</p>
+<p>累加起来：<span class="arithmatex"><span class="MathJax_Preview">\sum a_i \ge \sum b_i + n</span><script type="math/tex">\sum a_i \ge \sum b_i + n</script></span>。</p>
 </li>
 <li>
-<p>即 <span class="arithmatex">\(x \ge y + n\)</span>。</p>
+<p>即 <span class="arithmatex"><span class="MathJax_Preview">x \ge y + n</span><script type="math/tex">x \ge y + n</script></span>。</p>
 </li>
 <li>
-<p><strong>判定：</strong> 如果是全 0 且 <span class="arithmatex">\(x &lt; y + n\)</span>，直接 <strong>NO</strong>。</p>
+<p><strong>判定：</strong> 如果是全 0 且 <span class="arithmatex"><span class="MathJax_Preview">x &lt; y + n</span><script type="math/tex">x < y + n</script></span>，直接 <strong>NO</strong>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>如果 B 全赢（<span class="arithmatex">\(s\)</span> 全是 '1'）：</strong></p>
+<p><strong>如果 B 全赢（<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 全是 '1'）：</strong></p>
 <ul>
 <li>
-<p>同理，要求 <span class="arithmatex">\(y \ge x + n\)</span>。</p>
+<p>同理，要求 <span class="arithmatex"><span class="MathJax_Preview">y \ge x + n</span><script type="math/tex">y \ge x + n</script></span>。</p>
 </li>
 <li>
-<p><strong>判定：</strong> 如果是全 1 且 <span class="arithmatex">\(y &lt; x + n\)</span>，直接 <strong>NO</strong>。</p>
+<p><strong>判定：</strong> 如果是全 1 且 <span class="arithmatex"><span class="MathJax_Preview">y &lt; x + n</span><script type="math/tex">y < x + n</script></span>，直接 <strong>NO</strong>。</p>
 </li>
 </ul>
 </li>
@@ -5028,10 +5028,10 @@ NO
 <p>这次的教训在于<strong>贪心策略的边界</strong>。</p>
 <ul>
 <li>
-<p><strong>之前的错误</strong>：我把局部最优（让每个选区正好卡在 <span class="arithmatex">\(p_i\)</span>）当成了全局限制。我担心“票浪费了怎么办”，所以强行让输家填坑。</p>
+<p><strong>之前的错误</strong>：我把局部最优（让每个选区正好卡在 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>）当成了全局限制。我担心“票浪费了怎么办”，所以强行让输家填坑。</p>
 </li>
 <li>
-<p><strong>现在的修正</strong>：这道题的核心不在于“省票”，而在于“只要总票够，怎么分都行”。<strong>输家是没有义务出票的</strong>，只要总票数够填满 <span class="arithmatex">\(p_i\)</span>，具体的分配可以非常灵活（比如赢家全包）。</p>
+<p><strong>现在的修正</strong>：这道题的核心不在于“省票”，而在于“只要总票够，怎么分都行”。<strong>输家是没有义务出票的</strong>，只要总票数够填满 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span>，具体的分配可以非常灵活（比如赢家全包）。</p>
 </li>
 </ul>
 <p>现在这个逻辑是严丝合缝的。</p>

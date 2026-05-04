@@ -4424,23 +4424,23 @@
 <p>时间限制：每测试点 2 秒<br />
 内存限制：512 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个多重集 <span class="arithmatex">\(a\)</span>，包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>。你需要通过以下过程生成一个新的多重集 <span class="arithmatex">\(s\)</span>：</p>
+<p>给定一个多重集 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>。你需要通过以下过程生成一个新的多重集 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>：</p>
 <ol>
-<li>将 <span class="arithmatex">\(a\)</span> 划分为任意数量的非空多重集 <span class="arithmatex">\(x_1, x_2, \dots, x_k\)</span>，使得 <span class="arithmatex">\(a\)</span> 中的每个元素恰好属于其中一个多重集。</li>
-<li>初始时 <span class="arithmatex">\(s\)</span> 为空。从每个 <span class="arithmatex">\(x_i\)</span> 中选择它的一个众数*，并将其插入 <span class="arithmatex">\(s\)</span>。</li>
+<li>将 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 划分为任意数量的非空多重集 <span class="arithmatex"><span class="MathJax_Preview">x_1, x_2, \dots, x_k</span><script type="math/tex">x_1, x_2, \dots, x_k</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的每个元素恰好属于其中一个多重集。</li>
+<li>初始时 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 为空。从每个 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 中选择它的一个众数*，并将其插入 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</li>
 </ol>
-<p>请计算通过此过程可以生成的不同多重集 <span class="arithmatex">\(s\)</span> 的数量，对 <span class="arithmatex">\(998244353\)</span> 取模。</p>
-<p>请注意，这里统计的是不同多重集的数量，这意味着元素的顺序不重要。但是，每个元素的数量很重要，即 <span class="arithmatex">\(\{1,1,2\}\)</span>、<span class="arithmatex">\(\{1,2\}\)</span>、<span class="arithmatex">\(\{1,1,2,2\}\)</span> 都被认为是不同的。</p>
+<p>请计算通过此过程可以生成的不同多重集 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 的数量，对 <span class="arithmatex"><span class="MathJax_Preview">998244353</span><script type="math/tex">998244353</script></span> 取模。</p>
+<p>请注意，这里统计的是不同多重集的数量，这意味着元素的顺序不重要。但是，每个元素的数量很重要，即 <span class="arithmatex"><span class="MathJax_Preview">\{1,1,2\}</span><script type="math/tex">\{1,1,2\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{1,2\}</span><script type="math/tex">\{1,2\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{1,1,2,2\}</span><script type="math/tex">\{1,1,2,2\}</script></span> 都被认为是不同的。</p>
 <ul>
 <li>多重集的众数定义为出现次数最多的元素；如果有多个元素出现次数相同且都是最大值，那么它们都被视为众数。</li>
 </ul>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \leq t \leq 5000\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \leq n \leq 5000\)</span>）—— 多重集 <span class="arithmatex">\(a\)</span> 的大小。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>（<span class="arithmatex">\(1 \leq a_i \leq n\)</span>）。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(5000\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 5000</span><script type="math/tex">1 \leq t \leq 5000</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 5000</span><script type="math/tex">1 \leq n \leq 5000</script></span>）—— 多重集 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的大小。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq n</span><script type="math/tex">1 \leq a_i \leq n</script></span>）。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">5000</span><script type="math/tex">5000</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一行包含一个整数 —— 你可以获得的不同多重集的数量，对 <span class="arithmatex">\(998244353\)</span> 取模。</p>
+<p>对于每个测试用例，输出一行包含一个整数 —— 你可以获得的不同多重集的数量，对 <span class="arithmatex"><span class="MathJax_Preview">998244353</span><script type="math/tex">998244353</script></span> 取模。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>5
 3
@@ -4462,13 +4462,13 @@
 126
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>第一个测试用例中，<span class="arithmatex">\(\{1,2,3\}\)</span> 的任何非空子集都可以实现，总共 <span class="arithmatex">\(7\)</span> 个多重集。</p>
-<p>第三个测试用例中，我们可以生成 <span class="arithmatex">\(4\)</span> 个不同的多重集：</p>
+<p>第一个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">\{1,2,3\}</span><script type="math/tex">\{1,2,3\}</script></span> 的任何非空子集都可以实现，总共 <span class="arithmatex"><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span> 个多重集。</p>
+<p>第三个测试用例中，我们可以生成 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 个不同的多重集：</p>
 <ul>
-<li>将元素划分为集合 <span class="arithmatex">\(\{1,2,2\}\)</span>，得到多重集 <span class="arithmatex">\(\{2\}\)</span>。</li>
-<li>将元素划分为集合 <span class="arithmatex">\(\{1,2\}\)</span>、<span class="arithmatex">\(\{2\}\)</span>，得到多重集 <span class="arithmatex">\(\{2,2\}\)</span>。</li>
-<li>将元素划分为集合 <span class="arithmatex">\(\{1\}\)</span>、<span class="arithmatex">\(\{2,2\}\)</span>，得到多重集 <span class="arithmatex">\(\{1,2\}\)</span>。</li>
-<li>将元素划分为集合 <span class="arithmatex">\(\{1\}\)</span>、<span class="arithmatex">\(\{2\}\)</span>、<span class="arithmatex">\(\{2\}\)</span>，得到多重集 <span class="arithmatex">\(\{1,2,2\}\)</span>。</li>
+<li>将元素划分为集合 <span class="arithmatex"><span class="MathJax_Preview">\{1,2,2\}</span><script type="math/tex">\{1,2,2\}</script></span>，得到多重集 <span class="arithmatex"><span class="MathJax_Preview">\{2\}</span><script type="math/tex">\{2\}</script></span>。</li>
+<li>将元素划分为集合 <span class="arithmatex"><span class="MathJax_Preview">\{1,2\}</span><script type="math/tex">\{1,2\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{2\}</span><script type="math/tex">\{2\}</script></span>，得到多重集 <span class="arithmatex"><span class="MathJax_Preview">\{2,2\}</span><script type="math/tex">\{2,2\}</script></span>。</li>
+<li>将元素划分为集合 <span class="arithmatex"><span class="MathJax_Preview">\{1\}</span><script type="math/tex">\{1\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{2,2\}</span><script type="math/tex">\{2,2\}</script></span>，得到多重集 <span class="arithmatex"><span class="MathJax_Preview">\{1,2\}</span><script type="math/tex">\{1,2\}</script></span>。</li>
+<li>将元素划分为集合 <span class="arithmatex"><span class="MathJax_Preview">\{1\}</span><script type="math/tex">\{1\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{2\}</span><script type="math/tex">\{2\}</script></span>、<span class="arithmatex"><span class="MathJax_Preview">\{2\}</span><script type="math/tex">\{2\}</script></span>，得到多重集 <span class="arithmatex"><span class="MathJax_Preview">\{1,2,2\}</span><script type="math/tex">\{1,2,2\}</script></span>。</li>
 </ul>
 <p>可以证明没有其他多重集是可能的。</p>
 

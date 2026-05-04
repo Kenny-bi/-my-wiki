@@ -5135,22 +5135,22 @@
 <p>时间限制：每个测试 2 秒
 内存限制：每个测试 512 兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>这是问题的简单版本。两个版本的区别在于 <span class="arithmatex">\(x\)</span> 的约束不同；在这个版本中，<span class="arithmatex">\(x \le 10^5\)</span>。</p>
-<p>Polycarp 有一个包含从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(10^{12}\)</span> 的所有自然数的序列。他决定通过执行以下操作 <span class="arithmatex">\(x\)</span> 次来修改这个序列：</p>
+<p>这是问题的简单版本。两个版本的区别在于 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的约束不同；在这个版本中，<span class="arithmatex"><span class="MathJax_Preview">x \le 10^5</span><script type="math/tex">x \le 10^5</script></span>。</p>
+<p>Polycarp 有一个包含从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 的所有自然数的序列。他决定通过执行以下操作 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次来修改这个序列：</p>
 <ul>
-<li>同时移除所有在位置 <span class="arithmatex">\(y, 2\cdot y, 3\cdot y, \dots, m\cdot y \le n\)</span> 的数字，其中 <span class="arithmatex">\(n\)</span> 是当前序列的长度。</li>
+<li>同时移除所有在位置 <span class="arithmatex"><span class="MathJax_Preview">y, 2\cdot y, 3\cdot y, \dots, m\cdot y \le n</span><script type="math/tex">y, 2\cdot y, 3\cdot y, \dots, m\cdot y \le n</script></span> 的数字，其中 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是当前序列的长度。</li>
 </ul>
-<p>之后，Polycarp 想要找出剩余序列中的第 <span class="arithmatex">\(k\)</span> 个数字，或者确定结果序列的长度小于 <span class="arithmatex">\(k\)</span>。</p>
+<p>之后，Polycarp 想要找出剩余序列中的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数字，或者确定结果序列的长度小于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 <p>请帮助 Polycarp 解决这个问题！</p>
-<p>考虑一个例子。设 <span class="arithmatex">\(x=2\)</span>，<span class="arithmatex">\(y=3\)</span>，<span class="arithmatex">\(k=5\)</span>，那么：</p>
+<p>考虑一个例子。设 <span class="arithmatex"><span class="MathJax_Preview">x=2</span><script type="math/tex">x=2</script></span>，<span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>，<span class="arithmatex"><span class="MathJax_Preview">k=5</span><script type="math/tex">k=5</script></span>，那么：</p>
 <p>![[Pasted image 20251114235554.png]]</p>
 <p>![示例图]
-被红线划掉的数字在第一次操作后被移除，被蓝线划掉的数字在第二次操作后被移除。因此，位置 <span class="arithmatex">\(k=5\)</span> 的数字是 <span class="arithmatex">\(10\)</span>。</p>
+被红线划掉的数字在第一次操作后被移除，被蓝线划掉的数字在第二次操作后被移除。因此，位置 <span class="arithmatex"><span class="MathJax_Preview">k=5</span><script type="math/tex">k=5</script></span> 的数字是 <span class="arithmatex"><span class="MathJax_Preview">10</span><script type="math/tex">10</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10\)</span>）。接下来是测试用例的描述。</p>
-<p>每个测试用例只有一行，包含三个整数 <span class="arithmatex">\(x\)</span>，<span class="arithmatex">\(y\)</span>，<span class="arithmatex">\(k\)</span>（<span class="arithmatex">\(1 \le x \le 10^5\)</span>，<span class="arithmatex">\(1 \le y,k \le 10^{12}\)</span>）。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10</span><script type="math/tex">1 \le t \le 10</script></span>）。接下来是测试用例的描述。</p>
+<p>每个测试用例只有一行，包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le x \le 10^5</span><script type="math/tex">1 \le x \le 10^5</script></span>，<span class="arithmatex"><span class="MathJax_Preview">1 \le y,k \le 10^{12}</span><script type="math/tex">1 \le y,k \le 10^{12}</script></span>）。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出结果序列中第 <span class="arithmatex">\(k\)</span> 个位置的正整数，如果结果序列的长度小于 <span class="arithmatex">\(k\)</span>，则输出 <span class="arithmatex">\(-1\)</span>。</p>
+<p>对于每个测试用例，输出结果序列中第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个位置的正整数，如果结果序列的长度小于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，则输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
 2 3 5
@@ -5219,25 +5219,25 @@
 <p>现在我们把所有逻辑拼起来：</p>
 <ol>
 <li>
-<p><strong>特殊情况</strong>：如果 <span class="arithmatex">\(y = 1\)</span>，序列会立刻变空。我们应该怎么做？</p>
+<p><strong>特殊情况</strong>：如果 <span class="arithmatex"><span class="MathJax_Preview">y = 1</span><script type="math/tex">y = 1</script></span>，序列会立刻变空。我们应该怎么做？</p>
 </li>
 <li>
-<p><strong>一般情况</strong> (<span class="arithmatex">\(y \ge 2\)</span>)：</p>
+<p><strong>一般情况</strong> (<span class="arithmatex"><span class="MathJax_Preview">y \ge 2</span><script type="math/tex">y \ge 2</script></span>)：</p>
 <ul>
 <li>
-<p>我们有一个目标位置 <span class="arithmatex">\(k\)</span> 和操作次数 <span class="arithmatex">\(x\)</span>。</p>
+<p>我们有一个目标位置 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 和操作次数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
 </li>
 <li>
-<p>我们有一个“撤销”公式：<span class="arithmatex">\(p = f(k) = k + \lfloor (k-1) / (y-1) \rfloor\)</span>。</p>
+<p>我们有一个“撤销”公式：<span class="arithmatex"><span class="MathJax_Preview">p = f(k) = k + \lfloor (k-1) / (y-1) \rfloor</span><script type="math/tex">p = f(k) = k + \lfloor (k-1) / (y-1) \rfloor</script></span>。</p>
 </li>
 <li>
-<p>我们要“循环套用”这个公式 <span class="arithmatex">\(x\)</span> 次。</p>
+<p>我们要“循环套用”这个公式 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次。</p>
 </li>
 <li>
-<p>在<strong>每次</strong>套用公式时，我们都要检查新算出来的 <span class="arithmatex">\(p\)</span> 是否超过了 <span class="arithmatex">\(10^{12}\)</span>。如果超过了，说明什么？</p>
+<p>在<strong>每次</strong>套用公式时，我们都要检查新算出来的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是否超过了 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span>。如果超过了，说明什么？</p>
 </li>
 <li>
-<p>如果循环 <span class="arithmatex">\(x\)</span> 次都<strong>没有</strong>超过 <span class="arithmatex">\(10^{12}\)</span>，那么最后得到的 <span class="arithmatex">\(p\)</span> 是什么？</p>
+<p>如果循环 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次都<strong>没有</strong>超过 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span>，那么最后得到的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是什么？</p>
 </li>
 </ul>
 </li>
@@ -5249,7 +5249,7 @@
 <h3 id="1">1. 问题的起点：正向模拟（困难）</h3>
 <ul>
 <li>
-<p><strong>我们的目标</strong>：在 <span class="arithmatex">\(x\)</span> 次操作后，找到第 <span class="arithmatex">\(k\)</span> 个剩下的数。</p>
+<p><strong>我们的目标</strong>：在 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次操作后，找到第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个剩下的数。</p>
 </li>
 <li>
 <p><strong>最初的直觉</strong>：你最开始的想法是“正向”模拟。</p>
@@ -5258,10 +5258,10 @@
 <p><strong>你发现的规律</strong>：</p>
 <ul>
 <li>
-<p>前 <span class="arithmatex">\(y-1\)</span> 个数永远不动。</p>
+<p>前 <span class="arithmatex"><span class="MathJax_Preview">y-1</span><script type="math/tex">y-1</script></span> 个数永远不动。</p>
 </li>
 <li>
-<p>可以按“每 <span class="arithmatex">\(y\)</span> 个一块”来思考。</p>
+<p>可以按“每 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 个一块”来思考。</p>
 </li>
 </ul>
 </li>
@@ -5272,10 +5272,10 @@
 <h3 id="2">2. 关键转折：倒着推</h3>
 <ul>
 <li>
-<p><strong>我们的“Aha!”时刻</strong>：我们决定不从 <span class="arithmatex">\(S_0 \to S_x\)</span> 正向推，而是从 <span class="arithmatex">\(S_x \to S_0\)</span> 倒着推。</p>
+<p><strong>我们的“Aha!”时刻</strong>：我们决定不从 <span class="arithmatex"><span class="MathJax_Preview">S_0 \to S_x</span><script type="math/tex">S_0 \to S_x</script></span> 正向推，而是从 <span class="arithmatex"><span class="MathJax_Preview">S_x \to S_0</span><script type="math/tex">S_x \to S_0</script></span> 倒着推。</p>
 </li>
 <li>
-<p><strong>核心问题</strong>：如果一个数最终在 <span class="arithmatex">\(S_x\)</span> 的第 <span class="arithmatex">\(k\)</span> 位，那么它在 <span class="arithmatex">\(S_{x-1}\)</span> 的第几位？... 最终，它在 <span class="arithmatex">\(S_0\)</span>（原始序列）的第几位？</p>
+<p><strong>核心问题</strong>：如果一个数最终在 <span class="arithmatex"><span class="MathJax_Preview">S_x</span><script type="math/tex">S_x</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位，那么它在 <span class="arithmatex"><span class="MathJax_Preview">S_{x-1}</span><script type="math/tex">S_{x-1}</script></span> 的第几位？... 最终，它在 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span>（原始序列）的第几位？</p>
 </li>
 </ul>
 <h3 id="3">3. 核心武器：“单步撤销”公式</h3>
@@ -5284,41 +5284,44 @@
 <p>我们推导了<strong>一次操作</strong>的“撤销”公式：</p>
 <ul>
 <li>
-<p>假设 <span class="arithmatex">\(y \ge 2\)</span>。</p>
+<p>假设 <span class="arithmatex"><span class="MathJax_Preview">y \ge 2</span><script type="math/tex">y \ge 2</script></span>。</p>
 </li>
 <li>
-<p>如果一个数在操作_后_的位置是 <span class="arithmatex">\(k\)</span>。</p>
+<p>如果一个数在操作_后_的位置是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 </li>
 <li>
-<p>那么它在操作前的位置 <span class="arithmatex">\(p\)</span> 就是：</p>
-<div class="arithmatex">\[p = k + \lfloor (k-1) / (y-1) \rfloor\]</div>
+<p>那么它在操作前的位置 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 就是：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">p = k + \lfloor (k-1) / (y-1) \rfloor</div>
+<script type="math/tex; mode=display">p = k + \lfloor (k-1) / (y-1) \rfloor</script>
+</div>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>这个公式的意义</strong>：它告诉我们，操作前的 <span class="arithmatex">\(p\)</span> 等于操作后的 <span class="arithmatex">\(k\)</span>，再加上“在它前面被移除的数的个数”（即 <span class="arithmatex">\(\lfloor (k-1) / (y-1) \rfloor\)</span>）。</p>
+<p><strong>这个公式的意义</strong>：它告诉我们，操作前的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 等于操作后的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，再加上“在它前面被移除的数的个数”（即 <span class="arithmatex"><span class="MathJax_Preview">\lfloor (k-1) / (y-1) \rfloor</span><script type="math/tex">\lfloor (k-1) / (y-1) \rfloor</script></span>）。</p>
 </li>
 </ul>
 <h3 id="4">4. 形成算法：循环套用</h3>
 <ul>
 <li>
-<p><strong>你的想法</strong>：你马上想到了，我们只需要“循环套用”这个公式 <span class="arithmatex">\(x\)</span> 次。</p>
+<p><strong>你的想法</strong>：你马上想到了，我们只需要“循环套用”这个公式 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次。</p>
 </li>
 <li>
 <p><strong>算法流程</strong>：</p>
 <ol>
 <li>
-<p>我们从 <span class="arithmatex">\(k_{final} = k\)</span> 开始。</p>
+<p>我们从 <span class="arithmatex"><span class="MathJax_Preview">k_{final} = k</span><script type="math/tex">k_{final} = k</script></span> 开始。</p>
 </li>
 <li>
-<p>我们循环 <span class="arithmatex">\(x\)</span> 次，每次都用“撤销”公式来更新 <span class="arithmatex">\(k\)</span>：</p>
+<p>我们循环 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次，每次都用“撤销”公式来更新 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>：</p>
 <p>k_prev = k_current + floor((k_current - 1) / (y - 1))</p>
 </li>
 <li>
-<p>循环 <span class="arithmatex">\(x\)</span> 次后，我们得到的那个 <span class="arithmatex">\(p\)</span> 值（也就是最后的 <code>k_prev</code>），就是它在 <span class="arithmatex">\(S_0\)</span> 里的原始位置。</p>
+<p>循环 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次后，我们得到的那个 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 值（也就是最后的 <code>k_prev</code>），就是它在 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 里的原始位置。</p>
 </li>
 <li>
-<p>因为 <span class="arithmatex">\(S_0\)</span> 就是 <span class="arithmatex">\(1, 2, 3, \dots\)</span>，所以原始位置 <span class="arithmatex">\(p\)</span> 上的数就是 <span class="arithmatex">\(p\)</span> 本身。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 就是 <span class="arithmatex"><span class="MathJax_Preview">1, 2, 3, \dots</span><script type="math/tex">1, 2, 3, \dots</script></span>，所以原始位置 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 上的数就是 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 本身。</p>
 </li>
 </ol>
 </li>
@@ -5327,19 +5330,19 @@
 <p>我们一起找到了两种导致 "-1" 的情况：</p>
 <ol>
 <li>
-<p><strong><span class="arithmatex">\(y = 1\)</span></strong>：你一眼就看出来了。如果 <span class="arithmatex">\(y=1\)</span>，第一次操作就会移除所有数，序列变空，所以直接输出 -1。</p>
+<p><strong><span class="arithmatex"><span class="MathJax_Preview">y = 1</span><script type="math/tex">y = 1</script></span></strong>：你一眼就看出来了。如果 <span class="arithmatex"><span class="MathJax_Preview">y=1</span><script type="math/tex">y=1</script></span>，第一次操作就会移除所有数，序列变空，所以直接输出 -1。</p>
 </li>
 <li>
-<p><strong><span class="arithmatex">\(p\)</span> "太大"</strong>：</p>
+<p><strong><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> "太大"</strong>：</p>
 <ul>
 <li>
-<p>你意识到如果 <span class="arithmatex">\(p\)</span> 变得“很大”，就说明“不行了”。</p>
+<p>你意识到如果 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 变得“很大”，就说明“不行了”。</p>
 </li>
 <li>
-<p>我们一起明确了这个“很大”的界限：原始序列只有 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(10^{12}\)</span>。</p>
+<p>我们一起明确了这个“很大”的界限：原始序列只有 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span>。</p>
 </li>
 <li>
-<p><strong>结论</strong>：在 <span class="arithmatex">\(x\)</span> 次“撤销”的计算过程中，<strong>任何一步</strong>算出来的 <span class="arithmatex">\(p\)</span>（或 <span class="arithmatex">\(k_{current}\)</span>）如果<strong>超过了 <span class="arithmatex">\(10^{12}\)</span></strong>，就说明我们找的这个数来自 <span class="arithmatex">\(10^{12}\)</span> 之外，这不可能。我们应立刻停止，输出 -1。</p>
+<p><strong>结论</strong>：在 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次“撤销”的计算过程中，<strong>任何一步</strong>算出来的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>（或 <span class="arithmatex"><span class="MathJax_Preview">k_{current}</span><script type="math/tex">k_{current}</script></span>）如果<strong>超过了 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span></strong>，就说明我们找的这个数来自 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 之外，这不可能。我们应立刻停止，输出 -1。</p>
 </li>
 </ul>
 </li>
@@ -5350,7 +5353,7 @@
 <p>最后，你把这个逻辑写成了代码。</p>
 </li>
 <li>
-<p>我们发现了第一个小 bug：在 C++ 中，<code>const int N=1e12</code> 会导致溢出和错误，因为 <span class="arithmatex">\(10^{12}\)</span> 远超 <code>int</code> 范围，应该用 <code>long long</code> 来定义。</p>
+<p>我们发现了第一个小 bug：在 C++ 中，<code>const int N=1e12</code> 会导致溢出和错误，因为 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 远超 <code>int</code> 范围，应该用 <code>long long</code> 来定义。</p>
 </li>
 </ul>
 <p>这个笔记总结了我们从卡住到找到思路、再到完善算法的全过程！</p>
@@ -5359,74 +5362,77 @@
 <p>这是你笔记的更新版本，只扩展了第 3 节：</p>
 <hr />
 <h3 id="3_1">3. 核心武器：“单步撤销”公式 (详细推导)</h3>
-<p>在这一步，我们的目标是推导出：已知<strong>操作后</strong>的位置 <span class="arithmatex">\(k\)</span>，如何求出<strong>操作前</strong>的原始位置 <span class="arithmatex">\(p\)</span>。</p>
+<p>在这一步，我们的目标是推导出：已知<strong>操作后</strong>的位置 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，如何求出<strong>操作前</strong>的原始位置 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
 <h4 id="1_1">步骤 1：建立“正向”和“反向”关系</h4>
 <ul>
 <li>
-<p><strong>正向关系</strong>：我们先看一次操作。如果一个数在 <span class="arithmatex">\(S_0\)</span>（原始序列）中的位置是 <span class="arithmatex">\(p\)</span>，并且它<strong>没有</strong>被移除（即 <span class="arithmatex">\(p\)</span> 不是 <span class="arithmatex">\(y\)</span> 的倍数），那么它在 <span class="arithmatex">\(S_1\)</span>（新序列）中的位置 <span class="arithmatex">\(k\)</span> 是多少？</p>
+<p><strong>正向关系</strong>：我们先看一次操作。如果一个数在 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span>（原始序列）中的位置是 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，并且它<strong>没有</strong>被移除（即 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 不是 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的倍数），那么它在 <span class="arithmatex"><span class="MathJax_Preview">S_1</span><script type="math/tex">S_1</script></span>（新序列）中的位置 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是多少？</p>
 <ul>
 <li>
-<p>在 <span class="arithmatex">\(p\)</span> 前面（包括 <span class="arithmatex">\(p\)</span> 自身），总共有 <span class="arithmatex">\(\lfloor p/y \rfloor\)</span> 个数被移除了。</p>
+<p>在 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 前面（包括 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 自身），总共有 <span class="arithmatex"><span class="MathJax_Preview">\lfloor p/y \rfloor</span><script type="math/tex">\lfloor p/y \rfloor</script></span> 个数被移除了。</p>
 </li>
 <li>
-<p>所以，它的新位置 <span class="arithmatex">\(k = p - \lfloor p/y \rfloor\)</span>。</p>
+<p>所以，它的新位置 <span class="arithmatex"><span class="MathJax_Preview">k = p - \lfloor p/y \rfloor</span><script type="math/tex">k = p - \lfloor p/y \rfloor</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>反向问题 (我们的目标)</strong>：我们知道了 <span class="arithmatex">\(S_1\)</span> 中的位置 <span class="arithmatex">\(k\)</span>，想反解出 <span class="arithmatex">\(S_0\)</span> 中的位置 <span class="arithmatex">\(p\)</span>。</p>
+<p><strong>反向问题 (我们的目标)</strong>：我们知道了 <span class="arithmatex"><span class="MathJax_Preview">S_1</span><script type="math/tex">S_1</script></span> 中的位置 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，想反解出 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 中的位置 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
 <ul>
 <li>
 <p>我们把上面的公式重新排列：</p>
-<div class="arithmatex">\[p = k + \lfloor p/y \rfloor\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">p = k + \lfloor p/y \rfloor</div>
+<script type="math/tex; mode=display">p = k + \lfloor p/y \rfloor</script>
+</div>
 </li>
 <li>
-<p>这个公式看起来很棘手，因为 <span class="arithmatex">\(p\)</span> 出现在了等号的两边，而且一边还在 <code>floor</code> 函数里。</p>
+<p>这个公式看起来很棘手，因为 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 出现在了等号的两边，而且一边还在 <code>floor</code> 函数里。</p>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="2_1">步骤 2：分析“添加”与“保留”的关系</h4>
-<p>我们换个角度看 <span class="arithmatex">\(p = k + \lfloor p/y \rfloor\)</span> 这个式子：</p>
+<p>我们换个角度看 <span class="arithmatex"><span class="MathJax_Preview">p = k + \lfloor p/y \rfloor</span><script type="math/tex">p = k + \lfloor p/y \rfloor</script></span> 这个式子：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(p\)</span> 是“原始位置”。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是“原始位置”。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(k\)</span> 是“保留下的数的位置”。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是“保留下的数的位置”。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(m = \lfloor p/y \rfloor\)</span> 是“被移除的数的个数”。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">m = \lfloor p/y \rfloor</span><script type="math/tex">m = \lfloor p/y \rfloor</script></span> 是“被移除的数的个数”。</p>
 </li>
 </ul>
-<p>所以 <span class="arithmatex">\(p = k + m\)</span>，即 <strong>原始位置 = 保留数 + 移除数</strong>。我们的目标变成了：<strong>如何只用 <span class="arithmatex">\(k\)</span> 来表示 <span class="arithmatex">\(m\)</span>？</strong></p>
+<p>所以 <span class="arithmatex"><span class="MathJax_Preview">p = k + m</span><script type="math/tex">p = k + m</script></span>，即 <strong>原始位置 = 保留数 + 移除数</strong>。我们的目标变成了：<strong>如何只用 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 来表示 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>？</strong></p>
 <ul>
 <li>
 <p><strong>关键洞察（块的比例）</strong>：</p>
 <ul>
 <li>
-<p>在 <span class="arithmatex">\(S_0\)</span> 中，每 <span class="arithmatex">\(y\)</span> 个数（一个“块”），比如 <span class="arithmatex">\(\{1, 2, \dots, y\}\)</span>。</p>
+<p>在 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 中，每 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 个数（一个“块”），比如 <span class="arithmatex"><span class="MathJax_Preview">\{1, 2, \dots, y\}</span><script type="math/tex">\{1, 2, \dots, y\}</script></span>。</p>
 </li>
 <li>
-<p>操作后，有 <span class="arithmatex">\(y-1\)</span> 个数被<strong>保留</strong>（<span class="arithmatex">\(\{1, 2, \dots, y-1\}\)</span>）。</p>
+<p>操作后，有 <span class="arithmatex"><span class="MathJax_Preview">y-1</span><script type="math/tex">y-1</script></span> 个数被<strong>保留</strong>（<span class="arithmatex"><span class="MathJax_Preview">\{1, 2, \dots, y-1\}</span><script type="math/tex">\{1, 2, \dots, y-1\}</script></span>）。</p>
 </li>
 <li>
-<p>有 <span class="arithmatex">\(1\)</span> 个数被<strong>移除</strong>（<span class="arithmatex">\(\{y\}\)</span>）。</p>
+<p>有 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个数被<strong>移除</strong>（<span class="arithmatex"><span class="MathJax_Preview">\{y\}</span><script type="math/tex">\{y\}</script></span>）。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>推论</strong>：这个“保留 : 移除”的比例 <span class="arithmatex">\((y-1) : 1\)</span> 是恒定的。</p>
+<p><strong>推论</strong>：这个“保留 : 移除”的比例 <span class="arithmatex"><span class="MathJax_Preview">(y-1) : 1</span><script type="math/tex">(y-1) : 1</script></span> 是恒定的。</p>
 </li>
 <li>
-<p>这意味着，我们每数 <span class="arithmatex">\(y-1\)</span> 个“保留数”，就<strong>一定</strong>对应着 <span class="arithmatex">\(1\)</span> 个“移除数”被我们跳过了。</p>
+<p>这意味着，我们每数 <span class="arithmatex"><span class="MathJax_Preview">y-1</span><script type="math/tex">y-1</script></span> 个“保留数”，就<strong>一定</strong>对应着 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个“移除数”被我们跳过了。</p>
 </li>
 </ul>
 <h4 id="3_2">步骤 3：从“比例”到“公式”</h4>
-<p>我们要计算 <span class="arithmatex">\(m\)</span>（移除数）和 <span class="arithmatex">\(k\)</span>（保留数）的关系。</p>
+<p>我们要计算 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>（移除数）和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（保留数）的关系。</p>
 <ul>
 <li>
-<p>根据 <span class="arithmatex">\((y-1) : 1\)</span> 的比例， <span class="arithmatex">\(m\)</span> 应该约等于 <span class="arithmatex">\(k / (y-1)\)</span>。</p>
+<p>根据 <span class="arithmatex"><span class="MathJax_Preview">(y-1) : 1</span><script type="math/tex">(y-1) : 1</script></span> 的比例， <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 应该约等于 <span class="arithmatex"><span class="MathJax_Preview">k / (y-1)</span><script type="math/tex">k / (y-1)</script></span>。</p>
 </li>
 <li>
 <p>但我们需要一个精确的整数公式，而不是近似。</p>
@@ -5435,73 +5441,76 @@
 <p>我们来测试一下：</p>
 <ul>
 <li>
-<p>当 <span class="arithmatex">\(k = 1, \dots, y-2\)</span> 时，我们还在第一个块里， <span class="arithmatex">\(m\)</span> 应该是 <span class="arithmatex">\(0\)</span>。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = 1, \dots, y-2</span><script type="math/tex">k = 1, \dots, y-2</script></span> 时，我们还在第一个块里， <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 应该是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(k = y-1\)</span> 时（这是 <span class="arithmatex">\(S_0\)</span> 中的 <span class="arithmatex">\(y-1\)</span>）， <span class="arithmatex">\(m\)</span> 仍然是 <span class="arithmatex">\(0\)</span>。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = y-1</span><script type="math/tex">k = y-1</script></span> 时（这是 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 中的 <span class="arithmatex"><span class="MathJax_Preview">y-1</span><script type="math/tex">y-1</script></span>）， <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 仍然是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(k = y\)</span> 时（这是 <span class="arithmatex">\(S_0\)</span> 中的 <span class="arithmatex">\(y+1\)</span>），我们<strong>刚刚跨过了</strong>第一个被移除的数 (<span class="arithmatex">\(y\)</span>)。所以 <span class="arithmatex">\(m\)</span> 应该等于 <span class="arithmatex">\(1\)</span>。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = y</span><script type="math/tex">k = y</script></span> 时（这是 <span class="arithmatex"><span class="MathJax_Preview">S_0</span><script type="math/tex">S_0</script></span> 中的 <span class="arithmatex"><span class="MathJax_Preview">y+1</span><script type="math/tex">y+1</script></span>），我们<strong>刚刚跨过了</strong>第一个被移除的数 (<span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>)。所以 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 应该等于 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>我们想找一个 <span class="arithmatex">\(m\)</span> 的公式，它在 <span class="arithmatex">\(k=1\)</span> 到 <span class="arithmatex">\(k=y-1\)</span> 时都等于 <span class="arithmatex">\(0\)</span>，但在 <span class="arithmatex">\(k=y\)</span> 时要等于 <span class="arithmatex">\(1\)</span>。</p>
+<p>我们想找一个 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的公式，它在 <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">k=y-1</span><script type="math/tex">k=y-1</script></span> 时都等于 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，但在 <span class="arithmatex"><span class="MathJax_Preview">k=y</span><script type="math/tex">k=y</script></span> 时要等于 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </li>
 <li>
-<p><strong>测试公式 1</strong>：<span class="arithmatex">\(m = \lfloor k / (y-1) \rfloor\)</span></p>
+<p><strong>测试公式 1</strong>：<span class="arithmatex"><span class="MathJax_Preview">m = \lfloor k / (y-1) \rfloor</span><script type="math/tex">m = \lfloor k / (y-1) \rfloor</script></span></p>
 <ul>
 <li>
-<p>当 <span class="arithmatex">\(k = y-1\)</span> 时， <span class="arithmatex">\(m = \lfloor (y-1) / (y-1) \rfloor = 1\)</span>。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = y-1</span><script type="math/tex">k = y-1</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (y-1) / (y-1) \rfloor = 1</span><script type="math/tex">m = \lfloor (y-1) / (y-1) \rfloor = 1</script></span>。</p>
 </li>
 <li>
-<p>这不对！<span class="arithmatex">\(k=y-1\)</span> 时 <span class="arithmatex">\(m\)</span> 应该是 <span class="arithmatex">\(0\)</span>。我们“加 1”加得太早了。</p>
+<p>这不对！<span class="arithmatex"><span class="MathJax_Preview">k=y-1</span><script type="math/tex">k=y-1</script></span> 时 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 应该是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。我们“加 1”加得太早了。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>测试公式 2</strong>：<span class="arithmatex">\(m = \lfloor (k-1) / (y-1) \rfloor\)</span></p>
+<p><strong>测试公式 2</strong>：<span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (k-1) / (y-1) \rfloor</span><script type="math/tex">m = \lfloor (k-1) / (y-1) \rfloor</script></span></p>
 <ul>
 <li>
-<p>当 <span class="arithmatex">\(k = 1\)</span> 时， <span class="arithmatex">\(m = \lfloor (1-1) / (y-1) \rfloor = \lfloor 0 \rfloor = 0\)</span>。（正确）</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = 1</span><script type="math/tex">k = 1</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (1-1) / (y-1) \rfloor = \lfloor 0 \rfloor = 0</span><script type="math/tex">m = \lfloor (1-1) / (y-1) \rfloor = \lfloor 0 \rfloor = 0</script></span>。（正确）</p>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(k = y-1\)</span> 时， <span class="arithmatex">\(m = \lfloor ((y-1)-1) / (y-1) \rfloor = \lfloor (y-2) / (y-1) \rfloor = 0\)</span>。（正确）</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = y-1</span><script type="math/tex">k = y-1</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">m = \lfloor ((y-1)-1) / (y-1) \rfloor = \lfloor (y-2) / (y-1) \rfloor = 0</span><script type="math/tex">m = \lfloor ((y-1)-1) / (y-1) \rfloor = \lfloor (y-2) / (y-1) \rfloor = 0</script></span>。（正确）</p>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(k = y\)</span> 时， <span class="arithmatex">\(m = \lfloor (y-1) / (y-1) \rfloor = \lfloor 1 \rfloor = 1\)</span>。（正确）</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">k = y</span><script type="math/tex">k = y</script></span> 时， <span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (y-1) / (y-1) \rfloor = \lfloor 1 \rfloor = 1</span><script type="math/tex">m = \lfloor (y-1) / (y-1) \rfloor = \lfloor 1 \rfloor = 1</script></span>。（正确）</p>
 </li>
 </ul>
 </li>
 <li>
-<p>这个公式 <span class="arithmatex">\(m = \lfloor (k-1) / (y-1) \rfloor\)</span> 完美地捕捉了“每数完 <span class="arithmatex">\(y-1\)</span> 个保留数后，才增加 1 个移除数”的行为。</p>
+<p>这个公式 <span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (k-1) / (y-1) \rfloor</span><script type="math/tex">m = \lfloor (k-1) / (y-1) \rfloor</script></span> 完美地捕捉了“每数完 <span class="arithmatex"><span class="MathJax_Preview">y-1</span><script type="math/tex">y-1</script></span> 个保留数后，才增加 1 个移除数”的行为。</p>
 </li>
 </ul>
 <h4 id="4_1">步骤 4：最终推导</h4>
 <ol>
 <li>
-<p>我们的目标是求 <span class="arithmatex">\(p\)</span>。</p>
+<p>我们的目标是求 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
 </li>
 <li>
-<p>我们知道 <span class="arithmatex">\(p = k + m\)</span> (原始 = 保留 + 移除)。</p>
+<p>我们知道 <span class="arithmatex"><span class="MathJax_Preview">p = k + m</span><script type="math/tex">p = k + m</script></span> (原始 = 保留 + 移除)。</p>
 </li>
 <li>
-<p>我们刚推导出，移除数 <span class="arithmatex">\(m\)</span> 可以由保留数 <span class="arithmatex">\(k\)</span> 精确计算：<span class="arithmatex">\(m = \lfloor (k-1) / (y-1) \rfloor\)</span> (假设 <span class="arithmatex">\(y \ge 2\)</span> )。</p>
+<p>我们刚推导出，移除数 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 可以由保留数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 精确计算：<span class="arithmatex"><span class="MathJax_Preview">m = \lfloor (k-1) / (y-1) \rfloor</span><script type="math/tex">m = \lfloor (k-1) / (y-1) \rfloor</script></span> (假设 <span class="arithmatex"><span class="MathJax_Preview">y \ge 2</span><script type="math/tex">y \ge 2</script></span> )。</p>
 </li>
 <li>
-<p>把 <span class="arithmatex">\(m\)</span> 替换掉：</p>
-<div class="arithmatex">\[p = k + \lfloor (k-1) / (y-1) \rfloor\]</div>
+<p>把 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 替换掉：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">p = k + \lfloor (k-1) / (y-1) \rfloor</div>
+<script type="math/tex; mode=display">p = k + \lfloor (k-1) / (y-1) \rfloor</script>
+</div>
 </li>
 </ol>
 <p>这就是我们“单步撤销”的核心公式。</p>
 <h1 id="cf">CF 题解思路</h1>
 <ul>
-<li>在许多需要找到第 <span class="arithmatex">\(k\)</span> 个元素的问题中，会出现二分查找。让我们试着在这个问题的答案上也应用二分搜索。我们只需要了解检查函数的外观。让我们确定一个数字 <span class="arithmatex">\(p\)</span> ，</li>
+<li>在许多需要找到第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个元素的问题中，会出现二分查找。让我们试着在这个问题的答案上也应用二分搜索。我们只需要了解检查函数的外观。让我们确定一个数字 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> ，</li>
 </ul>
-<p>我们想知道如果初始序列由 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(1\)</span> 的所有自然数组成，那么最终会剩下多少个数 <span class="arithmatex">\(p\)</span> .由于在每个动作中PolyCarp移除索引是 <span class="arithmatex">\(y\)</span> 的倍数的序列的所有元素，可以使用公式 <span class="arithmatex">\(\lfloor\frac{p}{y}\rfloor\)</span> 计算一个操作后删除的元素数。问题的简单版本中的约束允许我们计算Polycarp的每个动作之后的剩余序列的长度，因此，结果序列的长度可以计算如下：</p>
-<p>如果我们找到这样一个最大值 <span class="arithmatex">\(p\)</span> ，在Polycarp的所有动作之后</p>
-<p>如果有 <span class="arithmatex">\(k\)</span> 个元素，那么这个 <span class="arithmatex">\(p\)</span> 就是答案。不难证明我们的函数是单调的，因此我们可以理直气壮地使用二分搜索。</p>
-<p>渐近时间复杂度： <span class="arithmatex">\(O(x \log A)\)</span> ，其中 <span class="arithmatex">\(A\)</span> 依赖于初始序列的长度，在这个问题中 <span class="arithmatex">\(A = 10^{12}\)</span> 。</p>
+<p>我们想知道如果初始序列由 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的所有自然数组成，那么最终会剩下多少个数 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> .由于在每个动作中PolyCarp移除索引是 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的倍数的序列的所有元素，可以使用公式 <span class="arithmatex"><span class="MathJax_Preview">\lfloor\frac{p}{y}\rfloor</span><script type="math/tex">\lfloor\frac{p}{y}\rfloor</script></span> 计算一个操作后删除的元素数。问题的简单版本中的约束允许我们计算Polycarp的每个动作之后的剩余序列的长度，因此，结果序列的长度可以计算如下：</p>
+<p>如果我们找到这样一个最大值 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> ，在Polycarp的所有动作之后</p>
+<p>如果有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个元素，那么这个 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 就是答案。不难证明我们的函数是单调的，因此我们可以理直气壮地使用二分搜索。</p>
+<p>渐近时间复杂度： <span class="arithmatex"><span class="MathJax_Preview">O(x \log A)</span><script type="math/tex">O(x \log A)</script></span> ，其中 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 依赖于初始序列的长度，在这个问题中 <span class="arithmatex"><span class="MathJax_Preview">A = 10^{12}</span><script type="math/tex">A = 10^{12}</script></span> 。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 
@@ -5602,17 +5611,17 @@
 <span class="p">}</span>
 </code></pre></div>
 <h1 id="check">check 函数的意义</h1>
-<p>操作 <span class="arithmatex">\(x\)</span> 次后，从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(10^{12}\)</span> 的序列中，哪些数字被保留，哪些数字被移除，这个最终的“保留集合”是<strong>完全固定不变的</strong>。</p>
-<p>那么，为什么题解里的“二分答案”法要用一个猜的 <span class="arithmatex">\(p\)</span> (代码里的 <code>m</code>) 来模拟呢？</p>
+<p>操作 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次后，从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 的序列中，哪些数字被保留，哪些数字被移除，这个最终的“保留集合”是<strong>完全固定不变的</strong>。</p>
+<p>那么，为什么题解里的“二分答案”法要用一个猜的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> (代码里的 <code>m</code>) 来模拟呢？</p>
 <h3 id="_9">关键点：操作的独立性</h3>
-<p>这个二分法利用了一个非常巧妙的特性：<strong>一个数 <span class="arithmatex">\(p\)</span> 的“命运”（即它最终是否被保留），只取决于 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(p\)</span> 之间的数，而与 <span class="arithmatex">\(p+1\)</span> 之后的数完全无关。</strong></p>
+<p>这个二分法利用了一个非常巧妙的特性：<strong>一个数 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的“命运”（即它最终是否被保留），只取决于 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 之间的数，而与 <span class="arithmatex"><span class="MathJax_Preview">p+1</span><script type="math/tex">p+1</script></span> 之后的数完全无关。</strong></p>
 <p>举个例子：</p>
 <ul>
 <li>
 <p>我们想知道数字 <code>10</code> 最终是否被保留。</p>
 </li>
 <li>
-<p>第一次操作（<span class="arithmatex">\(y=3\)</span>）：移除第 3, 6, 9... 个数。</p>
+<p>第一次操作（<span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>）：移除第 3, 6, 9... 个数。</p>
 <ul>
 <li>
 <p>序列 <code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ...]</code></p>
@@ -5627,15 +5636,15 @@
 <p><code>9</code> (第9位) 被移除。</p>
 </li>
 <li>
-<p><code>10</code> 的位置<strong>只受</strong>它前面 3, 6, 9 被移除的影响。它从第 10 位变成了第 <span class="arithmatex">\(10-3 = 7\)</span> 位。</p>
+<p><code>10</code> 的位置<strong>只受</strong>它前面 3, 6, 9 被移除的影响。它从第 10 位变成了第 <span class="arithmatex"><span class="MathJax_Preview">10-3 = 7</span><script type="math/tex">10-3 = 7</script></span> 位。</p>
 </li>
 <li>
-<p>它<strong>不受</strong> <span class="arithmatex">\(12, 15, ...\)</span> 等这些它后面的数被移除的影响。</p>
+<p>它<strong>不受</strong> <span class="arithmatex"><span class="MathJax_Preview">12, 15, ...</span><script type="math/tex">12, 15, ...</script></span> 等这些它后面的数被移除的影响。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>第二次操作（<span class="arithmatex">\(y=3\)</span>）：</p>
+<p>第二次操作（<span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>）：</p>
 <ul>
 <li>
 <p>新序列 <code>[1, 2, 4, 5, 7, 8, 10, ...]</code></p>
@@ -5653,7 +5662,7 @@
 <p><code>8</code> (第6位) 被移除。</p>
 </li>
 <li>
-<p><code>10</code> 的位置从第 7 位变成了第 <span class="arithmatex">\(7-2 = 5\)</span> 位。它被保留了。</p>
+<p><code>10</code> 的位置从第 7 位变成了第 <span class="arithmatex"><span class="MathJax_Preview">7-2 = 5</span><script type="math/tex">7-2 = 5</script></span> 位。它被保留了。</p>
 </li>
 </ul>
 </li>
@@ -5661,36 +5670,36 @@
 <h3 id="checkp"><code>check(p)</code> 函数的真正含义</h3>
 <p>因此，题解中的 <code>check(p)</code> 函数（即代码里那个 <code>for</code> 循环），它计算的<strong>不是</strong>一个“假设”的情景。它计算的是：</p>
 <blockquote>
-<p><strong><code>check(p)</code> = “在那个固定的、最终的保留集合中，有多少个数是小于或等于 <span class="arithmatex">\(p\)</span> 的？”</strong></p>
+<p><strong><code>check(p)</code> = “在那个固定的、最终的保留集合中，有多少个数是小于或等于 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的？”</strong></p>
 </blockquote>
-<p>因为 <span class="arithmatex">\(p\)</span> 的命运和 <span class="arithmatex">\(p\)</span> 后面的数无关，所以：</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的命运和 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 后面的数无关，所以：</p>
 <ol>
 <li>
-<p>我们对 <code>[1, 2, ..., p]</code> 这个<strong>短序列</strong>进行 <span class="arithmatex">\(x\)</span> 次模拟。</p>
+<p>我们对 <code>[1, 2, ..., p]</code> 这个<strong>短序列</strong>进行 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次模拟。</p>
 </li>
 <li>
 <p>得到的<strong>剩余数量</strong>。</p>
 </li>
 <li>
-<p>这个数量<strong>精确地等于</strong>我们对 <code>[1, 2, ..., 10^12]</code> 这个<strong>长序列</strong>进行 <span class="arithmatex">\(x\)</span> 次模拟后，再去数里面有多少 <span class="arithmatex">\(\le p\)</span> 的数。</p>
+<p>这个数量<strong>精确地等于</strong>我们对 <code>[1, 2, ..., 10^12]</code> 这个<strong>长序列</strong>进行 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次模拟后，再去数里面有多少 <span class="arithmatex"><span class="MathJax_Preview">\le p</span><script type="math/tex">\le p</script></span> 的数。</p>
 </li>
 </ol>
 <h3 id="_10">把逻辑串起来</h3>
 <ol>
 <li>
-<p><strong>目标：</strong> 找到最终保留集合中的第 <span class="arithmatex">\(k\)</span> 个数。</p>
+<p><strong>目标：</strong> 找到最终保留集合中的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数。</p>
 </li>
 <li>
-<p><strong>二分：</strong> 我们猜这个数是 <span class="arithmatex">\(p\)</span>。</p>
+<p><strong>二分：</strong> 我们猜这个数是 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
 </li>
 <li>
-<p><strong>验证 <code>check(p)</code>：</strong> 我们计算一下 "最终保留集合中 <span class="arithmatex">\(\le p\)</span> 的数有多少个？"。</p>
+<p><strong>验证 <code>check(p)</code>：</strong> 我们计算一下 "最终保留集合中 <span class="arithmatex"><span class="MathJax_Preview">\le p</span><script type="math/tex">\le p</script></span> 的数有多少个？"。</p>
 <ul>
 <li>
-<p>如果 <code>check(p)</code> 算出来等于 <span class="arithmatex">\(k\)</span>（比如 <code>check(10) = 5</code>），这说明在最终保留的数中，<span class="arithmatex">\(\le 10\)</span> 的有 5 个。</p>
+<p>如果 <code>check(p)</code> 算出来等于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（比如 <code>check(10) = 5</code>），这说明在最终保留的数中，<span class="arithmatex"><span class="MathJax_Preview">\le 10</span><script type="math/tex">\le 10</script></span> 的有 5 个。</p>
 </li>
 <li>
-<p>我们再检查 <code>check(p-1)</code>（比如 <code>check(9) = 4</code>），这说明在最终保留的数中，<span class="arithmatex">\(\le 9\)</span> 的有 4 个。</p>
+<p>我们再检查 <code>check(p-1)</code>（比如 <code>check(9) = 4</code>），这说明在最终保留的数中，<span class="arithmatex"><span class="MathJax_Preview">\le 9</span><script type="math/tex">\le 9</script></span> 的有 4 个。</p>
 </li>
 </ul>
 </li>
@@ -5698,10 +5707,10 @@
 <p><strong>结论：</strong></p>
 <ul>
 <li>
-<p><span class="arithmatex">\(\le 9\)</span> 的有 4 个。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\le 9</span><script type="math/tex">\le 9</script></span> 的有 4 个。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(\le 10\)</span> 的有 5 个。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\le 10</span><script type="math/tex">\le 10</script></span> 的有 5 个。</p>
 </li>
 <li>
 <p>这<strong>恰好</strong>说明，第 5 个被保留的数就是 <code>10</code>。</p>
@@ -5709,7 +5718,7 @@
 </ul>
 </li>
 </ol>
-<p>所以，你没理解错，最终的集合是固定的。二分法只是在用 <code>check(p)</code> 这个函数来高效地“查询”这个固定集合的“前缀和”（即 <span class="arithmatex">\(\le p\)</span> 的元素个数），从而定位到第 <span class="arithmatex">\(k\)</span> 个数。</p>
+<p>所以，你没理解错，最终的集合是固定的。二分法只是在用 <code>check(p)</code> 这个函数来高效地“查询”这个固定集合的“前缀和”（即 <span class="arithmatex"><span class="MathJax_Preview">\le p</span><script type="math/tex">\le p</script></span> 的元素个数），从而定位到第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数。</p>
 <p>[[二分]]</p>
 <h1 id="_11">关于二分思路的总结</h1>
 <p>好的，没问题！这道题是“二分答案”的经典应用。</p>
@@ -5720,20 +5729,20 @@
 <p>我们把问题从一个“计算题”变成了一个“判断题”：</p>
 <ul>
 <li>
-<p><strong>原问题（难）：</strong> “第 <span class="arithmatex">\(k\)</span> 个数是多少？”</p>
+<p><strong>原问题（难）：</strong> “第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数是多少？”</p>
 </li>
 <li>
-<p><strong>新问题（易）：</strong> “我猜答案是 <span class="arithmatex">\(p\)</span>，你帮我看看 <span class="arithmatex">\(p\)</span> 这个猜测是太大了还是太小了？”</p>
+<p><strong>新问题（易）：</strong> “我猜答案是 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，你帮我看看 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 这个猜测是太大了还是太小了？”</p>
 </li>
 </ul>
 <h3 id="d1">为什么这题（D1）可以用二分？</h3>
 <p>因为它完美满足了“二分答案”必须的 <strong>3 个前提条件</strong>：</p>
 <h4 id="1-monotonicity">1. 答案具有“单调性” (Monotonicity)</h4>
-<p>这是二分法的灵魂。我们需要定义一个 <code>check(p)</code> 函数，它的结果必须随着 <span class="arithmatex">\(p\)</span> 的增大而单调（只增不减，或只减不增）。</p>
+<p>这是二分法的灵魂。我们需要定义一个 <code>check(p)</code> 函数，它的结果必须随着 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的增大而单调（只增不减，或只减不增）。</p>
 <ul>
 <li>
 <p>check(p) 函数的定义：</p>
-<p>“假设初始序列只有 [1, 2, ..., p]，经过 <span class="arithmatex">\(x\)</span> 次移除操作后，最终会剩下多少个数？”</p>
+<p>“假设初始序列只有 [1, 2, ..., p]，经过 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次移除操作后，最终会剩下多少个数？”</p>
 </li>
 <li>
 <p>为什么它是单调的？</p>
@@ -5744,13 +5753,13 @@
 </li>
 <li>
 <p>如果数字 p+1 最终被移除：check(p+1) = check(p)</p>
-<p>在任何情况下，check(p) 的结果（剩余数量）都随着 <span class="arithmatex">\(p\)</span> 的增大而<strong>“只增不减”</strong>。这构成了完美的单调性，是可以使用二分的基础。</p>
+<p>在任何情况下，check(p) 的结果（剩余数量）都随着 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的增大而<strong>“只增不减”</strong>。这构成了完美的单调性，是可以使用二分的基础。</p>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="2-boundedness">2. 答案具有“有界性” (Boundedness)</h4>
-<p>答案（也就是第 <span class="arithmatex">\(k\)</span> 个数）一定在一个已知的范围内。</p>
+<p>答案（也就是第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数）一定在一个已知的范围内。</p>
 <ul>
 <li>
 <p><strong>下界 (l)：</strong> 最小是 <code>1</code>。</p>
@@ -5763,62 +5772,62 @@
 <h4 id="3-check-vs-solve">3. “验证”远比“求解”容易 (Check vs. Solve)</h4>
 <ul>
 <li>
-<p><strong>求解（难）：</strong> 直接算出第 <span class="arithmatex">\(k\)</span> 个数是几，我们毫无头绪。</p>
+<p><strong>求解（难）：</strong> 直接算出第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数是几，我们毫无头绪。</p>
 </li>
 <li>
-<p><strong>验证（易）：</strong> 对于我们猜的<strong>任何一个 <span class="arithmatex">\(p\)</span></strong>，我们都能用那个 <code>for</code> 循环（模拟 <span class="arithmatex">\(x\)</span> 次）<strong>快速地</strong>计算出 <code>check(p)</code> 的值。</p>
+<p><strong>验证（易）：</strong> 对于我们猜的<strong>任何一个 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></strong>，我们都能用那个 <code>for</code> 循环（模拟 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次）<strong>快速地</strong>计算出 <code>check(p)</code> 的值。</p>
 </li>
 </ul>
 <hr />
 <h3 id="_12">二分的关键：我们在找什么？</h3>
-<p>我们不是在找<strong>任何一个</strong> <code>check(p) == k</code> 的 <span class="arithmatex">\(p\)</span>，因为这可能是错的（比如 <code>check(11)=6</code> 和 <code>check(12)=6</code> 的例子）。</p>
+<p>我们不是在找<strong>任何一个</strong> <code>check(p) == k</code> 的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，因为这可能是错的（比如 <code>check(11)=6</code> 和 <code>check(12)=6</code> 的例子）。</p>
 <p>我们真正要找的是：</p>
-<p>“满足 check(p) &gt;= k 的最小的那个 <span class="arithmatex">\(p\)</span>”</p>
-<p>这个“最小的 <span class="arithmatex">\(p\)</span>”具有最关键的含义：</p>
+<p>“满足 check(p) &gt;= k 的最小的那个 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>”</p>
+<p>这个“最小的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>”具有最关键的含义：</p>
 <ol>
 <li>
-<p><strong>当 <span class="arithmatex">\(p\)</span> 是这个“最小 <span class="arithmatex">\(p\)</span>”时 (比如 <span class="arithmatex">\(p=11\)</span>, <span class="arithmatex">\(k=6\)</span>)</strong></p>
+<p><strong>当 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是这个“最小 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>”时 (比如 <span class="arithmatex"><span class="MathJax_Preview">p=11</span><script type="math/tex">p=11</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k=6</span><script type="math/tex">k=6</script></span>)</strong></p>
 <ul>
 <li>
 <p><code>check(p-1)</code> 一定 <code>&lt; k</code> (例如 <code>check(10) = 5</code>)</p>
 </li>
 <li>
-<p><code>check(p)</code> 一定 <span class="arithmatex">\(\ge k\)</span> (例如 <code>check(11) = 6</code>)</p>
+<p><code>check(p)</code> 一定 <span class="arithmatex"><span class="MathJax_Preview">\ge k</span><script type="math/tex">\ge k</script></span> (例如 <code>check(11) = 6</code>)</p>
 </li>
 <li>
-<p><code>check</code> 的结果在 <span class="arithmatex">\(p\)</span> 这里<strong>发生了“跳跃”</strong>（从 5 蹦到了 6）。</p>
+<p><code>check</code> 的结果在 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 这里<strong>发生了“跳跃”</strong>（从 5 蹦到了 6）。</p>
 </li>
 <li>
-<p>这个“+1”只能来自一个地方：<strong>数字 <span class="arithmatex">\(p\)</span> 本身存活了！</strong></p>
+<p>这个“+1”只能来自一个地方：<strong>数字 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 本身存活了！</strong></p>
 </li>
 <li>
-<p>因此，<span class="arithmatex">\(p\)</span> 自己就是我们要找的第 <span class="arithmatex">\(k\)</span> 个存活者。</p>
+<p>因此，<span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 自己就是我们要找的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个存活者。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>当 <span class="arithmatex">\(p\)</span> 不是“最小 <span class="arithmatex">\(p\)</span>”时 (比如 <span class="arithmatex">\(p=12\)</span>, <span class="arithmatex">\(k=6\)</span>)</strong></p>
+<p><strong>当 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 不是“最小 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>”时 (比如 <span class="arithmatex"><span class="MathJax_Preview">p=12</span><script type="math/tex">p=12</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k=6</span><script type="math/tex">k=6</script></span>)</strong></p>
 <ul>
 <li>
-<p><code>check(p-1)</code> 已经 <span class="arithmatex">\(\ge k\)</span> (例如 <code>check(11) = 6</code>)</p>
+<p><code>check(p-1)</code> 已经 <span class="arithmatex"><span class="MathJax_Preview">\ge k</span><script type="math/tex">\ge k</script></span> (例如 <code>check(11) = 6</code>)</p>
 </li>
 <li>
-<p><code>check(p)</code> 也 <span class="arithmatex">\(\ge k\)</span> (例如 <code>check(12) = 6</code>)</p>
+<p><code>check(p)</code> 也 <span class="arithmatex"><span class="MathJax_Preview">\ge k</span><script type="math/tex">\ge k</script></span> (例如 <code>check(12) = 6</code>)</p>
 </li>
 <li>
-<p><code>check</code> 的结果在 <span class="arithmatex">\(p\)</span> 这里<strong>没有发生“跳跃”</strong>（从 6 保持为 6）。</p>
+<p><code>check</code> 的结果在 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 这里<strong>没有发生“跳跃”</strong>（从 6 保持为 6）。</p>
 </li>
 <li>
-<p>这个“+0”说明：<strong>数字 <span class="arithmatex">\(p\)</span> 本身被移除了！</strong></p>
+<p>这个“+0”说明：<strong>数字 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 本身被移除了！</strong></p>
 </li>
 <li>
-<p>所以 <span class="arithmatex">\(p=12\)</span> 虽然满足 <code>check(p) &gt;= k</code>，但它不是答案。</p>
+<p>所以 <span class="arithmatex"><span class="MathJax_Preview">p=12</span><script type="math/tex">p=12</script></span> 虽然满足 <code>check(p) &gt;= k</code>，但它不是答案。</p>
 </li>
 </ul>
 </li>
 </ol>
 <h3 id="_13">你的二分代码是如何实现这一点的？</h3>
-<p>你的 <code>while(l &lt; r)</code> 模板正是为“寻找最小 <span class="arithmatex">\(p\)</span>”而设计的：</p>
+<p>你的 <code>while(l &lt; r)</code> 模板正是为“寻找最小 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>”而设计的：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>while(l &lt; r){
     LL mid = l + r &gt;&gt; 1;
@@ -5837,10 +5846,10 @@
 // 循环结束时，l 和 r 会在那个“最小的 p”上相遇
 printf(&quot;%lld\n&quot;, l); 
 </code></pre></div>
-<p>这个模板会<strong>自动地</strong>帮你抛弃所有像 <span class="arithmatex">\(p=12\)</span> 这样的“平台点”，最终精确地停在 <span class="arithmatex">\(p=11\)</span> 这样的“跳跃点”上。</p>
+<p>这个模板会<strong>自动地</strong>帮你抛弃所有像 <span class="arithmatex"><span class="MathJax_Preview">p=12</span><script type="math/tex">p=12</script></span> 这样的“平台点”，最终精确地停在 <span class="arithmatex"><span class="MathJax_Preview">p=11</span><script type="math/tex">p=11</script></span> 这样的“跳跃点”上。</p>
 <hr />
 <h3 id="_14">总结：什么时候用二分答案？</h3>
-<p>当你遇到一个问题（尤其是“求解第 <span class="arithmatex">\(k\)</span> 个...”或“最大值的最小...”）：</p>
+<p>当你遇到一个问题（尤其是“求解第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个...”或“最大值的最小...”）：</p>
 <ol>
 <li>
 <p><strong>第一反应：</strong> 我不会直接算，但如果给我一个答案 <code>p</code>，我能<strong>很容易地判断</strong>它（或 <code>check(p)</code> 的结果）是太大了还是太小了。</p>

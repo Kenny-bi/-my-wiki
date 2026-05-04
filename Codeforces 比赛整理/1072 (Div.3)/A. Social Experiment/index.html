@@ -4424,13 +4424,13 @@
 <p>时间限制：1 秒<br />
 内存限制：256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
-<p>目前，Codeforces 历史上最大规模的社会实验正在进行，共有 <span class="arithmatex">\(n\)</span> 人参与。他们被要求组成 <span class="arithmatex">\(2\)</span> 至 <span class="arithmatex">\(3\)</span> 人的团队，之后每个团队选择两个文明中的一个参与社会实验。</p>
+<p>目前，Codeforces 历史上最大规模的社会实验正在进行，共有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 人参与。他们被要求组成 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 至 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 人的团队，之后每个团队选择两个文明中的一个参与社会实验。</p>
 <p>这项实验的组织者想知道，两个文明中的人数可能的最小差值是多少。请找出这个最小可能差值。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>) —— 测试用例的数量。接下来 <span class="arithmatex">\(t\)</span> 行，每行描述一个测试用例。</p>
-<p>每个测试用例仅有一行，包含一个整数 <span class="arithmatex">\(n\)</span> —— 参与社会实验的人数 (<span class="arithmatex">\(2 \le n \le 10^4\)</span>)。</p>
+<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>) —— 测试用例的数量。接下来 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 行，每行描述一个测试用例。</p>
+<p>每个测试用例仅有一行，包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> —— 参与社会实验的人数 (<span class="arithmatex"><span class="MathJax_Preview">2 \le n \le 10^4</span><script type="math/tex">2 \le n \le 10^4</script></span>)。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个 <span class="arithmatex">\(n\)</span>，输出两个文明人数可能的最小差值。</p>
+<p>对于每个 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，输出两个文明人数可能的最小差值。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 2
@@ -4444,9 +4444,9 @@
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <ul>
-<li>第一个测试用例 <span class="arithmatex">\(n=2\)</span>，只能组成一个 <span class="arithmatex">\(2\)</span> 人团队。该团队将选择一个文明，而另一个文明将没有人，因此差值为 <span class="arithmatex">\(2\)</span>。</li>
-<li>第二个测试用例 <span class="arithmatex">\(n=5\)</span>，可以组成两个团队：一个 <span class="arithmatex">\(2\)</span> 人队和一个 <span class="arithmatex">\(3\)</span> 人队。如果它们选择不同的文明，则人数差为 <span class="arithmatex">\(|3-2|=1\)</span>。</li>
-<li>第三个测试用例 <span class="arithmatex">\(n=12\)</span>，可以组成 <span class="arithmatex">\(4\)</span> 个 <span class="arithmatex">\(3\)</span> 人队。若前两个队选择第一个文明，后两个队选择第二个文明，则两个文明各有 <span class="arithmatex">\(6\)</span> 人，差值为 <span class="arithmatex">\(0\)</span>。</li>
+<li>第一个测试用例 <span class="arithmatex"><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>，只能组成一个 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 人团队。该团队将选择一个文明，而另一个文明将没有人，因此差值为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</li>
+<li>第二个测试用例 <span class="arithmatex"><span class="MathJax_Preview">n=5</span><script type="math/tex">n=5</script></span>，可以组成两个团队：一个 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 人队和一个 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 人队。如果它们选择不同的文明，则人数差为 <span class="arithmatex"><span class="MathJax_Preview">|3-2|=1</span><script type="math/tex">|3-2|=1</script></span>。</li>
+<li>第三个测试用例 <span class="arithmatex"><span class="MathJax_Preview">n=12</span><script type="math/tex">n=12</script></span>，可以组成 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 个 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 人队。若前两个队选择第一个文明，后两个队选择第二个文明，则两个文明各有 <span class="arithmatex"><span class="MathJax_Preview">6</span><script type="math/tex">6</script></span> 人，差值为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</li>
 </ul>
 
 

@@ -4778,20 +4778,20 @@
 <p>时间限制：每测试点2秒<br />
 内存限制：每测试点512MB  </p>
 <h2 id="_1">问题描述</h2>
-<p>给定两个整数数组：<span class="arithmatex">\(q_1, q_2, \ldots, q_n\)</span> 和 <span class="arithmatex">\(r_1, r_2, \ldots, r_n\)</span>，以及一个整数 <span class="arithmatex">\(k\)</span>。</p>
+<p>给定两个整数数组：<span class="arithmatex"><span class="MathJax_Preview">q_1, q_2, \ldots, q_n</span><script type="math/tex">q_1, q_2, \ldots, q_n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r_1, r_2, \ldots, r_n</span><script type="math/tex">r_1, r_2, \ldots, r_n</script></span>，以及一个整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 <p>你可以执行以下操作任意次（包括零次）：</p>
-<p>选择两个整数 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，使得：
-1. <span class="arithmatex">\(1 \leq y &lt; x \leq k\)</span>；
-2. 存在索引 <span class="arithmatex">\(i\)</span> 满足 <span class="arithmatex">\(q_i = \lfloor \frac{x}{y} \rfloor\)</span>（向下取整）；
-3. 存在索引 <span class="arithmatex">\(j\)</span> 满足 <span class="arithmatex">\(r_j = x \bmod y\)</span>。</p>
-<p>从数组 <span class="arithmatex">\(q\)</span> 中删除 <span class="arithmatex">\(q_i\)</span>，从数组 <span class="arithmatex">\(r\)</span> 中删除 <span class="arithmatex">\(r_j\)</span>。如果数组 <span class="arithmatex">\(q\)</span> 中有多个 <span class="arithmatex">\(q_i\)</span>，只删除一个；数组 <span class="arithmatex">\(r\)</span> 中的 <span class="arithmatex">\(r_j\)</span> 同理。</p>
-<p>计算你可以对给定数组 <span class="arithmatex">\(q\)</span> 和 <span class="arithmatex">\(r\)</span> 执行的最大操作次数。</p>
+<p>选择两个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，使得：
+1. <span class="arithmatex"><span class="MathJax_Preview">1 \leq y &lt; x \leq k</span><script type="math/tex">1 \leq y < x \leq k</script></span>；
+2. 存在索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">q_i = \lfloor \frac{x}{y} \rfloor</span><script type="math/tex">q_i = \lfloor \frac{x}{y} \rfloor</script></span>（向下取整）；
+3. 存在索引 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">r_j = x \bmod y</span><script type="math/tex">r_j = x \bmod y</script></span>。</p>
+<p>从数组 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 中删除 <span class="arithmatex"><span class="MathJax_Preview">q_i</span><script type="math/tex">q_i</script></span>，从数组 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 中删除 <span class="arithmatex"><span class="MathJax_Preview">r_j</span><script type="math/tex">r_j</script></span>。如果数组 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 中有多个 <span class="arithmatex"><span class="MathJax_Preview">q_i</span><script type="math/tex">q_i</script></span>，只删除一个；数组 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 中的 <span class="arithmatex"><span class="MathJax_Preview">r_j</span><script type="math/tex">r_j</script></span> 同理。</p>
+<p>计算你可以对给定数组 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 执行的最大操作次数。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>) —— 测试用例数量。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(1 \leq n \leq 2 \cdot 10^5\)</span>; <span class="arithmatex">\(2 \leq k \leq 10^{18}\)</span>) —— 数组 <span class="arithmatex">\(q\)</span> 和 <span class="arithmatex">\(r\)</span> 的大小，以及 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 的上限。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(q_1, q_2, \ldots, q_n\)</span> (<span class="arithmatex">\(1 \leq q_i \leq 10^9\)</span>) —— 数组 <span class="arithmatex">\(q\)</span>。</p>
-<p>第三行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(r_1, r_2, \ldots, r_n\)</span> (<span class="arithmatex">\(1 \leq r_i \leq 10^9\)</span>) —— 数组 <span class="arithmatex">\(r\)</span>。</p>
-<p>输入的其他约束：所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>) —— 测试用例数量。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq n \leq 2 \cdot 10^5</script></span>; <span class="arithmatex"><span class="MathJax_Preview">2 \leq k \leq 10^{18}</span><script type="math/tex">2 \leq k \leq 10^{18}</script></span>) —— 数组 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的大小，以及 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的上限。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">q_1, q_2, \ldots, q_n</span><script type="math/tex">q_1, q_2, \ldots, q_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq q_i \leq 10^9</span><script type="math/tex">1 \leq q_i \leq 10^9</script></span>) —— 数组 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>。</p>
+<p>第三行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">r_1, r_2, \ldots, r_n</span><script type="math/tex">r_1, r_2, \ldots, r_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq r_i \leq 10^9</span><script type="math/tex">1 \leq r_i \leq 10^9</script></span>) —— 数组 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>。</p>
+<p>输入的其他约束：所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数 —— 可以对给定数组执行的最大操作次数。</p>
 <h2 id="_4">样例输入</h2>
@@ -4812,13 +4812,13 @@
 3
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，可以执行一次操作：选择 <span class="arithmatex">\(x=69\)</span> 和 <span class="arithmatex">\(y=42\)</span>。则 <span class="arithmatex">\(\lfloor \frac{69}{42} \rfloor = 1 = q_1\)</span> 且 <span class="arithmatex">\(69 \bmod 42 = 27 = r_1\)</span>。</p>
-<p>在第二个测试用例中，无法执行任何操作，因为找不到合适的 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>。</p>
+<p>在第一个测试用例中，可以执行一次操作：选择 <span class="arithmatex"><span class="MathJax_Preview">x=69</span><script type="math/tex">x=69</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y=42</span><script type="math/tex">y=42</script></span>。则 <span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{69}{42} \rfloor = 1 = q_1</span><script type="math/tex">\lfloor \frac{69}{42} \rfloor = 1 = q_1</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">69 \bmod 42 = 27 = r_1</span><script type="math/tex">69 \bmod 42 = 27 = r_1</script></span>。</p>
+<p>在第二个测试用例中，无法执行任何操作，因为找不到合适的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>。</p>
 <p>在第三个测试用例中，可以执行三次操作：
-- <span class="arithmatex">\(x=42\)</span>, <span class="arithmatex">\(y=17\)</span>: <span class="arithmatex">\(\lfloor \frac{42}{17} \rfloor = 2 = q_3\)</span> 且 <span class="arithmatex">\(42 \bmod 17 = 8 = r_2\)</span>；
-- <span class="arithmatex">\(x=41\)</span>, <span class="arithmatex">\(y=16\)</span>: <span class="arithmatex">\(\lfloor \frac{41}{16} \rfloor = 2 = q_4\)</span> 且 <span class="arithmatex">\(41 \bmod 16 = 9 = r_1\)</span>；
-- <span class="arithmatex">\(x=20\)</span>, <span class="arithmatex">\(y=12\)</span>: <span class="arithmatex">\(\lfloor \frac{20}{12} \rfloor = 1 = q_5\)</span> 且 <span class="arithmatex">\(20 \bmod 12 = 8 = r_4\)</span>；</p>
-<p>这些操作后，数组变为 <span class="arithmatex">\(q=[5,4]\)</span> 和 <span class="arithmatex">\(r=[9,100]\)</span>，无法再执行更多操作。</p>
+- <span class="arithmatex"><span class="MathJax_Preview">x=42</span><script type="math/tex">x=42</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=17</span><script type="math/tex">y=17</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{42}{17} \rfloor = 2 = q_3</span><script type="math/tex">\lfloor \frac{42}{17} \rfloor = 2 = q_3</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">42 \bmod 17 = 8 = r_2</span><script type="math/tex">42 \bmod 17 = 8 = r_2</script></span>；
+- <span class="arithmatex"><span class="MathJax_Preview">x=41</span><script type="math/tex">x=41</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=16</span><script type="math/tex">y=16</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{41}{16} \rfloor = 2 = q_4</span><script type="math/tex">\lfloor \frac{41}{16} \rfloor = 2 = q_4</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">41 \bmod 16 = 9 = r_1</span><script type="math/tex">41 \bmod 16 = 9 = r_1</script></span>；
+- <span class="arithmatex"><span class="MathJax_Preview">x=20</span><script type="math/tex">x=20</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=12</span><script type="math/tex">y=12</script></span>: <span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{20}{12} \rfloor = 1 = q_5</span><script type="math/tex">\lfloor \frac{20}{12} \rfloor = 1 = q_5</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">20 \bmod 12 = 8 = r_4</span><script type="math/tex">20 \bmod 12 = 8 = r_4</script></span>；</p>
+<p>这些操作后，数组变为 <span class="arithmatex"><span class="MathJax_Preview">q=[5,4]</span><script type="math/tex">q=[5,4]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r=[9,100]</span><script type="math/tex">r=[9,100]</script></span>，无法再执行更多操作。</p>
 <h1 id="ac">赛时AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2170 C</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 185 (Rated for Div. 2)</span>
@@ -4875,43 +4875,49 @@
 <h2 id="1-greedy-heap">1. 你的代码思路分析 (Greedy + Heap)</h2>
 <p>你的解法结合了<strong>数学推导</strong>和<strong>贪心策略</strong>，逻辑非常清晰且正确。</p>
 <h3 id="_7">核心数学模型</h3>
-<p>题目要求找到 <span class="arithmatex">\(x, y\)</span> 使得：</p>
+<p>题目要求找到 <span class="arithmatex"><span class="MathJax_Preview">x, y</span><script type="math/tex">x, y</script></span> 使得：</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(\lfloor x/y \rfloor = q_i\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\lfloor x/y \rfloor = q_i</span><script type="math/tex">\lfloor x/y \rfloor = q_i</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(x \bmod y = r_j\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">x \bmod y = r_j</span><script type="math/tex">x \bmod y = r_j</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(1 \le y &lt; x \le k\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">1 \le y &lt; x \le k</span><script type="math/tex">1 \le y < x \le k</script></span></p>
 </li>
 </ol>
-<p>根据除法原理：<span class="arithmatex">\(x = q_i \cdot y + r_j\)</span>。</p>
-<p>要使 <span class="arithmatex">\(x \le k\)</span> 成立，我们需要：</p>
-<div class="arithmatex">\[q_i \cdot y + r_j \le k\]</div>
-<p>因为题目要求 <span class="arithmatex">\(x \bmod y = r_j\)</span>，根据余数的定义，必须满足 <span class="arithmatex">\(y &gt; r_j\)</span>。</p>
-<p>为了让 <span class="arithmatex">\(x\)</span> 尽可能小（从而更容易 <span class="arithmatex">\(\le k\)</span>），我们需要取最小的合法 <span class="arithmatex">\(y\)</span>。</p>
-<p>最小的合法 <span class="arithmatex">\(y\)</span> 是 <span class="arithmatex">\(r_j + 1\)</span>。</p>
+<p>根据除法原理：<span class="arithmatex"><span class="MathJax_Preview">x = q_i \cdot y + r_j</span><script type="math/tex">x = q_i \cdot y + r_j</script></span>。</p>
+<p>要使 <span class="arithmatex"><span class="MathJax_Preview">x \le k</span><script type="math/tex">x \le k</script></span> 成立，我们需要：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">q_i \cdot y + r_j \le k</div>
+<script type="math/tex; mode=display">q_i \cdot y + r_j \le k</script>
+</div>
+<p>因为题目要求 <span class="arithmatex"><span class="MathJax_Preview">x \bmod y = r_j</span><script type="math/tex">x \bmod y = r_j</script></span>，根据余数的定义，必须满足 <span class="arithmatex"><span class="MathJax_Preview">y &gt; r_j</span><script type="math/tex">y > r_j</script></span>。</p>
+<p>为了让 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 尽可能小（从而更容易 <span class="arithmatex"><span class="MathJax_Preview">\le k</span><script type="math/tex">\le k</script></span>），我们需要取最小的合法 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>。</p>
+<p>最小的合法 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">r_j + 1</span><script type="math/tex">r_j + 1</script></span>。</p>
 <p>代入公式，判断条件转化为：</p>
-<div class="arithmatex">\[q_i \cdot (r_j + 1) + r_j \le k\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">q_i \cdot (r_j + 1) + r_j \le k</div>
+<script type="math/tex; mode=display">q_i \cdot (r_j + 1) + r_j \le k</script>
+</div>
 <h3 id="_8">贪心逻辑分析</h3>
 <p>你的代码做了如下操作：</p>
 <ol>
 <li>
-<p><strong>排序 <span class="arithmatex">\(r\)</span></strong>：从小到大处理余数。</p>
+<p><strong>排序 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span></strong>：从小到大处理余数。</p>
 </li>
 <li>
-<p><strong>大顶堆 <span class="arithmatex">\(q\)</span></strong>：每次取出最大的商。</p>
+<p><strong>大顶堆 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span></strong>：每次取出最大的商。</p>
 </li>
 <li>
 <p><strong>匹配策略</strong>：</p>
 <ul>
 <li>
-<p>拿当前<strong>最小的余数</strong> <span class="arithmatex">\(r_{min}\)</span>，去尝试匹配<strong>最大的商</strong> <span class="arithmatex">\(q_{max}\)</span>。</p>
+<p>拿当前<strong>最小的余数</strong> <span class="arithmatex"><span class="MathJax_Preview">r_{min}</span><script type="math/tex">r_{min}</script></span>，去尝试匹配<strong>最大的商</strong> <span class="arithmatex"><span class="MathJax_Preview">q_{max}</span><script type="math/tex">q_{max}</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(q_{max}\)</span> 连 <span class="arithmatex">\(r_{min}\)</span> 都无法满足（即算出来的 <span class="arithmatex">\(x &gt; k\)</span>），那么这个 <span class="arithmatex">\(q_{max}\)</span> 肯定也无法满足更大的 <span class="arithmatex">\(r\)</span>，因为 <span class="arithmatex">\(r\)</span> 越大，<span class="arithmatex">\(x\)</span> 越大。所以直接<strong>丢弃</strong>这个 <span class="arithmatex">\(q_{max}\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">q_{max}</span><script type="math/tex">q_{max}</script></span> 连 <span class="arithmatex"><span class="MathJax_Preview">r_{min}</span><script type="math/tex">r_{min}</script></span> 都无法满足（即算出来的 <span class="arithmatex"><span class="MathJax_Preview">x &gt; k</span><script type="math/tex">x > k</script></span>），那么这个 <span class="arithmatex"><span class="MathJax_Preview">q_{max}</span><script type="math/tex">q_{max}</script></span> 肯定也无法满足更大的 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 越大，<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 越大。所以直接<strong>丢弃</strong>这个 <span class="arithmatex"><span class="MathJax_Preview">q_{max}</span><script type="math/tex">q_{max}</script></span>。</p>
 </li>
 <li>
 <p>如果满足，则匹配成功，<code>ans++</code>。</p>
@@ -4923,44 +4929,44 @@
 <p>这是一个经典的资源分配贪心问题：</p>
 <ul>
 <li>
-<p><strong>资源</strong>：<span class="arithmatex">\(r\)</span> (越小的 <span class="arithmatex">\(r\)</span> 越“宽容”，能容纳越大的 <span class="arithmatex">\(q\)</span>)。</p>
+<p><strong>资源</strong>：<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> (越小的 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 越“宽容”，能容纳越大的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>)。</p>
 </li>
 <li>
-<p><strong>需求</strong>：<span class="arithmatex">\(q\)</span> (越大的 <span class="arithmatex">\(q\)</span> 越“难搞”，需要的 <span class="arithmatex">\(x\)</span> 越大)。</p>
+<p><strong>需求</strong>：<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> (越大的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 越“难搞”，需要的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 越大)。</p>
 </li>
 <li>
-<p><strong>策略</strong>：把“最宽容”的资源（小 <span class="arithmatex">\(r\)</span>）留给“最难搞”的需求（大 <span class="arithmatex">\(q\)</span>）。如果我们用小 <span class="arithmatex">\(r\)</span> 去匹配了一个小 <span class="arithmatex">\(q\)</span>，那么剩下的大 <span class="arithmatex">\(q\)</span> 面对大 <span class="arithmatex">\(r\)</span> 肯定匹配不上，造成浪费。</p>
+<p><strong>策略</strong>：把“最宽容”的资源（小 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>）留给“最难搞”的需求（大 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>）。如果我们用小 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 去匹配了一个小 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>，那么剩下的大 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 面对大 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 肯定匹配不上，造成浪费。</p>
 </li>
 </ul>
 <h3 id="_9">复杂度</h3>
 <ul>
 <li>
-<p><strong>时间复杂度</strong>：<span class="arithmatex">\(O(N \log N)\)</span>。主要是排序 <span class="arithmatex">\(r\)</span> 和优先队列的操作。</p>
+<p><strong>时间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(N \log N)</span><script type="math/tex">O(N \log N)</script></span>。主要是排序 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 和优先队列的操作。</p>
 </li>
 <li>
-<p><strong>空间复杂度</strong>：<span class="arithmatex">\(O(N)\)</span>。</p>
+<p><strong>空间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>。</p>
 </li>
 </ul>
 <hr />
 <h2 id="2-heap-two-pointers">2. 进阶分析：从 Heap 优化到 双指针 (Two Pointers)</h2>
-<p>虽然你的优先队列做法完全可以通过（<span class="arithmatex">\(N \log N\)</span>），但这道题其实可以用<strong>双指针</strong>实现，逻辑更直观，且常数更小。</p>
+<p>虽然你的优先队列做法完全可以通过（<span class="arithmatex"><span class="MathJax_Preview">N \log N</span><script type="math/tex">N \log N</script></span>），但这道题其实可以用<strong>双指针</strong>实现，逻辑更直观，且常数更小。</p>
 <h3 id="_10">优化思路</h3>
-<p>既然我们总是用“最小的 <span class="arithmatex">\(r\)</span>” 去试探 “最大的 <span class="arithmatex">\(q\)</span>”，那我们可以直接对两个数组都进行排序。</p>
+<p>既然我们总是用“最小的 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>” 去试探 “最大的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>”，那我们可以直接对两个数组都进行排序。</p>
 <ol>
 <li>
-<p>将 <span class="arithmatex">\(r\)</span> 从小到大排序。</p>
+<p>将 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 从小到大排序。</p>
 </li>
 <li>
-<p>将 <span class="arithmatex">\(q\)</span> 从小到大排序。</p>
+<p>将 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 从小到大排序。</p>
 </li>
 <li>
 <p>使用双指针：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(i\)</span> 指向 <span class="arithmatex">\(r\)</span> 的开头（最小）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 指向 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的开头（最小）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(j\)</span> 指向 <span class="arithmatex">\(q\)</span> 的末尾（最大）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 指向 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 的末尾（最大）。</p>
 </li>
 </ul>
 </li>
@@ -5005,10 +5011,10 @@
 <p><strong>区别</strong>：</p>
 <ul>
 <li>
-<p>你的代码：<span class="arithmatex">\(r\)</span> 循环里套着 <code>while(pq)</code>。</p>
+<p>你的代码：<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 循环里套着 <code>while(pq)</code>。</p>
 </li>
 <li>
-<p>优化代码：<span class="arithmatex">\(r\)</span> 循环里套着 <code>while(ptr)</code>。</p>
+<p>优化代码：<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 循环里套着 <code>while(ptr)</code>。</p>
 </li>
 <li>
 <p>本质是一样的，但数组排序比维护堆稍微快一点点（常数优势），且代码不用写 PQ。</p>
@@ -5018,23 +5024,26 @@
 <h2 id="3-review">3. 知识点总结 (Review)</h2>
 <p>这道题的关键在于把复杂的文字描述转化为不等式。</p>
 <h3 id="formalization">📌 技巧：数学公式化简 (Formalization)</h3>
-<p>遇到 <span class="arithmatex">\(x, y\)</span> 的构造题，先列出公式：</p>
-<div class="arithmatex">\[x = qy + r\]</div>
+<p>遇到 <span class="arithmatex"><span class="MathJax_Preview">x, y</span><script type="math/tex">x, y</script></span> 的构造题，先列出公式：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">x = qy + r</div>
+<script type="math/tex; mode=display">x = qy + r</script>
+</div>
 <p>然后找极值。要判定“是否存在”，往往意味着找“最小/最大”情况。</p>
 <ul>
-<li>这里 <span class="arithmatex">\(y &gt; r\)</span>，为了让 <span class="arithmatex">\(x\)</span> 不超标，取 <span class="arithmatex">\(y_{min} = r+1\)</span> 是关键的一步。</li>
+<li>这里 <span class="arithmatex"><span class="MathJax_Preview">y &gt; r</span><script type="math/tex">y > r</script></span>，为了让 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 不超标，取 <span class="arithmatex"><span class="MathJax_Preview">y_{min} = r+1</span><script type="math/tex">y_{min} = r+1</script></span> 是关键的一步。</li>
 </ul>
 <h3 id="greedy-matching">📌 技巧：贪心匹配模型 (Greedy Matching)</h3>
-<p>当你手里有两把牌（数组 A 和数组 B），规则是 <span class="arithmatex">\(A_i\)</span> 和 <span class="arithmatex">\(B_j\)</span> 结合必须满足某个阈值。</p>
+<p>当你手里有两把牌（数组 A 和数组 B），规则是 <span class="arithmatex"><span class="MathJax_Preview">A_i</span><script type="math/tex">A_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">B_j</span><script type="math/tex">B_j</script></span> 结合必须满足某个阈值。</p>
 <ul>
 <li>
-<p>如果条件是 <span class="arithmatex">\(A \times B \le K\)</span>（乘积受限）：</p>
+<p>如果条件是 <span class="arithmatex"><span class="MathJax_Preview">A \times B \le K</span><script type="math/tex">A \times B \le K</script></span>（乘积受限）：</p>
 <ul>
 <li>
 <p>通常策略是：<strong>最小配最大</strong>。</p>
 </li>
 <li>
-<p>让最小的 <span class="arithmatex">\(A\)</span> 去“拯救”最大的 <span class="arithmatex">\(B\)</span>。如果最小的 <span class="arithmatex">\(A\)</span> 都救不了最大的 <span class="arithmatex">\(B\)</span>，那谁也救不了它，只能放弃这个 <span class="arithmatex">\(B\)</span>。</p>
+<p>让最小的 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 去“拯救”最大的 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>。如果最小的 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 都救不了最大的 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>，那谁也救不了它，只能放弃这个 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -5042,20 +5051,20 @@
 <h3 id="obsidian">📌 建议加入 Obsidian 的笔记</h3>
 <p>你可以把这个模型记为 <strong>"Inequality Greedy Matching"</strong> (不等式贪心匹配)。</p>
 <blockquote>
-<p>模型：给定数组 <span class="arithmatex">\(A, B\)</span> 和常数 <span class="arithmatex">\(K\)</span>，求最大配对数，使得 <span class="arithmatex">\(A_i \cdot B_j \le K\)</span>。</p>
+<p>模型：给定数组 <span class="arithmatex"><span class="MathJax_Preview">A, B</span><script type="math/tex">A, B</script></span> 和常数 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>，求最大配对数，使得 <span class="arithmatex"><span class="MathJax_Preview">A_i \cdot B_j \le K</span><script type="math/tex">A_i \cdot B_j \le K</script></span>。</p>
 <p>策略：</p>
 <ol>
 <li>
-<p>Sort <span class="arithmatex">\(A\)</span> ascending, Sort <span class="arithmatex">\(B\)</span> ascending.</p>
+<p>Sort <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> ascending, Sort <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> ascending.</p>
 </li>
 <li>
-<p>Iterate <span class="arithmatex">\(A\)</span> (small to large).</p>
+<p>Iterate <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> (small to large).</p>
 </li>
 <li>
-<p>Try to match with largest available <span class="arithmatex">\(B\)</span>.</p>
+<p>Try to match with largest available <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>.</p>
 </li>
 <li>
-<p>If <span class="arithmatex">\(A_{min} \cdot B_{max} &gt; K\)</span>, then <span class="arithmatex">\(B_{max}\)</span> is impossible to match with anyone. Discard <span class="arithmatex">\(B_{max}\)</span>.</p>
+<p>If <span class="arithmatex"><span class="MathJax_Preview">A_{min} \cdot B_{max} &gt; K</span><script type="math/tex">A_{min} \cdot B_{max} > K</script></span>, then <span class="arithmatex"><span class="MathJax_Preview">B_{max}</span><script type="math/tex">B_{max}</script></span> is impossible to match with anyone. Discard <span class="arithmatex"><span class="MathJax_Preview">B_{max}</span><script type="math/tex">B_{max}</script></span>.</p>
 </li>
 <li>
 <p>Else, Match them.
@@ -5070,7 +5079,7 @@
 <p><strong>A题</strong>：学会了 Padding 技巧。</p>
 </li>
 <li>
-<p><strong>B题</strong>：学会了“总量-个数”的 <span class="arithmatex">\(O(1)\)</span> 判定。</p>
+<p><strong>B题</strong>：学会了“总量-个数”的 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 判定。</p>
 </li>
 <li>
 <p><strong>C题</strong>：学会了不等式转化的贪心匹配。</p>

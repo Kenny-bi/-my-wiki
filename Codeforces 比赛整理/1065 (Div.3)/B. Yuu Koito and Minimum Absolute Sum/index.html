@@ -4616,18 +4616,18 @@
 <p>少女漫画和情歌中的话语……它们总是闪闪发光。我不需要字典就能理解它们的含义……但我从未亲身感受过。<br />
 — Yuu Koito  </p>
 <p>Yuu正在尝试加入学生会！不幸的是，她被迫做一些文书工作……Touko想让她填写各种学生会文件中的空白。  </p>
-<p>您将得到一个部分填充的非负整数数组 <span class="arithmatex">\(a_1,a_2,\ldots,a_n\)</span>，其中空白元素用 <span class="arithmatex">\(-1\)</span> 表示。您需要用非负整数填充空白元素，使得其差分数组中元素之和的绝对值最小。  </p>
-<p>更正式地说，设 <span class="arithmatex">\(b\)</span> 是长度为 <span class="arithmatex">\(n-1\)</span> 的数组，使得 <span class="arithmatex">\(b_i = a_{i+1} - a_i\)</span> 对所有 <span class="arithmatex">\(1 \leq i \leq n-1\)</span> 成立。在填充 <span class="arithmatex">\(a\)</span> 空白元素的所有可能方法中，找出 <span class="arithmatex">\(|b_1 + b_2 + \cdots + b_{n-1}|\)</span> 的最小可能值。  </p>
-<p>此外，输出达到此最小值的数组。如果有多个这样的数组，则输出字典序最小的那个<span class="arithmatex">\(^*\)</span>。  </p>
-<p><span class="arithmatex">\(^*\)</span>对于两个任意长度为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(c\)</span> 和 <span class="arithmatex">\(d\)</span>，如果存在索引 <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(1 \leq i \leq n\)</span>) 使得对所有 <span class="arithmatex">\(j &lt; i\)</span> 有 <span class="arithmatex">\(c_j = d_j\)</span>，且 <span class="arithmatex">\(c_i &lt; d_i\)</span>，则我们说 <span class="arithmatex">\(c\)</span> 在字典序上小于 <span class="arithmatex">\(d\)</span>。换句话说，<span class="arithmatex">\(c\)</span> 和 <span class="arithmatex">\(d\)</span> 在至少一个索引上不同，且在它们不同的第一个索引上，<span class="arithmatex">\(c_i\)</span> 小于 <span class="arithmatex">\(d_i\)</span>。</p>
+<p>您将得到一个部分填充的非负整数数组 <span class="arithmatex"><span class="MathJax_Preview">a_1,a_2,\ldots,a_n</span><script type="math/tex">a_1,a_2,\ldots,a_n</script></span>，其中空白元素用 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 表示。您需要用非负整数填充空白元素，使得其差分数组中元素之和的绝对值最小。  </p>
+<p>更正式地说，设 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是长度为 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的数组，使得 <span class="arithmatex"><span class="MathJax_Preview">b_i = a_{i+1} - a_i</span><script type="math/tex">b_i = a_{i+1} - a_i</script></span> 对所有 <span class="arithmatex"><span class="MathJax_Preview">1 \leq i \leq n-1</span><script type="math/tex">1 \leq i \leq n-1</script></span> 成立。在填充 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 空白元素的所有可能方法中，找出 <span class="arithmatex"><span class="MathJax_Preview">|b_1 + b_2 + \cdots + b_{n-1}|</span><script type="math/tex">|b_1 + b_2 + \cdots + b_{n-1}|</script></span> 的最小可能值。  </p>
+<p>此外，输出达到此最小值的数组。如果有多个这样的数组，则输出字典序最小的那个<span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span>。  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span>对于两个任意长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，如果存在索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq i \leq n</span><script type="math/tex">1 \leq i \leq n</script></span>) 使得对所有 <span class="arithmatex"><span class="MathJax_Preview">j &lt; i</span><script type="math/tex">j < i</script></span> 有 <span class="arithmatex"><span class="MathJax_Preview">c_j = d_j</span><script type="math/tex">c_j = d_j</script></span>，且 <span class="arithmatex"><span class="MathJax_Preview">c_i &lt; d_i</span><script type="math/tex">c_i < d_i</script></span>，则我们说 <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 在字典序上小于 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>。换句话说，<span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 在至少一个索引上不同，且在它们不同的第一个索引上，<span class="arithmatex"><span class="MathJax_Preview">c_i</span><script type="math/tex">c_i</script></span> 小于 <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>) — 测试用例的数量。  </p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(2 \leq n \leq 2 \cdot 10^5\)</span>)。  </p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span> (<span class="arithmatex">\(-1 \leq a_i \leq 10^6\)</span>)。  </p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>) — 测试用例的数量。  </p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">2 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">2 \leq n \leq 2 \cdot 10^5</script></span>)。  </p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">-1 \leq a_i \leq 10^6</span><script type="math/tex">-1 \leq a_i \leq 10^6</script></span>)。  </p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，在第一行输出 <span class="arithmatex">\(|b_1 + b_2 + \cdots + b_{n-1}|\)</span> 的最小可能值。<br />
-在第二行输出 <span class="arithmatex">\(n\)</span> 个整数，即达到此最小值的字典序最小的数组 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span> 的值。</p>
+<p>对于每个测试用例，在第一行输出 <span class="arithmatex"><span class="MathJax_Preview">|b_1 + b_2 + \cdots + b_{n-1}|</span><script type="math/tex">|b_1 + b_2 + \cdots + b_{n-1}|</script></span> 的最小可能值。<br />
+在第二行输出 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数，即达到此最小值的字典序最小的数组 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span> 的值。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
 4
@@ -4658,8 +4658,8 @@
 5 5
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，我们填充数组 <span class="arithmatex">\(a = [2, 0, 7, 1]\)</span>，得到差分数组 <span class="arithmatex">\(b = [-2, 7, -6]\)</span>。  </p>
-<p><span class="arithmatex">\(b\)</span> 中元素之和的绝对值为 <span class="arithmatex">\(1\)</span>。可以证明这是最小的可能值。此外，可以证明这是达到该最小值的字典序最小的数组 <span class="arithmatex">\(a\)</span>。</p>
+<p>在第一个样例中，我们填充数组 <span class="arithmatex"><span class="MathJax_Preview">a = [2, 0, 7, 1]</span><script type="math/tex">a = [2, 0, 7, 1]</script></span>，得到差分数组 <span class="arithmatex"><span class="MathJax_Preview">b = [-2, 7, -6]</span><script type="math/tex">b = [-2, 7, -6]</script></span>。  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 中元素之和的绝对值为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。可以证明这是最小的可能值。此外，可以证明这是达到该最小值的字典序最小的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
 <h1 id="ac">赛时AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
@@ -4723,9 +4723,9 @@
 </code></pre></div>
 <h1 id="cf">CF 题解思路</h1>
 <p><strong>步骤1</strong></p>
-<p>给定的表达式等于 <span class="arithmatex">\(|(a_2 - a_1) + (a_3 - a_2) + \dots + (a_n - a_{n-1})|\)</span> 。</p>
+<p>给定的表达式等于 <span class="arithmatex"><span class="MathJax_Preview">|(a_2 - a_1) + (a_3 - a_2) + \dots + (a_n - a_{n-1})|</span><script type="math/tex">|(a_2 - a_1) + (a_3 - a_2) + \dots + (a_n - a_{n-1})|</script></span> 。</p>
 <p><strong>步骤2</strong></p>
-<p>这简化为 <span class="arithmatex">\(|a_n - a_1|\)</span> 。</p>
+<p>这简化为 <span class="arithmatex"><span class="MathJax_Preview">|a_n - a_1|</span><script type="math/tex">|a_n - a_1|</script></span> 。</p>
 <p><strong>步骤3</strong></p>
 <p>我们希望最小化第一个和最后一个元素之间的绝对差异。要做到这一点，如果其中一个设置了，而另一个没有，我们将它们设置为相等。现在，剩余的空白元素不会影响给定的表达式，因此我们可以将它们全部设置为零。</p>
 <h1 id="cf_1">CF 题解代码</h1>

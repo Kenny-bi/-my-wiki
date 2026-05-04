@@ -2790,10 +2790,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a_i-le-b" class="md-nav__link">
+  <a href="#a_i-le-ba_i-le-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一部分：处理 \(a_i \le B\) 的情况
+        第一部分：处理 a_i \le Ba_i \le B 的情况
       
     </span>
   </a>
@@ -2801,10 +2801,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a_i-b" class="md-nav__link">
+  <a href="#a_i-ba_i-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二部分：处理 \(a_i &gt; B\) 的情况
+        第二部分：处理 a_i &gt; Ba_i > B 的情况
       
     </span>
   </a>
@@ -4629,10 +4629,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a_i-le-b" class="md-nav__link">
+  <a href="#a_i-le-ba_i-le-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第一部分：处理 \(a_i \le B\) 的情况
+        第一部分：处理 a_i \le Ba_i \le B 的情况
       
     </span>
   </a>
@@ -4640,10 +4640,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a_i-b" class="md-nav__link">
+  <a href="#a_i-ba_i-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二部分：处理 \(a_i &gt; B\) 的情况
+        第二部分：处理 a_i &gt; Ba_i > B 的情况
       
     </span>
   </a>
@@ -4734,16 +4734,19 @@
 <p>时间限制：每个测试点2秒<br />
 内存限制：每个测试点256兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>在数组 <span class="arithmatex">\(a\)</span> 中，如果一对下标 <span class="arithmatex">\((i, j)\)</span> 满足以下条件，则称其为<strong>美丽对</strong>：</p>
-<div class="arithmatex">\[a_i \cdot a_j = j - i\]</div>
-<p>请计算数组 <span class="arithmatex">\(a\)</span> 中美丽对的数量。</p>
+<p>在数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中，如果一对下标 <span class="arithmatex"><span class="MathJax_Preview">(i, j)</span><script type="math/tex">(i, j)</script></span> 满足以下条件，则称其为<strong>美丽对</strong>：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_i \cdot a_j = j - i</div>
+<script type="math/tex; mode=display">a_i \cdot a_j = j - i</script>
+</div>
+<p>请计算数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中美丽对的数量。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span>，表示测试用例的数量（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）。<br />
+<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，表示测试用例的数量（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）。<br />
 接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(2 \le n \le 2 \times 10^5\)</span>）。</p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span>（<span class="arithmatex">\(1 \le a_i \le 10^9\)</span>）。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">2 \le n \le 2 \times 10^5</span><script type="math/tex">2 \le n \le 2 \times 10^5</script></span>）。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le a_i \le 10^9</span><script type="math/tex">1 \le a_i \le 10^9</script></span>）。</p>
 <p><strong>输入附加约束条件</strong>：</p>
-<p>所有测试用例中 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(2 \times 10^5\)</span>。</p>
+<p>所有测试用例中 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \times 10^5</span><script type="math/tex">2 \times 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数——表示该数组中美丽对的数量。</p>
 <h2 id="_4">样例输入</h2>
@@ -4764,8 +4767,8 @@
 0
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个示例中，共有 <span class="arithmatex">\(3\)</span> 个美丽对：<span class="arithmatex">\((1,2)\)</span>、<span class="arithmatex">\((1,3)\)</span> 和 <span class="arithmatex">\((1,5)\)</span>。</p>
-<p>在第二个示例中，共有 <span class="arithmatex">\(7\)</span> 个美丽对：<span class="arithmatex">\((1,3)\)</span>、<span class="arithmatex">\((1,5)\)</span>、<span class="arithmatex">\((2,4)\)</span>、<span class="arithmatex">\((2,6)\)</span>、<span class="arithmatex">\((3,4)\)</span>、<span class="arithmatex">\((3,5)\)</span> 和 <span class="arithmatex">\((4,6)\)</span>。</p>
+<p>在第一个示例中，共有 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个美丽对：<span class="arithmatex"><span class="MathJax_Preview">(1,2)</span><script type="math/tex">(1,2)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(1,3)</span><script type="math/tex">(1,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(1,5)</span><script type="math/tex">(1,5)</script></span>。</p>
+<p>在第二个示例中，共有 <span class="arithmatex"><span class="MathJax_Preview">7</span><script type="math/tex">7</script></span> 个美丽对：<span class="arithmatex"><span class="MathJax_Preview">(1,3)</span><script type="math/tex">(1,3)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(1,5)</span><script type="math/tex">(1,5)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(2,4)</span><script type="math/tex">(2,4)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(2,6)</span><script type="math/tex">(2,6)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(3,4)</span><script type="math/tex">(3,4)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(3,5)</span><script type="math/tex">(3,5)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(4,6)</span><script type="math/tex">(4,6)</script></span>。</p>
 <h1 id="ac">AC 代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2197 D</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1079 (Div. 2)</span>
@@ -4828,83 +4831,92 @@
 <h1 id="cf2197d-another-problem-about-beautiful-pairs">算法笔记：CF2197D - Another Problem about Beautiful Pairs</h1>
 <h2 id="1">1. 核心瓶颈与突破口</h2>
 <h3 id="_7">题目公式</h3>
-<p>我们需要找到满足以下条件的下标对 <span class="arithmatex">\((i, j)\)</span>，其中 <span class="arithmatex">\(i &lt; j\)</span>：</p>
-<div class="arithmatex">\[a_i \cdot a_j = j - i\]</div>
+<p>我们需要找到满足以下条件的下标对 <span class="arithmatex"><span class="MathJax_Preview">(i, j)</span><script type="math/tex">(i, j)</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">i &lt; j</span><script type="math/tex">i < j</script></span>：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_i \cdot a_j = j - i</div>
+<script type="math/tex; mode=display">a_i \cdot a_j = j - i</script>
+</div>
 <h3 id="the-key-insight">关键观察（The Key Insight）</h3>
-<p>最朴素的暴力做法是枚举 <span class="arithmatex">\(i\)</span> 和 <span class="arithmatex">\(j\)</span>，复杂度 <span class="arithmatex">\(O(n^2)\)</span>，显然会超时（<span class="arithmatex">\(n \le 2 \cdot 10^5\)</span>）。我们需要利用题目隐含的限制条件。</p>
-<p>由于 <span class="arithmatex">\(j\)</span> 和 <span class="arithmatex">\(i\)</span> 是数组下标，<span class="arithmatex">\(1 \le i &lt; j \le n\)</span>，所以下标之差一定满足：</p>
-<div class="arithmatex">\[1 \le j - i &lt; n\]</div>
+<p>最朴素的暴力做法是枚举 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，复杂度 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>，显然会超时（<span class="arithmatex"><span class="MathJax_Preview">n \le 2 \cdot 10^5</span><script type="math/tex">n \le 2 \cdot 10^5</script></span>）。我们需要利用题目隐含的限制条件。</p>
+<p>由于 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 是数组下标，<span class="arithmatex"><span class="MathJax_Preview">1 \le i &lt; j \le n</span><script type="math/tex">1 \le i < j \le n</script></span>，所以下标之差一定满足：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">1 \le j - i &lt; n</div>
+<script type="math/tex; mode=display">1 \le j - i < n</script>
+</div>
 <p>将公式代入，得到一个非常强的约束：</p>
-<div class="arithmatex">\[a_i \cdot a_j &lt; n\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">a_i \cdot a_j &lt; n</div>
+<script type="math/tex; mode=display">a_i \cdot a_j < n</script>
+</div>
 <p><strong>推论：</strong></p>
-<p>如果两个正整数的乘积小于 <span class="arithmatex">\(n\)</span>，那么<strong>其中至少有一个数必须小于等于 <span class="arithmatex">\(\sqrt{n}\)</span></strong>。</p>
+<p>如果两个正整数的乘积小于 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，那么<strong>其中至少有一个数必须小于等于 <span class="arithmatex"><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span></strong>。</p>
 <p>这个性质提示我们可以使用 <strong>根号分治（Square Root Decomposition）</strong> 的思想来解决问题。</p>
 <hr />
 <h2 id="2">2. 算法设计：根号分治</h2>
-<p>设定一个阈值 <span class="arithmatex">\(B = \sqrt{n} \approx 450\)</span>。</p>
-<p>我们可以根据<strong>左边那个数（<span class="arithmatex">\(a_i\)</span>）的大小</strong>，将所有可能的“美丽对”分为两类互斥的情况：</p>
+<p>设定一个阈值 <span class="arithmatex"><span class="MathJax_Preview">B = \sqrt{n} \approx 450</span><script type="math/tex">B = \sqrt{n} \approx 450</script></span>。</p>
+<p>我们可以根据<strong>左边那个数（<span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>）的大小</strong>，将所有可能的“美丽对”分为两类互斥的情况：</p>
 <ol>
 <li>
-<p><strong>情况一：左边的数较小 (<span class="arithmatex">\(a_i \le B\)</span>)</strong></p>
+<p><strong>情况一：左边的数较小 (<span class="arithmatex"><span class="MathJax_Preview">a_i \le B</span><script type="math/tex">a_i \le B</script></span>)</strong></p>
 </li>
 <li>
-<p><strong>情况二：左边的数较大 (<span class="arithmatex">\(a_i &gt; B\)</span>)</strong></p>
+<p><strong>情况二：左边的数较大 (<span class="arithmatex"><span class="MathJax_Preview">a_i &gt; B</span><script type="math/tex">a_i > B</script></span>)</strong></p>
 </li>
 </ol>
 <p>这两种情况覆盖了所有可能性，且互不重叠，不需要额外的去重逻辑。</p>
-<h3 id="a_i-le-b">第一部分：处理 <span class="arithmatex">\(a_i \le B\)</span> 的情况</h3>
+<h3 id="a_i-le-ba_i-le-b">第一部分：处理 <span class="arithmatex"><span class="MathJax_Preview">a_i \le B</span><script type="math/tex">a_i \le B</script></span> 的情况</h3>
 <ul>
 <li>
-<p><strong>思路</strong>：枚举 <span class="arithmatex">\(a_i\)</span> 的<strong>数值</strong>。</p>
+<p><strong>思路</strong>：枚举 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 的<strong>数值</strong>。</p>
 </li>
 <li>
 <p><strong>逻辑</strong>：</p>
 <ol>
 <li>
-<p>外层枚举数值 <span class="arithmatex">\(v\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(B\)</span>（假设 <span class="arithmatex">\(a_i = v\)</span>）。</p>
+<p>外层枚举数值 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>（假设 <span class="arithmatex"><span class="MathJax_Preview">a_i = v</span><script type="math/tex">a_i = v</script></span>）。</p>
 </li>
 <li>
-<p>内层遍历数组的所有位置 <span class="arithmatex">\(j\)</span>（视作右端点）。</p>
+<p>内层遍历数组的所有位置 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>（视作右端点）。</p>
 </li>
 <li>
-<p>根据公式 <span class="arithmatex">\(v \cdot a_j = j - i\)</span>，反推左端点的位置：<span class="arithmatex">\(i = j - v \cdot a_j\)</span>。</p>
+<p>根据公式 <span class="arithmatex"><span class="MathJax_Preview">v \cdot a_j = j - i</span><script type="math/tex">v \cdot a_j = j - i</script></span>，反推左端点的位置：<span class="arithmatex"><span class="MathJax_Preview">i = j - v \cdot a_j</span><script type="math/tex">i = j - v \cdot a_j</script></span>。</p>
 </li>
 <li>
-<p><strong>检查</strong>：计算出的 <span class="arithmatex">\(i\)</span> 是否合法（<span class="arithmatex">\(0 \le i &lt; j\)</span>），且 <span class="arithmatex">\(a_i\)</span> 的值是否真的等于 <span class="arithmatex">\(v\)</span>。</p>
+<p><strong>检查</strong>：计算出的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 是否合法（<span class="arithmatex"><span class="MathJax_Preview">0 \le i &lt; j</span><script type="math/tex">0 \le i < j</script></span>），且 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 的值是否真的等于 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>。</p>
 </li>
 </ol>
 </li>
 <li>
-<p><strong>复杂度</strong>：<span class="arithmatex">\(O(n \cdot B) \approx O(n\sqrt{n})\)</span>。</p>
+<p><strong>复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(n \cdot B) \approx O(n\sqrt{n})</span><script type="math/tex">O(n \cdot B) \approx O(n\sqrt{n})</script></span>。</p>
 </li>
 </ul>
-<h3 id="a_i-b">第二部分：处理 <span class="arithmatex">\(a_i &gt; B\)</span> 的情况</h3>
+<h3 id="a_i-ba_i-b">第二部分：处理 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; B</span><script type="math/tex">a_i > B</script></span> 的情况</h3>
 <ul>
 <li>
-<p><strong>思路</strong>：枚举左端点 <span class="arithmatex">\(i\)</span> 的<strong>位置</strong>，利用倍数跳跃。</p>
+<p><strong>思路</strong>：枚举左端点 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的<strong>位置</strong>，利用倍数跳跃。</p>
 </li>
 <li>
 <p><strong>逻辑</strong>：</p>
 <ol>
 <li>
-<p>遍历左端点 <span class="arithmatex">\(i\)</span>。</p>
+<p>遍历左端点 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(a_i \le B\)</span>，直接跳过（因为这种情况已经在第一部分算过了）。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">a_i \le B</span><script type="math/tex">a_i \le B</script></span>，直接跳过（因为这种情况已经在第一部分算过了）。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(a_i &gt; B\)</span>，我们去寻找右端点 <span class="arithmatex">\(j\)</span>。根据公式 <span class="arithmatex">\(j - i = a_i \cdot a_j\)</span>，说明 <span class="arithmatex">\(j - i\)</span> 必须是 <span class="arithmatex">\(a_i\)</span> 的倍数。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; B</span><script type="math/tex">a_i > B</script></span>，我们去寻找右端点 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>。根据公式 <span class="arithmatex"><span class="MathJax_Preview">j - i = a_i \cdot a_j</span><script type="math/tex">j - i = a_i \cdot a_j</script></span>，说明 <span class="arithmatex"><span class="MathJax_Preview">j - i</span><script type="math/tex">j - i</script></span> 必须是 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 的倍数。</p>
 </li>
 <li>
-<p><strong>跳跃</strong>：<span class="arithmatex">\(j\)</span> 从 <span class="arithmatex">\(i + a_i\)</span> 开始，每次增加 <span class="arithmatex">\(a_i\)</span>。</p>
+<p><strong>跳跃</strong>：<span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">i + a_i</span><script type="math/tex">i + a_i</script></span> 开始，每次增加 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>。</p>
 </li>
 <li>
-<p><strong>检查</strong>：验证公式 <span class="arithmatex">\(a_i \cdot a_j = j - i\)</span> 是否成立。</p>
+<p><strong>检查</strong>：验证公式 <span class="arithmatex"><span class="MathJax_Preview">a_i \cdot a_j = j - i</span><script type="math/tex">a_i \cdot a_j = j - i</script></span> 是否成立。</p>
 </li>
 </ol>
 </li>
 <li>
-<p><strong>复杂度</strong>：因为 <span class="arithmatex">\(a_i &gt; \sqrt{n}\)</span>，所以内层循环次数最多为 <span class="arithmatex">\(n / \sqrt{n} = \sqrt{n}\)</span>。总复杂度 <span class="arithmatex">\(O(n\sqrt{n})\)</span>。</p>
+<p><strong>复杂度</strong>：因为 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; \sqrt{n}</span><script type="math/tex">a_i > \sqrt{n}</script></span>，所以内层循环次数最多为 <span class="arithmatex"><span class="MathJax_Preview">n / \sqrt{n} = \sqrt{n}</span><script type="math/tex">n / \sqrt{n} = \sqrt{n}</script></span>。总复杂度 <span class="arithmatex"><span class="MathJax_Preview">O(n\sqrt{n})</span><script type="math/tex">O(n\sqrt{n})</script></span>。</p>
 </li>
 </ul>
 <hr />
@@ -4949,21 +4961,24 @@ void solve(){
 <hr />
 <h2 id="4">4. 通用做题方法论：如何解决“索引与数值关联”类题目</h2>
 <p>这类题目通常具有以下形式：</p>
-<div class="arithmatex">\[f(\text{value}_i, \text{value}_j) = g(\text{index}_i, \text{index}_j)\]</div>
-<p>例如本题：<span class="arithmatex">\(a_i \cdot a_j = j - i\)</span>。</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">f(\text{value}_i, \text{value}_j) = g(\text{index}_i, \text{index}_j)</div>
+<script type="math/tex; mode=display">f(\text{value}_i, \text{value}_j) = g(\text{index}_i, \text{index}_j)</script>
+</div>
+<p>例如本题：<span class="arithmatex"><span class="MathJax_Preview">a_i \cdot a_j = j - i</span><script type="math/tex">a_i \cdot a_j = j - i</script></span>。</p>
 <h3 id="_8">核心套路四步走：</h3>
 <ol>
 <li>
 <p><strong>观察不等式约束（Bounds Check）</strong></p>
 <ul>
 <li>
-<p>首先看右边的索引部分 <span class="arithmatex">\(g(i, j)\)</span>。由于数组长度限制，索引运算的结果通常有上界（比如 <span class="arithmatex">\(&lt; n\)</span>）。</p>
+<p>首先看右边的索引部分 <span class="arithmatex"><span class="MathJax_Preview">g(i, j)</span><script type="math/tex">g(i, j)</script></span>。由于数组长度限制，索引运算的结果通常有上界（比如 <span class="arithmatex"><span class="MathJax_Preview">&lt; n</span><script type="math/tex">< n</script></span>）。</p>
 </li>
 <li>
-<p>将这个上界套用到左边的数值部分 <span class="arithmatex">\(f(a_i, a_j)\)</span>，看能否得出数值大小的限制。</p>
+<p>将这个上界套用到左边的数值部分 <span class="arithmatex"><span class="MathJax_Preview">f(a_i, a_j)</span><script type="math/tex">f(a_i, a_j)</script></span>，看能否得出数值大小的限制。</p>
 </li>
 <li>
-<p><em>本题案例</em>：<span class="arithmatex">\(j - i &lt; n \implies a_i \cdot a_j &lt; n\)</span>。</p>
+<p><em>本题案例</em>：<span class="arithmatex"><span class="MathJax_Preview">j - i &lt; n \implies a_i \cdot a_j &lt; n</span><script type="math/tex">j - i < n \implies a_i \cdot a_j < n</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4974,13 +4989,13 @@ void solve(){
 <p>如果限制暗示了“数值不能同时很大”，通常使用 <strong>根号分治</strong>。</p>
 </li>
 <li>
-<p>如果限制是加法（如 <span class="arithmatex">\(a_i + a_j = j - i\)</span>），通常使用 <strong>移项 + 桶（Map/Hash）</strong>。</p>
+<p>如果限制是加法（如 <span class="arithmatex"><span class="MathJax_Preview">a_i + a_j = j - i</span><script type="math/tex">a_i + a_j = j - i</script></span>），通常使用 <strong>移项 + 桶（Map/Hash）</strong>。</p>
 <ul>
 <li>
-<p>变形：<span class="arithmatex">\(a_i + i = j - a_j\)</span>。</p>
+<p>变形：<span class="arithmatex"><span class="MathJax_Preview">a_i + i = j - a_j</span><script type="math/tex">a_i + i = j - a_j</script></span>。</p>
 </li>
 <li>
-<p>做法：遍历 <span class="arithmatex">\(j\)</span>，统计之前有多少个 <span class="arithmatex">\(i\)</span> 满足 <span class="arithmatex">\(a_i + i\)</span> 等于当前所需的 <span class="arithmatex">\(j - a_j\)</span>。</p>
+<p>做法：遍历 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，统计之前有多少个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">a_i + i</span><script type="math/tex">a_i + i</script></span> 等于当前所需的 <span class="arithmatex"><span class="MathJax_Preview">j - a_j</span><script type="math/tex">j - a_j</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4990,16 +5005,16 @@ void solve(){
 <p><strong>根号分治模板（对于乘法类限制）</strong></p>
 <ul>
 <li>
-<p>设定阈值 <span class="arithmatex">\(B = \sqrt{N}\)</span>。</p>
+<p>设定阈值 <span class="arithmatex"><span class="MathJax_Preview">B = \sqrt{N}</span><script type="math/tex">B = \sqrt{N}</script></span>。</p>
 </li>
 <li>
 <p><strong>策略 A（分类讨论）</strong>：</p>
 <ul>
 <li>
-<p>枚举 <span class="arithmatex">\(a_i \le B\)</span> 的情况（暴力枚举数值）。</p>
+<p>枚举 <span class="arithmatex"><span class="MathJax_Preview">a_i \le B</span><script type="math/tex">a_i \le B</script></span> 的情况（暴力枚举数值）。</p>
 </li>
 <li>
-<p>枚举 <span class="arithmatex">\(a_i &gt; B\)</span> 的情况（暴力跳跃索引）。</p>
+<p>枚举 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; B</span><script type="math/tex">a_i > B</script></span> 的情况（暴力跳跃索引）。</p>
 </li>
 </ul>
 </li>
@@ -5007,13 +5022,13 @@ void solve(){
 <p><strong>策略 B（统一枚举，带检查）</strong>：</p>
 <ul>
 <li>
-<p>枚举较小值 <span class="arithmatex">\(v\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(B\)</span>。</p>
+<p>枚举较小值 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>。</p>
 </li>
 <li>
-<p>遍历数组，假设当前 <span class="arithmatex">\(a_k\)</span> 是较大值，根据公式计算另一个数的位置。</p>
+<p>遍历数组，假设当前 <span class="arithmatex"><span class="MathJax_Preview">a_k</span><script type="math/tex">a_k</script></span> 是较大值，根据公式计算另一个数的位置。</p>
 </li>
 <li>
-<p><strong>注意去重</strong>：只在“计算出的那个数 <span class="arithmatex">\(\ge\)</span> 当前枚举的较小值 <span class="arithmatex">\(v\)</span>”时才统计。</p>
+<p><strong>注意去重</strong>：只在“计算出的那个数 <span class="arithmatex"><span class="MathJax_Preview">\ge</span><script type="math/tex">\ge</script></span> 当前枚举的较小值 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>”时才统计。</p>
 </li>
 </ul>
 </li>
@@ -5026,13 +5041,13 @@ void solve(){
 <p>这类题目涉及下标与数值的运算（尤其是乘法），非常容易爆 <code>int</code>。</p>
 </li>
 <li>
-<p><strong>铁律</strong>：凡是涉及 <span class="arithmatex">\(a_i \cdot a_j\)</span> 或 <span class="arithmatex">\(i \cdot a_j\)</span> 的，<strong>必须使用 <code>long long</code></strong>。</p>
+<p><strong>铁律</strong>：凡是涉及 <span class="arithmatex"><span class="MathJax_Preview">a_i \cdot a_j</span><script type="math/tex">a_i \cdot a_j</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">i \cdot a_j</span><script type="math/tex">i \cdot a_j</script></span> 的，<strong>必须使用 <code>long long</code></strong>。</p>
 </li>
 </ul>
 </li>
 </ol>
 <h3 id="_9">总结</h3>
-<p>当你看到题目中出现 <strong><span class="arithmatex">\(a_i \cdot a_j\)</span></strong> 和 <strong><span class="arithmatex">\(j-i\)</span></strong>（或 <span class="arithmatex">\(j+i\)</span>）混合在一起时，第一反应应该是：<strong>乘积受限于 <span class="arithmatex">\(N\)</span>，利用根号分治，将大数和小数分开处理。</strong></p>
+<p>当你看到题目中出现 <strong><span class="arithmatex"><span class="MathJax_Preview">a_i \cdot a_j</span><script type="math/tex">a_i \cdot a_j</script></span></strong> 和 <strong><span class="arithmatex"><span class="MathJax_Preview">j-i</span><script type="math/tex">j-i</script></span></strong>（或 <span class="arithmatex"><span class="MathJax_Preview">j+i</span><script type="math/tex">j+i</script></span>）混合在一起时，第一反应应该是：<strong>乘积受限于 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>，利用根号分治，将大数和小数分开处理。</strong></p>
 
 
 

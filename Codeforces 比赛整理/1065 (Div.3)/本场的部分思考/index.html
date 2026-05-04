@@ -4404,25 +4404,25 @@
 <p>当题目说“你可以执行某操作...”时，立刻问自己：在这个操作下，什么东西是绝对不会变的？</p>
 <ul>
 <li>
-<p><strong>操作：</strong> 交换 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(b_i\)</span>。</p>
+<p><strong>操作：</strong> 交换 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span>。</p>
 </li>
 <li>
 <p><strong>探测列表：</strong></p>
 <ul>
 <li>
-<p><strong>总和会变吗？</strong> <span class="arithmatex">\(S_a+S_b\)</span>。变了，没用。</p>
+<p><strong>总和会变吗？</strong> <span class="arithmatex"><span class="MathJax_Preview">S_a+S_b</span><script type="math/tex">S_a+S_b</script></span>。变了，没用。</p>
 </li>
 <li>
 <p><strong>元素集合会变吗？</strong> 没变，所有数字还是那些数字，只是位置换了。</p>
 </li>
 <li>
-<p><strong>异或和会变吗？</strong> 单个 <span class="arithmatex">\(S_a\)</span> 变了，但 <span class="arithmatex">\(S_a \oplus S_b\)</span> 呢？</p>
+<p><strong>异或和会变吗？</strong> 单个 <span class="arithmatex"><span class="MathJax_Preview">S_a</span><script type="math/tex">S_a</script></span> 变了，但 <span class="arithmatex"><span class="MathJax_Preview">S_a \oplus S_b</span><script type="math/tex">S_a \oplus S_b</script></span> 呢？</p>
 <ul>
 <li>
-<p>推导：<span class="arithmatex">\(a_i, b_i\)</span> 交换 <span class="arithmatex">\(\to\)</span> <span class="arithmatex">\(S_a' = S_a \oplus a_i \oplus b_i\)</span>， <span class="arithmatex">\(S_b' = S_b \oplus b_i \oplus a_i\)</span>。</p>
+<p>推导：<span class="arithmatex"><span class="MathJax_Preview">a_i, b_i</span><script type="math/tex">a_i, b_i</script></span> 交换 <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> <span class="arithmatex"><span class="MathJax_Preview">S_a' = S_a \oplus a_i \oplus b_i</span><script type="math/tex">S_a' = S_a \oplus a_i \oplus b_i</script></span>， <span class="arithmatex"><span class="MathJax_Preview">S_b' = S_b \oplus b_i \oplus a_i</span><script type="math/tex">S_b' = S_b \oplus b_i \oplus a_i</script></span>。</p>
 </li>
 <li>
-<p>两边再异或：<span class="arithmatex">\(S_a' \oplus S_b' = (S_a \oplus a_i \oplus b_i) \oplus (S_b \oplus b_i \oplus a_i) = S_a \oplus S_b\)</span>。</p>
+<p>两边再异或：<span class="arithmatex"><span class="MathJax_Preview">S_a' \oplus S_b' = (S_a \oplus a_i \oplus b_i) \oplus (S_b \oplus b_i \oplus a_i) = S_a \oplus S_b</span><script type="math/tex">S_a' \oplus S_b' = (S_a \oplus a_i \oplus b_i) \oplus (S_b \oplus b_i \oplus a_i) = S_a \oplus S_b</script></span>。</p>
 </li>
 <li>
 <p><strong>发现！</strong> 异或差是不变量。</p>
@@ -4433,15 +4433,15 @@
 </li>
 </ul>
 <h4 id="2-small-cases">2. 极小数据模拟 (Small Cases)</h4>
-<p>不要凭空想 <span class="arithmatex">\(N=10^5\)</span>。拿出草稿纸，算 <span class="arithmatex">\(N=1\)</span> 和 <span class="arithmatex">\(N=2\)</span>。</p>
+<p>不要凭空想 <span class="arithmatex"><span class="MathJax_Preview">N=10^5</span><script type="math/tex">N=10^5</script></span>。拿出草稿纸，算 <span class="arithmatex"><span class="MathJax_Preview">N=1</span><script type="math/tex">N=1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">N=2</span><script type="math/tex">N=2</script></span>。</p>
 <ul>
 <li>
-<p><strong>设</strong> <span class="arithmatex">\(a=[1], b=[0]\)</span>。初始差 <span class="arithmatex">\(1\)</span>。Ajisai 交换 <span class="arithmatex">\(\to a=[0], b=[1]\)</span>。差还是 <span class="arithmatex">\(1\)</span>。</p>
+<p><strong>设</strong> <span class="arithmatex"><span class="MathJax_Preview">a=[1], b=[0]</span><script type="math/tex">a=[1], b=[0]</script></span>。初始差 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。Ajisai 交换 <span class="arithmatex"><span class="MathJax_Preview">\to a=[0], b=[1]</span><script type="math/tex">\to a=[0], b=[1]</script></span>。差还是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </li>
 <li>
-<p><strong>设</strong> <span class="arithmatex">\(a=[1, 0], b=[0, 0]\)</span>。初始差 <span class="arithmatex">\(1\)</span>。</p>
+<p><strong>设</strong> <span class="arithmatex"><span class="MathJax_Preview">a=[1, 0], b=[0, 0]</span><script type="math/tex">a=[1, 0], b=[0, 0]</script></span>。初始差 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <ul>
-<li>你手动玩一下，就会发现无论怎么换，那个差值 <span class="arithmatex">\(1\)</span> 就像幽灵一样一直在那里。</li>
+<li>你手动玩一下，就会发现无论怎么换，那个差值 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 就像幽灵一样一直在那里。</li>
 </ul>
 </li>
 </ul>
@@ -4461,10 +4461,10 @@
 <h4 id="1-xor">1. 异或 (XOR) 相关的性质</h4>
 <ul>
 <li>
-<p><strong>自反性：</strong> <span class="arithmatex">\(A \oplus B \oplus B = A\)</span>。</p>
+<p><strong>自反性：</strong> <span class="arithmatex"><span class="MathJax_Preview">A \oplus B \oplus B = A</span><script type="math/tex">A \oplus B \oplus B = A</script></span>。</p>
 </li>
 <li>
-<p><strong>前缀异或：</strong> 区间 <span class="arithmatex">\([L, R]\)</span> 的异或和 = <span class="arithmatex">\(Pre[R] \oplus Pre[L-1]\)</span>。</p>
+<p><strong>前缀异或：</strong> 区间 <span class="arithmatex"><span class="MathJax_Preview">[L, R]</span><script type="math/tex">[L, R]</script></span> 的异或和 = <span class="arithmatex"><span class="MathJax_Preview">Pre[R] \oplus Pre[L-1]</span><script type="math/tex">Pre[R] \oplus Pre[L-1]</script></span>。</p>
 </li>
 <li>
 <p><strong>奇偶性：</strong> 异或和的最低位（第0位）等于所有数模 2 后的和的奇偶性。</p>
@@ -4473,19 +4473,19 @@
 <h4 id="2-gcd">2. 最大公约数 (GCD) 相关的性质</h4>
 <ul>
 <li>
-<p><strong>更相减损变体：</strong> <span class="arithmatex">\(\gcd(a, b) = \gcd(a, b-a)\)</span>。</p>
+<p><strong>更相减损变体：</strong> <span class="arithmatex"><span class="MathJax_Preview">\gcd(a, b) = \gcd(a, b-a)</span><script type="math/tex">\gcd(a, b) = \gcd(a, b-a)</script></span>。</p>
 <ul>
-<li><em>应用：</em> 对区间进行“区间加法”操作，求区间 GCD。利用差分数组 <span class="arithmatex">\(D_i = A_i - A_{i-1}\)</span>，则 <span class="arithmatex">\(\gcd(A_L...A_R) = \gcd(A_L, \gcd(D_{L+1}...D_R))\)</span>。</li>
+<li><em>应用：</em> 对区间进行“区间加法”操作，求区间 GCD。利用差分数组 <span class="arithmatex"><span class="MathJax_Preview">D_i = A_i - A_{i-1}</span><script type="math/tex">D_i = A_i - A_{i-1}</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\gcd(A_L...A_R) = \gcd(A_L, \gcd(D_{L+1}...D_R))</span><script type="math/tex">\gcd(A_L...A_R) = \gcd(A_L, \gcd(D_{L+1}...D_R))</script></span>。</li>
 </ul>
 </li>
 <li>
-<p><strong>操作不变量：</strong> 很多题目中，如果操作是 <span class="arithmatex">\(x, y \to x+y, x-y\)</span> 或者类似线性组合，GCD 往往是不变量（或者是倍数关系）。</p>
+<p><strong>操作不变量：</strong> 很多题目中，如果操作是 <span class="arithmatex"><span class="MathJax_Preview">x, y \to x+y, x-y</span><script type="math/tex">x, y \to x+y, x-y</script></span> 或者类似线性组合，GCD 往往是不变量（或者是倍数关系）。</p>
 </li>
 </ul>
 <h4 id="3-sorting-inversions">3. 排序与逆序对 (Sorting &amp; Inversions)</h4>
 <ul>
 <li>
-<p><strong>交换相邻元素：</strong> 逆序对数量 <span class="arithmatex">\(\pm 1\)</span>。这决定了排列的奇偶性。</p>
+<p><strong>交换相邻元素：</strong> 逆序对数量 <span class="arithmatex"><span class="MathJax_Preview">\pm 1</span><script type="math/tex">\pm 1</script></span>。这决定了排列的奇偶性。</p>
 <ul>
 <li><em>应用：</em> 比如数字华容道（15-puzzle），判断是否有解，就是看逆序对的奇偶性是否与目标状态一致。</li>
 </ul>
@@ -4511,7 +4511,7 @@
 <li>
 <p>逆向思维 (Reverse Engineering)：</p>
 <p>普通人想：第一步怎么办？第二步怎么办？</p>
-<p>高手想：游戏结束时是什么样？（谁大谁赢 <span class="arithmatex">\(\to\)</span> 最高位是1赢 <span class="arithmatex">\(\to\)</span> 谁控制最高位）。这种从终局往回推的能力是博弈论的核心。</p>
+<p>高手想：游戏结束时是什么样？（谁大谁赢 <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> 最高位是1赢 <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> 谁控制最高位）。这种从终局往回推的能力是博弈论的核心。</p>
 </li>
 <li>
 <p>洞察力 (Insight/Observation)：</p>
@@ -4542,7 +4542,7 @@
 <p>做题时，强制自己执行以下流程（不要一上来就写代码）：</p>
 <ul>
 <li>
-<p><strong>Step 1:</strong> 手算 <span class="arithmatex">\(N=1, 2, 3\)</span> 的情况。</p>
+<p><strong>Step 1:</strong> 手算 <span class="arithmatex"><span class="MathJax_Preview">N=1, 2, 3</span><script type="math/tex">N=1, 2, 3</script></span> 的情况。</p>
 </li>
 <li>
 <p><strong>Step 2:</strong> 提出猜想（比如“是不是和奇偶性有关？”“是不是和最高位有关？”）。</p>
@@ -4556,13 +4556,13 @@
 <p>下次看到：</p>
 <ul>
 <li>
-<p>“最大化最小值” <span class="arithmatex">\(\to\)</span> 想到 <strong>二分答案</strong>。</p>
+<p>“最大化最小值” <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> 想到 <strong>二分答案</strong>。</p>
 </li>
 <li>
-<p>“区间翻转” <span class="arithmatex">\(\to\)</span> 想到 <strong>差分/异或差分</strong>。</p>
+<p>“区间翻转” <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> 想到 <strong>差分/异或差分</strong>。</p>
 </li>
 <li>
-<p>“位运算博弈” <span class="arithmatex">\(\to\)</span> 想到 <strong>按位独立讨论 + 最高位决定</strong>。</p>
+<p>“位运算博弈” <span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span> 想到 <strong>按位独立讨论 + 最高位决定</strong>。</p>
 </li>
 </ul>
 <h4 id="_5">总结</h4>

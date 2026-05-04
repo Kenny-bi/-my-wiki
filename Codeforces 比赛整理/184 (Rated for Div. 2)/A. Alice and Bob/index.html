@@ -4489,19 +4489,19 @@
 <p>时间限制：每个测试 2 秒
 内存限制：每个测试 512 兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>Alice 和 Bob 有一个装有 <span class="arithmatex">\(n\)</span> 个弹珠的袋子，第 <span class="arithmatex">\(i\)</span> 个弹珠上写有整数 <span class="arithmatex">\(v_i\)</span>。他们玩下面的游戏：首先，每个玩家选择一个整数（Alice 选择的整数记为 <span class="arithmatex">\(a\)</span>，Bob 选择的整数记为 <span class="arithmatex">\(b\)</span>）。之后，他们以任意顺序从袋子中抽取弹珠，直到袋子为空。对于每个弹珠，分数将给予所选整数与弹珠上整数更接近的玩家；如果距离相等，则 Alice 获得该分数。</p>
-<p>例如，若 <span class="arithmatex">\(a=10\)</span>，<span class="arithmatex">\(b=30\)</span>，则：
-- 对于整数为 <span class="arithmatex">\(10,1,7,18,20\)</span> 的弹珠（以及许多其他弹珠），Alice 获得分数（注意她也会为整数 <span class="arithmatex">\(20\)</span> 的弹珠得分）；
-- 对于整数为 <span class="arithmatex">\(59,25,30,21\)</span> 的弹珠（以及许多其他弹珠），Bob 获得分数。</p>
-<p>Bob 已经设法提前知道了 Alice 将选择的整数。请帮助他选择一个整数 <span class="arithmatex">\(b\)</span>，以最大化他获得的分数。</p>
+<p>Alice 和 Bob 有一个装有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个弹珠的袋子，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个弹珠上写有整数 <span class="arithmatex"><span class="MathJax_Preview">v_i</span><script type="math/tex">v_i</script></span>。他们玩下面的游戏：首先，每个玩家选择一个整数（Alice 选择的整数记为 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，Bob 选择的整数记为 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>）。之后，他们以任意顺序从袋子中抽取弹珠，直到袋子为空。对于每个弹珠，分数将给予所选整数与弹珠上整数更接近的玩家；如果距离相等，则 Alice 获得该分数。</p>
+<p>例如，若 <span class="arithmatex"><span class="MathJax_Preview">a=10</span><script type="math/tex">a=10</script></span>，<span class="arithmatex"><span class="MathJax_Preview">b=30</span><script type="math/tex">b=30</script></span>，则：
+- 对于整数为 <span class="arithmatex"><span class="MathJax_Preview">10,1,7,18,20</span><script type="math/tex">10,1,7,18,20</script></span> 的弹珠（以及许多其他弹珠），Alice 获得分数（注意她也会为整数 <span class="arithmatex"><span class="MathJax_Preview">20</span><script type="math/tex">20</script></span> 的弹珠得分）；
+- 对于整数为 <span class="arithmatex"><span class="MathJax_Preview">59,25,30,21</span><script type="math/tex">59,25,30,21</script></span> 的弹珠（以及许多其他弹珠），Bob 获得分数。</p>
+<p>Bob 已经设法提前知道了 Alice 将选择的整数。请帮助他选择一个整数 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，以最大化他获得的分数。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）——测试用例的数量。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）——测试用例的数量。</p>
 <p>每个测试用例包含两行：
-- 第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(a\)</span>（<span class="arithmatex">\(1 \le n \le 3 \cdot 10^5\)</span>；<span class="arithmatex">\(1 \le a \le 10^9\)</span>）——分别表示袋中弹珠的数量和 Alice 选择的整数。
-- 第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(v_1, v_2, \dots, v_n\)</span>（<span class="arithmatex">\(1 \le v_1 \le v_2 \le \dots \le v_n \le 10^9\)</span>）。</p>
-<p>输入数据的额外约束：所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(3 \cdot 10^5\)</span>。</p>
+- 第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 3 \cdot 10^5</span><script type="math/tex">1 \le n \le 3 \cdot 10^5</script></span>；<span class="arithmatex"><span class="MathJax_Preview">1 \le a \le 10^9</span><script type="math/tex">1 \le a \le 10^9</script></span>）——分别表示袋中弹珠的数量和 Alice 选择的整数。
+- 第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">v_1, v_2, \dots, v_n</span><script type="math/tex">v_1, v_2, \dots, v_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le v_1 \le v_2 \le \dots \le v_n \le 10^9</span><script type="math/tex">1 \le v_1 \le v_2 \le \dots \le v_n \le 10^9</script></span>）。</p>
+<p>输入数据的额外约束：所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个整数 <span class="arithmatex">\(b\)</span>（<span class="arithmatex">\(0 \le b \le 2 \cdot 10^9\)</span>），表示 Bob 应选择的整数以最大化其得分。若有多个满足条件的整数，输出任意一个即可。</p>
+<p>对于每个测试用例，输出一个整数 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>（<span class="arithmatex"><span class="MathJax_Preview">0 \le b \le 2 \cdot 10^9</span><script type="math/tex">0 \le b \le 2 \cdot 10^9</script></span>），表示 Bob 应选择的整数以最大化其得分。若有多个满足条件的整数，输出任意一个即可。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 7 21
@@ -4517,8 +4517,8 @@
 1337
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，若 Bob 选择 <span class="arithmatex">\(35\)</span>，他将为整数 <span class="arithmatex">\(30,40,50,60,70\)</span> 的弹珠获得 <span class="arithmatex">\(5\)</span> 分。</p>
-<p>在第三个测试用例中，无论 Bob 选择什么整数，他都会获得 <span class="arithmatex">\(0\)</span> 分。</p>
+<p>在第一个测试用例中，若 Bob 选择 <span class="arithmatex"><span class="MathJax_Preview">35</span><script type="math/tex">35</script></span>，他将为整数 <span class="arithmatex"><span class="MathJax_Preview">30,40,50,60,70</span><script type="math/tex">30,40,50,60,70</script></span> 的弹珠获得 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 分。</p>
+<p>在第三个测试用例中，无论 Bob 选择什么整数，他都会获得 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 分。</p>
 <h1 id="ac">赛时AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2169 A</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 184 (Rated for Div. 2)</span>
@@ -4571,11 +4571,11 @@
 </code></pre></div>
 <h1 id="cf">CF 题解思路</h1>
 <ul>
-<li>Bob选择 <span class="arithmatex">\(b = a\)</span> 从来都不是最优的。因此， <span class="arithmatex">\(b &lt; a\)</span> 或 <span class="arithmatex">\(b &gt; a\)</span> 。在所有可能的 <span class="arithmatex">\(b &lt; a\)</span> 中，我们可以证明选择 <span class="arithmatex">\(b = a - 1\)</span> 总是正确的：对于每个整数 <span class="arithmatex">\(v_i &lt; a\)</span> ，</li>
+<li>Bob选择 <span class="arithmatex"><span class="MathJax_Preview">b = a</span><script type="math/tex">b = a</script></span> 从来都不是最优的。因此， <span class="arithmatex"><span class="MathJax_Preview">b &lt; a</span><script type="math/tex">b < a</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">b &gt; a</span><script type="math/tex">b > a</script></span> 。在所有可能的 <span class="arithmatex"><span class="MathJax_Preview">b &lt; a</span><script type="math/tex">b < a</script></span> 中，我们可以证明选择 <span class="arithmatex"><span class="MathJax_Preview">b = a - 1</span><script type="math/tex">b = a - 1</script></span> 总是正确的：对于每个整数 <span class="arithmatex"><span class="MathJax_Preview">v_i &lt; a</span><script type="math/tex">v_i < a</script></span> ，</li>
 </ul>
-<p><span class="arithmatex">\(a - 1\)</span> 将比 <span class="arithmatex">\(a\)</span> 更接近 <span class="arithmatex">\(v_i\)</span> ，并且对于每个整数 <span class="arithmatex">\(v_i \ge a\)</span> ， <span class="arithmatex">\(a\)</span> 将始终比任何 <span class="arithmatex">\(b &lt; a\)</span> 更接近。因此，如果我们使用 <span class="arithmatex">\(b = a - 1\)</span> ，Bob获得的点数将等于具有 <span class="arithmatex">\(v_i &lt; a\)</span> 的弹珠的数量，并且如果我们使用任何 <span class="arithmatex">\(b &lt; a - 1\)</span> ，答案不会变得更好。类似地，如果 <span class="arithmatex">\(b &gt; a\)</span> ，则选择 <span class="arithmatex">\(b = a + 1\)</span> 总是最优的，</p>
-<p>并且点的数量将等于具有 <span class="arithmatex">\(v_i &gt; a\)</span> 的弹珠的数量。因此，只需检查 <span class="arithmatex">\(b = a-1\)</span> 和 <span class="arithmatex">\(b = a+1\)</span> 即可。</p>
-<p>对于 <span class="arithmatex">\(b\)</span> 的这两个值，可以容易地计算Bob获得的点数。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">a - 1</span><script type="math/tex">a - 1</script></span> 将比 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 更接近 <span class="arithmatex"><span class="MathJax_Preview">v_i</span><script type="math/tex">v_i</script></span> ，并且对于每个整数 <span class="arithmatex"><span class="MathJax_Preview">v_i \ge a</span><script type="math/tex">v_i \ge a</script></span> ， <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 将始终比任何 <span class="arithmatex"><span class="MathJax_Preview">b &lt; a</span><script type="math/tex">b < a</script></span> 更接近。因此，如果我们使用 <span class="arithmatex"><span class="MathJax_Preview">b = a - 1</span><script type="math/tex">b = a - 1</script></span> ，Bob获得的点数将等于具有 <span class="arithmatex"><span class="MathJax_Preview">v_i &lt; a</span><script type="math/tex">v_i < a</script></span> 的弹珠的数量，并且如果我们使用任何 <span class="arithmatex"><span class="MathJax_Preview">b &lt; a - 1</span><script type="math/tex">b < a - 1</script></span> ，答案不会变得更好。类似地，如果 <span class="arithmatex"><span class="MathJax_Preview">b &gt; a</span><script type="math/tex">b > a</script></span> ，则选择 <span class="arithmatex"><span class="MathJax_Preview">b = a + 1</span><script type="math/tex">b = a + 1</script></span> 总是最优的，</p>
+<p>并且点的数量将等于具有 <span class="arithmatex"><span class="MathJax_Preview">v_i &gt; a</span><script type="math/tex">v_i > a</script></span> 的弹珠的数量。因此，只需检查 <span class="arithmatex"><span class="MathJax_Preview">b = a-1</span><script type="math/tex">b = a-1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b = a+1</span><script type="math/tex">b = a+1</script></span> 即可。</p>
+<p>对于 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的这两个值，可以容易地计算Bob获得的点数。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 

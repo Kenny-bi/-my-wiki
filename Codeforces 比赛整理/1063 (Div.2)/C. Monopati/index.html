@@ -1154,10 +1154,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-lr-condition" class="md-nav__link">
+  <a href="#2-lrlr-condition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 2：分析 \((l,r)\) 的条件 (Condition)
+        步骤 2：分析 (l,r)(l,r) 的条件 (Condition)
       
     </span>
   </a>
@@ -4682,10 +4682,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-lr-condition" class="md-nav__link">
+  <a href="#2-lrlr-condition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        步骤 2：分析 \((l,r)\) 的条件 (Condition)
+        步骤 2：分析 (l,r)(l,r) 的条件 (Condition)
       
     </span>
   </a>
@@ -4876,19 +4876,19 @@
 <p>时间限制：每个测试 2 秒<br />
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个 2 行 <span class="arithmatex">\(n\)</span> 列的网格 <span class="arithmatex">\(a\)</span>，其中每个单元格的值在 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(2n\)</span> 之间。</p>
-<p>定义 <span class="arithmatex">\(f(l,r)\)</span>，其中 <span class="arithmatex">\(1 \leq l \leq r \leq 2n\)</span>，表示一个 2 行 <span class="arithmatex">\(n\)</span> 列的二进制网格 <span class="arithmatex">\(b\)</span>，使得 <span class="arithmatex">\(b_{i,j} = 1\)</span> 当且仅当 <span class="arithmatex">\(l \leq a_{i,j} \leq r\)</span>。注意单元格 <span class="arithmatex">\((i,j)\)</span> 表示从上往下第 <span class="arithmatex">\(i\)</span> 行、从左往右第 <span class="arithmatex">\(j\)</span> 列的单元格。</p>
-<p>计算满足 <span class="arithmatex">\(1 \leq l \leq r \leq 2n\)</span> 的整数对 <span class="arithmatex">\((l,r)\)</span> 的数量，使得在 <span class="arithmatex">\(f(l,r)\)</span> 中存在一条从单元格 <span class="arithmatex">\((1,1)\)</span> 到 <span class="arithmatex">\((2,n)\)</span> 的右下路径，该路径由值为 1 的相邻单元格组成。</p>
-<p><span class="arithmatex">\(*\)</span> 当且仅当网格的每个单元格的值都是 0 或 1 时，该网格被认为是二进制网格。</p>
-<p><span class="arithmatex">\(†\)</span> 相邻单元格的右下路径是一个单元格序列，使得序列中的每个单元格与序列中的前一个单元格共享其顶部或左侧的一条边。</p>
+<p>给定一个 2 行 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 列的网格 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，其中每个单元格的值在 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">2n</span><script type="math/tex">2n</script></span> 之间。</p>
+<p>定义 <span class="arithmatex"><span class="MathJax_Preview">f(l,r)</span><script type="math/tex">f(l,r)</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq 2n</span><script type="math/tex">1 \leq l \leq r \leq 2n</script></span>，表示一个 2 行 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 列的二进制网格 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">b_{i,j} = 1</span><script type="math/tex">b_{i,j} = 1</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">l \leq a_{i,j} \leq r</span><script type="math/tex">l \leq a_{i,j} \leq r</script></span>。注意单元格 <span class="arithmatex"><span class="MathJax_Preview">(i,j)</span><script type="math/tex">(i,j)</script></span> 表示从上往下第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行、从左往右第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列的单元格。</p>
+<p>计算满足 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq 2n</span><script type="math/tex">1 \leq l \leq r \leq 2n</script></span> 的整数对 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 的数量，使得在 <span class="arithmatex"><span class="MathJax_Preview">f(l,r)</span><script type="math/tex">f(l,r)</script></span> 中存在一条从单元格 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">(2,n)</span><script type="math/tex">(2,n)</script></span> 的右下路径，该路径由值为 1 的相邻单元格组成。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">*</span><script type="math/tex">*</script></span> 当且仅当网格的每个单元格的值都是 0 或 1 时，该网格被认为是二进制网格。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">†</span><script type="math/tex">†</script></span> 相邻单元格的右下路径是一个单元格序列，使得序列中的每个单元格与序列中的前一个单元格共享其顶部或左侧的一条边。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(2 \leq n \leq 2 \cdot 10^5\)</span>) —— 网格中的列数。</p>
-<p>第二行包含恰好 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_{1,1}, a_{1,2}, \dots, a_{1,n}\)</span> (<span class="arithmatex">\(1 \leq a_{1,i} \leq 2n\)</span>) —— 网格第一行单元格的值。</p>
-<p>第三行包含恰好 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_{2,1}, a_{2,2}, \dots, a_{2,n}\)</span> (<span class="arithmatex">\(1 \leq a_{2,i} \leq 2n\)</span>) —— 网格第二行单元格的值。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">2 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">2 \leq n \leq 2 \cdot 10^5</script></span>) —— 网格中的列数。</p>
+<p>第二行包含恰好 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_{1,1}, a_{1,2}, \dots, a_{1,n}</span><script type="math/tex">a_{1,1}, a_{1,2}, \dots, a_{1,n}</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_{1,i} \leq 2n</span><script type="math/tex">1 \leq a_{1,i} \leq 2n</script></span>) —— 网格第一行单元格的值。</p>
+<p>第三行包含恰好 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_{2,1}, a_{2,2}, \dots, a_{2,n}</span><script type="math/tex">a_{2,1}, a_{2,2}, \dots, a_{2,n}</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_{2,i} \leq 2n</span><script type="math/tex">1 \leq a_{2,i} \leq 2n</script></span>) —— 网格第二行单元格的值。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，在单独一行输出一个整数，表示满足条件的整数对 <span class="arithmatex">\((l,r)\)</span> 的数量。</p>
+<p>对于每个测试用例，在单独一行输出一个整数，表示满足条件的整数对 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 的数量。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>5
 2
@@ -4916,26 +4916,26 @@
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <p>考虑第一个样例。</p>
-<p>网格 <span class="arithmatex">\(f(1,1)\)</span> 和 <span class="arithmatex">\(f(1,2)\)</span> 如下所示：
+<p>网格 <span class="arithmatex"><span class="MathJax_Preview">f(1,1)</span><script type="math/tex">f(1,1)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">f(1,2)</span><script type="math/tex">f(1,2)</script></span> 如下所示：
 <div class="highlight"><pre><span></span><code>10
 01
 </code></pre></div>
-不存在从左上角单元格到右下角单元格的 1 的路径，因此不计算 <span class="arithmatex">\((1,1)\)</span> 和 <span class="arithmatex">\((1,2)\)</span> 对。</p>
-<p>网格 <span class="arithmatex">\(f(1,3)\)</span> 和 <span class="arithmatex">\(f(1,4)\)</span> 如下所示：
+不存在从左上角单元格到右下角单元格的 1 的路径，因此不计算 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(1,2)</span><script type="math/tex">(1,2)</script></span> 对。</p>
+<p>网格 <span class="arithmatex"><span class="MathJax_Preview">f(1,3)</span><script type="math/tex">f(1,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">f(1,4)</span><script type="math/tex">f(1,4)</script></span> 如下所示：
 <div class="highlight"><pre><span></span><code>11
 11
 </code></pre></div>
-由于存在从 <span class="arithmatex">\((1,1)\)</span> 到 <span class="arithmatex">\((2,2)\)</span> 的有效路径，因此计算 <span class="arithmatex">\((1,3)\)</span> 和 <span class="arithmatex">\((1,4)\)</span> 对。</p>
-<p>网格 <span class="arithmatex">\(f(2,2)\)</span> 和 <span class="arithmatex">\(f(4,4)\)</span> 如下：
+由于存在从 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">(2,2)</span><script type="math/tex">(2,2)</script></span> 的有效路径，因此计算 <span class="arithmatex"><span class="MathJax_Preview">(1,3)</span><script type="math/tex">(1,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(1,4)</span><script type="math/tex">(1,4)</script></span> 对。</p>
+<p>网格 <span class="arithmatex"><span class="MathJax_Preview">f(2,2)</span><script type="math/tex">f(2,2)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">f(4,4)</span><script type="math/tex">f(4,4)</script></span> 如下：
 <div class="highlight"><pre><span></span><code>00
 00
 </code></pre></div></p>
-<p>网格 <span class="arithmatex">\(f(2,3)\)</span>、<span class="arithmatex">\(f(2,4)\)</span>、<span class="arithmatex">\(f(3,3)\)</span> 和 <span class="arithmatex">\(f(3,4)\)</span> 如下所示：
+<p>网格 <span class="arithmatex"><span class="MathJax_Preview">f(2,3)</span><script type="math/tex">f(2,3)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">f(2,4)</span><script type="math/tex">f(2,4)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">f(3,3)</span><script type="math/tex">f(3,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">f(3,4)</span><script type="math/tex">f(3,4)</script></span> 如下所示：
 <div class="highlight"><pre><span></span><code>01
 10
 </code></pre></div>
-因此不计算 <span class="arithmatex">\((2,3)\)</span>、<span class="arithmatex">\((2,4)\)</span>、<span class="arithmatex">\((3,3)\)</span> 和 <span class="arithmatex">\((3,4)\)</span> 对。</p>
-<p>仅计算 <span class="arithmatex">\((1,3)\)</span> 和 <span class="arithmatex">\((1,4)\)</span> 对，因此答案是 <span class="arithmatex">\(2\)</span>。</p>
+因此不计算 <span class="arithmatex"><span class="MathJax_Preview">(2,3)</span><script type="math/tex">(2,3)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(2,4)</span><script type="math/tex">(2,4)</script></span>、<span class="arithmatex"><span class="MathJax_Preview">(3,3)</span><script type="math/tex">(3,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(3,4)</span><script type="math/tex">(3,4)</script></span> 对。</p>
+<p>仅计算 <span class="arithmatex"><span class="MathJax_Preview">(1,3)</span><script type="math/tex">(1,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(1,4)</span><script type="math/tex">(1,4)</script></span> 对，因此答案是 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</p>
 <h1 id="wa-2">赛时WA 2代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2163 C</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1063 (Div. 2)</span>
@@ -5116,140 +5116,140 @@
 </code></pre></div>
 <h1 id="ai-jiangly">AI  对于jiangly 思路以及我的代码分析</h1>
 <p>你好！我们来分析这道题。</p>
-<p>你这道题的 WA2 和 <code>jiangly</code> 的 AC 代码，思路差异非常大。你的代码尝试寻找一个“通用”的 <span class="arithmatex">\(l\)</span> 和 <span class="arithmatex">\(r\)</span>，而 <code>jiangly</code> 的代码则在计算 <span class="arithmatex">\(n\)</span> 种可能路径的“并集”。</p>
+<p>你这道题的 WA2 和 <code>jiangly</code> 的 AC 代码，思路差异非常大。你的代码尝试寻找一个“通用”的 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，而 <code>jiangly</code> 的代码则在计算 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 种可能路径的“并集”。</p>
 <p>这道题的核心是<strong>如何正确地对“至少存在一个”这种条件进行计数</strong>。你的 WA 表明你可能在计算“对于所有都成立”的“交集”，这是一个根本性的误解。</p>
 <p>让我们一步步拆解 <code>jiangly</code> 的正确思路。</p>
 <h3 id="1-path">步骤 1：分析路径 (Path)</h3>
-<p>我们首先要搞清楚“从 <span class="arithmatex">\((1,1)\)</span> 到 <span class="arithmatex">\((2,n)\)</span> 的右下路径”长什么样。</p>
-<p>在一个 <span class="arithmatex">\(2 \times n\)</span> 的网格里，从 <span class="arithmatex">\((1,1)\)</span> 出发，你只能向右或向下。要想到达 <span class="arithmatex">\((2,n)\)</span>，你的路径_必须_在某一列 <span class="arithmatex">\(k\)</span>（<span class="arithmatex">\(1 \le k \le n\)</span>）从第一行“掉到”第二行。</p>
+<p>我们首先要搞清楚“从 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">(2,n)</span><script type="math/tex">(2,n)</script></span> 的右下路径”长什么样。</p>
+<p>在一个 <span class="arithmatex"><span class="MathJax_Preview">2 \times n</span><script type="math/tex">2 \times n</script></span> 的网格里，从 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 出发，你只能向右或向下。要想到达 <span class="arithmatex"><span class="MathJax_Preview">(2,n)</span><script type="math/tex">(2,n)</script></span>，你的路径_必须_在某一列 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le k \le n</span><script type="math/tex">1 \le k \le n</script></span>）从第一行“掉到”第二行。</p>
 <p>这个路径看起来就像：</p>
 <ol>
 <li>
-<p>先在第一行，从 <span class="arithmatex">\((1,1)\)</span> 走到 <span class="arithmatex">\((1,k)\)</span>。</p>
+<p>先在第一行，从 <span class="arithmatex"><span class="MathJax_Preview">(1,1)</span><script type="math/tex">(1,1)</script></span> 走到 <span class="arithmatex"><span class="MathJax_Preview">(1,k)</span><script type="math/tex">(1,k)</script></span>。</p>
 </li>
 <li>
-<p>然后从 <span class="arithmatex">\((1,k)\)</span> 掉到 <span class="arithmatex">\((2,k)\)</span>。</p>
+<p>然后从 <span class="arithmatex"><span class="MathJax_Preview">(1,k)</span><script type="math/tex">(1,k)</script></span> 掉到 <span class="arithmatex"><span class="MathJax_Preview">(2,k)</span><script type="math/tex">(2,k)</script></span>。</p>
 </li>
 <li>
-<p>最后在第二行，从 <span class="arithmatex">\((2,k)\)</span> 走到 <span class="arithmatex">\((2,n)\)</span>。</p>
+<p>最后在第二行，从 <span class="arithmatex"><span class="MathJax_Preview">(2,k)</span><script type="math/tex">(2,k)</script></span> 走到 <span class="arithmatex"><span class="MathJax_Preview">(2,n)</span><script type="math/tex">(2,n)</script></span>。</p>
 </li>
 </ol>
-<p><em>(注：<span class="arithmatex">\(k=1\)</span> 或 <span class="arithmatex">\(k=n\)</span> 是这个模型的特例，也是成立的)</em></p>
-<p>所以，一个 <span class="arithmatex">\(f(l,r)\)</span> 中存在路径，<strong>当且仅当存在至少一个 <span class="arithmatex">\(k \in [1, n]\)</span></strong>，使得<strong>路径 <span class="arithmatex">\(k\)</span></strong> 上的所有格子都为 <span class="arithmatex">\(1\)</span>。</p>
-<p><strong>路径 <span class="arithmatex">\(k\)</span></strong> 包含了哪些格子？</p>
+<p><em>(注：<span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">k=n</span><script type="math/tex">k=n</script></span> 是这个模型的特例，也是成立的)</em></p>
+<p>所以，一个 <span class="arithmatex"><span class="MathJax_Preview">f(l,r)</span><script type="math/tex">f(l,r)</script></span> 中存在路径，<strong>当且仅当存在至少一个 <span class="arithmatex"><span class="MathJax_Preview">k \in [1, n]</span><script type="math/tex">k \in [1, n]</script></span></strong>，使得<strong>路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong> 上的所有格子都为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
+<p><strong>路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong> 包含了哪些格子？</p>
 <ul>
 <li>
-<p>第一行的前 <span class="arithmatex">\(k\)</span> 个：<span class="arithmatex">\((1,1), (1,2), \dots, (1,k)\)</span></p>
+<p>第一行的前 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个：<span class="arithmatex"><span class="MathJax_Preview">(1,1), (1,2), \dots, (1,k)</span><script type="math/tex">(1,1), (1,2), \dots, (1,k)</script></span></p>
 </li>
 <li>
-<p>第二行的后 <span class="arithmatex">\(n-k+1\)</span> 个：<span class="arithmatex">\((2,k), (2,k+1), \dots, (2,n)\)</span></p>
+<p>第二行的后 <span class="arithmatex"><span class="MathJax_Preview">n-k+1</span><script type="math/tex">n-k+1</script></span> 个：<span class="arithmatex"><span class="MathJax_Preview">(2,k), (2,k+1), \dots, (2,n)</span><script type="math/tex">(2,k), (2,k+1), \dots, (2,n)</script></span></p>
 </li>
 </ul>
-<h3 id="2-lr-condition">步骤 2：分析 <span class="arithmatex">\((l,r)\)</span> 的条件 (Condition)</h3>
-<p>对于一个<strong>固定</strong>的 <span class="arithmatex">\(k\)</span>，要让“路径 <span class="arithmatex">\(k\)</span>”上所有格子都为 <span class="arithmatex">\(1\)</span>， <span class="arithmatex">\(l\)</span> 和 <span class="arithmatex">\(r\)</span> 必须满足什么条件？</p>
+<h3 id="2-lrlr-condition">步骤 2：分析 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 的条件 (Condition)</h3>
+<p>对于一个<strong>固定</strong>的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，要让“路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>”上所有格子都为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>， <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 必须满足什么条件？</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(b_{i,j}\)</span> 为 <span class="arithmatex">\(1\)</span> <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(l \le a_{i,j} \le r\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">b_{i,j}</span><script type="math/tex">b_{i,j}</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> <span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span> <span class="arithmatex"><span class="MathJax_Preview">l \le a_{i,j} \le r</span><script type="math/tex">l \le a_{i,j} \le r</script></span></p>
 </li>
 <li>
-<p>所以，对于路径 <span class="arithmatex">\(k\)</span> 上的<strong>所有</strong>格子 <span class="arithmatex">\((i,j)\)</span>，都必须满足 <span class="arithmatex">\(l \le a_{i,j} \le r\)</span>。</p>
+<p>所以，对于路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 上的<strong>所有</strong>格子 <span class="arithmatex"><span class="MathJax_Preview">(i,j)</span><script type="math/tex">(i,j)</script></span>，都必须满足 <span class="arithmatex"><span class="MathJax_Preview">l \le a_{i,j} \le r</span><script type="math/tex">l \le a_{i,j} \le r</script></span>。</p>
 </li>
 </ul>
 <p>这等价于：</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(l \le\)</span> 路径 <span class="arithmatex">\(k\)</span> 上所有 <span class="arithmatex">\(a_{i,j}\)</span> 的<strong>最小值</strong>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">l \le</span><script type="math/tex">l \le</script></span> 路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 上所有 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> 的<strong>最小值</strong>。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(r \ge\)</span> 路径 <span class="arithmatex">\(k\)</span> 上所有 <span class="arithmatex">\(a_{i,j}\)</span> 的<strong>最大值</strong>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">r \ge</span><script type="math/tex">r \ge</script></span> 路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 上所有 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> 的<strong>最大值</strong>。</p>
 </li>
 </ol>
 <p>我们来定义两个值：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(L(k) = \min(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">L(k) = \min(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})</span><script type="math/tex">L(k) = \min(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(R(k) = \max(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">R(k) = \max(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})</span><script type="math/tex">R(k) = \max(a_{1,1}, \dots, a_{1,k}, a_{2,k}, \dots, a_{2,n})</script></span></p>
 </li>
 </ul>
-<p>所以，一个 <span class="arithmatex">\((l,r)\)</span> 对能<strong>激活路径 <span class="arithmatex">\(k\)</span></strong> <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(l \le L(k)\)</span> 且 <span class="arithmatex">\(r \ge R(k)\)</span>。</p>
+<p>所以，一个 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 对能<strong>激活路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong> <span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span> <span class="arithmatex"><span class="MathJax_Preview">l \le L(k)</span><script type="math/tex">l \le L(k)</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">r \ge R(k)</span><script type="math/tex">r \ge R(k)</script></span>。</p>
 <h3 id="3-wa2">步骤 3：分析你的 WA2 代码</h3>
 <p>我们先来看看你WA的代码里计算了什么：</p>
 <ul>
 <li>
-<p><code>premax[i]</code> / <code>premin[i]</code> 是 <span class="arithmatex">\(a_{1,1}, \dots, a_{1,i}\)</span> 的最大/最小值。</p>
+<p><code>premax[i]</code> / <code>premin[i]</code> 是 <span class="arithmatex"><span class="MathJax_Preview">a_{1,1}, \dots, a_{1,i}</span><script type="math/tex">a_{1,1}, \dots, a_{1,i}</script></span> 的最大/最小值。</p>
 </li>
 <li>
-<p><code>sufmax[i]</code> / <code>sufmin[i]</code> 是 <span class="arithmatex">\(a_{2,i}, \dots, a_{2,n}\)</span> 的最大/最小值。</p>
+<p><code>sufmax[i]</code> / <code>sufmin[i]</code> 是 <span class="arithmatex"><span class="MathJax_Preview">a_{2,i}, \dots, a_{2,n}</span><script type="math/tex">a_{2,i}, \dots, a_{2,n}</script></span> 的最大/最小值。</p>
 </li>
 </ul>
 <p>你在循环里计算的：</p>
 <ul>
 <li>
-<p><code>mi = min(premin[i], sufmin[i])</code> 这就是 <span class="arithmatex">\(L(i)\)</span>！</p>
+<p><code>mi = min(premin[i], sufmin[i])</code> 这就是 <span class="arithmatex"><span class="MathJax_Preview">L(i)</span><script type="math/tex">L(i)</script></span>！</p>
 </li>
 <li>
-<p><code>mx = max(premax[i], sufmax[i])</code> 这就是 <span class="arithmatex">\(R(i)\)</span>！</p>
+<p><code>mx = max(premax[i], sufmax[i])</code> 这就是 <span class="arithmatex"><span class="MathJax_Preview">R(i)</span><script type="math/tex">R(i)</script></span>！</p>
 </li>
 </ul>
-<p><strong>非常好！</strong> 你的代码<strong>正确地</strong>计算出了所有 <span class="arithmatex">\(n\)</span> 个路径的 <span class="arithmatex">\(L(k)\)</span> 和 <span class="arithmatex">\(R(k)\)</span>。</p>
+<p><strong>非常好！</strong> 你的代码<strong>正确地</strong>计算出了所有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个路径的 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span>。</p>
 <p><strong>但你的错误在这里：</strong></p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>l=max(l,mi), r=min(r,mx);
 </code></pre></div>
-<p>你最后计算的 <code>l</code> 是 <span class="arithmatex">\(\max(L(1), \dots, L(n))\)</span>，而 <code>r</code> 是 <span class="arithmatex">\(\min(R(1), \dots, R(n))\)</span>。</p>
-<p>这组 <span class="arithmatex">\((l,r)\)</span> 没有任何意义。题目要求我们统计的是：</p>
-<p>“所有在 <span class="arithmatex">\(k=1\)</span> 的 <span class="arithmatex">\((l,r)\)</span> 集合” <span class="arithmatex">\(\cup\)</span> “所有在 <span class="arithmatex">\(k=2\)</span> 的 <span class="arithmatex">\((l,r)\)</span> 集合” <span class="arithmatex">\(\cup\)</span> ... <span class="arithmatex">\(\cup\)</span> “所有在 <span class="arithmatex">\(k=n\)</span> 的 <span class="arithmatex">\((l,r)\)</span> 集合”</p>
+<p>你最后计算的 <code>l</code> 是 <span class="arithmatex"><span class="MathJax_Preview">\max(L(1), \dots, L(n))</span><script type="math/tex">\max(L(1), \dots, L(n))</script></span>，而 <code>r</code> 是 <span class="arithmatex"><span class="MathJax_Preview">\min(R(1), \dots, R(n))</span><script type="math/tex">\min(R(1), \dots, R(n))</script></span>。</p>
+<p>这组 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 没有任何意义。题目要求我们统计的是：</p>
+<p>“所有在 <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 集合” <span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span> “所有在 <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 集合” <span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span> ... <span class="arithmatex"><span class="MathJax_Preview">\cup</span><script type="math/tex">\cup</script></span> “所有在 <span class="arithmatex"><span class="MathJax_Preview">k=n</span><script type="math/tex">k=n</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 集合”</p>
 <p>这个并集的大小。</p>
 <p>你计算的不是并集，也不是交集，而是一个不相关的奇怪值。</p>
 <hr />
 <h3 id="4">步骤 4：如何正确统计“并集”？</h3>
-<p>直接计算 <span class="arithmatex">\(n\)</span> 个“矩形区域” <span class="arithmatex">\((l \le L(k), r \ge R(k))\)</span> 的并集很复杂（需要容斥原理）。</p>
+<p>直接计算 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个“矩形区域” <span class="arithmatex"><span class="MathJax_Preview">(l \le L(k), r \ge R(k))</span><script type="math/tex">(l \le L(k), r \ge R(k))</script></span> 的并集很复杂（需要容斥原理）。</p>
 <p><code>jiangly</code> 的代码用了一个极其巧妙的<strong>逐行扫描</strong>思想，把一个二维的“面积并”问题，转换成了一个一维的求和问题。</p>
-<p>我们不直接统计 <span class="arithmatex">\((l,r)\)</span> 对，我们换个角度：</p>
-<p>遍历所有的 <span class="arithmatex">\(l \in [1, 2n]\)</span>，对于每个 <span class="arithmatex">\(l\)</span>，我们去数有多少个 <span class="arithmatex">\(r\)</span> 能和它配对。</p>
-<p>一个 <span class="arithmatex">\((l,r)\)</span> 对是合法的，当且仅当：</p>
-<p><span class="arithmatex">\(\exists k\)</span> 使得 <span class="arithmatex">\(l \le L(k)\)</span> 且 <span class="arithmatex">\(r \ge R(k)\)</span>。</p>
-<p>固定 <span class="arithmatex">\(l\)</span>：</p>
+<p>我们不直接统计 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 对，我们换个角度：</p>
+<p>遍历所有的 <span class="arithmatex"><span class="MathJax_Preview">l \in [1, 2n]</span><script type="math/tex">l \in [1, 2n]</script></span>，对于每个 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>，我们去数有多少个 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 能和它配对。</p>
+<p>一个 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 对是合法的，当且仅当：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\exists k</span><script type="math/tex">\exists k</script></span> 使得 <span class="arithmatex"><span class="MathJax_Preview">l \le L(k)</span><script type="math/tex">l \le L(k)</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">r \ge R(k)</span><script type="math/tex">r \ge R(k)</script></span>。</p>
+<p>固定 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(l\)</span> 必须“支持”至少一条路径。我们只关心那些 <span class="arithmatex">\(k\)</span>，使得 <span class="arithmatex">\(L(k) \ge l\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 必须“支持”至少一条路径。我们只关心那些 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">L(k) \ge l</span><script type="math/tex">L(k) \ge l</script></span>。</p>
 </li>
 <li>
-<p>对于所有 <span class="arithmatex">\(l\)</span> 支持的 <span class="arithmatex">\(k\)</span> (即 <span class="arithmatex">\(L(k) \ge l\)</span> )， <span class="arithmatex">\(r\)</span> 只要 <span class="arithmatex">\(\ge\)</span> 它们中<strong>任意一个</strong> <span class="arithmatex">\(R(k)\)</span> 就行了。</p>
+<p>对于所有 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 支持的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (即 <span class="arithmatex"><span class="MathJax_Preview">L(k) \ge l</span><script type="math/tex">L(k) \ge l</script></span> )， <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 只要 <span class="arithmatex"><span class="MathJax_Preview">\ge</span><script type="math/tex">\ge</script></span> 它们中<strong>任意一个</strong> <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span> 就行了。</p>
 </li>
 <li>
-<p>为了让 <span class="arithmatex">\(r\)</span> 的选择尽可能多，<span class="arithmatex">\(r\)</span> 只需要 <span class="arithmatex">\(\ge \min \{ R(k) \mid L(k) \ge l \}\)</span>。</p>
+<p>为了让 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的选择尽可能多，<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 只需要 <span class="arithmatex"><span class="MathJax_Preview">\ge \min \{ R(k) \mid L(k) \ge l \}</span><script type="math/tex">\ge \min \{ R(k) \mid L(k) \ge l \}</script></span>。</p>
 </li>
 <li>
-<p>(我们还知道 <span class="arithmatex">\(r \ge l\)</span>。但因为 <span class="arithmatex">\(R(k) \ge L(k) \ge l\)</span>，所以 <span class="arithmatex">\(\min \{ \dots \} \ge l\)</span> 自动成立。所以 <span class="arithmatex">\(r \ge l\)</span> 这个条件可以忽略)。</p>
+<p>(我们还知道 <span class="arithmatex"><span class="MathJax_Preview">r \ge l</span><script type="math/tex">r \ge l</script></span>。但因为 <span class="arithmatex"><span class="MathJax_Preview">R(k) \ge L(k) \ge l</span><script type="math/tex">R(k) \ge L(k) \ge l</script></span>，所以 <span class="arithmatex"><span class="MathJax_Preview">\min \{ \dots \} \ge l</span><script type="math/tex">\min \{ \dots \} \ge l</script></span> 自动成立。所以 <span class="arithmatex"><span class="MathJax_Preview">r \ge l</span><script type="math/tex">r \ge l</script></span> 这个条件可以忽略)。</p>
 </li>
 </ul>
-<p>我们定义一个函数 <span class="arithmatex">\(f(l) = \min \{ R(k) \mid L(k) \ge l \}\)</span>。</p>
-<p>如果不存在 <span class="arithmatex">\(k\)</span> 使得 <span class="arithmatex">\(L(k) \ge l\)</span>，我们就让 <span class="arithmatex">\(f(l) = 2n+1\)</span> (一个哨兵值)。</p>
+<p>我们定义一个函数 <span class="arithmatex"><span class="MathJax_Preview">f(l) = \min \{ R(k) \mid L(k) \ge l \}</span><script type="math/tex">f(l) = \min \{ R(k) \mid L(k) \ge l \}</script></span>。</p>
+<p>如果不存在 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 使得 <span class="arithmatex"><span class="MathJax_Preview">L(k) \ge l</span><script type="math/tex">L(k) \ge l</script></span>，我们就让 <span class="arithmatex"><span class="MathJax_Preview">f(l) = 2n+1</span><script type="math/tex">f(l) = 2n+1</script></span> (一个哨兵值)。</p>
 <ul>
 <li>
-<p>对于一个 <span class="arithmatex">\(l\)</span>，只要 <span class="arithmatex">\(r \ge f(l)\)</span> 且 <span class="arithmatex">\(r \le 2n\)</span>，这对 <span class="arithmatex">\((l,r)\)</span> 就是合法的。</p>
+<p>对于一个 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>，只要 <span class="arithmatex"><span class="MathJax_Preview">r \ge f(l)</span><script type="math/tex">r \ge f(l)</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">r \le 2n</span><script type="math/tex">r \le 2n</script></span>，这对 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 就是合法的。</p>
 </li>
 <li>
-<p>所以，对于 <span class="arithmatex">\(l\)</span>，合法的 <span class="arithmatex">\(r\)</span> 的数量是：<span class="arithmatex">\(2n - f(l) + 1\)</span> (如果是负数，则为 0)。</p>
+<p>所以，对于 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>，合法的 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 的数量是：<span class="arithmatex"><span class="MathJax_Preview">2n - f(l) + 1</span><script type="math/tex">2n - f(l) + 1</script></span> (如果是负数，则为 0)。</p>
 </li>
 </ul>
-<p><strong>最终答案 = <span class="arithmatex">\(\sum_{l=1}^{2n} \max(0, 2n - f(l) + 1)\)</span></strong></p>
+<p><strong>最终答案 = <span class="arithmatex"><span class="MathJax_Preview">\sum_{l=1}^{2n} \max(0, 2n - f(l) + 1)</span><script type="math/tex">\sum_{l=1}^{2n} \max(0, 2n - f(l) + 1)</script></span></strong></p>
 <h3 id="5jiangly">步骤 5：<code>jiangly</code> 的代码如何实现？</h3>
-<p>jiangly 的代码就是为了高效计算 <span class="arithmatex">\(f(l)\)</span> 函数。</p>
-<p>(注意：jiangly 的代码将所有 <span class="arithmatex">\(a_{i,j}\)</span> 都减了 <span class="arithmatex">\(1\)</span>，所以他是 0-indexed，值域是 <span class="arithmatex">\(0 \sim 2n-1\)</span>。我们的 <span class="arithmatex">\(f(l)\)</span> 对应他的 <span class="arithmatex">\(f[i]\)</span>)</p>
+<p>jiangly 的代码就是为了高效计算 <span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span> 函数。</p>
+<p>(注意：jiangly 的代码将所有 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> 都减了 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，所以他是 0-indexed，值域是 <span class="arithmatex"><span class="MathJax_Preview">0 \sim 2n-1</span><script type="math/tex">0 \sim 2n-1</script></span>。我们的 <span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span> 对应他的 <span class="arithmatex"><span class="MathJax_Preview">f[i]</span><script type="math/tex">f[i]</script></span>)</p>
 <ol>
 <li>
 <p><strong>初始化 <code>f</code> 数组：</strong></p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>std::vector&lt;int&gt; f(2 * n, 2 * n);
 </code></pre></div>
-<p><code>f</code> 数组的下标代表 <span class="arithmatex">\(l\)</span>，值代表 <span class="arithmatex">\(f(l)\)</span>。初始化为 <span class="arithmatex">\(2n\)</span> (他的“无穷大”)。</p>
+<p><code>f</code> 数组的下标代表 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>，值代表 <span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span>。初始化为 <span class="arithmatex"><span class="MathJax_Preview">2n</span><script type="math/tex">2n</script></span> (他的“无穷大”)。</p>
 </li>
 <li>
-<p><strong>计算 <span class="arithmatex">\(L(k)\)</span> 和 <span class="arithmatex">\(R(k)\)</span>，并更新 <code>f</code>：</strong></p>
+<p><strong>计算 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span>，并更新 <code>f</code>：</strong></p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>for (int i = 0; i &lt; n; i++) {
     int L = std::min(pmin[i], smin[i]); // 这就是 L(k)
@@ -5257,21 +5257,21 @@
     f[L] = std::min(f[L], R);
 }
 </code></pre></div>
-<p>这一步之后，f[l] 存储的是 <span class="arithmatex">\(\min \{ R(k) \mid L(k) = l \}\)</span>。</p>
-<p>(即：所有 <span class="arithmatex">\(L(k)\)</span> 恰好等于 <span class="arithmatex">\(l\)</span> 的路径 <span class="arithmatex">\(k\)</span> 中，最小的那个 <span class="arithmatex">\(R(k)\)</span>)</p>
+<p>这一步之后，f[l] 存储的是 <span class="arithmatex"><span class="MathJax_Preview">\min \{ R(k) \mid L(k) = l \}</span><script type="math/tex">\min \{ R(k) \mid L(k) = l \}</script></span>。</p>
+<p>(即：所有 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 恰好等于 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 的路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 中，最小的那个 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span>)</p>
 </li>
 <li>
-<p>计算 <span class="arithmatex">\(f(l)\)</span>：</p>
-<p>我们想要的 <span class="arithmatex">\(f(l) = \min \{ R(k) \mid L(k) \ge l \}\)</span>。</p>
-<p>而我们现在有 <span class="arithmatex">\(f'[l] = \min \{ R(k) \mid L(k) = l \}\)</span>。</p>
-<p><span class="arithmatex">\(f(l)\)</span> 其实就是 <span class="arithmatex">\(f'[l], f'[l+1], f'[l+2], \dots\)</span> 里的最小值。</p>
+<p>计算 <span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span>：</p>
+<p>我们想要的 <span class="arithmatex"><span class="MathJax_Preview">f(l) = \min \{ R(k) \mid L(k) \ge l \}</span><script type="math/tex">f(l) = \min \{ R(k) \mid L(k) \ge l \}</script></span>。</p>
+<p>而我们现在有 <span class="arithmatex"><span class="MathJax_Preview">f'[l] = \min \{ R(k) \mid L(k) = l \}</span><script type="math/tex">f'[l] = \min \{ R(k) \mid L(k) = l \}</script></span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(l)</span><script type="math/tex">f(l)</script></span> 其实就是 <span class="arithmatex"><span class="MathJax_Preview">f'[l], f'[l+1], f'[l+2], \dots</span><script type="math/tex">f'[l], f'[l+1], f'[l+2], \dots</script></span> 里的最小值。</p>
 <p>这不就是后缀最小值 (Suffix Minimum) 吗！</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>for (int i = 2 * n - 2; i &gt;= 0; i--) {
     f[i] = std::min(f[i], f[i + 1]);
 }
 </code></pre></div>
-<p>这个循环跑完，<code>f[i]</code> 就存着 <span class="arithmatex">\(f(i)\)</span> 的真正值了。</p>
+<p>这个循环跑完，<code>f[i]</code> 就存着 <span class="arithmatex"><span class="MathJax_Preview">f(i)</span><script type="math/tex">f(i)</script></span> 的真正值了。</p>
 </li>
 <li>
 <p><strong>求和：</strong></p>
@@ -5281,30 +5281,30 @@ for (int i = 0; i &lt; 2 * n; i++) {
     ans += 2 * n - f[i];
 }
 </code></pre></div>
-<p>(因为 <span class="arithmatex">\(f[i]\)</span> 不可能 <span class="arithmatex">\(&gt; 2n\)</span>，所以 <span class="arithmatex">\(\max(0, \dots)\)</span> 可以省略。<span class="arithmatex">\(2n - f[i]\)</span> 就对应 1-indexed 的 <span class="arithmatex">\(2n - f(l) + 1\)</span>)。</p>
+<p>(因为 <span class="arithmatex"><span class="MathJax_Preview">f[i]</span><script type="math/tex">f[i]</script></span> 不可能 <span class="arithmatex"><span class="MathJax_Preview">&gt; 2n</span><script type="math/tex">> 2n</script></span>，所以 <span class="arithmatex"><span class="MathJax_Preview">\max(0, \dots)</span><script type="math/tex">\max(0, \dots)</script></span> 可以省略。<span class="arithmatex"><span class="MathJax_Preview">2n - f[i]</span><script type="math/tex">2n - f[i]</script></span> 就对应 1-indexed 的 <span class="arithmatex"><span class="MathJax_Preview">2n - f(l) + 1</span><script type="math/tex">2n - f(l) + 1</script></span>)。</p>
 </li>
 </ol>
 <h3 id="_7">总结与提升</h3>
 <ol>
 <li>
-<p><strong>你的 WA2 原因：</strong> 你正确计算了 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\((L(k), R(k))\)</span> 对，但你错误地将它们“合并”了。你没有意识到你要求的是 <span class="arithmatex">\(n\)</span> 个条件集的<strong>并集</strong>。</p>
+<p><strong>你的 WA2 原因：</strong> 你正确计算了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个 <span class="arithmatex"><span class="MathJax_Preview">(L(k), R(k))</span><script type="math/tex">(L(k), R(k))</script></span> 对，但你错误地将它们“合并”了。你没有意识到你要求的是 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个条件集的<strong>并集</strong>。</p>
 </li>
 <li>
 <p><strong>本题核心能力：</strong></p>
 <ul>
 <li>
-<p><strong>模型转换：</strong> 将一个二维的“路径”问题，转换为 <span class="arithmatex">\(n\)</span> 个一维的“路径 <span class="arithmatex">\(k\)</span>”问题。</p>
+<p><strong>模型转换：</strong> 将一个二维的“路径”问题，转换为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个一维的“路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>”问题。</p>
 </li>
 <li>
-<p><strong>计数问题转换：</strong> 将一个“二维区域并集”的计数问题，转换为“一维逐行扫描”的求和问题。 (即 <span class="arithmatex">\(\sum_{l} \text{count}(r)\)</span>)</p>
+<p><strong>计数问题转换：</strong> 将一个“二维区域并集”的计数问题，转换为“一维逐行扫描”的求和问题。 (即 <span class="arithmatex"><span class="MathJax_Preview">\sum_{l} \text{count}(r)</span><script type="math/tex">\sum_{l} \text{count}(r)</script></span>)</p>
 </li>
 <li>
-<p><strong>算法实现：</strong> 利用“后缀最小值”来快速计算 <span class="arithmatex">\(\min \{ R(k) \mid L(k) \ge l \}\)</span>。</p>
+<p><strong>算法实现：</strong> 利用“后缀最小值”来快速计算 <span class="arithmatex"><span class="MathJax_Preview">\min \{ R(k) \mid L(k) \ge l \}</span><script type="math/tex">\min \{ R(k) \mid L(k) \ge l \}</script></span>。</p>
 </li>
 </ul>
 </li>
 </ol>
-<p>这个思维转换（从 <code>count(l,r)</code> 转换到 <span class="arithmatex">\(\sum_l \text{count}(r)\)</span>）在 <span class="arithmatex">\(1600 \sim 1900\)</span> 分段的计数题中极其常见。这个技巧一定要掌握。</p>
+<p>这个思维转换（从 <code>count(l,r)</code> 转换到 <span class="arithmatex"><span class="MathJax_Preview">\sum_l \text{count}(r)</span><script type="math/tex">\sum_l \text{count}(r)</script></span>）在 <span class="arithmatex"><span class="MathJax_Preview">1600 \sim 1900</span><script type="math/tex">1600 \sim 1900</script></span> 分段的计数题中极其常见。这个技巧一定要掌握。</p>
 <p>这个分析对你有帮助吗？你想不想把你 WA 的代码，按照这个思路修改一下试试？</p>
 <h1 id="_8">对于细节问题的考量</h1>
 <h3 id="1-fl-minr-fl">1. <code>f[L] = min(R, f[L]);</code> 这一步</h3>
@@ -5313,13 +5313,13 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong>目的：</strong> 这个循环把 <code>f</code> 数组当作一个“桶”或“映射表”来使用。</p>
 </li>
 <li>
-<p><strong>索引 (<code>L</code>)：</strong> 索引 <code>L</code> 代表一个特定的<strong>最小 <span class="arithmatex">\(l\)</span> 需求</strong>（即路径 <span class="arithmatex">\(k\)</span> 的 <span class="arithmatex">\(L(k)\)</span> 值）。</p>
+<p><strong>索引 (<code>L</code>)：</strong> 索引 <code>L</code> 代表一个特定的<strong>最小 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 需求</strong>（即路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 值）。</p>
 </li>
 <li>
-<p><strong>值 (<code>R</code>)：</strong> 存储的值 <code>f[L]</code>，代表在所有 <span class="arithmatex">\(L(k)\)</span> 正好等于 <code>L</code> 的路径 <span class="arithmatex">\(k\)</span> 中，那个<strong>最小的 <span class="arithmatex">\(R(k)\)</span> 需求</strong>是多少。</p>
+<p><strong>值 (<code>R</code>)：</strong> 存储的值 <code>f[L]</code>，代表在所有 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 正好等于 <code>L</code> 的路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 中，那个<strong>最小的 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span> 需求</strong>是多少。</p>
 </li>
 <li>
-<p><strong>示例：</strong> 如果路径 3 的 <span class="arithmatex">\((L=5, R=10)\)</span>，路径 7 的 <span class="arithmatex">\((L=5, R=8)\)</span>，那么这个循环跑完后，<code>f[5]</code> 的值会是 8。这只是一个中间步骤。</p>
+<p><strong>示例：</strong> 如果路径 3 的 <span class="arithmatex"><span class="MathJax_Preview">(L=5, R=10)</span><script type="math/tex">(L=5, R=10)</script></span>，路径 7 的 <span class="arithmatex"><span class="MathJax_Preview">(L=5, R=8)</span><script type="math/tex">(L=5, R=8)</script></span>，那么这个循环跑完后，<code>f[5]</code> 的值会是 8。这只是一个中间步骤。</p>
 </li>
 </ul>
 <h3 id="2-fi-minfi-fi1">2. 后缀最小值步骤：<code>f[i] = min(f[i], f[i+1]);</code></h3>
@@ -5328,32 +5328,32 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong>目的：</strong> 这个循环将 <code>f</code> 数组从它的中间状态（上一步的结果）转换为我们计数所需的最终状态。</p>
 </li>
 <li>
-<p><strong>之前：</strong> <code>f[i]</code> = <span class="arithmatex">\(\min \{ R(k) \mid L(k) = i \}\)</span> （只考虑那些 <span class="arithmatex">\(L(k)\)</span> <em>等于</em> <span class="arithmatex">\(i\)</span> 的路径）。</p>
+<p><strong>之前：</strong> <code>f[i]</code> = <span class="arithmatex"><span class="MathJax_Preview">\min \{ R(k) \mid L(k) = i \}</span><script type="math/tex">\min \{ R(k) \mid L(k) = i \}</script></span> （只考虑那些 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> <em>等于</em> <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的路径）。</p>
 </li>
 <li>
-<p><strong>之后：</strong> <code>f[i]</code> = <span class="arithmatex">\(\min \{ R(k) \mid L(k) \ge i \}\)</span> （考虑所有 <span class="arithmatex">\(L(k)\)</span> 是 <span class="arithmatex">\(i, i+1, i+2, \dots\)</span> 的路径）。</p>
+<p><strong>之后：</strong> <code>f[i]</code> = <span class="arithmatex"><span class="MathJax_Preview">\min \{ R(k) \mid L(k) \ge i \}</span><script type="math/tex">\min \{ R(k) \mid L(k) \ge i \}</script></span> （考虑所有 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">i, i+1, i+2, \dots</span><script type="math/tex">i, i+1, i+2, \dots</script></span> 的路径）。</p>
 </li>
 <li>
-<p><strong>原因：</strong> 当我们检查一个给定的 <span class="arithmatex">\(l=i\)</span> 时，我们<strong>被允许使用任何一条</strong> <span class="arithmatex">\(L(k)\)</span> 需求被满足的路径 <span class="arithmatex">\(k\)</span>（即 <span class="arithmatex">\(L(k) \ge l=i\)</span>）。这个循环的目的就是从所有这些合法的路径中，找出那个要求最低的 <span class="arithmatex">\(R(k)\)</span>（即最小的 <span class="arithmatex">\(R(k)\)</span>）。</p>
+<p><strong>原因：</strong> 当我们检查一个给定的 <span class="arithmatex"><span class="MathJax_Preview">l=i</span><script type="math/tex">l=i</script></span> 时，我们<strong>被允许使用任何一条</strong> <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 需求被满足的路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">L(k) \ge l=i</span><script type="math/tex">L(k) \ge l=i</script></span>）。这个循环的目的就是从所有这些合法的路径中，找出那个要求最低的 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span>（即最小的 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span>）。</p>
 </li>
 </ul>
 <h3 id="3-1-indexed-1-0-indexed">3. 为什么 1-Indexed 要 <code>+1</code>，而 0-Indexed 不需要</h3>
-<p>这是一个非常经典的、关于计算闭区间 <span class="arithmatex">\([A, B]\)</span> 内整数个数的“差一”细节。计算公式永远是：<strong><span class="arithmatex">\(\text{个数} = B - A + 1\)</span></strong>。</p>
+<p>这是一个非常经典的、关于计算闭区间 <span class="arithmatex"><span class="MathJax_Preview">[A, B]</span><script type="math/tex">[A, B]</script></span> 内整数个数的“差一”细节。计算公式永远是：<strong><span class="arithmatex"><span class="MathJax_Preview">\text{个数} = B - A + 1</span><script type="math/tex">\text{个数} = B - A + 1</script></span></strong>。</p>
 <ul>
 <li>
 <p><strong>你的 1-Indexed（1 为起始）代码：</strong></p>
 <ul>
 <li>
-<p>数值范围：<span class="arithmatex">\([1, 2n]\)</span></p>
+<p>数值范围：<span class="arithmatex"><span class="MathJax_Preview">[1, 2n]</span><script type="math/tex">[1, 2n]</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(l\)</span> 是 <span class="arithmatex">\(i\)</span>，<span class="arithmatex">\(r\)</span> 必须在 <span class="arithmatex">\([f[i], 2n]\)</span> 范围内</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 必须在 <span class="arithmatex"><span class="MathJax_Preview">[f[i], 2n]</span><script type="math/tex">[f[i], 2n]</script></span> 范围内</p>
 </li>
 <li>
-<p><span class="arithmatex">\(A = f[i]\)</span>, <span class="arithmatex">\(B = 2n\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">A = f[i]</span><script type="math/tex">A = f[i]</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B = 2n</span><script type="math/tex">B = 2n</script></span></p>
 </li>
 <li>
-<p>个数 = <span class="arithmatex">\((2n) - f[i] + 1\)</span></p>
+<p>个数 = <span class="arithmatex"><span class="MathJax_Preview">(2n) - f[i] + 1</span><script type="math/tex">(2n) - f[i] + 1</script></span></p>
 </li>
 </ul>
 </li>
@@ -5361,24 +5361,24 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong><code>jiangly</code> 的 0-Indexed（0 为起始）代码：</strong></p>
 <ul>
 <li>
-<p>数值范围：<span class="arithmatex">\([0, 2n-1]\)</span></p>
+<p>数值范围：<span class="arithmatex"><span class="MathJax_Preview">[0, 2n-1]</span><script type="math/tex">[0, 2n-1]</script></span></p>
 </li>
 <li>
-<p><span class="arithmatex">\(l\)</span> 是 <span class="arithmatex">\(i\)</span>，<span class="arithmatex">\(r\)</span> 必须在 <span class="arithmatex">\([f[i], 2n-1]\)</span> 范围内</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 必须在 <span class="arithmatex"><span class="MathJax_Preview">[f[i], 2n-1]</span><script type="math/tex">[f[i], 2n-1]</script></span> 范围内</p>
 </li>
 <li>
-<p><span class="arithmatex">\(A = f[i]\)</span>, <span class="arithmatex">\(B = 2n-1\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">A = f[i]</span><script type="math/tex">A = f[i]</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B = 2n-1</span><script type="math/tex">B = 2n-1</script></span></p>
 </li>
 <li>
-<p>个数 = <span class="arithmatex">\((2n-1) - f[i] + 1\)</span></p>
+<p>个数 = <span class="arithmatex"><span class="MathJax_Preview">(2n-1) - f[i] + 1</span><script type="math/tex">(2n-1) - f[i] + 1</script></span></p>
 </li>
 <li>
-<p>化简后：<span class="arithmatex">\(2n - f[i]\)</span></p>
+<p>化简后：<span class="arithmatex"><span class="MathJax_Preview">2n - f[i]</span><script type="math/tex">2n - f[i]</script></span></p>
 </li>
 </ul>
 </li>
 </ul>
-<p>那个 <code>+1</code> 并没有消失；它只是在 0-Indexed 的情况下，被上界 <span class="arithmatex">\(2n-1\)</span> 中的那个 <code>-1</code> 给数学上抵消了。两种方法都正确地应用了同一个计数原理。</p>
+<p>那个 <code>+1</code> 并没有消失；它只是在 0-Indexed 的情况下，被上界 <span class="arithmatex"><span class="MathJax_Preview">2n-1</span><script type="math/tex">2n-1</script></span> 中的那个 <code>-1</code> 给数学上抵消了。两种方法都正确地应用了同一个计数原理。</p>
 <h1 id="_9">这道题目在考什么</h1>
 <p>这是一个非常好的问题。你开始从“做对一道题”转向“从一道题学到东西”，这是冲上 1600 分最关键的思维转变。</p>
 <p>这道 <code>Monopati</code> 题是<strong>一道绝佳的 1600 分“守门员”题</strong>。它不（直接）考察你背诵的某个复杂算法（比如 KMP 或 Dijkstra），而是<strong>纯粹考验你的思维能力</strong>。</p>
@@ -5393,10 +5393,10 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p>这是最重要的一步。一个“从 (1,1) 到 (2,n) 的右下路径”听起来很复杂，可能有成千上万条。</p>
 </li>
 <li>
-<p>你的<strong>第一个突破</strong>是必须意识到，任何这样的路径都必然是在某一列 <span class="arithmatex">\(k\)</span> 从第一行“掉到”第二行。</p>
+<p>你的<strong>第一个突破</strong>是必须意识到，任何这样的路径都必然是在某一列 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 从第一行“掉到”第二行。</p>
 </li>
 <li>
-<p>因此，这个模糊的“路径”问题被你<strong>转化（model）</strong>成了 <span class="arithmatex">\(n\)</span> 个清晰、具体、独立的“路径 <span class="arithmatex">\(k\)</span>”问题。<strong>这是从 1200 到 1600 的最大思维鸿沟之一：将模糊的描述转化为清晰的数学/逻辑模型。</strong></p>
+<p>因此，这个模糊的“路径”问题被你<strong>转化（model）</strong>成了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个清晰、具体、独立的“路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>”问题。<strong>这是从 1200 到 1600 的最大思维鸿沟之一：将模糊的描述转化为清晰的数学/逻辑模型。</strong></p>
 </li>
 </ul>
 </li>
@@ -5404,13 +5404,13 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong>约束分析能力 (Constraint Analysis)：</strong></p>
 <ul>
 <li>
-<p>当你有了 <span class="arithmatex">\(n\)</span> 个“路径 <span class="arithmatex">\(k\)</span>”模型后，你对每一个模型进行了分析。</p>
+<p>当你有了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个“路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>”模型后，你对每一个模型进行了分析。</p>
 </li>
 <li>
-<p>“路径 <span class="arithmatex">\(k\)</span> 上的所有格子都为 1”这个条件，被你<strong>转化</strong>成了一个数学约束：<span class="arithmatex">\(l \le L(k)\)</span> 且 <span class="arithmatex">\(r \ge R(k)\)</span>。</p>
+<p>“路径 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 上的所有格子都为 1”这个条件，被你<strong>转化</strong>成了一个数学约束：<span class="arithmatex"><span class="MathJax_Preview">l \le L(k)</span><script type="math/tex">l \le L(k)</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">r \ge R(k)</span><script type="math/tex">r \ge R(k)</script></span>。</p>
 </li>
 <li>
-<p>这又是一次转化，你把一个网格问题，变成了 <span class="arithmatex">\(n\)</span> 个二维平面上的“矩形区域”问题。</p>
+<p>这又是一次转化，你把一个网格问题，变成了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个二维平面上的“矩形区域”问题。</p>
 </li>
 </ul>
 </li>
@@ -5421,16 +5421,16 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p>这是最精妙的一步，也是区分 1400 和 1600+ 的地方。</p>
 </li>
 <li>
-<p><strong>（慢速思路）</strong> 遍历 <span class="arithmatex">\(O(n^2)\)</span> 个 <span class="arithmatex">\((l,r)\)</span> 对，看每个 <span class="arithmatex">\((l,r)\)</span> 是否满足<strong>至少一个</strong> <span class="arithmatex">\(k\)</span> 的约束。 <span class="arithmatex">\(\rightarrow\)</span> 太慢。</p>
+<p><strong>（慢速思路）</strong> 遍历 <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> 个 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 对，看每个 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 是否满足<strong>至少一个</strong> <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的约束。 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 太慢。</p>
 </li>
 <li>
-<p><strong>（你的 AC 思路）</strong> 题目要求的是 <span class="arithmatex">\(n\)</span> 个“矩形区域”的<strong>并集</strong>面积。直接求并集很复杂。</p>
+<p><strong>（你的 AC 思路）</strong> 题目要求的是 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个“矩形区域”的<strong>并集</strong>面积。直接求并集很复杂。</p>
 </li>
 <li>
-<p>你采用了我们讨论的<strong>“逐行扫描”</strong>思想：<strong>不直接数 <span class="arithmatex">\((l,r)\)</span> 对，而是去 <span class="arithmatex">\(\sum_{l=1}^{2n} \text{count}(r)\)</span></strong>。</p>
+<p>你采用了我们讨论的<strong>“逐行扫描”</strong>思想：<strong>不直接数 <span class="arithmatex"><span class="MathJax_Preview">(l,r)</span><script type="math/tex">(l,r)</script></span> 对，而是去 <span class="arithmatex"><span class="MathJax_Preview">\sum_{l=1}^{2n} \text{count}(r)</span><script type="math/tex">\sum_{l=1}^{2n} \text{count}(r)</script></span></strong>。</p>
 </li>
 <li>
-<p>为了高效计算 <span class="arithmatex">\(\text{count}(r)\)</span>，你又用了 <span class="arithmatex">\(O(n)\)</span> 预处理 + <span class="arithmatex">\(O(n)\)</span> 后缀最小值，最终用 <span class="arithmatex">\(O(n)\)</span> 时间解决了问题。这背后的“后缀最小值”和“桶排序”的思想，都是非常高级的技巧。</p>
+<p>为了高效计算 <span class="arithmatex"><span class="MathJax_Preview">\text{count}(r)</span><script type="math/tex">\text{count}(r)</script></span>，你又用了 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 预处理 + <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 后缀最小值，最终用 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 时间解决了问题。这背后的“后缀最小值”和“桶排序”的思想，都是非常高级的技巧。</p>
 </li>
 </ul>
 </li>
@@ -5453,10 +5453,10 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong>二分答案 (Binary Search on Answer)：</strong> 当题目要求“最大化最小值”或“最小化最大值”时，几乎总是二分答案。</p>
 </li>
 <li>
-<p><strong>双指针 (Two Pointers / Sliding Window)：</strong> 在 <span class="arithmatex">\(O(n)\)</span> 时间内处理“满足某个条件的连续子数组”问题。</p>
+<p><strong>双指针 (Two Pointers / Sliding Window)：</strong> 在 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 时间内处理“满足某个条件的连续子数组”问题。</p>
 </li>
 <li>
-<p><strong>前缀和/差分 (Prefix Sums / Difference Arrays)：</strong> <span class="arithmatex">\(O(1)\)</span> 查询区间和， <span class="arithmatex">\(O(1)\)</span> 区间修改（配合差分）。这是 <code>Monopati</code> 中 <span class="arithmatex">\(L(k)\)</span> 和 <span class="arithmatex">\(R(k)\)</span> 能快速计算的基础。</p>
+<p><strong>前缀和/差分 (Prefix Sums / Difference Arrays)：</strong> <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 查询区间和， <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 区间修改（配合差分）。这是 <code>Monopati</code> 中 <span class="arithmatex"><span class="MathJax_Preview">L(k)</span><script type="math/tex">L(k)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">R(k)</span><script type="math/tex">R(k)</script></span> 能快速计算的基础。</p>
 </li>
 </ul>
 </li>
@@ -5498,7 +5498,7 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p><strong>并查集 (DSU):</strong> 维护连通性问题（“A 和 B 是不是亲戚？”）。</p>
 </li>
 <li>
-<p><strong>树状数组 (BIT) / 线段树 (Segment Tree):</strong> 它们是“前缀和”的超级升级版。能做到 <span class="arithmatex">\(O(\log n)\)</span> 单点修改 和 <span class="arithmatex">\(O(\log n)\)</span> 区间查询。<code>Monopati</code> 里的后缀最小值，其实也可以用线段树来 <span class="arithmatex">\(O(n \log n)\)</span> 解决（虽然 <span class="arithmatex">\(O(n)\)</span> 更好）。</p>
+<p><strong>树状数组 (BIT) / 线段树 (Segment Tree):</strong> 它们是“前缀和”的超级升级版。能做到 <span class="arithmatex"><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span> 单点修改 和 <span class="arithmatex"><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span> 区间查询。<code>Monopati</code> 里的后缀最小值，其实也可以用线段树来 <span class="arithmatex"><span class="MathJax_Preview">O(n \log n)</span><script type="math/tex">O(n \log n)</script></span> 解决（虽然 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 更好）。</p>
 </li>
 </ul>
 </li>
@@ -5506,10 +5506,10 @@ for (int i = 0; i &lt; 2 * n; i++) {
 <p>你今天对 C 题的深入分析（特别是你问的 3 个细节问题）非常棒，这<strong>正是</strong> 1600 分选手所具备的思考能力。你已经走在正确的路上了。</p>
 <p>我们是继续分析下一道题，还是你想选一个刚才提到的“思维工具”（比如“二分答案”或“双指针”），我们找一道题来专门练习一下？</p>
 <h1 id="cf">CF 题解思路</h1>
-<p>我们称一对整数 <span class="arithmatex">\((l, r)\)</span> 是好的，当且仅当 <span class="arithmatex">\(1 \le l \le r \le 2n\)</span> 并且在 <span class="arithmatex">\(f(l, r)\)</span> 中存在一条从 <span class="arithmatex">\((1, 1)\)</span> 到 <span class="arithmatex">\((2, n)\)</span> 的、由值为 <span class="arithmatex">\(1\)</span> 的单元格组成的右下路径。对于某个固定的左端点 <span class="arithmatex">\(l\)</span>（从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(2n\)</span>），令 <span class="arithmatex">\(r_l\)</span> 表示使得数对 <span class="arithmatex">\((l, r_l)\)</span> 是好的最小整数。如果不存在这样的整数，为方便起见，我们记 <span class="arithmatex">\(r_l = n+1\)</span>。</p>
-<p>第一个观察是：如果 <span class="arithmatex">\((l, r)\)</span> 是好的，并且 <span class="arithmatex">\(r &lt; 2n\)</span>，那么 <span class="arithmatex">\((l, r+1)\)</span> 也是好的。原因很明显：在 <span class="arithmatex">\(f(l, r)\)</span> 中值为 <span class="arithmatex">\(1\)</span> 的每个单元格，在 <span class="arithmatex">\(f(l, r+1)\)</span> 中值也为 <span class="arithmatex">\(1\)</span>。因此，如果我们找到了 <span class="arithmatex">\(r_1, r_2, \ldots, r_{2n}\)</span>，那么答案将是 <span class="arithmatex">\((2n - r_1 + 1) + (2n - r_2 + 1) + \ldots + (2n - r_{2n} + 1)\)</span>。（换句话说，我们是在计算所有数对 <span class="arithmatex">\((l, r_l), (l, r_l+1), \ldots, (l, 2n)\)</span>，其中 <span class="arithmatex">\(1 \le l \le 2n\)</span>）。</p>
-<p>第二个观察随之而来：<span class="arithmatex">\(r_1 \le r_2 \le \ldots \le r_{2n}\)</span>。很明显，网格 <span class="arithmatex">\(f(l, r_l)\)</span> 和 <span class="arithmatex">\(f(l+1, r_l)\)</span> 之间的唯一区别是，<span class="arithmatex">\(f(l+1, r_l)\)</span> 中值为 <span class="arithmatex">\(0\)</span> 的单元格数量相同或更多，并且如果某个单元格在 <span class="arithmatex">\(f(l+1, r_l)\)</span> 中值为 <span class="arithmatex">\(1\)</span>，那么它在 <span class="arithmatex">\(f(l, r_l)\)</span> 中值也为 <span class="arithmatex">\(1\)</span>。如果我们在 <span class="arithmatex">\(f(l+1, r_l)\)</span> 中不再有右下路径，那么对于所有 <span class="arithmatex">\(r \le r_l\)</span>，在 <span class="arithmatex">\(f(l+1, r)\)</span> 中都没有右下路径。由此可得 <span class="arithmatex">\(r_{l+1} \ge r_l\)</span>。</p>
-<p>这个观察允许我们使用双指针。对于某个固定的 <span class="arithmatex">\(l\)</span> 和 <span class="arithmatex">\(r\)</span>，如果 <span class="arithmatex">\((l, r)\)</span> 不是好的，我们将持续增加 <span class="arithmatex">\(r\)</span> 直到它变成好的，换句话说就是找到 <span class="arithmatex">\(r_l\)</span>。我们激活所有值为 <span class="arithmatex">\(r+1\)</span> 的单元格。为了检查数对 <span class="arithmatex">\((l, r+1)\)</span> 是否是好的，我们找到第一行中第一个未激活的单元格和最后一行中最后一个未激活的单元格（如果一个单元格不在我们当前考虑的范围内，则它是未激活的）。这可以通过维护两组未激活的单元格来完成，每组对应一行。假设它们分别位于列 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>。那么，在 <span class="arithmatex">\(f(l, r+1)\)</span> 中存在一条右下路径当且仅当 <span class="arithmatex">\(a - 1 &gt; b\)</span>（我们可以到达单元格 <span class="arithmatex">\((1, a-1)\)</span>，然后转到单元格 <span class="arithmatex">\((2, a-1)\)</span>，再继续到 <span class="arithmatex">\((2, n)\)</span>）。一旦我们找到 <span class="arithmatex">\(r_l\)</span>，我们将增加 <span class="arithmatex">\(l\)</span>，停用所有值为 <span class="arithmatex">\(l\)</span> 的单元格，并持续增加 <span class="arithmatex">\(r_l\)</span> 直到我们找到 <span class="arithmatex">\(r_{l+1}\)</span>，依此类推。</p>
+<p>我们称一对整数 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 是好的，当且仅当 <span class="arithmatex"><span class="MathJax_Preview">1 \le l \le r \le 2n</span><script type="math/tex">1 \le l \le r \le 2n</script></span> 并且在 <span class="arithmatex"><span class="MathJax_Preview">f(l, r)</span><script type="math/tex">f(l, r)</script></span> 中存在一条从 <span class="arithmatex"><span class="MathJax_Preview">(1, 1)</span><script type="math/tex">(1, 1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">(2, n)</span><script type="math/tex">(2, n)</script></span> 的、由值为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的单元格组成的右下路径。对于某个固定的左端点 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>（从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">2n</span><script type="math/tex">2n</script></span>），令 <span class="arithmatex"><span class="MathJax_Preview">r_l</span><script type="math/tex">r_l</script></span> 表示使得数对 <span class="arithmatex"><span class="MathJax_Preview">(l, r_l)</span><script type="math/tex">(l, r_l)</script></span> 是好的最小整数。如果不存在这样的整数，为方便起见，我们记 <span class="arithmatex"><span class="MathJax_Preview">r_l = n+1</span><script type="math/tex">r_l = n+1</script></span>。</p>
+<p>第一个观察是：如果 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 是好的，并且 <span class="arithmatex"><span class="MathJax_Preview">r &lt; 2n</span><script type="math/tex">r < 2n</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">(l, r+1)</span><script type="math/tex">(l, r+1)</script></span> 也是好的。原因很明显：在 <span class="arithmatex"><span class="MathJax_Preview">f(l, r)</span><script type="math/tex">f(l, r)</script></span> 中值为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的每个单元格，在 <span class="arithmatex"><span class="MathJax_Preview">f(l, r+1)</span><script type="math/tex">f(l, r+1)</script></span> 中值也为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。因此，如果我们找到了 <span class="arithmatex"><span class="MathJax_Preview">r_1, r_2, \ldots, r_{2n}</span><script type="math/tex">r_1, r_2, \ldots, r_{2n}</script></span>，那么答案将是 <span class="arithmatex"><span class="MathJax_Preview">(2n - r_1 + 1) + (2n - r_2 + 1) + \ldots + (2n - r_{2n} + 1)</span><script type="math/tex">(2n - r_1 + 1) + (2n - r_2 + 1) + \ldots + (2n - r_{2n} + 1)</script></span>。（换句话说，我们是在计算所有数对 <span class="arithmatex"><span class="MathJax_Preview">(l, r_l), (l, r_l+1), \ldots, (l, 2n)</span><script type="math/tex">(l, r_l), (l, r_l+1), \ldots, (l, 2n)</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">1 \le l \le 2n</span><script type="math/tex">1 \le l \le 2n</script></span>）。</p>
+<p>第二个观察随之而来：<span class="arithmatex"><span class="MathJax_Preview">r_1 \le r_2 \le \ldots \le r_{2n}</span><script type="math/tex">r_1 \le r_2 \le \ldots \le r_{2n}</script></span>。很明显，网格 <span class="arithmatex"><span class="MathJax_Preview">f(l, r_l)</span><script type="math/tex">f(l, r_l)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">f(l+1, r_l)</span><script type="math/tex">f(l+1, r_l)</script></span> 之间的唯一区别是，<span class="arithmatex"><span class="MathJax_Preview">f(l+1, r_l)</span><script type="math/tex">f(l+1, r_l)</script></span> 中值为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的单元格数量相同或更多，并且如果某个单元格在 <span class="arithmatex"><span class="MathJax_Preview">f(l+1, r_l)</span><script type="math/tex">f(l+1, r_l)</script></span> 中值为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，那么它在 <span class="arithmatex"><span class="MathJax_Preview">f(l, r_l)</span><script type="math/tex">f(l, r_l)</script></span> 中值也为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。如果我们在 <span class="arithmatex"><span class="MathJax_Preview">f(l+1, r_l)</span><script type="math/tex">f(l+1, r_l)</script></span> 中不再有右下路径，那么对于所有 <span class="arithmatex"><span class="MathJax_Preview">r \le r_l</span><script type="math/tex">r \le r_l</script></span>，在 <span class="arithmatex"><span class="MathJax_Preview">f(l+1, r)</span><script type="math/tex">f(l+1, r)</script></span> 中都没有右下路径。由此可得 <span class="arithmatex"><span class="MathJax_Preview">r_{l+1} \ge r_l</span><script type="math/tex">r_{l+1} \ge r_l</script></span>。</p>
+<p>这个观察允许我们使用双指针。对于某个固定的 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>，如果 <span class="arithmatex"><span class="MathJax_Preview">(l, r)</span><script type="math/tex">(l, r)</script></span> 不是好的，我们将持续增加 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 直到它变成好的，换句话说就是找到 <span class="arithmatex"><span class="MathJax_Preview">r_l</span><script type="math/tex">r_l</script></span>。我们激活所有值为 <span class="arithmatex"><span class="MathJax_Preview">r+1</span><script type="math/tex">r+1</script></span> 的单元格。为了检查数对 <span class="arithmatex"><span class="MathJax_Preview">(l, r+1)</span><script type="math/tex">(l, r+1)</script></span> 是否是好的，我们找到第一行中第一个未激活的单元格和最后一行中最后一个未激活的单元格（如果一个单元格不在我们当前考虑的范围内，则它是未激活的）。这可以通过维护两组未激活的单元格来完成，每组对应一行。假设它们分别位于列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>。那么，在 <span class="arithmatex"><span class="MathJax_Preview">f(l, r+1)</span><script type="math/tex">f(l, r+1)</script></span> 中存在一条右下路径当且仅当 <span class="arithmatex"><span class="MathJax_Preview">a - 1 &gt; b</span><script type="math/tex">a - 1 > b</script></span>（我们可以到达单元格 <span class="arithmatex"><span class="MathJax_Preview">(1, a-1)</span><script type="math/tex">(1, a-1)</script></span>，然后转到单元格 <span class="arithmatex"><span class="MathJax_Preview">(2, a-1)</span><script type="math/tex">(2, a-1)</script></span>，再继续到 <span class="arithmatex"><span class="MathJax_Preview">(2, n)</span><script type="math/tex">(2, n)</script></span>）。一旦我们找到 <span class="arithmatex"><span class="MathJax_Preview">r_l</span><script type="math/tex">r_l</script></span>，我们将增加 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>，停用所有值为 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 的单元格，并持续增加 <span class="arithmatex"><span class="MathJax_Preview">r_l</span><script type="math/tex">r_l</script></span> 直到我们找到 <span class="arithmatex"><span class="MathJax_Preview">r_{l+1}</span><script type="math/tex">r_{l+1}</script></span>，依此类推。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// nifeshe</span>
 

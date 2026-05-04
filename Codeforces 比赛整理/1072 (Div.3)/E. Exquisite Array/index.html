@@ -2418,10 +2418,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-dsu-on" class="md-nav__link">
+  <a href="#2-dsu-onon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 算法流程 (DSU \(O(N)\) 解法)
+        2. 算法流程 (DSU O(N)O(N) 解法)
       
     </span>
   </a>
@@ -4494,10 +4494,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-dsu-on" class="md-nav__link">
+  <a href="#2-dsu-onon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 算法流程 (DSU \(O(N)\) 解法)
+        2. 算法流程 (DSU O(N)O(N) 解法)
       
     </span>
   </a>
@@ -4544,17 +4544,17 @@
 <p>时间限制：2 秒<br />
 内存限制：256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
-<p>我们称一个数字数组是 <span class="arithmatex">\(k\)</span>-exquisite 的，如果它至少包含两个元素，并且任意两个相邻元素的差的绝对值至少为 <span class="arithmatex">\(k\)</span>。</p>
-<p>给定一个长度为 <span class="arithmatex">\(n\)</span> 的排列 <span class="arithmatex">\(p\)</span>。对于每个 <span class="arithmatex">\(k\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n-1\)</span>，请找出 <span class="arithmatex">\(p\)</span> 中 <span class="arithmatex">\(k\)</span>-exquisite 子数组的数量。</p>
-<p>排列：长度为 <span class="arithmatex">\(n\)</span> 的排列是一个包含从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 每个整数恰好一次的数组，顺序任意。</p>
+<p>我们称一个数字数组是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-exquisite 的，如果它至少包含两个元素，并且任意两个相邻元素的差的绝对值至少为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
+<p>给定一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。对于每个 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>，请找出 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 中 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-exquisite 子数组的数量。</p>
+<p>排列：长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列是一个包含从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 每个整数恰好一次的数组，顺序任意。</p>
 <p>子数组：数组的子数组是该数组中一个或多个连续元素组成的序列。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 25000\)</span>) —— 测试用例的数量。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> —— 排列的长度 (<span class="arithmatex">\(2 \le n \le 10^5\)</span>)。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(p_i\)</span> —— 排列的元素 (<span class="arithmatex">\(1 \le p_i \le n\)</span>)。保证 <span class="arithmatex">\(p_i\)</span> 互不相同。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 25000</span><script type="math/tex">1 \le t \le 25000</script></span>) —— 测试用例的数量。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> —— 排列的长度 (<span class="arithmatex"><span class="MathJax_Preview">2 \le n \le 10^5</span><script type="math/tex">2 \le n \le 10^5</script></span>)。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> —— 排列的元素 (<span class="arithmatex"><span class="MathJax_Preview">1 \le p_i \le n</span><script type="math/tex">1 \le p_i \le n</script></span>)。保证 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 互不相同。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出 <span class="arithmatex">\(n-1\)</span> 个整数，分别表示 <span class="arithmatex">\(k=1, 2, \dots, n-1\)</span> 时，<span class="arithmatex">\(k\)</span>-exquisite 子数组的数量。</p>
+<p>对于每个测试用例，输出 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 个整数，分别表示 <span class="arithmatex"><span class="MathJax_Preview">k=1, 2, \dots, n-1</span><script type="math/tex">k=1, 2, \dots, n-1</script></span> 时，<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-exquisite 子数组的数量。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 5
@@ -4570,48 +4570,48 @@
 6 2 0
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p><strong>第一个测试用例：</strong> <span class="arithmatex">\(n=5, p = [5, 1, 4, 2, 3]\)</span>
-- <span class="arithmatex">\(k=1\)</span>：所有长度至少为2的子数组都是 <span class="arithmatex">\(1\)</span>-exquisite，因为相邻元素差的绝对值至少为1（排列中任意两个不同元素差至少为1）。长度为2的子数组有4个，长度为3的有3个，长度为4的有2个，长度为5的有1个，总共 <span class="arithmatex">\(4+3+2+1=10\)</span> 个。
-- <span class="arithmatex">\(k=2\)</span>：需要相邻元素差的绝对值至少为2。满足条件的子数组有 <span class="arithmatex">\([5,1], [1,4], [4,2], [2,3], [5,1,4], [4,2,3]\)</span>，共6个。
-- <span class="arithmatex">\(k=3\)</span>：需要相邻元素差的绝对值至少为3。满足条件的子数组有 <span class="arithmatex">\([5,1], [5,1,4], [1,4]\)</span>，共3个。
-- <span class="arithmatex">\(k=4\)</span>：需要相邻元素差的绝对值至少为4。满足条件的子数组只有 <span class="arithmatex">\([5,1]\)</span>，共1个。</p>
+<p><strong>第一个测试用例：</strong> <span class="arithmatex"><span class="MathJax_Preview">n=5, p = [5, 1, 4, 2, 3]</span><script type="math/tex">n=5, p = [5, 1, 4, 2, 3]</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span>：所有长度至少为2的子数组都是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>-exquisite，因为相邻元素差的绝对值至少为1（排列中任意两个不同元素差至少为1）。长度为2的子数组有4个，长度为3的有3个，长度为4的有2个，长度为5的有1个，总共 <span class="arithmatex"><span class="MathJax_Preview">4+3+2+1=10</span><script type="math/tex">4+3+2+1=10</script></span> 个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>：需要相邻元素差的绝对值至少为2。满足条件的子数组有 <span class="arithmatex"><span class="MathJax_Preview">[5,1], [1,4], [4,2], [2,3], [5,1,4], [4,2,3]</span><script type="math/tex">[5,1], [1,4], [4,2], [2,3], [5,1,4], [4,2,3]</script></span>，共6个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=3</span><script type="math/tex">k=3</script></span>：需要相邻元素差的绝对值至少为3。满足条件的子数组有 <span class="arithmatex"><span class="MathJax_Preview">[5,1], [5,1,4], [1,4]</span><script type="math/tex">[5,1], [5,1,4], [1,4]</script></span>，共3个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=4</span><script type="math/tex">k=4</script></span>：需要相邻元素差的绝对值至少为4。满足条件的子数组只有 <span class="arithmatex"><span class="MathJax_Preview">[5,1]</span><script type="math/tex">[5,1]</script></span>，共1个。</p>
 <p>输出为 <code>10 6 3 1</code>。</p>
-<p><strong>第二个测试用例：</strong> <span class="arithmatex">\(n=3, p = [3, 2, 1]\)</span>
-- <span class="arithmatex">\(k=1\)</span>：所有长度至少为2的子数组：<span class="arithmatex">\([3,2], [2,1], [3,2,1]\)</span>，共3个。
-- <span class="arithmatex">\(k=2\)</span>：相邻元素差的绝对值为1（不符合至少为2），因此没有满足条件的子数组，输出 <code>0</code>。</p>
+<p><strong>第二个测试用例：</strong> <span class="arithmatex"><span class="MathJax_Preview">n=3, p = [3, 2, 1]</span><script type="math/tex">n=3, p = [3, 2, 1]</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span>：所有长度至少为2的子数组：<span class="arithmatex"><span class="MathJax_Preview">[3,2], [2,1], [3,2,1]</span><script type="math/tex">[3,2], [2,1], [3,2,1]</script></span>，共3个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>：相邻元素差的绝对值为1（不符合至少为2），因此没有满足条件的子数组，输出 <code>0</code>。</p>
 <p>输出为 <code>3 0</code>。</p>
-<p><strong>第三个测试用例：</strong> <span class="arithmatex">\(n=4, p = [3, 1, 2, 4]\)</span>
-- <span class="arithmatex">\(k=1\)</span>：所有长度至少为2的子数组共有 <span class="arithmatex">\(3+2+1=6\)</span> 个。
-- <span class="arithmatex">\(k=2\)</span>：满足条件的子数组有 <span class="arithmatex">\([3,1], [1,2], [2,4], [3,1,2]?\)</span>（检查 <span class="arithmatex">\(|3-1|=2, |1-2|=1\)</span> 不满足，所以不行），实际上只有 <span class="arithmatex">\([3,1]\)</span> 和 <span class="arithmatex">\([2,4]\)</span>？再检查：<span class="arithmatex">\([1,2]\)</span> 差为1，不满足。所以是 <span class="arithmatex">\([3,1]\)</span> 和 <span class="arithmatex">\([2,4]\)</span>，以及 <span class="arithmatex">\([3,1,2,4]?\)</span>（中间 <span class="arithmatex">\(|1-2|=1\)</span> 不行）。再仔细找：可能还有 <span class="arithmatex">\([1,2,4]? |1-2|=1\)</span> 不行。所以只有 <span class="arithmatex">\([3,1]\)</span> 和 <span class="arithmatex">\([2,4]\)</span>，共2个。
-- <span class="arithmatex">\(k=3\)</span>：需要相邻元素差至少为3。子数组 <span class="arithmatex">\([3,1]\)</span> 差为2，不满足；<span class="arithmatex">\([2,4]\)</span> 差为2，不满足；<span class="arithmatex">\([3,4]\)</span> 不存在（不连续）。因此没有满足条件的子数组，输出 <code>0</code>。</p>
+<p><strong>第三个测试用例：</strong> <span class="arithmatex"><span class="MathJax_Preview">n=4, p = [3, 1, 2, 4]</span><script type="math/tex">n=4, p = [3, 1, 2, 4]</script></span>
+- <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span>：所有长度至少为2的子数组共有 <span class="arithmatex"><span class="MathJax_Preview">3+2+1=6</span><script type="math/tex">3+2+1=6</script></span> 个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>：满足条件的子数组有 <span class="arithmatex"><span class="MathJax_Preview">[3,1], [1,2], [2,4], [3,1,2]?</span><script type="math/tex">[3,1], [1,2], [2,4], [3,1,2]?</script></span>（检查 <span class="arithmatex"><span class="MathJax_Preview">|3-1|=2, |1-2|=1</span><script type="math/tex">|3-1|=2, |1-2|=1</script></span> 不满足，所以不行），实际上只有 <span class="arithmatex"><span class="MathJax_Preview">[3,1]</span><script type="math/tex">[3,1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[2,4]</span><script type="math/tex">[2,4]</script></span>？再检查：<span class="arithmatex"><span class="MathJax_Preview">[1,2]</span><script type="math/tex">[1,2]</script></span> 差为1，不满足。所以是 <span class="arithmatex"><span class="MathJax_Preview">[3,1]</span><script type="math/tex">[3,1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[2,4]</span><script type="math/tex">[2,4]</script></span>，以及 <span class="arithmatex"><span class="MathJax_Preview">[3,1,2,4]?</span><script type="math/tex">[3,1,2,4]?</script></span>（中间 <span class="arithmatex"><span class="MathJax_Preview">|1-2|=1</span><script type="math/tex">|1-2|=1</script></span> 不行）。再仔细找：可能还有 <span class="arithmatex"><span class="MathJax_Preview">[1,2,4]? |1-2|=1</span><script type="math/tex">[1,2,4]? |1-2|=1</script></span> 不行。所以只有 <span class="arithmatex"><span class="MathJax_Preview">[3,1]</span><script type="math/tex">[3,1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[2,4]</span><script type="math/tex">[2,4]</script></span>，共2个。
+- <span class="arithmatex"><span class="MathJax_Preview">k=3</span><script type="math/tex">k=3</script></span>：需要相邻元素差至少为3。子数组 <span class="arithmatex"><span class="MathJax_Preview">[3,1]</span><script type="math/tex">[3,1]</script></span> 差为2，不满足；<span class="arithmatex"><span class="MathJax_Preview">[2,4]</span><script type="math/tex">[2,4]</script></span> 差为2，不满足；<span class="arithmatex"><span class="MathJax_Preview">[3,4]</span><script type="math/tex">[3,4]</script></span> 不存在（不连续）。因此没有满足条件的子数组，输出 <code>0</code>。</p>
 <p>输出为 <code>6 2 0</code>。</p>
 <h1 id="exquisite-array">Exquisite Array (时光倒流 / 连通性维护)</h1>
 <h1 id="stl-codeforces">算法/并查集 #算法/时光倒流 #算法/STL #Codeforces</h1>
 <h2 id="1">1. 核心思想</h2>
 <blockquote>
 <p>[!QUOTE] 核心策略：正难则反 (Time Reversal)
-当题目要求随着参数变化（<span class="arithmatex">\(k \uparrow\)</span>）不断<strong>破坏/切断</strong>结构时，通常转化为参数反向变化（<span class="arithmatex">\(k \downarrow\)</span>），变成<strong>建设/合并</strong>结构。</p>
+当题目要求随着参数变化（<span class="arithmatex"><span class="MathJax_Preview">k \uparrow</span><script type="math/tex">k \uparrow</script></span>）不断<strong>破坏/切断</strong>结构时，通常转化为参数反向变化（<span class="arithmatex"><span class="MathJax_Preview">k \downarrow</span><script type="math/tex">k \downarrow</script></span>），变成<strong>建设/合并</strong>结构。</p>
 </blockquote>
 <ul>
-<li><strong>原问题</strong>：<span class="arithmatex">\(k\)</span> 增大 <span class="arithmatex">\(\rightarrow\)</span> 满足 <span class="arithmatex">\(|p_i - p_{i+1}| \ge k\)</span> 的边变少 <span class="arithmatex">\(\rightarrow\)</span> 区间分裂 <span class="arithmatex">\(\rightarrow\)</span> 难维护。</li>
-<li><strong>转化后</strong>：<span class="arithmatex">\(k\)</span> 减小 <span class="arithmatex">\(\rightarrow\)</span> 满足条件的边变多 <span class="arithmatex">\(\rightarrow\)</span> 区间合并 <span class="arithmatex">\(\rightarrow\)</span> <strong>并查集 (DSU)</strong>。</li>
+<li><strong>原问题</strong>：<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 增大 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">|p_i - p_{i+1}| \ge k</span><script type="math/tex">|p_i - p_{i+1}| \ge k</script></span> 的边变少 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 区间分裂 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 难维护。</li>
+<li><strong>转化后</strong>：<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 减小 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 满足条件的边变多 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 区间合并 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> <strong>并查集 (DSU)</strong>。</li>
 </ul>
 <p><strong>数学贡献模型</strong>：
-对于一个长度为 <span class="arithmatex">\(L\)</span> 的连续合法区间，其贡献为 <span class="arithmatex">\(f(L) = \frac{L(L-1)}{2}\)</span>。
-当两个区间（长度 <span class="arithmatex">\(S_a, S_b\)</span>）合并为一个新区间（长度 <span class="arithmatex">\(S_{new}\)</span>）时，答案增量为：
-$<span class="arithmatex">\(\Delta = f(S_{new}) - f(S_a) - f(S_b)\)</span>$</p>
+对于一个长度为 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 的连续合法区间，其贡献为 <span class="arithmatex"><span class="MathJax_Preview">f(L) = \frac{L(L-1)}{2}</span><script type="math/tex">f(L) = \frac{L(L-1)}{2}</script></span>。
+当两个区间（长度 <span class="arithmatex"><span class="MathJax_Preview">S_a, S_b</span><script type="math/tex">S_a, S_b</script></span>）合并为一个新区间（长度 <span class="arithmatex"><span class="MathJax_Preview">S_{new}</span><script type="math/tex">S_{new}</script></span>）时，答案增量为：
+$<span class="arithmatex"><span class="MathJax_Preview">\Delta = f(S_{new}) - f(S_a) - f(S_b)</span><script type="math/tex">\Delta = f(S_{new}) - f(S_a) - f(S_b)</script></span>$</p>
 <hr />
-<h2 id="2-dsu-on">2. 算法流程 (DSU <span class="arithmatex">\(O(N)\)</span> 解法)</h2>
+<h2 id="2-dsu-onon">2. 算法流程 (DSU <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 解法)</h2>
 <ol>
-<li><strong>预处理缝隙</strong>：遍历数组，计算相邻元素的差值 <span class="arithmatex">\(d = |p_i - p_{i+1}|\)</span>。使用<strong>桶 (Bucket)</strong> 或邻接表 <code>g[d]</code> 记录差值为 <span class="arithmatex">\(d\)</span> 的所有下标位置。</li>
-<li><strong>时光倒流</strong>：初始化并查集，每个点独立。从 <span class="arithmatex">\(k = n-1\)</span> 遍历到 <span class="arithmatex">\(1\)</span>。</li>
+<li><strong>预处理缝隙</strong>：遍历数组，计算相邻元素的差值 <span class="arithmatex"><span class="MathJax_Preview">d = |p_i - p_{i+1}|</span><script type="math/tex">d = |p_i - p_{i+1}|</script></span>。使用<strong>桶 (Bucket)</strong> 或邻接表 <code>g[d]</code> 记录差值为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的所有下标位置。</li>
+<li><strong>时光倒流</strong>：初始化并查集，每个点独立。从 <span class="arithmatex"><span class="MathJax_Preview">k = n-1</span><script type="math/tex">k = n-1</script></span> 遍历到 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</li>
 <li><strong>动态合并</strong>：<ul>
-<li>对于当前的 <span class="arithmatex">\(k\)</span>，取出所有差值恰好为 <span class="arithmatex">\(k\)</span> 的相邻位置对 <span class="arithmatex">\((i, i+1)\)</span>。</li>
+<li>对于当前的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，取出所有差值恰好为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的相邻位置对 <span class="arithmatex"><span class="MathJax_Preview">(i, i+1)</span><script type="math/tex">(i, i+1)</script></span>。</li>
 <li>在并查集中 <code>union(i, i+1)</code>。</li>
 <li>根据上述公式更新全局 <code>ans</code>。</li>
 </ul>
 </li>
-<li><strong>记录答案</strong>：将当前 <span class="arithmatex">\(k\)</span> 的 <code>ans</code> 保存。</li>
+<li><strong>记录答案</strong>：将当前 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的 <code>ans</code> 保存。</li>
 </ol>
 <hr />
 <h2 id="3-c20-dsu">3. 黄金代码模板 (C++20 DSU)</h2>

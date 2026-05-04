@@ -2346,10 +2346,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#as-le-k" class="md-nav__link">
+  <a href="#as-le-ks-le-k" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 A：\(s \le k\)（小沙漏，大周期）
+        情况 A：s \le ks \le k（小沙漏，大周期）
       
     </span>
   </a>
@@ -2357,10 +2357,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bs-k" class="md-nav__link">
+  <a href="#bs-ks-k" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 B：\(s &gt; k\)（大沙漏，小周期）
+        情况 B：s &gt; ks > k（大沙漏，小周期）
       
     </span>
   </a>
@@ -4556,10 +4556,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#as-le-k" class="md-nav__link">
+  <a href="#as-le-ks-le-k" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 A：\(s \le k\)（小沙漏，大周期）
+        情况 A：s \le ks \le k（小沙漏，大周期）
       
     </span>
   </a>
@@ -4567,10 +4567,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bs-k" class="md-nav__link">
+  <a href="#bs-ks-k" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 B：\(s &gt; k\)（大沙漏，小周期）
+        情况 B：s &gt; ks > k（大沙漏，小周期）
       
     </span>
   </a>
@@ -4644,11 +4644,11 @@
 <p>时间限制：1 秒<br />
 内存限制：256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
-<p>瓦迪姆的沙漏可以测量 <span class="arithmatex">\(s\)</span> 分钟。他将其翻转过来，计时开始。之后，每隔 <span class="arithmatex">\(k\)</span> 分钟，瓦迪姆就会再次翻转他的沙漏。即使沙子仍在流动，他也会这样做。另外，如果沙子已经流完，但还需要等待一段时间才会到达下一次翻转时刻，瓦迪姆会等待到规定的时间，然后才翻转沙漏。每次翻转被视作瞬间完成。</p>
-<p>然而，瓦迪姆需要在 <span class="arithmatex">\(m\)</span> 分钟后离开去办事，并且他将停止翻转沙漏（但如果瓦迪姆需要在最后一分钟翻转沙漏，他仍然会执行这次翻转）。请确定在瓦迪姆离开后，沙子还会继续流动多少分钟。</p>
+<p>瓦迪姆的沙漏可以测量 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 分钟。他将其翻转过来，计时开始。之后，每隔 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 分钟，瓦迪姆就会再次翻转他的沙漏。即使沙子仍在流动，他也会这样做。另外，如果沙子已经流完，但还需要等待一段时间才会到达下一次翻转时刻，瓦迪姆会等待到规定的时间，然后才翻转沙漏。每次翻转被视作瞬间完成。</p>
+<p>然而，瓦迪姆需要在 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 分钟后离开去办事，并且他将停止翻转沙漏（但如果瓦迪姆需要在最后一分钟翻转沙漏，他仍然会执行这次翻转）。请确定在瓦迪姆离开后，沙子还会继续流动多少分钟。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>) —— 测试用例的数量。接下来的行描述每个测试用例。</p>
-<p>每个测试用例仅有一行，包含三个整数 <span class="arithmatex">\(s\)</span>, <span class="arithmatex">\(k\)</span>, 和 <span class="arithmatex">\(m\)</span> —— 分别表示沙漏测量的分钟数、沙漏每隔多少分钟被翻转一次、以及瓦迪姆将在多少分钟后离开 (<span class="arithmatex">\(1 \le s, k, m \le 10^9\)</span>)。</p>
+<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>) —— 测试用例的数量。接下来的行描述每个测试用例。</p>
+<p>每个测试用例仅有一行，包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>, 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> —— 分别表示沙漏测量的分钟数、沙漏每隔多少分钟被翻转一次、以及瓦迪姆将在多少分钟后离开 (<span class="arithmatex"><span class="MathJax_Preview">1 \le s, k, m \le 10^9</span><script type="math/tex">1 \le s, k, m \le 10^9</script></span>)。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出在瓦迪姆离开后，沙子还会继续流动多少分钟。</p>
 <h2 id="_4">样例输入</h2>
@@ -4675,69 +4675,72 @@
 <li>第三个测试用例 <code>s=12, k=2, m=3</code>：在第一次翻转前（第2分钟），沙子已流了2分钟。翻转后，这2分钟的沙子会继续流。再过1分钟（第3分钟）瓦迪姆离开，此时沙漏中还有1分钟的沙子待流，因此答案为 <code>1</code>。</li>
 <li>第四个测试用例 <code>s=16, k=7, m=7</code>：在第7分钟第一次翻转前，沙子已流了7分钟。瓦迪姆翻转后立即离开，因此翻转后沙漏中还有7分钟的沙子待流，答案为 <code>7</code>。</li>
 <li>第五个测试用例 <code>s=1, k=1, m=10</code>：这是一个模拟过程，最终答案为 <code>1</code>。</li>
-<li>第六个测试用例 <code>s=2, k=60, m=15</code>：在瓦迪姆离开前（15分钟）他从未翻转过沙漏（因为 <span class="arithmatex">\(k=60 &gt; m\)</span>），且初始沙子只有2分钟，早已在第2分钟流完，因此答案为 <code>0</code>。</li>
+<li>第六个测试用例 <code>s=2, k=60, m=15</code>：在瓦迪姆离开前（15分钟）他从未翻转过沙漏（因为 <span class="arithmatex"><span class="MathJax_Preview">k=60 &gt; m</span><script type="math/tex">k=60 > m</script></span>），且初始沙子只有2分钟，早已在第2分钟流完，因此答案为 <code>0</code>。</li>
 </ul>
 <p>这是一份针对 <strong>CF 2184 B - Hourglass</strong> 的算法总结笔记。这道题看似简单，实则包含了一个物理过程的循环规律，非常容易因为思维定势而 WA。</p>
 <hr />
 <h1 id="cf-2184-b-hourglass">算法笔记：CF 2184 B - Hourglass</h1>
 <h1 id="codeforces">算法/数学 #算法/模拟 #题目/Codeforces #易错点</h1>
 <h2 id="1">1. 题目本质</h2>
-<p>模拟一个沙漏在时间 <span class="arithmatex">\(m\)</span> 时的剩余沙量。</p>
+<p>模拟一个沙漏在时间 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 时的剩余沙量。</p>
 <ul>
 <li>
-<p><strong>总容量</strong>：<span class="arithmatex">\(s\)</span></p>
+<p><strong>总容量</strong>：<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span></p>
 </li>
 <li>
-<p><strong>翻转周期</strong>：<span class="arithmatex">\(k\)</span></p>
+<p><strong>翻转周期</strong>：<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></p>
 </li>
 <li>
-<p><strong>截止时间</strong>：<span class="arithmatex">\(m\)</span></p>
+<p><strong>截止时间</strong>：<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span></p>
 </li>
 </ul>
 <p>核心难点在于：<strong>沙漏的初始状态在不同轮次是变化的，存在周期性。</strong></p>
 <h2 id="2">2. 核心逻辑与分类讨论</h2>
-<p>我们需要比较沙漏总容量 <span class="arithmatex">\(s\)</span> 与翻转间隔 <span class="arithmatex">\(k\)</span> 的关系：</p>
-<h3 id="as-le-k">情况 A：<span class="arithmatex">\(s \le k\)</span>（小沙漏，大周期）</h3>
+<p>我们需要比较沙漏总容量 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 与翻转间隔 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的关系：</p>
+<h3 id="as-le-ks-le-k">情况 A：<span class="arithmatex"><span class="MathJax_Preview">s \le k</span><script type="math/tex">s \le k</script></span>（小沙漏，大周期）</h3>
 <ul>
 <li>
 <p><strong>物理过程</strong>：</p>
 <ul>
 <li>
-<p>开始时沙漏有 <span class="arithmatex">\(s\)</span>。</p>
+<p>开始时沙漏有 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</p>
 </li>
 <li>
-<p>因为 <span class="arithmatex">\(s \le k\)</span>，在下一次翻转前，沙子<strong>一定能漏完</strong>。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">s \le k</span><script type="math/tex">s \le k</script></span>，在下一次翻转前，沙子<strong>一定能漏完</strong>。</p>
 </li>
 <li>
-<p>翻转瞬间，底部的 <span class="arithmatex">\(s\)</span> 全部翻到上面。</p>
+<p>翻转瞬间，底部的 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 全部翻到上面。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>结论</strong>：每一轮开始时，沙漏上方都是满的 (<span class="arithmatex">\(s\)</span>)。</p>
+<p><strong>结论</strong>：每一轮开始时，沙漏上方都是满的 (<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>)。</p>
 </li>
 <li>
 <p>公式：</p>
-<div class="arithmatex">\[\text{Ans} = \max(0, s - (m \% k))\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">\text{Ans} = \max(0, s - (m \% k))</div>
+<script type="math/tex; mode=display">\text{Ans} = \max(0, s - (m \% k))</script>
+</div>
 </li>
 </ul>
-<h3 id="bs-k">情况 B：<span class="arithmatex">\(s &gt; k\)</span>（大沙漏，小周期）</h3>
+<h3 id="bs-ks-k">情况 B：<span class="arithmatex"><span class="MathJax_Preview">s &gt; k</span><script type="math/tex">s > k</script></span>（大沙漏，小周期）</h3>
 <p>这是最容易错的地方。沙子永远漏不完，会在两个状态间循环。</p>
 <ul>
 <li>
 <p><strong>第 0 轮 (偶数轮)</strong>：</p>
 <ul>
 <li>
-<p>开始状态：上方 <span class="arithmatex">\(s\)</span>，下方 <span class="arithmatex">\(0\)</span>。</p>
+<p>开始状态：上方 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，下方 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
 </li>
 <li>
-<p>经过 <span class="arithmatex">\(k\)</span> 分钟：漏掉 <span class="arithmatex">\(k\)</span>。</p>
+<p>经过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 分钟：漏掉 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 </li>
 <li>
-<p>结束状态：上方 <span class="arithmatex">\(s-k\)</span>，下方 <span class="arithmatex">\(k\)</span>。</p>
+<p>结束状态：上方 <span class="arithmatex"><span class="MathJax_Preview">s-k</span><script type="math/tex">s-k</script></span>，下方 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 </li>
 <li>
-<p><strong>若此时停止</strong>：剩余 <span class="arithmatex">\(s - (m\%k)\)</span>。</p>
+<p><strong>若此时停止</strong>：剩余 <span class="arithmatex"><span class="MathJax_Preview">s - (m\%k)</span><script type="math/tex">s - (m\%k)</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4745,19 +4748,19 @@
 <p><strong>第 1 轮 (奇数轮)</strong>：</p>
 <ul>
 <li>
-<p>翻转瞬间：下方 <span class="arithmatex">\(k\)</span> 翻到上方。</p>
+<p>翻转瞬间：下方 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 翻到上方。</p>
 </li>
 <li>
-<p>开始状态：上方 <span class="arithmatex">\(k\)</span>，下方 <span class="arithmatex">\(s-k\)</span>。</p>
+<p>开始状态：上方 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，下方 <span class="arithmatex"><span class="MathJax_Preview">s-k</span><script type="math/tex">s-k</script></span>。</p>
 </li>
 <li>
-<p>经过 <span class="arithmatex">\(k\)</span> 分钟：漏掉 <span class="arithmatex">\(k\)</span>（因为 <span class="arithmatex">\(k &lt; s\)</span>，肯定够漏）。</p>
+<p>经过 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 分钟：漏掉 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（因为 <span class="arithmatex"><span class="MathJax_Preview">k &lt; s</span><script type="math/tex">k < s</script></span>，肯定够漏）。</p>
 </li>
 <li>
-<p>结束状态：上方 <span class="arithmatex">\(0\)</span>，下方 <span class="arithmatex">\(s\)</span>。</p>
+<p>结束状态：上方 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，下方 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</p>
 </li>
 <li>
-<p><strong>若此时停止</strong>：剩余 <span class="arithmatex">\(k - (m\%k)\)</span>。</p>
+<p><strong>若此时停止</strong>：剩余 <span class="arithmatex"><span class="MathJax_Preview">k - (m\%k)</span><script type="math/tex">k - (m\%k)</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4765,7 +4768,7 @@
 <p><strong>第 2 轮</strong>：</p>
 <ul>
 <li>
-<p>翻转瞬间：下方 <span class="arithmatex">\(s\)</span> 翻到上方。</p>
+<p>翻转瞬间：下方 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 翻到上方。</p>
 </li>
 <li>
 <p><strong>状态回归到第 0 轮</strong>。</p>
@@ -4773,13 +4776,13 @@
 </ul>
 </li>
 <li>
-<p><strong>结论</strong>：状态以 <strong><span class="arithmatex">\(2k\)</span></strong> 为周期循环。</p>
+<p><strong>结论</strong>：状态以 <strong><span class="arithmatex"><span class="MathJax_Preview">2k</span><script type="math/tex">2k</script></span></strong> 为周期循环。</p>
 <ul>
 <li>
-<p><strong>偶数轮</strong> (<span class="arithmatex">\(m/k\)</span> is even)：初始视为 <span class="arithmatex">\(s\)</span>。</p>
+<p><strong>偶数轮</strong> (<span class="arithmatex"><span class="MathJax_Preview">m/k</span><script type="math/tex">m/k</script></span> is even)：初始视为 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</p>
 </li>
 <li>
-<p><strong>奇数轮</strong> (<span class="arithmatex">\(m/k\)</span> is odd)：初始视为 <span class="arithmatex">\(k\)</span>。</p>
+<p><strong>奇数轮</strong> (<span class="arithmatex"><span class="MathJax_Preview">m/k</span><script type="math/tex">m/k</script></span> is odd)：初始视为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4788,18 +4791,18 @@
 <blockquote>
 <p>[!WARNING] 错误思维</p>
 <p>你之前的代码逻辑是：if (s &gt;= k) ans = k - m % k;</p>
-<p>错误原因：你默认了“只要沙漏够大，每次翻转上来的一定是 <span class="arithmatex">\(k\)</span>”。</p>
+<p>错误原因：你默认了“只要沙漏够大，每次翻转上来的一定是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>”。</p>
 <p>事实是：</p>
 <ul>
 <li>
-<p>第一次翻上来的是 <span class="arithmatex">\(k\)</span>（对）；</p>
+<p>第一次翻上来的是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>（对）；</p>
 </li>
 <li>
-<p>第二次翻上来的是 <span class="arithmatex">\(s\)</span>（错）；</p>
+<p>第二次翻上来的是 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>（错）；</p>
 </li>
 <li>
-<p>第三次又是 <span class="arithmatex">\(k\)</span>...</p>
-<p>你忽略了偶数轮次会把积攒在底部的剩余沙子(<span class="arithmatex">\(s-k\)</span>)也一起翻回来，导致偶数轮其实是满油状态。
+<p>第三次又是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>...</p>
+<p>你忽略了偶数轮次会把积攒在底部的剩余沙子(<span class="arithmatex"><span class="MathJax_Preview">s-k</span><script type="math/tex">s-k</script></span>)也一起翻回来，导致偶数轮其实是满油状态。
 </p>
 </li>
 </ul>
@@ -4846,7 +4849,7 @@ int main(){
 }
 </code></pre></div>
 <h2 id="5">5. 一句话总结</h2>
-<p>做周期性模拟题时，<strong>千万不要只看前两步</strong>，至少要手动模拟到状态复原（回到初始态）为止，确认循环节长度是 <span class="arithmatex">\(k\)</span> 还是 <span class="arithmatex">\(2k\)</span>。</p>
+<p>做周期性模拟题时，<strong>千万不要只看前两步</strong>，至少要手动模拟到状态复原（回到初始态）为止，确认循环节长度是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 还是 <span class="arithmatex"><span class="MathJax_Preview">2k</span><script type="math/tex">2k</script></span>。</p>
 
 
 

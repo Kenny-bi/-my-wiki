@@ -4755,17 +4755,17 @@
 内存限制：每个测试点 256 MB</p>
 <h2 id="_1">问题描述</h2>
 <p>天才间谍 Bob 截获了一条加密信息。他推测这条信息包含秘密情报，并正积极地试图破解它。</p>
-<p>落入间谍手中的便条由 <span class="arithmatex">\(k\)</span> 张纸条组成，每张纸条的长度为 <span class="arithmatex">\(n\)</span>，包含严格的小写拉丁字母。凭借破解此类文档的丰富经验，Bob 猜测他所感兴趣的信息（便条的破解结果）也是一个长度为 <span class="arithmatex">\(n\)</span> 的字符串，并且该信息的第 <span class="arithmatex">\(i\)</span> 个字母对应于其中某张纸条的第 <span class="arithmatex">\(i\)</span> 个字母。</p>
-<p>Bob 认为，一个字符串 <span class="arithmatex">\(s\)</span> 的信息性被定义为最小的正整数 <span class="arithmatex">\(d\)</span>，使得存在一个长度为 <span class="arithmatex">\(d\)</span> 的字符串 <span class="arithmatex">\(t\)</span>，且 <span class="arithmatex">\(s\)</span> 可以通过将 <span class="arithmatex">\(t\)</span> 重复若干次来构成。例如，字符串 "aaaa" 的信息性是 1，字符串 "abab" 的信息性是 2，字符串 "abcd" 的信息性是 4。</p>
+<p>落入间谍手中的便条由 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 张纸条组成，每张纸条的长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，包含严格的小写拉丁字母。凭借破解此类文档的丰富经验，Bob 猜测他所感兴趣的信息（便条的破解结果）也是一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串，并且该信息的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个字母对应于其中某张纸条的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个字母。</p>
+<p>Bob 认为，一个字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 的信息性被定义为最小的正整数 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，使得存在一个长度为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，且 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 可以通过将 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 重复若干次来构成。例如，字符串 "aaaa" 的信息性是 1，字符串 "abab" 的信息性是 2，字符串 "abcd" 的信息性是 4。</p>
 <p>Bob 推测，便条的作者为了确保信息可靠传输，将消息中的数据重复了若干次。因此，他认为一个更合理的便条破解结果应该具有尽可能小的信息性。</p>
 <p>帮助这位间谍：找到那个能够破解便条，并且具有最小可能信息性的消息。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span>。接下来是测试用例的描述。</p>
-<p>每个测试用例的第一行包含数字 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span> <span class="arithmatex">\((2 \le n, k \le 50000\)</span>, <span class="arithmatex">\(4 \le n \cdot k \le 10^5)\)</span> —— 分别表示纸条的长度和纸条的数量。</p>
-<p>在接下来每个测试用例的 <span class="arithmatex">\(k\)</span> 行中，每行包含一个由 <span class="arithmatex">\(n\)</span> 个小写拉丁字母组成的序列 —— 下一张纸条的内容。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n \cdot k\)</span> 值之和不超过 <span class="arithmatex">\(10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span>。接下来是测试用例的描述。</p>
+<p>每个测试用例的第一行包含数字 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> <span class="arithmatex"><span class="MathJax_Preview">(2 \le n, k \le 50000</span><script type="math/tex">(2 \le n, k \le 50000</script></span>, <span class="arithmatex"><span class="MathJax_Preview">4 \le n \cdot k \le 10^5)</span><script type="math/tex">4 \le n \cdot k \le 10^5)</script></span> —— 分别表示纸条的长度和纸条的数量。</p>
+<p>在接下来每个测试用例的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 行中，每行包含一个由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个小写拉丁字母组成的序列 —— 下一张纸条的内容。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n \cdot k</span><script type="math/tex">n \cdot k</script></span> 值之和不超过 <span class="arithmatex"><span class="MathJax_Preview">10^5</span><script type="math/tex">10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 —— 具有最小可能信息性的便条破解结果。如果有多个合适的答案，可以输出其中任意一个。</p>
+<p>对于每个测试用例，输出一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 —— 具有最小可能信息性的便条破解结果。如果有多个合适的答案，可以输出其中任意一个。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 3 2
@@ -4784,10 +4784,10 @@ infinfinf
 acac
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，最小可能的信息性是 <span class="arithmatex">\(1\)</span>：
+<p>在第一个测试用例中，最小可能的信息性是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>：
 - 纸条1：<code>abc</code>
 - 纸条2：<code>baa</code></p>
-<p>在第二个测试用例中，最小可能的信息性是 <span class="arithmatex">\(3\)</span>：
+<p>在第二个测试用例中，最小可能的信息性是 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>：
 - 纸条1：<code>iiinnnfff</code>
 - 纸条2：<code>nnfiffinn</code></p>
 <h1 id="ai">AI  牛逼</h1>
@@ -4862,8 +4862,8 @@ acac
 <ol>
 <li>
 <p><strong>“竖”着看数据</strong>：</p>
-<p>题目说结果字符串 <span class="arithmatex">\(S\)</span> 的第 <span class="arithmatex">\(j\)</span> 个字符必须来自输入的那 <span class="arithmatex">\(k\)</span> 张纸条的第 <span class="arithmatex">\(j\)</span> 列。</p>
-<p>这意味着：对于结果字符串的第 <span class="arithmatex">\(j\)</span> 位，我们并不关心它来自哪一张纸条，我们只关心<strong>这一列里有哪些字符是可用的</strong>。</p>
+<p>题目说结果字符串 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 个字符必须来自输入的那 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 张纸条的第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列。</p>
+<p>这意味着：对于结果字符串的第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 位，我们并不关心它来自哪一张纸条，我们只关心<strong>这一列里有哪些字符是可用的</strong>。</p>
 <ul>
 <li>
 <p>比如样例 1：</p>
@@ -4887,26 +4887,29 @@ baa
 </li>
 <li>
 <p><strong>理解“信息性”（周期性）</strong>：</p>
-<p>题目定义“信息性”为最小的 <span class="arithmatex">\(d\)</span>，使得字符串是由长度为 <span class="arithmatex">\(d\)</span> 的片段重复构成的。</p>
+<p>题目定义“信息性”为最小的 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，使得字符串是由长度为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的片段重复构成的。</p>
 <p>这意味着：</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(n\)</span> 必须能被 <span class="arithmatex">\(d\)</span> 整除。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 必须能被 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 整除。</p>
 </li>
 <li>
-<p>结果字符串 <span class="arithmatex">\(S\)</span> 必须满足：<span class="arithmatex">\(S[0] = S[d] = S[2d] = \dots\)</span></p>
+<p>结果字符串 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 必须满足：<span class="arithmatex"><span class="MathJax_Preview">S[0] = S[d] = S[2d] = \dots</span><script type="math/tex">S[0] = S[d] = S[2d] = \dots</script></span></p>
 </li>
 <li>
-<p>同理， <span class="arithmatex">\(S[1] = S[1+d] = S[1+2d] = \dots\)</span></p>
+<p>同理， <span class="arithmatex"><span class="MathJax_Preview">S[1] = S[1+d] = S[1+2d] = \dots</span><script type="math/tex">S[1] = S[1+d] = S[1+2d] = \dots</script></span></p>
 </li>
 </ul>
 </li>
 <li>
 <p><strong>结合两点：求交集</strong>：</p>
-<p>如果我们假设答案的周期是 <span class="arithmatex">\(d\)</span>，那么对于模式串的第 <span class="arithmatex">\(i\)</span> 个字符（<span class="arithmatex">\(0 \le i &lt; d\)</span>），它必须同时存在于原数据的第 <span class="arithmatex">\(i\)</span> 列、第 <span class="arithmatex">\(i+d\)</span> 列、第 <span class="arithmatex">\(i+2d\)</span> 列……中。</p>
+<p>如果我们假设答案的周期是 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，那么对于模式串的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个字符（<span class="arithmatex"><span class="MathJax_Preview">0 \le i &lt; d</span><script type="math/tex">0 \le i < d</script></span>），它必须同时存在于原数据的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 列、第 <span class="arithmatex"><span class="MathJax_Preview">i+d</span><script type="math/tex">i+d</script></span> 列、第 <span class="arithmatex"><span class="MathJax_Preview">i+2d</span><script type="math/tex">i+2d</script></span> 列……中。</p>
 <p>也就是：</p>
-<div class="arithmatex">\[S[i] \in (\text{第 } i \text{ 列的字符集合}) \cap (\text{第 } i+d \text{ 列的字符集合}) \cap \dots\]</div>
-<p>只要这个交集不是空的，我们就可以随便从里面选一个字符作为 <span class="arithmatex">\(S[i]\)</span>。</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">S[i] \in (\text{第 } i \text{ 列的字符集合}) \cap (\text{第 } i+d \text{ 列的字符集合}) \cap \dots</div>
+<script type="math/tex; mode=display">S[i] \in (\text{第 } i \text{ 列的字符集合}) \cap (\text{第 } i+d \text{ 列的字符集合}) \cap \dots</script>
+</div>
+<p>只要这个交集不是空的，我们就可以随便从里面选一个字符作为 <span class="arithmatex"><span class="MathJax_Preview">S[i]</span><script type="math/tex">S[i]</script></span>。</p>
 </li>
 </ol>
 <h3 id="_8">算法步骤</h3>
@@ -4914,23 +4917,23 @@ baa
 <li>
 <p><strong>预处理</strong>：</p>
 <p>不要存字符串，直接存<strong>每一列的字符掩码（Bitmask）</strong>。</p>
-<p>因为只有 26 个小写字母，我们可以用一个 <code>int</code> 整数来表示一列里有哪些字符。比如第 <span class="arithmatex">\(j\)</span> 列有 'a' 和 'c'，那么 <code>mask[j]</code> 的第 0 位和第 2 位就是 1。</p>
-<p>这一步复杂度是 <span class="arithmatex">\(O(nk)\)</span>，非常快。</p>
+<p>因为只有 26 个小写字母，我们可以用一个 <code>int</code> 整数来表示一列里有哪些字符。比如第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列有 'a' 和 'c'，那么 <code>mask[j]</code> 的第 0 位和第 2 位就是 1。</p>
+<p>这一步复杂度是 <span class="arithmatex"><span class="MathJax_Preview">O(nk)</span><script type="math/tex">O(nk)</script></span>，非常快。</p>
 </li>
 <li>
-<p><strong>枚举周期 <span class="arithmatex">\(d\)</span></strong>：</p>
-<p>我们要最小的信息性，所以从 <span class="arithmatex">\(d=1\)</span> 开始枚举，直到 <span class="arithmatex">\(d=n\)</span>。</p>
-<p>只有当 <span class="arithmatex">\(n \% d == 0\)</span> 时，才去检查这个 <span class="arithmatex">\(d\)</span> 是否合法。</p>
+<p><strong>枚举周期 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></strong>：</p>
+<p>我们要最小的信息性，所以从 <span class="arithmatex"><span class="MathJax_Preview">d=1</span><script type="math/tex">d=1</script></span> 开始枚举，直到 <span class="arithmatex"><span class="MathJax_Preview">d=n</span><script type="math/tex">d=n</script></span>。</p>
+<p>只有当 <span class="arithmatex"><span class="MathJax_Preview">n \% d == 0</span><script type="math/tex">n \% d == 0</script></span> 时，才去检查这个 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 是否合法。</p>
 </li>
 <li>
 <p><strong>检查合法性</strong>：</p>
-<p>对于当前的 <span class="arithmatex">\(d\)</span>，我们遍历 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(d-1\)</span> 的每一个偏移量 <span class="arithmatex">\(r\)</span>：</p>
+<p>对于当前的 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，我们遍历 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">d-1</span><script type="math/tex">d-1</script></span> 的每一个偏移量 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>：</p>
 <ul>
 <li>
 <p>算出所有对应列的掩码交集：<code>result = mask[r] &amp; mask[r+d] &amp; mask[r+2d] ...</code></p>
 </li>
 <li>
-<p>如果 <code>result</code> 变成了 0（空集），说明这个 <span class="arithmatex">\(d\)</span> 不行，直接跳出。</p>
+<p>如果 <code>result</code> 变成了 0（空集），说明这个 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 不行，直接跳出。</p>
 </li>
 <li>
 <p>如果 <code>result</code> 不为 0，说明有公共字符。我们随便取一个（比如最低位的 1 对应的字符）记下来。</p>
@@ -4939,7 +4942,7 @@ baa
 </li>
 <li>
 <p><strong>构造答案</strong>：</p>
-<p>如果对于 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(d-1\)</span> 的所有位置都找到了公共字符，那么我们就成功了！因为我们要找最小的 <span class="arithmatex">\(d\)</span>，所以找到的第一个解就是最优解。把这个长度为 <span class="arithmatex">\(d\)</span> 的模式串重复 <span class="arithmatex">\(n/d\)</span> 次输出即可。</p>
+<p>如果对于 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">d-1</span><script type="math/tex">d-1</script></span> 的所有位置都找到了公共字符，那么我们就成功了！因为我们要找最小的 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，所以找到的第一个解就是最优解。把这个长度为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的模式串重复 <span class="arithmatex"><span class="MathJax_Preview">n/d</span><script type="math/tex">n/d</script></span> 次输出即可。</p>
 </li>
 </ol>
 <h3 id="2">图解示例 (样例 2)</h3>
@@ -4948,7 +4951,7 @@ baa
 纸条1: i i i n n n f f f
 纸条2: n n f i f f i n n
 </code></pre></div>
-<p><strong>检查 <span class="arithmatex">\(d=3\)</span></strong>：</p>
+<p><strong>检查 <span class="arithmatex"><span class="MathJax_Preview">d=3</span><script type="math/tex">d=3</script></span></strong>：</p>
 <ul>
 <li>
 <p><strong>第 1 位 (index 0, 3, 6)</strong>:</p>
@@ -5085,32 +5088,32 @@ baa
 <h3 id="_9">复杂度分析</h3>
 <ul>
 <li>
-<p><strong>预处理</strong>：我们需要遍历所有字符一次来构建掩码，复杂度是 <span class="arithmatex">\(O(N \cdot K)\)</span>。题目保证 <span class="arithmatex">\(\sum NK \le 10^5\)</span>，所以这步非常快。</p>
+<p><strong>预处理</strong>：我们需要遍历所有字符一次来构建掩码，复杂度是 <span class="arithmatex"><span class="MathJax_Preview">O(N \cdot K)</span><script type="math/tex">O(N \cdot K)</script></span>。题目保证 <span class="arithmatex"><span class="MathJax_Preview">\sum NK \le 10^5</span><script type="math/tex">\sum NK \le 10^5</script></span>，所以这步非常快。</p>
 </li>
 <li>
-<p><strong>检查</strong>：我们要枚举 <span class="arithmatex">\(N\)</span> 的因子。对于每个因子 <span class="arithmatex">\(d\)</span>，我们需要遍历 <span class="arithmatex">\(N\)</span> 个掩码。最坏情况下（比如 <span class="arithmatex">\(N\)</span> 有很多因子），总操作数大概是 <span class="arithmatex">\(O(N \times \text{因子个数})\)</span>。但是 <span class="arithmatex">\(N \le 50000\)</span> 的数因子很少（最多几十个），所以这步也极快。</p>
+<p><strong>检查</strong>：我们要枚举 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的因子。对于每个因子 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，我们需要遍历 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 个掩码。最坏情况下（比如 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 有很多因子），总操作数大概是 <span class="arithmatex"><span class="MathJax_Preview">O(N \times \text{因子个数})</span><script type="math/tex">O(N \times \text{因子个数})</script></span>。但是 <span class="arithmatex"><span class="MathJax_Preview">N \le 50000</span><script type="math/tex">N \le 50000</script></span> 的数因子很少（最多几十个），所以这步也极快。</p>
 </li>
 </ul>
 <p>别怕暴力枚举，只要枚举的方向（从小到大枚举因子）是对的，再配合位运算加速集合求交集，这就是正解！</p>
 <h1 id="cf-2194-c-secret-message">📝 算法总结：CF 2194 C - Secret Message</h1>
 <h4 id="1">1. 问题本质</h4>
-<p>我们需要构造一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(S\)</span>，满足两个条件：</p>
+<p>我们需要构造一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>，满足两个条件：</p>
 <ol>
 <li>
-<p><strong>列约束</strong>：<span class="arithmatex">\(S[j]\)</span> 必须存在于输入 <span class="arithmatex">\(k\)</span> 个字符串的第 <span class="arithmatex">\(j\)</span> 列字符集合中。</p>
+<p><strong>列约束</strong>：<span class="arithmatex"><span class="MathJax_Preview">S[j]</span><script type="math/tex">S[j]</script></span> 必须存在于输入 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个字符串的第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列字符集合中。</p>
 </li>
 <li>
-<p><strong>周期约束</strong>：<span class="arithmatex">\(S\)</span> 由一个长度为 <span class="arithmatex">\(d\)</span> 的模式串重复构成，且我们要让 <span class="arithmatex">\(d\)</span> 最小。</p>
+<p><strong>周期约束</strong>：<span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 由一个长度为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 的模式串重复构成，且我们要让 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 最小。</p>
 </li>
 </ol>
 <h4 id="2_1">2. 核心思维转换</h4>
 <ul>
 <li>
-<p><strong>横向转纵向</strong>：不要把输入看作 <span class="arithmatex">\(k\)</span> 个行字符串，而要看作 <span class="arithmatex">\(n\)</span> 个“列集合”。第 <span class="arithmatex">\(j\)</span> 列所有出现过的字符，就是 <span class="arithmatex">\(S[j]\)</span> 的候选池。</p>
+<p><strong>横向转纵向</strong>：不要把输入看作 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个行字符串，而要看作 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个“列集合”。第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列所有出现过的字符，就是 <span class="arithmatex"><span class="MathJax_Preview">S[j]</span><script type="math/tex">S[j]</script></span> 的候选池。</p>
 </li>
 <li>
-<p><strong>周期性的数学表达</strong>：如果 <span class="arithmatex">\(S\)</span> 的周期为 <span class="arithmatex">\(d\)</span>，意味着 <span class="arithmatex">\(S[i] = S[i+d] = S[i+2d] \dots\)</span>。</p>
-<p>因此，这一系列位置 <span class="arithmatex">\((i, i+d, i+2d \dots)\)</span> 对应的列集合必须有<strong>公共交集</strong>。</p>
+<p><strong>周期性的数学表达</strong>：如果 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 的周期为 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，意味着 <span class="arithmatex"><span class="MathJax_Preview">S[i] = S[i+d] = S[i+2d] \dots</span><script type="math/tex">S[i] = S[i+d] = S[i+2d] \dots</script></span>。</p>
+<p>因此，这一系列位置 <span class="arithmatex"><span class="MathJax_Preview">(i, i+d, i+2d \dots)</span><script type="math/tex">(i, i+d, i+2d \dots)</script></span> 对应的列集合必须有<strong>公共交集</strong>。</p>
 </li>
 </ul>
 <h4 id="3-bitmask">3. 数据结构技巧 (Bitmask)</h4>
@@ -5120,39 +5123,39 @@ baa
 <p><strong>技巧</strong>：用一个 <code>int</code> 整数代表一列的字符集合。</p>
 </li>
 <li>
-<p><strong>操作</strong>：第 <span class="arithmatex">\(j\)</span> 列包含字符 <code>c</code> <span class="arithmatex">\(\rightarrow\)</span> <code>mask[j] |= (1 &lt;&lt; (c - 'a'))</code>。</p>
+<p><strong>操作</strong>：第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 列包含字符 <code>c</code> <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> <code>mask[j] |= (1 &lt;&lt; (c - 'a'))</code>。</p>
 </li>
 <li>
-<p><strong>求交集</strong>：直接使用位运算与 <code>&amp;</code>，即 <code>intersection = mask[a] &amp; mask[b]</code>，这是 <span class="arithmatex">\(O(1)\)</span> 的操作。</p>
+<p><strong>求交集</strong>：直接使用位运算与 <code>&amp;</code>，即 <code>intersection = mask[a] &amp; mask[b]</code>，这是 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 的操作。</p>
 </li>
 </ul>
 <h4 id="4">4. 算法流程</h4>
 <ol>
 <li>
-<p><strong>预处理</strong>：遍历输入，生成 <span class="arithmatex">\(n\)</span> 个整数掩码 <code>col_masks</code>。</p>
+<p><strong>预处理</strong>：遍历输入，生成 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数掩码 <code>col_masks</code>。</p>
 </li>
 <li>
-<p><strong>枚举周期</strong>：从小到大枚举 <span class="arithmatex">\(d\)</span> (<span class="arithmatex">\(1 \to n\)</span>)。</p>
+<p><strong>枚举周期</strong>：从小到大枚举 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \to n</span><script type="math/tex">1 \to n</script></span>)。</p>
 <ul>
-<li><strong>剪枝</strong>：如果 <span class="arithmatex">\(n \% d \neq 0\)</span>，直接跳过。</li>
+<li><strong>剪枝</strong>：如果 <span class="arithmatex"><span class="MathJax_Preview">n \% d \neq 0</span><script type="math/tex">n \% d \neq 0</script></span>，直接跳过。</li>
 </ul>
 </li>
 <li>
-<p><strong>验证周期</strong>：对于当前 <span class="arithmatex">\(d\)</span>，检查每一个偏移量 <span class="arithmatex">\(r \in [0, d-1]\)</span>：</p>
+<p><strong>验证周期</strong>：对于当前 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>，检查每一个偏移量 <span class="arithmatex"><span class="MathJax_Preview">r \in [0, d-1]</span><script type="math/tex">r \in [0, d-1]</script></span>：</p>
 <ul>
 <li>
 <p>计算该组所有位置的交集：<code>common = mask[r] &amp; mask[r+d] &amp; mask[r+2d] ...</code></p>
 </li>
 <li>
-<p>如果 <code>common == 0</code>，说明该组位置没有共同字符，当前 <span class="arithmatex">\(d\)</span> 无效。</p>
+<p>如果 <code>common == 0</code>，说明该组位置没有共同字符，当前 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 无效。</p>
 </li>
 <li>
-<p>如果 <code>common &gt; 0</code>，取 <code>__builtin_ctz(common)</code> (最低位 1) 对应的字符作为模式串的第 <span class="arithmatex">\(r\)</span> 个字符。</p>
+<p>如果 <code>common &gt; 0</code>，取 <code>__builtin_ctz(common)</code> (最低位 1) 对应的字符作为模式串的第 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 个字符。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>输出</strong>：找到的第一个有效 <span class="arithmatex">\(d\)</span> 即为最小值，按该模式串生成结果并输出。</p>
+<p><strong>输出</strong>：找到的第一个有效 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 即为最小值，按该模式串生成结果并输出。</p>
 </li>
 </ol>
 <h4 id="5">5. 复杂度分析</h4>
@@ -5161,18 +5164,18 @@ baa
 <p><strong>时间复杂度</strong>：</p>
 <ul>
 <li>
-<p>预处理：<span class="arithmatex">\(O(N \cdot K)\)</span>。</p>
+<p>预处理：<span class="arithmatex"><span class="MathJax_Preview">O(N \cdot K)</span><script type="math/tex">O(N \cdot K)</script></span>。</p>
 </li>
 <li>
-<p>枚举与检查：<span class="arithmatex">\(O(\sum_{d|N} \frac{N}{d} \cdot d) = O(\sigma_0(N) \cdot N)\)</span>。</p>
+<p>枚举与检查：<span class="arithmatex"><span class="MathJax_Preview">O(\sum_{d|N} \frac{N}{d} \cdot d) = O(\sigma_0(N) \cdot N)</span><script type="math/tex">O(\sum_{d|N} \frac{N}{d} \cdot d) = O(\sigma_0(N) \cdot N)</script></span>。</p>
 </li>
 <li>
-<p>由于 <span class="arithmatex">\(N \le 50000\)</span>，因数个数很少，整体运行极快，远低于 2秒限制。</p>
+<p>由于 <span class="arithmatex"><span class="MathJax_Preview">N \le 50000</span><script type="math/tex">N \le 50000</script></span>，因数个数很少，整体运行极快，远低于 2秒限制。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>空间复杂度</strong>：<span class="arithmatex">\(O(N)\)</span>，仅需存储每一列的掩码。</p>
+<p><strong>空间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>，仅需存储每一列的掩码。</p>
 </li>
 </ul>
 <h4 id="_10">💡 刷题心得</h4>

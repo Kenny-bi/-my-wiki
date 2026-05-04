@@ -4767,21 +4767,21 @@
 <p>时间限制：每个测试 1 秒<br />
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>两个玩家 Souvlaki 和 Kalamaki 被给定一个包含 <span class="arithmatex">\(n\)</span> 个整数的序列 <span class="arithmatex">\(a\)</span>。</p>
-<p>他们将进行一个包含 <span class="arithmatex">\(n-1\)</span> 轮的游戏，轮次编号从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n-1\)</span>。Souvlaki 在奇数轮行动，Kalamaki 在偶数轮行动。</p>
-<p>在第 <span class="arithmatex">\(i\)</span> 轮中，当前玩家可以选择执行以下操作之一：</p>
+<p>两个玩家 Souvlaki 和 Kalamaki 被给定一个包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数的序列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。</p>
+<p>他们将进行一个包含 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 轮的游戏，轮次编号从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>。Souvlaki 在奇数轮行动，Kalamaki 在偶数轮行动。</p>
+<p>在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 轮中，当前玩家可以选择执行以下操作之一：</p>
 <ul>
-<li>跳过他的回合，进入第 <span class="arithmatex">\(i+1\)</span> 轮（如果第 <span class="arithmatex">\(i\)</span> 轮是最后一轮，则结束游戏）。</li>
-<li>交换元素 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(a_{i+1}\)</span>。</li>
+<li>跳过他的回合，进入第 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span> 轮（如果第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 轮是最后一轮，则结束游戏）。</li>
+<li>交换元素 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_{i+1}</span><script type="math/tex">a_{i+1}</script></span>。</li>
 </ul>
-<p>如果在最后一轮结束后，<span class="arithmatex">\(a\)</span> 按非递减顺序排序（即对于每个 <span class="arithmatex">\(1 \leq i &lt; n\)</span>，都有 <span class="arithmatex">\(a_i \leq a_{i+1}\)</span>），则 Souvlaki 获胜。否则，Kalamaki 获胜。</p>
-<p>然而，Souvlaki 不喜欢输，所以在游戏开始前，他可以用任何他想要的方式重新排列 <span class="arithmatex">\(a\)</span> 的元素。他是否可能通过重新排列元素，使得他有一个保证获胜的策略？</p>
+<p>如果在最后一轮结束后，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 按非递减顺序排序（即对于每个 <span class="arithmatex"><span class="MathJax_Preview">1 \leq i &lt; n</span><script type="math/tex">1 \leq i < n</script></span>，都有 <span class="arithmatex"><span class="MathJax_Preview">a_i \leq a_{i+1}</span><script type="math/tex">a_i \leq a_{i+1}</script></span>），则 Souvlaki 获胜。否则，Kalamaki 获胜。</p>
+<p>然而，Souvlaki 不喜欢输，所以在游戏开始前，他可以用任何他想要的方式重新排列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素。他是否可能通过重新排列元素，使得他有一个保证获胜的策略？</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 100\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(3 \leq n \leq 100\)</span>) —— 序列 <span class="arithmatex">\(a\)</span> 中的整数个数。</p>
-<p>第二行包含恰好 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> (<span class="arithmatex">\(1 \leq a_i \leq n\)</span>) —— 表示 <span class="arithmatex">\(a\)</span> 的第 <span class="arithmatex">\(i\)</span> 个元素。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 100</span><script type="math/tex">1 \leq t \leq 100</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">3 \leq n \leq 100</span><script type="math/tex">3 \leq n \leq 100</script></span>) —— 序列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 中的整数个数。</p>
+<p>第二行包含恰好 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq n</span><script type="math/tex">1 \leq a_i \leq n</script></span>) —— 表示 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个元素。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，如果 Souvlaki 能够通过重新排列 <span class="arithmatex">\(a\)</span> 的元素来获得保证获胜的策略，则在单独一行输出 "YES"，否则输出 "NO"。</p>
+<p>对于每个测试用例，如果 Souvlaki 能够通过重新排列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素来获得保证获胜的策略，则在单独一行输出 "YES"，否则输出 "NO"。</p>
 <p>你可以以任何大小写形式输出答案。例如，字符串 "yEs"、"yes"、"Yes" 和 "YES" 都会被识别为肯定回答。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>5
@@ -4804,14 +4804,14 @@ NO
 NO
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，<span class="arithmatex">\(a = [4, 2, 2, 1]\)</span>。一种可能的重新排列方式是 <span class="arithmatex">\(a = [2, 1, 2, 4]\)</span>。然后游戏可能按如下进行：</p>
+<p>在第一个样例中，<span class="arithmatex"><span class="MathJax_Preview">a = [4, 2, 2, 1]</span><script type="math/tex">a = [4, 2, 2, 1]</script></span>。一种可能的重新排列方式是 <span class="arithmatex"><span class="MathJax_Preview">a = [2, 1, 2, 4]</span><script type="math/tex">a = [2, 1, 2, 4]</script></span>。然后游戏可能按如下进行：</p>
 <ul>
-<li>第 1 轮是 Souvlaki 的回合。他选择交换 <span class="arithmatex">\(a_1\)</span> 和 <span class="arithmatex">\(a_2\)</span>，现在 <span class="arithmatex">\(a = [1, 2, 2, 4]\)</span>。</li>
-<li>第 2 轮是 Kalamaki 的回合。无论他选择跳过回合还是交换元素 <span class="arithmatex">\(a_2\)</span> 和 <span class="arithmatex">\(a_3\)</span>，<span class="arithmatex">\(a\)</span> 都将保持不变。假设他跳过回合。</li>
+<li>第 1 轮是 Souvlaki 的回合。他选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_1</span><script type="math/tex">a_1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span>，现在 <span class="arithmatex"><span class="MathJax_Preview">a = [1, 2, 2, 4]</span><script type="math/tex">a = [1, 2, 2, 4]</script></span>。</li>
+<li>第 2 轮是 Kalamaki 的回合。无论他选择跳过回合还是交换元素 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_3</span><script type="math/tex">a_3</script></span>，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 都将保持不变。假设他跳过回合。</li>
 <li>第 3 轮是 Souvlaki 的回合。他也可以选择跳过回合，因为如果他交换最后两个元素，他可能会输。</li>
 </ul>
-<p>在每一轮之后，<span class="arithmatex">\(a = [1, 2, 2, 4]\)</span>，按非递减顺序排序，所以无论 Kalamaki 如何选择，Souvlaki 都会获胜。</p>
-<p>在第二个样例中，由于所有元素都相等，<span class="arithmatex">\(a\)</span> 总是按非递减顺序排序，因此 Souvlaki 总是获胜。</p>
+<p>在每一轮之后，<span class="arithmatex"><span class="MathJax_Preview">a = [1, 2, 2, 4]</span><script type="math/tex">a = [1, 2, 2, 4]</script></span>，按非递减顺序排序，所以无论 Kalamaki 如何选择，Souvlaki 都会获胜。</p>
+<p>在第二个样例中，由于所有元素都相等，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 总是按非递减顺序排序，因此 Souvlaki 总是获胜。</p>
 <h1 id="ac">赛时AC代码</h1>
 <ul>
 <li>赛时思路，</li>
@@ -4941,76 +4941,76 @@ NO
 <h4 id="1">1. 问题的核心：谁在“捣乱”，谁能“修复”？</h4>
 <ul>
 <li>
-<p><strong>Souvlaki (S, 玩家1)</strong>：在第 <span class="arithmatex">\(1, 3, 5, \dots\)</span> 轮行动。他可以交换 <span class="arithmatex">\((a_1, a_2), (a_3, a_4), (a_5, a_6), \dots\)</span>。</p>
+<p><strong>Souvlaki (S, 玩家1)</strong>：在第 <span class="arithmatex"><span class="MathJax_Preview">1, 3, 5, \dots</span><script type="math/tex">1, 3, 5, \dots</script></span> 轮行动。他可以交换 <span class="arithmatex"><span class="MathJax_Preview">(a_1, a_2), (a_3, a_4), (a_5, a_6), \dots</span><script type="math/tex">(a_1, a_2), (a_3, a_4), (a_5, a_6), \dots</script></span>。</p>
 </li>
 <li>
-<p><strong>Kalamaki (K, 玩家2)</strong>：在第 <span class="arithmatex">\(2, 4, 6, \dots\)</span> 轮行动。他可以交换 <span class="arithmatex">\((a_2, a_3), (a_4, a_5), (a_6, a_7), \dots\)</span>。</p>
+<p><strong>Kalamaki (K, 玩家2)</strong>：在第 <span class="arithmatex"><span class="MathJax_Preview">2, 4, 6, \dots</span><script type="math/tex">2, 4, 6, \dots</script></span> 轮行动。他可以交换 <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots</span><script type="math/tex">(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots</script></span>。</p>
 </li>
 </ul>
 <p>这里最关键的洞察是：<strong>S 和 K 的行动“领地”是错开的！</strong></p>
 <ul>
 <li>
-<p>K 可以制造 <span class="arithmatex">\((a_2, a_3)\)</span> 之间的逆序。</p>
+<p>K 可以制造 <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3)</span><script type="math/tex">(a_2, a_3)</script></span> 之间的逆序。</p>
 </li>
 <li>
-<p>S <em>永远</em> 无法通过他的行动（交换 <span class="arithmatex">\(a_1, a_2\)</span> 或 <span class="arithmatex">\(a_3, a_4\)</span>）来_修复_ <span class="arithmatex">\((a_2, a_3)\)</span> 之间的逆序。</p>
+<p>S <em>永远</em> 无法通过他的行动（交换 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2</span><script type="math/tex">a_1, a_2</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">a_3, a_4</span><script type="math/tex">a_3, a_4</script></span>）来_修复_ <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3)</span><script type="math/tex">(a_2, a_3)</script></span> 之间的逆序。</p>
 </li>
 </ul>
 <h4 id="2-souvlaki">2. Souvlaki 的必胜策略是什么？</h4>
 <p>Souvlaki (S) 的目标是让数组最终有序。Kalamaki (K) 的目标是阻止这件事。</p>
 <p>S 拥有一个巨大的优势：游戏开始前可以任意排列数组。</p>
-<p>S 显然应该先把数组排成非递减顺序，即 <span class="arithmatex">\(a_1 \le a_2 \le a_3 \le \dots \le a_n\)</span>。这是他的目标状态。</p>
+<p>S 显然应该先把数组排成非递减顺序，即 <span class="arithmatex"><span class="MathJax_Preview">a_1 \le a_2 \le a_3 \le \dots \le a_n</span><script type="math/tex">a_1 \le a_2 \le a_3 \le \dots \le a_n</script></span>。这是他的目标状态。</p>
 <p>现在，游戏开始。</p>
 <ul>
 <li>
-<p><strong>第 1 轮 (S)</strong>：S 看到 <span class="arithmatex">\((a_1, a_2)\)</span>。因为 <span class="arithmatex">\(a_1 \le a_2\)</span>，S 绝对不会交换。他选择“跳过”。</p>
+<p><strong>第 1 轮 (S)</strong>：S 看到 <span class="arithmatex"><span class="MathJax_Preview">(a_1, a_2)</span><script type="math/tex">(a_1, a_2)</script></span>。因为 <span class="arithmatex"><span class="MathJax_Preview">a_1 \le a_2</span><script type="math/tex">a_1 \le a_2</script></span>，S 绝对不会交换。他选择“跳过”。</p>
 </li>
 <li>
-<p><strong>第 2 轮 (K)</strong>：K 看到 <span class="arithmatex">\((a_2, a_3)\)</span>。</p>
+<p><strong>第 2 轮 (K)</strong>：K 看到 <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3)</span><script type="math/tex">(a_2, a_3)</script></span>。</p>
 <ul>
 <li>
-<p><strong>情况 A (K 的机会)：</strong> 如果 <span class="arithmatex">\(a_2 &lt; a_3\)</span>，K 就可以选择“交换”，数组变为 <span class="arithmatex">\(a_1, a_3, a_2, a_4, \dots\)</span>。此时 <span class="arithmatex">\(a_3 \ge a_2\)</span>，数组出现了一个逆序。</p>
+<p><strong>情况 A (K 的机会)：</strong> 如果 <span class="arithmatex"><span class="MathJax_Preview">a_2 &lt; a_3</span><script type="math/tex">a_2 < a_3</script></span>，K 就可以选择“交换”，数组变为 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_3, a_2, a_4, \dots</span><script type="math/tex">a_1, a_3, a_2, a_4, \dots</script></span>。此时 <span class="arithmatex"><span class="MathJax_Preview">a_3 \ge a_2</span><script type="math/tex">a_3 \ge a_2</script></span>，数组出现了一个逆序。</p>
 </li>
 <li>
-<p><strong>情况 B (K 的绝望)：</strong> 如果 <span class="arithmatex">\(a_2 = a_3\)</span>，K 无论“交换”还是“跳过”，数组都保持 <span class="arithmatex">\(a_1, a_2, a_3, a_4, \dots\)</span>。K 无法制造逆序。</p>
+<p><strong>情况 B (K 的绝望)：</strong> 如果 <span class="arithmatex"><span class="MathJax_Preview">a_2 = a_3</span><script type="math/tex">a_2 = a_3</script></span>，K 无论“交换”还是“跳过”，数组都保持 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, a_3, a_4, \dots</span><script type="math/tex">a_1, a_2, a_3, a_4, \dots</script></span>。K 无法制造逆序。</p>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="3">3. 关键的推论</h4>
-<p>在第 2 轮，如果 <span class="arithmatex">\(a_2 &lt; a_3\)</span>，K 就可以制造一个 S _永远无法修复_的逆序，S 必败。</p>
+<p>在第 2 轮，如果 <span class="arithmatex"><span class="MathJax_Preview">a_2 &lt; a_3</span><script type="math/tex">a_2 < a_3</script></span>，K 就可以制造一个 S _永远无法修复_的逆序，S 必败。</p>
 <p>因此，S 要想_保证获胜_，他必须在游戏开始前，就确保 K _没有任何机会_制造逆序。</p>
 <p>S 必须让 K 的所有可能行动都变得“无效”。K 的行动有哪些？</p>
 <ul>
 <li>
-<p>第 2 轮，K 威胁 <span class="arithmatex">\((a_2, a_3)\)</span>。S 必须保证 <span class="arithmatex">\(a_2 = a_3\)</span>。</p>
+<p>第 2 轮，K 威胁 <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3)</span><script type="math/tex">(a_2, a_3)</script></span>。S 必须保证 <span class="arithmatex"><span class="MathJax_Preview">a_2 = a_3</span><script type="math/tex">a_2 = a_3</script></span>。</p>
 </li>
 <li>
-<p>第 4 轮，K 威胁 <span class="arithmatex">\((a_4, a_5)\)</span>。S 必须保证 <span class="arithmatex">\(a_4 = a_5\)</span>。</p>
+<p>第 4 轮，K 威胁 <span class="arithmatex"><span class="MathJax_Preview">(a_4, a_5)</span><script type="math/tex">(a_4, a_5)</script></span>。S 必须保证 <span class="arithmatex"><span class="MathJax_Preview">a_4 = a_5</span><script type="math/tex">a_4 = a_5</script></span>。</p>
 </li>
 <li>
-<p>第 6 轮，K 威胁 <span class="arithmatex">\((a_6, a_7)\)</span>。S 必须保证 <span class="arithmatex">\(a_6 = a_7\)</span>。</p>
+<p>第 6 轮，K 威胁 <span class="arithmatex"><span class="MathJax_Preview">(a_6, a_7)</span><script type="math/tex">(a_6, a_7)</script></span>。S 必须保证 <span class="arithmatex"><span class="MathJax_Preview">a_6 = a_7</span><script type="math/tex">a_6 = a_7</script></span>。</p>
 </li>
 <li>
 <p>...</p>
 </li>
 <li>
-<p>第 <span class="arithmatex">\(2k\)</span> 轮，K 威胁 <span class="arithmatex">\((a_{2k}, a_{2k+1})\)</span>。S 必须保证 <span class="arithmatex">\(a_{2k} = a_{2k+1}\)</span>。</p>
+<p>第 <span class="arithmatex"><span class="MathJax_Preview">2k</span><script type="math/tex">2k</script></span> 轮，K 威胁 <span class="arithmatex"><span class="MathJax_Preview">(a_{2k}, a_{2k+1})</span><script type="math/tex">(a_{2k}, a_{2k+1})</script></span>。S 必须保证 <span class="arithmatex"><span class="MathJax_Preview">a_{2k} = a_{2k+1}</span><script type="math/tex">a_{2k} = a_{2k+1}</script></span>。</p>
 </li>
 </ul>
 <p><strong>结论：</strong> Souvlaki 的必胜策略是：</p>
 <ol>
 <li>
-<p>将 <span class="arithmatex">\(a\)</span> 数组排序。</p>
+<p>将 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 数组排序。</p>
 </li>
 <li>
-<p>检查所有 K 可能行动的位置，即 <span class="arithmatex">\((a_2, a_3), (a_4, a_5), (a_6, a_7), \dots\)</span>。</p>
+<p>检查所有 K 可能行动的位置，即 <span class="arithmatex"><span class="MathJax_Preview">(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots</span><script type="math/tex">(a_2, a_3), (a_4, a_5), (a_6, a_7), \dots</script></span>。</p>
 </li>
 <li>
 <p>如果这些对中的_所有_元素都相等，S 就能获胜。</p>
 </li>
 <li>
-<p>只要有_任何一个_ <span class="arithmatex">\(a_{2k} &lt; a_{2k+1}\)</span>，K 就可以在那一轮进行交换，S 必败。</p>
+<p>只要有_任何一个_ <span class="arithmatex"><span class="MathJax_Preview">a_{2k} &lt; a_{2k+1}</span><script type="math/tex">a_{2k} < a_{2k+1}</script></span>，K 就可以在那一轮进行交换，S 必败。</p>
 </li>
 </ol>
 <hr />
@@ -5071,10 +5071,10 @@ NO
 <p><code>jiangly</code> 的代码是 0-indexed。他检查的是 <code>a[i]</code> 和 <code>a[i-1]</code>。</p>
 </li>
 <li>
-<p>当 <code>i=2</code>，检查 <code>a[2]</code> 和 <code>a[1]</code>。(对应 1-indexed 的 <span class="arithmatex">\(a_3\)</span> 和 <span class="arithmatex">\(a_2\)</span>)</p>
+<p>当 <code>i=2</code>，检查 <code>a[2]</code> 和 <code>a[1]</code>。(对应 1-indexed 的 <span class="arithmatex"><span class="MathJax_Preview">a_3</span><script type="math/tex">a_3</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span>)</p>
 </li>
 <li>
-<p>当 <code>i=4</code>，检查 <code>a[4]</code> 和 <code>a[3]</code>。(对应 1-indexed 的 <span class="arithmatex">\(a_5\)</span> 和 <span class="arithmatex">\(a_4\)</span>)</p>
+<p>当 <code>i=4</code>，检查 <code>a[4]</code> 和 <code>a[3]</code>。(对应 1-indexed 的 <span class="arithmatex"><span class="MathJax_Preview">a_5</span><script type="math/tex">a_5</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_4</span><script type="math/tex">a_4</script></span>)</p>
 </li>
 <li>
 <p>...</p>
@@ -5083,10 +5083,10 @@ NO
 <p>这个循环的<strong>终止条件</strong> <code>i &lt; n</code> 自动处理了奇偶性：</p>
 <ul>
 <li>
-<p><strong>如果 n=5 (奇数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 <span class="arithmatex">\((a_2,a_3)\)</span> 和 <span class="arithmatex">\((a_4,a_5)\)</span>。 <code>i=6</code> 时 <code>6 &lt; 5</code> 不成立，循环结束。正确。</p>
+<p><strong>如果 n=5 (奇数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 <span class="arithmatex"><span class="MathJax_Preview">(a_2,a_3)</span><script type="math/tex">(a_2,a_3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(a_4,a_5)</span><script type="math/tex">(a_4,a_5)</script></span>。 <code>i=6</code> 时 <code>6 &lt; 5</code> 不成立，循环结束。正确。</p>
 </li>
 <li>
-<p><strong>如果 n=6 (偶数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 <span class="arithmatex">\((a_2,a_3)\)</span> 和 <span class="arithmatex">\((a_4,a_5)\)</span>。 <code>i=6</code> 时 <code>6 &lt; 6</code> 不成立，循环结束。正确。</p>
+<p><strong>如果 n=6 (偶数)</strong>：<code>i</code> 会取 2, 4。检查 <code>(a[1],a[2])</code> 和 <code>(a[3],a[4])</code>。对应我们分析的 <span class="arithmatex"><span class="MathJax_Preview">(a_2,a_3)</span><script type="math/tex">(a_2,a_3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(a_4,a_5)</span><script type="math/tex">(a_4,a_5)</script></span>。 <code>i=6</code> 时 <code>6 &lt; 6</code> 不成立，循环结束。正确。</p>
 </li>
 </ul>
 </li>
@@ -5105,13 +5105,13 @@ NO
 <p>(1-indexed) <code>for (int i = 2; i + 1 &lt;= n; i += 2)</code></p>
 </li>
 <li>
-<p>这个循环 <code>i</code> 会取 <span class="arithmatex">\(2, 4, 6, \dots\)</span></p>
+<p>这个循环 <code>i</code> 会取 <span class="arithmatex"><span class="MathJax_Preview">2, 4, 6, \dots</span><script type="math/tex">2, 4, 6, \dots</script></span></p>
 </li>
 <li>
 <p>它会检查 <code>a[i]</code> 和 <code>a[i+1]</code></p>
 </li>
 <li>
-<p><code>i</code> 的上界是 <code>i+1 &lt;= n</code> (即 <span class="arithmatex">\(i\)</span> 最大可以是 <span class="arithmatex">\(n-1\)</span>)。</p>
+<p><code>i</code> 的上界是 <code>i+1 &lt;= n</code> (即 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 最大可以是 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>)。</p>
 </li>
 <li>
 <p><strong>如果 n=5</strong>：<code>i</code> 取 2 (检查 <code>a[2],a[3]</code>)，<code>i</code> 取 4 (检查 <code>a[4],a[5]</code>)。<code>i=6</code> 时 <code>6+1 &lt;= 5</code> 不成立。</p>
@@ -5129,10 +5129,10 @@ NO
 <p>这个分析对你有帮助吗？你想不想再看一个类似的、关于博弈论和策略简化的题目？</p>
 <h1 id="cf">CF 题解思路</h1>
 <ul>
-<li>假设轮到卡拉马基在某个偶数轮 <span class="arithmatex">\(2k\)</span> 上。Kalamaki可以将元素 <span class="arithmatex">\(a_{2k}\)</span> 与 <span class="arithmatex">\(a_{2k+1}\)</span> 交换。如果 <span class="arithmatex">\(a_{2k} &gt; a_{2k+1}\)</span> ，他将不交换元素，但如果 <span class="arithmatex">\(a_{2k} &lt; a_{2k+1}\)</span> ，他将交换元素。在这两种情况下，他都赢得了游戏，因为数组永远不会被排序。因此，如果 <span class="arithmatex">\(a_{2k} \neq a_{2k+1}\)</span> ，卡拉马基无论如何都会赢。现在假设Kalamaki每次玩游戏时，他可以交换的两个元素具有相同的值，否则我们就会证明他赢了。</li>
+<li>假设轮到卡拉马基在某个偶数轮 <span class="arithmatex"><span class="MathJax_Preview">2k</span><script type="math/tex">2k</script></span> 上。Kalamaki可以将元素 <span class="arithmatex"><span class="MathJax_Preview">a_{2k}</span><script type="math/tex">a_{2k}</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">a_{2k+1}</span><script type="math/tex">a_{2k+1}</script></span> 交换。如果 <span class="arithmatex"><span class="MathJax_Preview">a_{2k} &gt; a_{2k+1}</span><script type="math/tex">a_{2k} > a_{2k+1}</script></span> ，他将不交换元素，但如果 <span class="arithmatex"><span class="MathJax_Preview">a_{2k} &lt; a_{2k+1}</span><script type="math/tex">a_{2k} < a_{2k+1}</script></span> ，他将交换元素。在这两种情况下，他都赢得了游戏，因为数组永远不会被排序。因此，如果 <span class="arithmatex"><span class="MathJax_Preview">a_{2k} \neq a_{2k+1}</span><script type="math/tex">a_{2k} \neq a_{2k+1}</script></span> ，卡拉马基无论如何都会赢。现在假设Kalamaki每次玩游戏时，他可以交换的两个元素具有相同的值，否则我们就会证明他赢了。</li>
 </ul>
-<p>假设轮到Souvlaki的回合 <span class="arithmatex">\(2k+1\)</span> 。根据前面的假设，我们知道 <span class="arithmatex">\(a_{2k} = a_{2k+1}\)</span> 。如果 <span class="arithmatex">\(a_{2k+1} &gt; a_{2k+2}\)</span> ，我们知道 <span class="arithmatex">\(a_{2k+1} = a_{2k} &gt; a_{2k+2}\)</span> ，但他无法交换 <span class="arithmatex">\(a_{2k}\)</span> 和 <span class="arithmatex">\(a_{2k+2}\)</span> ，因此他输了。否则，如果 <span class="arithmatex">\(a_{2k+1} \le a_{2k+2}\)</span> ，他将什么也不做，并进入下一轮。从这些观察中，我们看到 <span class="arithmatex">\(a\)</span> 可被Souvlaki赢得，当且仅当： <span class="arithmatex">\(a_1 \le a_2 = a_3 \le a_4 = a_5 \le \ldots\)</span> ，或 <span class="arithmatex">\(a_2 \le a_1 = a_3 \le a_4 = a_5 \le \ldots\)</span> 。</p>
-<p>现在很明显，在游戏开始之前，Souvlaki将以非递减顺序排序 <span class="arithmatex">\(a\)</span> 。要确定Souvlaki是否获胜，只需检查排序后是否满足上述条件即可。</p>
+<p>假设轮到Souvlaki的回合 <span class="arithmatex"><span class="MathJax_Preview">2k+1</span><script type="math/tex">2k+1</script></span> 。根据前面的假设，我们知道 <span class="arithmatex"><span class="MathJax_Preview">a_{2k} = a_{2k+1}</span><script type="math/tex">a_{2k} = a_{2k+1}</script></span> 。如果 <span class="arithmatex"><span class="MathJax_Preview">a_{2k+1} &gt; a_{2k+2}</span><script type="math/tex">a_{2k+1} > a_{2k+2}</script></span> ，我们知道 <span class="arithmatex"><span class="MathJax_Preview">a_{2k+1} = a_{2k} &gt; a_{2k+2}</span><script type="math/tex">a_{2k+1} = a_{2k} > a_{2k+2}</script></span> ，但他无法交换 <span class="arithmatex"><span class="MathJax_Preview">a_{2k}</span><script type="math/tex">a_{2k}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a_{2k+2}</span><script type="math/tex">a_{2k+2}</script></span> ，因此他输了。否则，如果 <span class="arithmatex"><span class="MathJax_Preview">a_{2k+1} \le a_{2k+2}</span><script type="math/tex">a_{2k+1} \le a_{2k+2}</script></span> ，他将什么也不做，并进入下一轮。从这些观察中，我们看到 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 可被Souvlaki赢得，当且仅当： <span class="arithmatex"><span class="MathJax_Preview">a_1 \le a_2 = a_3 \le a_4 = a_5 \le \ldots</span><script type="math/tex">a_1 \le a_2 = a_3 \le a_4 = a_5 \le \ldots</script></span> ，或 <span class="arithmatex"><span class="MathJax_Preview">a_2 \le a_1 = a_3 \le a_4 = a_5 \le \ldots</span><script type="math/tex">a_2 \le a_1 = a_3 \le a_4 = a_5 \le \ldots</script></span> 。</p>
+<p>现在很明显，在游戏开始之前，Souvlaki将以非递减顺序排序 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 。要确定Souvlaki是否获胜，只需检查排序后是否满足上述条件即可。</p>
 <h1 id="cf_1">CF 题解代码</h1>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>

@@ -4800,16 +4800,16 @@
 <p>时间限制：每测试点2秒<br />
 内存限制：每测试点512MB  </p>
 <h2 id="_1">问题描述</h2>
-<p>考虑用数字填充的 <span class="arithmatex">\(n \times n\)</span> 网格，填充规则如下：<br />
-- 第一行从左到右包含从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的整数；<br />
-- 第二行从左到右包含从 <span class="arithmatex">\((n+1)\)</span> 到 <span class="arithmatex">\(2n\)</span> 的整数；<br />
-- 依此类推，直到第 <span class="arithmatex">\(n\)</span> 行，包含从 <span class="arithmatex">\((n^2-n+1)\)</span> 到 <span class="arithmatex">\(n^2\)</span> 的整数。  </p>
+<p>考虑用数字填充的 <span class="arithmatex"><span class="MathJax_Preview">n \times n</span><script type="math/tex">n \times n</script></span> 网格，填充规则如下：<br />
+- 第一行从左到右包含从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的整数；<br />
+- 第二行从左到右包含从 <span class="arithmatex"><span class="MathJax_Preview">(n+1)</span><script type="math/tex">(n+1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">2n</span><script type="math/tex">2n</script></span> 的整数；<br />
+- 依此类推，直到第 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行，包含从 <span class="arithmatex"><span class="MathJax_Preview">(n^2-n+1)</span><script type="math/tex">(n^2-n+1)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span> 的整数。  </p>
 <p>定义单元格的<strong>成本</strong>为其数值加上所有相邻单元格数值之和。如果两个单元格共享一条边，则视为相邻。  </p>
 <p>你的任务是计算网格中所有单元格的最大成本。<br />
 ![[Pasted image 20251201120745.png]]</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含单个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 100\)</span>) —— 测试用例数量。<br />
-每个测试用例仅包含一行，为一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(1 \leq n \leq 100\)</span>)。  </p>
+<p>第一行包含单个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 100</span><script type="math/tex">1 \leq t \leq 100</script></span>) —— 测试用例数量。<br />
+每个测试用例仅包含一行，为一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 100</span><script type="math/tex">1 \leq n \leq 100</script></span>)。  </p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数 —— 网格中所有单元格的最大成本。  </p>
 <h2 id="_4">样例输入</h2>
@@ -4829,11 +4829,11 @@
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <ul>
-<li>当 <span class="arithmatex">\(n=1\)</span> 时，只有一个单元格，成本为 <span class="arithmatex">\(1\)</span>。  </li>
-<li>当 <span class="arithmatex">\(n=2\)</span> 时，数值为 <span class="arithmatex">\(4\)</span> 的单元格成本最大：<span class="arithmatex">\(4+2+3=9\)</span>。  </li>
-<li>当 <span class="arithmatex">\(n=3\)</span> 时，数值为 <span class="arithmatex">\(8\)</span> 的单元格成本最大：<span class="arithmatex">\(8+5+7+9=29\)</span>。  </li>
-<li>当 <span class="arithmatex">\(n=4\)</span> 时，数值为 <span class="arithmatex">\(15\)</span> 的单元格成本最大：<span class="arithmatex">\(15+11+14+16=56\)</span>。  </li>
-<li>当 <span class="arithmatex">\(n=5\)</span> 时，数值为 <span class="arithmatex">\(19\)</span> 的单元格成本最大：<span class="arithmatex">\(19+14+18+20+24=95\)</span>。</li>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">n=1</span><script type="math/tex">n=1</script></span> 时，只有一个单元格，成本为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。  </li>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span> 时，数值为 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 的单元格成本最大：<span class="arithmatex"><span class="MathJax_Preview">4+2+3=9</span><script type="math/tex">4+2+3=9</script></span>。  </li>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span> 时，数值为 <span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 的单元格成本最大：<span class="arithmatex"><span class="MathJax_Preview">8+5+7+9=29</span><script type="math/tex">8+5+7+9=29</script></span>。  </li>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">n=4</span><script type="math/tex">n=4</script></span> 时，数值为 <span class="arithmatex"><span class="MathJax_Preview">15</span><script type="math/tex">15</script></span> 的单元格成本最大：<span class="arithmatex"><span class="MathJax_Preview">15+11+14+16=56</span><script type="math/tex">15+11+14+16=56</script></span>。  </li>
+<li>当 <span class="arithmatex"><span class="MathJax_Preview">n=5</span><script type="math/tex">n=5</script></span> 时，数值为 <span class="arithmatex"><span class="MathJax_Preview">19</span><script type="math/tex">19</script></span> 的单元格成本最大：<span class="arithmatex"><span class="MathJax_Preview">19+14+18+20+24=95</span><script type="math/tex">19+14+18+20+24=95</script></span>。</li>
 </ul>
 <h1 id="ac">暴力AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2170 A</span>
@@ -4890,10 +4890,10 @@
 <h3 id="_7">核心逻辑</h3>
 <ol>
 <li>
-<p><strong>构建网格</strong>：按照题目规则，双重循环填充 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n^2\)</span> 的数字。</p>
+<p><strong>构建网格</strong>：按照题目规则，双重循环填充 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span> 的数字。</p>
 </li>
 <li>
-<p><strong>边界处理（亮点）</strong>：你声明了 <code>a[200][200]</code>，并在循环中清零。因为题目最大 <span class="arithmatex">\(n=100\)</span>，当你访问 <code>a[i+1][j]</code> 或 <code>a[i][j+1]</code> 时，如果越界，访问到的是填充的 <code>0</code>。这意味着你<strong>不需要写大量的 <code>if</code> 语句</strong>来判断是否在边界上（例如 <code>if (i &gt; 1)</code> 或 <code>if (j &lt; n)</code>）。这大大简化了代码逻辑。</p>
+<p><strong>边界处理（亮点）</strong>：你声明了 <code>a[200][200]</code>，并在循环中清零。因为题目最大 <span class="arithmatex"><span class="MathJax_Preview">n=100</span><script type="math/tex">n=100</script></span>，当你访问 <code>a[i+1][j]</code> 或 <code>a[i][j+1]</code> 时，如果越界，访问到的是填充的 <code>0</code>。这意味着你<strong>不需要写大量的 <code>if</code> 语句</strong>来判断是否在边界上（例如 <code>if (i &gt; 1)</code> 或 <code>if (j &lt; n)</code>）。这大大简化了代码逻辑。</p>
 </li>
 <li>
 <p><strong>计算代价</strong>：再次遍历网格，暴力计算每个点的 <code>数值 + 上 + 下 + 左 + 右</code>，取最大值。</p>
@@ -4902,20 +4902,20 @@
 <h3 id="_8">复杂度分析</h3>
 <ul>
 <li>
-<p><strong>时间复杂度</strong>：<span class="arithmatex">\(O(T \times N^2)\)</span>。由于 <span class="arithmatex">\(N \le 100\)</span>，每次测试用例运算量约为 <span class="arithmatex">\(10^4\)</span>，总运算量约为 <span class="arithmatex">\(10^6\)</span>，远低于 <span class="arithmatex">\(2\)</span> 秒的时间限制（通常 <span class="arithmatex">\(2\)</span> 秒可以跑 <span class="arithmatex">\(10^8\)</span> 次运算）。<strong>这种做法在比赛中是满分策略，因为它最不容易写错。</strong></p>
+<p><strong>时间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(T \times N^2)</span><script type="math/tex">O(T \times N^2)</script></span>。由于 <span class="arithmatex"><span class="MathJax_Preview">N \le 100</span><script type="math/tex">N \le 100</script></span>，每次测试用例运算量约为 <span class="arithmatex"><span class="MathJax_Preview">10^4</span><script type="math/tex">10^4</script></span>，总运算量约为 <span class="arithmatex"><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span>，远低于 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 秒的时间限制（通常 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 秒可以跑 <span class="arithmatex"><span class="MathJax_Preview">10^8</span><script type="math/tex">10^8</script></span> 次运算）。<strong>这种做法在比赛中是满分策略，因为它最不容易写错。</strong></p>
 </li>
 <li>
-<p><strong>空间复杂度</strong>：<span class="arithmatex">\(O(N^2)\)</span>，完全可以接受。</p>
+<p><strong>空间复杂度</strong>：<span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span>，完全可以接受。</p>
 </li>
 </ul>
 <h3 id="_9">代码小细节建议</h3>
 <p>虽然代码已经 AC，但在 C++ 竞赛编程中有一些习惯可以改进：</p>
 <ul>
-<li><strong>清空数组</strong>：你使用了双重循环手动清零。更简便的方法是使用 <code>memset(a, 0, sizeof(a));</code>（需要头文件 <code>&lt;cstring&gt;</code>），或者由于 <span class="arithmatex">\(N\)</span> 很小，每次 <code>solve</code> 里直接重新覆盖其实也行（但在本题因为用了 padding 处理边界，必须保证 padding 处是 0，所以清空是必须的）。</li>
+<li><strong>清空数组</strong>：你使用了双重循环手动清零。更简便的方法是使用 <code>memset(a, 0, sizeof(a));</code>（需要头文件 <code>&lt;cstring&gt;</code>），或者由于 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 很小，每次 <code>solve</code> 里直接重新覆盖其实也行（但在本题因为用了 padding 处理边界，必须保证 padding 处是 0，所以清空是必须的）。</li>
 </ul>
 <hr />
 <h2 id="2-o1">2. 进阶分析：有没有 O(1) 的数学解法？</h2>
-<p>虽然 <span class="arithmatex">\(N=100\)</span> 暴力足够，但如果 <span class="arithmatex">\(N=10^9\)</span> 怎么办？这道题其实存在数学规律。</p>
+<p>虽然 <span class="arithmatex"><span class="MathJax_Preview">N=100</span><script type="math/tex">N=100</script></span> 暴力足够，但如果 <span class="arithmatex"><span class="MathJax_Preview">N=10^9</span><script type="math/tex">N=10^9</script></span> 怎么办？这道题其实存在数学规律。</p>
 <h3 id="_10">观察</h3>
 <p>我们要找 <code>当前值 + 邻居和</code> 的最大值。</p>
 <ul>
@@ -4927,27 +4927,27 @@
 </li>
 </ul>
 <h3 id="_11">候选点分析</h3>
-<p>实际上，最大值只可能出现在两个位置（当 <span class="arithmatex">\(N\)</span> 较大时）：</p>
+<p>实际上，最大值只可能出现在两个位置（当 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 较大时）：</p>
 <ol>
 <li>
-<p><strong>最后一行倒数第二个 <span class="arithmatex">\((n, n-1)\)</span></strong>：</p>
+<p><strong>最后一行倒数第二个 <span class="arithmatex"><span class="MathJax_Preview">(n, n-1)</span><script type="math/tex">(n, n-1)</script></span></strong>：</p>
 <ul>
 <li>
-<p>数值很大（<span class="arithmatex">\(n^2-1\)</span>），有 <strong>3个</strong> 邻居。</p>
+<p>数值很大（<span class="arithmatex"><span class="MathJax_Preview">n^2-1</span><script type="math/tex">n^2-1</script></span>），有 <strong>3个</strong> 邻居。</p>
 </li>
 <li>
-<p>公式推导约为：<span class="arithmatex">\(4n^2 - n - 4\)</span>。</p>
+<p>公式推导约为：<span class="arithmatex"><span class="MathJax_Preview">4n^2 - n - 4</span><script type="math/tex">4n^2 - n - 4</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>倒数第二行倒数第二个 <span class="arithmatex">\((n-1, n-1)\)</span></strong>：</p>
+<p><strong>倒数第二行倒数第二个 <span class="arithmatex"><span class="MathJax_Preview">(n-1, n-1)</span><script type="math/tex">(n-1, n-1)</script></span></strong>：</p>
 <ul>
 <li>
 <p>数值稍小，但有 <strong>4个</strong> 邻居（被大数包围）。</p>
 </li>
 <li>
-<p>公式推导约为：<span class="arithmatex">\(5(n^2 - n - 1) = 5n^2 - 5n - 5\)</span>。</p>
+<p>公式推导约为：<span class="arithmatex"><span class="MathJax_Preview">5(n^2 - n - 1) = 5n^2 - 5n - 5</span><script type="math/tex">5(n^2 - n - 1) = 5n^2 - 5n - 5</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4955,25 +4955,25 @@
 <h3 id="_12">规律验证（对应样例）</h3>
 <ul>
 <li>
-<p><span class="arithmatex">\(N=3\)</span>: 比较位置 <span class="arithmatex">\((3,2)\)</span> 和 <span class="arithmatex">\((2,2)\)</span>。答案是 29（位置 <span class="arithmatex">\((2,2)\)</span>，数值8，4个邻居）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N=3</span><script type="math/tex">N=3</script></span>: 比较位置 <span class="arithmatex"><span class="MathJax_Preview">(3,2)</span><script type="math/tex">(3,2)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(2,2)</span><script type="math/tex">(2,2)</script></span>。答案是 29（位置 <span class="arithmatex"><span class="MathJax_Preview">(2,2)</span><script type="math/tex">(2,2)</script></span>，数值8，4个邻居）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(N=4\)</span>: 比较位置 <span class="arithmatex">\((4,3)\)</span> 和 <span class="arithmatex">\((3,3)\)</span>。答案是 56（位置 <span class="arithmatex">\((4,3)\)</span>，数值15，3个邻居）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N=4</span><script type="math/tex">N=4</script></span>: 比较位置 <span class="arithmatex"><span class="MathJax_Preview">(4,3)</span><script type="math/tex">(4,3)</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">(3,3)</span><script type="math/tex">(3,3)</script></span>。答案是 56（位置 <span class="arithmatex"><span class="MathJax_Preview">(4,3)</span><script type="math/tex">(4,3)</script></span>，数值15，3个邻居）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(N=5\)</span>: 答案是 95（位置 <span class="arithmatex">\((4,4)\)</span>，数值19，4个邻居）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N=5</span><script type="math/tex">N=5</script></span>: 答案是 95（位置 <span class="arithmatex"><span class="MathJax_Preview">(4,4)</span><script type="math/tex">(4,4)</script></span>，数值19，4个邻居）。</p>
 </li>
 </ul>
 <h3 id="_13">结论</h3>
 <ul>
 <li>
-<p>当 <span class="arithmatex">\(N\)</span> 较小时（<span class="arithmatex">\(N &lt; 5\)</span>），边缘的大数值点优势明显。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 较小时（<span class="arithmatex"><span class="MathJax_Preview">N &lt; 5</span><script type="math/tex">N < 5</script></span>），边缘的大数值点优势明显。</p>
 </li>
 <li>
-<p>当 <span class="arithmatex">\(N \ge 5\)</span> 时，内部的那个点（<span class="arithmatex">\((n-1, n-1)\)</span>）因为多一个邻居，且邻居数值都很大，其总和反超边缘点。</p>
+<p>当 <span class="arithmatex"><span class="MathJax_Preview">N \ge 5</span><script type="math/tex">N \ge 5</script></span> 时，内部的那个点（<span class="arithmatex"><span class="MathJax_Preview">(n-1, n-1)</span><script type="math/tex">(n-1, n-1)</script></span>）因为多一个邻居，且邻居数值都很大，其总和反超边缘点。</p>
 </li>
 <li>
-<p><strong>数学解法</strong>：可以根据 <span class="arithmatex">\(N\)</span> 的大小分段输出公式，但这容易因为推导错误导致 WA。<strong>在数据范围允许的情况下，暴力模拟永远优于数学推导。</strong></p>
+<p><strong>数学解法</strong>：可以根据 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的大小分段输出公式，但这容易因为推导错误导致 WA。<strong>在数据范围允许的情况下，暴力模拟永远优于数学推导。</strong></p>
 </li>
 </ul>
 <hr />
@@ -4983,7 +4983,7 @@
 <p>你代码中最棒的部分就是处理边界的方式。</p>
 <ul>
 <li>
-<p><strong>问题</strong>：在网格题中，计算 <span class="arithmatex">\((x, y)\)</span> 的上下左右时，通常需要写：</p>
+<p><strong>问题</strong>：在网格题中，计算 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 的上下左右时，通常需要写：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>int sum = val[x][y];
 if(x &gt; 1) sum += val[x-1][y];
@@ -4994,7 +4994,7 @@ if(x &lt; n) sum += val[x+1][y];
 </li>
 <li>
 <p>解法：</p>
-<p>开数组时稍微开大一点（例如 <span class="arithmatex">\(N\)</span> 是 100，开 a[105][105]），并初始化为 0（或其他对答案无影响的值，如求最小值时初始化为 INF）。</p>
+<p>开数组时稍微开大一点（例如 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 是 100，开 a[105][105]），并初始化为 0（或其他对答案无影响的值，如求最小值时初始化为 INF）。</p>
 <p>这样你就可以直接写：</p>
 <p>C++</p>
 <div class="highlight"><pre><span></span><code>int sum = a[i][j] + a[i-1][j] + a[i+1][j] + a[i][j-1] + a[i][j+1];
@@ -5005,13 +5005,13 @@ if(x &lt; n) sum += val[x+1][y];
 <h3 id="_14">📌 策略：看数据范围选算法</h3>
 <ul>
 <li>
-<p><span class="arithmatex">\(N \le 100 \implies O(N^3), O(N^4)\)</span> 都是安全的。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">N \le 100 \implies O(N^3), O(N^4)</span><script type="math/tex">N \le 100 \implies O(N^3), O(N^4)</script></span> 都是安全的。</p>
 </li>
 <li>
 <p>看到这种范围，<strong>不要想复杂的数学公式</strong>，直接模拟。</p>
 </li>
 <li>
-<p>只有当 <span class="arithmatex">\(N \ge 10^5\)</span> 时，才需要去推导公式或找规律。</p>
+<p>只有当 <span class="arithmatex"><span class="MathJax_Preview">N \ge 10^5</span><script type="math/tex">N \ge 10^5</script></span> 时，才需要去推导公式或找规律。</p>
 </li>
 </ul>
 <hr />

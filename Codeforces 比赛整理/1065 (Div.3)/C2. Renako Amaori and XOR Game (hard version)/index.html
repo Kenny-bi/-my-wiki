@@ -1523,10 +1523,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-s_a-oplus-s_b-0" class="md-nav__link">
+  <a href="#a-s_a-oplus-s_b-0s_a-oplus-s_b-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 A：初始 \(S_A \oplus S_B = 0\)
+        情况 A：初始 S_A \oplus S_B = 0S_A \oplus S_B = 0
       
     </span>
   </a>
@@ -1534,10 +1534,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-s_a-oplus-s_b-neq-0" class="md-nav__link">
+  <a href="#b-s_a-oplus-s_b-neq-0s_a-oplus-s_b-neq-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 B：初始 \(S_A \oplus S_B \neq 0\)
+        情况 B：初始 S_A \oplus S_B \neq 0S_A \oplus S_B \neq 0
       
     </span>
   </a>
@@ -4600,10 +4600,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-s_a-oplus-s_b-0" class="md-nav__link">
+  <a href="#a-s_a-oplus-s_b-0s_a-oplus-s_b-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 A：初始 \(S_A \oplus S_B = 0\)
+        情况 A：初始 S_A \oplus S_B = 0S_A \oplus S_B = 0
       
     </span>
   </a>
@@ -4611,10 +4611,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-s_a-oplus-s_b-neq-0" class="md-nav__link">
+  <a href="#b-s_a-oplus-s_b-neq-0s_a-oplus-s_b-neq-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        情况 B：初始 \(S_A \oplus S_B \neq 0\)
+        情况 B：初始 S_A \oplus S_B \neq 0S_A \oplus S_B \neq 0
       
     </span>
   </a>
@@ -4758,19 +4758,19 @@
 <h2 id="_1">问题描述</h2>
 <p>是啊。我不能再这样下去了。不。该死的。路。<br />
 — Renako Amaori  </p>
-<p><strong>这是问题的困难版本。简单版本和困难版本之间的唯一区别是，在困难版本中，<span class="arithmatex">\(a_i,b_i \leq 10^6\)</span>。</strong></p>
+<p><strong>这是问题的困难版本。简单版本和困难版本之间的唯一区别是，在困难版本中，<span class="arithmatex"><span class="MathJax_Preview">a_i,b_i \leq 10^6</span><script type="math/tex">a_i,b_i \leq 10^6</script></span>。</strong></p>
 <p>Renako陷入了进退两难的境地……当然，我是指Ajisai和Mai！她们两个都想和她出去玩，而她就是无法决定！所以Ajisai和Mai决定玩XOR游戏。</p>
-<p>Ajisai和Mai被给定长度为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> (<span class="arithmatex">\(0 \leq a_i,b_i \leq 10^6\)</span>)。她们将玩一个持续 <span class="arithmatex">\(n\)</span> 回合的游戏，其中Ajisai在奇数回合行动，Mai在偶数回合行动。在第 <span class="arithmatex">\(i\)</span> 回合，行动的玩家可以选择交换 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(b_i\)</span>，或者不操作。</p>
-<p>请注意，如果发生交换，被交换的索引必须与回合号匹配。例如，在第一个回合，Ajisai可以选择交换 <span class="arithmatex">\(a_1\)</span> 和 <span class="arithmatex">\(b_1\)</span>，或者不操作。在第二个回合，Mai可以选择交换 <span class="arithmatex">\(a_2\)</span> 和 <span class="arithmatex">\(b_2\)</span>，或者不操作。这样持续 <span class="arithmatex">\(n\)</span> 回合。因此，只有Ajisai可以交换奇数索引，只有Mai可以交换偶数索引。</p>
-<p>游戏结束时，Ajisai的得分为 <span class="arithmatex">\(a_1 \oplus a_2 \oplus \cdots \oplus a_n\)</span>，Mai的得分为 <span class="arithmatex">\(b_1 \oplus b_2 \oplus \cdots \oplus b_n^*\)</span>。得分较高的玩家获胜。如果玩家得分相同，游戏以平局结束。</p>
+<p>Ajisai和Mai被给定长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \leq a_i,b_i \leq 10^6</span><script type="math/tex">0 \leq a_i,b_i \leq 10^6</script></span>)。她们将玩一个持续 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 回合的游戏，其中Ajisai在奇数回合行动，Mai在偶数回合行动。在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 回合，行动的玩家可以选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span>，或者不操作。</p>
+<p>请注意，如果发生交换，被交换的索引必须与回合号匹配。例如，在第一个回合，Ajisai可以选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_1</span><script type="math/tex">a_1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_1</span><script type="math/tex">b_1</script></span>，或者不操作。在第二个回合，Mai可以选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_2</span><script type="math/tex">b_2</script></span>，或者不操作。这样持续 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 回合。因此，只有Ajisai可以交换奇数索引，只有Mai可以交换偶数索引。</p>
+<p>游戏结束时，Ajisai的得分为 <span class="arithmatex"><span class="MathJax_Preview">a_1 \oplus a_2 \oplus \cdots \oplus a_n</span><script type="math/tex">a_1 \oplus a_2 \oplus \cdots \oplus a_n</script></span>，Mai的得分为 <span class="arithmatex"><span class="MathJax_Preview">b_1 \oplus b_2 \oplus \cdots \oplus b_n^*</span><script type="math/tex">b_1 \oplus b_2 \oplus \cdots \oplus b_n^*</script></span>。得分较高的玩家获胜。如果玩家得分相同，游戏以平局结束。</p>
 <p>确定在最优策略下游戏的结果。更正式地说，如果存在一个策略使得某个玩家无论对手如何选择都能获胜，则认为该玩家在最优策略下获胜。如果两个玩家都没有这样的策略，则认为游戏在最优策略下是平局。</p>
-<p><span class="arithmatex">\(^*\oplus\)</span> 表示按位异或操作。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*\oplus</span><script type="math/tex">^*\oplus</script></span> 表示按位异或操作。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>) — 测试用例的数量。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(1 \leq n \leq 2 \cdot 10^5\)</span>)。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \ldots, a_n\)</span> (<span class="arithmatex">\(0 \leq a_i \leq 10^6\)</span>)。</p>
-<p>每个测试用例的第三行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(b_1, b_2, \ldots, b_n\)</span> (<span class="arithmatex">\(0 \leq b_i \leq 10^6\)</span>)。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>) — 测试用例的数量。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq n \leq 2 \cdot 10^5</script></span>)。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \ldots, a_n</span><script type="math/tex">a_1, a_2, \ldots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \leq a_i \leq 10^6</span><script type="math/tex">0 \leq a_i \leq 10^6</script></span>)。</p>
+<p>每个测试用例的第三行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">b_1, b_2, \ldots, b_n</span><script type="math/tex">b_1, b_2, \ldots, b_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \leq b_i \leq 10^6</span><script type="math/tex">0 \leq b_i \leq 10^6</script></span>)。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，如果Ajisai在最优策略下获胜，输出一行"Ajisai"；如果Mai在最优策略下获胜，输出一行"Mai"；如果游戏在最优策略下以平局结束，输出一行"Tie"。</p>
 <p>答案可以以任何大小写形式输出。例如，字符串"mAi"、"mai"、"MAI"和"maI"都会被识别为"Mai"。</p>
@@ -4805,11 +4805,11 @@ Tie
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <p>在第一个样例中，游戏可能的一种进行方式如下：</p>
-<p>在第1回合，Ajisai选择交换 <span class="arithmatex">\(a_1\)</span> 和 <span class="arithmatex">\(b_1\)</span>。现在数组变为 <span class="arithmatex">\(a=[3,4,6,1]\)</span> 和 <span class="arithmatex">\(b=[1,2,3,7]\)</span>。</p>
-<p>在第2回合，Mai选择交换 <span class="arithmatex">\(a_2\)</span> 和 <span class="arithmatex">\(b_2\)</span>。现在数组变为 <span class="arithmatex">\(a=[3,2,6,1]\)</span> 和 <span class="arithmatex">\(b=[1,4,3,7]\)</span>。</p>
+<p>在第1回合，Ajisai选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_1</span><script type="math/tex">a_1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_1</span><script type="math/tex">b_1</script></span>。现在数组变为 <span class="arithmatex"><span class="MathJax_Preview">a=[3,4,6,1]</span><script type="math/tex">a=[3,4,6,1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b=[1,2,3,7]</span><script type="math/tex">b=[1,2,3,7]</script></span>。</p>
+<p>在第2回合，Mai选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_2</span><script type="math/tex">b_2</script></span>。现在数组变为 <span class="arithmatex"><span class="MathJax_Preview">a=[3,2,6,1]</span><script type="math/tex">a=[3,2,6,1]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b=[1,4,3,7]</span><script type="math/tex">b=[1,4,3,7]</script></span>。</p>
 <p>在第3回合，Ajisai选择不操作。</p>
-<p>在第4回合，Mai选择交换 <span class="arithmatex">\(a_4\)</span> 和 <span class="arithmatex">\(b_4\)</span>。现在数组变为 <span class="arithmatex">\(a=[3,2,6,7]\)</span> 和 <span class="arithmatex">\(b=[1,4,3,1]\)</span>。</p>
-<p>现在，Ajisai的最终得分是 <span class="arithmatex">\(3 \oplus 2 \oplus 6 \oplus 7 = 0\)</span>，Mai的最终得分是 <span class="arithmatex">\(1 \oplus 4 \oplus 3 \oplus 1 = 7\)</span>。因此，Mai赢得了游戏。</p>
+<p>在第4回合，Mai选择交换 <span class="arithmatex"><span class="MathJax_Preview">a_4</span><script type="math/tex">a_4</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_4</span><script type="math/tex">b_4</script></span>。现在数组变为 <span class="arithmatex"><span class="MathJax_Preview">a=[3,2,6,7]</span><script type="math/tex">a=[3,2,6,7]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b=[1,4,3,1]</span><script type="math/tex">b=[1,4,3,1]</script></span>。</p>
+<p>现在，Ajisai的最终得分是 <span class="arithmatex"><span class="MathJax_Preview">3 \oplus 2 \oplus 6 \oplus 7 = 0</span><script type="math/tex">3 \oplus 2 \oplus 6 \oplus 7 = 0</script></span>，Mai的最终得分是 <span class="arithmatex"><span class="MathJax_Preview">1 \oplus 4 \oplus 3 \oplus 1 = 7</span><script type="math/tex">1 \oplus 4 \oplus 3 \oplus 1 = 7</script></span>。因此，Mai赢得了游戏。</p>
 <p>上述描述并不保证代表最优策略。</p>
 <p>关于更多样例，请参阅简单版本的样例。</p>
 <h1 id="_7">我思路的错误</h1>
@@ -4818,57 +4818,57 @@ Tie
 <p>我来帮你梳理正确的逻辑（这也是 Hard Version 和 Easy Version 通用的正解）：</p>
 <h3 id="1-invariant">1. 核心性质：异或差不变 (Invariant)</h3>
 <p>这道题最关键的性质是：<strong>无论怎么操作，两个数组的总异或和的异或值是永远不变的。</strong></p>
-<p>设 <span class="arithmatex">\(S_A\)</span> 是 Ajisai 的异或和，<span class="arithmatex">\(S_B\)</span> 是 Mai 的异或和。</p>
-<p>总异或差 <span class="arithmatex">\(D = S_A \oplus S_B = (\bigoplus a_i) \oplus (\bigoplus b_i)\)</span>。</p>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">S_A</span><script type="math/tex">S_A</script></span> 是 Ajisai 的异或和，<span class="arithmatex"><span class="MathJax_Preview">S_B</span><script type="math/tex">S_B</script></span> 是 Mai 的异或和。</p>
+<p>总异或差 <span class="arithmatex"><span class="MathJax_Preview">D = S_A \oplus S_B = (\bigoplus a_i) \oplus (\bigoplus b_i)</span><script type="math/tex">D = S_A \oplus S_B = (\bigoplus a_i) \oplus (\bigoplus b_i)</script></span>。</p>
 <ul>
 <li>
-<p>如果你交换 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(b_i\)</span>，那么 <span class="arithmatex">\(S_A\)</span> 变成了 <span class="arithmatex">\(S_A \oplus a_i \oplus b_i\)</span>，<span class="arithmatex">\(S_B\)</span> 变成了 <span class="arithmatex">\(S_B \oplus b_i \oplus a_i\)</span>。</p>
+<p>如果你交换 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">S_A</span><script type="math/tex">S_A</script></span> 变成了 <span class="arithmatex"><span class="MathJax_Preview">S_A \oplus a_i \oplus b_i</span><script type="math/tex">S_A \oplus a_i \oplus b_i</script></span>，<span class="arithmatex"><span class="MathJax_Preview">S_B</span><script type="math/tex">S_B</script></span> 变成了 <span class="arithmatex"><span class="MathJax_Preview">S_B \oplus b_i \oplus a_i</span><script type="math/tex">S_B \oplus b_i \oplus a_i</script></span>。</p>
 </li>
 <li>
-<p>新的差值 <span class="arithmatex">\(D' = (S_A \oplus a_i \oplus b_i) \oplus (S_B \oplus b_i \oplus a_i)\)</span>。</p>
+<p>新的差值 <span class="arithmatex"><span class="MathJax_Preview">D' = (S_A \oplus a_i \oplus b_i) \oplus (S_B \oplus b_i \oplus a_i)</span><script type="math/tex">D' = (S_A \oplus a_i \oplus b_i) \oplus (S_B \oplus b_i \oplus a_i)</script></span>。</p>
 </li>
 <li>
-<p>因为 <span class="arithmatex">\(x \oplus x = 0\)</span>，所以 <span class="arithmatex">\(D' = S_A \oplus S_B = D\)</span>。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">x \oplus x = 0</span><script type="math/tex">x \oplus x = 0</script></span>，所以 <span class="arithmatex"><span class="MathJax_Preview">D' = S_A \oplus S_B = D</span><script type="math/tex">D' = S_A \oplus S_B = D</script></span>。</p>
 </li>
 </ul>
-<p>这意味着：<strong>无论怎么交换，最终 <span class="arithmatex">\(S_A\)</span> 和 <span class="arithmatex">\(S_B\)</span> 的异或差，永远等于初始状态的异或差。</strong></p>
+<p>这意味着：<strong>无论怎么交换，最终 <span class="arithmatex"><span class="MathJax_Preview">S_A</span><script type="math/tex">S_A</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">S_B</span><script type="math/tex">S_B</script></span> 的异或差，永远等于初始状态的异或差。</strong></p>
 <h3 id="2">2. 胜负判断逻辑</h3>
 <p>根据上面的性质，我们可以分情况讨论：</p>
-<h4 id="a-s_a-oplus-s_b-0">情况 A：初始 <span class="arithmatex">\(S_A \oplus S_B = 0\)</span></h4>
-<p>这意味着 <span class="arithmatex">\(S_A = S_B\)</span>。因为差值永远不变，无论怎么操作，最后两人的分数一定相等。</p>
+<h4 id="a-s_a-oplus-s_b-0s_a-oplus-s_b-0">情况 A：初始 <span class="arithmatex"><span class="MathJax_Preview">S_A \oplus S_B = 0</span><script type="math/tex">S_A \oplus S_B = 0</script></span></h4>
+<p>这意味着 <span class="arithmatex"><span class="MathJax_Preview">S_A = S_B</span><script type="math/tex">S_A = S_B</script></span>。因为差值永远不变，无论怎么操作，最后两人的分数一定相等。</p>
 <p>结果：Tie</p>
-<h4 id="b-s_a-oplus-s_b-neq-0">情况 B：初始 <span class="arithmatex">\(S_A \oplus S_B \neq 0\)</span></h4>
+<h4 id="b-s_a-oplus-s_b-neq-0s_a-oplus-s_b-neq-0">情况 B：初始 <span class="arithmatex"><span class="MathJax_Preview">S_A \oplus S_B \neq 0</span><script type="math/tex">S_A \oplus S_B \neq 0</script></span></h4>
 <p>既然不相等，肯定有输赢。谁赢呢？</p>
 <p>比大小的时候，最高位（Most Significant Bit, MSB）决定一切。</p>
 <ol>
 <li>
-<p>算出 <span class="arithmatex">\(D = S_A \oplus S_B\)</span>。</p>
+<p>算出 <span class="arithmatex"><span class="MathJax_Preview">D = S_A \oplus S_B</span><script type="math/tex">D = S_A \oplus S_B</script></span>。</p>
 </li>
 <li>
-<p>找到 <span class="arithmatex">\(D\)</span> 的<strong>最高为 1 的二进制位</strong>，假设是第 <span class="arithmatex">\(k\)</span> 位。</p>
+<p>找到 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 的<strong>最高为 1 的二进制位</strong>，假设是第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位。</p>
 <ul>
 <li>
-<p>这意味着最终 <span class="arithmatex">\(S_A\)</span> 和 <span class="arithmatex">\(S_B\)</span> 在第 <span class="arithmatex">\(k\)</span> 位上一定是一个 0 一个 1。</p>
+<p>这意味着最终 <span class="arithmatex"><span class="MathJax_Preview">S_A</span><script type="math/tex">S_A</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">S_B</span><script type="math/tex">S_B</script></span> 在第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位上一定是一个 0 一个 1。</p>
 </li>
 <li>
-<p><strong>谁拿到了第 <span class="arithmatex">\(k\)</span> 位的 1，谁就必胜</strong>（因为更高的位两人都一样，第 <span class="arithmatex">\(k\)</span> 位是 1 的那个数肯定比 0 的大）。</p>
+<p><strong>谁拿到了第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位的 1，谁就必胜</strong>（因为更高的位两人都一样，第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 1 的那个数肯定比 0 的大）。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>谁能决定第 <span class="arithmatex">\(k\)</span> 位？</strong></p>
+<p><strong>谁能决定第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位？</strong></p>
 <ul>
 <li>
-<p>我们需要找到那些<strong>能够改变第 <span class="arithmatex">\(k\)</span> 位状态</strong>的操作。</p>
+<p>我们需要找到那些<strong>能够改变第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位状态</strong>的操作。</p>
 </li>
 <li>
-<p>也就是找到所有的下标 <span class="arithmatex">\(i\)</span>，满足 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(b_i\)</span> 在第 <span class="arithmatex">\(k\)</span> 位上不同（即 <code>(a[i] ^ b[i])</code> 的第 <span class="arithmatex">\(k\)</span> 位是 1）。</p>
+<p>也就是找到所有的下标 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，满足 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span> 在第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位上不同（即 <code>(a[i] ^ b[i])</code> 的第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 1）。</p>
 </li>
 <li>
 <p>在这些下标中，<strong>下标最大</strong>（最晚操作）的那个人拥有最终决定权。</p>
 </li>
 <li>
-<p>为什么？因为前面的玩家无论怎么翻转第 <span class="arithmatex">\(k\)</span> 位，最后操作的那个人都可以选择“翻转”或者“不翻转”，从而强制让最终结果对自己有利（让自己在第 <span class="arithmatex">\(k\)</span> 位是 1）。</p>
+<p>为什么？因为前面的玩家无论怎么翻转第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位，最后操作的那个人都可以选择“翻转”或者“不翻转”，从而强制让最终结果对自己有利（让自己在第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 位是 1）。</p>
 </li>
 </ul>
 </li>
@@ -4876,7 +4876,7 @@ Tie
 <h3 id="3">3. 正确算法流程</h3>
 <ol>
 <li>
-<p>计算所有 <span class="arithmatex">\(a_i\)</span> 和 <span class="arithmatex">\(b_i\)</span> 的总异或和 <code>diff</code>。</p>
+<p>计算所有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span> 的总异或和 <code>diff</code>。</p>
 </li>
 <li>
 <p>如果 <code>diff == 0</code>，输出 <code>Tie</code>。</p>
@@ -4888,21 +4888,21 @@ Tie
 <p>找到 <code>diff</code> 的最高有效位（High Bit），记为 <code>hb</code>。</p>
 </li>
 <li>
-<p>从后往前遍历（<span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(n\)</span> 到 <span class="arithmatex">\(1\)</span>）：</p>
+<p>从后往前遍历（<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>）：</p>
 <ul>
 <li>
-<p>检查 <span class="arithmatex">\(a_i \oplus b_i\)</span> 的第 <code>hb</code> 位是否为 1。</p>
+<p>检查 <span class="arithmatex"><span class="MathJax_Preview">a_i \oplus b_i</span><script type="math/tex">a_i \oplus b_i</script></span> 的第 <code>hb</code> 位是否为 1。</p>
 </li>
 <li>
-<p>找到的第一个满足条件的 <span class="arithmatex">\(i\)</span> 就是决定胜负的关键回合。</p>
+<p>找到的第一个满足条件的 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 就是决定胜负的关键回合。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>如果这个 <span class="arithmatex">\(i\)</span> 是奇数（Ajisai 的回合），输出 <code>Ajisai</code>。</p>
+<p>如果这个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 是奇数（Ajisai 的回合），输出 <code>Ajisai</code>。</p>
 </li>
 <li>
-<p>如果这个 <span class="arithmatex">\(i\)</span> 是偶数（Mai 的回合），输出 <code>Mai</code>。</p>
+<p>如果这个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 是偶数（Mai 的回合），输出 <code>Mai</code>。</p>
 </li>
 </ul>
 </li>

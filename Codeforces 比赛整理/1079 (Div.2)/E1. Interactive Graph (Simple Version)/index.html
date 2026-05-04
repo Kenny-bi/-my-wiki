@@ -4402,39 +4402,39 @@
 <p>时间限制：每个测试点2秒<br />
 内存限制：每个测试点256兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>这是本题的简单版本。两个版本的区别在于：在本版本中，你可以询问不超过 <span class="arithmatex">\(32 \cdot (n + m)\)</span> 次问题，且 <span class="arithmatex">\(n \le 15\)</span>。只有当你解决了本题的所有版本时，才可以进行攻击（Hack）。</p>
+<p>这是本题的简单版本。两个版本的区别在于：在本版本中，你可以询问不超过 <span class="arithmatex"><span class="MathJax_Preview">32 \cdot (n + m)</span><script type="math/tex">32 \cdot (n + m)</script></span> 次问题，且 <span class="arithmatex"><span class="MathJax_Preview">n \le 15</span><script type="math/tex">n \le 15</script></span>。只有当你解决了本题的所有版本时，才可以进行攻击（Hack）。</p>
 <p><strong>这是一个交互式问题。</strong></p>
-<p>评测系统构想了一个<strong>无环、无重边</strong>的有向图，该图有 <span class="arithmatex">\(n\)</span> 个顶点和 <span class="arithmatex">\(m\)</span> 条边。</p>
-<p>你的任务是确定这个图中有哪些边。为此，你可以提出如下形式的问题：在图的所有路径的<strong>字典序</strong>* 排序列表中，第 <span class="arithmatex">\(k\)</span> 条路径是什么？</p>
-<p>图中的一条路径是一个顶点序列 <span class="arithmatex">\(u_1, u_2, \ldots, u_l\)</span>，使得对于任意 <span class="arithmatex">\(i &lt; l\)</span>，图中存在边 <span class="arithmatex">\((u_i, u_{i+1})\)</span>。</p>
-<p>你的目标是在不超过 <span class="arithmatex">\(32 \cdot (n + m)\)</span> 次询问内完成此任务。</p>
+<p>评测系统构想了一个<strong>无环、无重边</strong>的有向图，该图有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个顶点和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 条边。</p>
+<p>你的任务是确定这个图中有哪些边。为此，你可以提出如下形式的问题：在图的所有路径的<strong>字典序</strong>* 排序列表中，第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条路径是什么？</p>
+<p>图中的一条路径是一个顶点序列 <span class="arithmatex"><span class="MathJax_Preview">u_1, u_2, \ldots, u_l</span><script type="math/tex">u_1, u_2, \ldots, u_l</script></span>，使得对于任意 <span class="arithmatex"><span class="MathJax_Preview">i &lt; l</span><script type="math/tex">i < l</script></span>，图中存在边 <span class="arithmatex"><span class="MathJax_Preview">(u_i, u_{i+1})</span><script type="math/tex">(u_i, u_{i+1})</script></span>。</p>
+<p>你的目标是在不超过 <span class="arithmatex"><span class="MathJax_Preview">32 \cdot (n + m)</span><script type="math/tex">32 \cdot (n + m)</script></span> 次询问内完成此任务。</p>
 <ul>
-<li>序列 <span class="arithmatex">\(a\)</span> 字典序小于序列 <span class="arithmatex">\(b\)</span> 当且仅当满足以下条件之一：</li>
-<li><span class="arithmatex">\(a\)</span> 是 <span class="arithmatex">\(b\)</span> 的前缀，但 <span class="arithmatex">\(a \ne b\)</span>；或</li>
-<li>在 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 第一个不同的位置上，<span class="arithmatex">\(a\)</span> 的元素小于 <span class="arithmatex">\(b\)</span> 的对应元素。</li>
+<li>序列 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 字典序小于序列 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 当且仅当满足以下条件之一：</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的前缀，但 <span class="arithmatex"><span class="MathJax_Preview">a \ne b</span><script type="math/tex">a \ne b</script></span>；或</li>
+<li>在 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 第一个不同的位置上，<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素小于 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的对应元素。</li>
 </ul>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span>，表示测试用例的数量（<span class="arithmatex">\(1 \le t \le 10\)</span>）。<br />
+<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，表示测试用例的数量（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10</span><script type="math/tex">1 \le t \le 10</script></span>）。<br />
 接下来是每个测试用例的描述。</p>
-<p>每个测试用例由单独一行组成，包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \le n \le 15\)</span>）——图中顶点的数量。</p>
+<p>每个测试用例由单独一行组成，包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 15</span><script type="math/tex">1 \le n \le 15</script></span>）——图中顶点的数量。</p>
 <p>评测系统保证给定的图不包含环或重边。</p>
-<p>注意：<span class="arithmatex">\(m\)</span> 对你来说是未知的。</p>
+<p>注意：<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 对你来说是未知的。</p>
 <h2 id="_3">交互格式</h2>
-<p>对于每个测试用例，交互过程从读取整数 <span class="arithmatex">\(n\)</span> 开始。</p>
-<p>之后你可以提出最多 <span class="arithmatex">\(32 \cdot (n + m)\)</span> 次询问。</p>
-<p><strong>询问方式</strong>：输出格式为 <code>"? k"</code>（不含引号），其中 <span class="arithmatex">\(1 \le k \le 2^{30}\)</span>。<br />
-每次询问后，你需要读取一个整数 <span class="arithmatex">\(q\)</span> —— 第 <span class="arithmatex">\(k\)</span> 条路径的顶点数。<br />
-- 如果 <span class="arithmatex">\(q = 0\)</span>，则表示该路径不存在；<br />
-- 否则，再读取 <span class="arithmatex">\(q\)</span> 个整数，表示构成这条路径的顶点编号。</p>
-<p>可以证明，在给定约束下，图中不同的路径总数不超过 <span class="arithmatex">\(2^{30}\)</span>。</p>
-<p><strong>回答答案</strong>：首先输出格式为 <code>"! m"</code> 的字符串，然后输出 <span class="arithmatex">\(m\)</span> 行，每行格式为 <code>"u v"</code>，表示存在一条从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 的有向边。你可以按任意顺序输出这些边。输出答案不计入询问次数。</p>
+<p>对于每个测试用例，交互过程从读取整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 开始。</p>
+<p>之后你可以提出最多 <span class="arithmatex"><span class="MathJax_Preview">32 \cdot (n + m)</span><script type="math/tex">32 \cdot (n + m)</script></span> 次询问。</p>
+<p><strong>询问方式</strong>：输出格式为 <code>"? k"</code>（不含引号），其中 <span class="arithmatex"><span class="MathJax_Preview">1 \le k \le 2^{30}</span><script type="math/tex">1 \le k \le 2^{30}</script></span>。<br />
+每次询问后，你需要读取一个整数 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> —— 第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条路径的顶点数。<br />
+- 如果 <span class="arithmatex"><span class="MathJax_Preview">q = 0</span><script type="math/tex">q = 0</script></span>，则表示该路径不存在；<br />
+- 否则，再读取 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个整数，表示构成这条路径的顶点编号。</p>
+<p>可以证明，在给定约束下，图中不同的路径总数不超过 <span class="arithmatex"><span class="MathJax_Preview">2^{30}</span><script type="math/tex">2^{30}</script></span>。</p>
+<p><strong>回答答案</strong>：首先输出格式为 <code>"! m"</code> 的字符串，然后输出 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 行，每行格式为 <code>"u v"</code>，表示存在一条从 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的有向边。你可以按任意顺序输出这些边。输出答案不计入询问次数。</p>
 <p>每次询问后，不要忘记输出换行并刷新缓冲区。否则，你将收到“Idleness limit exceeded”的判决。</p>
-<p>如果在任何交互步骤中，你读取到 <span class="arithmatex">\(-1\)</span> 而非有效数据，你的解决方案必须立即退出。这意味着你的解决方案将因无效查询或其他错误而被判“Wrong answer”。未能及时退出可能导致任意判决，因为你的解决方案将继续从已关闭的流中读取数据。</p>
+<p>如果在任何交互步骤中，你读取到 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span> 而非有效数据，你的解决方案必须立即退出。这意味着你的解决方案将因无效查询或其他错误而被判“Wrong answer”。未能及时退出可能导致任意判决，因为你的解决方案将继续从已关闭的流中读取数据。</p>
 <p><strong>攻击（Hack）格式</strong>：</p>
 <p>对于攻击，请使用以下格式：</p>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10\)</span>）——测试用例数量。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n, m\)</span>（<span class="arithmatex">\(1 \le n \le 15\)</span>，<span class="arithmatex">\(0 \le m \le \frac{n \cdot (n-1)}{2}\)</span>）——顶点数和边数。</p>
-<p>接下来的 <span class="arithmatex">\(m\)</span> 行包含边的描述。每条边由两个整数 <span class="arithmatex">\(v, u\)</span>（<span class="arithmatex">\(1 \le v, u \le n\)</span>，<span class="arithmatex">\(v \ne u\)</span>）定义，表示从 <span class="arithmatex">\(v\)</span> 到 <span class="arithmatex">\(u\)</span> 的一条有向边。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10</span><script type="math/tex">1 \le t \le 10</script></span>）——测试用例数量。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n, m</span><script type="math/tex">n, m</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 15</span><script type="math/tex">1 \le n \le 15</script></span>，<span class="arithmatex"><span class="MathJax_Preview">0 \le m \le \frac{n \cdot (n-1)}{2}</span><script type="math/tex">0 \le m \le \frac{n \cdot (n-1)}{2}</script></span>）——顶点数和边数。</p>
+<p>接下来的 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 行包含边的描述。每条边由两个整数 <span class="arithmatex"><span class="MathJax_Preview">v, u</span><script type="math/tex">v, u</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le v, u \le n</span><script type="math/tex">1 \le v, u \le n</script></span>，<span class="arithmatex"><span class="MathJax_Preview">v \ne u</span><script type="math/tex">v \ne u</script></span>）定义，表示从 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 的一条有向边。</p>
 <p>该图不能包含环或重边。</p>
 <h2 id="_4">交互示例</h2>
 <p>输入示例：
@@ -4524,23 +4524,23 @@
 <p><strong>Note</strong></p>
 <p>The graph for the first test case.</p>
 <p><img alt="" src="https://espresso.codeforces.com/bf518061806cb126a06a412783ef4cafb1d04ca4.png" /></p>
-<p>In this graph, there are <span class="arithmatex">\(15\)</span> paths, which are arranged in lexicographic order as follows:</p>
+<p>In this graph, there are <span class="arithmatex"><span class="MathJax_Preview">15</span><script type="math/tex">15</script></span> paths, which are arranged in lexicographic order as follows:</p>
 <ul>
-<li><span class="arithmatex">\(1\)</span></li>
-<li><span class="arithmatex">\(1 \to 2\)</span></li>
-<li><span class="arithmatex">\(1 \to 2 \to 4\)</span></li>
-<li><span class="arithmatex">\(1 \to 2 \to 5\)</span></li>
-<li><span class="arithmatex">\(1 \to 3\)</span></li>
-<li><span class="arithmatex">\(1 \to 3 \to 4\)</span></li>
-<li><span class="arithmatex">\(1 \to 3 \to 5\)</span></li>
-<li><span class="arithmatex">\(2\)</span></li>
-<li><span class="arithmatex">\(2 \to 4\)</span></li>
-<li><span class="arithmatex">\(2 \to 5\)</span></li>
-<li><span class="arithmatex">\(3\)</span></li>
-<li><span class="arithmatex">\(3 \to 4\)</span></li>
-<li><span class="arithmatex">\(3 \to 5\)</span></li>
-<li><span class="arithmatex">\(4\)</span></li>
-<li><span class="arithmatex">\(5\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 2</span><script type="math/tex">1 \to 2</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 2 \to 4</span><script type="math/tex">1 \to 2 \to 4</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 2 \to 5</span><script type="math/tex">1 \to 2 \to 5</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 3</span><script type="math/tex">1 \to 3</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 3 \to 4</span><script type="math/tex">1 \to 3 \to 4</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1 \to 3 \to 5</span><script type="math/tex">1 \to 3 \to 5</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">2 \to 4</span><script type="math/tex">2 \to 4</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">2 \to 5</span><script type="math/tex">2 \to 5</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">3 \to 4</span><script type="math/tex">3 \to 4</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">3 \to 5</span><script type="math/tex">3 \to 5</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span></li>
 </ul>
 
 

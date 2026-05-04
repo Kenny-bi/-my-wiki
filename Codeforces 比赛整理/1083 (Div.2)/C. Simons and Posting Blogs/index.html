@@ -4445,32 +4445,32 @@
 内存限制：每个测试点256兆字节</p>
 <p>人生如电视剧；随着情节的发展，我们被卷入其中。</p>
 <p>— 舜，陷阱</p>
-<p>有 <span class="arithmatex">\(n\)</span> 个博客。第 <span class="arithmatex">\(i\)</span> 个博客按数组 <span class="arithmatex">\(a_i = [a_{i,1}, a_{i,2}, \dots, a_{i,l_i}]\)</span> 的顺序提到了 <span class="arithmatex">\(l_i\)</span> 个用户。</p>
-<p>您将发布所有 <span class="arithmatex">\(n\)</span> 个博客。让我们维护一个序列 <span class="arithmatex">\(Q\)</span> 来描述您最近提到的用户列表。您需要准确地执行以下操作 <span class="arithmatex">\(n\)</span> 次：</p>
+<p>有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个博客。第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个博客按数组 <span class="arithmatex"><span class="MathJax_Preview">a_i = [a_{i,1}, a_{i,2}, \dots, a_{i,l_i}]</span><script type="math/tex">a_i = [a_{i,1}, a_{i,2}, \dots, a_{i,l_i}]</script></span> 的顺序提到了 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> 个用户。</p>
+<p>您将发布所有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个博客。让我们维护一个序列 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 来描述您最近提到的用户列表。您需要准确地执行以下操作 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次：</p>
 <ol>
-<li>选择一个未发布的博客 <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(1 \le i \le n\)</span>)，然后发布它。</li>
-<li>这将导致按顺序对每个 <span class="arithmatex">\(1 \le j \le l_i\)</span> 进行以下操作：<ul>
-<li>如果 <span class="arithmatex">\(a_{i,j}\)</span> 已存在于 <span class="arithmatex">\(Q\)</span> 中，则将 <span class="arithmatex">\(a_{i,j}\)</span> 移动到 <span class="arithmatex">\(Q\)</span> 的开头。</li>
-<li>否则，在 <span class="arithmatex">\(Q\)</span> 的开头插入 <span class="arithmatex">\(a_{i,j}\)</span>。</li>
+<li>选择一个未发布的博客 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le i \le n</span><script type="math/tex">1 \le i \le n</script></span>)，然后发布它。</li>
+<li>这将导致按顺序对每个 <span class="arithmatex"><span class="MathJax_Preview">1 \le j \le l_i</span><script type="math/tex">1 \le j \le l_i</script></span> 进行以下操作：<ul>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> 已存在于 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 中，则将 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> 移动到 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 的开头。</li>
+<li>否则，在 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 的开头插入 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span>。</li>
 </ul>
 </li>
 </ol>
-<p>在所有 <span class="arithmatex">\(n\)</span> 次操作之后，找出字典序最小的 <span class="arithmatex">\(Q\)</span>。</p>
+<p>在所有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次操作之后，找出字典序最小的 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>。</p>
 <ul>
-<li>数组 <span class="arithmatex">\(x\)</span> 按字典序小于数组 <span class="arithmatex">\(y\)</span> 当且仅当以下条件之一成立：<ul>
-<li><span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(y\)</span> 的前缀，但是 <span class="arithmatex">\(x \neq y\)</span>；或</li>
-<li>在 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 不同的第一个位置，数组 <span class="arithmatex">\(x\)</span> 的元素比 <span class="arithmatex">\(y\)</span> 中的相应元素小。</li>
+<li>数组 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 按字典序小于数组 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 当且仅当以下条件之一成立：<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的前缀，但是 <span class="arithmatex"><span class="MathJax_Preview">x \neq y</span><script type="math/tex">x \neq y</script></span>；或</li>
+<li>在 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 不同的第一个位置，数组 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的元素比 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 中的相应元素小。</li>
 </ul>
 </li>
 </ul>
 <h2 id="_1">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 1000\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(1 \le n \le 3000\)</span>) — 博客的数量。</p>
-<p>然后是 <span class="arithmatex">\(n\)</span> 行，第 <span class="arithmatex">\(i\)</span> 行以整数 <span class="arithmatex">\(l_i\)</span> (<span class="arithmatex">\(1 \le l_i \le 3000\)</span>) 开头，描述第 <span class="arithmatex">\(i\)</span> 个博客中提到的用户数量，后面跟着 <span class="arithmatex">\(l_i\)</span> 个整数 <span class="arithmatex">\(a_{i,1}, a_{i,2}, \dots, a_{i,l_i}\)</span> (<span class="arithmatex">\(1 \le a_{i,j} \le 10^6\)</span>) — 第 <span class="arithmatex">\(i\)</span> 个博客中提到的用户列表。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(3000\)</span>。</p>
-<p>记 <span class="arithmatex">\(\sum_{i=1}^{n} l_i\)</span> 为 <span class="arithmatex">\(L\)</span>。保证所有测试用例的 <span class="arithmatex">\(L\)</span> 之和不超过 <span class="arithmatex">\(3000\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 1000</span><script type="math/tex">1 \le t \le 1000</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 3000</span><script type="math/tex">1 \le n \le 3000</script></span>) — 博客的数量。</p>
+<p>然后是 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行以整数 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le l_i \le 3000</span><script type="math/tex">1 \le l_i \le 3000</script></span>) 开头，描述第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个博客中提到的用户数量，后面跟着 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_{i,1}, a_{i,2}, \dots, a_{i,l_i}</span><script type="math/tex">a_{i,1}, a_{i,2}, \dots, a_{i,l_i}</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le a_{i,j} \le 10^6</span><script type="math/tex">1 \le a_{i,j} \le 10^6</script></span>) — 第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个博客中提到的用户列表。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">3000</span><script type="math/tex">3000</script></span>。</p>
+<p>记 <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n} l_i</span><script type="math/tex">\sum_{i=1}^{n} l_i</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>。保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">3000</span><script type="math/tex">3000</script></span>。</p>
 <h2 id="_2">输出格式</h2>
-<p>记 <span class="arithmatex">\(m\)</span> 为至少在一个博客中被提及的用户数量。对于每个测试用例，输出 <span class="arithmatex">\(m\)</span> 个整数 <span class="arithmatex">\(Q_1, Q_2, \dots, Q_m\)</span> — 字典序最小的 <span class="arithmatex">\(Q\)</span>。</p>
+<p>记 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 为至少在一个博客中被提及的用户数量。对于每个测试用例，输出 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">Q_1, Q_2, \dots, Q_m</span><script type="math/tex">Q_1, Q_2, \dots, Q_m</script></span> — 字典序最小的 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>。</p>
 <h2 id="_3">样例输入</h2>
 <div class="highlight"><pre><span></span><code>5
 3
@@ -4505,23 +4505,23 @@
 <h2 id="_5">样例说明</h2>
 <p>在第一个测试用例中，可以按如下顺序发布博客：</p>
 <ol>
-<li>发布第一个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([6,4,3,2,1]\)</span>。</li>
-<li>发布第三个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([3,2,9,1,6,4]\)</span>。</li>
-<li>发布第二个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([1,5,2,3,9,6,4]\)</span>。</li>
+<li>发布第一个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[6,4,3,2,1]</span><script type="math/tex">[6,4,3,2,1]</script></span>。</li>
+<li>发布第三个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[3,2,9,1,6,4]</span><script type="math/tex">[3,2,9,1,6,4]</script></span>。</li>
+<li>发布第二个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[1,5,2,3,9,6,4]</span><script type="math/tex">[1,5,2,3,9,6,4]</script></span>。</li>
 </ol>
 <p>还有另一种发布博客的方法：</p>
 <ol>
-<li>发布第三个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([1,9,2,3]\)</span>。</li>
-<li>发布第一个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([6,4,3,2,1,9]\)</span>。</li>
-<li>发布第二个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([1,5,2,6,4,3,9]\)</span>。</li>
+<li>发布第三个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[1,9,2,3]</span><script type="math/tex">[1,9,2,3]</script></span>。</li>
+<li>发布第一个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[6,4,3,2,1,9]</span><script type="math/tex">[6,4,3,2,1,9]</script></span>。</li>
+<li>发布第二个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[1,5,2,6,4,3,9]</span><script type="math/tex">[1,5,2,6,4,3,9]</script></span>。</li>
 </ol>
-<p>我们可以看到 <span class="arithmatex">\([1,5,2,3,9,6,4]\)</span> 字典序小于另一种方法得到的结果。如果我们不在最后发布第二个博客，数组的第一个元素不会是 <span class="arithmatex">\(1\)</span>，因此 <span class="arithmatex">\([1,5,2,3,9,6,4]\)</span> 是字典序最小的数组 <span class="arithmatex">\(Q\)</span>。</p>
+<p>我们可以看到 <span class="arithmatex"><span class="MathJax_Preview">[1,5,2,3,9,6,4]</span><script type="math/tex">[1,5,2,3,9,6,4]</script></span> 字典序小于另一种方法得到的结果。如果我们不在最后发布第二个博客，数组的第一个元素不会是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，因此 <span class="arithmatex"><span class="MathJax_Preview">[1,5,2,3,9,6,4]</span><script type="math/tex">[1,5,2,3,9,6,4]</script></span> 是字典序最小的数组 <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>。</p>
 <p>在第二个测试用例中，可以按如下顺序发布博客：</p>
 <ol>
-<li>发布第二个博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([6,1]\)</span>。</li>
-<li>发布第一个博客，<span class="arithmatex">\(Q\)</span> 保持为 <span class="arithmatex">\([6,1]\)</span>。</li>
+<li>发布第二个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[6,1]</span><script type="math/tex">[6,1]</script></span>。</li>
+<li>发布第一个博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 保持为 <span class="arithmatex"><span class="MathJax_Preview">[6,1]</span><script type="math/tex">[6,1]</script></span>。</li>
 </ol>
-<p>在第三个测试用例中，必须发布唯一的博客，<span class="arithmatex">\(Q\)</span> 将变为 <span class="arithmatex">\([1,6]\)</span>。</p>
+<p>在第三个测试用例中，必须发布唯一的博客，<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> 将变为 <span class="arithmatex"><span class="MathJax_Preview">[1,6]</span><script type="math/tex">[1,6]</script></span>。</p>
 <h1 id="_6">样例中一个小样例没有过</h1>
 <ul>
 <li>本质是因为我把整个排序看成是静态的了，其实是动态的，这个题目数据范围支持暴力循环找

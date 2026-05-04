@@ -4632,21 +4632,21 @@
 <p>时间限制：每个测试2秒<br />
 内存限制：每个测试512 MB  </p>
 <h2 id="_1">问题描述</h2>
-<p>您正在开发一个测试生成器。它接受两个整数 <span class="arithmatex">\(s\)</span> 和 <span class="arithmatex">\(m\)</span> 作为输入。您需要构造一个非负整数数组 <span class="arithmatex">\(a=[a_1,a_2,\dots,a_n]\)</span>，满足以下条件：  </p>
+<p>您正在开发一个测试生成器。它接受两个整数 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 作为输入。您需要构造一个非负整数数组 <span class="arithmatex"><span class="MathJax_Preview">a=[a_1,a_2,\dots,a_n]</span><script type="math/tex">a=[a_1,a_2,\dots,a_n]</script></span>，满足以下条件：  </p>
 <ul>
-<li><span class="arithmatex">\(\sum_{i=1}^{n} a_i = s\)</span>；  </li>
-<li>对于每个 <span class="arithmatex">\(i\)</span>，条件 <span class="arithmatex">\(a_i \&amp; m = a_i\)</span> 成立，其中 <span class="arithmatex">\(\&amp;\)</span> 表示按位与运算符。  </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n} a_i = s</span><script type="math/tex">\sum_{i=1}^{n} a_i = s</script></span>；  </li>
+<li>对于每个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，条件 <span class="arithmatex"><span class="MathJax_Preview">a_i \&amp; m = a_i</span><script type="math/tex">a_i \& m = a_i</script></span> 成立，其中 <span class="arithmatex"><span class="MathJax_Preview">\&amp;</span><script type="math/tex">\&</script></span> 表示按位与运算符。  </li>
 </ul>
-<p>换句话说，在每个数字 <span class="arithmatex">\(a_i\)</span> 中，被设置为 1 的位只能位于数字 <span class="arithmatex">\(m\)</span> 中的位也被设置为 1 的位置。  </p>
-<p>判断是否存在至少一个这样的数组。如果存在，求最小可能长度 <span class="arithmatex">\(n\)</span>。  </p>
+<p>换句话说，在每个数字 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 中，被设置为 1 的位只能位于数字 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 中的位也被设置为 1 的位置。  </p>
+<p>判断是否存在至少一个这样的数组。如果存在，求最小可能长度 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。  </p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>)。接下来是测试用例的描述。  </p>
-<p>每个测试用例由一行包含两个整数 <span class="arithmatex">\(s\)</span> 和 <span class="arithmatex">\(m\)</span> (<span class="arithmatex">\(1 \leq s, m \leq 10^{18}\)</span>) 组成，即生成器的参数。  </p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>)。接下来是测试用例的描述。  </p>
+<p>每个测试用例由一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq s, m \leq 10^{18}</span><script type="math/tex">1 \leq s, m \leq 10^{18}</script></span>) 组成，即生成器的参数。  </p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数：  </p>
 <ul>
-<li>如果这样的数组不存在，输出 <span class="arithmatex">\(-1\)</span>；  </li>
-<li>否则，输出最小可能的 <span class="arithmatex">\(n\)</span>，即数组的长度。  </li>
+<li>如果这样的数组不存在，输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>；  </li>
+<li>否则，输出最小可能的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，即数组的长度。  </li>
 </ul>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
@@ -4668,9 +4668,9 @@
 <h2 id="_6">样例说明</h2>
 <p>分析一些例子：  </p>
 <ul>
-<li>对于 <span class="arithmatex">\(s=13, m=5\)</span>，答案为 <span class="arithmatex">\(3\)</span>，因为存在合适的数组 <span class="arithmatex">\(a=[5,4,4]\)</span>；  </li>
-<li>对于 <span class="arithmatex">\(s=13, m=3\)</span>，答案为 <span class="arithmatex">\(5\)</span>，因为存在合适的数组 <span class="arithmatex">\(a=[3,3,3,3,1]\)</span>；  </li>
-<li>对于 <span class="arithmatex">\(s=13, m=6\)</span>，答案为 <span class="arithmatex">\(-1\)</span>，因为不存在合适的数组。</li>
+<li>对于 <span class="arithmatex"><span class="MathJax_Preview">s=13, m=5</span><script type="math/tex">s=13, m=5</script></span>，答案为 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>，因为存在合适的数组 <span class="arithmatex"><span class="MathJax_Preview">a=[5,4,4]</span><script type="math/tex">a=[5,4,4]</script></span>；  </li>
+<li>对于 <span class="arithmatex"><span class="MathJax_Preview">s=13, m=3</span><script type="math/tex">s=13, m=3</script></span>，答案为 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span>，因为存在合适的数组 <span class="arithmatex"><span class="MathJax_Preview">a=[3,3,3,3,1]</span><script type="math/tex">a=[3,3,3,3,1]</script></span>；  </li>
+<li>对于 <span class="arithmatex"><span class="MathJax_Preview">s=13, m=6</span><script type="math/tex">s=13, m=6</script></span>，答案为 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>，因为不存在合适的数组。</li>
 </ul>
 <h1 id="ac">AC  代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2203 C</span>
@@ -4847,35 +4847,35 @@
 <h1 id="cf-2203-c-test-generator">CF 2203 C Test Generator 二分答案与位运算贪心 #算法/二分答案 #算法/位运算 #算法/贪心</h1>
 <h2 id="1">1. 核心思想</h2>
 <blockquote>
-<p>结合<strong>二分答案</strong>与<strong>位运算贪心</strong>，通过二分探求最小数组长度 <span class="arithmatex">\(n\)</span>。在已知长度 <span class="arithmatex">\(n\)</span> 的限制下，由于二进制高位面值总是低位的倍数，采用从高位到低位的贪心策略，优先消耗高位额度以最快凑齐目标总和 <span class="arithmatex">\(s\)</span>。</p>
+<p>结合<strong>二分答案</strong>与<strong>位运算贪心</strong>，通过二分探求最小数组长度 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。在已知长度 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的限制下，由于二进制高位面值总是低位的倍数，采用从高位到低位的贪心策略，优先消耗高位额度以最快凑齐目标总和 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。</p>
 </blockquote>
 <h2 id="2">2. 算法流程/图解</h2>
 <ol>
 <li>
 <p><strong>前置合法性判定</strong>：</p>
-<p>提取掩码 <span class="arithmatex">\(m\)</span> 的最低有效位（<code>lowbit</code>）。因为只能使用 <span class="arithmatex">\(m\)</span> 中为 1 的位进行加和，所以最终生成的任何数以及总和 <span class="arithmatex">\(s\)</span> 必定是该 <code>lowbit</code> 的整数倍。若 <span class="arithmatex">\(s\)</span> 不能被 <code>lowbit</code> 整除，则直接判定无解，返回 <span class="arithmatex">\(-1\)</span>。</p>
+<p>提取掩码 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的最低有效位（<code>lowbit</code>）。因为只能使用 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 中为 1 的位进行加和，所以最终生成的任何数以及总和 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 必定是该 <code>lowbit</code> 的整数倍。若 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 不能被 <code>lowbit</code> 整除，则直接判定无解，返回 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
 </li>
 <li>
 <p><strong>二分数组长度</strong>：</p>
-<p>目标数组长度 <span class="arithmatex">\(n\)</span> 的理论最小值为 <span class="arithmatex">\(0\)</span>，最大值不超过 <span class="arithmatex">\(s\)</span>（最坏情况下全用 <span class="arithmatex">\(1\)</span> 凑）。在区间 <span class="arithmatex">\([0, s]\)</span> 内二分查找最小长度。</p>
+<p>目标数组长度 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的理论最小值为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，最大值不超过 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>（最坏情况下全用 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 凑）。在区间 <span class="arithmatex"><span class="MathJax_Preview">[0, s]</span><script type="math/tex">[0, s]</script></span> 内二分查找最小长度。</p>
 </li>
 <li>
 <p><strong>贪心 Check 逻辑</strong>：</p>
 <ul>
 <li>
-<p>设当前二分的数组长度限制为 <span class="arithmatex">\(x\)</span>。</p>
+<p>设当前二分的数组长度限制为 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
 </li>
 <li>
-<p>维护一个剩余待凑总和 <span class="arithmatex">\(res\)</span>（初始值为 <span class="arithmatex">\(s\)</span>）。</p>
+<p>维护一个剩余待凑总和 <span class="arithmatex"><span class="MathJax_Preview">res</span><script type="math/tex">res</script></span>（初始值为 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>）。</p>
 </li>
 <li>
-<p>从第 <span class="arithmatex">\(59\)</span> 位向下遍历到第 <span class="arithmatex">\(0\)</span> 位（由高到低）。</p>
+<p>从第 <span class="arithmatex"><span class="MathJax_Preview">59</span><script type="math/tex">59</script></span> 位向下遍历到第 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 位（由高到低）。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(m\)</span> 的第 <span class="arithmatex">\(i\)</span> 位可用（即 <span class="arithmatex">\((m \gg i) \&amp; 1\)</span> 为真），则在不超过当前长度限制 <span class="arithmatex">\(x\)</span> 且不超过剩余总和 <span class="arithmatex">\(res\)</span> 的前提下，尽可能多地使用面值 <span class="arithmatex">\(2^i\)</span>。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位可用（即 <span class="arithmatex"><span class="MathJax_Preview">(m \gg i) \&amp; 1</span><script type="math/tex">(m \gg i) \& 1</script></span> 为真），则在不超过当前长度限制 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 且不超过剩余总和 <span class="arithmatex"><span class="MathJax_Preview">res</span><script type="math/tex">res</script></span> 的前提下，尽可能多地使用面值 <span class="arithmatex"><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span>。</p>
 </li>
 <li>
-<p>最后检查 <span class="arithmatex">\(res\)</span> 是否被完全抵消为 <span class="arithmatex">\(0\)</span>。</p>
+<p>最后检查 <span class="arithmatex"><span class="MathJax_Preview">res</span><script type="math/tex">res</script></span> 是否被完全抵消为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4943,7 +4943,7 @@ int main() {
 <p>[!WARNING] <strong>核心剪枝/无解判定不可漏</strong></p>
 <p>必须使用 <code>m &amp; -m</code> 获取 <code>lowbit</code> 进行整除判断 <code>$s \% (m \&amp; -m) \neq 0$</code>。如果省略这一步，奇偶性不匹配会导致贪心策略陷入死胡同或二分无限循环。</p>
 <p>[!NOTE] <strong>位移操作的优先级与溢出</strong></p>
-<p>左移和右移运算符的优先级低于加减运算。在写 <code>std::min(res &gt;&gt; i, x) &lt;&lt; i</code> 时，注意位移的数据类型。因为 <span class="arithmatex">\(s, m\)</span> 高达 <span class="arithmatex">\(10^{18}\)</span>，必须全程使用 <code>long long</code> (代码中的 <code>i64</code>) 以防溢出。循环上限设为 <span class="arithmatex">\(59\)</span> 是因为 <span class="arithmatex">\(2^{59} &gt; 10^{18}\)</span>，完全足以覆盖 <span class="arithmatex">\(s\)</span> 和 <span class="arithmatex">\(m\)</span> 的取值范围。</p>
+<p>左移和右移运算符的优先级低于加减运算。在写 <code>std::min(res &gt;&gt; i, x) &lt;&lt; i</code> 时，注意位移的数据类型。因为 <span class="arithmatex"><span class="MathJax_Preview">s, m</span><script type="math/tex">s, m</script></span> 高达 <span class="arithmatex"><span class="MathJax_Preview">10^{18}</span><script type="math/tex">10^{18}</script></span>，必须全程使用 <code>long long</code> (代码中的 <code>i64</code>) 以防溢出。循环上限设为 <span class="arithmatex"><span class="MathJax_Preview">59</span><script type="math/tex">59</script></span> 是因为 <span class="arithmatex"><span class="MathJax_Preview">2^{59} &gt; 10^{18}</span><script type="math/tex">2^{59} > 10^{18}</script></span>，完全足以覆盖 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的取值范围。</p>
 </blockquote>
 <h2 id="5">5. 参考资料</h2>
 <ul>

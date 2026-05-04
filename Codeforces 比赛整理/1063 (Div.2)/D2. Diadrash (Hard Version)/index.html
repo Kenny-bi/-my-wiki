@@ -4737,26 +4737,26 @@
 <h2 id="_1">问题描述</h2>
 <p>这是本题的困难版本。两个版本的区别在于，在此版本中你最多可以进行 <strong>30</strong> 次询问。仅当您解决了此问题的所有版本时，才能进行黑客攻击。</p>
 <p>这是一个交互题。</p>
-<p>存在一个长度为 <span class="arithmatex">\(n\)</span> 的排列 <span class="arithmatex">\(p\)</span>，其元素为 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n-1\)</span> 的整数，它对您隐藏。此外，您会得到 <span class="arithmatex">\(q\)</span> 个区间 <span class="arithmatex">\([l_1,r_1],[l_2,r_2],\ldots,[l_q,r_q]\)</span>，其中 <span class="arithmatex">\(1 \leq l_i \leq r_i \leq n\)</span>。</p>
-<p>您需要找出在输入给出的这 <span class="arithmatex">\(q\)</span> 个区间对应的 <span class="arithmatex">\(p\)</span> 的值中，最大的 <strong>MEX</strong> 值。形式上，您必须找出 <span class="arithmatex">\(\max_{i=1}^{q} \text{MEX}([p_{l_i}, p_{l_i+1}, \ldots, p_{r_i}])\)</span> 的值。</p>
+<p>存在一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>，其元素为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的整数，它对您隐藏。此外，您会得到 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个区间 <span class="arithmatex"><span class="MathJax_Preview">[l_1,r_1],[l_2,r_2],\ldots,[l_q,r_q]</span><script type="math/tex">[l_1,r_1],[l_2,r_2],\ldots,[l_q,r_q]</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l_i \leq r_i \leq n</span><script type="math/tex">1 \leq l_i \leq r_i \leq n</script></span>。</p>
+<p>您需要找出在输入给出的这 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个区间对应的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的值中，最大的 <strong>MEX</strong> 值。形式上，您必须找出 <span class="arithmatex"><span class="MathJax_Preview">\max_{i=1}^{q} \text{MEX}([p_{l_i}, p_{l_i+1}, \ldots, p_{r_i}])</span><script type="math/tex">\max_{i=1}^{q} \text{MEX}([p_{l_i}, p_{l_i+1}, \ldots, p_{r_i}])</script></span> 的值。</p>
 <p>为此，您最多可以进行 <strong>30</strong> 次如下形式的询问：</p>
 <ul>
-<li>选择任意两个整数 <span class="arithmatex">\(1 \leq l \leq r \leq n\)</span>，然后您将收到 <span class="arithmatex">\(\text{MEX}([p_l, p_{l+1}, \ldots, p_r])\)</span> 的值。</li>
+<li>选择任意两个整数 <span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq n</span><script type="math/tex">1 \leq l \leq r \leq n</script></span>，然后您将收到 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_l, p_{l+1}, \ldots, p_r])</span><script type="math/tex">\text{MEX}([p_l, p_{l+1}, \ldots, p_r])</script></span> 的值。</li>
 </ul>
-<p><span class="arithmatex">\(*\)</span> 一个 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n-1\)</span> 的整数排列是一个包含 <span class="arithmatex">\(n\)</span> 个元素的序列，其中从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n-1\)</span> 的每个整数都恰好出现一次。例如，序列 <span class="arithmatex">\([0,3,1,2]\)</span> 是一个排列，但序列 <span class="arithmatex">\([0,0,2,1]\)</span> 不是。</p>
-<p><span class="arithmatex">\(†\)</span> 一个序列的 <span class="arithmatex">\(\text{MEX}\)</span> 定义为该序列中<strong>没有出现</strong>的最小非负整数。例如，<span class="arithmatex">\(\text{MEX}([0,0,1,3]) = 2\)</span>，<span class="arithmatex">\(\text{MEX}([1,2,2]) = 0\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">*</span><script type="math/tex">*</script></span> 一个 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的整数排列是一个包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个元素的序列，其中从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 的每个整数都恰好出现一次。例如，序列 <span class="arithmatex"><span class="MathJax_Preview">[0,3,1,2]</span><script type="math/tex">[0,3,1,2]</script></span> 是一个排列，但序列 <span class="arithmatex"><span class="MathJax_Preview">[0,0,2,1]</span><script type="math/tex">[0,0,2,1]</script></span> 不是。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">†</span><script type="math/tex">†</script></span> 一个序列的 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}</span><script type="math/tex">\text{MEX}</script></span> 定义为该序列中<strong>没有出现</strong>的最小非负整数。例如，<span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([0,0,1,3]) = 2</span><script type="math/tex">\text{MEX}([0,0,1,3]) = 2</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([1,2,2]) = 0</span><script type="math/tex">\text{MEX}([1,2,2]) = 0</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 100\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(q\)</span> (<span class="arithmatex">\(4 \leq n \leq 10^4\)</span>, <span class="arithmatex">\(1 \leq q \leq 3 \cdot 10^5\)</span>) —— 分别是排列的大小和区间的数量。</p>
-<p>接下来的 <span class="arithmatex">\(q\)</span> 行中，第 <span class="arithmatex">\(i\)</span> 行包含两个整数 <span class="arithmatex">\(l_i\)</span>, <span class="arithmatex">\(r_i\)</span> (<span class="arithmatex">\(1 \leq l_i \leq r_i \leq n\)</span>)。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(10^4\)</span>，<span class="arithmatex">\(q\)</span> 的总和不超过 <span class="arithmatex">\(3 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 100</span><script type="math/tex">1 \leq t \leq 100</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> (<span class="arithmatex"><span class="MathJax_Preview">4 \leq n \leq 10^4</span><script type="math/tex">4 \leq n \leq 10^4</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \leq q \leq 3 \cdot 10^5</span><script type="math/tex">1 \leq q \leq 3 \cdot 10^5</script></span>) —— 分别是排列的大小和区间的数量。</p>
+<p>接下来的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 行中，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span>, <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq l_i \leq r_i \leq n</span><script type="math/tex">1 \leq l_i \leq r_i \leq n</script></span>)。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">10^4</span><script type="math/tex">10^4</script></span>，<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>。</p>
 <p>额外约束：保证在同一测试用例中没有重复的区间。</p>
 <h2 id="_3">交互过程</h2>
 <p>要提出询问，请按以下格式输出一行（不带引号）：
-<code>? l r</code> (<span class="arithmatex">\(1 \leq l \leq r \leq n\)</span>)</p>
-<p>评测机将返回一个整数，即 <span class="arithmatex">\(\text{MEX}([p_l, p_{l+1}, \ldots, p_r])\)</span> 的值。</p>
+<code>? l r</code> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq l \leq r \leq n</span><script type="math/tex">1 \leq l \leq r \leq n</script></span>)</p>
+<p>评测机将返回一个整数，即 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_l, p_{l+1}, \ldots, p_r])</span><script type="math/tex">\text{MEX}([p_l, p_{l+1}, \ldots, p_r])</script></span> 的值。</p>
 <p>当您找到答案时，请按以下格式输出一行：
-<code>! x</code> (<span class="arithmatex">\(0 \leq x \leq n\)</span>)</p>
+<code>! x</code> (<span class="arithmatex"><span class="MathJax_Preview">0 \leq x \leq n</span><script type="math/tex">0 \leq x \leq n</script></span>)</p>
 <p>在此之后，继续处理下一个测试用例，或者如果是最后一个测试用例则终止程序。打印答案不计入询问次数。</p>
 <p>交互器不是自适应的，这意味着排列的值在参与者提出询问之前就已经确定。</p>
 <p>如果您的程序进行了超过 30 次询问，它应立即终止，并收到 <code>Wrong Answer</code> 的判定。否则，您可能会得到任意判定，因为您的解决方案将继续从已关闭的流中读取。</p>
@@ -4770,11 +4770,11 @@
 </ul>
 <h2 id="_4">黑客格式</h2>
 <p>对于黑客攻击，请使用以下格式。</p>
-<p>输入的第一行应包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \leq t \leq 100\)</span>) —— 测试用例的数量。</p>
-<p>每个测试用例的第一行应包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(q\)</span> (<span class="arithmatex">\(4 \leq n \leq 10^4\)</span>, <span class="arithmatex">\(1 \leq q \leq 3 \cdot 10^5\)</span>) —— 分别是排列的大小和给出的区间数量。</p>
-<p>第二行应包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(p_1, p_2, \ldots, p_n\)</span> —— 其中 <span class="arithmatex">\(p_i\)</span> 是排列的第 <span class="arithmatex">\(i\)</span> 个元素。应保证 <span class="arithmatex">\(p\)</span> 是一个包含 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n-1\)</span> 整数的排列。</p>
-<p>接下来的 <span class="arithmatex">\(q\)</span> 行中，第 <span class="arithmatex">\(i\)</span> 行应包含两个整数 <span class="arithmatex">\(l_i\)</span>, <span class="arithmatex">\(r_i\)</span> (<span class="arithmatex">\(1 \leq l_i \leq r_i \leq n\)</span>)。</p>
-<p>应保证所有测试用例的 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(10^4\)</span>，<span class="arithmatex">\(q\)</span> 的总和不超过 <span class="arithmatex">\(3 \cdot 10^5\)</span>。</p>
+<p>输入的第一行应包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 100</span><script type="math/tex">1 \leq t \leq 100</script></span>) —— 测试用例的数量。</p>
+<p>每个测试用例的第一行应包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> (<span class="arithmatex"><span class="MathJax_Preview">4 \leq n \leq 10^4</span><script type="math/tex">4 \leq n \leq 10^4</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \leq q \leq 3 \cdot 10^5</span><script type="math/tex">1 \leq q \leq 3 \cdot 10^5</script></span>) —— 分别是排列的大小和给出的区间数量。</p>
+<p>第二行应包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">p_1, p_2, \ldots, p_n</span><script type="math/tex">p_1, p_2, \ldots, p_n</script></span> —— 其中 <span class="arithmatex"><span class="MathJax_Preview">p_i</span><script type="math/tex">p_i</script></span> 是排列的第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个元素。应保证 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是一个包含 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 整数的排列。</p>
+<p>接下来的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 行中，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行应包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span>, <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq l_i \leq r_i \leq n</span><script type="math/tex">1 \leq l_i \leq r_i \leq n</script></span>)。</p>
+<p>应保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">10^4</span><script type="math/tex">10^4</script></span>，<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>。</p>
 <p>额外约束：在同一测试用例中不应有重复的区间。</p>
 <h2 id="_5">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
@@ -4833,16 +4833,16 @@
 ! 1
 </code></pre></div>
 <h2 id="_7">样例说明</h2>
-<p>在第一个样例中，隐藏的排列是 <span class="arithmatex">\(p = [0,3,1,2]\)</span>，区间是 <span class="arithmatex">\([1,2],[2,4],[1,3]\)</span>。第三个区间是最优的，因为 <span class="arithmatex">\(\text{MEX}([p_1,p_2,p_3]) = \text{MEX}([0,3,1]) = 2\)</span>，这是最大值。</p>
-<p>在我们的第一次询问中，我们询问了 <span class="arithmatex">\(l=1, r=3\)</span>，裁判给出了值 <span class="arithmatex">\(\text{MEX}([p_1,p_2,p_3]) = 2\)</span>。在第二次询问中，我们询问了 <span class="arithmatex">\(l=4, r=4\)</span>，裁判给出了值 <span class="arithmatex">\(\text{MEX}([p_4]) = 0\)</span>。同样地，<span class="arithmatex">\(\text{MEX}([p_1]) = 1\)</span>，<span class="arithmatex">\(\text{MEX}([p_1,p_2,p_3,p_4]) = 4\)</span>。</p>
-<p>我们最终找出了我们寻找的答案是 <span class="arithmatex">\(2\)</span>。</p>
-<p>在第二个样例中，<span class="arithmatex">\(p = [3,5,0,1,4,2]\)</span>。</p>
-<p>在第三个样例中，<span class="arithmatex">\(p = [0,1,2,3]\)</span>。</p>
+<p>在第一个样例中，隐藏的排列是 <span class="arithmatex"><span class="MathJax_Preview">p = [0,3,1,2]</span><script type="math/tex">p = [0,3,1,2]</script></span>，区间是 <span class="arithmatex"><span class="MathJax_Preview">[1,2],[2,4],[1,3]</span><script type="math/tex">[1,2],[2,4],[1,3]</script></span>。第三个区间是最优的，因为 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_1,p_2,p_3]) = \text{MEX}([0,3,1]) = 2</span><script type="math/tex">\text{MEX}([p_1,p_2,p_3]) = \text{MEX}([0,3,1]) = 2</script></span>，这是最大值。</p>
+<p>在我们的第一次询问中，我们询问了 <span class="arithmatex"><span class="MathJax_Preview">l=1, r=3</span><script type="math/tex">l=1, r=3</script></span>，裁判给出了值 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_1,p_2,p_3]) = 2</span><script type="math/tex">\text{MEX}([p_1,p_2,p_3]) = 2</script></span>。在第二次询问中，我们询问了 <span class="arithmatex"><span class="MathJax_Preview">l=4, r=4</span><script type="math/tex">l=4, r=4</script></span>，裁判给出了值 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_4]) = 0</span><script type="math/tex">\text{MEX}([p_4]) = 0</script></span>。同样地，<span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_1]) = 1</span><script type="math/tex">\text{MEX}([p_1]) = 1</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\text{MEX}([p_1,p_2,p_3,p_4]) = 4</span><script type="math/tex">\text{MEX}([p_1,p_2,p_3,p_4]) = 4</script></span>。</p>
+<p>我们最终找出了我们寻找的答案是 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</p>
+<p>在第二个样例中，<span class="arithmatex"><span class="MathJax_Preview">p = [3,5,0,1,4,2]</span><script type="math/tex">p = [3,5,0,1,4,2]</script></span>。</p>
+<p>在第三个样例中，<span class="arithmatex"><span class="MathJax_Preview">p = [0,1,2,3]</span><script type="math/tex">p = [0,1,2,3]</script></span>。</p>
 <p>请注意，这仅仅是交互方式的一个解释，并未展示解决此问题的任何策略。</p>
 <p>你好！你提的这几个问题都非常关键，尤其是你给的这份代码，它背后涉及的逻辑确实有点绕。我们一步一步来拆解。</p>
-<p>坦率地说，你看不懂是正常的，因为这份代码的解法（通过二分查找一个“交叉点”）是用于解决这道题的 <strong>困难版本 (D2)</strong> 的。D1 版本给的查询限制 <span class="arithmatex">\(\max(300, \lceil \frac{n}{2} \rceil + 2)\)</span> 非常宽松，尤其是当 <span class="arithmatex">\(n\)</span> 很大时（比如 <span class="arithmatex">\(n=10000\)</span>），限制高达 5002 次，暗示可能存在 <span class="arithmatex">\(O(n)\)</span> 的解法。</p>
-<p>而你贴的这份代码，查询次数是 <span class="arithmatex">\(O(\log q)\)</span> 级别的（<span class="arithmatex">\(q\)</span> 是区间数量），大约只需要 40-50 次查询，这远远低于 D1 的限制（当然也符合 D1 的限制）。</p>
-<p>我们就按这份 <span class="arithmatex">\(O(\log q)\)</span> 的代码逻辑来分析，因为它更精妙，也能回答你的所有问题。</p>
+<p>坦率地说，你看不懂是正常的，因为这份代码的解法（通过二分查找一个“交叉点”）是用于解决这道题的 <strong>困难版本 (D2)</strong> 的。D1 版本给的查询限制 <span class="arithmatex"><span class="MathJax_Preview">\max(300, \lceil \frac{n}{2} \rceil + 2)</span><script type="math/tex">\max(300, \lceil \frac{n}{2} \rceil + 2)</script></span> 非常宽松，尤其是当 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 很大时（比如 <span class="arithmatex"><span class="MathJax_Preview">n=10000</span><script type="math/tex">n=10000</script></span>），限制高达 5002 次，暗示可能存在 <span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> 的解法。</p>
+<p>而你贴的这份代码，查询次数是 <span class="arithmatex"><span class="MathJax_Preview">O(\log q)</span><script type="math/tex">O(\log q)</script></span> 级别的（<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 是区间数量），大约只需要 40-50 次查询，这远远低于 D1 的限制（当然也符合 D1 的限制）。</p>
+<p>我们就按这份 <span class="arithmatex"><span class="MathJax_Preview">O(\log q)</span><script type="math/tex">O(\log q)</script></span> 的代码逻辑来分析，因为它更精妙，也能回答你的所有问题。</p>
 <hr />
 <h3 id="1">1. 为什么可以二分？</h3>
 <p>二分查找的前提是<strong>单调性</strong>。在这份代码里，二分的对象<strong>不是最终答案 (MEX 值)</strong>，而是那个被“过滤”后的区间列表 <code>qry</code> 的<strong>下标</strong>。</p>
@@ -4863,13 +4863,13 @@ for(int i=0;i&lt;m;i++){
 <p>这个过滤是在做什么？它在移除“被完全包含”的区间。</p>
 <p>我们要利用一个核心性质：</p>
 <blockquote>
-<p><strong>MEX 性质：</strong> 如果区间 <span class="arithmatex">\(A\)</span> 是区间 <span class="arithmatex">\(B\)</span> 的一个子区间（<span class="arithmatex">\(S_A \subseteq S_B\)</span>），那么 <span class="arithmatex">\(\text{MEX}(A) \le \text{MEX}(B)\)</span>。</p>
-<p><strong>证明：</strong> <span class="arithmatex">\(B\)</span> 缺少的最小非负整数是 <span class="arithmatex">\(\text{MEX}(B)\)</span>。<span class="arithmatex">\(A\)</span> 缺少的数字集合 <span class="arithmatex">\(M_A\)</span> 必然包含 <span class="arithmatex">\(B\)</span> 缺少的数字集合 <span class="arithmatex">\(M_B\)</span>（<span class="arithmatex">\(M_B \subseteq M_A\)</span>）。因此，<span class="arithmatex">\(A\)</span> 缺少的最小非负整数 <span class="arithmatex">\(\text{MEX}(A)\)</span> 必然小于等于 <span class="arithmatex">\(\text{MEX}(B)\)</span>。</p>
+<p><strong>MEX 性质：</strong> 如果区间 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 是区间 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的一个子区间（<span class="arithmatex"><span class="MathJax_Preview">S_A \subseteq S_B</span><script type="math/tex">S_A \subseteq S_B</script></span>），那么 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(A) \le \text{MEX}(B)</span><script type="math/tex">\text{MEX}(A) \le \text{MEX}(B)</script></span>。</p>
+<p><strong>证明：</strong> <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 缺少的最小非负整数是 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(B)</span><script type="math/tex">\text{MEX}(B)</script></span>。<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 缺少的数字集合 <span class="arithmatex"><span class="MathJax_Preview">M_A</span><script type="math/tex">M_A</script></span> 必然包含 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 缺少的数字集合 <span class="arithmatex"><span class="MathJax_Preview">M_B</span><script type="math/tex">M_B</script></span>（<span class="arithmatex"><span class="MathJax_Preview">M_B \subseteq M_A</span><script type="math/tex">M_B \subseteq M_A</script></span>）。因此，<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 缺少的最小非负整数 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(A)</span><script type="math/tex">\text{MEX}(A)</script></span> 必然小于等于 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(B)</span><script type="math/tex">\text{MEX}(B)</script></span>。</p>
 </blockquote>
-<p>我们要找的是 <span class="arithmatex">\(\max(\text{MEX})\)</span>，所以如果区间 <code>a[i]</code> 被 <code>qry.back()</code> 包含，<code>a[i]</code> 的 MEX 不可能超过 <code>qry.back()</code> 的 MEX，我们就可以安全地<strong>跳过 <code>a[i]</code></strong>。</p>
+<p>我们要找的是 <span class="arithmatex"><span class="MathJax_Preview">\max(\text{MEX})</span><script type="math/tex">\max(\text{MEX})</script></span>，所以如果区间 <code>a[i]</code> 被 <code>qry.back()</code> 包含，<code>a[i]</code> 的 MEX 不可能超过 <code>qry.back()</code> 的 MEX，我们就可以安全地<strong>跳过 <code>a[i]</code></strong>。</p>
 <ul>
 <li>
-<p><strong>排序后：</strong> <span class="arithmatex">\(l\)</span> 是非递减的。</p>
+<p><strong>排序后：</strong> <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 是非递减的。</p>
 </li>
 <li>
 <p><strong><code>if</code> 条件：</strong> <code>if (qry.back().second &gt;= a[i].second)</code></p>
@@ -4878,15 +4878,15 @@ for(int i=0;i&lt;m;i++){
 <p>因为排过序，<code>a[i].first &gt;= qry.back().first</code>（大部分情况）。</p>
 </li>
 <li>
-<p>这个条件检查的是：新区间 <code>a[i]</code> 的右端点 <span class="arithmatex">\(r_i\)</span> 是否小于等于已保留区间 <code>qry.back()</code> 的右端点 <span class="arithmatex">\(r_b\)</span>。</p>
+<p>这个条件检查的是：新区间 <code>a[i]</code> 的右端点 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 是否小于等于已保留区间 <code>qry.back()</code> 的右端点 <span class="arithmatex"><span class="MathJax_Preview">r_b</span><script type="math/tex">r_b</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(l_i \ge l_b\)</span> 且 <span class="arithmatex">\(r_i \le r_b\)</span>，说明 <code>a[i]</code> 是 <code>qry.back()</code> 的子区间，<span class="arithmatex">\(\text{MEX}(a[i]) \le \text{MEX}(qry.back())\)</span>，所以 <code>a[i]</code> 不可能是最优解（除非它等于最优解），可以跳过。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">l_i \ge l_b</span><script type="math/tex">l_i \ge l_b</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">r_i \le r_b</span><script type="math/tex">r_i \le r_b</script></span>，说明 <code>a[i]</code> 是 <code>qry.back()</code> 的子区间，<span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(a[i]) \le \text{MEX}(qry.back())</span><script type="math/tex">\text{MEX}(a[i]) \le \text{MEX}(qry.back())</script></span>，所以 <code>a[i]</code> 不可能是最优解（除非它等于最优解），可以跳过。</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>经过这个过滤，我们得到了一个列表 <code>qry</code>，其中 <span class="arithmatex">\(r_i\)</span> 是<strong>严格递增</strong>的。这个列表保留了所有“有希望成为最大MEX”的候选区间。</p>
+<p>经过这个过滤，我们得到了一个列表 <code>qry</code>，其中 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> 是<strong>严格递增</strong>的。这个列表保留了所有“有希望成为最大MEX”的候选区间。</p>
 <hr />
 <h3 id="2">2. 这个二分板子是什么意思？</h3>
 <p>你给的代码中的板子是：</p>
@@ -5086,22 +5086,22 @@ while (l &lt; r) {
 <p><strong>MEX 定义：</strong> 集合中<strong>未出现</strong>的最小非负整数。</p>
 </li>
 <li>
-<p><strong>关键性质：</strong> 如果集合 <span class="arithmatex">\(A\)</span> 是集合 <span class="arithmatex">\(B\)</span> 的子集（<span class="arithmatex">\(A \subseteq B\)</span>），那么 <span class="arithmatex">\(\text{MEX}(A) \le \text{MEX}(B)\)</span>。</p>
+<p><strong>关键性质：</strong> 如果集合 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 是集合 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的子集（<span class="arithmatex"><span class="MathJax_Preview">A \subseteq B</span><script type="math/tex">A \subseteq B</script></span>），那么 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(A) \le \text{MEX}(B)</span><script type="math/tex">\text{MEX}(A) \le \text{MEX}(B)</script></span>。</p>
 </li>
 <li>
 <p><strong>为什么？</strong></p>
 <ul>
 <li>
-<p>假设 <span class="arithmatex">\(\text{MEX}(A) = m\)</span>。这意味着 <span class="arithmatex">\(A\)</span> 中<strong>包含</strong> <span class="arithmatex">\(\{0, 1, \dots, m-1\}\)</span>，但<strong>不包含</strong> <span class="arithmatex">\(m\)</span>。</p>
+<p>假设 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(A) = m</span><script type="math/tex">\text{MEX}(A) = m</script></span>。这意味着 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中<strong>包含</strong> <span class="arithmatex"><span class="MathJax_Preview">\{0, 1, \dots, m-1\}</span><script type="math/tex">\{0, 1, \dots, m-1\}</script></span>，但<strong>不包含</strong> <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>。</p>
 </li>
 <li>
-<p>因为 <span class="arithmatex">\(A \subseteq B\)</span>，所以 <span class="arithmatex">\(B\)</span> 也<strong>必然包含</strong> <span class="arithmatex">\(\{0, 1, \dots, m-1\}\)</span>。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">A \subseteq B</span><script type="math/tex">A \subseteq B</script></span>，所以 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 也<strong>必然包含</strong> <span class="arithmatex"><span class="MathJax_Preview">\{0, 1, \dots, m-1\}</span><script type="math/tex">\{0, 1, \dots, m-1\}</script></span>。</p>
 </li>
 <li>
-<p>此时 <span class="arithmatex">\(B\)</span> 缺少的最小非负整数（即 <span class="arithmatex">\(\text{MEX}(B)\)</span>）<strong>至少</strong>是 <span class="arithmatex">\(m\)</span>。</p>
+<p>此时 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 缺少的最小非负整数（即 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(B)</span><script type="math/tex">\text{MEX}(B)</script></span>）<strong>至少</strong>是 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>。</p>
 </li>
 <li>
-<p>（如果 <span class="arithmatex">\(B\)</span> 恰好也不包含 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\text{MEX}(B) = m\)</span>；如果 <span class="arithmatex">\(B\)</span> 中包含了 <span class="arithmatex">\(m\)</span>，则 <span class="arithmatex">\(\text{MEX}(B)\)</span> 会大于 <span class="arithmatex">\(m\)</span>）。</p>
+<p>（如果 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 恰好也不包含 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(B) = m</span><script type="math/tex">\text{MEX}(B) = m</script></span>；如果 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 中包含了 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">\text{MEX}(B)</span><script type="math/tex">\text{MEX}(B)</script></span> 会大于 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>）。</p>
 </li>
 </ul>
 </li>
@@ -5132,13 +5132,13 @@ for(int i=0;i&lt;m;i++){
 </code></pre></div>
 <ul>
 <li>
-<p><strong>排序</strong> 保证了 <span class="arithmatex">\(l\)</span> 是非递减的。</p>
+<p><strong>排序</strong> 保证了 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 是非递减的。</p>
 </li>
 <li>
-<p><strong><code>if</code> 语句</strong> 过滤掉了那些被前一个区间“包含”的区间。因为我们的目标是 <span class="arithmatex">\(\max(\text{MEX})\)</span>，根据性质 1，被包含的子区间 <span class="arithmatex">\([l_i, r_i]\)</span> 的 MEX 不可能超过包含它的区间 <span class="arithmatex">\([l_b, r_b]\)</span> 的 MEX，所以可以安全地丢弃。</p>
+<p><strong><code>if</code> 语句</strong> 过滤掉了那些被前一个区间“包含”的区间。因为我们的目标是 <span class="arithmatex"><span class="MathJax_Preview">\max(\text{MEX})</span><script type="math/tex">\max(\text{MEX})</script></span>，根据性质 1，被包含的子区间 <span class="arithmatex"><span class="MathJax_Preview">[l_i, r_i]</span><script type="math/tex">[l_i, r_i]</script></span> 的 MEX 不可能超过包含它的区间 <span class="arithmatex"><span class="MathJax_Preview">[l_b, r_b]</span><script type="math/tex">[l_b, r_b]</script></span> 的 MEX，所以可以安全地丢弃。</p>
 </li>
 <li>
-<p><strong>结果：</strong> 我们得到一个列表 <code>qry</code>，其中 <span class="arithmatex">\(r_i\)</span> (右端点) 是<strong>严格递增</strong>的，而 <span class="arithmatex">\(l_i\)</span> (左端点) 是<strong>非递减</strong>的。</p>
+<p><strong>结果：</strong> 我们得到一个列表 <code>qry</code>，其中 <span class="arithmatex"><span class="MathJax_Preview">r_i</span><script type="math/tex">r_i</script></span> (右端点) 是<strong>严格递增</strong>的，而 <span class="arithmatex"><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> (左端点) 是<strong>非递减</strong>的。</p>
 </li>
 </ul>
 <hr />
@@ -5146,13 +5146,13 @@ for(int i=0;i&lt;m;i++){
 <p>我们在 <code>qry</code> 列表的<strong>下标</strong>上进行二分。二分的 <code>check</code> 条件是 <code>check(mid) = (f(mid) &lt; g(mid))</code>，其中：</p>
 <ol>
 <li>
-<p><strong><code>g(mid) = query(1, R)</code></strong> （其中 <span class="arithmatex">\(R = qry[mid].second\)</span>）</p>
+<p><strong><code>g(mid) = query(1, R)</code></strong> （其中 <span class="arithmatex"><span class="MathJax_Preview">R = qry[mid].second</span><script type="math/tex">R = qry[mid].second</script></span>）</p>
 <ul>
 <li>
-<p>当 <code>mid</code> 增大时，<span class="arithmatex">\(R\)</span> 严格增大。</p>
+<p>当 <code>mid</code> 增大时，<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 严格增大。</p>
 </li>
 <li>
-<p>区间 <code>[1, R]</code> 变大，它包含的元素集合 <span class="arithmatex">\(S\)</span> 只会变大 (<span class="arithmatex">\(S \subseteq S'\)</span>)。</p>
+<p>区间 <code>[1, R]</code> 变大，它包含的元素集合 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 只会变大 (<span class="arithmatex"><span class="MathJax_Preview">S \subseteq S'</span><script type="math/tex">S \subseteq S'</script></span>)。</p>
 </li>
 <li>
 <p>根据核心性质，MEX 值只会<strong>不变或增大 (非递减 ↗)</strong>。</p>
@@ -5160,13 +5160,13 @@ for(int i=0;i&lt;m;i++){
 </ul>
 </li>
 <li>
-<p><strong><code>f(mid) = query(L, n)</code></strong> （其中 <span class="arithmatex">\(L = qry[mid].first\)</span>）</p>
+<p><strong><code>f(mid) = query(L, n)</code></strong> （其中 <span class="arithmatex"><span class="MathJax_Preview">L = qry[mid].first</span><script type="math/tex">L = qry[mid].first</script></span>）</p>
 <ul>
 <li>
-<p>当 <code>mid</code> 增大时，<span class="arithmatex">\(L\)</span> 非递减。</p>
+<p>当 <code>mid</code> 增大时，<span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> 非递减。</p>
 </li>
 <li>
-<p>区间 <code>[L, n]</code> 变小（或不变），它包含的元素集合 <span class="arithmatex">\(S\)</span> 只会变小 (<span class="arithmatex">\(S' \subseteq S\)</span>)。</p>
+<p>区间 <code>[L, n]</code> 变小（或不变），它包含的元素集合 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 只会变小 (<span class="arithmatex"><span class="MathJax_Preview">S' \subseteq S</span><script type="math/tex">S' \subseteq S</script></span>)。</p>
 </li>
 <li>
 <p>根据核心性质，MEX 值只会<strong>不变或减小 (非递增 ↘)</strong>。</p>

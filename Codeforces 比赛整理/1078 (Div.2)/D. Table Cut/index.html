@@ -4588,16 +4588,16 @@
 <p>时间限制：每个测试点 2 秒
 内存限制：每个测试点 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个大小为 <span class="arithmatex">\(n \times m\)</span> 的表格，其中每个单元格包含 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(1\)</span>。任务是通过一个从左上角到右下角的切割线将其分成两部分。切割线只能向右或向下移动。</p>
-<p>设 <span class="arithmatex">\(a\)</span> 为切割后表格一部分中 <span class="arithmatex">\(1\)</span> 的数量，<span class="arithmatex">\(b\)</span> 为表格另一部分中 <span class="arithmatex">\(1\)</span> 的数量。目标是最大化 <span class="arithmatex">\(a \cdot b\)</span> 的值。</p>
+<p>给定一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n \times m</span><script type="math/tex">n \times m</script></span> 的表格，其中每个单元格包含 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。任务是通过一个从左上角到右下角的切割线将其分成两部分。切割线只能向右或向下移动。</p>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 为切割后表格一部分中 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的数量，<span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 为表格另一部分中 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的数量。目标是最大化 <span class="arithmatex"><span class="MathJax_Preview">a \cdot b</span><script type="math/tex">a \cdot b</script></span> 的值。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span>。接下来是测试用例的描述。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(m\)</span> <span class="arithmatex">\((1 \le n, m \le 3 \cdot 10^5\)</span>, <span class="arithmatex">\(2 \le n \cdot m \le 3 \cdot 10^5)\)</span> —— 分别表示表格的行数和列数。</p>
-<p>接下来的 <span class="arithmatex">\(n\)</span> 行中，每行包含 <span class="arithmatex">\(m\)</span> 个整数，其中第 <span class="arithmatex">\(i\)</span> 行的第 <span class="arithmatex">\(j\)</span> 个数对应值 <span class="arithmatex">\(a_{i,j}\)</span> <span class="arithmatex">\((0 \le a_{i,j} \le 1)\)</span>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n \cdot m\)</span> 值之和不超过 <span class="arithmatex">\(3 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span>。接下来是测试用例的描述。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le n, m \le 3 \cdot 10^5</span><script type="math/tex">(1 \le n, m \le 3 \cdot 10^5</script></span>, <span class="arithmatex"><span class="MathJax_Preview">2 \le n \cdot m \le 3 \cdot 10^5)</span><script type="math/tex">2 \le n \cdot m \le 3 \cdot 10^5)</script></span> —— 分别表示表格的行数和列数。</p>
+<p>接下来的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 行中，每行包含 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个整数，其中第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行的第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 个数对应值 <span class="arithmatex"><span class="MathJax_Preview">a_{i,j}</span><script type="math/tex">a_{i,j}</script></span> <span class="arithmatex"><span class="MathJax_Preview">(0 \le a_{i,j} \le 1)</span><script type="math/tex">(0 \le a_{i,j} \le 1)</script></span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n \cdot m</span><script type="math/tex">n \cdot m</script></span> 值之和不超过 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，在输出数据的第一行输出一个数字 —— 乘积的最大值。</p>
-<p>在第二行，输出一个由 <span class="arithmatex">\(n\)</span> 个字符 'D' 和 <span class="arithmatex">\(m\)</span> 个字符 'R' 组成的字符串，表示下一步切割的方向，其中 'D' 表示向下切割，'R' 表示向右切割。</p>
+<p>在第二行，输出一个由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个字符 'D' 和 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 个字符 'R' 组成的字符串，表示下一步切割的方向，其中 'D' 表示向下切割，'R' 表示向右切割。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 5 5
@@ -4755,13 +4755,13 @@ DRDRD
 </ul>
 <h1 id="cf-2194d-table-cut">📝 算法笔记：CF 2194D - Table Cut</h1>
 <h3 id="1">1. 问题核心</h3>
-<p><strong>目标</strong>：在一个 <span class="arithmatex">\(n \times m\)</span> 的 01 矩阵中，画一条只能“向下 (D)”或“向右 (R)”的切割线，将矩阵分为两部分。使得两部分中 <code>1</code> 的数量乘积 <span class="arithmatex">\(a \cdot b\)</span> 最大。</p>
-<p><strong>约束</strong>：<span class="arithmatex">\(n, m \le 3 \cdot 10^5\)</span>，时间限制 2s。</p>
+<p><strong>目标</strong>：在一个 <span class="arithmatex"><span class="MathJax_Preview">n \times m</span><script type="math/tex">n \times m</script></span> 的 01 矩阵中，画一条只能“向下 (D)”或“向右 (R)”的切割线，将矩阵分为两部分。使得两部分中 <code>1</code> 的数量乘积 <span class="arithmatex"><span class="MathJax_Preview">a \cdot b</span><script type="math/tex">a \cdot b</script></span> 最大。</p>
+<p><strong>约束</strong>：<span class="arithmatex"><span class="MathJax_Preview">n, m \le 3 \cdot 10^5</span><script type="math/tex">n, m \le 3 \cdot 10^5</script></span>，时间限制 2s。</p>
 <h3 id="2">2. 核心思维</h3>
 <p><strong>数学直觉</strong>：</p>
-<p>设总 <code>1</code> 的数量为 <span class="arithmatex">\(S\)</span>。我们要最大化 <span class="arithmatex">\(x \cdot (S - x)\)</span>，根据二次函数性质，当 <span class="arithmatex">\(x\)</span> 越接近 <span class="arithmatex">\(S/2\)</span> 时，乘积越大。</p>
+<p>设总 <code>1</code> 的数量为 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>。我们要最大化 <span class="arithmatex"><span class="MathJax_Preview">x \cdot (S - x)</span><script type="math/tex">x \cdot (S - x)</script></span>，根据二次函数性质，当 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 越接近 <span class="arithmatex"><span class="MathJax_Preview">S/2</span><script type="math/tex">S/2</script></span> 时，乘积越大。</p>
 <p><strong>几何构造（介值定理）</strong>：</p>
-<p>是否存在一条路径，能够恰好圈出任意数量 <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(0 \le k \le S\)</span>) 的 <code>1</code>？</p>
+<p>是否存在一条路径，能够恰好圈出任意数量 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \le k \le S</span><script type="math/tex">0 \le k \le S</script></span>) 的 <code>1</code>？</p>
 <ul>
 <li>
 <p><strong>结论</strong>：是的。</p>
@@ -4773,13 +4773,13 @@ DRDRD
 <p>如果我们贴着最左和最下走，圈出的右上角区域包含 0 个 <code>1</code>。</p>
 </li>
 <li>
-<p>如果我们贴着最上和最右走，圈出的右上角区域包含 <span class="arithmatex">\(S\)</span> 个 <code>1</code>。</p>
+<p>如果我们贴着最上和最右走，圈出的右上角区域包含 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 个 <code>1</code>。</p>
 </li>
 <li>
-<p>每次我们将路径上的一个“拐角”从 <span class="arithmatex">\(RD\)</span> 变为 <span class="arithmatex">\(DR\)</span>（即把一个格子从路径上方移到路径下方），右上角区域的 <code>1</code> 的数量变化量只能是 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(1\)</span>。</p>
+<p>每次我们将路径上的一个“拐角”从 <span class="arithmatex"><span class="MathJax_Preview">RD</span><script type="math/tex">RD</script></span> 变为 <span class="arithmatex"><span class="MathJax_Preview">DR</span><script type="math/tex">DR</script></span>（即把一个格子从路径上方移到路径下方），右上角区域的 <code>1</code> 的数量变化量只能是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 </li>
 <li>
-<p>因此，我们可以取到 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(S\)</span> 之间的<strong>任意整数</strong>。</p>
+<p>因此，我们可以取到 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 之间的<strong>任意整数</strong>。</p>
 </li>
 </ul>
 </li>
@@ -4802,13 +4802,13 @@ DRDRD
 <p><strong>寻找分割点</strong>：</p>
 <ul>
 <li>
-<p>双重循环遍历：<code>i</code> 从 <span class="arithmatex">\(0 \to n-1\)</span>，<code>j</code> 从 <span class="arithmatex">\(m-1 \to 0\)</span>。</p>
+<p>双重循环遍历：<code>i</code> 从 <span class="arithmatex"><span class="MathJax_Preview">0 \to n-1</span><script type="math/tex">0 \to n-1</script></span>，<code>j</code> 从 <span class="arithmatex"><span class="MathJax_Preview">m-1 \to 0</span><script type="math/tex">m-1 \to 0</script></span>。</p>
 </li>
 <li>
 <p>累加遇到的 <code>1</code>。</p>
 </li>
 <li>
-<p>当累加值等于 <code>target</code> 时，记录当前坐标 <span class="arithmatex">\((x, y)\)</span> 并退出。</p>
+<p>当累加值等于 <code>target</code> 时，记录当前坐标 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 并退出。</p>
 </li>
 </ul>
 </li>
@@ -4816,19 +4816,19 @@ DRDRD
 <p><strong>构造路径</strong>：</p>
 <ul>
 <li>
-<p>目标是把 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((x, y)\)</span> 以及 <span class="arithmatex">\((x, y)\)</span> 右边的所有格子划入右上角。</p>
+<p>目标是把 <span class="arithmatex"><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 以及 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 右边的所有格子划入右上角。</p>
 </li>
 <li>
 <p>路径走法：</p>
 <ol>
 <li>
-<p>先向下走 <span class="arithmatex">\(x\)</span> 步（到达第 <span class="arithmatex">\(x\)</span> 行）。</p>
+<p>先向下走 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 步（到达第 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 行）。</p>
 </li>
 <li>
-<p>再向右走 <span class="arithmatex">\(y\)</span> 步（到达第 <span class="arithmatex">\(y\)</span> 列）。</p>
+<p>再向右走 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 步（到达第 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 列）。</p>
 </li>
 <li>
-<p><strong>向下走 1 步</strong>（关键：这一步把 <span class="arithmatex">\((x,y)\)</span> 这个格子“关”进了右上角的区域）。</p>
+<p><strong>向下走 1 步</strong>（关键：这一步把 <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> 这个格子“关”进了右上角的区域）。</p>
 </li>
 <li>
 <p>走完剩余的向右步数。</p>
@@ -4861,7 +4861,7 @@ DRDRD
 <p><strong>坑点 2：数据溢出</strong></p>
 <ul>
 <li>
-<p><strong>现象</strong>：<code>n, m</code> 只有 <span class="arithmatex">\(3 \cdot 10^5\)</span>，但 <code>cnt</code> 接近 <span class="arithmatex">\(3 \cdot 10^5\)</span> 时，积可以达到 <span class="arithmatex">\(2.25 \cdot 10^{10}\)</span>，超出了 <code>int</code> 范围（约 <span class="arithmatex">\(2 \cdot 10^9\)</span>）。</p>
+<p><strong>现象</strong>：<code>n, m</code> 只有 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>，但 <code>cnt</code> 接近 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span> 时，积可以达到 <span class="arithmatex"><span class="MathJax_Preview">2.25 \cdot 10^{10}</span><script type="math/tex">2.25 \cdot 10^{10}</script></span>，超出了 <code>int</code> 范围（约 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^9</span><script type="math/tex">2 \cdot 10^9</script></span>）。</p>
 </li>
 <li>
 <p><strong>修正</strong>：使用 <code>#define int long long</code> 或显式定义 <code>long long ans</code>。</p>

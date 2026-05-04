@@ -4602,23 +4602,23 @@
 <p>时间限制：每个测试 2 秒
 内存限制：每个测试 512 兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>在 Monocarp 的房子前有一条河流，可以表示为一排单元格。在某些单元格中有强水流，而在其他单元格中没有水流。这可以用一个字符串 <span class="arithmatex">\(s\)</span> 表示，包含以下字符：</p>
+<p>在 Monocarp 的房子前有一条河流，可以表示为一排单元格。在某些单元格中有强水流，而在其他单元格中没有水流。这可以用一个字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 表示，包含以下字符：</p>
 <ul>
 <li>小于号 ('&lt;') —— 向左的水流；</li>
 <li>大于号 ('&gt;') —— 向右的水流；</li>
 <li>星号 (' *  ') —— 没有水流。</li>
 </ul>
 <p>最初，Monocarp 选择一个单元格开始他的河流之旅。</p>
-<p>如果 Monocarp 当前所在的单元格有水流，他会被冲到水流方向的相邻单元格。如果没有相邻单元格（即在第 1 个单元格有向左的水流，或在第 <span class="arithmatex">\(n\)</span> 个单元格有向右的水流），Monocarp 会上岸。每次移动花费 1 分钟。</p>
+<p>如果 Monocarp 当前所在的单元格有水流，他会被冲到水流方向的相邻单元格。如果没有相邻单元格（即在第 1 个单元格有向左的水流，或在第 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个单元格有向右的水流），Monocarp 会上岸。每次移动花费 1 分钟。</p>
 <p>如果 Monocarp 当前所在的单元格没有水流，他可以向左或向右划到相邻单元格。如果 Monocarp 决定划向的方向没有相邻单元格，他会上岸。每次移动同样花费 1 分钟。</p>
-<p>Monocarp 希望在河流上航行尽可能长的时间。如果 Monocarp 可以无限航行，输出 <span class="arithmatex">\(-1\)</span>。否则，输出 Monocarp 在上岸前能在河流上航行的最长时间。</p>
+<p>Monocarp 希望在河流上航行尽可能长的时间。如果 Monocarp 可以无限航行，输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。否则，输出 Monocarp 在上岸前能在河流上航行的最长时间。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）——测试用例的数量。</p>
-<p>每个测试用例只有一行，包含一个字符串 <span class="arithmatex">\(s\)</span>（<span class="arithmatex">\(1 \le |s| \le 3 \cdot 10^5\)</span>），仅由字符 '&lt;'（向左水流）、'&gt;'（向右水流）、'*'（无水流）组成。它们的 ASCII 码分别是 60、62 和 42。</p>
-<p>输入数据的额外约束：所有测试用例的字符串 <span class="arithmatex">\(s\)</span> 总长度不超过 <span class="arithmatex">\(3 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）——测试用例的数量。</p>
+<p>每个测试用例只有一行，包含一个字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le |s| \le 3 \cdot 10^5</span><script type="math/tex">1 \le |s| \le 3 \cdot 10^5</script></span>），仅由字符 '&lt;'（向左水流）、'&gt;'（向右水流）、'*'（无水流）组成。它们的 ASCII 码分别是 60、62 和 42。</p>
+<p>输入数据的额外约束：所有测试用例的字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 总长度不超过 <span class="arithmatex"><span class="MathJax_Preview">3 \cdot 10^5</span><script type="math/tex">3 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数：
-- 如果 Monocarp 可以无限航行，输出 <span class="arithmatex">\(-1\)</span>；
+- 如果 Monocarp 可以无限航行，输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>；
 - 否则输出 Monocarp 能在河流上航行的最长时间。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
@@ -4816,12 +4816,12 @@ if(l != -1 &amp;&amp; l &lt; r) flag=1;
 <ul>
 <li>我们来简化问题——假设字符串只包含字符 '&lt;' 和 '&gt;'。</li>
 </ul>
-<p>我们先来弄清楚答案何时为 <span class="arithmatex">\(-1\)</span>。如果字符串中某处存在子串 "&gt;&lt;"，那么答案肯定是 <span class="arithmatex">\(-1\)</span>，因为 Monocarp 可以从这些格子中的一个开始，并在它们之间无限地来回航行。</p>
+<p>我们先来弄清楚答案何时为 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。如果字符串中某处存在子串 "&gt;&lt;"，那么答案肯定是 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>，因为 Monocarp 可以从这些格子中的一个开始，并在它们之间无限地来回航行。</p>
 <p>如果这样的子串不存在，那么所有的 '&lt;' 字符都在所有的 '&gt;' 字符之前，这意味着字符串看起来像 &lt;&lt;...&lt;&lt;&gt;&gt;...&gt;&gt;。显然，无论 Monocarp 从哪里开始，他最终都会上岸。为了尽可能长时间地航行，Monocarp 可以穿过所有向左的水流格子，或者穿过所有向右的水流格子。因此，答案是它们数量的最大值。</p>
 <p>如果字符串中有 '<em>' 字符，如何解决问题？题目陈述指出，Monocarp 每次落在一个星号上时，可以选择划船的方向。然而，应该很清楚，如果 Monocarp 访问了一个星号，选择了一个方向，然后又再次返回该星号，那么选择相同的方向是最优的。如果对所有访问过的星号都这样做，那么这个循环将是无限的。因此，我们需要用 '&lt;' 或 '&gt;' 替换所有的 '</em>'，以使得没有 '*' 时问题的答案最大化。</p>
-<p>所以，如果存在相邻的符号可以形成 "&gt;&lt;"，那么答案是 <span class="arithmatex">\(-1\)</span>。如果这样的配对不存在，字符串会是什么样子？显然，字符串中没有两个连续的 '<em>' 字符。然而，可以做出一个更强的断言——字符串中最多只能有一个 '</em>'。我们来证明这一点。考虑两个星号，中间有一些箭头。首先，有向左的箭头，然后有向右的箭头。如果至少有一个向左的箭头，那么左边的星号可以替换为 '&gt;'。如果至少有一个向右的箭头，那么右边的星号可以替换为 '&lt;'。因此，中间应该没有任何箭头，但那样的话星号就是相邻的，并且它们可以被替换为 "&gt;&lt;"。</p>
+<p>所以，如果存在相邻的符号可以形成 "&gt;&lt;"，那么答案是 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。如果这样的配对不存在，字符串会是什么样子？显然，字符串中没有两个连续的 '<em>' 字符。然而，可以做出一个更强的断言——字符串中最多只能有一个 '</em>'。我们来证明这一点。考虑两个星号，中间有一些箭头。首先，有向左的箭头，然后有向右的箭头。如果至少有一个向左的箭头，那么左边的星号可以替换为 '&gt;'。如果至少有一个向右的箭头，那么右边的星号可以替换为 '&lt;'。因此，中间应该没有任何箭头，但那样的话星号就是相邻的，并且它们可以被替换为 "&gt;&lt;"。</p>
 <p>因此，字符串可能看起来像 &lt;&lt;...&lt;&lt;&gt;&gt;...&gt;&gt; 或者 &lt;&lt;...&lt;&lt;*&gt;&gt;...&gt;&gt;。在第二种情况下，星号可以被替换为出现次数更多的那个箭头。因此，为了解决这个问题，只需计算每种箭头的数量即可。</p>
-<p>总体复杂度：每个测试用例 <span class="arithmatex">\(O(|s|)\)</span>。</p>
+<p>总体复杂度：每个测试用例 <span class="arithmatex"><span class="MathJax_Preview">O(|s|)</span><script type="math/tex">O(|s|)</script></span>。</p>
 <h1 id="cf_1">CF题解代码</h1>
 <p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>

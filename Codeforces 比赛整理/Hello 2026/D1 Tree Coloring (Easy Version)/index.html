@@ -4424,17 +4424,17 @@
 内存限制：每次测试 512 兆字节</p>
 <h2 id="_1">问题描述</h2>
 <p>这是问题的简单版本。版本之间的区别在于，在这个版本中，您只需要找到最少的操作次数。只有解决了此问题的所有版本，您才能进行 hack。</p>
-<p>您得到一棵<strong>有根树</strong>*，它由编号为 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的 <span class="arithmatex">\(n\)</span> 个顶点组成，其中根节点的索引为 <span class="arithmatex">\(1\)</span>，且每个顶点最初都是白色的。定义 <span class="arithmatex">\(d_i\)</span> 为从根节点到第 <span class="arithmatex">\(i\)</span> 个顶点的距离。您可以执行任意次数的以下操作：
-- 选择一个白色顶点子集 <span class="arithmatex">\(S\)</span>，使得 <span class="arithmatex">\(S\)</span> 中任意两个节点之间没有边相连，或者到节点 <span class="arithmatex">\(1\)</span> 的距离不同。形式化地，对于所有 <span class="arithmatex">\(x, y \in S\)</span> 且 <span class="arithmatex">\(x \ne y\)</span>，应满足 <span class="arithmatex">\(d_x \ne d_y\)</span> 并且 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 之间没有边。
-- 将 <span class="arithmatex">\(S\)</span> 中的顶点涂成黑色。</p>
+<p>您得到一棵<strong>有根树</strong>*，它由编号为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个顶点组成，其中根节点的索引为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，且每个顶点最初都是白色的。定义 <span class="arithmatex"><span class="MathJax_Preview">d_i</span><script type="math/tex">d_i</script></span> 为从根节点到第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个顶点的距离。您可以执行任意次数的以下操作：
+- 选择一个白色顶点子集 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 中任意两个节点之间没有边相连，或者到节点 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的距离不同。形式化地，对于所有 <span class="arithmatex"><span class="MathJax_Preview">x, y \in S</span><script type="math/tex">x, y \in S</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">x \ne y</span><script type="math/tex">x \ne y</script></span>，应满足 <span class="arithmatex"><span class="MathJax_Preview">d_x \ne d_y</span><script type="math/tex">d_x \ne d_y</script></span> 并且 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 之间没有边。
+- 将 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 中的顶点涂成黑色。</p>
 <p>您的工作是找出将整棵树涂黑所需的最少操作次数。</p>
 <p>* 树是一个没有环的连通图。有根树是一种有一个特殊顶点（称为根）的树。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>)。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(2 \le n \le 2 \cdot 10^5\)</span>) —— 树中的顶点数。</p>
-<p>接下来的 <span class="arithmatex">\(n-1\)</span> 行，第 <span class="arithmatex">\(i\)</span> 行包含两个整数 <span class="arithmatex">\(u_i\)</span> 和 <span class="arithmatex">\(v_i\)</span> (<span class="arithmatex">\(1 \le u_i, v_i \le n\)</span>, <span class="arithmatex">\(u_i \ne v_i\)</span>) —— 表示第 <span class="arithmatex">\(i\)</span> 条边的两个端点。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>)。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">2 \le n \le 2 \cdot 10^5</span><script type="math/tex">2 \le n \le 2 \cdot 10^5</script></span>) —— 树中的顶点数。</p>
+<p>接下来的 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 行，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">u_i</span><script type="math/tex">u_i</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">v_i</span><script type="math/tex">v_i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le u_i, v_i \le n</span><script type="math/tex">1 \le u_i, v_i \le n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">u_i \ne v_i</span><script type="math/tex">u_i \ne v_i</script></span>) —— 表示第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 条边的两个端点。</p>
 <p>保证给定的边构成一棵树。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，在新的一行输出最少操作次数。</p>
 <h2 id="_4">样例输入</h2>
@@ -4531,8 +4531,8 @@
 3
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，<span class="arithmatex">\(d_1=1\)</span> 且 <span class="arithmatex">\(d_2=d_3=d_4=d_5=2\)</span>。我们可以证明至少需要进行 <span class="arithmatex">\(5\)</span> 次操作，因为没有两个节点可以同时操作。</p>
-<p>在第二个测试用例中，我们可以证明将整棵树涂黑所需的最少操作次数是 <span class="arithmatex">\(4\)</span>。一种方法是：在同一次操作中将节点 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(3\)</span> 涂黑，然后在各自的单次操作中将所有其他 <span class="arithmatex">\(3\)</span> 个节点涂黑。</p>
+<p>在第一个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">d_1=1</span><script type="math/tex">d_1=1</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">d_2=d_3=d_4=d_5=2</span><script type="math/tex">d_2=d_3=d_4=d_5=2</script></span>。我们可以证明至少需要进行 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 次操作，因为没有两个节点可以同时操作。</p>
+<p>在第二个测试用例中，我们可以证明将整棵树涂黑所需的最少操作次数是 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>。一种方法是：在同一次操作中将节点 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 涂黑，然后在各自的单次操作中将所有其他 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个节点涂黑。</p>
 
 
 

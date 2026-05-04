@@ -4538,27 +4538,27 @@
 <h2 id="_1">问题描述</h2>
 <p>lianhua - CITRUS!<br />
 ⠀<br />
-您是为未来公司RoboCorp工作的冒险者。您当前的技能等级是范围 <span class="arithmatex">\([1,n]\)</span> 内的一个整数 <span class="arithmatex">\(s\)</span>，但您不知道它的确切值。您的目标是通过完成RoboCorp的任务达到技能等级 <span class="arithmatex">\(\geq n\)</span>，但每个任务都需要花费珍贵的robocoins。</p>
+您是为未来公司RoboCorp工作的冒险者。您当前的技能等级是范围 <span class="arithmatex"><span class="MathJax_Preview">[1,n]</span><script type="math/tex">[1,n]</script></span> 内的一个整数 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，但您不知道它的确切值。您的目标是通过完成RoboCorp的任务达到技能等级 <span class="arithmatex"><span class="MathJax_Preview">\geq n</span><script type="math/tex">\geq n</script></span>，但每个任务都需要花费珍贵的robocoins。</p>
 <p>您可以选择任意难度和任意正整持续时间（以小时计）的任务。然而，成本取决于新任务的长度，以及新任务的难度与您最近一个任务的难度比较。</p>
-<p>设 <span class="arithmatex">\(x\)</span> 是您最近一个任务的难度。如果您想要承担一个难度为 <span class="arithmatex">\(y\)</span>、持续时间为 <span class="arithmatex">\(l\)</span> 的新任务：</p>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是您最近一个任务的难度。如果您想要承担一个难度为 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>、持续时间为 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 的新任务：</p>
 <ul>
-<li>如果这是您的第一个任务，或者 <span class="arithmatex">\(y \leq x\)</span>，成本为 <span class="arithmatex">\(l\)</span> robocoins</li>
-<li>如果 <span class="arithmatex">\(y &gt; x\)</span>，成本为 <span class="arithmatex">\(1000 + l\)</span> robocoins</li>
+<li>如果这是您的第一个任务，或者 <span class="arithmatex"><span class="MathJax_Preview">y \leq x</span><script type="math/tex">y \leq x</script></span>，成本为 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> robocoins</li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">y &gt; x</span><script type="math/tex">y > x</script></span>，成本为 <span class="arithmatex"><span class="MathJax_Preview">1000 + l</span><script type="math/tex">1000 + l</script></span> robocoins</li>
 </ul>
 <p>您的技能只有在承担难度恰好等于您当前技能等级的任务时才会提高：</p>
 <ul>
-<li>如果 <span class="arithmatex">\(y = s\)</span>，那么您的技能增加 <span class="arithmatex">\(l\)</span></li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">y = s</span><script type="math/tex">y = s</script></span>，那么您的技能增加 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span></li>
 <li>否则，您的技能不会改变</li>
 </ul>
 <p>每次任务后，您仍然不知道自己的实际技能值。</p>
-<p>您从 <span class="arithmatex">\(10^6\)</span> robocoins开始。找到一个策略（一系列任务），不超过您的预算，并保证无论您的初始技能是什么，您的技能最终都至少达到 <span class="arithmatex">\(n\)</span>。</p>
+<p>您从 <span class="arithmatex"><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span> robocoins开始。找到一个策略（一系列任务），不超过您的预算，并保证无论您的初始技能是什么，您的技能最终都至少达到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含一行，有一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(n=4\)</span> 或 <span class="arithmatex">\(n=250000\)</span>) — 目标技能等级（即最终时，您的技能必须 <span class="arithmatex">\(\geq n\)</span>）。</p>
-<p>这个问题中恰好有 <span class="arithmatex">\(2\)</span> 个测试（包括样例）。样例中 <span class="arithmatex">\(n=4\)</span>，另一个测试中 <span class="arithmatex">\(n=250000\)</span>。</p>
+<p>输入包含一行，有一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">n=4</span><script type="math/tex">n=4</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">n=250000</span><script type="math/tex">n=250000</script></span>) — 目标技能等级（即最终时，您的技能必须 <span class="arithmatex"><span class="MathJax_Preview">\geq n</span><script type="math/tex">\geq n</script></span>）。</p>
+<p>这个问题中恰好有 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个测试（包括样例）。样例中 <span class="arithmatex"><span class="MathJax_Preview">n=4</span><script type="math/tex">n=4</script></span>，另一个测试中 <span class="arithmatex"><span class="MathJax_Preview">n=250000</span><script type="math/tex">n=250000</script></span>。</p>
 <p>此问题不允许hacks。</p>
 <h2 id="_3">输出格式</h2>
-<p>在第一行，打印一个整数 <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(0 \leq k \leq 10^6\)</span>) — 您计划完成的任务数量。</p>
-<p>然后，打印 <span class="arithmatex">\(k\)</span> 行。第 <span class="arithmatex">\(i\)</span> 行必须包含两个整数 <span class="arithmatex">\(y\)</span> 和 <span class="arithmatex">\(l\)</span> (<span class="arithmatex">\(1 \leq y,l \leq 10^6\)</span>) — 分别表示第 <span class="arithmatex">\(i\)</span> 个任务的难度和持续时间（以小时计）。</p>
+<p>在第一行，打印一个整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \leq k \leq 10^6</span><script type="math/tex">0 \leq k \leq 10^6</script></span>) — 您计划完成的任务数量。</p>
+<p>然后，打印 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 行。第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 行必须包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \leq y,l \leq 10^6</span><script type="math/tex">1 \leq y,l \leq 10^6</script></span>) — 分别表示第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个任务的难度和持续时间（以小时计）。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 </code></pre></div>
@@ -4570,22 +4570,22 @@
 3 1
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在样例中，您的目标技能是 <span class="arithmatex">\(n=4\)</span>。您可以使用以下策略：</p>
+<p>在样例中，您的目标技能是 <span class="arithmatex"><span class="MathJax_Preview">n=4</span><script type="math/tex">n=4</script></span>。您可以使用以下策略：</p>
 <ul>
-<li>承担难度 <span class="arithmatex">\(y=1\)</span>、持续时间 <span class="arithmatex">\(l=4\)</span> 的任务。这是您的第一个任务，所以您支付 <span class="arithmatex">\(l=4\)</span> robocoins</li>
-<li>承担难度 <span class="arithmatex">\(y=3\)</span>、持续时间 <span class="arithmatex">\(l=1\)</span> 的任务。前一个任务的难度是 <span class="arithmatex">\(x=1\)</span>，因为 <span class="arithmatex">\(y&gt;x\)</span>，您支付 <span class="arithmatex">\(l+1000=1001\)</span> robocoins</li>
-<li>承担难度 <span class="arithmatex">\(y=2\)</span>、持续时间 <span class="arithmatex">\(l=1\)</span> 的任务。现在 <span class="arithmatex">\(x=3\)</span>，因为 <span class="arithmatex">\(y \leq x\)</span>，您支付 <span class="arithmatex">\(l=1\)</span> robocoin</li>
-<li>承担难度 <span class="arithmatex">\(y=3\)</span>、持续时间 <span class="arithmatex">\(l=1\)</span> 的任务。现在 <span class="arithmatex">\(x=2\)</span>，因为 <span class="arithmatex">\(y&gt;x\)</span>，您支付 <span class="arithmatex">\(l+1000=1001\)</span> robocoins</li>
+<li>承担难度 <span class="arithmatex"><span class="MathJax_Preview">y=1</span><script type="math/tex">y=1</script></span>、持续时间 <span class="arithmatex"><span class="MathJax_Preview">l=4</span><script type="math/tex">l=4</script></span> 的任务。这是您的第一个任务，所以您支付 <span class="arithmatex"><span class="MathJax_Preview">l=4</span><script type="math/tex">l=4</script></span> robocoins</li>
+<li>承担难度 <span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>、持续时间 <span class="arithmatex"><span class="MathJax_Preview">l=1</span><script type="math/tex">l=1</script></span> 的任务。前一个任务的难度是 <span class="arithmatex"><span class="MathJax_Preview">x=1</span><script type="math/tex">x=1</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">y&gt;x</span><script type="math/tex">y>x</script></span>，您支付 <span class="arithmatex"><span class="MathJax_Preview">l+1000=1001</span><script type="math/tex">l+1000=1001</script></span> robocoins</li>
+<li>承担难度 <span class="arithmatex"><span class="MathJax_Preview">y=2</span><script type="math/tex">y=2</script></span>、持续时间 <span class="arithmatex"><span class="MathJax_Preview">l=1</span><script type="math/tex">l=1</script></span> 的任务。现在 <span class="arithmatex"><span class="MathJax_Preview">x=3</span><script type="math/tex">x=3</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">y \leq x</span><script type="math/tex">y \leq x</script></span>，您支付 <span class="arithmatex"><span class="MathJax_Preview">l=1</span><script type="math/tex">l=1</script></span> robocoin</li>
+<li>承担难度 <span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>、持续时间 <span class="arithmatex"><span class="MathJax_Preview">l=1</span><script type="math/tex">l=1</script></span> 的任务。现在 <span class="arithmatex"><span class="MathJax_Preview">x=2</span><script type="math/tex">x=2</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">y&gt;x</span><script type="math/tex">y>x</script></span>，您支付 <span class="arithmatex"><span class="MathJax_Preview">l+1000=1001</span><script type="math/tex">l+1000=1001</script></span> robocoins</li>
 </ul>
-<p>总共，您花费了 <span class="arithmatex">\(2007\)</span> robocoins，这在您的 <span class="arithmatex">\(10^6\)</span> robocoin预算内。</p>
+<p>总共，您花费了 <span class="arithmatex"><span class="MathJax_Preview">2007</span><script type="math/tex">2007</script></span> robocoins，这在您的 <span class="arithmatex"><span class="MathJax_Preview">10^6</span><script type="math/tex">10^6</script></span> robocoin预算内。</p>
 <p>现在我们验证这个策略总是有效的：</p>
 <ul>
-<li>如果您的初始技能是 <span class="arithmatex">\(1\)</span>，在第一个任务后变为 <span class="arithmatex">\(5\)</span></li>
-<li>如果您的初始技能是 <span class="arithmatex">\(2\)</span>，在第三个任务后变为 <span class="arithmatex">\(3\)</span>，在第四个任务后变为 <span class="arithmatex">\(4\)</span></li>
-<li>如果您的初始技能是 <span class="arithmatex">\(3\)</span>，在第二个任务后变为 <span class="arithmatex">\(4\)</span></li>
-<li>如果您的初始技能是 <span class="arithmatex">\(4\)</span>，保持为 <span class="arithmatex">\(4\)</span></li>
+<li>如果您的初始技能是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，在第一个任务后变为 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span></li>
+<li>如果您的初始技能是 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>，在第三个任务后变为 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>，在第四个任务后变为 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span></li>
+<li>如果您的初始技能是 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>，在第二个任务后变为 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span></li>
+<li>如果您的初始技能是 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>，保持为 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span></li>
 </ul>
-<p>所以无论您的起始技能是什么，您最终都会达到技能 <span class="arithmatex">\(\geq n\)</span>。</p>
+<p>所以无论您的起始技能是什么，您最终都会达到技能 <span class="arithmatex"><span class="MathJax_Preview">\geq n</span><script type="math/tex">\geq n</script></span>。</p>
 <h2 id="_7">💡 核心直觉 (一句话总结)</h2>
 <blockquote>
 <p>&lt;% tp.file.cursor(2) %&gt;</p>

@@ -2755,10 +2755,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-q-p" class="md-nav__link">
+  <a href="#2-q-pq-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 核心变量：\(q - p\) （差值）
+        2. 核心变量：q - pq - p （差值）
       
     </span>
   </a>
@@ -2789,10 +2789,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q-p" class="md-nav__link">
+  <a href="#q-pq-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        条件一：目标必须存在（\(q &gt; p\)）
+        条件一：目标必须存在（q &gt; pq > p）
       
     </span>
   </a>
@@ -4621,10 +4621,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-q-p" class="md-nav__link">
+  <a href="#2-q-pq-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 核心变量：\(q - p\) （差值）
+        2. 核心变量：q - pq - p （差值）
       
     </span>
   </a>
@@ -4655,10 +4655,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q-p" class="md-nav__link">
+  <a href="#q-pq-p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        条件一：目标必须存在（\(q &gt; p\)）
+        条件一：目标必须存在（q &gt; pq > p）
       
     </span>
   </a>
@@ -4732,18 +4732,18 @@
 <p>时间限制：每个测试点2秒<br />
 内存限制：每个测试点256兆字节</p>
 <h2 id="_1">问题描述</h2>
-<p>Alice 和 Bob 有两个整数 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>，他们正在用这些数字玩游戏。玩家轮流进行操作，Alice 先手。轮到一名玩家时，他可以选择以下两种操作之一：</p>
+<p>Alice 和 Bob 有两个整数 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>，他们正在用这些数字玩游戏。玩家轮流进行操作，Alice 先手。轮到一名玩家时，他可以选择以下两种操作之一：</p>
 <ul>
-<li>将 <span class="arithmatex">\(p\)</span> 减一（当 <span class="arithmatex">\(p &gt; 0\)</span> 时可以执行此操作）；</li>
-<li>将 <span class="arithmatex">\(q\)</span> 减一（当 <span class="arithmatex">\(q &gt; 1\)</span> 时可以执行此操作）。</li>
+<li>将 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 减一（当 <span class="arithmatex"><span class="MathJax_Preview">p &gt; 0</span><script type="math/tex">p > 0</script></span> 时可以执行此操作）；</li>
+<li>将 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 减一（当 <span class="arithmatex"><span class="MathJax_Preview">q &gt; 1</span><script type="math/tex">q > 1</script></span> 时可以执行此操作）。</li>
 </ul>
-<p>游戏在 <span class="arithmatex">\(p = 0\)</span> 且 <span class="arithmatex">\(q = 1\)</span> 时结束。</p>
-<p>如果在游戏过程中的任意时刻分数 <span class="arithmatex">\(\frac{p}{q}\)</span> 的值恰好等于 <span class="arithmatex">\(\frac{2}{3}\)</span>，则 Bob 获胜。否则，Alice 获胜。</p>
-<p>给定 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span> 的初始值，在双方都采取最优策略的情况下，判断游戏的获胜者。</p>
+<p>游戏在 <span class="arithmatex"><span class="MathJax_Preview">p = 0</span><script type="math/tex">p = 0</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">q = 1</span><script type="math/tex">q = 1</script></span> 时结束。</p>
+<p>如果在游戏过程中的任意时刻分数 <span class="arithmatex"><span class="MathJax_Preview">\frac{p}{q}</span><script type="math/tex">\frac{p}{q}</script></span> 的值恰好等于 <span class="arithmatex"><span class="MathJax_Preview">\frac{2}{3}</span><script type="math/tex">\frac{2}{3}</script></span>，则 Bob 获胜。否则，Alice 获胜。</p>
+<p>给定 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 的初始值，在双方都采取最优策略的情况下，判断游戏的获胜者。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span>，表示测试用例的数量（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）。<br />
+<p>每个测试包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>，表示测试用例的数量（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）。<br />
 接下来是每个测试用例的描述。</p>
-<p>每个测试用例为单独一行，包含两个整数 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>（<span class="arithmatex">\(1 \le p, q \le 10^{18}\)</span>）。</p>
+<p>每个测试用例为单独一行，包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le p, q \le 10^{18}</span><script type="math/tex">1 \le p, q \le 10^{18}</script></span>）。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出：</p>
 <ul>
@@ -4768,17 +4768,17 @@ Bob
 Alice
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，分数 <span class="arithmatex">\(\frac{4}{6}\)</span> 的值已经等于 <span class="arithmatex">\(\frac{2}{3}\)</span>，因此 Bob 获胜。</p>
+<p>在第一个测试用例中，分数 <span class="arithmatex"><span class="MathJax_Preview">\frac{4}{6}</span><script type="math/tex">\frac{4}{6}</script></span> 的值已经等于 <span class="arithmatex"><span class="MathJax_Preview">\frac{2}{3}</span><script type="math/tex">\frac{2}{3}</script></span>，因此 Bob 获胜。</p>
 <p>在第二个测试用例中，一种可能的游戏过程如下：</p>
 <ul>
-<li>初始：<span class="arithmatex">\(p = 10, q = 14\)</span>；</li>
-<li>Alice 操作后：<span class="arithmatex">\(p = 9, q = 14\)</span>；</li>
-<li>Bob 操作后：<span class="arithmatex">\(p = 9, q = 13\)</span>；</li>
-<li>Alice 操作后：<span class="arithmatex">\(p = 9, q = 12\)</span>；</li>
-<li>Bob 操作后：<span class="arithmatex">\(p = 8, q = 12\)</span>。</li>
+<li>初始：<span class="arithmatex"><span class="MathJax_Preview">p = 10, q = 14</span><script type="math/tex">p = 10, q = 14</script></span>；</li>
+<li>Alice 操作后：<span class="arithmatex"><span class="MathJax_Preview">p = 9, q = 14</span><script type="math/tex">p = 9, q = 14</script></span>；</li>
+<li>Bob 操作后：<span class="arithmatex"><span class="MathJax_Preview">p = 9, q = 13</span><script type="math/tex">p = 9, q = 13</script></span>；</li>
+<li>Alice 操作后：<span class="arithmatex"><span class="MathJax_Preview">p = 9, q = 12</span><script type="math/tex">p = 9, q = 12</script></span>；</li>
+<li>Bob 操作后：<span class="arithmatex"><span class="MathJax_Preview">p = 8, q = 12</span><script type="math/tex">p = 8, q = 12</script></span>。</li>
 </ul>
-<p>Bob 获胜，因为 <span class="arithmatex">\(\frac{8}{12} = \frac{2}{3}\)</span>。可以证明，在此示例中，双方均采取最优策略时，Bob 总是获胜。</p>
-<p>在第三个测试用例中，Alice 的最优策略是尽可能多地减少 <span class="arithmatex">\(q\)</span>。在这种情况下，无论 Bob 如何行动，游戏都将以 Alice 获胜告终。</p>
+<p>Bob 获胜，因为 <span class="arithmatex"><span class="MathJax_Preview">\frac{8}{12} = \frac{2}{3}</span><script type="math/tex">\frac{8}{12} = \frac{2}{3}</script></span>。可以证明，在此示例中，双方均采取最优策略时，Bob 总是获胜。</p>
+<p>在第三个测试用例中，Alice 的最优策略是尽可能多地减少 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>。在这种情况下，无论 Bob 如何行动，游戏都将以 Alice 获胜告终。</p>
 <h1 id="_7">我现在感觉做博弈题目，就是先找到一种很占优势的走法，然后看看劣势那一方什么时候可以赢，以此类推</h1>
 <h1 id="_8">错误代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2197 C</span>
@@ -4892,30 +4892,36 @@ Alice
 <p>这个逻辑的核心在于将博弈问题转化为了一个<strong>数学不等式问题</strong>。</p>
 <p>为了让你完全理解“为什么”，我们需要拆解 Bob 获胜的两个关键要素：<strong>“目标点”</strong> 和 <strong>“控制策略”</strong>。</p>
 <h3 id="1-bob">1. Bob 的目标是什么？</h3>
-<p>题目说 Bob 获胜的条件是 <span class="arithmatex">\(\frac{p}{q} = \frac{2}{3}\)</span>。</p>
-<p>这等价于 <span class="arithmatex">\(3p = 2q\)</span>。</p>
-<p>因为 2 和 3 互质，这意味着 <span class="arithmatex">\(p\)</span> 必须是 2 的倍数，<span class="arithmatex">\(q\)</span> 必须是 3 的倍数。</p>
+<p>题目说 Bob 获胜的条件是 <span class="arithmatex"><span class="MathJax_Preview">\frac{p}{q} = \frac{2}{3}</span><script type="math/tex">\frac{p}{q} = \frac{2}{3}</script></span>。</p>
+<p>这等价于 <span class="arithmatex"><span class="MathJax_Preview">3p = 2q</span><script type="math/tex">3p = 2q</script></span>。</p>
+<p>因为 2 和 3 互质，这意味着 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 必须是 2 的倍数，<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 必须是 3 的倍数。</p>
 <p>所以，Bob 的所有潜在获胜点（目标点）都可以写成：</p>
-<div class="arithmatex">\[(p, q) = (2k, 3k)\]</div>
-<p>其中 <span class="arithmatex">\(k\)</span> 是某个正整数（比如 <span class="arithmatex">\(k=1\)</span> 时是 <span class="arithmatex">\((2,3)\)</span>， <span class="arithmatex">\(k=5\)</span> 时是 <span class="arithmatex">\((10,15)\)</span>）。</p>
-<h3 id="2-q-p">2. 核心变量：<span class="arithmatex">\(q - p\)</span> （差值）</h3>
-<p>让我们看看 <span class="arithmatex">\(q - p\)</span> 这个差值在目标点 <span class="arithmatex">\((2k, 3k)\)</span> 是多少：</p>
-<div class="arithmatex">\[\text{差值} = 3k - 2k = k\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">(p, q) = (2k, 3k)</div>
+<script type="math/tex; mode=display">(p, q) = (2k, 3k)</script>
+</div>
+<p>其中 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是某个正整数（比如 <span class="arithmatex"><span class="MathJax_Preview">k=1</span><script type="math/tex">k=1</script></span> 时是 <span class="arithmatex"><span class="MathJax_Preview">(2,3)</span><script type="math/tex">(2,3)</script></span>， <span class="arithmatex"><span class="MathJax_Preview">k=5</span><script type="math/tex">k=5</script></span> 时是 <span class="arithmatex"><span class="MathJax_Preview">(10,15)</span><script type="math/tex">(10,15)</script></span>）。</p>
+<h3 id="2-q-pq-p">2. 核心变量：<span class="arithmatex"><span class="MathJax_Preview">q - p</span><script type="math/tex">q - p</script></span> （差值）</h3>
+<p>让我们看看 <span class="arithmatex"><span class="MathJax_Preview">q - p</span><script type="math/tex">q - p</script></span> 这个差值在目标点 <span class="arithmatex"><span class="MathJax_Preview">(2k, 3k)</span><script type="math/tex">(2k, 3k)</script></span> 是多少：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">\text{差值} = 3k - 2k = k</div>
+<script type="math/tex; mode=display">\text{差值} = 3k - 2k = k</script>
+</div>
 <p><strong>这是一个极其重要的发现：</strong></p>
-<p>如果你想在点 <span class="arithmatex">\((2k, 3k)\)</span> 获胜，那么那个点的 <span class="arithmatex">\(q\)</span> 和 <span class="arithmatex">\(p\)</span> 的差值必须正好是 <span class="arithmatex">\(k\)</span>。</p>
+<p>如果你想在点 <span class="arithmatex"><span class="MathJax_Preview">(2k, 3k)</span><script type="math/tex">(2k, 3k)</script></span> 获胜，那么那个点的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 的差值必须正好是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 <h3 id="3-bob">3. Bob 的必胜策略（镜像策略）</h3>
-<p>游戏开始时，设初始值为 <span class="arithmatex">\(P_{start}\)</span> 和 <span class="arithmatex">\(Q_{start}\)</span>，初始差值为 <span class="arithmatex">\(K = Q_{start} - P_{start}\)</span>。</p>
-<p>如果 Bob 想要获胜，他唯一能确定的目标点就是由这个初始差值 <span class="arithmatex">\(K\)</span> 决定的点：<strong><span class="arithmatex">\((2K, 3K)\)</span></strong>。</p>
-<p><strong>为什么？因为 Bob 可以强行锁住这个差值 <span class="arithmatex">\(K\)</span> 不变。</strong></p>
+<p>游戏开始时，设初始值为 <span class="arithmatex"><span class="MathJax_Preview">P_{start}</span><script type="math/tex">P_{start}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">Q_{start}</span><script type="math/tex">Q_{start}</script></span>，初始差值为 <span class="arithmatex"><span class="MathJax_Preview">K = Q_{start} - P_{start}</span><script type="math/tex">K = Q_{start} - P_{start}</script></span>。</p>
+<p>如果 Bob 想要获胜，他唯一能确定的目标点就是由这个初始差值 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 决定的点：<strong><span class="arithmatex"><span class="MathJax_Preview">(2K, 3K)</span><script type="math/tex">(2K, 3K)</script></span></strong>。</p>
+<p><strong>为什么？因为 Bob 可以强行锁住这个差值 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 不变。</strong></p>
 <ul>
 <li>
 <p><strong>Alice 的回合</strong>：</p>
 <ul>
 <li>
-<p>如果 Alice 把 <span class="arithmatex">\(p\)</span> 减 1，差值会变大 1。</p>
+<p>如果 Alice 把 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 减 1，差值会变大 1。</p>
 </li>
 <li>
-<p>如果 Alice 把 <span class="arithmatex">\(q\)</span> 减 1，差值会变小 1。</p>
+<p>如果 Alice 把 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 减 1，差值会变小 1。</p>
 </li>
 </ul>
 </li>
@@ -4923,53 +4929,62 @@ Alice
 <p><strong>Bob 的回合（应对）</strong>：</p>
 <ul>
 <li>
-<p>如果 Alice 刚才把 <span class="arithmatex">\(p\)</span> 减了 1（差值变大了），Bob 就把 <span class="arithmatex">\(q\)</span> 减 1（差值变回来）。</p>
+<p>如果 Alice 刚才把 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 减了 1（差值变大了），Bob 就把 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 减 1（差值变回来）。</p>
 </li>
 <li>
-<p>如果 Alice 刚才把 <span class="arithmatex">\(q\)</span> 减了 1（差值变小了），Bob 就把 <span class="arithmatex">\(p\)</span> 减 1（差值变回来）。</p>
+<p>如果 Alice 刚才把 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 减了 1（差值变小了），Bob 就把 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 减 1（差值变回来）。</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>通过这种“你动我就跟着动”的镜像策略，Bob 可以强行让每一轮（Alice动完+Bob动完）结束后，<strong><span class="arithmatex">\(q - p\)</span> 的差值维持在 <span class="arithmatex">\(K\)</span> 不变</strong>。</p>
-<p>只要一直维持这个差值，数字又在不断变小，最终一定会落入那个特定的目标点 <span class="arithmatex">\((2k, 3k)\)</span>。</p>
+<p>通过这种“你动我就跟着动”的镜像策略，Bob 可以强行让每一轮（Alice动完+Bob动完）结束后，<strong><span class="arithmatex"><span class="MathJax_Preview">q - p</span><script type="math/tex">q - p</script></span> 的差值维持在 <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> 不变</strong>。</p>
+<p>只要一直维持这个差值，数字又在不断变小，最终一定会落入那个特定的目标点 <span class="arithmatex"><span class="MathJax_Preview">(2k, 3k)</span><script type="math/tex">(2k, 3k)</script></span>。</p>
 <h3 id="4">4. 推导获胜条件</h3>
 <p>基于上面的策略，Bob 想要赢，必须满足两个硬性条件：</p>
-<h4 id="q-p">条件一：目标必须存在（<span class="arithmatex">\(q &gt; p\)</span>）</h4>
-<p>目标点 <span class="arithmatex">\((2k, 3k)\)</span> 要求 <span class="arithmatex">\(k\)</span> 是正整数。</p>
-<p>如果初始 <span class="arithmatex">\(q \le p\)</span>，那么差值 <span class="arithmatex">\(k \le 0\)</span>，目标点就不存在或者不合法（比如 <span class="arithmatex">\(p=0, q=0\)</span>）。</p>
-<p><strong>所以必须满足：<span class="arithmatex">\(q &gt; p\)</span></strong>。</p>
+<h4 id="q-pq-p">条件一：目标必须存在（<span class="arithmatex"><span class="MathJax_Preview">q &gt; p</span><script type="math/tex">q > p</script></span>）</h4>
+<p>目标点 <span class="arithmatex"><span class="MathJax_Preview">(2k, 3k)</span><script type="math/tex">(2k, 3k)</script></span> 要求 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是正整数。</p>
+<p>如果初始 <span class="arithmatex"><span class="MathJax_Preview">q \le p</span><script type="math/tex">q \le p</script></span>，那么差值 <span class="arithmatex"><span class="MathJax_Preview">k \le 0</span><script type="math/tex">k \le 0</script></span>，目标点就不存在或者不合法（比如 <span class="arithmatex"><span class="MathJax_Preview">p=0, q=0</span><script type="math/tex">p=0, q=0</script></span>）。</p>
+<p><strong>所以必须满足：<span class="arithmatex"><span class="MathJax_Preview">q &gt; p</span><script type="math/tex">q > p</script></span></strong>。</p>
 <h4 id="_11">条件二：目标必须在“下方”（还没错过）</h4>
-<p>游戏只能减小数字，不能增大。所以初始的 <span class="arithmatex">\(p\)</span> 必须大于等于目标点的 <span class="arithmatex">\(p\)</span>。</p>
-<p>目标点的 <span class="arithmatex">\(p\)</span> 是 <span class="arithmatex">\(2k\)</span>。</p>
-<p>所以必须满足：<span class="arithmatex">\(p \ge 2k\)</span>。</p>
-<p>我们将 <span class="arithmatex">\(k = q - p\)</span> 代入这个不等式：</p>
-<div class="arithmatex">\[p \ge 2(q - p)\]</div>
-<div class="arithmatex">\[p \ge 2q - 2p\]</div>
-<div class="arithmatex">\[3p \ge 2q\]</div>
-<p>或者写成分数形式：<span class="arithmatex">\(\frac{p}{q} \ge \frac{2}{3}\)</span>。</p>
-<p><strong>解释：</strong> 如果 <span class="arithmatex">\(3p &lt; 2q\)</span>（即 <span class="arithmatex">\(\frac{p}{q} &lt; \frac{2}{3}\)</span>），说明虽然差值是 <span class="arithmatex">\(k\)</span>，但当前的 <span class="arithmatex">\(p\)</span> 已经比目标点 <span class="arithmatex">\((2k, 3k)\)</span> 的 <span class="arithmatex">\(p\)</span> 还要小了。既然已经错过了目标点，又不能往回走，Bob 就永远到不了了。</p>
+<p>游戏只能减小数字，不能增大。所以初始的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 必须大于等于目标点的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>。</p>
+<p>目标点的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">2k</span><script type="math/tex">2k</script></span>。</p>
+<p>所以必须满足：<span class="arithmatex"><span class="MathJax_Preview">p \ge 2k</span><script type="math/tex">p \ge 2k</script></span>。</p>
+<p>我们将 <span class="arithmatex"><span class="MathJax_Preview">k = q - p</span><script type="math/tex">k = q - p</script></span> 代入这个不等式：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">p \ge 2(q - p)</div>
+<script type="math/tex; mode=display">p \ge 2(q - p)</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">p \ge 2q - 2p</div>
+<script type="math/tex; mode=display">p \ge 2q - 2p</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">3p \ge 2q</div>
+<script type="math/tex; mode=display">3p \ge 2q</script>
+</div>
+<p>或者写成分数形式：<span class="arithmatex"><span class="MathJax_Preview">\frac{p}{q} \ge \frac{2}{3}</span><script type="math/tex">\frac{p}{q} \ge \frac{2}{3}</script></span>。</p>
+<p><strong>解释：</strong> 如果 <span class="arithmatex"><span class="MathJax_Preview">3p &lt; 2q</span><script type="math/tex">3p < 2q</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">\frac{p}{q} &lt; \frac{2}{3}</span><script type="math/tex">\frac{p}{q} < \frac{2}{3}</script></span>），说明虽然差值是 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，但当前的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 已经比目标点 <span class="arithmatex"><span class="MathJax_Preview">(2k, 3k)</span><script type="math/tex">(2k, 3k)</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 还要小了。既然已经错过了目标点，又不能往回走，Bob 就永远到不了了。</p>
 <hr />
 <h3 id="_12">总结举例</h3>
 <p>假设输入是 <code>10 14</code>。</p>
 <ol>
 <li>
-<p><strong>计算差值 <span class="arithmatex">\(k\)</span></strong>：<span class="arithmatex">\(14 - 10 = 4\)</span>。</p>
+<p><strong>计算差值 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong>：<span class="arithmatex"><span class="MathJax_Preview">14 - 10 = 4</span><script type="math/tex">14 - 10 = 4</script></span>。</p>
 </li>
 <li>
-<p><strong>确定目标点</strong>：<span class="arithmatex">\((2\times4, 3\times4) = (8, 12)\)</span>。</p>
+<p><strong>确定目标点</strong>：<span class="arithmatex"><span class="MathJax_Preview">(2\times4, 3\times4) = (8, 12)</span><script type="math/tex">(2\times4, 3\times4) = (8, 12)</script></span>。</p>
 </li>
 <li>
 <p><strong>判断能否到达</strong>：</p>
 <ul>
 <li>
-<p>当前 <span class="arithmatex">\(p=10\)</span>，目标 <span class="arithmatex">\(p=8\)</span>。</p>
+<p>当前 <span class="arithmatex"><span class="MathJax_Preview">p=10</span><script type="math/tex">p=10</script></span>，目标 <span class="arithmatex"><span class="MathJax_Preview">p=8</span><script type="math/tex">p=8</script></span>。</p>
 </li>
 <li>
-<p>因为 <span class="arithmatex">\(10 \ge 8\)</span>，说明还没错过。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">10 \ge 8</span><script type="math/tex">10 \ge 8</script></span>，说明还没错过。</p>
 </li>
 <li>
-<p>Bob 只要死守“维持差值为4”的策略，不管 Alice 怎么走，最终一定会经过 <span class="arithmatex">\((8, 12)\)</span>。</p>
+<p>Bob 只要死守“维持差值为4”的策略，不管 Alice 怎么走，最终一定会经过 <span class="arithmatex"><span class="MathJax_Preview">(8, 12)</span><script type="math/tex">(8, 12)</script></span>。</p>
 </li>
 <li>
 <p><strong>Bob 必胜。</strong></p>
@@ -4980,10 +4995,10 @@ Alice
 <p>假设输入是 <code>4 6</code>。</p>
 <ol>
 <li>
-<p><strong>差值 <span class="arithmatex">\(k\)</span></strong>：<span class="arithmatex">\(6 - 4 = 2\)</span>。</p>
+<p><strong>差值 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong>：<span class="arithmatex"><span class="MathJax_Preview">6 - 4 = 2</span><script type="math/tex">6 - 4 = 2</script></span>。</p>
 </li>
 <li>
-<p><strong>目标点</strong>：<span class="arithmatex">\((4, 6)\)</span>。</p>
+<p><strong>目标点</strong>：<span class="arithmatex"><span class="MathJax_Preview">(4, 6)</span><script type="math/tex">(4, 6)</script></span>。</p>
 </li>
 <li>
 <p><strong>判断</strong>：当前就是目标点，Bob 直接赢。</p>
@@ -4992,16 +5007,16 @@ Alice
 <p>假设输入是 <code>7 12</code>。</p>
 <ol>
 <li>
-<p><strong>差值 <span class="arithmatex">\(k\)</span></strong>：<span class="arithmatex">\(12 - 7 = 5\)</span>。</p>
+<p><strong>差值 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong>：<span class="arithmatex"><span class="MathJax_Preview">12 - 7 = 5</span><script type="math/tex">12 - 7 = 5</script></span>。</p>
 </li>
 <li>
-<p><strong>目标点</strong>：<span class="arithmatex">\((10, 15)\)</span>。</p>
+<p><strong>目标点</strong>：<span class="arithmatex"><span class="MathJax_Preview">(10, 15)</span><script type="math/tex">(10, 15)</script></span>。</p>
 </li>
 <li>
-<p><strong>判断</strong>：当前 <span class="arithmatex">\(p=7\)</span>，目标 <span class="arithmatex">\(p=10\)</span>。</p>
+<p><strong>判断</strong>：当前 <span class="arithmatex"><span class="MathJax_Preview">p=7</span><script type="math/tex">p=7</script></span>，目标 <span class="arithmatex"><span class="MathJax_Preview">p=10</span><script type="math/tex">p=10</script></span>。</p>
 </li>
 <li>
-<p><strong>结论</strong>：已经比目标点小了（错过了），永远无法到达 <span class="arithmatex">\((10, 15)\)</span>。Alice 必胜。</p>
+<p><strong>结论</strong>：已经比目标点小了（错过了），永远无法到达 <span class="arithmatex"><span class="MathJax_Preview">(10, 15)</span><script type="math/tex">(10, 15)</script></span>。Alice 必胜。</p>
 </li>
 </ol>
 <h3 id="_13">代码逻辑对应</h3>
@@ -5011,10 +5026,10 @@ Alice
 </code></pre></div>
 <ul>
 <li>
-<p><code>q &gt; p</code>：保证 <span class="arithmatex">\(k\)</span> 是正数，目标存在。</p>
+<p><code>q &gt; p</code>：保证 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是正数，目标存在。</p>
 </li>
 <li>
-<p><code>3 * p &gt;= 2 * q</code>：保证还没错过目标点（即 <span class="arithmatex">\(p \ge 2k\)</span>）。</p>
+<p><code>3 * p &gt;= 2 * q</code>：保证还没错过目标点（即 <span class="arithmatex"><span class="MathJax_Preview">p \ge 2k</span><script type="math/tex">p \ge 2k</script></span>）。</p>
 </li>
 </ul>
 

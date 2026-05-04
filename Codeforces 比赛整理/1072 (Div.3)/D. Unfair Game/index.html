@@ -4744,23 +4744,23 @@
 <p>时间限制：1 秒<br />
 内存限制：256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
-<p>鲍勃厌倦了总是输给爱丽丝，为了确保不再输，他决定选择一个自己保证能赢的游戏。鲍勃从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 中想了一个数字，已知 <span class="arithmatex">\(n = 2^d\)</span>，其中 <span class="arithmatex">\(d\)</span> 是一个非负整数。最初，爱丽丝知道被选中的数字是奇数还是偶数。</p>
-<p>在一轮操作中，爱丽丝可以将当前数字减 <span class="arithmatex">\(1\)</span>，或者将其减半（只有当当前数字是偶数时才能减半）。<strong>只有爱丽丝可以进行操作。</strong></p>
-<p>每次操作后，爱丽丝会收到鲍勃的回复：要么是 <span class="arithmatex">\(-1\)</span>，表示数字变成了 <span class="arithmatex">\(0\)</span>，爱丽丝获胜；要么是一个非负整数 <span class="arithmatex">\(x\)</span>。如果我们记当前数字为 <span class="arithmatex">\(a\)</span>，那么 <span class="arithmatex">\(x\)</span> 必须同时满足以下条件：</p>
+<p>鲍勃厌倦了总是输给爱丽丝，为了确保不再输，他决定选择一个自己保证能赢的游戏。鲍勃从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 中想了一个数字，已知 <span class="arithmatex"><span class="MathJax_Preview">n = 2^d</span><script type="math/tex">n = 2^d</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 是一个非负整数。最初，爱丽丝知道被选中的数字是奇数还是偶数。</p>
+<p>在一轮操作中，爱丽丝可以将当前数字减 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>，或者将其减半（只有当当前数字是偶数时才能减半）。<strong>只有爱丽丝可以进行操作。</strong></p>
+<p>每次操作后，爱丽丝会收到鲍勃的回复：要么是 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>，表示数字变成了 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，爱丽丝获胜；要么是一个非负整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。如果我们记当前数字为 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 必须同时满足以下条件：</p>
 <ul>
-<li><span class="arithmatex">\(a\)</span> 能被 <span class="arithmatex">\(2^x\)</span> 整除。</li>
-<li><span class="arithmatex">\(a\)</span> 不能被 <span class="arithmatex">\(2^{x+1}\)</span> 整除。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">2^x</span><script type="math/tex">2^x</script></span> 整除。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 不能被 <span class="arithmatex"><span class="MathJax_Preview">2^{x+1}</span><script type="math/tex">2^{x+1}</script></span> 整除。</li>
 </ul>
 <p>例如：
-- 如果 <span class="arithmatex">\(a = 5\)</span>，则 <span class="arithmatex">\(x = 0\)</span>，因为 <span class="arithmatex">\(5\)</span> 能被 <span class="arithmatex">\(2^0 = 1\)</span> 整除，但不能被 <span class="arithmatex">\(2^1 = 2\)</span> 整除。
-- 如果 <span class="arithmatex">\(a = 12\)</span>，则 <span class="arithmatex">\(x = 2\)</span>，因为 <span class="arithmatex">\(12\)</span> 能被 <span class="arithmatex">\(2^2 = 4\)</span> 整除，但不能被 <span class="arithmatex">\(2^3 = 8\)</span> 整除。</p>
-<p>可以证明，对于任意整数 <span class="arithmatex">\(a &gt; 0\)</span>，都存在唯一这样的 <span class="arithmatex">\(x\)</span>。</p>
-<p>鲍勃仍然担心爱丽丝会赢，所以他规定游戏最多进行 <span class="arithmatex">\(k\)</span> 轮。此外，鲍勃想最大化自己获胜的机会，所以他希望尽可能多地进行游戏。给定 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span>，请计算从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 中有多少个初始数字，使得爱丽丝<strong>即使采取最优策略，也无法在 <span class="arithmatex">\(k\)</span> 轮内获胜</strong>。</p>
+- 如果 <span class="arithmatex"><span class="MathJax_Preview">a = 5</span><script type="math/tex">a = 5</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">x = 0</span><script type="math/tex">x = 0</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">2^0 = 1</span><script type="math/tex">2^0 = 1</script></span> 整除，但不能被 <span class="arithmatex"><span class="MathJax_Preview">2^1 = 2</span><script type="math/tex">2^1 = 2</script></span> 整除。
+- 如果 <span class="arithmatex"><span class="MathJax_Preview">a = 12</span><script type="math/tex">a = 12</script></span>，则 <span class="arithmatex"><span class="MathJax_Preview">x = 2</span><script type="math/tex">x = 2</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">12</span><script type="math/tex">12</script></span> 能被 <span class="arithmatex"><span class="MathJax_Preview">2^2 = 4</span><script type="math/tex">2^2 = 4</script></span> 整除，但不能被 <span class="arithmatex"><span class="MathJax_Preview">2^3 = 8</span><script type="math/tex">2^3 = 8</script></span> 整除。</p>
+<p>可以证明，对于任意整数 <span class="arithmatex"><span class="MathJax_Preview">a &gt; 0</span><script type="math/tex">a > 0</script></span>，都存在唯一这样的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>。</p>
+<p>鲍勃仍然担心爱丽丝会赢，所以他规定游戏最多进行 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 轮。此外，鲍勃想最大化自己获胜的机会，所以他希望尽可能多地进行游戏。给定 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，请计算从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 中有多少个初始数字，使得爱丽丝<strong>即使采取最优策略，也无法在 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 轮内获胜</strong>。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>) —— 测试用例的数量。</p>
-<p>每个测试用例只有一行，包含 <span class="arithmatex">\(2\)</span> 个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(1 \le n, k \le 10^9\)</span>) —— 分别表示所选数字的上限，以及爱丽丝最多能进行的轮数。保证 <span class="arithmatex">\(n = 2^d\)</span> 对某个非负整数 <span class="arithmatex">\(d\)</span> 成立。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>) —— 测试用例的数量。</p>
+<p>每个测试用例只有一行，包含 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le n, k \le 10^9</span><script type="math/tex">1 \le n, k \le 10^9</script></span>) —— 分别表示所选数字的上限，以及爱丽丝最多能进行的轮数。保证 <span class="arithmatex"><span class="MathJax_Preview">n = 2^d</span><script type="math/tex">n = 2^d</script></span> 对某个非负整数 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 成立。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出在 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 中，爱丽丝即使采取最优策略也无法在 <span class="arithmatex">\(k\)</span> 轮内获胜的整数个数。</p>
+<p>对于每个测试用例，输出在 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 中，爱丽丝即使采取最优策略也无法在 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 轮内获胜的整数个数。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>7
 4 1
@@ -4782,16 +4782,16 @@
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <ul>
-<li>第一个样例 <code>n=4, k=1</code>：初始数字为 <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(4\)</span> 时是符合条件的，因为从 <span class="arithmatex">\(a=1\)</span> 只需 1 轮即可达到 <span class="arithmatex">\(0\)</span>（<span class="arithmatex">\(1 \rightarrow 0\)</span>），而对于其他值，至少需要 2 轮。</li>
-<li>第二个样例 <code>n=4, k=2</code>：初始数字为 <span class="arithmatex">\(3\)</span> 和 <span class="arithmatex">\(4\)</span> 是符合条件的，因为对于 <span class="arithmatex">\(a=2\)</span>，爱丽丝可以在 2 轮内获胜。</li>
-<li>第三、四、五个样例 <code>n=4, k=3,4,5</code>：没有符合条件的 <span class="arithmatex">\(a\)</span>，因为对于 <span class="arithmatex">\(a=3\)</span> 和 <span class="arithmatex">\(a=4\)</span>，爱丽丝可以在 3 轮内获胜。</li>
+<li>第一个样例 <code>n=4, k=1</code>：初始数字为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 时是符合条件的，因为从 <span class="arithmatex"><span class="MathJax_Preview">a=1</span><script type="math/tex">a=1</script></span> 只需 1 轮即可达到 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \rightarrow 0</span><script type="math/tex">1 \rightarrow 0</script></span>），而对于其他值，至少需要 2 轮。</li>
+<li>第二个样例 <code>n=4, k=2</code>：初始数字为 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 是符合条件的，因为对于 <span class="arithmatex"><span class="MathJax_Preview">a=2</span><script type="math/tex">a=2</script></span>，爱丽丝可以在 2 轮内获胜。</li>
+<li>第三、四、五个样例 <code>n=4, k=3,4,5</code>：没有符合条件的 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>，因为对于 <span class="arithmatex"><span class="MathJax_Preview">a=3</span><script type="math/tex">a=3</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a=4</span><script type="math/tex">a=4</script></span>，爱丽丝可以在 3 轮内获胜。</li>
 <li>第六个样例 <code>n=16, k=5</code>：有 4 个符合条件的初始数字。</li>
 <li>第七个样例 <code>n=16, k=1</code>：有 15 个符合条件的初始数字。</li>
 </ul>
 <p>这是一个非常典型的从“模拟/暴力递推”转向“数学/组合计数”的问题。</p>
 <h3 id="_7">核心思维突破</h3>
-<p>如果直接对 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 每个数字进行游戏模拟，时间复杂度是 <span class="arithmatex">\(O(n \log n)\)</span>（因为 <span class="arithmatex">\(n\)</span> 高达 <span class="arithmatex">\(10^9\)</span>，这绝对会超时）。</p>
-<p>我们需要找到一个<strong><span class="arithmatex">\(O(1)\)</span> 或 <span class="arithmatex">\(O(\log n)\)</span></strong> 的方法直接计算出有多少个数字满足条件。这通常意味着要从二进制位的角度去寻找规律。</p>
+<p>如果直接对 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 每个数字进行游戏模拟，时间复杂度是 <span class="arithmatex"><span class="MathJax_Preview">O(n \log n)</span><script type="math/tex">O(n \log n)</script></span>（因为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 高达 <span class="arithmatex"><span class="MathJax_Preview">10^9</span><script type="math/tex">10^9</script></span>，这绝对会超时）。</p>
+<p>我们需要找到一个<strong><span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span></strong> 的方法直接计算出有多少个数字满足条件。这通常意味着要从二进制位的角度去寻找规律。</p>
 <h4 id="1">1. 爱丽丝的最优策略是什么？</h4>
 <p>爱丽丝的目标是让数字尽快变成 0。</p>
 <p>根据游戏规则，她知道数字的奇偶性，也能通过反馈知道末尾有多少个 0。</p>
@@ -4803,77 +4803,80 @@
 <p><strong>如果是奇数</strong>：只能减 1。</p>
 </li>
 </ul>
-<p>基于此，我们可以推导出将一个数字 <span class="arithmatex">\(x\)</span> 变为 0 所需的最少步数 <span class="arithmatex">\(Moves(x)\)</span> 的公式。</p>
-<p>设 <span class="arithmatex">\(x\)</span> 的二进制表示中，最高位（Most Significant Bit, MSB）在第 <span class="arithmatex">\(i\)</span> 位（即 <span class="arithmatex">\(2^i \le x &lt; 2^{i+1}\)</span>），且除去最高位后，剩余部分的二进制中 1 的个数为 <span class="arithmatex">\(popcount(r)\)</span>。</p>
+<p>基于此，我们可以推导出将一个数字 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 变为 0 所需的最少步数 <span class="arithmatex"><span class="MathJax_Preview">Moves(x)</span><script type="math/tex">Moves(x)</script></span> 的公式。</p>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的二进制表示中，最高位（Most Significant Bit, MSB）在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位（即 <span class="arithmatex"><span class="MathJax_Preview">2^i \le x &lt; 2^{i+1}</span><script type="math/tex">2^i \le x < 2^{i+1}</script></span>），且除去最高位后，剩余部分的二进制中 1 的个数为 <span class="arithmatex"><span class="MathJax_Preview">popcount(r)</span><script type="math/tex">popcount(r)</script></span>。</p>
 <p>公式为：</p>
-<div class="arithmatex">\[Moves(x) = i + 1 + popcount(r)\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">Moves(x) = i + 1 + popcount(r)</div>
+<script type="math/tex; mode=display">Moves(x) = i + 1 + popcount(r)</script>
+</div>
 <p><strong>直观解释：</strong></p>
 <ul>
 <li>
-<p><span class="arithmatex">\(i\)</span> 代表我们需要做 <span class="arithmatex">\(i\)</span> 次“除以 2”的操作来把最高位移到最低位。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 代表我们需要做 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 次“除以 2”的操作来把最高位移到最低位。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(1\)</span> 代表最后把剩下的 1 减为 0 的操作。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 代表最后把剩下的 1 减为 0 的操作。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(popcount(r)\)</span> 代表中间遇到的每一个 1，都需要一次额外的“减 1”操作才能使其变成偶数从而继续除以 2。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">popcount(r)</span><script type="math/tex">popcount(r)</script></span> 代表中间遇到的每一个 1，都需要一次额外的“减 1”操作才能使其变成偶数从而继续除以 2。</p>
 </li>
 </ul>
 <h4 id="2">2. 转化问题：组合计数</h4>
-<p>题目要求统计 <span class="arithmatex">\(1 \le x \le n\)</span> 中，满足 <span class="arithmatex">\(Moves(x) &gt; k\)</span> 的个数。</p>
-<p>这就变成了统计有多少个 <span class="arithmatex">\(x\)</span>，其最高位位置与剩余位中1的个数之和超过某个阈值。</p>
-<p>由于 <span class="arithmatex">\(n = 2^d\)</span>，区间 <span class="arithmatex">\([1, n]\)</span> 恰好涵盖了所有最高位为 <span class="arithmatex">\(0, 1, \dots, d-1\)</span> 的数字，以及数字 <span class="arithmatex">\(n\)</span> 本身。我们可以按照最高位 <span class="arithmatex">\(i\)</span> 进行分类讨论：</p>
-<p>对于最高位为 <span class="arithmatex">\(i\)</span> 的所有数字（范围 <span class="arithmatex">\([2^i, 2^{i+1}-1]\)</span>）：</p>
+<p>题目要求统计 <span class="arithmatex"><span class="MathJax_Preview">1 \le x \le n</span><script type="math/tex">1 \le x \le n</script></span> 中，满足 <span class="arithmatex"><span class="MathJax_Preview">Moves(x) &gt; k</span><script type="math/tex">Moves(x) > k</script></span> 的个数。</p>
+<p>这就变成了统计有多少个 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，其最高位位置与剩余位中1的个数之和超过某个阈值。</p>
+<p>由于 <span class="arithmatex"><span class="MathJax_Preview">n = 2^d</span><script type="math/tex">n = 2^d</script></span>，区间 <span class="arithmatex"><span class="MathJax_Preview">[1, n]</span><script type="math/tex">[1, n]</script></span> 恰好涵盖了所有最高位为 <span class="arithmatex"><span class="MathJax_Preview">0, 1, \dots, d-1</span><script type="math/tex">0, 1, \dots, d-1</script></span> 的数字，以及数字 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 本身。我们可以按照最高位 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 进行分类讨论：</p>
+<p>对于最高位为 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 的所有数字（范围 <span class="arithmatex"><span class="MathJax_Preview">[2^i, 2^{i+1}-1]</span><script type="math/tex">[2^i, 2^{i+1}-1]</script></span>）：</p>
 <ul>
 <li>
-<p>这部分数字的 <span class="arithmatex">\(Moves(x) = i + 1 + popcount(r)\)</span>。</p>
+<p>这部分数字的 <span class="arithmatex"><span class="MathJax_Preview">Moves(x) = i + 1 + popcount(r)</span><script type="math/tex">Moves(x) = i + 1 + popcount(r)</script></span>。</p>
 </li>
 <li>
-<p>我们需要计算其中有多少个数字满足 <span class="arithmatex">\(Moves(x) \le k\)</span>，即 <span class="arithmatex">\(popcount(r) \le k - i - 1\)</span>。</p>
+<p>我们需要计算其中有多少个数字满足 <span class="arithmatex"><span class="MathJax_Preview">Moves(x) \le k</span><script type="math/tex">Moves(x) \le k</script></span>，即 <span class="arithmatex"><span class="MathJax_Preview">popcount(r) \le k - i - 1</span><script type="math/tex">popcount(r) \le k - i - 1</script></span>。</p>
 </li>
 <li>
-<p>这里 <span class="arithmatex">\(r\)</span> 是除去最高位后的余数，它可以是 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(2^i - 1\)</span> 之间的任意整数。也就是说，<span class="arithmatex">\(r\)</span> 是一个 <span class="arithmatex">\(i\)</span> 位的二进制数。</p>
+<p>这里 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 是除去最高位后的余数，它可以是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">2^i - 1</span><script type="math/tex">2^i - 1</script></span> 之间的任意整数。也就是说，<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 是一个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位的二进制数。</p>
 </li>
 <li>
-<p>问题转化为：<strong>在一个 <span class="arithmatex">\(i\)</span> 位的二进制数中，1 的个数不超过 <span class="arithmatex">\(M\)</span> 的方案数是多少？</strong></p>
+<p>问题转化为：<strong>在一个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位的二进制数中，1 的个数不超过 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的方案数是多少？</strong></p>
 </li>
 <li>
-<p>这正是组合数学中的二项式系数求和：<span class="arithmatex">\(\sum_{j=0}^{M} \binom{i}{j}\)</span>。</p>
+<p>这正是组合数学中的二项式系数求和：<span class="arithmatex"><span class="MathJax_Preview">\sum_{j=0}^{M} \binom{i}{j}</span><script type="math/tex">\sum_{j=0}^{M} \binom{i}{j}</script></span>。</p>
 </li>
 </ul>
 <h3 id="_8">算法流程</h3>
 <ol>
 <li>
-<p>预处理组合数 <span class="arithmatex">\(\binom{n}{m}\)</span>（杨辉三角），因为 <span class="arithmatex">\(n\)</span> 最大为 <span class="arithmatex">\(10^9\)</span>，对应的二进制位数 <span class="arithmatex">\(d \approx 30\)</span>，只需要预处理到 30 即可。</p>
+<p>预处理组合数 <span class="arithmatex"><span class="MathJax_Preview">\binom{n}{m}</span><script type="math/tex">\binom{n}{m}</script></span>（杨辉三角），因为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 最大为 <span class="arithmatex"><span class="MathJax_Preview">10^9</span><script type="math/tex">10^9</script></span>，对应的二进制位数 <span class="arithmatex"><span class="MathJax_Preview">d \approx 30</span><script type="math/tex">d \approx 30</script></span>，只需要预处理到 30 即可。</p>
 </li>
 <li>
-<p>计算 <span class="arithmatex">\(n\)</span> 的幂次 <span class="arithmatex">\(d\)</span>（即 <span class="arithmatex">\(\log_2 n\)</span>）。</p>
+<p>计算 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的幂次 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">\log_2 n</span><script type="math/tex">\log_2 n</script></span>）。</p>
 </li>
 <li>
 <p>初始化 <code>alice_wins = 0</code>。</p>
 </li>
 <li>
-<p>遍历最高位 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(d-1\)</span>：</p>
+<p>遍历最高位 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">d-1</span><script type="math/tex">d-1</script></span>：</p>
 <ul>
 <li>
-<p>计算允许的最大 1 的个数：<span class="arithmatex">\(allowed\_ones = k - i - 1\)</span>。</p>
+<p>计算允许的最大 1 的个数：<span class="arithmatex"><span class="MathJax_Preview">allowed\_ones = k - i - 1</span><script type="math/tex">allowed\_ones = k - i - 1</script></span>。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(allowed\_ones &lt; 0\)</span>，这组里没有任何数字能让爱丽丝赢。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">allowed\_ones &lt; 0</span><script type="math/tex">allowed\_ones < 0</script></span>，这组里没有任何数字能让爱丽丝赢。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(allowed\_ones \ge i\)</span>，这组里所有 <span class="arithmatex">\(2^i\)</span> 个数字爱丽丝都能赢。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">allowed\_ones \ge i</span><script type="math/tex">allowed\_ones \ge i</script></span>，这组里所有 <span class="arithmatex"><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span> 个数字爱丽丝都能赢。</p>
 </li>
 <li>
-<p>否则，累加组合数 <span class="arithmatex">\(\sum_{j=0}^{allowed\_ones} \binom{i}{j}\)</span> 到 <code>alice_wins</code>。</p>
+<p>否则，累加组合数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{j=0}^{allowed\_ones} \binom{i}{j}</span><script type="math/tex">\sum_{j=0}^{allowed\_ones} \binom{i}{j}</script></span> 到 <code>alice_wins</code>。</p>
 </li>
 </ul>
 </li>
 <li>
-<p>单独检查数字 <span class="arithmatex">\(n\)</span> 本身：如果 <span class="arithmatex">\(d + 1 \le k\)</span>，则 <code>alice_wins++</code>。</p>
+<p>单独检查数字 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 本身：如果 <span class="arithmatex"><span class="MathJax_Preview">d + 1 \le k</span><script type="math/tex">d + 1 \le k</script></span>，则 <code>alice_wins++</code>。</p>
 </li>
 <li>
-<p>最终答案为 <span class="arithmatex">\(n - alice\_wins\)</span>。</p>
+<p>最终答案为 <span class="arithmatex"><span class="MathJax_Preview">n - alice\_wins</span><script type="math/tex">n - alice\_wins</script></span>。</p>
 </li>
 </ol>
 <h3 id="_9">优化后的代码实现</h3>
@@ -4963,10 +4966,10 @@ int main() {
 <h3 id="_10">复杂度分析</h3>
 <ul>
 <li>
-<p><strong>时间复杂度</strong>：对于每个测试用例，循环次数等于 <span class="arithmatex">\(\log_2 n\)</span>（约 30 次）。内部的组合数求和也最多 30 次。所以每个测试用例是 <span class="arithmatex">\(O(\log^2 n)\)</span> 甚至可以说是常数级的 <span class="arithmatex">\(O(1)\)</span>。处理 <span class="arithmatex">\(10^4\)</span> 组数据绰绰有余。</p>
+<p><strong>时间复杂度</strong>：对于每个测试用例，循环次数等于 <span class="arithmatex"><span class="MathJax_Preview">\log_2 n</span><script type="math/tex">\log_2 n</script></span>（约 30 次）。内部的组合数求和也最多 30 次。所以每个测试用例是 <span class="arithmatex"><span class="MathJax_Preview">O(\log^2 n)</span><script type="math/tex">O(\log^2 n)</script></span> 甚至可以说是常数级的 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>。处理 <span class="arithmatex"><span class="MathJax_Preview">10^4</span><script type="math/tex">10^4</script></span> 组数据绰绰有余。</p>
 </li>
 <li>
-<p><strong>空间复杂度</strong>：仅需 <span class="arithmatex">\(35 \times 35\)</span> 的数组存储组合数，空间占用极小。</p>
+<p><strong>空间复杂度</strong>：仅需 <span class="arithmatex"><span class="MathJax_Preview">35 \times 35</span><script type="math/tex">35 \times 35</script></span> 的数组存储组合数，空间占用极小。</p>
 </li>
 </ul>
 <h3 id="_11">总结</h3>
@@ -4978,7 +4981,7 @@ int main() {
 <h2 id="1_1">1. 题目本质与转化</h2>
 <blockquote>
 <p>[!NOTE] 核心洞察</p>
-<p>直接模拟游戏过程会超时 (<span class="arithmatex">\(N \le 10^9\)</span>)。我们需要找到数字的二进制特征与游戏步数之间的直接关系。</p>
+<p>直接模拟游戏过程会超时 (<span class="arithmatex"><span class="MathJax_Preview">N \le 10^9</span><script type="math/tex">N \le 10^9</script></span>)。我们需要找到数字的二进制特征与游戏步数之间的直接关系。</p>
 </blockquote>
 <ul>
 <li>
@@ -4986,52 +4989,58 @@ int main() {
 </li>
 <li>
 <p>步数公式：</p>
-<p>对于一个二进制最高位在第 <span class="arithmatex">\(i\)</span> 位的数字（即 <span class="arithmatex">\(2^i \le x &lt; 2^{i+1}\)</span>），将其变为 0 的最小步数为：</p>
-<div class="arithmatex">\[Moves(x) = (i + 1) + \text{popcount}(rest)\]</div>
+<p>对于一个二进制最高位在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位的数字（即 <span class="arithmatex"><span class="MathJax_Preview">2^i \le x &lt; 2^{i+1}</span><script type="math/tex">2^i \le x < 2^{i+1}</script></span>），将其变为 0 的最小步数为：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">Moves(x) = (i + 1) + \text{popcount}(rest)</div>
+<script type="math/tex; mode=display">Moves(x) = (i + 1) + \text{popcount}(rest)</script>
+</div>
 <ul>
 <li>
-<p><span class="arithmatex">\(i+1\)</span>：表示消除最高位需要的移位次数（包含最后变0的那一步）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>：表示消除最高位需要的移位次数（包含最后变0的那一步）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(\text{popcount}(rest)\)</span>：除去最高位，剩下的每个 <code>1</code> 都需要一次额外的“减1”操作将其变为偶数。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{popcount}(rest)</span><script type="math/tex">\text{popcount}(rest)</script></span>：除去最高位，剩下的每个 <code>1</code> 都需要一次额外的“减1”操作将其变为偶数。</p>
 </li>
 </ul>
 </li>
 </ul>
 <h2 id="2_1">2. 解题逻辑 (组合计数)</h2>
-<p>题目要求统计 爱丽丝无法在 k 步内获胜（即 <span class="arithmatex">\(Moves &gt; k\)</span>）的数字个数。</p>
-<p>因为 <span class="arithmatex">\(n=2^d\)</span>，我们可以按最高位 (MSB) 对 <span class="arithmatex">\([1, n-1]\)</span> 进行分组统计：</p>
+<p>题目要求统计 爱丽丝无法在 k 步内获胜（即 <span class="arithmatex"><span class="MathJax_Preview">Moves &gt; k</span><script type="math/tex">Moves > k</script></span>）的数字个数。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">n=2^d</span><script type="math/tex">n=2^d</script></span>，我们可以按最高位 (MSB) 对 <span class="arithmatex"><span class="MathJax_Preview">[1, n-1]</span><script type="math/tex">[1, n-1]</script></span> 进行分组统计：</p>
 <ol>
 <li>
 <p>分组遍历：</p>
-<p>遍历最高位 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(d-1\)</span>。每组包含 <span class="arithmatex">\(2^i\)</span> 个数字。</p>
-<p>这些数字除去最高位后，剩余部分可以是 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(2^i-1\)</span> 的任意值（即 <span class="arithmatex">\(i\)</span> 位二进制数）。</p>
+<p>遍历最高位 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">d-1</span><script type="math/tex">d-1</script></span>。每组包含 <span class="arithmatex"><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span> 个数字。</p>
+<p>这些数字除去最高位后，剩余部分可以是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">2^i-1</span><script type="math/tex">2^i-1</script></span> 的任意值（即 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 位二进制数）。</p>
 </li>
 <li>
 <p>设定阈值：</p>
-<p>当前组的基础步数是 <span class="arithmatex">\(i+1\)</span>。</p>
-<p>若要爱丽丝赢，剩余部分的 1 的个数 <span class="arithmatex">\(j\)</span> 必须满足：</p>
-<div class="arithmatex">\[i + 1 + j \le k \implies j \le k - i - 1\]</div>
+<p>当前组的基础步数是 <span class="arithmatex"><span class="MathJax_Preview">i+1</span><script type="math/tex">i+1</script></span>。</p>
+<p>若要爱丽丝赢，剩余部分的 1 的个数 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 必须满足：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">i + 1 + j \le k \implies j \le k - i - 1</div>
+<script type="math/tex; mode=display">i + 1 + j \le k \implies j \le k - i - 1</script>
+</div>
 <p>令 need = k - i - 1（允许的最大 1 的个数）。</p>
 </li>
 <li>
 <p>组合数求和 (鲍勃赢的情况)：</p>
-<p>我们要找的是 <span class="arithmatex">\(Moves &gt; k\)</span>，也就是 <span class="arithmatex">\(1\)</span> 的个数 <span class="arithmatex">\(j &gt; need\)</span>。</p>
+<p>我们要找的是 <span class="arithmatex"><span class="MathJax_Preview">Moves &gt; k</span><script type="math/tex">Moves > k</script></span>，也就是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 的个数 <span class="arithmatex"><span class="MathJax_Preview">j &gt; need</span><script type="math/tex">j > need</script></span>。</p>
 <ul>
 <li>
-<p>若 <code>need &lt; 0</code>：基础步数这就超了，整组 <span class="arithmatex">\(2^i\)</span> 个数鲍勃全赢。</p>
+<p>若 <code>need &lt; 0</code>：基础步数这就超了，整组 <span class="arithmatex"><span class="MathJax_Preview">2^i</span><script type="math/tex">2^i</script></span> 个数鲍勃全赢。</p>
 </li>
 <li>
 <p>若 <code>need &gt;= i</code>：哪怕全是 1 爱丽丝也能赢，鲍勃赢 0 个。</p>
 </li>
 <li>
-<p>否则：鲍勃赢的个数 = <span class="arithmatex">\(\sum_{j=need+1}^{i} C(i, j)\)</span>。</p>
+<p>否则：鲍勃赢的个数 = <span class="arithmatex"><span class="MathJax_Preview">\sum_{j=need+1}^{i} C(i, j)</span><script type="math/tex">\sum_{j=need+1}^{i} C(i, j)</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
 <p>特殊处理：</p>
-<p><span class="arithmatex">\(n\)</span> 本身 (<span class="arithmatex">\(2^d\)</span>) 单独判断。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 本身 (<span class="arithmatex"><span class="MathJax_Preview">2^d</span><script type="math/tex">2^d</script></span>) 单独判断。</p>
 </li>
 </ol>
 <h2 id="3">3. 黄金代码模板</h2>
@@ -5108,14 +5117,14 @@ signed main(){
 <blockquote>
 <p>[!WARNING] 幂次 d 的计算</p>
 <p>错误写法：while(n) { d++; n/=2; }</p>
-<p>后果：对于 <span class="arithmatex">\(n=4 (100_2)\)</span>，会算出 <span class="arithmatex">\(d=3\)</span>，实际上应该是 <span class="arithmatex">\(2\)</span>。这会导致外层循环多跑一轮。</p>
+<p>后果：对于 <span class="arithmatex"><span class="MathJax_Preview">n=4 (100_2)</span><script type="math/tex">n=4 (100_2)</script></span>，会算出 <span class="arithmatex"><span class="MathJax_Preview">d=3</span><script type="math/tex">d=3</script></span>，实际上应该是 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。这会导致外层循环多跑一轮。</p>
 <p>正确写法：while(temp &gt; 1) 或者使用 __builtin_ctz(n)。</p>
 <p>[!WARNING] 组合数循环边界</p>
 <p>错误写法：for (j = need + 1; j &lt; i; j++)</p>
-<p>后果：漏掉了 <span class="arithmatex">\(j=i\)</span>（即除去最高位后，剩下全是 1）的情况。</p>
+<p>后果：漏掉了 <span class="arithmatex"><span class="MathJax_Preview">j=i</span><script type="math/tex">j=i</script></span>（即除去最高位后，剩下全是 1）的情况。</p>
 <p>正确写法：j &lt;= i。</p>
 <p>[!TIP] 题目性质利用</p>
-<p>题目保证 <span class="arithmatex">\(n=2^d\)</span>，这大大简化了问题，使得每个最高位 <span class="arithmatex">\(i &lt; d\)</span> 的区间 <span class="arithmatex">\([2^i, 2^{i+1}-1]\)</span> 都是完整的，可以直接套用组合数公式，无需数位 DP。</p>
+<p>题目保证 <span class="arithmatex"><span class="MathJax_Preview">n=2^d</span><script type="math/tex">n=2^d</script></span>，这大大简化了问题，使得每个最高位 <span class="arithmatex"><span class="MathJax_Preview">i &lt; d</span><script type="math/tex">i < d</script></span> 的区间 <span class="arithmatex"><span class="MathJax_Preview">[2^i, 2^{i+1}-1]</span><script type="math/tex">[2^i, 2^{i+1}-1]</script></span> 都是完整的，可以直接套用组合数公式，无需数位 DP。</p>
 </blockquote>
 
 

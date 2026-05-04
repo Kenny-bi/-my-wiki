@@ -4514,18 +4514,18 @@
 <p>时间限制：每个测试 1 秒
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>如果数组中每个至少出现一次的整数 <span class="arithmatex">\(x\)</span> 都恰好出现 <span class="arithmatex">\(x\)</span> 次，则该数组被称为<strong>平衡数组</strong>。例如，<span class="arithmatex">\([1,4,2,4,4,4,2]\)</span> 是平衡的，因为：
-- 数字 <span class="arithmatex">\(1\)</span> 出现 <span class="arithmatex">\(1\)</span> 次
-- 数字 <span class="arithmatex">\(2\)</span> 出现 <span class="arithmatex">\(2\)</span> 次<br />
-- 数字 <span class="arithmatex">\(4\)</span> 出现 <span class="arithmatex">\(4\)</span> 次</p>
-<p>但 <span class="arithmatex">\([2]\)</span> 和 <span class="arithmatex">\([2,2,2]\)</span> 都不是平衡数组，因为数字 <span class="arithmatex">\(2\)</span> 出现的次数不等于 <span class="arithmatex">\(2\)</span>。</p>
-<p>现在给定一个包含 <span class="arithmatex">\(n\)</span> 个元素的数组 <span class="arithmatex">\(a = [a_1,a_2,\dots,a_n]\)</span>。该数组当前可能不平衡，你可以通过删除一些元素来使其平衡。请问要使数组平衡，最少需要删除多少个元素？</p>
+<p>如果数组中每个至少出现一次的整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 都恰好出现 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次，则该数组被称为<strong>平衡数组</strong>。例如，<span class="arithmatex"><span class="MathJax_Preview">[1,4,2,4,4,4,2]</span><script type="math/tex">[1,4,2,4,4,4,2]</script></span> 是平衡的，因为：
+- 数字 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 出现 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 次
+- 数字 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 出现 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 次<br />
+- 数字 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 出现 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> 次</p>
+<p>但 <span class="arithmatex"><span class="MathJax_Preview">[2]</span><script type="math/tex">[2]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[2,2,2]</span><script type="math/tex">[2,2,2]</script></span> 都不是平衡数组，因为数字 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 出现的次数不等于 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</p>
+<p>现在给定一个包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个元素的数组 <span class="arithmatex"><span class="MathJax_Preview">a = [a_1,a_2,\dots,a_n]</span><script type="math/tex">a = [a_1,a_2,\dots,a_n]</script></span>。该数组当前可能不平衡，你可以通过删除一些元素来使其平衡。请问要使数组平衡，最少需要删除多少个元素？</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 500\)</span>)。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 500</span><script type="math/tex">1 \le t \le 500</script></span>)。</p>
 <p>接下来是每个测试用例的描述：
-- 第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(1 \le n \le 100\)</span>) — 数组 <span class="arithmatex">\(a\)</span> 的大小
-- 第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> (<span class="arithmatex">\(0 \le a_i \le n\)</span>) — 数组 <span class="arithmatex">\(a\)</span> 的元素</p>
-<p>注意：题目没有对所有测试用例的 <span class="arithmatex">\(n\)</span> 之和设置约束。</p>
+- 第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 100</span><script type="math/tex">1 \le n \le 100</script></span>) — 数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的大小
+- 第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">0 \le a_i \le n</span><script type="math/tex">0 \le a_i \le n</script></span>) — 数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的元素</p>
+<p>注意：题目没有对所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和设置约束。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一行包含一个整数：为使数组平衡需要删除的最少元素数量。</p>
 <h2 id="_4">样例输入</h2>
@@ -4548,9 +4548,9 @@
 <h2 id="_6">样例说明</h2>
 <ul>
 <li>第一个测试用例中，数组已经是平衡的，不需要删除任何元素。</li>
-<li>第二个测试用例中，可以删除一个 <span class="arithmatex">\(1\)</span> 和一个 <span class="arithmatex">\(3\)</span>，得到数组 <span class="arithmatex">\([1,2,2]\)</span>，这是平衡的。</li>
-<li>第三个测试用例需要删除 <span class="arithmatex">\(3\)</span> 个元素。</li>
-<li>第四个测试用例需要删除 <span class="arithmatex">\(1\)</span> 个元素（即数字 <span class="arithmatex">\(0\)</span>）。</li>
+<li>第二个测试用例中，可以删除一个 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 和一个 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>，得到数组 <span class="arithmatex"><span class="MathJax_Preview">[1,2,2]</span><script type="math/tex">[1,2,2]</script></span>，这是平衡的。</li>
+<li>第三个测试用例需要删除 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个元素。</li>
+<li>第四个测试用例需要删除 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个元素（即数字 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>）。</li>
 </ul>
 <h2 id="_7">💡 核心直觉 (一句话总结)</h2>
 <blockquote>

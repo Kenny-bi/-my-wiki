@@ -4640,16 +4640,16 @@
 <strong>核心考点</strong>: [[]]</p>
 <h1 id="cf1873g-abbc-or-bacb">CF1873G ABBC or BACB</h1>
 <h2 id="_1">题目描述</h2>
-<p>给你一个由字符 <span class="arithmatex">\(\texttt{A}\)</span> 和 <span class="arithmatex">\(\texttt{B}\)</span> 组成的字符串 <span class="arithmatex">\(s\)</span>。你一开始没有硬币。你可以进行两种操作：</p>
+<p>给你一个由字符 <span class="arithmatex"><span class="MathJax_Preview">\texttt{A}</span><script type="math/tex">\texttt{A}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">\texttt{B}</span><script type="math/tex">\texttt{B}</script></span> 组成的字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>。你一开始没有硬币。你可以进行两种操作：</p>
 <ul>
-<li>选择一个子串 <span class="arithmatex">\(^\dagger\)</span> <span class="arithmatex">\(\texttt{AB}\)</span>，将其变为 <span class="arithmatex">\(\texttt{BC}\)</span>，并获得一个硬币。</li>
-<li>选择一个子串 <span class="arithmatex">\(^\dagger\)</span> <span class="arithmatex">\(\texttt{BA}\)</span>，将其变为 <span class="arithmatex">\(\texttt{CB}\)</span>，并获得一个硬币。</li>
+<li>选择一个子串 <span class="arithmatex"><span class="MathJax_Preview">^\dagger</span><script type="math/tex">^\dagger</script></span> <span class="arithmatex"><span class="MathJax_Preview">\texttt{AB}</span><script type="math/tex">\texttt{AB}</script></span>，将其变为 <span class="arithmatex"><span class="MathJax_Preview">\texttt{BC}</span><script type="math/tex">\texttt{BC}</script></span>，并获得一个硬币。</li>
+<li>选择一个子串 <span class="arithmatex"><span class="MathJax_Preview">^\dagger</span><script type="math/tex">^\dagger</script></span> <span class="arithmatex"><span class="MathJax_Preview">\texttt{BA}</span><script type="math/tex">\texttt{BA}</script></span>，将其变为 <span class="arithmatex"><span class="MathJax_Preview">\texttt{CB}</span><script type="math/tex">\texttt{CB}</script></span>，并获得一个硬币。</li>
 </ul>
-<p>你最多能获得多少个硬币？<span class="arithmatex">\(^\dagger\)</span> 长度为 <span class="arithmatex">\(2\)</span> 的子串指的是字符串中两个相邻的字符序列。</p>
+<p>你最多能获得多少个硬币？<span class="arithmatex"><span class="MathJax_Preview">^\dagger</span><script type="math/tex">^\dagger</script></span> 长度为 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 的子串指的是字符串中两个相邻的字符序列。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含多组测试用例。第一行为一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \leq t \leq 1000\)</span>），表示测试用例的数量。</p>
-<p>每个测试用例仅包含一行字符串 <span class="arithmatex">\(s\)</span>（<span class="arithmatex">\(1 \leq |s| \leq 2 \cdot 10^5\)</span>）。<span class="arithmatex">\(s\)</span> 的所有字符均为 <span class="arithmatex">\(\texttt{A}\)</span> 或 <span class="arithmatex">\(\texttt{B}\)</span>。</p>
-<p>所有测试用例中字符串 <span class="arithmatex">\(s\)</span> 的总长度不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>输入包含多组测试用例。第一行为一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 1000</span><script type="math/tex">1 \leq t \leq 1000</script></span>），表示测试用例的数量。</p>
+<p>每个测试用例仅包含一行字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq |s| \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq |s| \leq 2 \cdot 10^5</script></span>）。<span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 的所有字符均为 <span class="arithmatex"><span class="MathJax_Preview">\texttt{A}</span><script type="math/tex">\texttt{A}</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">\texttt{B}</span><script type="math/tex">\texttt{B}</script></span>。</p>
+<p>所有测试用例中字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 的总长度不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数，表示你最多能获得的硬币数量。</p>
 <h2 id="1">输入输出样例 #1</h2>
@@ -4675,16 +4675,16 @@ AAA
 0
 </code></pre></div>
 <h2 id="_4">说明/提示</h2>
-<p>在第一个测试用例中，你可以进行如下操作获得 <span class="arithmatex">\(2\)</span> 个硬币：<span class="arithmatex">\(\color{red}{\texttt{AB}}\texttt{BA} \to \texttt{BC}\color{red}{\texttt{BA}} \to \texttt{BCCB}\)</span>。</p>
-<p>在第二个测试用例中，你可以进行如下操作获得 <span class="arithmatex">\(1\)</span> 个硬币：<span class="arithmatex">\(\color{red}{\texttt{AB}}\texttt{A} \to \texttt{BCA}\)</span>。</p>
-<p>在第三个测试用例中，你可以进行如下操作获得 <span class="arithmatex">\(3\)</span> 个硬币：<span class="arithmatex">\(\color{red}{\texttt{BA}}\texttt{ABA} \to \texttt{CBA}\color{red}{\texttt{BA}} \to \texttt{C}\color{red}{\texttt{BA}}\texttt{CB} \to \texttt{CCBCB}\)</span>。</p>
+<p>在第一个测试用例中，你可以进行如下操作获得 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 个硬币：<span class="arithmatex"><span class="MathJax_Preview">\color{red}{\texttt{AB}}\texttt{BA} \to \texttt{BC}\color{red}{\texttt{BA}} \to \texttt{BCCB}</span><script type="math/tex">\color{red}{\texttt{AB}}\texttt{BA} \to \texttt{BC}\color{red}{\texttt{BA}} \to \texttt{BCCB}</script></span>。</p>
+<p>在第二个测试用例中，你可以进行如下操作获得 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 个硬币：<span class="arithmatex"><span class="MathJax_Preview">\color{red}{\texttt{AB}}\texttt{A} \to \texttt{BCA}</span><script type="math/tex">\color{red}{\texttt{AB}}\texttt{A} \to \texttt{BCA}</script></span>。</p>
+<p>在第三个测试用例中，你可以进行如下操作获得 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 个硬币：<span class="arithmatex"><span class="MathJax_Preview">\color{red}{\texttt{BA}}\texttt{ABA} \to \texttt{CBA}\color{red}{\texttt{BA}} \to \texttt{C}\color{red}{\texttt{BA}}\texttt{CB} \to \texttt{CCBCB}</span><script type="math/tex">\color{red}{\texttt{BA}}\texttt{ABA} \to \texttt{CBA}\color{red}{\texttt{BA}} \to \texttt{C}\color{red}{\texttt{BA}}\texttt{CB} \to \texttt{CCBCB}</script></span>。</p>
 <p>由 ChatGPT 4.1 翻译</p>
 <h2 id="cf1873g-abbc-or-bacb_1">📝 题目：CF1873G ABBC or BACB</h2>
 <p>题目链接: Codeforces 1873G</p>
 <p>核心考点: [[贪心]]、[[思维]]、[[构造]]</p>
 <h3 id="_5">💡 核心直觉 (一句话总结)</h3>
 <blockquote>
-<p>字符 <code>B</code> 是消除 <code>A</code> 的工具，一段连续的 <code>A</code> 能否被消除取决于旁边有没有 <code>B</code>。整个字符串可以看作是由 <code>B</code> 分隔开的若干段 <code>A</code>，我们拥有 <span class="arithmatex">\(N\)</span> 个 <code>B</code>，却有 <span class="arithmatex">\(N+1\)</span> 段 <code>A</code>（包括两端可能为0的段），必然有一段 <code>A</code> 无法被消除，为了硬币最多，我们<strong>贪心地舍弃最短的那一段 <code>A</code></strong>。</p>
+<p>字符 <code>B</code> 是消除 <code>A</code> 的工具，一段连续的 <code>A</code> 能否被消除取决于旁边有没有 <code>B</code>。整个字符串可以看作是由 <code>B</code> 分隔开的若干段 <code>A</code>，我们拥有 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 个 <code>B</code>，却有 <span class="arithmatex"><span class="MathJax_Preview">N+1</span><script type="math/tex">N+1</script></span> 段 <code>A</code>（包括两端可能为0的段），必然有一段 <code>A</code> 无法被消除，为了硬币最多，我们<strong>贪心地舍弃最短的那一段 <code>A</code></strong>。</p>
 </blockquote>
 <h3 id="fail-log">🚫 易错点 &amp; 误区 (Fail Log)</h3>
 <ul>
@@ -4704,10 +4704,10 @@ AAA
 <p><strong>转化视角</strong>: 将字符串看作是由 <code>B</code> 分隔的 <code>A</code> 数组。</p>
 <ul>
 <li>
-<p><code>AA B A B AAA</code> <span class="arithmatex">\(\rightarrow\)</span> <code>[2, 1, 3]</code></p>
+<p><code>AA B A B AAA</code> <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> <code>[2, 1, 3]</code></p>
 </li>
 <li>
-<p><code>B AA B</code> <span class="arithmatex">\(\rightarrow\)</span> <code>[0, 2, 0]</code> (注意 <code>B</code> 在边界或相邻时，会产生长度为 0 的 <code>A</code> 段)</p>
+<p><code>B AA B</code> <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> <code>[0, 2, 0]</code> (注意 <code>B</code> 在边界或相邻时，会产生长度为 0 的 <code>A</code> 段)</p>
 </li>
 </ul>
 </li>
@@ -4740,7 +4740,7 @@ AAA
 <h3 id="pattern">🧠 举一反三 (Pattern)</h3>
 <ul>
 <li>
-<p><strong>"资源覆盖问题"</strong>: 有 <span class="arithmatex">\(N\)</span> 个资源（B），<span class="arithmatex">\(N+1\)</span> 个任务（A段），每个资源只能做一个任务，求最大收益 <span class="arithmatex">\(\rightarrow\)</span> 舍弃最小的一个任务。</p>
+<p><strong>"资源覆盖问题"</strong>: 有 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 个资源（B），<span class="arithmatex"><span class="MathJax_Preview">N+1</span><script type="math/tex">N+1</script></span> 个任务（A段），每个资源只能做一个任务，求最大收益 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 舍弃最小的一个任务。</p>
 </li>
 <li>
 <p>类似思维题目：<strong>环形数组断开成链</strong>的问题，往往也是枚举断点或者舍弃最小值。</p>

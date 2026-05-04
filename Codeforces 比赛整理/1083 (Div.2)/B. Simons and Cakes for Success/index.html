@@ -4490,14 +4490,14 @@
 内存限制：每个测试点256兆字节</p>
 <p>等我成功了，我们就一起分享蛋糕！</p>
 <p>— 舜</p>
-<p>西蒙斯有 <span class="arithmatex">\(n\)</span> 个朋友和大量蛋糕。为了公平地分配蛋糕，请你帮助他解决以下问题：</p>
-<p>找到最小的正整数 <span class="arithmatex">\(k\)</span>，使得 <span class="arithmatex">\(n\)</span> 能整除 <span class="arithmatex">\(k^n\)</span>。</p>
+<p>西蒙斯有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个朋友和大量蛋糕。为了公平地分配蛋糕，请你帮助他解决以下问题：</p>
+<p>找到最小的正整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 能整除 <span class="arithmatex"><span class="MathJax_Preview">k^n</span><script type="math/tex">k^n</script></span>。</p>
 <p>可以证明，在给定的约束条件下，答案总是存在的。</p>
 <h2 id="_1">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 100\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例只有一行，包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(2 \le n \le 10^9\)</span>) — 西蒙斯的朋友数量。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 100</span><script type="math/tex">1 \le t \le 100</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例只有一行，包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">2 \le n \le 10^9</span><script type="math/tex">2 \le n \le 10^9</script></span>) — 西蒙斯的朋友数量。</p>
 <h2 id="_2">输出格式</h2>
-<p>对于每个测试用例，输出一个整数 — 你找到的最小 <span class="arithmatex">\(k\)</span>。</p>
+<p>对于每个测试用例，输出一个整数 — 你找到的最小 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 <h2 id="_3">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 8
@@ -4514,11 +4514,11 @@
 <h2 id="_5">样例说明</h2>
 <p>在第一个测试用例中：</p>
 <ul>
-<li><span class="arithmatex">\(1^8 = 1\)</span>，而 <span class="arithmatex">\(8\)</span> 不能整除 <span class="arithmatex">\(1\)</span>；</li>
-<li><span class="arithmatex">\(2^8 = 256\)</span>，而 <span class="arithmatex">\(8\)</span> 能整除 <span class="arithmatex">\(256\)</span>，因为 <span class="arithmatex">\(256 = 8 \times 32\)</span>。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">1^8 = 1</span><script type="math/tex">1^8 = 1</script></span>，而 <span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 不能整除 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>；</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">2^8 = 256</span><script type="math/tex">2^8 = 256</script></span>，而 <span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 能整除 <span class="arithmatex"><span class="MathJax_Preview">256</span><script type="math/tex">256</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">256 = 8 \times 32</span><script type="math/tex">256 = 8 \times 32</script></span>。</li>
 </ul>
-<p>因此，最小的 <span class="arithmatex">\(k\)</span> 是 <span class="arithmatex">\(2\)</span>。</p>
-<p>在第二个测试用例中，<span class="arithmatex">\(12\)</span> 能整除 <span class="arithmatex">\(6^{12} = 2176782336\)</span>，因为 <span class="arithmatex">\(2176782336 = 12 \times 181398528\)</span>。</p>
+<p>因此，最小的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。</p>
+<p>在第二个测试用例中，<span class="arithmatex"><span class="MathJax_Preview">12</span><script type="math/tex">12</script></span> 能整除 <span class="arithmatex"><span class="MathJax_Preview">6^{12} = 2176782336</span><script type="math/tex">6^{12} = 2176782336</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">2176782336 = 12 \times 181398528</span><script type="math/tex">2176782336 = 12 \times 181398528</script></span>。</p>
 <h1 id="_6">帮我分析以下三种方法的时间复杂度，以及最坏情况下是什么样子，以及为什么最后一种明明看起来最暴力，但是奇怪的是时间确实最短的，这是为什么</h1>
 <h1 id="t3">T3 代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2205 B</span>

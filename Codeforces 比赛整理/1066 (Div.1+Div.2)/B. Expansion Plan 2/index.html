@@ -4668,21 +4668,21 @@
 <p>时间限制：每个测试 1 秒
 内存限制：每个测试 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>你正在分析一个坐标为 <span class="arithmatex">\((X,Y)\)</span> 的无限网格（具体来说，<span class="arithmatex">\((0,0)\)</span> 正上方的格子是 <span class="arithmatex">\((0,1)\)</span>，<span class="arithmatex">\((0,0)\)</span> 正右方的格子是 <span class="arithmatex">\((1,0)\)</span>）。初始时，只有 <span class="arithmatex">\((0,0)\)</span> 这个格子是黑色的。</p>
-<p>给你一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(a_1a_2\dots a_n\)</span>，由字符 "4" 和 "8" 组成，它描述了 <span class="arithmatex">\(n\)</span> 次扩张操作。对于每个 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span>，所有格子同时发生以下变化：</p>
+<p>你正在分析一个坐标为 <span class="arithmatex"><span class="MathJax_Preview">(X,Y)</span><script type="math/tex">(X,Y)</script></span> 的无限网格（具体来说，<span class="arithmatex"><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span> 正上方的格子是 <span class="arithmatex"><span class="MathJax_Preview">(0,1)</span><script type="math/tex">(0,1)</script></span>，<span class="arithmatex"><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span> 正右方的格子是 <span class="arithmatex"><span class="MathJax_Preview">(1,0)</span><script type="math/tex">(1,0)</script></span>）。初始时，只有 <span class="arithmatex"><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span> 这个格子是黑色的。</p>
+<p>给你一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">a_1a_2\dots a_n</span><script type="math/tex">a_1a_2\dots a_n</script></span>，由字符 "4" 和 "8" 组成，它描述了 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次扩张操作。对于每个 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，所有格子同时发生以下变化：</p>
 <ul>
-<li>如果 <span class="arithmatex">\(s_i =\)</span> "4"：对于每个格子，如果它与某个黑色格子<strong>正交相邻</strong>（即共享一条边），则它变为黑色；否则保持原状态不变。</li>
-<li>如果 <span class="arithmatex">\(s_i =\)</span> "8"：对于每个格子，如果它与某个黑色格子<strong>正交或对角相邻</strong>（即共享一条边或一个角），则它变为黑色；否则保持原状态不变。</li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">s_i =</span><script type="math/tex">s_i =</script></span> "4"：对于每个格子，如果它与某个黑色格子<strong>正交相邻</strong>（即共享一条边），则它变为黑色；否则保持原状态不变。</li>
+<li>如果 <span class="arithmatex"><span class="MathJax_Preview">s_i =</span><script type="math/tex">s_i =</script></span> "8"：对于每个格子，如果它与某个黑色格子<strong>正交或对角相邻</strong>（即共享一条边或一个角），则它变为黑色；否则保持原状态不变。</li>
 </ul>
-<p>请问在过程结束后，格子 <span class="arithmatex">\((x,y)\)</span> 是否为黑色？</p>
+<p>请问在过程结束后，格子 <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> 是否为黑色？</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>)。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>)。</p>
 <p>接下来是每个测试用例的描述：
-- 第一行包含三个整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> (<span class="arithmatex">\(1 \le n \le 2 \cdot 10^5\)</span>, <span class="arithmatex">\(-10^9 \le x,y \le 10^9\)</span>) — 分别表示扩张操作的数量，以及你关心的格子的坐标
-- 第二行包含一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(s\)</span>，由字符 "4" 和 "8" 组成 — 表示扩张操作的类型</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+- 第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 2 \cdot 10^5</span><script type="math/tex">1 \le n \le 2 \cdot 10^5</script></span>, <span class="arithmatex"><span class="MathJax_Preview">-10^9 \le x,y \le 10^9</span><script type="math/tex">-10^9 \le x,y \le 10^9</script></span>) — 分别表示扩张操作的数量，以及你关心的格子的坐标
+- 第二行包含一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，由字符 "4" 和 "8" 组成 — 表示扩张操作的类型</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，如果格子 <span class="arithmatex">\((x,y)\)</span> 在字符串 <span class="arithmatex">\(s\)</span> 描述的扩张操作后是黑色的，输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
+<p>对于每个测试用例，如果格子 <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> 在字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 描述的扩张操作后是黑色的，输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
 <p>判题系统对大小写不敏感（例如 <code>YES</code>, <code>Yes</code>, <code>yes</code>, <code>yEs</code> 都会被识别为肯定答案）。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
@@ -4710,8 +4710,8 @@ NO
 <p><strong>Note</strong></p>
 <p>The first three test cases are illustrated below:</p>
 <p><img alt="" src="https://espresso.codeforces.com/2fc7b7061ad7f5b17ed60b6e4192d563f4f23460.png" /> <img alt="" src="https://espresso.codeforces.com/b750fcf23cfe37945b256fc37b79476583c8cff8.png" /> <img alt="" src="https://espresso.codeforces.com/c6e1a91ad05a20fdb8e51036f8c27e9119b5fa20.png" /></p>
-<p>In the first test case, after the expansion operations in the string <span class="arithmatex">\(\texttt{"888"}\)</span>, cell <span class="arithmatex">\((3, 3)\)</span> is black, so the answer is <span class="arithmatex">\(\texttt{YES}\)</span>.</p>
-<p>In the second test case, cell <span class="arithmatex">\((5, 1)\)</span> is white after the expansion operations in the string <span class="arithmatex">\(\texttt{"4884"}\)</span>.</p>
+<p>In the first test case, after the expansion operations in the string <span class="arithmatex"><span class="MathJax_Preview">\texttt{"888"}</span><script type="math/tex">\texttt{"888"}</script></span>, cell <span class="arithmatex"><span class="MathJax_Preview">(3, 3)</span><script type="math/tex">(3, 3)</script></span> is black, so the answer is <span class="arithmatex"><span class="MathJax_Preview">\texttt{YES}</span><script type="math/tex">\texttt{YES}</script></span>.</p>
+<p>In the second test case, cell <span class="arithmatex"><span class="MathJax_Preview">(5, 1)</span><script type="math/tex">(5, 1)</script></span> is white after the expansion operations in the string <span class="arithmatex"><span class="MathJax_Preview">\texttt{"4884"}</span><script type="math/tex">\texttt{"4884"}</script></span>.</p>
 <h2 id="_6">💡 核心直觉 (一句话总结)</h2>
 <blockquote>
 <p>我做这个题目的时候是直接找到规律</p>
@@ -4858,19 +4858,22 @@ NO
 </code></pre></div>
 <h1 id="cf">CF 题解代码的解释</h1>
 <p>这份 CF 官方题解的思路其实非常巧妙，它是从<strong>“资源消耗”</strong>和<strong>“步数限制”</strong>两个数学角度来建模的，比找规律（几何形状）更具普适性。</p>
-<p>我们可以把这个问题看作是：你要从 <span class="arithmatex">\((0,0)\)</span> 走到 <span class="arithmatex">\((x,y)\)</span>（假设 <span class="arithmatex">\(x,y \ge 0\)</span>），你手里有两种卡片：</p>
+<p>我们可以把这个问题看作是：你要从 <span class="arithmatex"><span class="MathJax_Preview">(0,0)</span><script type="math/tex">(0,0)</script></span> 走到 <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span>（假设 <span class="arithmatex"><span class="MathJax_Preview">x,y \ge 0</span><script type="math/tex">x,y \ge 0</script></span>），你手里有两种卡片：</p>
 <ul>
 <li>
-<p><strong>卡片 '4' (<span class="arithmatex">\(a\)</span> 张)</strong>：可以让你的 <span class="arithmatex">\(x+y\)</span> 增加 1（向右走一步 <strong>或</strong> 向上走一步）。</p>
+<p><strong>卡片 '4' (<span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 张)</strong>：可以让你的 <span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span> 增加 1（向右走一步 <strong>或</strong> 向上走一步）。</p>
 </li>
 <li>
-<p><strong>卡片 '8' (<span class="arithmatex">\(b\)</span> 张)</strong>：可以让你的 <span class="arithmatex">\(x+y\)</span> 增加 2（向右上走一步，相当于同时向右和向上，即 <span class="arithmatex">\((+1, +1)\)</span>），或者也可以当做卡片 '4' 用（只增加 1）。</p>
+<p><strong>卡片 '8' (<span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 张)</strong>：可以让你的 <span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span> 增加 2（向右上走一步，相当于同时向右和向上，即 <span class="arithmatex"><span class="MathJax_Preview">(+1, +1)</span><script type="math/tex">(+1, +1)</script></span>），或者也可以当做卡片 '4' 用（只增加 1）。</p>
 </li>
 </ul>
 <h3 id="_9">核心逻辑拆解</h3>
 <p>官方题解的判断逻辑由两个不等式组成，这两个条件必须<strong>同时满足</strong>：</p>
 <h4 id="1-manhattan">1. 能量（Manhattan 距离）限制：</h4>
-<div class="arithmatex">\[a + 2b \ge x + y\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">a + 2b \ge x + y</div>
+<script type="math/tex; mode=display">a + 2b \ge x + y</script>
+</div>
 <ul>
 <li>
 <p><strong>含义</strong>：你所有的卡片加起来，能提供的最大“位移总和”是否足够？</p>
@@ -4879,22 +4882,25 @@ NO
 <p><strong>解释</strong>：</p>
 <ul>
 <li>
-<p>目标点的曼哈顿距离是 <span class="arithmatex">\(x + y\)</span>。</p>
+<p>目标点的曼哈顿距离是 <span class="arithmatex"><span class="MathJax_Preview">x + y</span><script type="math/tex">x + y</script></span>。</p>
 </li>
 <li>
 <p>一张 '4' 最多提供 1 个单位的距离贡献。</p>
 </li>
 <li>
-<p>一张 '8' 最多提供 2 个单位的距离贡献（因为它能斜着走，一步顶两步， <span class="arithmatex">\(x+1, y+1\)</span> 意味着 <span class="arithmatex">\(x+y\)</span> 增加了 2）。</p>
+<p>一张 '8' 最多提供 2 个单位的距离贡献（因为它能斜着走，一步顶两步， <span class="arithmatex"><span class="MathJax_Preview">x+1, y+1</span><script type="math/tex">x+1, y+1</script></span> 意味着 <span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span> 增加了 2）。</p>
 </li>
 <li>
-<p>所以，你手里所有牌能走出的最大距离是 <span class="arithmatex">\(1 \cdot a + 2 \cdot b\)</span>。如果这个值都小于 <span class="arithmatex">\(x+y\)</span>，那你无论如何都走不到。</p>
+<p>所以，你手里所有牌能走出的最大距离是 <span class="arithmatex"><span class="MathJax_Preview">1 \cdot a + 2 \cdot b</span><script type="math/tex">1 \cdot a + 2 \cdot b</script></span>。如果这个值都小于 <span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span>，那你无论如何都走不到。</p>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="2">2. 物理（最大坐标）限制：</h4>
-<div class="arithmatex">\[a + b \ge \max(x, y)\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">a + b \ge \max(x, y)</div>
+<script type="math/tex; mode=display">a + b \ge \max(x, y)</script>
+</div>
 <ul>
 <li>
 <p><strong>含义</strong>：你所有的操作次数（步数），是否足够支撑走到最远的那个坐标？</p>
@@ -4906,13 +4912,13 @@ NO
 <p>无论你出 '4' 还是出 '8'，在一个回合内，你在 X 轴方向最多只能走 1 格，在 Y 轴方向最多也只能走 1 格。</p>
 </li>
 <li>
-<p>也就是说，经过 <span class="arithmatex">\(n\)</span> 次操作（<span class="arithmatex">\(n = a+b\)</span>），你的 X 坐标绝对不可能超过 <span class="arithmatex">\(n\)</span>，Y 坐标也绝对不可能超过 <span class="arithmatex">\(n\)</span>。</p>
+<p>也就是说，经过 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 次操作（<span class="arithmatex"><span class="MathJax_Preview">n = a+b</span><script type="math/tex">n = a+b</script></span>），你的 X 坐标绝对不可能超过 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>，Y 坐标也绝对不可能超过 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。</p>
 </li>
 <li>
-<p>举个反例：假设你要去 <span class="arithmatex">\((10, 0)\)</span>，也就是 <span class="arithmatex">\(x=10, y=0\)</span>。即使你有 5 张 '8'（<span class="arithmatex">\(a=0, b=5\)</span>），虽然 <span class="arithmatex">\(a+2b = 10\)</span> 满足了第一个条件，但是你只有 5 个回合，你在 X 轴方向撑死只能走到 5，根本到不了 10。</p>
+<p>举个反例：假设你要去 <span class="arithmatex"><span class="MathJax_Preview">(10, 0)</span><script type="math/tex">(10, 0)</script></span>，也就是 <span class="arithmatex"><span class="MathJax_Preview">x=10, y=0</span><script type="math/tex">x=10, y=0</script></span>。即使你有 5 张 '8'（<span class="arithmatex"><span class="MathJax_Preview">a=0, b=5</span><script type="math/tex">a=0, b=5</script></span>），虽然 <span class="arithmatex"><span class="MathJax_Preview">a+2b = 10</span><script type="math/tex">a+2b = 10</script></span> 满足了第一个条件，但是你只有 5 个回合，你在 X 轴方向撑死只能走到 5，根本到不了 10。</p>
 </li>
 <li>
-<p>所以，总步数 <span class="arithmatex">\(a+b\)</span> 必须大于等于 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 中较大的那个。</p>
+<p>所以，总步数 <span class="arithmatex"><span class="MathJax_Preview">a+b</span><script type="math/tex">a+b</script></span> 必须大于等于 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 中较大的那个。</p>
 </li>
 </ul>
 </li>
@@ -4925,19 +4931,19 @@ NO
 <p>4884</p>
 <ul>
 <li>
-<p><strong>目标</strong>：<span class="arithmatex">\((5, 1)\)</span>，即 <span class="arithmatex">\(x=5, y=1\)</span>。</p>
+<p><strong>目标</strong>：<span class="arithmatex"><span class="MathJax_Preview">(5, 1)</span><script type="math/tex">(5, 1)</script></span>，即 <span class="arithmatex"><span class="MathJax_Preview">x=5, y=1</span><script type="math/tex">x=5, y=1</script></span>。</p>
 </li>
 <li>
-<p><strong>资源</strong>：'4' 有 2 个 (<span class="arithmatex">\(a=2\)</span>)，'8' 有 2 个 (<span class="arithmatex">\(b=2\)</span>)。</p>
+<p><strong>资源</strong>：'4' 有 2 个 (<span class="arithmatex"><span class="MathJax_Preview">a=2</span><script type="math/tex">a=2</script></span>)，'8' 有 2 个 (<span class="arithmatex"><span class="MathJax_Preview">b=2</span><script type="math/tex">b=2</script></span>)。</p>
 </li>
 <li>
 <p><strong>判断</strong>：</p>
 <ol>
 <li>
-<p><strong>能量判定</strong>：<span class="arithmatex">\(a + 2b = 2 + 2(2) = 6\)</span>。目标距离 <span class="arithmatex">\(x+y = 5+1=6\)</span>。<span class="arithmatex">\(6 \ge 6\)</span>，<strong>满足</strong>（说明如果全用最高效率，距离是够的）。</p>
+<p><strong>能量判定</strong>：<span class="arithmatex"><span class="MathJax_Preview">a + 2b = 2 + 2(2) = 6</span><script type="math/tex">a + 2b = 2 + 2(2) = 6</script></span>。目标距离 <span class="arithmatex"><span class="MathJax_Preview">x+y = 5+1=6</span><script type="math/tex">x+y = 5+1=6</script></span>。<span class="arithmatex"><span class="MathJax_Preview">6 \ge 6</span><script type="math/tex">6 \ge 6</script></span>，<strong>满足</strong>（说明如果全用最高效率，距离是够的）。</p>
 </li>
 <li>
-<p><strong>步数判定</strong>：<span class="arithmatex">\(a + b = 4\)</span>。最大坐标 <span class="arithmatex">\(\max(5, 1) = 5\)</span>。<span class="arithmatex">\(4 \ge 5\)</span> 吗？<strong>不满足</strong>。</p>
+<p><strong>步数判定</strong>：<span class="arithmatex"><span class="MathJax_Preview">a + b = 4</span><script type="math/tex">a + b = 4</script></span>。最大坐标 <span class="arithmatex"><span class="MathJax_Preview">\max(5, 1) = 5</span><script type="math/tex">\max(5, 1) = 5</script></span>。<span class="arithmatex"><span class="MathJax_Preview">4 \ge 5</span><script type="math/tex">4 \ge 5</script></span> 吗？<strong>不满足</strong>。</p>
 </li>
 </ol>
 </li>
@@ -4953,15 +4959,15 @@ NO
 <p>4884884</p>
 <ul>
 <li>
-<p><strong>目标</strong>：取绝对值 <span class="arithmatex">\((7, 5)\)</span>。</p>
+<p><strong>目标</strong>：取绝对值 <span class="arithmatex"><span class="MathJax_Preview">(7, 5)</span><script type="math/tex">(7, 5)</script></span>。</p>
 </li>
 <li>
-<p><strong>资源</strong>：'4' 有 3 个 (<span class="arithmatex">\(a=3\)</span>)，'8' 有 4 个 (<span class="arithmatex">\(b=4\)</span>)。</p>
+<p><strong>资源</strong>：'4' 有 3 个 (<span class="arithmatex"><span class="MathJax_Preview">a=3</span><script type="math/tex">a=3</script></span>)，'8' 有 4 个 (<span class="arithmatex"><span class="MathJax_Preview">b=4</span><script type="math/tex">b=4</script></span>)。</p>
 </li>
 <li>
 <p><strong>判断</strong>：</p>
 <ol>
-<li><strong>能量判定</strong>：<span class="arithmatex">\(a + 2b = 3 + 8 = 11\)</span>。目标 <span class="arithmatex">\(7+5=12\)</span>。<span class="arithmatex">\(11 \ge 12\)</span>？<strong>不满足</strong>。</li>
+<li><strong>能量判定</strong>：<span class="arithmatex"><span class="MathJax_Preview">a + 2b = 3 + 8 = 11</span><script type="math/tex">a + 2b = 3 + 8 = 11</script></span>。目标 <span class="arithmatex"><span class="MathJax_Preview">7+5=12</span><script type="math/tex">7+5=12</script></span>。<span class="arithmatex"><span class="MathJax_Preview">11 \ge 12</span><script type="math/tex">11 \ge 12</script></span>？<strong>不满足</strong>。</li>
 </ol>
 </li>
 <li>
@@ -4980,10 +4986,10 @@ NO
 <p><strong>题解思路（不等式）</strong>：是<strong>代数/度量视角</strong>。它剥离了形状，只看“贡献值”和“上限”。</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(x+y\)</span> 是曼哈顿距离（L1 范数）。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">x+y</span><script type="math/tex">x+y</script></span> 是曼哈顿距离（L1 范数）。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(\max(x, y)\)</span> 是切比雪夫距离（L∞ 范数）的一种变体。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\max(x, y)</span><script type="math/tex">\max(x, y)</script></span> 是切比雪夫距离（L∞ 范数）的一种变体。</p>
 </li>
 <li>
 <p>这种思路在计算几何和图论中最短路问题中非常常用：<strong>先看总量够不够，再看单项上限够不够</strong>。</p>
@@ -4995,10 +5001,10 @@ NO
 <p>CF 题解的那两行代码核心就是在问：</p>
 <ol>
 <li>
-<p><strong>油够不够？</strong> ( <span class="arithmatex">\(a+2b \ge x+y\)</span> )</p>
+<p><strong>油够不够？</strong> ( <span class="arithmatex"><span class="MathJax_Preview">a+2b \ge x+y</span><script type="math/tex">a+2b \ge x+y</script></span> )</p>
 </li>
 <li>
-<p><strong>时间够不够？</strong> ( <span class="arithmatex">\(a+b \ge \max(x,y)\)</span> )</p>
+<p><strong>时间够不够？</strong> ( <span class="arithmatex"><span class="MathJax_Preview">a+b \ge \max(x,y)</span><script type="math/tex">a+b \ge \max(x,y)</script></span> )</p>
 </li>
 </ol>
 <p>只要这两个都够了，你就一定能通过合理分配 '4' 和 '8' 的走法到达目的地。</p>

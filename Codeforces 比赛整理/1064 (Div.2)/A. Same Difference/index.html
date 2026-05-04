@@ -4444,14 +4444,14 @@
 <p>时间限制：每测试点 1 秒<br />
 内存限制：256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(s\)</span>，由小写字母组成。</p>
-<p>在一次操作中，你可以选择一个整数 <span class="arithmatex">\(i\)</span>（<span class="arithmatex">\(1 \leq i &lt; n\)</span>），并将 <span class="arithmatex">\(s_i\)</span> 改为 <span class="arithmatex">\(s_{i+1}\)</span>。</p>
+<p>给定一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，由小写字母组成。</p>
+<p>在一次操作中，你可以选择一个整数 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq i &lt; n</span><script type="math/tex">1 \leq i < n</script></span>），并将 <span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span> 改为 <span class="arithmatex"><span class="MathJax_Preview">s_{i+1}</span><script type="math/tex">s_{i+1}</script></span>。</p>
 <p>最少需要多少次操作才能使所有字符相同？可以证明这总是可以实现的。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \leq t \leq 20\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(2 \leq n \leq 100\)</span>）—— 字符串的长度。</p>
-<p>接下来一行包含一个长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(s\)</span>，由小写字母组成。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(100\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 20</span><script type="math/tex">1 \leq t \leq 20</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">2 \leq n \leq 100</span><script type="math/tex">2 \leq n \leq 100</script></span>）—— 字符串的长度。</p>
+<p>接下来一行包含一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>，由小写字母组成。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">100</span><script type="math/tex">100</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个整数 —— 使所有字符相同所需的最少操作次数。</p>
 <h2 id="_4">样例输入</h2>
@@ -4476,8 +4476,8 @@ abcabc
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <ul>
-<li>第一个测试用例中，可以通过 1 次操作将 <span class="arithmatex">\(s_2\)</span> 改为 <span class="arithmatex">\(s_3\)</span> 达成目标。</li>
-<li>第三个测试用例中，可以先将 <span class="arithmatex">\(s_3\)</span> 改为 <span class="arithmatex">\(s_4\)</span>，再将 <span class="arithmatex">\(s_2\)</span> 改为 <span class="arithmatex">\(s_3\)</span>，总共使用 2 次操作。可以证明答案不小于 2。</li>
+<li>第一个测试用例中，可以通过 1 次操作将 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span> 改为 <span class="arithmatex"><span class="MathJax_Preview">s_3</span><script type="math/tex">s_3</script></span> 达成目标。</li>
+<li>第三个测试用例中，可以先将 <span class="arithmatex"><span class="MathJax_Preview">s_3</span><script type="math/tex">s_3</script></span> 改为 <span class="arithmatex"><span class="MathJax_Preview">s_4</span><script type="math/tex">s_4</script></span>，再将 <span class="arithmatex"><span class="MathJax_Preview">s_2</span><script type="math/tex">s_2</script></span> 改为 <span class="arithmatex"><span class="MathJax_Preview">s_3</span><script type="math/tex">s_3</script></span>，总共使用 2 次操作。可以证明答案不小于 2。</li>
 </ul>
 <h1 id="ac">赛时AC代码</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2166 A</span>

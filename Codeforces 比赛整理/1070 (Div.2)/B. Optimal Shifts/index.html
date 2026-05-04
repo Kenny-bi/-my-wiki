@@ -4424,16 +4424,16 @@
 <p>时间限制：每测试点1.5秒
 内存限制：每测试点256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>给定一个二进制字符串 <span class="arithmatex">\(s_1 s_2 \dots s_n\)</span>，其中至少包含一个 <code>1</code>。你希望得到一个相同长度的、仅由 <code>1</code> 组成的二进制字符串。为此，你可以执行任意次数的以下操作：</p>
-<p>选择一个数字 <span class="arithmatex">\(d\)</span>（<span class="arithmatex">\(1 \le d \le n\)</span>），并将字符串 <span class="arithmatex">\(t\)</span> 视为字符串 <span class="arithmatex">\(s\)</span> 循环右移 <span class="arithmatex">\(d\)</span> 位的结果。更形式化地说，<span class="arithmatex">\(t = s_{n-d+1} \dots s_n s_1 \dots s_{n-d}\)</span>。之后，对于所有满足 <span class="arithmatex">\(t_j = 1\)</span> 的 <span class="arithmatex">\(j\)</span>，执行 <span class="arithmatex">\(s_j := 1\)</span>。该操作花费 <span class="arithmatex">\(d\)</span> 个硬币，其中 <span class="arithmatex">\(d\)</span> 是你选择的移位量。</p>
-<p>请注意，字符串 <span class="arithmatex">\(s\)</span> 中最初满足 <span class="arithmatex">\(s_j = 1\)</span> 的位置 <span class="arithmatex">\(j\)</span>，即使在 <span class="arithmatex">\(t_j = 0\)</span> 的情况下，也会保持为 <code>1</code>。</p>
-<p>你需要确定在所有操作之后，为了使字符串 <span class="arithmatex">\(s\)</span> 仅由 <code>1</code> 组成，可以花费的最小硬币数量。</p>
+<p>给定一个二进制字符串 <span class="arithmatex"><span class="MathJax_Preview">s_1 s_2 \dots s_n</span><script type="math/tex">s_1 s_2 \dots s_n</script></span>，其中至少包含一个 <code>1</code>。你希望得到一个相同长度的、仅由 <code>1</code> 组成的二进制字符串。为此，你可以执行任意次数的以下操作：</p>
+<p>选择一个数字 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le d \le n</span><script type="math/tex">1 \le d \le n</script></span>），并将字符串 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 视为字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 循环右移 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 位的结果。更形式化地说，<span class="arithmatex"><span class="MathJax_Preview">t = s_{n-d+1} \dots s_n s_1 \dots s_{n-d}</span><script type="math/tex">t = s_{n-d+1} \dots s_n s_1 \dots s_{n-d}</script></span>。之后，对于所有满足 <span class="arithmatex"><span class="MathJax_Preview">t_j = 1</span><script type="math/tex">t_j = 1</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，执行 <span class="arithmatex"><span class="MathJax_Preview">s_j := 1</span><script type="math/tex">s_j := 1</script></span>。该操作花费 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 个硬币，其中 <span class="arithmatex"><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> 是你选择的移位量。</p>
+<p>请注意，字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 中最初满足 <span class="arithmatex"><span class="MathJax_Preview">s_j = 1</span><script type="math/tex">s_j = 1</script></span> 的位置 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>，即使在 <span class="arithmatex"><span class="MathJax_Preview">t_j = 0</span><script type="math/tex">t_j = 0</script></span> 的情况下，也会保持为 <code>1</code>。</p>
+<p>你需要确定在所有操作之后，为了使字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 仅由 <code>1</code> 组成，可以花费的最小硬币数量。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 10^4\)</span>）。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \le n \le 2 \cdot 10^5\)</span>）—— 给定二进制字符串的长度。</p>
-<p>每个测试用例的第二行包含一个长度为 <span class="arithmatex">\(n\)</span> 的二进制字符串，其中每个字符是 <code>0</code> 或 <code>1</code>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>）。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 2 \cdot 10^5</span><script type="math/tex">1 \le n \le 2 \cdot 10^5</script></span>）—— 给定二进制字符串的长度。</p>
+<p>每个测试用例的第二行包含一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的二进制字符串，其中每个字符是 <code>0</code> 或 <code>1</code>。</p>
 <p>保证每个字符串中至少有一个字符等于 <code>1</code>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出其答案——为了使字符串中的所有字符都变为 <code>1</code>，你可以花费的最小可能的硬币数量。</p>
 <h2 id="_4">样例输入</h2>
@@ -4457,7 +4457,7 @@
 0
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>考虑第三个样例，其中 <span class="arithmatex">\(s =\)</span> <code>"0110"</code>。在这种情况下，最优方案是选择 <span class="arithmatex">\(d = 2\)</span>，那么 $t = $ <code>"1001"</code>。之后，在位置 <span class="arithmatex">\(j=1\)</span> 和 <span class="arithmatex">\(j=4\)</span> 处，<span class="arithmatex">\(s_j\)</span> 将被替换为 <code>1</code>，从而使字符串 <span class="arithmatex">\(s\)</span> 全部由 <code>1</code> 组成。请注意，此操作的花费是 <span class="arithmatex">\(d = 2\)</span>。</p>
+<p>考虑第三个样例，其中 <span class="arithmatex"><span class="MathJax_Preview">s =</span><script type="math/tex">s =</script></span> <code>"0110"</code>。在这种情况下，最优方案是选择 <span class="arithmatex"><span class="MathJax_Preview">d = 2</span><script type="math/tex">d = 2</script></span>，那么 $t = $ <code>"1001"</code>。之后，在位置 <span class="arithmatex"><span class="MathJax_Preview">j=1</span><script type="math/tex">j=1</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">j=4</span><script type="math/tex">j=4</script></span> 处，<span class="arithmatex"><span class="MathJax_Preview">s_j</span><script type="math/tex">s_j</script></span> 将被替换为 <code>1</code>，从而使字符串 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> 全部由 <code>1</code> 组成。请注意，此操作的花费是 <span class="arithmatex"><span class="MathJax_Preview">d = 2</span><script type="math/tex">d = 2</script></span>。</p>
 
 
 

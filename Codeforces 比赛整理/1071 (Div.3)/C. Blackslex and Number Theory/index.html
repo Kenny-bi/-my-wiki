@@ -4601,18 +4601,18 @@
 内存限制：每测试点 256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
 <p>Blackslex 工作太努力，开始梦到数字。请解决他梦中的以下任务。</p>
-<p>给定一个数组 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>。</p>
-<p>在一次操作中，你选择一个索引 <span class="arithmatex">\(i\)</span> <span class="arithmatex">\((1 \le i \le n)\)</span> 和一个<strong>不小于 <span class="arithmatex">\(k\)</span></strong> 的整数 <span class="arithmatex">\(x\)</span>，并执行赋值：
+<p>给定一个数组 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span>。</p>
+<p>在一次操作中，你选择一个索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le i \le n)</span><script type="math/tex">(1 \le i \le n)</script></span> 和一个<strong>不小于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></strong> 的整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>，并执行赋值：
 $$ a_i := a_i \bmod x, $$
-其中 <span class="arithmatex">\(u \bmod v\)</span> 表示 <span class="arithmatex">\(u\)</span> 除以 <span class="arithmatex">\(v\)</span> 的余数。</p>
-<p>你的目标是使数组的所有元素相同。在所有正整数 <span class="arithmatex">\(k\)</span> 中，确定最大的 <span class="arithmatex">\(k\)</span>，使得存在一系列上述操作（操作次数有限），使得所有数组元素相等。</p>
+其中 <span class="arithmatex"><span class="MathJax_Preview">u \bmod v</span><script type="math/tex">u \bmod v</script></span> 表示 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 除以 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的余数。</p>
+<p>你的目标是使数组的所有元素相同。在所有正整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 中，确定最大的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，使得存在一系列上述操作（操作次数有限），使得所有数组元素相等。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span> —— 测试用例的数量。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> <span class="arithmatex">\((2 \le n \le 2 \cdot 10^5)\)</span>。</p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> <span class="arithmatex">\((1 \le a_i \le 10^9)\)</span>，<strong>所有 <span class="arithmatex">\(a_i\)</span> 的值互不相同</strong>。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span> —— 测试用例的数量。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(2 \le n \le 2 \cdot 10^5)</span><script type="math/tex">(2 \le n \le 2 \cdot 10^5)</script></span>。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le a_i \le 10^9)</span><script type="math/tex">(1 \le a_i \le 10^9)</script></span>，<strong>所有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 的值互不相同</strong>。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个整数 —— 最大的正整数 <span class="arithmatex">\(k\)</span>，使得可以使用模数 <span class="arithmatex">\(x\)</span> 被限制为 <span class="arithmatex">\(k \le x\)</span> 的任意次操作，使得数组的所有元素相等。</p>
+<p>对于每个测试用例，输出一个整数 —— 最大的正整数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，使得可以使用模数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 被限制为 <span class="arithmatex"><span class="MathJax_Preview">k \le x</span><script type="math/tex">k \le x</script></span> 的任意次操作，使得数组的所有元素相等。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>3
 3
@@ -4716,10 +4716,10 @@ $$ a_i := a_i \bmod x, $$
 <p><strong>瓶颈</strong>：你手里最小的木头是 <code>a[0]</code>。</p>
 <ul>
 <li>
-<p>对于 <code>a[0]</code>，要让它变成 0，模数 <span class="arithmatex">\(k\)</span> 最大只能取 <code>a[0]</code>（因为 <span class="arithmatex">\(a[0] \% a[0] = 0\)</span>）。</p>
+<p>对于 <code>a[0]</code>，要让它变成 0，模数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 最大只能取 <code>a[0]</code>（因为 <span class="arithmatex"><span class="MathJax_Preview">a[0] \% a[0] = 0</span><script type="math/tex">a[0] \% a[0] = 0</script></span>）。</p>
 </li>
 <li>
-<p>对于比 <code>a[0]</code> 大的数，比如 <code>a[1]</code>，我们总能找到办法（比如直接取 <span class="arithmatex">\(k=a[1]\)</span>）。</p>
+<p>对于比 <code>a[0]</code> 大的数，比如 <code>a[1]</code>，我们总能找到办法（比如直接取 <span class="arithmatex"><span class="MathJax_Preview">k=a[1]</span><script type="math/tex">k=a[1]</script></span>）。</p>
 </li>
 </ul>
 </li>
@@ -4739,10 +4739,10 @@ $$ a_i := a_i \bmod x, $$
 <p><code>a[1]</code> 必须变成 <code>a[0]</code>。也就是要把 <code>a[1]</code> 多出来的部分 <code>a[1] - a[0]</code> 切掉。</p>
 </li>
 <li>
-<p>模运算的性质决定了，我们选的模数 <span class="arithmatex">\(k\)</span> 必须能整除这个“多出来的部分”。</p>
+<p>模运算的性质决定了，我们选的模数 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 必须能整除这个“多出来的部分”。</p>
 </li>
 <li>
-<p>所以，<span class="arithmatex">\(k\)</span> 最大只能取 <strong><code>a[1] - a[0]</code></strong>。</p>
+<p>所以，<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 最大只能取 <strong><code>a[1] - a[0]</code></strong>。</p>
 </li>
 <li>
 <p>至于更大的数 <code>a[2], a[3]...</code>，它们多出来的部分肯定比 <code>a[1]</code> 多，更容易满足条件，所以瓶颈只在 <code>a[1]</code>。</p>
@@ -4761,10 +4761,10 @@ $$ a_i := a_i \bmod x, $$
 <p>排序后：<code>a[0]=5</code>, <code>a[1]=7</code>。</p>
 </li>
 <li>
-<p><strong>路 1 (全变0)</strong>：最大能用的 <span class="arithmatex">\(k\)</span> 是 <strong>5</strong>。</p>
+<p><strong>路 1 (全变0)</strong>：最大能用的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 <strong>5</strong>。</p>
 </li>
 <li>
-<p><strong>路 2 (全变5)</strong>：<code>a[1]</code> 要变 <code>5</code>，多出来的部分是 <span class="arithmatex">\(7-5=2\)</span>。最大能用的 <span class="arithmatex">\(k\)</span> 是 <strong>2</strong>。</p>
+<p><strong>路 2 (全变5)</strong>：<code>a[1]</code> 要变 <code>5</code>，多出来的部分是 <span class="arithmatex"><span class="MathJax_Preview">7-5=2</span><script type="math/tex">7-5=2</script></span>。最大能用的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 <strong>2</strong>。</p>
 </li>
 <li>
 <p><strong>选哪条？</strong> 5 比 2 大，选 <strong>5</strong>。</p>
@@ -4779,10 +4779,10 @@ $$ a_i := a_i \bmod x, $$
 <p>排序后：<code>a[0]=2</code>, <code>a[1]=9</code>。</p>
 </li>
 <li>
-<p><strong>路 1 (全变0)</strong>：最大能用的 <span class="arithmatex">\(k\)</span> 是 <strong>2</strong>。</p>
+<p><strong>路 1 (全变0)</strong>：最大能用的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 <strong>2</strong>。</p>
 </li>
 <li>
-<p><strong>路 2 (全变2)</strong>：<code>a[1]</code> 要变 <code>2</code>，多出来的部分是 <span class="arithmatex">\(9-2=7\)</span>。最大能用的 <span class="arithmatex">\(k\)</span> 是 <strong>7</strong>。</p>
+<p><strong>路 2 (全变2)</strong>：<code>a[1]</code> 要变 <code>2</code>，多出来的部分是 <span class="arithmatex"><span class="MathJax_Preview">9-2=7</span><script type="math/tex">9-2=7</script></span>。最大能用的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 是 <strong>7</strong>。</p>
 </li>
 <li>
 <p><strong>选哪条？</strong> 7 比 2 大，选 <strong>7</strong>。</p>

@@ -4588,20 +4588,20 @@
 <p>时间限制：每测试点 2 秒<br />
 内存限制：每测试点 512 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>一群 <span class="arithmatex">\(n\)</span> 个人决定装饰圣诞树。他们有 <span class="arithmatex">\((n+1)\)</span> 盒装饰品，编号从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n\)</span>。最初，第 <span class="arithmatex">\(i\)</span> 个盒子包含 <span class="arithmatex">\(a_i\)</span> 个装饰品。</p>
-<p>我们称一个大小为 <span class="arithmatex">\(n\)</span> 的排列 <span class="arithmatex">\(p\)</span>（一个大小为 <span class="arithmatex">\(n\)</span> 的数组，其中 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的每个数字恰好出现一次）是<strong>公平的</strong>，如果能够通过以下过程将所有的装饰品挂到树上：
-*   人 <span class="arithmatex">\(p_1\)</span> 从盒子 <span class="arithmatex">\(0\)</span> 或盒子 <span class="arithmatex">\(p_1\)</span> 中取一个装饰品，并将其挂在树上；
-*   人 <span class="arithmatex">\(p_2\)</span> 从盒子 <span class="arithmatex">\(0\)</span> 或盒子 <span class="arithmatex">\(p_2\)</span> 中取一个装饰品，并将其挂在树上；
+<p>一群 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人决定装饰圣诞树。他们有 <span class="arithmatex"><span class="MathJax_Preview">(n+1)</span><script type="math/tex">(n+1)</script></span> 盒装饰品，编号从 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>。最初，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个盒子包含 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 个装饰品。</p>
+<p>我们称一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>（一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组，其中 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的每个数字恰好出现一次）是<strong>公平的</strong>，如果能够通过以下过程将所有的装饰品挂到树上：
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 或盒子 <span class="arithmatex"><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span> 中取一个装饰品，并将其挂在树上；
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_2</span><script type="math/tex">p_2</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 或盒子 <span class="arithmatex"><span class="MathJax_Preview">p_2</span><script type="math/tex">p_2</script></span> 中取一个装饰品，并将其挂在树上；
 *   以此类推；
-*   在 <span class="arithmatex">\(p_n\)</span> 之后，轮到 <span class="arithmatex">\(p_1\)</span>，这个过程重复进行，直到所有装饰品都被挂在树上。</p>
-<p>在这个过程中，永远不应该出现这样一种情况：人 <span class="arithmatex">\(i\)</span> 需要挂一个装饰品，但盒子 <span class="arithmatex">\(0\)</span> 和盒子 <span class="arithmatex">\(i\)</span> 都是空的。如果这种情况无法避免，则该排列不是公平的。然而，如果人们可以在每一步中选择从哪个盒子取装饰品，使得这种情况不会发生，那么该排列就是公平的。</p>
-<p>你的任务是计算公平排列的数量。由于答案可能很大，请输出其对 <span class="arithmatex">\(998244353\)</span> 取模的结果。</p>
+*   在 <span class="arithmatex"><span class="MathJax_Preview">p_n</span><script type="math/tex">p_n</script></span> 之后，轮到 <span class="arithmatex"><span class="MathJax_Preview">p_1</span><script type="math/tex">p_1</script></span>，这个过程重复进行，直到所有装饰品都被挂在树上。</p>
+<p>在这个过程中，永远不应该出现这样一种情况：人 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 需要挂一个装饰品，但盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 和盒子 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 都是空的。如果这种情况无法避免，则该排列不是公平的。然而，如果人们可以在每一步中选择从哪个盒子取装饰品，使得这种情况不会发生，那么该排列就是公平的。</p>
+<p>你的任务是计算公平排列的数量。由于答案可能很大，请输出其对 <span class="arithmatex"><span class="MathJax_Preview">998244353</span><script type="math/tex">998244353</script></span> 取模的结果。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \le t \le 5000\)</span>）——测试用例的数量。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span>（<span class="arithmatex">\(1 \le n \le 50\)</span>）。</p>
-<p>第二行包含 <span class="arithmatex">\((n+1)\)</span> 个整数 <span class="arithmatex">\(a_0, a_1, \dots, a_n\)</span>（<span class="arithmatex">\(0 \le a_i \le 10^6\)</span>）。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 5000</span><script type="math/tex">1 \le t \le 5000</script></span>）——测试用例的数量。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \le n \le 50</span><script type="math/tex">1 \le n \le 50</script></span>）。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">(n+1)</span><script type="math/tex">(n+1)</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_0, a_1, \dots, a_n</span><script type="math/tex">a_0, a_1, \dots, a_n</script></span>（<span class="arithmatex"><span class="MathJax_Preview">0 \le a_i \le 10^6</span><script type="math/tex">0 \le a_i \le 10^6</script></span>）。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个整数——公平排列的数量，对 <span class="arithmatex">\(998244353\)</span> 取模。</p>
+<p>对于每个测试用例，输出一个整数——公平排列的数量，对 <span class="arithmatex"><span class="MathJax_Preview">998244353</span><script type="math/tex">998244353</script></span> 取模。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 3
@@ -4620,13 +4620,13 @@
 12
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
-<p>在第一个样例中，公平排列是 <span class="arithmatex">\([1,2,3]\)</span> 和 <span class="arithmatex">\([1,3,2]\)</span>。</p>
-<p>让我们仔细看一下排列 <span class="arithmatex">\([1,3,2]\)</span> 的圣诞树装饰过程：
-*   人 <span class="arithmatex">\(p_1=1\)</span> 从盒子 <span class="arithmatex">\(1\)</span> 中挂了一个装饰品；
-*   人 <span class="arithmatex">\(p_2=3\)</span> 从盒子 <span class="arithmatex">\(0\)</span> 中挂了一个装饰品；
-*   人 <span class="arithmatex">\(p_3=2\)</span> 从盒子 <span class="arithmatex">\(2\)</span> 中挂了一个装饰品；
-*   人 <span class="arithmatex">\(p_1=1\)</span> 从盒子 <span class="arithmatex">\(1\)</span> 中挂了一个装饰品。</p>
-<p>请注意，如果人 <span class="arithmatex">\(p_1=1\)</span> 在第一步中从盒子 <span class="arithmatex">\(0\)</span> 中取装饰品，那么人 <span class="arithmatex">\(p_2=3\)</span> 将无法执行下一步（因为盒子 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(3\)</span> 都将是空的）。然而，由于这种情况可以避免，因此该排列是公平的。</p>
+<p>在第一个样例中，公平排列是 <span class="arithmatex"><span class="MathJax_Preview">[1,2,3]</span><script type="math/tex">[1,2,3]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">[1,3,2]</span><script type="math/tex">[1,3,2]</script></span>。</p>
+<p>让我们仔细看一下排列 <span class="arithmatex"><span class="MathJax_Preview">[1,3,2]</span><script type="math/tex">[1,3,2]</script></span> 的圣诞树装饰过程：
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_1=1</span><script type="math/tex">p_1=1</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 中挂了一个装饰品；
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_2=3</span><script type="math/tex">p_2=3</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 中挂了一个装饰品；
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_3=2</span><script type="math/tex">p_3=2</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 中挂了一个装饰品；
+*   人 <span class="arithmatex"><span class="MathJax_Preview">p_1=1</span><script type="math/tex">p_1=1</script></span> 从盒子 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 中挂了一个装饰品。</p>
+<p>请注意，如果人 <span class="arithmatex"><span class="MathJax_Preview">p_1=1</span><script type="math/tex">p_1=1</script></span> 在第一步中从盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 中取装饰品，那么人 <span class="arithmatex"><span class="MathJax_Preview">p_2=3</span><script type="math/tex">p_2=3</script></span> 将无法执行下一步（因为盒子 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 都将是空的）。然而，由于这种情况可以避免，因此该排列是公平的。</p>
 <h1 id="_7">改着改着突然过样例了，激动的我找不到错了</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2182 D</span>
 <span class="c1">// Contest: Codeforces - Educational Codeforces Round 186 (Rated for Div. 2)</span>
@@ -4790,32 +4790,32 @@
 <p>这道题的本质是资源分配（Resource Allocation）。</p>
 <ol>
 <li>
-<p><strong>总资源（回合数）：</strong> 总共有 <span class="arithmatex">\(S = \sum a_i\)</span> 个装饰品，意味着总共要进行 <span class="arithmatex">\(S\)</span> 个回合。</p>
+<p><strong>总资源（回合数）：</strong> 总共有 <span class="arithmatex"><span class="MathJax_Preview">S = \sum a_i</span><script type="math/tex">S = \sum a_i</script></span> 个装饰品，意味着总共要进行 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 个回合。</p>
 </li>
 <li>
-<p><strong>分配规则：</strong> 这 <span class="arithmatex">\(S\)</span> 个回合被分摊到 <span class="arithmatex">\(n\)</span> 个人身上。由于是循环轮流：</p>
+<p><strong>分配规则：</strong> 这 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 个回合被分摊到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人身上。由于是循环轮流：</p>
 <ul>
 <li>
-<p>前 <span class="arithmatex">\(k = S \% n\)</span> 个人，每人分到 <span class="arithmatex">\(q + 1\)</span> 个回合。</p>
+<p>前 <span class="arithmatex"><span class="MathJax_Preview">k = S \% n</span><script type="math/tex">k = S \% n</script></span> 个人，每人分到 <span class="arithmatex"><span class="MathJax_Preview">q + 1</span><script type="math/tex">q + 1</script></span> 个回合。</p>
 </li>
 <li>
-<p>剩下的 <span class="arithmatex">\(n - k\)</span> 个人，每人分到 <span class="arithmatex">\(q\)</span> 个回合。</p>
+<p>剩下的 <span class="arithmatex"><span class="MathJax_Preview">n - k</span><script type="math/tex">n - k</script></span> 个人，每人分到 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 个回合。</p>
 </li>
 <li>
-<p>其中 <span class="arithmatex">\(q = \lfloor S / n \rfloor\)</span>。</p>
+<p>其中 <span class="arithmatex"><span class="MathJax_Preview">q = \lfloor S / n \rfloor</span><script type="math/tex">q = \lfloor S / n \rfloor</script></span>。</p>
 </li>
 </ul>
 </li>
 <li>
 <p>核心约束（Capacity Constraint）：</p>
 <p>题目中复杂的“盒子为空”规则，归根结底只有一条限制：一个人能挂出的装饰品数量，绝对不可能超过他轮到的回合数。</p>
-<p>即：<span class="arithmatex">\(a_i \le \text{Turns}_i\)</span>。</p>
+<p>即：<span class="arithmatex"><span class="MathJax_Preview">a_i \le \text{Turns}_i</span><script type="math/tex">a_i \le \text{Turns}_i</script></span>。</p>
 <ul>
 <li>
-<p>如果 <span class="arithmatex">\(a_i &gt; \text{Turns}_i\)</span>，无论怎么借用公共盒子 <span class="arithmatex">\(a_0\)</span>，他自己的盒子 <span class="arithmatex">\(a_i\)</span> 永远无法被清空，游戏必然失败。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">a_i &gt; \text{Turns}_i</span><script type="math/tex">a_i > \text{Turns}_i</script></span>，无论怎么借用公共盒子 <span class="arithmatex"><span class="MathJax_Preview">a_0</span><script type="math/tex">a_0</script></span>，他自己的盒子 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 永远无法被清空，游戏必然失败。</p>
 </li>
 <li>
-<p>如果 <span class="arithmatex">\(a_i \le \text{Turns}_i\)</span>，只要公共盒子 <span class="arithmatex">\(a_0\)</span> 足够（题目保证总数匹配），他一定能清空自己的盒子。</p>
+<p>如果 <span class="arithmatex"><span class="MathJax_Preview">a_i \le \text{Turns}_i</span><script type="math/tex">a_i \le \text{Turns}_i</script></span>，只要公共盒子 <span class="arithmatex"><span class="MathJax_Preview">a_0</span><script type="math/tex">a_0</script></span> 足够（题目保证总数匹配），他一定能清空自己的盒子。</p>
 </li>
 </ul>
 </li>
@@ -4830,10 +4830,10 @@
 <p><strong>情景还原：</strong></p>
 <ul>
 <li>
-<p><strong>需求</strong>：有 <code>mxc</code> 个人手里拿着 <span class="arithmatex">\(q+1\)</span> 个物品，他们<strong>必须</strong>被安排在能提供 <span class="arithmatex">\(q+1\)</span> 个回合的位置上。</p>
+<p><strong>需求</strong>：有 <code>mxc</code> 个人手里拿着 <span class="arithmatex"><span class="MathJax_Preview">q+1</span><script type="math/tex">q+1</script></span> 个物品，他们<strong>必须</strong>被安排在能提供 <span class="arithmatex"><span class="MathJax_Preview">q+1</span><script type="math/tex">q+1</script></span> 个回合的位置上。</p>
 </li>
 <li>
-<p><strong>供给</strong>：整个排列中，只有 <span class="arithmatex">\(k\)</span> 个位置能提供 <span class="arithmatex">\(q+1\)</span> 个回合。</p>
+<p><strong>供给</strong>：整个排列中，只有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个位置能提供 <span class="arithmatex"><span class="MathJax_Preview">q+1</span><script type="math/tex">q+1</script></span> 个回合。</p>
 </li>
 <li>
 <p><strong>Bug 逻辑</strong>：你计算剩余位置时用了 <code>kk = k - mxc</code>。如果不检查，当需求大于供给（<code>mxc &gt; k</code>）时，<code>kk</code> 变成负数。</p>
@@ -4859,14 +4859,14 @@
 <h3 id="3">3. 代码与逻辑的简化</h3>
 <p>你的代码逻辑已经很清晰了，但其实可以从“分组”的角度更直观地理解代码构造，从而减少写错的概率。</p>
 <p>问题重述：</p>
-<p>我们要构造一个长度为 <span class="arithmatex">\(n\)</span> 的排列，其中有 <span class="arithmatex">\(k\)</span> 个“长回合位”（<span class="arithmatex">\(q+1\)</span>）和 <span class="arithmatex">\(n-k\)</span> 个“短回合位”（<span class="arithmatex">\(q\)</span>）。</p>
+<p>我们要构造一个长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列，其中有 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个“长回合位”（<span class="arithmatex"><span class="MathJax_Preview">q+1</span><script type="math/tex">q+1</script></span>）和 <span class="arithmatex"><span class="MathJax_Preview">n-k</span><script type="math/tex">n-k</script></span> 个“短回合位”（<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>）。</p>
 <p><strong>元素分类：</strong></p>
 <ol>
 <li>
-<p><strong>必须去长回合的人</strong>（<span class="arithmatex">\(a_i = q+1\)</span>）：有 <code>mxc</code> 人。</p>
+<p><strong>必须去长回合的人</strong>（<span class="arithmatex"><span class="MathJax_Preview">a_i = q+1</span><script type="math/tex">a_i = q+1</script></span>）：有 <code>mxc</code> 人。</p>
 </li>
 <li>
-<p><strong>去哪都行的人</strong>（<span class="arithmatex">\(a_i \le q\)</span>）：有 <span class="arithmatex">\(n - mxc\)</span> 人。</p>
+<p><strong>去哪都行的人</strong>（<span class="arithmatex"><span class="MathJax_Preview">a_i \le q</span><script type="math/tex">a_i \le q</script></span>）：有 <span class="arithmatex"><span class="MathJax_Preview">n - mxc</span><script type="math/tex">n - mxc</script></span> 人。</p>
 </li>
 </ol>
 <p><strong>填坑步骤：</strong></p>
@@ -4875,32 +4875,35 @@
 <p><strong>先安排“大爷”：</strong> <code>mxc</code> 个大爷必须坐进 <code>k</code> 个长回合位。</p>
 <ul>
 <li>
-<p>选座方案：<span class="arithmatex">\(C(k, mxc)\)</span> （从 k 个长位里选 mxc 个给他们）。</p>
+<p>选座方案：<span class="arithmatex"><span class="MathJax_Preview">C(k, mxc)</span><script type="math/tex">C(k, mxc)</script></span> （从 k 个长位里选 mxc 个给他们）。</p>
 </li>
 <li>
-<p>排座方案：<span class="arithmatex">\(mxc!\)</span> （大爷们之间互换位置）。</p>
+<p>排座方案：<span class="arithmatex"><span class="MathJax_Preview">mxc!</span><script type="math/tex">mxc!</script></span> （大爷们之间互换位置）。</p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>再安排“平民”：</strong> 剩下的 <span class="arithmatex">\(n - mxc\)</span> 个人填满剩下的所有位置（剩下的 <span class="arithmatex">\(k-mxc\)</span> 个长位 + <span class="arithmatex">\(n-k\)</span> 个短位）。</p>
+<p><strong>再安排“平民”：</strong> 剩下的 <span class="arithmatex"><span class="MathJax_Preview">n - mxc</span><script type="math/tex">n - mxc</script></span> 个人填满剩下的所有位置（剩下的 <span class="arithmatex"><span class="MathJax_Preview">k-mxc</span><script type="math/tex">k-mxc</script></span> 个长位 + <span class="arithmatex"><span class="MathJax_Preview">n-k</span><script type="math/tex">n-k</script></span> 个短位）。</p>
 <ul>
-<li>因为剩下的人对位置没要求，直接全排列即可：<span class="arithmatex">\((n - mxc)!\)</span>。</li>
+<li>因为剩下的人对位置没要求，直接全排列即可：<span class="arithmatex"><span class="MathJax_Preview">(n - mxc)!</span><script type="math/tex">(n - mxc)!</script></span>。</li>
 </ul>
 </li>
 </ol>
 <p>最终公式：</p>
-<div class="arithmatex">\[\text{Ans} = C(k, mxc) \times mxc! \times (n - mxc)!\]</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">\text{Ans} = C(k, mxc) \times mxc! \times (n - mxc)!</div>
+<script type="math/tex; mode=display">\text{Ans} = C(k, mxc) \times mxc! \times (n - mxc)!</script>
+</div>
 <p>或者等价于你的公式（在数学上是一样的，但这个思路更顺畅）。</p>
 <hr />
 <h3 id="4">4. 总结：这道题你学到了什么？</h3>
 <ol>
 <li>
-<p><strong>模型转化能力</strong>：将“循环操作”转化为“余数分组”模型 (<span class="arithmatex">\(S = n \times q + r\)</span>)。</p>
+<p><strong>模型转化能力</strong>：将“循环操作”转化为“余数分组”模型 (<span class="arithmatex"><span class="MathJax_Preview">S = n \times q + r</span><script type="math/tex">S = n \times q + r</script></span>)。</p>
 </li>
 <li>
 <p>抽屉原理的应用：</p>
-<p>把 <span class="arithmatex">\(n\)</span> 个人（物品）放入 <span class="arithmatex">\(n\)</span> 个位置（抽屉），高需求的物品必须放入高容量的抽屉。</p>
+<p>把 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个人（物品）放入 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个位置（抽屉），高需求的物品必须放入高容量的抽屉。</p>
 </li>
 <li>
 <p><strong>防御性编程</strong>：在处理计数问题时，对于“需求 &gt; 供给”的非法情况，要显式判断并返回 0，而不是依赖公式的自然计算。</p>
@@ -4915,7 +4918,7 @@
 <p>算出每个元素的<strong>需求</strong>。</p>
 </li>
 <li>
-<p>看是否能通过排列，让所有 <strong>需求 <span class="arithmatex">\(\le\)</span> 容量</strong> 成立。</p>
+<p>看是否能通过排列，让所有 <strong>需求 <span class="arithmatex"><span class="MathJax_Preview">\le</span><script type="math/tex">\le</script></span> 容量</strong> 成立。</p>
 </li>
 <li>
 <p>计算排列数时，注意<strong>需求 &gt; 容量</strong>的非法情况。</p>

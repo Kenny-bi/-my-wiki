@@ -4429,21 +4429,21 @@
 <p>时间限制：每个测试点 2 秒
 内存限制：每个测试点 256 MB</p>
 <h2 id="_2">问题描述</h2>
-<p>有 <span class="arithmatex">\(n\)</span> 个孩子站成一排，第 <span class="arithmatex">\(i\)</span> 个孩子的“善良值”是 <span class="arithmatex">\(a_i\)</span>。圣诞老人正在决定哪些孩子属于“好孩子”名单，哪些属于“淘气”名单。</p>
-<p>一个整数 <span class="arithmatex">\(X\)</span> 初始被设为 <span class="arithmatex">\(0\)</span>。圣诞老人将恰好执行 <span class="arithmatex">\(n-1\)</span> 次以下操作：
+<p>有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个孩子站成一排，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个孩子的“善良值”是 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>。圣诞老人正在决定哪些孩子属于“好孩子”名单，哪些属于“淘气”名单。</p>
+<p>一个整数 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 初始被设为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。圣诞老人将恰好执行 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 次以下操作：
 1. 选择队列中的第一个或第二个孩子，并将其从队列中移除。
-2. 令 <span class="arithmatex">\(w\)</span> 为被选中的孩子的善良值。
-3. 如果选中了第一个孩子，则将其加入好孩子名单，并将 <span class="arithmatex">\(w\)</span> 加到 <span class="arithmatex">\(X\)</span> 上。
-4. 如果选中了第二个孩子，则将其加入淘气名单，并将 <span class="arithmatex">\(w\)</span> 从 <span class="arithmatex">\(X\)</span> 中减去。</p>
+2. 令 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 为被选中的孩子的善良值。
+3. 如果选中了第一个孩子，则将其加入好孩子名单，并将 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 加到 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 上。
+4. 如果选中了第二个孩子，则将其加入淘气名单，并将 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 中减去。</p>
 <p>请注意，在所有操作之后，恰好有一个孩子未被分配到任何名单。</p>
-<p>请确定圣诞老人在完成所有 <span class="arithmatex">\(n-1\)</span> 次操作后，可以获得的 <span class="arithmatex">\(X\)</span> 的最大可能值。</p>
+<p>请确定圣诞老人在完成所有 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 次操作后，可以获得的 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 的最大可能值。</p>
 <h2 id="_3">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span>。接下来是每个测试用例的描述。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> <span class="arithmatex">\((2 \le n \le 2 \cdot 10^5)\)</span> —— 孩子的数量。
-第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> <span class="arithmatex">\((-10^9 \le a_i \le 10^9)\)</span> —— 每个孩子的善良值。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span>。接下来是每个测试用例的描述。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(2 \le n \le 2 \cdot 10^5)</span><script type="math/tex">(2 \le n \le 2 \cdot 10^5)</script></span> —— 孩子的数量。
+第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(-10^9 \le a_i \le 10^9)</span><script type="math/tex">(-10^9 \le a_i \le 10^9)</script></span> —— 每个孩子的善良值。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_4">输出格式</h2>
-<p>对于每个测试用例，输出一个整数 —— 圣诞老人在完成所有 <span class="arithmatex">\(n-1\)</span> 次操作后，可以获得的 <span class="arithmatex">\(X\)</span> 的最大可能值。</p>
+<p>对于每个测试用例，输出一个整数 —— 圣诞老人在完成所有 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 次操作后，可以获得的 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 的最大可能值。</p>
 <h2 id="_5">样例输入</h2>
 <div class="highlight"><pre><span></span><code>7
 2
@@ -4471,23 +4471,23 @@
 29
 </code></pre></div>
 <h2 id="_7">样例说明</h2>
-<p>在第一个测试用例中，圣诞老人将恰好执行一次操作。如果他选择第一个孩子，他需要将 <span class="arithmatex">\(a_1=2\)</span> 加到 <span class="arithmatex">\(X\)</span> 上，得到 <span class="arithmatex">\(X=2\)</span>；如果他选择第二个孩子，他需要从 <span class="arithmatex">\(X\)</span> 中减去 <span class="arithmatex">\(a_2=-3\)</span>，得到 <span class="arithmatex">\(X=3\)</span>。因此，答案是 <span class="arithmatex">\(3\)</span>。</p>
-<p>在第二个测试用例中，最优策略是在所有三次操作中都选择第一个孩子。<span class="arithmatex">\(X\)</span> 的值将为 <span class="arithmatex">\(1+4+3=8\)</span>。</p>
+<p>在第一个测试用例中，圣诞老人将恰好执行一次操作。如果他选择第一个孩子，他需要将 <span class="arithmatex"><span class="MathJax_Preview">a_1=2</span><script type="math/tex">a_1=2</script></span> 加到 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 上，得到 <span class="arithmatex"><span class="MathJax_Preview">X=2</span><script type="math/tex">X=2</script></span>；如果他选择第二个孩子，他需要从 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 中减去 <span class="arithmatex"><span class="MathJax_Preview">a_2=-3</span><script type="math/tex">a_2=-3</script></span>，得到 <span class="arithmatex"><span class="MathJax_Preview">X=3</span><script type="math/tex">X=3</script></span>。因此，答案是 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>。</p>
+<p>在第二个测试用例中，最优策略是在所有三次操作中都选择第一个孩子。<span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 的值将为 <span class="arithmatex"><span class="MathJax_Preview">1+4+3=8</span><script type="math/tex">1+4+3=8</script></span>。</p>
 <p>在第三个测试用例中，以下是一个最优操作序列：
-| # | 操作类型 | 操作后剩余的孩子（善良值） | 操作后的 <span class="arithmatex">\(X\)</span> |
+| # | 操作类型 | 操作后剩余的孩子（善良值） | 操作后的 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> |
 |---|----------|----------------------------|--------------|
-| 0 | —        | <span class="arithmatex">\([-4, 2, 3, -6]\)</span>           | 0            |
-| 1 | 选第一个 | <span class="arithmatex">\([2, 3, -6]\)</span>               | -4           |
-| 2 | 选第一个 | <span class="arithmatex">\([3, -6]\)</span>                  | -2           |
-| 3 | 选第二个 | <span class="arithmatex">\([3]\)</span>                      | 4            |</p>
+| 0 | —        | <span class="arithmatex"><span class="MathJax_Preview">[-4, 2, 3, -6]</span><script type="math/tex">[-4, 2, 3, -6]</script></span>           | 0            |
+| 1 | 选第一个 | <span class="arithmatex"><span class="MathJax_Preview">[2, 3, -6]</span><script type="math/tex">[2, 3, -6]</script></span>               | -4           |
+| 2 | 选第一个 | <span class="arithmatex"><span class="MathJax_Preview">[3, -6]</span><script type="math/tex">[3, -6]</script></span>                  | -2           |
+| 3 | 选第二个 | <span class="arithmatex"><span class="MathJax_Preview">[3]</span><script type="math/tex">[3]</script></span>                      | 4            |</p>
 <p>在第四个测试用例中，以下是一个最优操作序列：
-| # | 操作类型 | 操作后剩余的孩子（善良值） | 操作后的 <span class="arithmatex">\(X\)</span> |
+| # | 操作类型 | 操作后剩余的孩子（善良值） | 操作后的 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> |
 |---|----------|----------------------------|--------------|
-| 0 | —        | <span class="arithmatex">\([-2, -3, 4, 10, -9]\)</span>      | 0            |
-| 1 | 选第二个 | <span class="arithmatex">\([-2, 4, 10, -9]\)</span>          | 3            |
-| 2 | 选第一个 | <span class="arithmatex">\([4, 10, -9]\)</span>              | 1            |
-| 3 | 选第一个 | <span class="arithmatex">\([10, -9]\)</span>                 | 5            |
-| 4 | 选第一个 | <span class="arithmatex">\([-9]\)</span>                     | 15           |</p>
+| 0 | —        | <span class="arithmatex"><span class="MathJax_Preview">[-2, -3, 4, 10, -9]</span><script type="math/tex">[-2, -3, 4, 10, -9]</script></span>      | 0            |
+| 1 | 选第二个 | <span class="arithmatex"><span class="MathJax_Preview">[-2, 4, 10, -9]</span><script type="math/tex">[-2, 4, 10, -9]</script></span>          | 3            |
+| 2 | 选第一个 | <span class="arithmatex"><span class="MathJax_Preview">[4, 10, -9]</span><script type="math/tex">[4, 10, -9]</script></span>              | 1            |
+| 3 | 选第一个 | <span class="arithmatex"><span class="MathJax_Preview">[10, -9]</span><script type="math/tex">[10, -9]</script></span>                 | 5            |
+| 4 | 选第一个 | <span class="arithmatex"><span class="MathJax_Preview">[-9]</span><script type="math/tex">[-9]</script></span>                     | 15           |</p>
 <h1 id="_8">第一次</h1>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2178 C</span>
 <span class="c1">// Contest: Codeforces - Good Bye 2025</span>
@@ -4542,10 +4542,10 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="_9">你的代码问题分析</h3>
-<p>你的第一版代码使用了一个<strong>贪心</strong>策略（栈模拟），每次只看最后两个元素 <span class="arithmatex">\(u, v\)</span>，谁大保留谁。</p>
+<p>你的第一版代码使用了一个<strong>贪心</strong>策略（栈模拟），每次只看最后两个元素 <span class="arithmatex"><span class="MathJax_Preview">u, v</span><script type="math/tex">u, v</script></span>，谁大保留谁。</p>
 <p>为什么是错的？</p>
-<p>这是一个经典的“局部最优 <span class="arithmatex">\(\neq\)</span> 全局最优”陷阱。</p>
-<p>在步骤 <span class="arithmatex">\(i\)</span> 选择“保留 <span class="arithmatex">\(u\)</span> 还是保留 <span class="arithmatex">\(v\)</span>”，不仅仅取决于 <span class="arithmatex">\(u\)</span> 和 <span class="arithmatex">\(v\)</span> 的大小，还取决于保留下来的那个数在未来能产生多大的价值。如果你现在贪心地保留了一个较大的数，但它导致后面一个超级大的数被迫变成了减项（被选中为第二个），那就亏大了。</p>
+<p>这是一个经典的“局部最优 <span class="arithmatex"><span class="MathJax_Preview">\neq</span><script type="math/tex">\neq</script></span> 全局最优”陷阱。</p>
+<p>在步骤 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 选择“保留 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 还是保留 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span>”，不仅仅取决于 <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> 的大小，还取决于保留下来的那个数在未来能产生多大的价值。如果你现在贪心地保留了一个较大的数，但它导致后面一个超级大的数被迫变成了减项（被选中为第二个），那就亏大了。</p>
 <p>反例：</p>
 <p>输入：100 -200 1000</p>
 <ol>
@@ -4556,13 +4556,13 @@
 <p>栈顶取出 <code>-200</code> 和 <code>1000</code>。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(u=-200, v=1000\)</span>。<span class="arithmatex">\(u+v = 800 &gt; 0\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">u=-200, v=1000</span><script type="math/tex">u=-200, v=1000</script></span>。<span class="arithmatex"><span class="MathJax_Preview">u+v = 800 &gt; 0</span><script type="math/tex">u+v = 800 > 0</script></span>。</p>
 </li>
 <li>
-<p>结果 <span class="arithmatex">\(+(-200)\)</span>，保留 <code>1000</code>。栈变成 <code>[100, 1000]</code>。</p>
+<p>结果 <span class="arithmatex"><span class="MathJax_Preview">+(-200)</span><script type="math/tex">+(-200)</script></span>，保留 <code>1000</code>。栈变成 <code>[100, 1000]</code>。</p>
 </li>
 <li>
-<p>下一步 <code>100</code> 和 <code>1000</code>，结果 <span class="arithmatex">\(+100\)</span>。</p>
+<p>下一步 <code>100</code> 和 <code>1000</code>，结果 <span class="arithmatex"><span class="MathJax_Preview">+100</span><script type="math/tex">+100</script></span>。</p>
 </li>
 <li>
 <p><strong>总分：-100</strong>。</p>
@@ -4573,10 +4573,10 @@
 <p><strong>最优解：</strong></p>
 <ul>
 <li>
-<p>先选第二个（即 <code>-200</code>），产生 <span class="arithmatex">\(-(-200) = +200\)</span>。剩余 <code>[100, 1000]</code>。</p>
+<p>先选第二个（即 <code>-200</code>），产生 <span class="arithmatex"><span class="MathJax_Preview">-(-200) = +200</span><script type="math/tex">-(-200) = +200</script></span>。剩余 <code>[100, 1000]</code>。</p>
 </li>
 <li>
-<p>再选第一个（即 <code>100</code>），产生 <span class="arithmatex">\(+100\)</span>。剩余 <code>[1000]</code>（幸存者，不计分）。</p>
+<p>再选第一个（即 <code>100</code>），产生 <span class="arithmatex"><span class="MathJax_Preview">+100</span><script type="math/tex">+100</script></span>。剩余 <code>[1000]</code>（幸存者，不计分）。</p>
 </li>
 <li>
 <p><strong>总分：300</strong>。</p>
@@ -4587,40 +4587,43 @@
 <p>显然，你的贪心策略亏了很多。</p>
 <hr />
 <h3 id="dp">正确思路：后缀 DP（线性优化）</h3>
-<p>这个问题可以转化为一个<strong>后缀动态规划</strong>问题。我们需要倒着思考：我们如何处理数组的<strong>后缀</strong> <span class="arithmatex">\(a[i \dots n]\)</span>，使得收益最大？</p>
+<p>这个问题可以转化为一个<strong>后缀动态规划</strong>问题。我们需要倒着思考：我们如何处理数组的<strong>后缀</strong> <span class="arithmatex"><span class="MathJax_Preview">a[i \dots n]</span><script type="math/tex">a[i \dots n]</script></span>，使得收益最大？</p>
 <h4 id="1">1. 公式推导</h4>
-<p>对于当前的排头兵 <span class="arithmatex">\(a[i]\)</span>，我们有两种选择：</p>
+<p>对于当前的排头兵 <span class="arithmatex"><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span>，我们有两种选择：</p>
 <ol>
 <li>
 <p>立刻选它（作为第一个）：</p>
-<p>收益 <span class="arithmatex">\(= a[i] + \text{处理剩余后缀 } a[i+1 \dots n] \text{ 的最大收益}\)</span></p>
-<p>即：<span class="arithmatex">\(a[i] + dp[i+1]\)</span></p>
+<p>收益 <span class="arithmatex"><span class="MathJax_Preview">= a[i] + \text{处理剩余后缀 } a[i+1 \dots n] \text{ 的最大收益}</span><script type="math/tex">= a[i] + \text{处理剩余后缀 } a[i+1 \dots n] \text{ 的最大收益}</script></span></p>
+<p>即：<span class="arithmatex"><span class="MathJax_Preview">a[i] + dp[i+1]</span><script type="math/tex">a[i] + dp[i+1]</script></span></p>
 </li>
 <li>
 <p>选它的下一个（作为第二个）：</p>
-<p>这意味着 <span class="arithmatex">\(a[i]\)</span> 暂时没被选，而 <span class="arithmatex">\(a[i+1]\)</span> 被作为负项移除了。之后我们面对的是 <span class="arithmatex">\(a[i]\)</span> 和 <span class="arithmatex">\(a[i+2]\)</span>。</p>
-<p>如果我们沿着这条路一直走下去（一直选第二个），直到在第 <span class="arithmatex">\(k\)</span> 个位置决定选 <span class="arithmatex">\(a[i]\)</span> 为止，这一串操作的数学形式其实是：</p>
-<p><span class="arithmatex">\(a[i] - a[i+1] - a[i+2] - \dots - a[k-1] + dp[k]\)</span></p>
-<p>利用后缀和 <span class="arithmatex">\(S[i] = \sum_{j=i}^{n} a[j]\)</span>，上面的式子可以化简为：</p>
-<p><span class="arithmatex">\(= a[i] - (S[i+1] - S[k]) + dp[k]\)</span></p>
-<p><span class="arithmatex">\(= a[i] - S[i+1] + (dp[k] + S[k])\)</span></p>
-<p>还有一种特殊情况是 <span class="arithmatex">\(a[i]\)</span> 一直留到了最后成为幸存者，那么收益就是：</p>
-<p><span class="arithmatex">\(-a[i+1] - a[i+2] - \dots - a[n] = -S[i+1]\)</span></p>
+<p>这意味着 <span class="arithmatex"><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span> 暂时没被选，而 <span class="arithmatex"><span class="MathJax_Preview">a[i+1]</span><script type="math/tex">a[i+1]</script></span> 被作为负项移除了。之后我们面对的是 <span class="arithmatex"><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">a[i+2]</span><script type="math/tex">a[i+2]</script></span>。</p>
+<p>如果我们沿着这条路一直走下去（一直选第二个），直到在第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个位置决定选 <span class="arithmatex"><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span> 为止，这一串操作的数学形式其实是：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">a[i] - a[i+1] - a[i+2] - \dots - a[k-1] + dp[k]</span><script type="math/tex">a[i] - a[i+1] - a[i+2] - \dots - a[k-1] + dp[k]</script></span></p>
+<p>利用后缀和 <span class="arithmatex"><span class="MathJax_Preview">S[i] = \sum_{j=i}^{n} a[j]</span><script type="math/tex">S[i] = \sum_{j=i}^{n} a[j]</script></span>，上面的式子可以化简为：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">= a[i] - (S[i+1] - S[k]) + dp[k]</span><script type="math/tex">= a[i] - (S[i+1] - S[k]) + dp[k]</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">= a[i] - S[i+1] + (dp[k] + S[k])</span><script type="math/tex">= a[i] - S[i+1] + (dp[k] + S[k])</script></span></p>
+<p>还有一种特殊情况是 <span class="arithmatex"><span class="MathJax_Preview">a[i]</span><script type="math/tex">a[i]</script></span> 一直留到了最后成为幸存者，那么收益就是：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">-a[i+1] - a[i+2] - \dots - a[n] = -S[i+1]</span><script type="math/tex">-a[i+1] - a[i+2] - \dots - a[n] = -S[i+1]</script></span></p>
 </li>
 </ol>
 <h4 id="2-dp">2. 最终的 DP 转移方程</h4>
-<p>合并以上情况，对于位置 <span class="arithmatex">\(i\)</span>，最大收益 <span class="arithmatex">\(dp[i]\)</span> 是：</p>
-<div class="arithmatex">\[dp[i] = \max( -S[i+1], \quad a[i] - S[i+1] + \max_{k &gt; i} (dp[k] + S[k]) )\]</div>
-<p>这里有个关键的优化点：我们需要频繁查询 <span class="arithmatex">\(\max_{k &gt; i} (dp[k] + S[k])\)</span>。</p>
-<p>我们可以维护一个变量 <span class="arithmatex">\(M\)</span>，表示当前后缀中最大的 <span class="arithmatex">\((dp[k] + S[k])\)</span>。</p>
-<p>化简后的 <span class="arithmatex">\(O(N)\)</span> 算法：</p>
-<p>从后往前遍历 <span class="arithmatex">\(i\)</span>：</p>
+<p>合并以上情况，对于位置 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>，最大收益 <span class="arithmatex"><span class="MathJax_Preview">dp[i]</span><script type="math/tex">dp[i]</script></span> 是：</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">dp[i] = \max( -S[i+1], \quad a[i] - S[i+1] + \max_{k &gt; i} (dp[k] + S[k]) )</div>
+<script type="math/tex; mode=display">dp[i] = \max( -S[i+1], \quad a[i] - S[i+1] + \max_{k > i} (dp[k] + S[k]) )</script>
+</div>
+<p>这里有个关键的优化点：我们需要频繁查询 <span class="arithmatex"><span class="MathJax_Preview">\max_{k &gt; i} (dp[k] + S[k])</span><script type="math/tex">\max_{k > i} (dp[k] + S[k])</script></span>。</p>
+<p>我们可以维护一个变量 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span>，表示当前后缀中最大的 <span class="arithmatex"><span class="MathJax_Preview">(dp[k] + S[k])</span><script type="math/tex">(dp[k] + S[k])</script></span>。</p>
+<p>化简后的 <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 算法：</p>
+<p>从后往前遍历 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>：</p>
 <ol>
 <li>
-<p><span class="arithmatex">\(dp[i] = -S[i+1] + \max(0, a[i] + M)\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">dp[i] = -S[i+1] + \max(0, a[i] + M)</span><script type="math/tex">dp[i] = -S[i+1] + \max(0, a[i] + M)</script></span></p>
 </li>
 <li>
-<p>更新 <span class="arithmatex">\(M = \max(M, dp[i] + S[i])\)</span></p>
+<p>更新 <span class="arithmatex"><span class="MathJax_Preview">M = \max(M, dp[i] + S[i])</span><script type="math/tex">M = \max(M, dp[i] + S[i])</script></span></p>
 </li>
 </ol>
 <hr />
@@ -4691,7 +4694,7 @@ signed main(){
 <p><strong>核心逻辑：</strong> 这是一个<strong>决策问题</strong>（何时把当前的排头兵加进去，何时把它留着去抵消后面的负数），倒序 DP 可以完美解决这种具有“未来依赖性”的问题。</p>
 </li>
 <li>
-<p><strong>复杂度：</strong> <span class="arithmatex">\(O(N)\)</span> 时间，<span class="arithmatex">\(O(N)\)</span> 空间（甚至可以优化到 <span class="arithmatex">\(O(1)\)</span> 空间，只存 <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(M\)</span> 的滚动值）。</p>
+<p><strong>复杂度：</strong> <span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 时间，<span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span> 空间（甚至可以优化到 <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span> 空间，只存 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的滚动值）。</p>
 </li>
 </ol>
 <h1 id="_11">这思路妙啊</h1>

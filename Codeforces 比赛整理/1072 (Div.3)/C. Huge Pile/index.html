@@ -4424,15 +4424,15 @@
 <p>时间限制：1 秒<br />
 内存限制：256 兆字节  </p>
 <h2 id="_1">问题描述</h2>
-<p>安德烈有一个巨大的苹果堆，包含 <span class="arithmatex">\(n\)</span> 个苹果。他可以将这个堆分成两个较小的堆：如果一堆中有 <span class="arithmatex">\(x\)</span> 个苹果，他将得到分别有 <span class="arithmatex">\(\lfloor\frac{x}{2}\rfloor\)</span> 和 <span class="arithmatex">\(\lceil\frac{x}{2}\rceil\)</span> 个苹果的两堆。每次分割需要安德烈花费 1 分钟。</p>
-<p>安德烈想吃 <span class="arithmatex">\(k\)</span> 个苹果，但他完全不想去数苹果。因此，他希望通过执行若干次分割，最终得到一个恰好包含 <span class="arithmatex">\(k\)</span> 个苹果的堆。请判断这是否可能。如果可能，找出安德烈得到一个恰好包含 <span class="arithmatex">\(k\)</span> 个苹果的堆所需的最短时间。</p>
-<p><span class="arithmatex">\(\lfloor\frac{x}{2}\rfloor\)</span> 表示不大于 <span class="arithmatex">\(\frac{x}{2}\)</span> 的最大整数。<br />
-<span class="arithmatex">\(\lceil\frac{x}{2}\rceil\)</span> 表示不小于 <span class="arithmatex">\(\frac{x}{2}\)</span> 的最小整数。</p>
+<p>安德烈有一个巨大的苹果堆，包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个苹果。他可以将这个堆分成两个较小的堆：如果一堆中有 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 个苹果，他将得到分别有 <span class="arithmatex"><span class="MathJax_Preview">\lfloor\frac{x}{2}\rfloor</span><script type="math/tex">\lfloor\frac{x}{2}\rfloor</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">\lceil\frac{x}{2}\rceil</span><script type="math/tex">\lceil\frac{x}{2}\rceil</script></span> 个苹果的两堆。每次分割需要安德烈花费 1 分钟。</p>
+<p>安德烈想吃 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个苹果，但他完全不想去数苹果。因此，他希望通过执行若干次分割，最终得到一个恰好包含 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个苹果的堆。请判断这是否可能。如果可能，找出安德烈得到一个恰好包含 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个苹果的堆所需的最短时间。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\lfloor\frac{x}{2}\rfloor</span><script type="math/tex">\lfloor\frac{x}{2}\rfloor</script></span> 表示不大于 <span class="arithmatex"><span class="MathJax_Preview">\frac{x}{2}</span><script type="math/tex">\frac{x}{2}</script></span> 的最大整数。<br />
+<span class="arithmatex"><span class="MathJax_Preview">\lceil\frac{x}{2}\rceil</span><script type="math/tex">\lceil\frac{x}{2}\rceil</script></span> 表示不小于 <span class="arithmatex"><span class="MathJax_Preview">\frac{x}{2}</span><script type="math/tex">\frac{x}{2}</script></span> 的最小整数。</p>
 <h2 id="_2">输入格式</h2>
-<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10^4\)</span>) —— 测试用例的数量。接下来的行描述每个测试用例。</p>
-<p>每个测试用例仅有一行，给出两个整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span> —— 分别表示巨大苹果堆中的苹果数量，以及安德烈希望在一个堆中得到的苹果数量 (<span class="arithmatex">\(1 \le n, k \le 10^9\)</span>)。</p>
+<p>输入包含多个测试用例。第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10^4</span><script type="math/tex">1 \le t \le 10^4</script></span>) —— 测试用例的数量。接下来的行描述每个测试用例。</p>
+<p>每个测试用例仅有一行，给出两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> —— 分别表示巨大苹果堆中的苹果数量，以及安德烈希望在一个堆中得到的苹果数量 (<span class="arithmatex"><span class="MathJax_Preview">1 \le n, k \le 10^9</span><script type="math/tex">1 \le n, k \le 10^9</script></span>)。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，如果不可能得到一个恰好包含 <span class="arithmatex">\(k\)</span> 个苹果的堆，输出 <code>-1</code>。否则，输出得到这样一个堆所需的最短时间。</p>
+<p>对于每个测试用例，如果不可能得到一个恰好包含 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个苹果的堆，输出 <code>-1</code>。否则，输出得到这样一个堆所需的最短时间。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>4
 10 3

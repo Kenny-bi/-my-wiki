@@ -4480,19 +4480,19 @@
 <p>时间限制：每测试点 2 秒
 内存限制：512 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>这是本题的困难版本。两个版本之间的区别在于对 <span class="arithmatex">\(x\)</span> 的限制：在这个版本中，<span class="arithmatex">\(x \le 10^{12}\)</span>。</p>
-<p>Polycarp 有一个包含所有从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(10^{12}\)</span> 的自然数的序列。他决定通过执行以下操作 <span class="arithmatex">\(x\)</span> 次来修改这个序列：</p>
-<p>每次同时移除所有在位置 <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(2 \cdot y\)</span>, <span class="arithmatex">\(3 \cdot y\)</span>, ..., <span class="arithmatex">\(m \cdot y \le n\)</span> 的数字，其中 <span class="arithmatex">\(n\)</span> 是当前序列的长度。</p>
-<p>之后，Polycarp 想要找出剩余序列中第 <span class="arithmatex">\(k\)</span> 个数字，或者确定结果序列的长度小于 <span class="arithmatex">\(k\)</span>。</p>
+<p>这是本题的困难版本。两个版本之间的区别在于对 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的限制：在这个版本中，<span class="arithmatex"><span class="MathJax_Preview">x \le 10^{12}</span><script type="math/tex">x \le 10^{12}</script></span>。</p>
+<p>Polycarp 有一个包含所有从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 的自然数的序列。他决定通过执行以下操作 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次来修改这个序列：</p>
+<p>每次同时移除所有在位置 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">2 \cdot y</span><script type="math/tex">2 \cdot y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">3 \cdot y</span><script type="math/tex">3 \cdot y</script></span>, ..., <span class="arithmatex"><span class="MathJax_Preview">m \cdot y \le n</span><script type="math/tex">m \cdot y \le n</script></span> 的数字，其中 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是当前序列的长度。</p>
+<p>之后，Polycarp 想要找出剩余序列中第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个数字，或者确定结果序列的长度小于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>。</p>
 <p>请帮助 Polycarp 解决这个问题！</p>
-<p>考虑一个例子。设 <span class="arithmatex">\(x=2\)</span>, <span class="arithmatex">\(y=3\)</span>, <span class="arithmatex">\(k=5\)</span>，那么：</p>
+<p>考虑一个例子。设 <span class="arithmatex"><span class="MathJax_Preview">x=2</span><script type="math/tex">x=2</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y=3</span><script type="math/tex">y=3</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k=5</span><script type="math/tex">k=5</script></span>，那么：</p>
 <p>[此处原题有图示，示意删除过程]</p>
-<p>用红线划掉的数字在第一次操作后被移除，用蓝线划掉的数字在第二次操作后被移除。因此，位置 <span class="arithmatex">\(k=5\)</span> 的数字是数字 <span class="arithmatex">\(10\)</span>。</p>
+<p>用红线划掉的数字在第一次操作后被移除，用蓝线划掉的数字在第二次操作后被移除。因此，位置 <span class="arithmatex"><span class="MathJax_Preview">k=5</span><script type="math/tex">k=5</script></span> 的数字是数字 <span class="arithmatex"><span class="MathJax_Preview">10</span><script type="math/tex">10</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 10\)</span>)。接下来是每个测试用例的描述。</p>
-<p>每个测试用例只有一行，包含三个整数 <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(k\)</span> (<span class="arithmatex">\(1 \le x,y,k \le 10^{12}\)</span>)。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 10</span><script type="math/tex">1 \le t \le 10</script></span>)。接下来是每个测试用例的描述。</p>
+<p>每个测试用例只有一行，包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le x,y,k \le 10^{12}</span><script type="math/tex">1 \le x,y,k \le 10^{12}</script></span>)。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出结果序列中第 <span class="arithmatex">\(k\)</span> 个位置的正整数，或者如果结果序列的长度小于 <span class="arithmatex">\(k\)</span>，则输出 <span class="arithmatex">\(-1\)</span>。</p>
+<p>对于每个测试用例，输出结果序列中第 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个位置的正整数，或者如果结果序列的长度小于 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>，则输出 <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>6
 2 3 5
@@ -4510,9 +4510,9 @@
 4672518823
 -1
 </code></pre></div>
-<p>你说的完全正确。昨天的 D1 版本，<span class="arithmatex">\(x\)</span> 很小（<span class="arithmatex">\(x \le 100\)</span>），所以你那个循环 <span class="arithmatex">\(x\)</span> 次的模拟解法可以通过。</p>
-<p>但今天的 D2 版本，<span class="arithmatex">\(x\)</span> 高达 <span class="arithmatex">\(10^{12}\)</span>，<code>while(x--)</code> 循环 <span class="arithmatex">\(10^{12}\)</span> 次一定会 TLE（超时）。</p>
-<p>我们需要一种更快的方法来计算 <span class="arithmatex">\(x\)</span> 次操作。</p>
+<p>你说的完全正确。昨天的 D1 版本，<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 很小（<span class="arithmatex"><span class="MathJax_Preview">x \le 100</span><script type="math/tex">x \le 100</script></span>），所以你那个循环 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次的模拟解法可以通过。</p>
+<p>但今天的 D2 版本，<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 高达 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span>，<code>while(x--)</code> 循环 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span> 次一定会 TLE（超时）。</p>
+<p>我们需要一种更快的方法来计算 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次操作。</p>
 <h3 id="_6">核心问题分析</h3>
 <p>你的 D1 代码逻辑是正确的：它在“反向”模拟这个过程。</p>
 <ol>
@@ -4524,25 +4524,25 @@
 <p>你推导出的公式 p = k + (k - 1) / (y - 1) 是完全正确的。它计算的是：操作 1 次后，位于第 k 位的数，在操作前的原始位置 p 是多少。</p>
 </li>
 </ol>
-<p>D1 和 D2 的任务都是计算这个函数的 <span class="arithmatex">\(x\)</span> 次迭代：</p>
-<p><span class="arithmatex">\(f(p) = p + \lfloor (p - 1) / (y - 1) \rfloor\)</span></p>
-<p>我们要计算 <span class="arithmatex">\(p_{final} = f(f(f(...f(k)...)))\)</span> (总共 <span class="arithmatex">\(x\)</span> 次)。</p>
+<p>D1 和 D2 的任务都是计算这个函数的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次迭代：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(p) = p + \lfloor (p - 1) / (y - 1) \rfloor</span><script type="math/tex">f(p) = p + \lfloor (p - 1) / (y - 1) \rfloor</script></span></p>
+<p>我们要计算 <span class="arithmatex"><span class="MathJax_Preview">p_{final} = f(f(f(...f(k)...)))</span><script type="math/tex">p_{final} = f(f(f(...f(k)...)))</script></span> (总共 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次)。</p>
 <h3 id="d2">D2 的解法：“加速模拟” / “分块跳跃”</h3>
-<p>我们不能循环 <span class="arithmatex">\(x\)</span> 次，但我们可以观察 <span class="arithmatex">\(f(p)\)</span> 的行为。</p>
-<p><span class="arithmatex">\(p_{new} = p + \Delta\)</span></p>
-<p>其中，增量 <span class="arithmatex">\(\Delta = \lfloor (p - 1) / (y - 1) \rfloor\)</span>。</p>
-<p>关键在于：<strong><span class="arithmatex">\(\Delta\)</span> 的值并不会在每一步都改变！</strong></p>
-<p><span class="arithmatex">\(p\)</span> 在增加，<span class="arithmatex">\(\Delta\)</span> 也会随之增加。但 <span class="arithmatex">\(\Delta\)</span> 会在某一个值上“停留”很多步，直到 <span class="arithmatex">\(p\)</span> 增长到一定程度，<span class="arithmatex">\(\Delta\)</span> 才会 +1 (或更多)。</p>
+<p>我们不能循环 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 次，但我们可以观察 <span class="arithmatex"><span class="MathJax_Preview">f(p)</span><script type="math/tex">f(p)</script></span> 的行为。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p_{new} = p + \Delta</span><script type="math/tex">p_{new} = p + \Delta</script></span></p>
+<p>其中，增量 <span class="arithmatex"><span class="MathJax_Preview">\Delta = \lfloor (p - 1) / (y - 1) \rfloor</span><script type="math/tex">\Delta = \lfloor (p - 1) / (y - 1) \rfloor</script></span>。</p>
+<p>关键在于：<strong><span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 的值并不会在每一步都改变！</strong></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 在增加，<span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 也会随之增加。但 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 会在某一个值上“停留”很多步，直到 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 增长到一定程度，<span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 才会 +1 (或更多)。</p>
 <p><strong>我们的策略是：</strong></p>
 <ol>
 <li>
-<p>计算当前 <span class="arithmatex">\(p\)</span> 对应的增量 <span class="arithmatex">\(\Delta\)</span>。</p>
+<p>计算当前 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 对应的增量 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>。</p>
 </li>
 <li>
-<p>计算出这个 <span class="arithmatex">\(\Delta\)</span> 值能<strong>持续多少步</strong>（设为 <code>s</code> 步），才会导致 <span class="arithmatex">\(\Delta\)</span> 发生改变。</p>
+<p>计算出这个 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 值能<strong>持续多少步</strong>（设为 <code>s</code> 步），才会导致 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 发生改变。</p>
 </li>
 <li>
-<p>我们有 <code>x</code> 步要走，有 <code>s</code> 步可以保持 <span class="arithmatex">\(\Delta\)</span> 不变。</p>
+<p>我们有 <code>x</code> 步要走，有 <code>s</code> 步可以保持 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 不变。</p>
 <ul>
 <li>
 <p>取 <code>steps_to_take = min(s, x)</code>。</p>
@@ -4559,23 +4559,23 @@
 </ul>
 </li>
 <li>
-<p>重复这个过程，直到 <code>x = 0</code> 或者 <span class="arithmatex">\(p\)</span> 超过了 <span class="arithmatex">\(10^{12}\)</span>。</p>
+<p>重复这个过程，直到 <code>x = 0</code> 或者 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 超过了 <span class="arithmatex"><span class="MathJax_Preview">10^{12}</span><script type="math/tex">10^{12}</script></span>。</p>
 </li>
 </ol>
 <p>如何计算 s？</p>
-<p><span class="arithmatex">\(\Delta\)</span> 发生改变的临界点是 <span class="arithmatex">\((p - 1) / (y - 1)\)</span> 跨越了一个新的整数。</p>
-<p>当前的 <span class="arithmatex">\(\Delta = \lfloor (p - 1) / (y - 1) \rfloor\)</span>。</p>
-<p>下一个 <span class="arithmatex">\(\Delta' = \Delta + 1\)</span>。</p>
-<p>我们需要找到多少步 s 之后， <span class="arithmatex">\(p_{new} = p + s \cdot \Delta\)</span>，使得 <span class="arithmatex">\(\lfloor (p_{new} - 1) / (y - 1) \rfloor \ge \Delta + 1\)</span>。</p>
-<p>即 <span class="arithmatex">\(\lfloor (p + s \cdot \Delta - 1) / (y - 1) \rfloor \ge \Delta + 1\)</span>。</p>
-<p>这意味着 <span class="arithmatex">\((p + s \cdot \Delta - 1) \ge (\Delta + 1) \cdot (y - 1)\)</span>。</p>
-<p>解出 <span class="arithmatex">\(s\)</span>：</p>
-<p><span class="arithmatex">\(s \cdot \Delta \ge (\Delta + 1)(y - 1) - p + 1\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 发生改变的临界点是 <span class="arithmatex"><span class="MathJax_Preview">(p - 1) / (y - 1)</span><script type="math/tex">(p - 1) / (y - 1)</script></span> 跨越了一个新的整数。</p>
+<p>当前的 <span class="arithmatex"><span class="MathJax_Preview">\Delta = \lfloor (p - 1) / (y - 1) \rfloor</span><script type="math/tex">\Delta = \lfloor (p - 1) / (y - 1) \rfloor</script></span>。</p>
+<p>下一个 <span class="arithmatex"><span class="MathJax_Preview">\Delta' = \Delta + 1</span><script type="math/tex">\Delta' = \Delta + 1</script></span>。</p>
+<p>我们需要找到多少步 s 之后， <span class="arithmatex"><span class="MathJax_Preview">p_{new} = p + s \cdot \Delta</span><script type="math/tex">p_{new} = p + s \cdot \Delta</script></span>，使得 <span class="arithmatex"><span class="MathJax_Preview">\lfloor (p_{new} - 1) / (y - 1) \rfloor \ge \Delta + 1</span><script type="math/tex">\lfloor (p_{new} - 1) / (y - 1) \rfloor \ge \Delta + 1</script></span>。</p>
+<p>即 <span class="arithmatex"><span class="MathJax_Preview">\lfloor (p + s \cdot \Delta - 1) / (y - 1) \rfloor \ge \Delta + 1</span><script type="math/tex">\lfloor (p + s \cdot \Delta - 1) / (y - 1) \rfloor \ge \Delta + 1</script></span>。</p>
+<p>这意味着 <span class="arithmatex"><span class="MathJax_Preview">(p + s \cdot \Delta - 1) \ge (\Delta + 1) \cdot (y - 1)</span><script type="math/tex">(p + s \cdot \Delta - 1) \ge (\Delta + 1) \cdot (y - 1)</script></span>。</p>
+<p>解出 <span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span>：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">s \cdot \Delta \ge (\Delta + 1)(y - 1) - p + 1</span><script type="math/tex">s \cdot \Delta \ge (\Delta + 1)(y - 1) - p + 1</script></span></p>
 <p>num_needed = (delta + 1) * (y - 1) - p + 1</p>
 <p>s = ceil(num_needed / delta)</p>
 <p>s = (num_needed + delta - 1) / delta (C++ 整数除法)</p>
-<p>这个 <code>s</code> 就是 <span class="arithmatex">\(\Delta\)</span> 改变之前我们最多能走的步数。</p>
-<p>因为 <span class="arithmatex">\(\Delta\)</span> (和 <span class="arithmatex">\(p\)</span>) 几乎是指数级增长的，所以 <span class="arithmatex">\(\Delta\)</span> 改变的次数非常少（大约 <span class="arithmatex">\(O(\log N)\)</span> 级别），总复杂度非常快。</p>
+<p>这个 <code>s</code> 就是 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 改变之前我们最多能走的步数。</p>
+<p>因为 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> (和 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>) 几乎是指数级增长的，所以 <span class="arithmatex"><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span> 改变的次数非常少（大约 <span class="arithmatex"><span class="MathJax_Preview">O(\log N)</span><script type="math/tex">O(\log N)</script></span> 级别），总复杂度非常快。</p>
 <h3 id="_7">修正后的代码</h3>
 <p>这是你的代码的 D2 版本，应用了“分块跳跃”的加速模拟。</p>
 <p>C++</p>

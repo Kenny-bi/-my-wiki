@@ -4424,14 +4424,14 @@
 <p>时间限制：每个测试点 1.5 秒
 内存限制：每个测试点 256 MB</p>
 <h2 id="_1">问题描述</h2>
-<p>马克非常爱钱，他把大部分钱都存在银行里。他的钱存放在 <span class="arithmatex">\(n\)</span> 家不同的银行。在第 <span class="arithmatex">\(i\)</span> 家银行，他有 <span class="arithmatex">\(a_i\)</span> 卢布。</p>
-<p>有一天，马克决定将所有钱集中到一家银行，因此他需要把钱从一个银行账户转到另一个账户。所有银行间转账的安排方式都是一样的：他一次只能转账 <span class="arithmatex">\(x\)</span> 卢布，并且考虑到所有费用，实际上只有 <span class="arithmatex">\(y\)</span> 卢布会被存入目标账户（因为银行想要盈利，所以有 <span class="arithmatex">\(y \le x\)</span>）。</p>
+<p>马克非常爱钱，他把大部分钱都存在银行里。他的钱存放在 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 家不同的银行。在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 家银行，他有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 卢布。</p>
+<p>有一天，马克决定将所有钱集中到一家银行，因此他需要把钱从一个银行账户转到另一个账户。所有银行间转账的安排方式都是一样的：他一次只能转账 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 卢布，并且考虑到所有费用，实际上只有 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 卢布会被存入目标账户（因为银行想要盈利，所以有 <span class="arithmatex"><span class="MathJax_Preview">y \le x</span><script type="math/tex">y \le x</script></span>）。</p>
 <p>马克可能无法将所有钱都转移到一家银行，但他想要找到最终可以在任意一家银行里获得的最大卢布数量。</p>
 <h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span>。接下来是测试用例的描述。</p>
-<p>每个测试用例的第一行包含三个整数 <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(x\)</span>, 和 <span class="arithmatex">\(y\)</span> <span class="arithmatex">\((2 \le n \le 2 \cdot 10^5\)</span>, <span class="arithmatex">\(1 \le y \le x \le 10^9)\)</span> —— 分别表示银行的数量、转账金额和实际到账金额。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> <span class="arithmatex">\((1 \le a_i \le 10^9)\)</span> —— 表示每家银行初始的卢布数量。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 值之和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span>。接下来是测试用例的描述。</p>
+<p>每个测试用例的第一行包含三个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> <span class="arithmatex"><span class="MathJax_Preview">(2 \le n \le 2 \cdot 10^5</span><script type="math/tex">(2 \le n \le 2 \cdot 10^5</script></span>, <span class="arithmatex"><span class="MathJax_Preview">1 \le y \le x \le 10^9)</span><script type="math/tex">1 \le y \le x \le 10^9)</script></span> —— 分别表示银行的数量、转账金额和实际到账金额。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le a_i \le 10^9)</span><script type="math/tex">(1 \le a_i \le 10^9)</script></span> —— 表示每家银行初始的卢布数量。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 值之和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
 <p>对于每个测试用例，输出一个数字 —— 表示在任意一家银行可以获得的最大卢布数量。</p>
 <h2 id="_4">样例输入</h2>
@@ -4459,14 +4459,14 @@
 </code></pre></div>
 <h2 id="_6">样例说明</h2>
 <p>在第一个测试用例中，最优的转账顺序可能如下所示：
-<span class="arithmatex">\(1 \rightarrow 4, 1 \rightarrow 4, 4 \rightarrow 3, 4 \rightarrow 3, 4 \rightarrow 3, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2\)</span>。</p>
+<span class="arithmatex"><span class="MathJax_Preview">1 \rightarrow 4, 1 \rightarrow 4, 4 \rightarrow 3, 4 \rightarrow 3, 4 \rightarrow 3, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2</span><script type="math/tex">1 \rightarrow 4, 1 \rightarrow 4, 4 \rightarrow 3, 4 \rightarrow 3, 4 \rightarrow 3, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2</script></span>。</p>
 <p>让我们展示每一步之后总和的变化：
-<span class="arithmatex">\((10,9,8,7)\)</span>
-<span class="arithmatex">\(\xrightarrow{1 \rightarrow 4}(5,9,8,11)\xrightarrow{1 \rightarrow 4}(0,9,8,15)\)</span>
-<span class="arithmatex">\(\xrightarrow{4 \rightarrow 3}(0,9,12,10)\xrightarrow{4 \rightarrow 3}(0,9,16,5)\xrightarrow{4 \rightarrow 3}(0,9,20,0)\)</span>
-<span class="arithmatex">\(\xrightarrow{3 \rightarrow 2}(0,13,15,0)\xrightarrow{3 \rightarrow 2}(0,17,10,0)\xrightarrow{3 \rightarrow 2}(0,21,5,0)\xrightarrow{3 \rightarrow 2}(0,25,0,0)\)</span>。</p>
-<p>最终，在一家银行（具体是第二家）中，可以获得 <span class="arithmatex">\(25\)</span> 卢布，这个值就是该测试用例的答案。</p>
-<p>在第三个测试用例中，可以从第一家银行向第二家银行转账 <span class="arithmatex">\(1000\)</span> 次一卢布，并在第二家银行获得 <span class="arithmatex">\(2000\)</span> 卢布。</p>
+<span class="arithmatex"><span class="MathJax_Preview">(10,9,8,7)</span><script type="math/tex">(10,9,8,7)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\xrightarrow{1 \rightarrow 4}(5,9,8,11)\xrightarrow{1 \rightarrow 4}(0,9,8,15)</span><script type="math/tex">\xrightarrow{1 \rightarrow 4}(5,9,8,11)\xrightarrow{1 \rightarrow 4}(0,9,8,15)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\xrightarrow{4 \rightarrow 3}(0,9,12,10)\xrightarrow{4 \rightarrow 3}(0,9,16,5)\xrightarrow{4 \rightarrow 3}(0,9,20,0)</span><script type="math/tex">\xrightarrow{4 \rightarrow 3}(0,9,12,10)\xrightarrow{4 \rightarrow 3}(0,9,16,5)\xrightarrow{4 \rightarrow 3}(0,9,20,0)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\xrightarrow{3 \rightarrow 2}(0,13,15,0)\xrightarrow{3 \rightarrow 2}(0,17,10,0)\xrightarrow{3 \rightarrow 2}(0,21,5,0)\xrightarrow{3 \rightarrow 2}(0,25,0,0)</span><script type="math/tex">\xrightarrow{3 \rightarrow 2}(0,13,15,0)\xrightarrow{3 \rightarrow 2}(0,17,10,0)\xrightarrow{3 \rightarrow 2}(0,21,5,0)\xrightarrow{3 \rightarrow 2}(0,25,0,0)</script></span>。</p>
+<p>最终，在一家银行（具体是第二家）中，可以获得 <span class="arithmatex"><span class="MathJax_Preview">25</span><script type="math/tex">25</script></span> 卢布，这个值就是该测试用例的答案。</p>
+<p>在第三个测试用例中，可以从第一家银行向第二家银行转账 <span class="arithmatex"><span class="MathJax_Preview">1000</span><script type="math/tex">1000</script></span> 次一卢布，并在第二家银行获得 <span class="arithmatex"><span class="MathJax_Preview">2000</span><script type="math/tex">2000</script></span> 卢布。</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Problem: CF 2194 B</span>
 <span class="c1">// Contest: Codeforces - Codeforces Round 1078 (Div. 2)</span>
 <span class="c1">// URL: https://codeforces.com/contest/2194/problem/B</span>

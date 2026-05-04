@@ -4584,22 +4584,22 @@
 <strong>核心考点</strong>: [[]]</p>
 <h1 id="cf1873e-building-an-aquarium">CF1873E Building an Aquarium</h1>
 <h2 id="_1">题目描述</h2>
-<p>你喜欢鱼，因此你决定建造一个水族箱。你有一块由 <span class="arithmatex">\(n\)</span> 列组成的珊瑚，第 <span class="arithmatex">\(i\)</span> 列的高度为 <span class="arithmatex">\(a_i\)</span> 单位。接下来，你将按照如下方式在珊瑚周围建造水箱：</p>
+<p>你喜欢鱼，因此你决定建造一个水族箱。你有一块由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 列组成的珊瑚，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 列的高度为 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 单位。接下来，你将按照如下方式在珊瑚周围建造水箱：</p>
 <ul>
-<li>选择一个整数 <span class="arithmatex">\(h \geq 1\)</span>，作为水箱的高度。在水箱的两侧建造高度为 <span class="arithmatex">\(h\)</span> 的墙。</li>
-<li>然后，向水箱中注水，使得每一列的水面高度为 <span class="arithmatex">\(h\)</span>，除非该列珊瑚的高度超过 <span class="arithmatex">\(h\)</span>，此时该列不再加水。</li>
+<li>选择一个整数 <span class="arithmatex"><span class="MathJax_Preview">h \geq 1</span><script type="math/tex">h \geq 1</script></span>，作为水箱的高度。在水箱的两侧建造高度为 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 的墙。</li>
+<li>然后，向水箱中注水，使得每一列的水面高度为 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>，除非该列珊瑚的高度超过 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>，此时该列不再加水。</li>
 </ul>
-<p>例如，若 <span class="arithmatex">\(a=[3,1,2,4,6,2,5]\)</span> 且 <span class="arithmatex">\(h=4\)</span>，你最终会用掉 <span class="arithmatex">\(w=8\)</span> 单位的水，如下图所示。<br />
+<p>例如，若 <span class="arithmatex"><span class="MathJax_Preview">a=[3,1,2,4,6,2,5]</span><script type="math/tex">a=[3,1,2,4,6,2,5]</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">h=4</span><script type="math/tex">h=4</script></span>，你最终会用掉 <span class="arithmatex"><span class="MathJax_Preview">w=8</span><script type="math/tex">w=8</script></span> 单位的水，如下图所示。<br />
 <img alt="" src="https://cdn.luogu.com.cn/upload/vjudge_pic/CF1873E/7c1e58fc4d1641ece42f30c898039b9158eaffda.png" /><br />
-你最多可以用 <span class="arithmatex">\(x\)</span> 单位的水来填充水箱，但你希望建造尽可能高的水箱。你能选择的最大 <span class="arithmatex">\(h\)</span> 是多少？</p>
+你最多可以用 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 单位的水来填充水箱，但你希望建造尽可能高的水箱。你能选择的最大 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 是多少？</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(1 \leq t \leq 10^4\)</span>），表示测试用例的数量。</p>
-<p>每个测试用例的第一行包含两个正整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(x\)</span>（<span class="arithmatex">\(1 \leq n \leq 2 \cdot 10^5\)</span>；<span class="arithmatex">\(1 \leq x \leq 10^9\)</span>），分别表示珊瑚的列数和你最多能用的水量。</p>
-<p>每个测试用例的第二行包含 <span class="arithmatex">\(n\)</span> 个用空格分隔的整数 <span class="arithmatex">\(a_i\)</span>（<span class="arithmatex">\(1 \leq a_i \leq 10^9\)</span>），表示每一列珊瑚的高度。</p>
-<p>所有测试用例中 <span class="arithmatex">\(n\)</span> 的总和不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq t \leq 10^4</span><script type="math/tex">1 \leq t \leq 10^4</script></span>），表示测试用例的数量。</p>
+<p>每个测试用例的第一行包含两个正整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq n \leq 2 \cdot 10^5</span><script type="math/tex">1 \leq n \leq 2 \cdot 10^5</script></span>；<span class="arithmatex"><span class="MathJax_Preview">1 \leq x \leq 10^9</span><script type="math/tex">1 \leq x \leq 10^9</script></span>），分别表示珊瑚的列数和你最多能用的水量。</p>
+<p>每个测试用例的第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个用空格分隔的整数 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span>（<span class="arithmatex"><span class="MathJax_Preview">1 \leq a_i \leq 10^9</span><script type="math/tex">1 \leq a_i \leq 10^9</script></span>），表示每一列珊瑚的高度。</p>
+<p>所有测试用例中 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的总和不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个正整数 <span class="arithmatex">\(h\)</span>（<span class="arithmatex">\(h \geq 1\)</span>），表示你能建造的最大水箱高度，使得填充水箱所需的水量不超过 <span class="arithmatex">\(x\)</span> 单位。</p>
-<p>我们保证在这些约束下，总能找到这样的 <span class="arithmatex">\(h\)</span>。</p>
+<p>对于每个测试用例，输出一个正整数 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>（<span class="arithmatex"><span class="MathJax_Preview">h \geq 1</span><script type="math/tex">h \geq 1</script></span>），表示你能建造的最大水箱高度，使得填充水箱所需的水量不超过 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 单位。</p>
+<p>我们保证在这些约束下，总能找到这样的 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>。</p>
 <h2 id="1">输入输出样例 #1</h2>
 <h3 id="1_1">输入 #1</h3>
 <div class="highlight"><pre><span></span><code>5
@@ -4622,25 +4622,25 @@
 1000000001
 </code></pre></div>
 <h2 id="_4">说明/提示</h2>
-<p>第一个测试用例如题面所示。若 <span class="arithmatex">\(h=4\)</span>，需要 <span class="arithmatex">\(8\)</span> 单位的水，但若 <span class="arithmatex">\(h\)</span> 增加到 <span class="arithmatex">\(5\)</span>，则需要 <span class="arithmatex">\(13\)</span> 单位的水，超过了 <span class="arithmatex">\(x=9\)</span>。因此 <span class="arithmatex">\(h=4\)</span> 是最优的。</p>
-<p>在第二个测试用例中，我们可以选择 <span class="arithmatex">\(h=4\)</span>，每一列加 <span class="arithmatex">\(3\)</span> 单位水，总共用掉 <span class="arithmatex">\(9\)</span> 单位水。这是最优的。</p>
-<p>在第三个测试用例中，我们可以选择 <span class="arithmatex">\(h=2\)</span>，用完所有的水量，也是最优的。</p>
+<p>第一个测试用例如题面所示。若 <span class="arithmatex"><span class="MathJax_Preview">h=4</span><script type="math/tex">h=4</script></span>，需要 <span class="arithmatex"><span class="MathJax_Preview">8</span><script type="math/tex">8</script></span> 单位的水，但若 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 增加到 <span class="arithmatex"><span class="MathJax_Preview">5</span><script type="math/tex">5</script></span>，则需要 <span class="arithmatex"><span class="MathJax_Preview">13</span><script type="math/tex">13</script></span> 单位的水，超过了 <span class="arithmatex"><span class="MathJax_Preview">x=9</span><script type="math/tex">x=9</script></span>。因此 <span class="arithmatex"><span class="MathJax_Preview">h=4</span><script type="math/tex">h=4</script></span> 是最优的。</p>
+<p>在第二个测试用例中，我们可以选择 <span class="arithmatex"><span class="MathJax_Preview">h=4</span><script type="math/tex">h=4</script></span>，每一列加 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 单位水，总共用掉 <span class="arithmatex"><span class="MathJax_Preview">9</span><script type="math/tex">9</script></span> 单位水。这是最优的。</p>
+<p>在第三个测试用例中，我们可以选择 <span class="arithmatex"><span class="MathJax_Preview">h=2</span><script type="math/tex">h=2</script></span>，用完所有的水量，也是最优的。</p>
 <p>由 ChatGPT 4.1 翻译</p>
 <p><strong>核心考点</strong>: <code>[[二分答案]]</code>、<code>[[前缀和/贪心]]</code></p>
 <h3 id="_5">💡 核心直觉 (一句话总结)</h3>
 <blockquote>
-<p>题目要求“最大的 <span class="arithmatex">\(h\)</span>”，且 <span class="arithmatex">\(h\)</span> 越大耗水越多（具有单调性），直接计算很难，但<strong>验证</strong>一个给定的 <span class="arithmatex">\(h\)</span> 是否合法非常简单（<span class="arithmatex">\(O(n)\)</span>），因此使用二分答案。</p>
+<p>题目要求“最大的 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>”，且 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 越大耗水越多（具有单调性），直接计算很难，但<strong>验证</strong>一个给定的 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span> 是否合法非常简单（<span class="arithmatex"><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>），因此使用二分答案。</p>
 </blockquote>
 <h3 id="fail-log">🚫 易错点 &amp; 误区 (Fail Log)</h3>
 <ul>
 <li>
-<p><strong>数据溢出</strong>: 水量 <span class="arithmatex">\(x\)</span> 和高度 <span class="arithmatex">\(a_i\)</span> 都在 <span class="arithmatex">\(10^9\)</span> 级别，计算总水量时极易爆 <code>int</code>，必须全程使用 <code>long long</code>。</p>
+<p><strong>数据溢出</strong>: 水量 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和高度 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 都在 <span class="arithmatex"><span class="MathJax_Preview">10^9</span><script type="math/tex">10^9</script></span> 级别，计算总水量时极易爆 <code>int</code>，必须全程使用 <code>long long</code>。</p>
 </li>
 <li>
-<p><strong>二分上界 (<span class="arithmatex">\(r\)</span>)</strong>: 不要只设置为 <span class="arithmatex">\(10^9\)</span> 或 <span class="arithmatex">\(\max(a_i)\)</span>。如果只有一根珊瑚且 <span class="arithmatex">\(x\)</span> 很大，高度可能达到 <span class="arithmatex">\(2 \cdot 10^9\)</span>。上界应设为 <code>2e9 + 7</code> 或 <code>max(a[i]) + x</code>。</p>
+<p><strong>二分上界 (<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>)</strong>: 不要只设置为 <span class="arithmatex"><span class="MathJax_Preview">10^9</span><script type="math/tex">10^9</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">\max(a_i)</span><script type="math/tex">\max(a_i)</script></span>。如果只有一根珊瑚且 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 很大，高度可能达到 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^9</span><script type="math/tex">2 \cdot 10^9</script></span>。上界应设为 <code>2e9 + 7</code> 或 <code>max(a[i]) + x</code>。</p>
 </li>
 <li>
-<p><strong>Check 函数溢出</strong>: 在累加 <code>ans</code> 时，如果中间结果已经超过 <code>x</code>，应立即 <code>return false</code>，否则累加值可能超过 <code>long long</code> 范围（虽然本题 <span class="arithmatex">\(2 \cdot 10^5 \times 2 \cdot 10^9\)</span> 刚好在 <code>long long</code> 范围内，但养成习惯更好）。</p>
+<p><strong>Check 函数溢出</strong>: 在累加 <code>ans</code> 时，如果中间结果已经超过 <code>x</code>，应立即 <code>return false</code>，否则累加值可能超过 <code>long long</code> 范围（虽然本题 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5 \times 2 \cdot 10^9</span><script type="math/tex">2 \cdot 10^5 \times 2 \cdot 10^9</script></span> 刚好在 <code>long long</code> 范围内，但养成习惯更好）。</p>
 </li>
 </ul>
 <h3 id="_6">✅ 正解思路 (解题三部曲)</h3>
@@ -4652,10 +4652,10 @@
 <p><strong>确定边界</strong>:</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(l = 1\)</span> (最少高度)。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">l = 1</span><script type="math/tex">l = 1</script></span> (最少高度)。</p>
 </li>
 <li>
-<p><span class="arithmatex">\(r = 2 \cdot 10^9\)</span> (最大可能的物理高度)。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">r = 2 \cdot 10^9</span><script type="math/tex">r = 2 \cdot 10^9</script></span> (最大可能的物理高度)。</p>
 </li>
 </ul>
 </li>
@@ -4666,13 +4666,13 @@
 <p>遍历所有珊瑚。</p>
 </li>
 <li>
-<p>如果你比 <span class="arithmatex">\(mid\)</span> 矮，我就得补水 <code>mid - a[i]</code>。</p>
+<p>如果你比 <span class="arithmatex"><span class="MathJax_Preview">mid</span><script type="math/tex">mid</script></span> 矮，我就得补水 <code>mid - a[i]</code>。</p>
 </li>
 <li>
-<p>如果你比 <span class="arithmatex">\(mid\)</span> 高，我就不用补水。</p>
+<p>如果你比 <span class="arithmatex"><span class="MathJax_Preview">mid</span><script type="math/tex">mid</script></span> 高，我就不用补水。</p>
 </li>
 <li>
-<p>判断总补水量是否 <span class="arithmatex">\(\le x\)</span>。</p>
+<p>判断总补水量是否 <span class="arithmatex"><span class="MathJax_Preview">\le x</span><script type="math/tex">\le x</script></span>。</p>
 </li>
 </ul>
 </li>
@@ -4680,10 +4680,10 @@
 <h3 id="pattern">🧠 举一反三 (Pattern)</h3>
 <ul>
 <li>
-<p>看到 <strong>"求最大的最小值"</strong> 或 <strong>"求最小的最大值"</strong> <span class="arithmatex">\(\rightarrow\)</span> 想到 <strong>二分答案</strong>。</p>
+<p>看到 <strong>"求最大的最小值"</strong> 或 <strong>"求最小的最大值"</strong> <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 想到 <strong>二分答案</strong>。</p>
 </li>
 <li>
-<p>看到 <strong>"验证答案很容易，直接算很难"</strong> <span class="arithmatex">\(\rightarrow\)</span> 想到 <strong>二分答案</strong>。</p>
+<p>看到 <strong>"验证答案很容易，直接算很难"</strong> <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> 想到 <strong>二分答案</strong>。</p>
 </li>
 <li>
 <p>类似题目：<a href="https://www.luogu.com.cn/problem/P1873">砍树 (EKO)</a>、<a href="https://www.luogu.com.cn/problem/P1824">进击的奶牛</a>。</p>

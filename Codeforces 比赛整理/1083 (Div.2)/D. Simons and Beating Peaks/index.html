@@ -4481,19 +4481,19 @@
 内存限制：每个测试点512兆字节</p>
 <p>我最美好的愿望消散在空气中；十八岁，我把梦想倾注进麦克风里分享。</p>
 <p>— 舜, 《720》</p>
-<p>我们称长度为 <span class="arithmatex">\(m\)</span> 的数组 <span class="arithmatex">\(b\)</span> 是 cool 的，当且仅当：</p>
-<p>不存在索引 <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(1 &lt; i &lt; m\)</span>) 使得 <span class="arithmatex">\(b_i = \max(\{b_{i-1}, b_i, b_{i+1}\})\)</span>。</p>
-<p>西蒙斯有一个大小为 <span class="arithmatex">\(n\)</span> 的数组 <span class="arithmatex">\(a\)</span>。最初，该数组是一个排列*。</p>
+<p>我们称长度为 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是 cool 的，当且仅当：</p>
+<p>不存在索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 &lt; i &lt; m</span><script type="math/tex">1 < i < m</script></span>) 使得 <span class="arithmatex"><span class="MathJax_Preview">b_i = \max(\{b_{i-1}, b_i, b_{i+1}\})</span><script type="math/tex">b_i = \max(\{b_{i-1}, b_i, b_{i+1}\})</script></span>。</p>
+<p>西蒙斯有一个大小为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span>。最初，该数组是一个排列*。</p>
 <p>他必须重复执行以下操作，直到数组变得 cool：</p>
-<p>选择一个索引 <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(1 &lt; i &lt; n\)</span>) 使得 <span class="arithmatex">\(a_i = \max(\{a_{i-1}, a_i, a_{i+1}\})\)</span>。</p>
-<p>然后，他可以删除 <span class="arithmatex">\(a_{i-1}\)</span> 或 <span class="arithmatex">\(a_{i+1}\)</span> 中的一个。删除后，数组中会出现一个空隙，空隙的左右两侧将重新连接在一起。</p>
+<p>选择一个索引 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 &lt; i &lt; n</span><script type="math/tex">1 < i < n</script></span>) 使得 <span class="arithmatex"><span class="MathJax_Preview">a_i = \max(\{a_{i-1}, a_i, a_{i+1}\})</span><script type="math/tex">a_i = \max(\{a_{i-1}, a_i, a_{i+1}\})</script></span>。</p>
+<p>然后，他可以删除 <span class="arithmatex"><span class="MathJax_Preview">a_{i-1}</span><script type="math/tex">a_{i-1}</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">a_{i+1}</span><script type="math/tex">a_{i+1}</script></span> 中的一个。删除后，数组中会出现一个空隙，空隙的左右两侧将重新连接在一起。</p>
 <p>找出西蒙斯所需执行的最少操作次数。</p>
-<p>*长度为 <span class="arithmatex">\(n\)</span> 的排列是由 <span class="arithmatex">\(n\)</span> 个从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的不同整数按任意顺序组成的数组。例如，<span class="arithmatex">\([2,3,1,5,4]\)</span> 是一个排列，但 <span class="arithmatex">\([1,2,2]\)</span> 不是排列（<span class="arithmatex">\(2\)</span> 在数组中出现了两次），<span class="arithmatex">\([1,3,4]\)</span> 也不是排列（<span class="arithmatex">\(n=3\)</span> 但数组中却有 <span class="arithmatex">\(4\)</span>）。</p>
+<p>*长度为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的排列是由 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个从 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的不同整数按任意顺序组成的数组。例如，<span class="arithmatex"><span class="MathJax_Preview">[2,3,1,5,4]</span><script type="math/tex">[2,3,1,5,4]</script></span> 是一个排列，但 <span class="arithmatex"><span class="MathJax_Preview">[1,2,2]</span><script type="math/tex">[1,2,2]</script></span> 不是排列（<span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span> 在数组中出现了两次），<span class="arithmatex"><span class="MathJax_Preview">[1,3,4]</span><script type="math/tex">[1,3,4]</script></span> 也不是排列（<span class="arithmatex"><span class="MathJax_Preview">n=3</span><script type="math/tex">n=3</script></span> 但数组中却有 <span class="arithmatex"><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>）。</p>
 <h2 id="_1">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(1 \le t \le 5 \cdot 10^4\)</span>)。测试用例的描述如下。</p>
-<p>每个测试用例的第一行包含一个整数 <span class="arithmatex">\(n\)</span> (<span class="arithmatex">\(3 \le n \le 5 \cdot 10^5\)</span>) — 数组 <span class="arithmatex">\(a\)</span> 的大小。</p>
-<p>第二行包含 <span class="arithmatex">\(n\)</span> 个整数 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> (<span class="arithmatex">\(1 \le a_i \le n\)</span>，所有 <span class="arithmatex">\(a_i\)</span> 互不相同) — 西蒙斯最初的数组。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和不超过 <span class="arithmatex">\(5 \cdot 10^5\)</span>。</p>
+<p>每个测试包含多个测试用例。第一行包含测试用例的数量 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le t \le 5 \cdot 10^4</span><script type="math/tex">1 \le t \le 5 \cdot 10^4</script></span>)。测试用例的描述如下。</p>
+<p>每个测试用例的第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">3 \le n \le 5 \cdot 10^5</span><script type="math/tex">3 \le n \le 5 \cdot 10^5</script></span>) — 数组 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 的大小。</p>
+<p>第二行包含 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数 <span class="arithmatex"><span class="MathJax_Preview">a_1, a_2, \dots, a_n</span><script type="math/tex">a_1, a_2, \dots, a_n</script></span> (<span class="arithmatex"><span class="MathJax_Preview">1 \le a_i \le n</span><script type="math/tex">1 \le a_i \le n</script></span>，所有 <span class="arithmatex"><span class="MathJax_Preview">a_i</span><script type="math/tex">a_i</script></span> 互不相同) — 西蒙斯最初的数组。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和不超过 <span class="arithmatex"><span class="MathJax_Preview">5 \cdot 10^5</span><script type="math/tex">5 \cdot 10^5</script></span>。</p>
 <h2 id="_2">输出格式</h2>
 <p>对于每个测试用例，输出一个整数 — 西蒙斯所需执行的最少操作次数。</p>
 <h2 id="_3">样例输入</h2>
@@ -4517,15 +4517,15 @@
 9
 </code></pre></div>
 <h2 id="_5">样例说明</h2>
-<p>在第一个测试用例中，数组初始就是 cool 的，所以西蒙斯无法执行任何操作。答案是 <span class="arithmatex">\(0\)</span>。</p>
+<p>在第一个测试用例中，数组初始就是 cool 的，所以西蒙斯无法执行任何操作。答案是 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>。</p>
 <p>在第二个测试用例中，西蒙斯可以按如下方式操作：</p>
-<p>选择索引 <span class="arithmatex">\(3\)</span>，因为 <span class="arithmatex">\(a_3 = \max(\{a_2, a_3, a_4\})\)</span>。然后，他从数组中删除 <span class="arithmatex">\(a_2\)</span>。数组变为 <span class="arithmatex">\([4,3,2,5]\)</span>。
-我们可以看到现在数组已经 cool 了。因此，答案是 <span class="arithmatex">\(1\)</span>。</p>
+<p>选择索引 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>，因为 <span class="arithmatex"><span class="MathJax_Preview">a_3 = \max(\{a_2, a_3, a_4\})</span><script type="math/tex">a_3 = \max(\{a_2, a_3, a_4\})</script></span>。然后，他从数组中删除 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span>。数组变为 <span class="arithmatex"><span class="MathJax_Preview">[4,3,2,5]</span><script type="math/tex">[4,3,2,5]</script></span>。
+我们可以看到现在数组已经 cool 了。因此，答案是 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>。</p>
 <p>在第三个测试用例中，西蒙斯可以按如下方式操作：</p>
-<p>选择索引 <span class="arithmatex">\(2\)</span>。然后，他从数组中删除 <span class="arithmatex">\(a_1\)</span>。数组变为 <span class="arithmatex">\([5,3,6,2,1]\)</span>。
-选择索引 <span class="arithmatex">\(3\)</span>。然后，他从数组中删除 <span class="arithmatex">\(a_2\)</span>。数组变为 <span class="arithmatex">\([5,6,2,1]\)</span>。
-选择索引 <span class="arithmatex">\(2\)</span>。然后，他从数组中删除 <span class="arithmatex">\(a_1\)</span>。数组变为 <span class="arithmatex">\([6,2,1]\)</span>。
-因此，西蒙斯用 <span class="arithmatex">\(3\)</span> 次操作使数组变得 cool。</p>
+<p>选择索引 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。然后，他从数组中删除 <span class="arithmatex"><span class="MathJax_Preview">a_1</span><script type="math/tex">a_1</script></span>。数组变为 <span class="arithmatex"><span class="MathJax_Preview">[5,3,6,2,1]</span><script type="math/tex">[5,3,6,2,1]</script></span>。
+选择索引 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span>。然后，他从数组中删除 <span class="arithmatex"><span class="MathJax_Preview">a_2</span><script type="math/tex">a_2</script></span>。数组变为 <span class="arithmatex"><span class="MathJax_Preview">[5,6,2,1]</span><script type="math/tex">[5,6,2,1]</script></span>。
+选择索引 <span class="arithmatex"><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>。然后，他从数组中删除 <span class="arithmatex"><span class="MathJax_Preview">a_1</span><script type="math/tex">a_1</script></span>。数组变为 <span class="arithmatex"><span class="MathJax_Preview">[6,2,1]</span><script type="math/tex">[6,2,1]</script></span>。
+因此，西蒙斯用 <span class="arithmatex"><span class="MathJax_Preview">3</span><script type="math/tex">3</script></span> 次操作使数组变得 cool。</p>
 <h2 id="_6">题解</h2>
 <h3 id="_7">思路</h3>
 <p><strong>Cool 数组的结构</strong>：只能是单调递增、单调递减或 V 形（先减后增）。因为一旦序列开始上升就必须继续上升，否则转折点会成为峰。</p>

@@ -4425,20 +4425,20 @@
 内存限制：每测试点 512 兆字节  </p>
 <h2 id="_1">问题描述</h2>
 <p>Blackslex 在紧张的人际关系、压力重重的政治活动和艰辛的研究工作之余，在植物和树木中找到了慰藉。</p>
-<p>Blackslex 有 <span class="arithmatex">\(n\)</span> 株植物，按直线顺序排列，分别为植物 <span class="arithmatex">\(1, 2, 3, \dots, n\)</span>。最初，每株植物含有 <span class="arithmatex">\(0\)</span> 毫升水。</p>
-<p>他想要执行 <span class="arithmatex">\(q\)</span> 次浇水操作，操作方式如下：</p>
-<p>给定 <span class="arithmatex">\(l, r\)</span> 对于每次操作<br />
-对于每个 <span class="arithmatex">\(l \le i \le r\)</span>，在第 <span class="arithmatex">\(i\)</span> 株植物上浇 <span class="arithmatex">\(f(i-l+1)\)</span> 毫升水，<br />
-其中 <span class="arithmatex">\(f(x)\)</span> 表示 <span class="arithmatex">\(x\)</span> 乘以 <span class="arithmatex">\(x\)</span> 的最低有效设置位的值<span class="arithmatex">\(^*\)</span>。</p>
+<p>Blackslex 有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 株植物，按直线顺序排列，分别为植物 <span class="arithmatex"><span class="MathJax_Preview">1, 2, 3, \dots, n</span><script type="math/tex">1, 2, 3, \dots, n</script></span>。最初，每株植物含有 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 毫升水。</p>
+<p>他想要执行 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 次浇水操作，操作方式如下：</p>
+<p>给定 <span class="arithmatex"><span class="MathJax_Preview">l, r</span><script type="math/tex">l, r</script></span> 对于每次操作<br />
+对于每个 <span class="arithmatex"><span class="MathJax_Preview">l \le i \le r</span><script type="math/tex">l \le i \le r</script></span>，在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 株植物上浇 <span class="arithmatex"><span class="MathJax_Preview">f(i-l+1)</span><script type="math/tex">f(i-l+1)</script></span> 毫升水，<br />
+其中 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 表示 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 乘以 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的最低有效设置位的值<span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span>。</p>
 <p>你的任务是计算所有浇水操作完成后，每株植物中的水量。</p>
-<p><span class="arithmatex">\(^*\)</span> <span class="arithmatex">\(x\)</span> 的最低有效设置位的值是指 <span class="arithmatex">\(x\)</span> 的二进制表示中最右边设置位（值为 1 的位）所对应的值。例如，<span class="arithmatex">\(10 = 1010_2\)</span> 的最低有效设置位的值是 <span class="arithmatex">\(0010_2 = 2\)</span>。</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">^*</span><script type="math/tex">^*</script></span> <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的最低有效设置位的值是指 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的二进制表示中最右边设置位（值为 1 的位）所对应的值。例如，<span class="arithmatex"><span class="MathJax_Preview">10 = 1010_2</span><script type="math/tex">10 = 1010_2</script></span> 的最低有效设置位的值是 <span class="arithmatex"><span class="MathJax_Preview">0010_2 = 2</span><script type="math/tex">0010_2 = 2</script></span>。</p>
 <h2 id="_2">输入格式</h2>
-<p>第一行包含一个整数 <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((1 \le t \le 10^4)\)</span> —— 测试用例的数量。</p>
-<p>每个测试用例的第一行包含两个整数 <span class="arithmatex">\(n\)</span>、<span class="arithmatex">\(q\)</span> <span class="arithmatex">\((1 \le n, q \le 2 \cdot 10^5)\)</span> —— 分别是植物的数量和浇水操作的次数。</p>
-<p>每个测试用例接下来的 <span class="arithmatex">\(q\)</span> 行，每行包含两个整数 <span class="arithmatex">\(l\)</span>、<span class="arithmatex">\(r\)</span> <span class="arithmatex">\((1 \le l \le r \le n)\)</span> —— 每次浇水操作的左边界和右边界。</p>
-<p>保证所有测试用例的 <span class="arithmatex">\(n\)</span> 之和以及所有测试用例的 <span class="arithmatex">\(q\)</span> 之和均不超过 <span class="arithmatex">\(2 \cdot 10^5\)</span>。</p>
+<p>第一行包含一个整数 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le t \le 10^4)</span><script type="math/tex">(1 \le t \le 10^4)</script></span> —— 测试用例的数量。</p>
+<p>每个测试用例的第一行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>、<span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le n, q \le 2 \cdot 10^5)</span><script type="math/tex">(1 \le n, q \le 2 \cdot 10^5)</script></span> —— 分别是植物的数量和浇水操作的次数。</p>
+<p>每个测试用例接下来的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 行，每行包含两个整数 <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>、<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> <span class="arithmatex"><span class="MathJax_Preview">(1 \le l \le r \le n)</span><script type="math/tex">(1 \le l \le r \le n)</script></span> —— 每次浇水操作的左边界和右边界。</p>
+<p>保证所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 之和以及所有测试用例的 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> 之和均不超过 <span class="arithmatex"><span class="MathJax_Preview">2 \cdot 10^5</span><script type="math/tex">2 \cdot 10^5</script></span>。</p>
 <h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出 <span class="arithmatex">\(n\)</span> 个整数，分别表示第 <span class="arithmatex">\(i\)</span> 株植物中的水量，其中 <span class="arithmatex">\(i=1,2,3,\dots,n\)</span>。</p>
+<p>对于每个测试用例，输出 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个整数，分别表示第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 株植物中的水量，其中 <span class="arithmatex"><span class="MathJax_Preview">i=1,2,3,\dots,n</span><script type="math/tex">i=1,2,3,\dots,n</script></span>。</p>
 <h2 id="_4">样例输入</h2>
 <div class="highlight"><pre><span></span><code>2
 5 3
@@ -4462,25 +4462,25 @@
 <h2 id="_6">样例说明</h2>
 <p>在第一个测试用例中，每次操作将按如下方式进行：</p>
 <p>第一次操作：
-- 给第 1 株植物浇 <span class="arithmatex">\(f(1-1+1) = f(1) = 1\)</span> 毫升水。
-- 给第 2 株植物浇 <span class="arithmatex">\(f(2-1+1) = f(2) = 4\)</span> 毫升水。
-- 给第 3 株植物浇 <span class="arithmatex">\(f(3-1+1) = f(3) = 3\)</span> 毫升水。
-- 给第 4 株植物浇 <span class="arithmatex">\(f(4-1+1) = f(4) = 16\)</span> 毫升水。
-- 给第 5 株植物浇 <span class="arithmatex">\(f(5-1+1) = f(5) = 5\)</span> 毫升水。</p>
+- 给第 1 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(1-1+1) = f(1) = 1</span><script type="math/tex">f(1-1+1) = f(1) = 1</script></span> 毫升水。
+- 给第 2 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(2-1+1) = f(2) = 4</span><script type="math/tex">f(2-1+1) = f(2) = 4</script></span> 毫升水。
+- 给第 3 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(3-1+1) = f(3) = 3</span><script type="math/tex">f(3-1+1) = f(3) = 3</script></span> 毫升水。
+- 给第 4 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(4-1+1) = f(4) = 16</span><script type="math/tex">f(4-1+1) = f(4) = 16</script></span> 毫升水。
+- 给第 5 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(5-1+1) = f(5) = 5</span><script type="math/tex">f(5-1+1) = f(5) = 5</script></span> 毫升水。</p>
 <p>第二次操作：
-- 给第 2 株植物浇 <span class="arithmatex">\(f(2-2+1) = f(1) = 1\)</span> 毫升水。
-- 给第 3 株植物浇 <span class="arithmatex">\(f(3-2+1) = f(2) = 4\)</span> 毫升水。</p>
+- 给第 2 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(2-2+1) = f(1) = 1</span><script type="math/tex">f(2-2+1) = f(1) = 1</script></span> 毫升水。
+- 给第 3 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(3-2+1) = f(2) = 4</span><script type="math/tex">f(3-2+1) = f(2) = 4</script></span> 毫升水。</p>
 <p>第三次操作：
-- 给第 2 株植物浇 <span class="arithmatex">\(f(2-2+1) = f(1) = 1\)</span> 毫升水。
-- 给第 3 株植物浇 <span class="arithmatex">\(f(3-2+1) = f(2) = 4\)</span> 毫升水。
-- 给第 4 株植物浇 <span class="arithmatex">\(f(4-2+1) = f(3) = 3\)</span> 毫升水。
-- 给第 5 株植物浇 <span class="arithmatex">\(f(5-2+1) = f(4) = 16\)</span> 毫升水。</p>
+- 给第 2 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(2-2+1) = f(1) = 1</span><script type="math/tex">f(2-2+1) = f(1) = 1</script></span> 毫升水。
+- 给第 3 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(3-2+1) = f(2) = 4</span><script type="math/tex">f(3-2+1) = f(2) = 4</script></span> 毫升水。
+- 给第 4 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(4-2+1) = f(3) = 3</span><script type="math/tex">f(4-2+1) = f(3) = 3</script></span> 毫升水。
+- 给第 5 株植物浇 <span class="arithmatex"><span class="MathJax_Preview">f(5-2+1) = f(4) = 16</span><script type="math/tex">f(5-2+1) = f(4) = 16</script></span> 毫升水。</p>
 <p>因此，每株植物的总水量为：
-- 第 1 株：<span class="arithmatex">\(1\)</span> 毫升
-- 第 2 株：<span class="arithmatex">\(4+1+1=6\)</span> 毫升
-- 第 3 株：<span class="arithmatex">\(3+4+4=11\)</span> 毫升
-- 第 4 株：<span class="arithmatex">\(16+3=19\)</span> 毫升
-- 第 5 株：<span class="arithmatex">\(5+16=21\)</span> 毫升</p>
+- 第 1 株：<span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 毫升
+- 第 2 株：<span class="arithmatex"><span class="MathJax_Preview">4+1+1=6</span><script type="math/tex">4+1+1=6</script></span> 毫升
+- 第 3 株：<span class="arithmatex"><span class="MathJax_Preview">3+4+4=11</span><script type="math/tex">3+4+4=11</script></span> 毫升
+- 第 4 株：<span class="arithmatex"><span class="MathJax_Preview">16+3=19</span><script type="math/tex">16+3=19</script></span> 毫升
+- 第 5 株：<span class="arithmatex"><span class="MathJax_Preview">5+16=21</span><script type="math/tex">5+16=21</script></span> 毫升</p>
 
 
 
