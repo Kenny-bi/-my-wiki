@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/B.%20Offshores/">
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/Learn%20Claude%20Code/s05-skill-loading/">
       
       
-        <link rel="prev" href="../../1072%20%28Div.3%29/E.%20Exquisite%20Array/">
+        <link rel="prev" href="../s04-subagent/">
       
       
-        <link rel="next" href="../C.%20Secret%20message/">
+        <link rel="next" href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>B. Offshores - Kenny's Wiki</title>
+        <title>s05 - Skill Loading 按需加载技能 - Kenny's Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#b-offshores" class="md-skip">
+        <a href="#s05-skill-loading" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+    <a href="../.." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              B. Offshores
+              s05 - Skill Loading 按需加载技能
             
           </span>
         </div>
@@ -211,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -228,11 +228,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../Learn%20Claude%20Code/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -250,13 +252,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-tabs__link">
           
   
   
@@ -292,7 +292,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+    <a href="../.." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -334,6 +334,8 @@
       
   
   
+    
+  
   
   
     
@@ -357,18 +359,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Learn%20Claude%20Code/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -386,13 +391,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -412,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Learn%20Claude%20Code/s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
+      <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
         
   
   
@@ -440,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Learn%20Claude%20Code/s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         
   
   
@@ -468,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Learn%20Claude%20Code/s03-todo-write/" class="md-nav__link">
+      <a href="../s03-todo-write/" class="md-nav__link">
         
   
   
@@ -496,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Learn%20Claude%20Code/s04-subagent/" class="md-nav__link">
+      <a href="../s04-subagent/" class="md-nav__link">
         
   
   
@@ -521,10 +526,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Learn%20Claude%20Code/s05-skill-loading/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s05 - Skill Loading
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -540,6 +572,241 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 1-36 行：文件头注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-55-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 38-55 行：import 和初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-107-skillloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 58-107 行：SkillLoader 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 58-107 行：SkillLoader 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_load_all-65-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _load_all 方法（第 65-72 行）：扫描所有技能文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_parse_frontmatter-74-83-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _parse_frontmatter 方法（第 74-83 行）：解析 YAML 头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_descriptions-85-97-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_descriptions 方法（第 85-97 行）：生成 Layer 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_content-99-104-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_content 方法（第 99-104 行）：返回 Layer 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 107 行：全局实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-114-system-prompt-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 109-114 行：System Prompt（注入 Layer 1）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 117-163 行：五个工具函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#166-172-tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 166-172 行：TOOL_HANDLERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-185-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 174-185 行：TOOLS 定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#188-208-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 188-208 行：agent_loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-227-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 211-227 行：main 入口
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完整数据流示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s04-s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s04 → s05 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s05 的设计智慧
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        和 Claude Code 真实产品的对应
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -556,8 +823,6 @@
       
   
   
-    
-  
   
   
     
@@ -611,21 +876,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-nav__link ">
               
   
   
@@ -643,13 +905,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -727,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
         
   
   
@@ -755,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
         
   
   
@@ -783,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
         
   
   
@@ -881,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1063%20%28Div.2%29/A.%20Souvlaki%20VS.%20Kalamaki/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/A.%20Souvlaki%20VS.%20Kalamaki/" class="md-nav__link">
         
   
   
@@ -909,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1063%20%28Div.2%29/B.%20Siga%20ta%20Kymata/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/B.%20Siga%20ta%20Kymata/" class="md-nav__link">
         
   
   
@@ -937,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1063%20%28Div.2%29/C.%20Monopati/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/C.%20Monopati/" class="md-nav__link">
         
   
   
@@ -965,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1063%20%28Div.2%29/D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -993,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1063%20%28Div.2%29/D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
         
   
   
@@ -1089,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
         
   
   
@@ -1117,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
         
   
   
@@ -1145,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
         
   
   
@@ -1173,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
         
   
   
@@ -1271,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
         
   
   
@@ -1299,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
         
   
   
@@ -1327,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
         
   
   
@@ -1355,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
         
   
   
@@ -1383,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
         
   
   
@@ -1483,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
         
   
   
@@ -1511,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
         
   
   
@@ -1539,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
         
   
   
@@ -1567,7 +1829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
         
   
   
@@ -1595,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
         
   
   
@@ -1623,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
         
   
   
@@ -1717,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
         
   
   
@@ -1745,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
         
   
   
@@ -1773,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
         
   
   
@@ -1873,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
         
   
   
@@ -1901,7 +2163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
         
   
   
@@ -1929,7 +2191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
         
   
   
@@ -1957,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
         
   
   
@@ -1985,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
         
   
   
@@ -2013,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
         
   
   
@@ -2111,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
         
   
   
@@ -2139,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
         
   
   
@@ -2167,7 +2429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
         
   
   
@@ -2195,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
         
   
   
@@ -2223,7 +2485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
         
   
   
@@ -2256,10 +2518,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2276,11 +2536,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
         
           
           <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
@@ -2301,7 +2561,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2316,35 +2576,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    B. Offshores
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/B.%20Offshores/" class="md-nav__link">
         
   
   
@@ -2360,101 +2595,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#b-offshores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Offshores
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        问题描述
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        输入格式
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        输出格式
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        样例输入
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        样例输出
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        样例说明
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2467,7 +2607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C.%20Secret%20message/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/C.%20Secret%20message/" class="md-nav__link">
         
   
   
@@ -2495,7 +2635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../D.%20Table%20Cut/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/D.%20Table%20Cut/" class="md-nav__link">
         
   
   
@@ -2593,7 +2733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
         
   
   
@@ -2621,7 +2761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
         
   
   
@@ -2649,7 +2789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
         
   
   
@@ -2677,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
         
   
   
@@ -2705,7 +2845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
         
   
   
@@ -2799,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
         
   
   
@@ -2827,7 +2967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
         
   
   
@@ -2855,7 +2995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
         
   
   
@@ -2949,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
         
   
   
@@ -2977,7 +3117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
         
   
   
@@ -3005,7 +3145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -3099,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
         
   
   
@@ -3127,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
         
   
   
@@ -3155,7 +3295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
         
   
   
@@ -3253,7 +3393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
         
   
   
@@ -3281,7 +3421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
         
   
   
@@ -3309,7 +3449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
         
   
   
@@ -3337,7 +3477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -3365,7 +3505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
         
   
   
@@ -3459,7 +3599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
         
   
   
@@ -3487,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
         
   
   
@@ -3515,7 +3655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
         
   
   
@@ -3609,7 +3749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
         
   
   
@@ -3637,7 +3777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
         
   
   
@@ -3665,7 +3805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
         
   
   
@@ -3757,7 +3897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
         
   
   
@@ -3785,7 +3925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
         
   
   
@@ -3879,7 +4019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
         
   
   
@@ -3907,7 +4047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
         
   
   
@@ -3935,7 +4075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
         
   
   
@@ -4031,7 +4171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
         
   
   
@@ -4059,7 +4199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
         
   
   
@@ -4087,7 +4227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
         
   
   
@@ -4115,7 +4255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
         
   
   
@@ -4207,7 +4347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
         
   
   
@@ -4235,7 +4375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -4288,6 +4428,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4296,10 +4438,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#b-offshores" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B. Offshores
+        核心思想
       
     </span>
   </a>
@@ -4307,10 +4449,159 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1-36" class="md-nav__link">
     <span class="md-ellipsis">
       
-        问题描述
+        第 1-36 行：文件头注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-55-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 38-55 行：import 和初始化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-107-skillloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 58-107 行：SkillLoader 类（本期重点）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 58-107 行：SkillLoader 类（本期重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_load_all-65-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _load_all 方法（第 65-72 行）：扫描所有技能文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_parse_frontmatter-74-83-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _parse_frontmatter 方法（第 74-83 行）：解析 YAML 头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_descriptions-85-97-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_descriptions 方法（第 85-97 行）：生成 Layer 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_content-99-104-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_content 方法（第 99-104 行）：返回 Layer 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 107 行：全局实例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-114-system-prompt-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 109-114 行：System Prompt（注入 Layer 1）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 117-163 行：五个工具函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#166-172-tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 166-172 行：TOOL_HANDLERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#174-185-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 174-185 行：TOOLS 定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#188-208-agent_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 188-208 行：agent_loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-227-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 211-227 行：main 入口
       
     </span>
   </a>
@@ -4321,7 +4612,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        输入格式
+        完整数据流示例
       
     </span>
   </a>
@@ -4329,10 +4620,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#s04-s05" class="md-nav__link">
     <span class="md-ellipsis">
       
-        输出格式
+        s04 → s05 变化对比
       
     </span>
   </a>
@@ -4340,10 +4631,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#s05" class="md-nav__link">
     <span class="md-ellipsis">
       
-        样例输入
+        s05 的设计智慧
       
     </span>
   </a>
@@ -4351,21 +4642,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#claude-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        样例输出
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        样例说明
+        和 Claude Code 真实产品的对应
       
     </span>
   </a>
@@ -4389,106 +4669,468 @@
 
 
 
-  <h1>B. Offshores</h1>
+<h1 id="s05-skill-loading">s05 - Skill Loading 按需加载技能</h1>
+<h2 id="_1">核心思想</h2>
+<p>s05 解决的问题是：<strong>不要把所有专业知识都塞进 system prompt，而是在模型需要时按需加载。</strong></p>
+<p>两层注入架构：</p>
+<pre><code>Layer 1（便宜）：system prompt 只放技能名 + 一句话描述（~100 tokens/skill）
+Layer 2（按需）：模型调用 load_skill(&quot;pdf&quot;) 时，完整技能指令通过 tool_result 返回
 
-<h2 id="b-offshores">B. Offshores</h2>
-<p>时间限制：每个测试点 1.5 秒
-内存限制：每个测试点 256 MB</p>
-<h2 id="_1">问题描述</h2>
-<p>马克非常爱钱，他把大部分钱都存在银行里。他的钱存放在 $n$ 家不同的银行。在第 $i$ 家银行，他有 $a_i$ 卢布。</p>
-<p>有一天，马克决定将所有钱集中到一家银行，因此他需要把钱从一个银行账户转到另一个账户。所有银行间转账的安排方式都是一样的：他一次只能转账 $x$ 卢布，并且考虑到所有费用，实际上只有 $y$ 卢布会被存入目标账户（因为银行想要盈利，所以有 $y \le x$）。</p>
-<p>马克可能无法将所有钱都转移到一家银行，但他想要找到最终可以在任意一家银行里获得的最大卢布数量。</p>
-<h2 id="_2">输入格式</h2>
-<p>每个测试包含多个测试用例。第一行包含测试用例的数量 $t$ $(1 \le t \le 10^4)$。接下来是测试用例的描述。</p>
-<p>每个测试用例的第一行包含三个整数 $n$, $x$, 和 $y$ $(2 \le n \le 2 \cdot 10^5$, $1 \le y \le x \le 10^9)$ —— 分别表示银行的数量、转账金额和实际到账金额。</p>
-<p>每个测试用例的第二行包含 $n$ 个整数 $a_1, a_2, \dots, a_n$ $(1 \le a_i \le 10^9)$ —— 表示每家银行初始的卢布数量。</p>
-<p>保证所有测试用例的 $n$ 值之和不超过 $2 \cdot 10^5$。</p>
-<h2 id="_3">输出格式</h2>
-<p>对于每个测试用例，输出一个数字 —— 表示在任意一家银行可以获得的最大卢布数量。</p>
-<h2 id="_4">样例输入</h2>
-<pre><code>6
-4 5 4
-10 9 8 7
-5 13 11
-47 52 64 13 91
-2 1 1
-1000 1000
-3 15 14
-34 43 52
-6 7 6
-15 17 14 15 12 16
-2 15 10
-45 44
+┌─────────────────────────────────┐
+│ System Prompt                   │
+│                                 │
+│ Skills available:               │
+│   - pdf: Process PDF files...   │  ← Layer 1: 只有名字和描述
+│   - code-review: Review code... │     每轮对话都会发送，所以要短
+│                                 │
+└─────────────────────────────────┘
+
+模型决定需要 PDF 技能 → 调用 load_skill(&quot;pdf&quot;)
+
+┌─────────────────────────────────┐
+│ tool_result                     │
+│ &lt;skill name=&quot;pdf&quot;&gt;              │
+│   Full PDF processing instrs    │  ← Layer 2: 完整的几十行技能指令
+│   Step 1: ...                   │     只在需要时加载一次
+│   Step 2: ...                   │
+│ &lt;/skill&gt;                        │
+└─────────────────────────────────┘
 </code></pre>
-<h2 id="_5">样例输出</h2>
-<pre><code>25
-229
-2000
-113
-72
-74
+<p><strong>为什么要分两层</strong>：system prompt 里的每个 token 在<strong>每一轮对话</strong>都会发送。一个技能可能几百行，塞 10 个技能就是几千 token 的固定开销，大部分任务只用 1-2 个，完全浪费。</p>
+<hr />
+<h2 id="1-36">第 1-36 行：文件头注释</h2>
+<pre><code class="language-python">&quot;&quot;&quot;
+s05_skill_loading.py - Skills
+
+Two-layer skill injection that avoids bloating the system prompt:
+
+    Layer 1 (cheap): skill names in system prompt (~100 tokens/skill)
+    Layer 2 (on demand): full skill body in tool_result
+
+    skills/
+      pdf/
+        SKILL.md          &lt;-- frontmatter (name, description) + body
+      code-review/
+        SKILL.md
+
+Key insight: &quot;Don't put everything in the system prompt. Load on demand.&quot;
+&quot;&quot;&quot;
 </code></pre>
-<h2 id="_6">样例说明</h2>
-<p>在第一个测试用例中，最优的转账顺序可能如下所示：
-$1 \rightarrow 4, 1 \rightarrow 4, 4 \rightarrow 3, 4 \rightarrow 3, 4 \rightarrow 3, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2, 3 \rightarrow 2$。</p>
-<p>让我们展示每一步之后总和的变化：
-$(10,9,8,7)$
-$\xrightarrow{1 \rightarrow 4}(5,9,8,11)\xrightarrow{1 \rightarrow 4}(0,9,8,15)$
-$\xrightarrow{4 \rightarrow 3}(0,9,12,10)\xrightarrow{4 \rightarrow 3}(0,9,16,5)\xrightarrow{4 \rightarrow 3}(0,9,20,0)$
-$\xrightarrow{3 \rightarrow 2}(0,13,15,0)\xrightarrow{3 \rightarrow 2}(0,17,10,0)\xrightarrow{3 \rightarrow 2}(0,21,5,0)\xrightarrow{3 \rightarrow 2}(0,25,0,0)$。</p>
-<p>最终，在一家银行（具体是第二家）中，可以获得 $25$ 卢布，这个值就是该测试用例的答案。</p>
-<p>在第三个测试用例中，可以从第一家银行向第二家银行转账 $1000$ 次一卢布，并在第二家银行获得 $2000$ 卢布。</p>
-<pre><code class="language-cpp">// Problem: CF 2194 B
-// Contest: Codeforces - Codeforces Round 1078 (Div. 2)
-// URL: https://codeforces.com/contest/2194/problem/B
-// Memory Limit: 256 MB
-// Time Limit: 1500 ms
-// 
-// Powered by CP Editor (https://cpeditor.org)
+<p>注释里画了两层架构的图，最后一句总结：<strong>不要把所有东西放 system prompt，按需加载。</strong></p>
+<hr />
+<h2 id="38-55-import">第 38-55 行：import 和初始化</h2>
+<pre><code class="language-python">import os
+import re
+import subprocess
+import yaml
+from pathlib import Path
 
-#include&lt;bits/stdc++.h&gt;
-using namespace std;
-#define int long long
+from anthropic import Anthropic
+from dotenv import load_dotenv
 
-void solve(){
-    int n,x,y;
-    cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;
-    vector&lt;int&gt; a(n);
-    int sum=0,re=0;
-    for(int i=0;i&lt;n;i++){
-        cin&gt;&gt;a[i];
-        sum+=a[i];
-    }
-    if(x==y){
-        cout&lt;&lt;sum&lt;&lt;endl;
-        return ;
-    }
+load_dotenv(override=True)
 
-    sort(a.begin(),a.end());
-    for(int i=0;i&lt;n-1;i++){
-        re+=a[i]%x;
-        re+=(a[i]/x*(x-y));
-    }
+if os.getenv(&quot;ANTHROPIC_BASE_URL&quot;):
+    os.environ.pop(&quot;ANTHROPIC_AUTH_TOKEN&quot;, None)
 
-    cout&lt;&lt;sum-re&lt;&lt;endl;
-    return ;
+WORKDIR = Path.cwd()
+client = Anthropic(base_url=os.getenv(&quot;ANTHROPIC_BASE_URL&quot;))
+MODEL = os.environ[&quot;MODEL_ID&quot;]
+SKILLS_DIR = WORKDIR / &quot;skills&quot;
+</code></pre>
+<p>和 s03/s04 一样的初始化。<strong>新增两样</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>新增</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>import re</code></td>
+<td>正则表达式，用来解析 SKILL.md 的 YAML 头</td>
+</tr>
+<tr>
+<td><code>import yaml</code></td>
+<td>PyYAML 库，把 YAML 文本变成 Python 字典</td>
+</tr>
+<tr>
+<td><code>SKILLS_DIR</code></td>
+<td>技能文件目录，<code>Path.cwd() / "skills"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>re</code> 是什么</strong>：Python 内置的正则表达式模块。<code>re.match(正则, 文本)</code> 从文本开头匹配。</p>
+<p><strong><code>yaml</code> 是什么</strong>：第三方库，<code>pip install pyyaml</code>。<code>yaml.safe_load("name: pdf")</code> 返回 <code>{"name": "pdf"}</code>。带 <code>safe</code> 的版本只解析基本类型，不执行任意代码，比 <code>yaml.load()</code> 安全。</p>
+<hr />
+<h2 id="58-107-skillloader">第 58-107 行：SkillLoader 类（本期重点）</h2>
+<pre><code class="language-python">class SkillLoader:
+    def __init__(self, skills_dir: Path):
+        self.skills_dir = skills_dir
+        self.skills = {}           # 字典: {技能名: {meta, body, path}}
+        self._load_all()
+</code></pre>
+<p><strong>类的职责</strong>：扫描 <code>skills/</code> 目录下的所有 <code>SKILL.md</code>，解析后存在内存里。</p>
+<p><strong><code>_load_all</code> 前面的下划线</strong>：Python 约定，以 <code>_</code> 开头的方法表示"内部方法，外部不要直接调用"。这只是约定，Python 不会强制。</p>
+<hr />
+<h3 id="_load_all-65-72"><code>_load_all</code> 方法（第 65-72 行）：扫描所有技能文件</h3>
+<pre><code class="language-python">def _load_all(self):
+    if not self.skills_dir.exists():
+        return
+    for f in sorted(self.skills_dir.rglob(&quot;SKILL.md&quot;)):
+        text = f.read_text()
+        meta, body = self._parse_frontmatter(text)
+        name = meta.get(&quot;name&quot;, f.parent.name)
+        self.skills[name] = {&quot;meta&quot;: meta, &quot;body&quot;: body, &quot;path&quot;: str(f)}
+</code></pre>
+<p>逐行拆解：</p>
+<p><strong>第 66-67 行</strong>：目录不存在就直接返回，不报错。防御性编程。</p>
+<p><strong>第 68 行</strong>：<code>rglob("SKILL.md")</code> 递归搜索所有子目录中叫 <code>SKILL.md</code> 的文件。</p>
+<pre><code>skills/
+├── pdf/SKILL.md              ← 找到
+├── code-review/SKILL.md      ← 找到
+├── agent-builder/SKILL.md    ← 找到
+├── mcp-builder/SKILL.md      ← 找到
+└── agent-builder/references/ ← 没有 SKILL.md，跳过
+</code></pre>
+<p><strong><code>sorted()</code></strong>：保证每次加载顺序一致。不同操作系统 <code>rglob</code> 返回的顺序可能不同，sorted 消除这个不确定性。</p>
+<p><strong>第 71 行</strong>：<code>f.parent.name</code> 取父目录名作为备选技能名。</p>
+<pre><code class="language-python"># 如果 SKILL.md 里没有写 name: xxx，就用文件夹名
+# skills/pdf/SKILL.md → f.parent = skills/pdf → f.parent.name = &quot;pdf&quot;
+</code></pre>
+<p><strong>第 72 行</strong>：每个技能存三个字段：</p>
+<pre><code class="language-python">{
+    &quot;meta&quot;: {&quot;name&quot;: &quot;pdf&quot;, &quot;description&quot;: &quot;Process PDF files...&quot;},  # YAML 头解析出的字典
+    &quot;body&quot;: &quot;# PDF Processing Skill\nYou now have...&quot;,              # 正文（去掉 YAML 头后的部分）
+    &quot;path&quot;: &quot;D:/AI_Projects/learn-claude-code/skills/pdf/SKILL.md&quot;  # 文件路径，调试用
 }
+</code></pre>
+<hr />
+<h3 id="_parse_frontmatter-74-83-yaml"><code>_parse_frontmatter</code> 方法（第 74-83 行）：解析 YAML 头</h3>
+<pre><code class="language-python">def _parse_frontmatter(self, text: str) -&gt; tuple:
+    match = re.match(r&quot;^---\n(.*?)\n---\n(.*)&quot;, text, re.DOTALL)
+    if not match:
+        return {}, text
+    try:
+        meta = yaml.safe_load(match.group(1)) or {}
+    except yaml.YAMLError:
+        meta = {}
+    return meta, match.group(2).strip()
+</code></pre>
+<p><strong>SKILL.md 的结构</strong>：</p>
+<pre><code>---                        ← 开始分隔线
+name: pdf                  ← YAML frontmatter
+description: Process PDF files...
+---                        ← 结束分隔线
 
-signed main(){
-    int t;
-    cin&gt;&gt;t;
-    while(t--){
-        solve();
-    }
-    return 0;
+# PDF Processing Skill     ← 正文 body
+You now have expertise...
+</code></pre>
+<p><strong>正则拆解</strong>：<code>r"^---\n(.*?)\n---\n(.*)"</code> </p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>匹配什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^---\n</code></td>
+<td>开头的 <code>---</code> 加换行</td>
+</tr>
+<tr>
+<td><code>(.*?)</code></td>
+<td>第 1 组：YAML 内容，非贪婪（尽可能少匹配）</td>
+</tr>
+<tr>
+<td><code>\n---\n</code></td>
+<td>中间的 <code>---</code> 分隔线</td>
+</tr>
+<tr>
+<td><code>(.*)</code></td>
+<td>第 2 组：正文 body</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>re.DOTALL</code></strong>：让 <code>.</code> 也能匹配换行符。没有这个标志，<code>.</code> 只匹配非换行字符，<code>(.*?)</code> 就匹配不了跨行的 YAML 内容。</p>
+<p><strong>第 78 行</strong>：<code>match.group(1)</code> 是第 1 组（YAML），<code>match.group(2)</code> 是第 2 组（正文）。</p>
+<p><strong>第 79-81 行</strong>：双重防御：
+- <code>yaml.safe_load(...)</code> 解析 YAML → 字典
+- <code>or {}</code>：如果 <code>safe_load</code> 返回 None（空 YAML），用空字典
+- <code>try/except</code>：YAML 格式错误也不崩溃，返回空字典</p>
+<p><strong>返回值</strong>：<code>(meta字典, 正文字符串)</code>。s03 学过 Python 函数可以返回 tuple。</p>
+<hr />
+<h3 id="get_descriptions-85-97-layer-1"><code>get_descriptions</code> 方法（第 85-97 行）：生成 Layer 1</h3>
+<pre><code class="language-python">def get_descriptions(self) -&gt; str:
+    if not self.skills:
+        return &quot;(no skills available)&quot;
+    lines = []
+    for name, skill in self.skills.items():
+        desc = skill[&quot;meta&quot;].get(&quot;description&quot;, &quot;No description&quot;)
+        tags = skill[&quot;meta&quot;].get(&quot;tags&quot;, &quot;&quot;)
+        line = f&quot;  - {name}: {desc}&quot;
+        if tags:
+            line += f&quot; [{tags}]&quot;
+        lines.append(line)
+    return &quot;\n&quot;.join(lines)
+</code></pre>
+<p><strong>输出示例</strong>：</p>
+<pre><code>  - pdf: Process PDF files - extract text, create PDFs, merge documents. Use when user asks to read PDF, create PDF, or work with PDF files.
+  - code-review: Perform thorough code reviews with security, performance, and maintainability analysis. Use when user asks to review code, check for bugs, or audit a codebase.
+  - agent-builder: ...
+  - mcp-builder: ...
+</code></pre>
+<p>每条一行，name + description + 可选的 tags。这些会被插入 system prompt。</p>
+<hr />
+<h3 id="get_content-99-104-layer-2"><code>get_content</code> 方法（第 99-104 行）：返回 Layer 2</h3>
+<pre><code class="language-python">def get_content(self, name: str) -&gt; str:
+    skill = self.skills.get(name)
+    if not skill:
+        return f&quot;Error: Unknown skill '{name}'. Available: {', '.join(self.skills.keys())}&quot;
+    return f&quot;&lt;skill name=\&quot;{name}\&quot;&gt;\n{skill['body']}\n&lt;/skill&gt;&quot;
+</code></pre>
+<p><strong>第 102 行</strong>：<code>self.skills.get(name)</code> 找不到返回 None，不会报 KeyError。</p>
+<p><strong>第 103 行</strong>：错误消息里列出所有可用技能名，帮助模型（或开发者）知道能加载哪些。</p>
+<p><strong>第 104 行</strong>：用 <code>&lt;skill&gt;</code> XML 标签包裹正文。Claude API 推荐用 XML 标签结构化内容，模型更容易理解边界。</p>
+<pre><code class="language-xml">&lt;skill name=&quot;pdf&quot;&gt;
+  # PDF Processing Skill
+  You now have expertise in PDF manipulation...
+  ...（完整的几十行指令）
+&lt;/skill&gt;
+</code></pre>
+<hr />
+<h2 id="107">第 107 行：全局实例</h2>
+<pre><code class="language-python">SKILL_LOADER = SkillLoader(SKILLS_DIR)
+</code></pre>
+<p>程序启动时创建一个 SkillLoader，扫描所有 SKILL.md 并加载到内存。之后 <code>load_skill</code> 工具直接从内存取，不用重复读文件。</p>
+<hr />
+<h2 id="109-114-system-prompt-layer-1">第 109-114 行：System Prompt（注入 Layer 1）</h2>
+<pre><code class="language-python">SYSTEM = f&quot;&quot;&quot;You are a coding agent at {WORKDIR}.
+Use load_skill to access specialized knowledge before tackling unfamiliar topics.
+
+Skills available:
+{SKILL_LOADER.get_descriptions()}&quot;&quot;&quot;
+</code></pre>
+<p>f-string 里直接嵌入 <code>get_descriptions()</code> 的输出。模型在第一轮对话就能看到有哪些技能可用。</p>
+<p>效果：</p>
+<pre><code>You are a coding agent at D:\AI_Projects\learn-claude-code.
+Use load_skill to access specialized knowledge before tackling unfamiliar topics.
+
+Skills available:
+  - pdf: Process PDF files...
+  - code-review: Perform thorough code reviews...
+  - agent-builder: ...
+</code></pre>
+<hr />
+<h2 id="117-163">第 117-163 行：五个工具函数</h2>
+<p>和 s04 完全一样：<code>safe_path</code>, <code>run_bash</code>, <code>run_read</code>, <code>run_write</code>, <code>run_edit</code>。不重复。</p>
+<hr />
+<h2 id="166-172-tool_handlers">第 166-172 行：TOOL_HANDLERS</h2>
+<pre><code class="language-python">TOOL_HANDLERS = {
+    &quot;bash&quot;:       lambda **kw: run_bash(kw[&quot;command&quot;]),
+    &quot;read_file&quot;:  lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;)),
+    &quot;write_file&quot;: lambda **kw: run_write(kw[&quot;path&quot;], kw[&quot;content&quot;]),
+    &quot;edit_file&quot;:  lambda **kw: run_edit(kw[&quot;path&quot;], kw[&quot;old_text&quot;], kw[&quot;new_text&quot;]),
+    &quot;load_skill&quot;: lambda **kw: SKILL_LOADER.get_content(kw[&quot;name&quot;]),   # ← 新增！
 }
 </code></pre>
+<p><strong>关键区别</strong>：<code>load_skill</code> 不执行任何命令，不读文件，不做 IO——只是从内存字典里取一段预加载好的文本。所以它是五个工具里最快的。</p>
+<hr />
+<h2 id="174-185-tools">第 174-185 行：TOOLS 定义</h2>
+<pre><code class="language-python">TOOLS = [
+    {&quot;name&quot;: &quot;bash&quot;, ...},
+    {&quot;name&quot;: &quot;read_file&quot;, ...},
+    {&quot;name&quot;: &quot;write_file&quot;, ...},
+    {&quot;name&quot;: &quot;edit_file&quot;, ...},
+    {&quot;name&quot;: &quot;load_skill&quot;,
+     &quot;description&quot;: &quot;Load specialized knowledge by name.&quot;,
+     &quot;input_schema&quot;: {
+         &quot;type&quot;: &quot;object&quot;,
+         &quot;properties&quot;: {
+             &quot;name&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;Skill name to load&quot;}
+         },
+         &quot;required&quot;: [&quot;name&quot;]
+     }},
+]
+</code></pre>
+<p><strong><code>name</code> 参数有 description</strong>：<code>"Skill name to load"</code>。这是给模型看的提示，帮助模型理解应该传什么值。之前四个工具的参数没有 description，因为 <code>command</code>、<code>path</code> 这些已经足够自明。</p>
+<hr />
+<h2 id="188-208-agent_loop">第 188-208 行：agent_loop</h2>
+<pre><code class="language-python">def agent_loop(messages: list):
+    while True:
+        response = client.messages.create(
+            model=MODEL, system=SYSTEM, messages=messages,
+            tools=TOOLS, max_tokens=8000,
+        )
+        messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
+        if response.stop_reason != &quot;tool_use&quot;:
+            return
+        results = []
+        for block in response.content:
+            if block.type == &quot;tool_use&quot;:
+                handler = TOOL_HANDLERS.get(block.name)
+                try:
+                    output = handler(**block.input) if handler else f&quot;Unknown tool: {block.name}&quot;
+                except Exception as e:
+                    output = f&quot;Error: {e}&quot;
+                print(f&quot;&gt; {block.name}:&quot;)
+                print(str(output)[:200])
+                results.append({&quot;type&quot;: &quot;tool_result&quot;, &quot;tool_use_id&quot;: block.id, &quot;content&quot;: str(output)})
+        messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
+</code></pre>
+<p>和 s02 的循环结构一样，没有新逻辑。<code>load_skill</code> 工具的处理走的是同一个 <code>TOOL_HANDLERS</code> 分发表。</p>
+<hr />
+<h2 id="211-227-main">第 211-227 行：main 入口</h2>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    history = []
+    while True:
+        try:
+            query = input(&quot;\033[36ms05 &gt;&gt; \033[0m&quot;)
+        except (EOFError, KeyboardInterrupt):
+            break
+        if query.strip().lower() in (&quot;q&quot;, &quot;exit&quot;, &quot;&quot;):
+            break
+        history.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: query})
+        agent_loop(history)
+        response_content = history[-1][&quot;content&quot;]
+        if isinstance(response_content, list):
+            for block in response_content:
+                if hasattr(block, &quot;text&quot;):
+                    print(block.text)
+        print()
+</code></pre>
+<p>和 s03/s04 完全一样，只是提示符从 <code>s03 &gt;&gt;</code> 变成了 <code>s05 &gt;&gt;</code>。</p>
+<hr />
+<h2 id="_2">完整数据流示例</h2>
+<p>用户问 "帮我 review 一下 main.py"：</p>
+<pre><code>1. 用户输入 → history.append(user message)
+
+2. API 调用，system prompt 包含 Layer 1:
+   &quot;Skills available:
+     - pdf: Process PDF files...
+     - code-review: Perform thorough code reviews...&quot;
+
+3. 模型思考: &quot;我需要 code-review 技能&quot;
+   → 调用 load_skill(&quot;code-review&quot;)
+
+4. handler 执行: SKILL_LOADER.get_content(&quot;code-review&quot;)
+   → 返回完整的 code-review 检查清单（Layer 2，100+ 行）
+
+5. tool_result 发回 API
+   → 模型现在有了完整的 review 方法论
+
+6. 模型再调用 read_file(&quot;main.py&quot;) 读取代码
+
+7. 模型根据技能指令 + 代码内容，输出 review 结果
+</code></pre>
+<p><strong>关键点</strong>：如果用户问的是 "帮我写个脚本"，模型可能根本不调用 load_skill——省下了加载 code-review 技能的 token。<strong>按需加载的核心价值：用不到就不花钱。</strong></p>
+<hr />
+<h2 id="s04-s05">s04 → s05 变化对比</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>s04</th>
+<th>s05</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新增 import</td>
+<td>无</td>
+<td><code>re</code>, <code>yaml</code></td>
+</tr>
+<tr>
+<td>新增类</td>
+<td>无</td>
+<td><code>SkillLoader</code>（扫描/解析/查询）</td>
+</tr>
+<tr>
+<td>新增工具</td>
+<td>task（派子 agent）</td>
+<td>load_skill（加载技能文本）</td>
+</tr>
+<tr>
+<td>System Prompt</td>
+<td>静态文本</td>
+<td>动态拼接技能描述</td>
+</tr>
+<tr>
+<td>Agent 数量</td>
+<td>2（父子）</td>
+<td>1</td>
+</tr>
+<tr>
+<td>外部数据</td>
+<td>无</td>
+<td><code>skills/</code> 目录下的 SKILL.md 文件</td>
+</tr>
+<tr>
+<td>新 Python</td>
+<td><code>_</code> 占位符, 列表相加</td>
+<td><code>re.match()</code>, <code>yaml.safe_load()</code>, <code>rglob()</code>, <code>re.DOTALL</code></td>
+</tr>
+<tr>
+<td>核心机制</td>
+<td>上下文隔离</td>
+<td>延迟加载（Lazy Loading）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="s05">s05 的设计智慧</h2>
+<ol>
+<li><strong>延迟加载</strong>：只在实际需要时才加载完整知识，节省 token 成本</li>
+<li><strong>关注点分离</strong>：技能定义（SKILL.md）和 Agent 逻辑（Python 代码）完全解耦</li>
+<li><strong>零代码扩展</strong>：添加新技能只需在 <code>skills/</code> 下新建文件夹 + SKILL.md，不改一行 Python</li>
+<li><strong>YAML frontmatter</strong>：用标准格式存元数据，解析简单，人类可读</li>
+</ol>
+<hr />
+<h2 id="claude-code">和 Claude Code 真实产品的对应</h2>
+<table>
+<thead>
+<tr>
+<th>s05 概念</th>
+<th>Claude Code 对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>skills/</code> 目录</td>
+<td>Claude Code 的 Skills 插件系统</td>
+</tr>
+<tr>
+<td><code>SKILL.md</code> 的 frontmatter</td>
+<td>Skills 列表里看到的名称和描述</td>
+</tr>
+<tr>
+<td><code>get_descriptions()</code> → system prompt</td>
+<td>系统提示中列出的可用 Skills</td>
+</tr>
+<tr>
+<td><code>load_skill()</code> 工具调用</td>
+<td>模型决定使用某个 Skill 时的加载动作</td>
+</tr>
+<tr>
+<td><code>get_content()</code> 返回的 body</td>
+<td>完整的技能指令（如 PDF 处理步骤）</td>
+</tr>
+</tbody>
+</table>
+<p>Claude Code 的 <code>/skill</code> 命令触发就是这个模式的完整实现。</p>
+<hr />
+<h1 id="langpython-domainagent-type-sessions05">Lang/Python #Domain/Agent #Type/原理 #Session/s05</h1>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -4532,10 +5174,10 @@ signed main(){
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

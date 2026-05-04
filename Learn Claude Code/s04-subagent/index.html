@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/">
+        <link rel="canonical" href="https://kenny-bi.github.io/my-wiki/Learn%20Claude%20Code/s04-subagent/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../s03-todo-write/">
       
       
-        <link rel="next" href="../s02-%E5%B7%A5%E5%85%B7%E8%B0%83%E5%BA%A6%E4%B8%8EPython%E8%AF%AD%E6%B3%95/">
+        <link rel="next" href="../s05-skill-loading/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>s01 - Agent Loop 逐行拆解 - Kenny's Wiki</title>
+        <title>s04 - Subagent 子代理 - Kenny's Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#s01-agent-loop" class="md-skip">
+        <a href="#s04-subagent" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+    <a href="../.." title="Kenny&#39;s Wiki" class="md-header__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              s01 - Agent Loop 逐行拆解
+              s04 - Subagent 子代理
             
           </span>
         </div>
@@ -211,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -256,7 +256,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-tabs__link">
+        <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-tabs__link">
           
   
   
@@ -292,7 +292,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
+    <a href="../.." title="Kenny&#39;s Wiki" class="md-nav__button md-logo" aria-label="Kenny's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -342,6 +342,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -368,8 +372,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -383,8 +388,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
@@ -398,40 +409,15 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+            
+              
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    s01 - 逐行拆解
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../s01-%E9%80%90%E8%A1%8C%E6%8B%86%E8%A7%A3/" class="md-nav__link">
         
   
   
@@ -447,203 +433,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        核心思想
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        全局变量（运行前初始化）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="全局变量（运行前初始化）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TOOLS 详细结构
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run_bash-65-77" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        run_bash 函数（第 65-77 行）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#agent_loop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        agent_loop 逐行拆解
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="agent_loop 逐行拆解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        函数签名
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        循环体
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claude-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：调用 Claude API
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第二步：把模型回复存入历史
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第三步：判断是否继续
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第四步：执行工具，收集结果
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第五步：结果追加到历史，循环回去
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        完整流程图
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        关键理解
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python 语法备忘（本项目涉及的）
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -709,10 +498,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../s04-subagent/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    s04 - Subagent 子代理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -728,6 +544,320 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-43-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 26-43 行：import 和初始化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 26-43 行：import 和初始化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键变化：两个 System Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 47-95 行：四个基础工具
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-102-tool_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 97-102 行：TOOL_HANDLERS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-114-child_tools-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 104-114 行：CHILD_TOOLS（子 Agent 的工具箱）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-136-run_subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 118-136 行：run_subagent（本期核心）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 118-136 行：run_subagent（本期核心）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 120 行：安全上限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-127-agent-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 121-127 行：子 Agent 的 API 调用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-134-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 128-134 行：子 Agent 执行工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 136 行：提取总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140-143-parent_tools-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 140-143 行：PARENT_TOOLS（父 Agent 的工具箱）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#146-168-agent_loop-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 146-168 行：agent_loop（父 Agent 循环）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 146-168 行：agent_loop（父 Agent 循环）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#158-162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键分支（第 158-162 行）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-163-165" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        else 分支（第 163-165 行）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03-s04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s03 → s04 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01dotenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：dotenv 库是干嘛的
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：dotenv 库是干嘛的">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        答案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：一行简写为什么难读
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：一行简写为什么难读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        展开写法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        语法对应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么代码里这么写
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -836,7 +966,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-nav__link ">
+            <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/" class="md-nav__link ">
               
   
   
@@ -938,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/E%20Building%20an%20Aquarium/" class="md-nav__link">
         
   
   
@@ -966,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/F%20Money%20Trees/" class="md-nav__link">
         
   
   
@@ -994,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/989%20%20%28Div.4%29/G%20ABBC%20or%20BACB/" class="md-nav__link">
         
   
   
@@ -1092,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/A.%20Souvlaki%20VS.%20Kalamaki/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/A.%20Souvlaki%20VS.%20Kalamaki/" class="md-nav__link">
         
   
   
@@ -1120,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/B.%20Siga%20ta%20Kymata/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/B.%20Siga%20ta%20Kymata/" class="md-nav__link">
         
   
   
@@ -1148,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/C.%20Monopati/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/C.%20Monopati/" class="md-nav__link">
         
   
   
@@ -1176,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D1.%20Diadrash%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -1204,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1063%20%28Div.2%29/D2.%20Diadrash%20%28Hard%20Version%29/" class="md-nav__link">
         
   
   
@@ -1300,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/A.%20Same%20Difference/" class="md-nav__link">
         
   
   
@@ -1328,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/B.%20Tab%20Closing/" class="md-nav__link">
         
   
   
@@ -1356,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/C.%20Cyclic%20Merging/" class="md-nav__link">
         
   
   
@@ -1384,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1064%20%28Div.2%29/D.%20Marble%20Council/" class="md-nav__link">
         
   
   
@@ -1482,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/B.%20Yuu%20Koito%20and%20Minimum%20Absolute%20Sum/" class="md-nav__link">
         
   
   
@@ -1510,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C1.%20Renako%20Amaori%20and%20XOR%20Game%20%28easy%20version%29/" class="md-nav__link">
         
   
   
@@ -1538,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/C2.%20Renako%20Amaori%20and%20XOR%20Game%20%28hard%20version%29/" class="md-nav__link">
         
   
   
@@ -1566,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/D.%20Rae%20Taylor%20and%20Trees%20%28easy%20version%29/" class="md-nav__link">
         
   
   
@@ -1594,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1065%20%28Div.3%29/F.%20Rae%20Taylor%20and%20Trees%20%28hard%20version%29/" class="md-nav__link">
         
   
   
@@ -1694,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/A.%20Dungeon%20Equilibrium/" class="md-nav__link">
         
   
   
@@ -1722,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/B.%20Expansion%20Plan%202/" class="md-nav__link">
         
   
   
@@ -1750,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/C.%20Meximum%20Array%202/" class="md-nav__link">
         
   
   
@@ -1778,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/D.%20Billion%20Players%20Game/" class="md-nav__link">
         
   
   
@@ -1806,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/E.%20Adjusting%20Drones/" class="md-nav__link">
         
   
   
@@ -1834,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1066%20%28Div.1%2BDiv.2%29/F.%20Git%20Gud/" class="md-nav__link">
         
   
   
@@ -1928,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/B.%20Optimal%20Shifts/" class="md-nav__link">
         
   
   
@@ -1956,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/C.%20Odd%20Process/" class="md-nav__link">
         
   
   
@@ -1984,7 +2114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1070%20%28Div.2%29/D.%20Fibonacci%20Paths/" class="md-nav__link">
         
   
   
@@ -2084,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/A.%20Blackslex%20and%20Password/" class="md-nav__link">
         
   
   
@@ -2112,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/B.%20Blackslex%20and%20Showering/" class="md-nav__link">
         
   
   
@@ -2140,7 +2270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/C.%20Blackslex%20and%20Number%20Theory/" class="md-nav__link">
         
   
   
@@ -2168,7 +2298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/D.%20Blackslex%20and%20Penguin%20Civilization/" class="md-nav__link">
         
   
   
@@ -2196,7 +2326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/E.%20Blackslex%20and%20Girls/" class="md-nav__link">
         
   
   
@@ -2224,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1071%20%28Div.3%29/H.%20Blackslex%20and%20Plants/" class="md-nav__link">
         
   
   
@@ -2322,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/A.%20Social%20Experiment/" class="md-nav__link">
         
   
   
@@ -2350,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/B.%20Hourglass/" class="md-nav__link">
         
   
   
@@ -2378,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/C.%20Huge%20Pile/" class="md-nav__link">
         
   
   
@@ -2406,7 +2536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/D.%20Unfair%20Game/" class="md-nav__link">
         
   
   
@@ -2434,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1072%20%28Div.3%29/E.%20Exquisite%20Array/" class="md-nav__link">
         
   
   
@@ -2528,7 +2658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/B.%20Offshores/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/B.%20Offshores/" class="md-nav__link">
         
   
   
@@ -2556,7 +2686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/C.%20Secret%20message/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/C.%20Secret%20message/" class="md-nav__link">
         
   
   
@@ -2584,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/D.%20Table%20Cut/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1078%20%28Div.2%29/D.%20Table%20Cut/" class="md-nav__link">
         
   
   
@@ -2682,7 +2812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/A.%20Friendly%20Numbers/" class="md-nav__link">
         
   
   
@@ -2710,7 +2840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/B.%20Array%20and%20Permutation/" class="md-nav__link">
         
   
   
@@ -2738,7 +2868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/C.%20Game%20with%20a%20Fraction/" class="md-nav__link">
         
   
   
@@ -2766,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/D.%20Another%20Problem%20about%20Beautiful%20Pairs/" class="md-nav__link">
         
   
   
@@ -2794,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1079%20%28Div.2%29/E1.%20Interactive%20Graph%20%28Simple%20Version%29/" class="md-nav__link">
         
   
   
@@ -2888,7 +3018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/B.%20Simons%20and%20Cakes%20for%20Success/" class="md-nav__link">
         
   
   
@@ -2916,7 +3046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/C.%20Simons%20and%20Posting%20Blogs/" class="md-nav__link">
         
   
   
@@ -2944,7 +3074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1083%20%28Div.2%29/D.%20Simons%20and%20Beating%20Peaks/" class="md-nav__link">
         
   
   
@@ -3038,7 +3168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/A.%20Antimedian%20Deletion/" class="md-nav__link">
         
   
   
@@ -3066,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/B.%20Mickey%20Mouse%20Constructive/" class="md-nav__link">
         
   
   
@@ -3094,7 +3224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1088%20%28Div.%201%20%2B%20Div.%202%29/C1.%20Equal%20Multisets%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -3188,7 +3318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/A.%20Wonderful%20Contest/" class="md-nav__link">
         
   
   
@@ -3216,7 +3346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/B.%20Artistic%20Balance%20Tree/" class="md-nav__link">
         
   
   
@@ -3244,7 +3374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/1094%20%28Div.%201%20%2B%20Div.%202%29/C.%20Median%20Partition/" class="md-nav__link">
         
   
   
@@ -3342,7 +3472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/A.%20Alice%20and%20Bob/" class="md-nav__link">
         
   
   
@@ -3370,7 +3500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/B.%20Drifting%20Away/" class="md-nav__link">
         
   
   
@@ -3398,7 +3528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/C.%20Range%20Operation/" class="md-nav__link">
         
   
   
@@ -3426,7 +3556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D1.%20Removal%20of%20a%20Sequences%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -3454,7 +3584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/184%20%28Rated%20for%20Div.%202%29/D2.%20Removal%20of%20a%20Sequence%20%28Hard%20Version%29/" class="md-nav__link">
         
   
   
@@ -3548,7 +3678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/A.%20Maximum%20Neighborhood/" class="md-nav__link">
         
   
   
@@ -3576,7 +3706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/B.%20Addition%20on%20a%20Segment/" class="md-nav__link">
         
   
   
@@ -3604,7 +3734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/185%20%28Rated%20for%20Div.%202%29/C.%20Quotient%20and%20Remainder/" class="md-nav__link">
         
   
   
@@ -3698,7 +3828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/C.%20Production%20of%20Snowmen/" class="md-nav__link">
         
   
   
@@ -3726,7 +3856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/D.%20Christmas%20Tree%20Decoration/" class="md-nav__link">
         
   
   
@@ -3754,7 +3884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/186%20%28Rated%20for%20Div.%202%29/E.%20New%20Year%27s%20Gifts/" class="md-nav__link">
         
   
   
@@ -3846,7 +3976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/C.%20Test%20Generator/" class="md-nav__link">
         
   
   
@@ -3874,7 +4004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/187%20%28Rated%20for%20Div.2%29/D.%20Divisibility%20Game/" class="md-nav__link">
         
   
   
@@ -3968,7 +4098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/C.%20Spring/" class="md-nav__link">
         
   
   
@@ -3996,7 +4126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/D.%20Alternating%20Path/" class="md-nav__link">
         
   
   
@@ -4024,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/188%20Rated%20for%20%28Div.2%29/E.%20Sum%20of%20Digits%20%28and%20Again%29/" class="md-nav__link">
         
   
   
@@ -4120,7 +4250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/A.%20Yes%20or%20Yes/" class="md-nav__link">
         
   
   
@@ -4148,7 +4278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/B.%20Impost%20or%20Sus/" class="md-nav__link">
         
   
   
@@ -4176,7 +4306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/C.%20First%20or%20Second/" class="md-nav__link">
         
   
   
@@ -4204,7 +4334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Good%20Bye%202025/D.%20Xmas%20or%20Hysteria/" class="md-nav__link">
         
   
   
@@ -4296,7 +4426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/C.%20War%20Strategy/" class="md-nav__link">
         
   
   
@@ -4324,7 +4454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
+      <a href="../../Codeforces%20%E6%AF%94%E8%B5%9B%E6%95%B4%E7%90%86/Hello%202026/D1%20Tree%20Coloring%20%28Easy%20Version%29/" class="md-nav__link">
         
   
   
@@ -4398,22 +4528,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#26-43-import" class="md-nav__link">
     <span class="md-ellipsis">
       
-        全局变量（运行前初始化）
+        第 26-43 行：import 和初始化
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="全局变量（运行前初始化）">
+    <nav class="md-nav" aria-label="第 26-43 行：import 和初始化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tools" class="md-nav__link">
+  <a href="#system-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TOOLS 详细结构
+        关键变化：两个 System Prompt
       
     </span>
   </a>
@@ -4426,10 +4556,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run_bash-65-77" class="md-nav__link">
+  <a href="#47-95" class="md-nav__link">
     <span class="md-ellipsis">
       
-        run_bash 函数（第 65-77 行）
+        第 47-95 行：四个基础工具
       
     </span>
   </a>
@@ -4437,44 +4567,205 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent_loop" class="md-nav__link">
+  <a href="#97-102-tool_handlers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        agent_loop 逐行拆解
+        第 97-102 行：TOOL_HANDLERS
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="agent_loop 逐行拆解">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-114-child_tools-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 104-114 行：CHILD_TOOLS（子 Agent 的工具箱）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-136-run_subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 118-136 行：run_subagent（本期核心）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 118-136 行：run_subagent（本期核心）">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 120 行：安全上限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-127-agent-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 121-127 行：子 Agent 的 API 调用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-134-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 128-134 行：子 Agent 执行工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 136 行：提取总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#140-143-parent_tools-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 140-143 行：PARENT_TOOLS（父 Agent 的工具箱）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#146-168-agent_loop-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 146-168 行：agent_loop（父 Agent 循环）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第 146-168 行：agent_loop（父 Agent 循环）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#158-162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键分支（第 158-162 行）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else-163-165" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        else 分支（第 163-165 行）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s03-s04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        s03 → s04 变化对比
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01dotenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：dotenv 库是干嘛的
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：dotenv 库是干嘛的">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        函数签名
+        答案
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-05-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-05-01：一行简写为什么难读
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-05-01：一行简写为什么难读">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        循环体
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#claude-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：调用 Claude API
+        问题
       
     </span>
   </a>
@@ -4485,7 +4776,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第二步：把模型回复存入历史
+        展开写法
       
     </span>
   </a>
@@ -4496,7 +4787,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第三步：判断是否继续
+        语法对应
       
     </span>
   </a>
@@ -4507,18 +4798,7 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        第四步：执行工具，收集结果
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第五步：结果追加到历史，循环回去
+        为什么代码里这么写
       
     </span>
   </a>
@@ -4527,39 +4807,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        完整流程图
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        关键理解
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python 语法备忘（本项目涉及的）
-      
-    </span>
-  </a>
   
 </li>
       
@@ -4580,263 +4827,347 @@
 
 
 
-<h1 id="s01-agent-loop">s01 - Agent Loop 逐行拆解</h1>
+<h1 id="s04-subagent">s04 - Subagent 子代理</h1>
 <h2 id="_1">核心思想</h2>
-<p>一个 <code>while True</code> 循环 + 一个工具 = 一个 Agent。</p>
-<p>模型决定什么时候调工具、什么时候停止。代码只负责执行模型的要求。</p>
+<p>父 Agent 可以派一个子 Agent 出去干杂活。子 Agent 带着<strong>空的对话历史</strong>出发，干完活只返回<strong>一句话总结</strong>。</p>
+<pre><code>Parent agent                     Subagent
++------------------+             +------------------+
+| messages=[...]   |             | messages=[]      |  ← 空的！
+|                  |  dispatch   |                  |
+| tool: task       | ----------&gt; | while tool_use:  |
+|   prompt=&quot;...&quot;   |             |   call tools     |
+|                  |  summary    |                  |
+|   result = &quot;...&quot; | &lt;---------- | return last text |
++------------------+             +------------------+
+          |
+Parent context stays clean.      子 agent 的上下文被丢弃。
+</code></pre>
+<p><strong>为什么需要这个</strong>：父 Agent 的 messages 越来越长，如果让它自己去做搜索/探索类任务，上下文会被大量搜索结果撑爆。派一个子 Agent 去做，父 Agent 只收到一句总结，上下文保持干净。</p>
 <hr />
-<h2 id="_2">全局变量（运行前初始化）</h2>
-<p>代码运行 <code>agent_loop()</code> 之前，先创建了 4 个全局变量：</p>
-<pre><code class="language-python">from anthropic import Anthropic
+<h2 id="26-43-import">第 26-43 行：import 和初始化</h2>
+<pre><code class="language-python">import os
+import subprocess
+from pathlib import Path
+
+from anthropic import Anthropic
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
+if os.getenv(&quot;ANTHROPIC_BASE_URL&quot;):
+    os.environ.pop(&quot;ANTHROPIC_AUTH_TOKEN&quot;, None)
+
+WORKDIR = Path.cwd()
 client = Anthropic(base_url=os.getenv(&quot;ANTHROPIC_BASE_URL&quot;))
-MODEL  = os.environ[&quot;MODEL_ID&quot;]
-SYSTEM = f&quot;You are a coding agent at {os.getcwd()}. Use bash to solve tasks. Act, don't explain.&quot;
-TOOLS  = [{ ... }]
+MODEL = os.environ[&quot;MODEL_ID&quot;]
+</code></pre>
+<p>和 s02/s03 完全一样。</p>
+<hr />
+<h3 id="system-prompt">关键变化：两个 System Prompt</h3>
+<pre><code class="language-python">SYSTEM = f&quot;You are a coding agent at {WORKDIR}. Use the task tool to delegate exploration or subtasks.&quot;
+
+SUBAGENT_SYSTEM = f&quot;You are a coding subagent at {WORKDIR}. Complete the given task, then summarize your findings.&quot;
 </code></pre>
 <table>
 <thead>
 <tr>
 <th>变量</th>
-<th>类型</th>
-<th>是什么</th>
-<th>类比</th>
+<th>给谁用</th>
+<th>内容</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>client</code></td>
-<td>Anthropic 对象</td>
-<td>API 客户端，发请求用的</td>
-<td>你和 Claude 之间的电话</td>
-</tr>
-<tr>
-<td><code>MODEL</code></td>
-<td>字符串</td>
-<td>模型名，如 <code>"claude-sonnet-4-6"</code></td>
-<td>打电话给谁</td>
-</tr>
 <tr>
 <td><code>SYSTEM</code></td>
-<td>字符串</td>
-<td>系统提示词，定义角色</td>
-<td>岗位说明书</td>
+<td>父 Agent</td>
+<td>"用 task 工具派任务"</td>
 </tr>
 <tr>
-<td><code>TOOLS</code></td>
-<td>列表[字典]</td>
-<td>可用工具定义（只有 bash）</td>
-<td>工具箱里唯一的工具</td>
+<td><code>SUBAGENT_SYSTEM</code></td>
+<td>子 Agent</td>
+<td>"完成任务，然后总结"</td>
 </tr>
 </tbody>
 </table>
-<h3 id="tools">TOOLS 详细结构</h3>
-<pre><code class="language-python">TOOLS = [{
-    &quot;name&quot;: &quot;bash&quot;,                  # 工具名
-    &quot;description&quot;: &quot;Run a shell command.&quot;,  # 告诉模型这工具干嘛的
-    &quot;input_schema&quot;: {                # 参数定义（JSON Schema 格式）
-        &quot;type&quot;: &quot;object&quot;,
-        &quot;properties&quot;: {
-            &quot;command&quot;: {&quot;type&quot;: &quot;string&quot;}  # 一个参数：command，类型字符串
-        },
-        &quot;required&quot;: [&quot;command&quot;],     # command 是必填
-    },
-}]
-</code></pre>
+<p>父 Agent 知道可以派任务，子 Agent 知道自己的职责是干活+总结。</p>
 <hr />
-<h2 id="run_bash-65-77">run_bash 函数（第 65-77 行）</h2>
-<p>模型的"手"——唯一能做的事就是执行 bash 命令。</p>
-<pre><code class="language-python">def run_bash(command: str) -&gt; str:       # 输入字符串，返回字符串
-    # 安全检查：拦截危险命令
-    dangerous = [&quot;rm -rf /&quot;, &quot;sudo&quot;, &quot;shutdown&quot;, &quot;reboot&quot;, &quot;&gt; /dev/&quot;]
-    if any(d in command for d in dangerous):
-        return &quot;Error: Dangerous command blocked&quot;
-
-    # 执行命令
-    r = subprocess.run(
-        command,              # 要执行的命令
-        shell=True,           # 通过 shell 执行（支持管道 |、重定向 &gt; 等）
-        cwd=os.getcwd(),      # 在当前目录执行
-        capture_output=True,  # 捕获输出（stdout + stderr）
-        text=True,            # 输出是字符串不是字节
-        timeout=120           # 120 秒超时
-    )
-    out = (r.stdout + r.stderr).strip()    # 拼接正常输出和错误输出
-    return out[:50000] if out else &quot;(no output)&quot;  # 最多返回 50000 字符
+<h2 id="47-95">第 47-95 行：四个基础工具</h2>
+<p>和 s02/s03 完全一样：<code>safe_path</code>, <code>run_bash</code>, <code>run_read</code>, <code>run_write</code>, <code>run_edit</code>。</p>
+<p>区别：s04 的 <code>run_bash</code> 多了一个 except：</p>
+<pre><code class="language-python">except (FileNotFoundError, OSError) as e:
+    return f&quot;Error: {e}&quot;
 </code></pre>
+<p><code>(FileNotFoundError, OSError)</code> 是元组，匹配其中任意一个异常。比分开写两个 except 简洁。</p>
 <hr />
-<h2 id="agent_loop">agent_loop 逐行拆解</h2>
-<h3 id="_3">函数签名</h3>
-<pre><code class="language-python">def agent_loop(messages: list):   # 接收对话历史列表
+<h2 id="97-102-tool_handlers">第 97-102 行：TOOL_HANDLERS</h2>
+<pre><code class="language-python">TOOL_HANDLERS = {
+    &quot;bash&quot;:       lambda **kw: run_bash(kw[&quot;command&quot;]),
+    &quot;read_file&quot;:  lambda **kw: run_read(kw[&quot;path&quot;], kw.get(&quot;limit&quot;)),
+    &quot;write_file&quot;: lambda **kw: run_write(kw[&quot;path&quot;], kw[&quot;content&quot;]),
+    &quot;edit_file&quot;:  lambda **kw: run_edit(kw[&quot;path&quot;], kw[&quot;old_text&quot;], kw[&quot;new_text&quot;]),
+}
 </code></pre>
-<p><code>messages</code> 初始状态示例：</p>
-<pre><code class="language-python">messages = [
-    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;帮我创建一个 hello.py 文件&quot;}
+<p>和 s02 一样，四个基础工具。注意没有 <code>todo</code> 和 <code>task</code>——todo 没带过来，task 是父 Agent 专属，后面单独处理。</p>
+<hr />
+<h2 id="104-114-child_tools-agent">第 104-114 行：CHILD_TOOLS（子 Agent 的工具箱）</h2>
+<pre><code class="language-python">CHILD_TOOLS = [
+    {&quot;name&quot;: &quot;bash&quot;, ...},
+    {&quot;name&quot;: &quot;read_file&quot;, ...},
+    {&quot;name&quot;: &quot;write_file&quot;, ...},
+    {&quot;name&quot;: &quot;edit_file&quot;, ...},
 ]
 </code></pre>
-<h3 id="_4">循环体</h3>
-<pre><code class="language-python">while True:    # 死循环，模型说不调工具才退出
+<p>子 Agent 只有四个基础工具。<strong>没有 task 工具</strong>——注释写得很清楚：<code>no recursive spawning</code>，防止子 Agent 再派孙 Agent，无限套娃。</p>
+<hr />
+<h2 id="118-136-run_subagent">第 118-136 行：run_subagent（本期核心）</h2>
+<pre><code class="language-python">def run_subagent(prompt: str) -&gt; str:
+    sub_messages = [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: prompt}]  # 空的！只有任务描述
 </code></pre>
-<h3 id="claude-api">第一步：调用 Claude API</h3>
+<p><strong>输入</strong>：父 Agent 给的任务描述字符串
+<strong>返回</strong>：子 Agent 的最后一段文字总结</p>
+<p><strong>关键</strong>：<code>sub_messages</code> 只包含一条用户消息。父 Agent 的整个对话历史（可能几百条消息）<strong>不传给子 Agent</strong>。这就是注释里说的 "fresh context"。</p>
+<hr />
+<h3 id="120">第 120 行：安全上限</h3>
+<pre><code class="language-python">for _ in range(30):  # safety limit
+</code></pre>
+<p><code>_</code> 是占位变量名——约定俗成表示"这个值我不关心"。等价于 <code>for i in range(30)</code> 但明确告诉读代码的人：循环变量用不到。</p>
+<p>最多 30 轮，防止子 Agent 无限循环，比 <code>while True</code> 安全。</p>
+<hr />
+<h3 id="121-127-agent-api">第 121-127 行：子 Agent 的 API 调用</h3>
 <pre><code class="language-python">response = client.messages.create(
-    model=MODEL,            # 哪个模型
-    system=SYSTEM,          # 系统提示词
-    messages=messages,      # 对话历史
-    tools=TOOLS,            # 可用工具
-    max_tokens=8000,        # 最大回复长度
+    model=MODEL, system=SUBAGENT_SYSTEM, messages=sub_messages,
+    tools=CHILD_TOOLS, max_tokens=8000,
 )
+sub_messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
+if response.stop_reason != &quot;tool_use&quot;:
+    break
 </code></pre>
-<p><code>client.messages.create()</code> 是 Anthropic SDK 的方法，本质发了一个 HTTP POST 请求。</p>
-<p>返回的 <code>response</code> 对象：</p>
+<p>和父 Agent 的循环一样，区别：
+- 用的是 <code>SUBAGENT_SYSTEM</code>（"你是子 Agent，完成任务后总结"）
+- 用的是 <code>CHILD_TOOLS</code>（没有 task 工具）
+- 30 轮安全上限</p>
+<hr />
+<h3 id="128-134-agent">第 128-134 行：子 Agent 执行工具</h3>
+<pre><code class="language-python">results = []
+for block in response.content:
+    if block.type == &quot;tool_use&quot;:
+        handler = TOOL_HANDLERS.get(block.name)
+        output = handler(**block.input) if handler else f&quot;Unknown tool: {block.name}&quot;
+        results.append({&quot;type&quot;: &quot;tool_result&quot;, &quot;tool_use_id&quot;: block.id, &quot;content&quot;: str(output)[:50000]})
+sub_messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
+</code></pre>
+<p>和 s01/s02 完全一样的工具执行逻辑。代码复用了同一个 <code>TOOL_HANDLERS</code>。</p>
+<hr />
+<h3 id="136">第 136 行：提取总结</h3>
+<pre><code class="language-python">return &quot;&quot;.join(b.text for b in response.content if hasattr(b, &quot;text&quot;)) or &quot;(no summary)&quot;
+</code></pre>
+<p>拆解：</p>
+<pre><code class="language-python"># 1. for b in response.content              → 遍历模型返回的每个 block
+# 2. if hasattr(b, &quot;text&quot;)                  → 只取有 text 属性的 block（跳过 tool_use block）
+# 3. b.text                                 → 取文字内容
+# 4. &quot;&quot;.join(...)                           → 把所有文字拼成一个字符串
+# 5. ... or &quot;(no summary)&quot;                 → 如果结果是空字符串，用默认值
+</code></pre>
+<p><strong>巧妙的 <code>or</code> 短路</strong>：空字符串 <code>""</code> 是 falsy，所以 <code>"" or "(no summary)"</code> 返回 <code>"(no summary)"</code>。</p>
+<p><code>s01</code> 学过：<code>a or b</code> 如果 a 是 falsy 就返回 b。</p>
+<p>这条返回的文字就是子 Agent 给父 Agent 的"工作总结"。</p>
+<hr />
+<h2 id="140-143-parent_tools-agent">第 140-143 行：PARENT_TOOLS（父 Agent 的工具箱）</h2>
+<pre><code class="language-python">PARENT_TOOLS = CHILD_TOOLS + [
+    {&quot;name&quot;: &quot;task&quot;, ...},
+]
+</code></pre>
+<p>父 Agent 的工具 = 四个基础工具 + task 工具。</p>
+<p><strong>列表相加</strong>：<code>[a, b] + [c]</code> → <code>[a, b, c]</code>。Python 里 <code>+</code> 拼接两个列表，返回新列表。</p>
+<p>task 工具的定义：</p>
+<pre><code class="language-python">{&quot;name&quot;: &quot;task&quot;, &quot;description&quot;: &quot;Spawn a subagent with fresh context...&quot;,
+ &quot;input_schema&quot;: {
+     &quot;type&quot;: &quot;object&quot;,
+     &quot;properties&quot;: {
+         &quot;prompt&quot;: {&quot;type&quot;: &quot;string&quot;},                              # 必填：任务描述
+         &quot;description&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;description&quot;: &quot;Short description&quot;}  # 可选：简短说明
+     },
+     &quot;required&quot;: [&quot;prompt&quot;]     # 只有 prompt 必填，description 可选
+ }}
+</code></pre>
+<p>父 Agent 调用 task 工具时，需要提供任务描述 prompt。description 是可选的，只是人类看得懂的标签。</p>
+<hr />
+<h2 id="146-168-agent_loop-agent">第 146-168 行：agent_loop（父 Agent 循环）</h2>
+<pre><code class="language-python">def agent_loop(messages: list):
+    while True:
+        response = client.messages.create(
+            model=MODEL, system=SYSTEM, messages=messages,
+            tools=PARENT_TOOLS, max_tokens=8000,    # 用的是 PARENT_TOOLS
+        )
+        messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
+        if response.stop_reason != &quot;tool_use&quot;:
+            return
+        results = []
+        for block in response.content:
+            if block.type == &quot;tool_use&quot;:
+                if block.name == &quot;task&quot;:              # ← 新逻辑：如果是 task 工具
+                    desc = block.input.get(&quot;description&quot;, &quot;subtask&quot;)
+                    prompt = block.input.get(&quot;prompt&quot;, &quot;&quot;)
+                    print(f&quot;&gt; task ({desc}): {prompt[:80]}&quot;)
+                    output = run_subagent(prompt)     # 启动子 Agent！
+                else:
+                    handler = TOOL_HANDLERS.get(block.name)
+                    output = handler(**block.input) if handler else f&quot;Unknown tool: {block.name}&quot;
+                print(f&quot;  {str(output)[:200]}&quot;)
+                results.append({&quot;type&quot;: &quot;tool_result&quot;, &quot;tool_use_id&quot;: block.id, &quot;content&quot;: str(output)})
+        messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
+</code></pre>
+<h3 id="158-162">关键分支（第 158-162 行）</h3>
+<pre><code class="language-python">if block.name == &quot;task&quot;:
+    desc = block.input.get(&quot;description&quot;, &quot;subtask&quot;)  # 取描述，没有则默认 &quot;subtask&quot;
+    prompt = block.input.get(&quot;prompt&quot;, &quot;&quot;)
+    print(f&quot;&gt; task ({desc}): {prompt[:80]}&quot;)           # 打印前 80 个字符
+    output = run_subagent(prompt)                     # 同步等待子 Agent 完成
+</code></pre>
+<p><strong><code>.get("description", "subtask")</code></strong>：因为 description 是可选的（TOOLS 定义里 required 只有 prompt），用 <code>.get()</code> 提供默认值。</p>
+<p><strong><code>prompt[:80]</code></strong>：切片，只取前 80 个字符打印，防止终端刷屏。</p>
+<p><strong>同步执行</strong>：<code>run_subagent(prompt)</code> 是同步调用，父 Agent 会卡住等待子 Agent 完成。子 Agent 最多跑 30 轮，所以父 Agent 最多等 30 轮 API 调用的时间。</p>
+<h3 id="else-163-165">else 分支（第 163-165 行）</h3>
+<p>如果不是 task 工具，就和以前一样走 <code>TOOL_HANDLERS</code> 分发表。</p>
+<hr />
+<h2 id="s03-s04">s03 → s04 变化对比</h2>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>含义</th>
+<th></th>
+<th>s03</th>
+<th>s04</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>response.content</code></td>
-<td>列表</td>
-<td>模型返回的内容块（可能包含文字 + 工具调用）</td>
+<td>工具数</td>
+<td>5 (含 todo)</td>
+<td>子:4, 父:5 (含 task)</td>
 </tr>
 <tr>
-<td><code>response.stop_reason</code></td>
-<td>字符串</td>
-<td><code>"tool_use"</code> = 想调工具，<code>"end_turn"</code> = 说完了</td>
+<td>Agent 数量</td>
+<td>1</td>
+<td>2 (父子)</td>
+</tr>
+<tr>
+<td>System Prompt</td>
+<td>1 个</td>
+<td>2 个</td>
+</tr>
+<tr>
+<td>循环</td>
+<td>1 个 agent_loop</td>
+<td>父循环 + 子循环</td>
+</tr>
+<tr>
+<td>上下文</td>
+<td>单一份</td>
+<td>父子隔离，子返回后丢弃</td>
+</tr>
+<tr>
+<td>新 Python</td>
+<td>class, enumerate, sum</td>
+<td><code>_</code> 占位符, <code>"".join()</code>, <code>a or b</code> 短路, 列表相加</td>
+</tr>
+<tr>
+<td>安全机制</td>
+<td>todo 验证</td>
+<td>30 轮上限 + 禁止递归套娃</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_5">第二步：把模型回复存入历史</h3>
-<pre><code class="language-python">messages.append({&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: response.content})
-</code></pre>
-<p>此时 messages：</p>
-<pre><code class="language-python">[
-    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: &quot;帮我创建 hello.py&quot;},      # 用户
-    {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: [ ... ]}                    # 模型回复（新增）
-]
-</code></pre>
-<h3 id="_6">第三步：判断是否继续</h3>
-<pre><code class="language-python">if response.stop_reason != &quot;tool_use&quot;:   # 不是想调工具？
-    return                                # 退出，循环结束
-</code></pre>
-<h3 id="_7">第四步：执行工具，收集结果</h3>
-<pre><code class="language-python">results = []                             # 存放工具执行结果
-for block in response.content:           # 遍历每个内容块
-    if block.type == &quot;tool_use&quot;:         # 只处理工具调用块
-        output = run_bash(block.input[&quot;command&quot;])  # 执行命令
-        results.append({
-            &quot;type&quot;: &quot;tool_result&quot;,       # 类型标记
-            &quot;tool_use_id&quot;: block.id,     # 配对 ID（哪个调用对应哪个结果）
-            &quot;content&quot;: output,           # 实际输出
-        })
-</code></pre>
-<p><code>block</code>（ToolUseBlock）的结构：</p>
-<pre><code class="language-python">block.type   == &quot;tool_use&quot;            # 块类型
-block.id     == &quot;toolu_xxx&quot;           # 唯一 ID，用于配对
-block.name   == &quot;bash&quot;                # 工具名
-block.input  == {&quot;command&quot;: &quot;ls&quot;}     # 传入参数
-</code></pre>
-<h3 id="_8">第五步：结果追加到历史，循环回去</h3>
-<pre><code class="language-python">messages.append({&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: results})
-# 回到 while True 开头，带着完整历史再次调 API
-</code></pre>
-<p>此时 messages：</p>
-<pre><code class="language-python">[
-    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: &quot;帮我创建 hello.py&quot;},        # 1. 用户提问
-    {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: [tool_use_block]},            # 2. 模型：我要执行 bash
-    {&quot;role&quot;: &quot;user&quot;,      &quot;content&quot;: [tool_result]}               # 3. 执行结果（新增）
-]
-</code></pre>
+<p><strong>s04 的教训</strong>：上下文隔离不需要进程隔离，只需要不同的 <code>messages</code> 列表。子 Agent 的 messages 用完即丢，父 Agent 的上下文保持干净。</p>
 <hr />
-<h2 id="_9">完整流程图</h2>
-<pre><code>用户输入 &quot;帮我创建 hello.py&quot;
-        │
-        ▼
-   ┌─ messages ───────────────┐
-   │ [user: 帮我创建 hello.py] │
-   └──────────┬───────────────┘
-              │  发给 Claude API
-              ▼
-   Claude: &quot;我要执行 echo 'hello' &gt; hello.py&quot;
-   stop_reason = &quot;tool_use&quot;
-              │
-              ▼
-   run_bash(&quot;echo 'hello' &gt; hello.py&quot;)  →  &quot;(no output)&quot;
-              │
-              ▼
-   结果追加到 messages，再发 API
-              │
-              ▼
-   Claude: &quot;文件已创建完成。&quot;
-   stop_reason = &quot;end_turn&quot;
-              │
-              ▼
-   退出循环 → 返回
+<h2 id="2026-05-01dotenv">2026-05-01：dotenv 库是干嘛的</h2>
+<h3 id="_2">问题</h3>
+<p>每个 session 文件开头都有 <code>from dotenv import load_dotenv</code>，这库干啥的？</p>
+<h3 id="_3">答案</h3>
+<p>把 <code>.env</code> 文件里的配置读到系统环境变量里。</p>
+<pre><code class="language-python">from dotenv import load_dotenv
+load_dotenv(override=True)
 </code></pre>
+<p><strong><code>.env</code> 文件长这样</strong>：</p>
+<pre><code>ANTHROPIC_BASE_URL=https://api.anthropic.com
+MODEL_ID=claude-sonnet-4-6
+ANTHROPIC_API_KEY=sk-ant-xxx
+</code></pre>
+<p><strong>运行流程</strong>：</p>
+<pre><code>.env 文件 (在硬盘上)
+    │  load_dotenv()
+    ▼
+系统环境变量 (在内存里)
+    │  os.getenv() / os.environ[]
+    ▼
+你的代码里直接用
+</code></pre>
+<p><strong>不用 dotenv 的话</strong>，你得每次手动在终端 export。</p>
+<p><code>override=True</code>：如果环境变量已经存在，用 .env 的值覆盖它。</p>
+<p><strong>核心作用</strong>：配置和代码分离。API key 这种敏感信息写在 .env 里，.env 不提交到 git（写在 .gitignore 里），代码里只写 <code>os.getenv("KEY")</code>。</p>
 <hr />
-<h2 id="_10">关键理解</h2>
-<ol>
-<li><strong>messages 是唯一的状态</strong>：整个循环就是在不断往这个列表里追加消息</li>
-<li><strong>模型做决策</strong>：什么时候调工具、调什么、什么时候停，全是模型决定的</li>
-<li><strong>代码只执行</strong>：循环体不做任何判断，只是忠实地执行模型的要求</li>
-<li><strong>tool_use_id 配对</strong>：每次工具调用有唯一 ID，结果必须带上这个 ID，API 才能对上号</li>
-</ol>
-<hr />
-<h2 id="python">Python 语法备忘（本项目涉及的）</h2>
+<h2 id="2026-05-01">2026-05-01：一行简写为什么难读</h2>
+<h3 id="_4">问题</h3>
+<pre><code class="language-python">return &quot;&quot;.join(b.text for b in response.content if hasattr(b, &quot;text&quot;)) or &quot;(no summary)&quot;
+</code></pre>
+<p>这一行太浓缩了，为什么代码里很多这种简写？</p>
+<h3 id="_5">展开写法</h3>
+<pre><code class="language-python"># 第一步：收集所有文字
+texts = []
+for b in response.content:              # 遍历每个 block
+    if hasattr(b, &quot;text&quot;):              # 这个 block 有文字吗？
+        texts.append(b.text)            # 有就收集起来
+
+# 第二步：拼成一句话
+summary = &quot;&quot;.join(texts)                # 把所有文字拼成一个字符串
+
+# 第三步：兜底
+if summary:                             # 非空字符串就是 True
+    return summary
+else:
+    return &quot;(no summary)&quot;               # 空字符串的兜底
+</code></pre>
+<h3 id="_6">语法对应</h3>
 <table>
 <thead>
 <tr>
-<th>语法</th>
-<th>含义</th>
-<th>示例</th>
+<th>简写</th>
+<th>等价展开</th>
+<th>哪学的</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>f"..."</code></td>
-<td>f-string，嵌入变量</td>
-<td><code>f"路径是{os.getcwd()}"</code></td>
+<td><code>b.text for b in ... if ...</code></td>
+<td>for 循环 + append</td>
+<td>生成器表达式</td>
 </tr>
 <tr>
-<td><code>dict["key"]</code></td>
-<td>字典取值</td>
-<td><code>block.input["command"]</code></td>
+<td><code>"".join(...)</code></td>
+<td>把字符串列表拼成一个</td>
+<td>s04 新学的</td>
 </tr>
 <tr>
-<td><code>list.append(x)</code></td>
-<td>列表追加元素</td>
-<td><code>results.append({...})</code></td>
-</tr>
-<tr>
-<td><code>any(... for ... in ...)</code></td>
-<td>任意一个满足则为 True</td>
-<td><code>any(d in cmd for d in dangerous)</code></td>
-</tr>
-<tr>
-<td><code>a if cond else b</code></td>
-<td>三元表达式</td>
-<td><code>out[:50000] if out else "(empty)"</code></td>
-</tr>
-<tr>
-<td><code>str.strip()</code></td>
-<td>去首尾空白</td>
-<td><code>"  hello  ".strip()</code> → <code>"hello"</code></td>
-</tr>
-<tr>
-<td><code>str[:N]</code></td>
-<td>切片，取前 N 个</td>
-<td><code>"hello"[:3]</code> → <code>"hel"</code></td>
+<td><code>... or "default"</code></td>
+<td>if 判空后返回默认值</td>
+<td>s01 的 <code>a or b</code></td>
 </tr>
 </tbody>
 </table>
+<h3 id="_7">为什么代码里这么写</h3>
+<p>这个项目是<strong>教学用的</strong>，逐 session 递增复杂度：</p>
+<pre><code>s01: 没有简写，全是展开写法
+s02: lambda + **kw 简写
+s03: sum(1 for ...) 生成器表达式
+s04: &quot;&quot;.join(...) + or 短路
+</code></pre>
+<p>每个 session 引入一两个新简写，让你慢慢适应。现在觉得难读是因为一次看了四个 session。</p>
+<p>实际工程中用这些是因为 5 行变 1 行。但更好的写法是拆成两步：</p>
+<pre><code class="language-python">text_blocks = [b.text for b in response.content if hasattr(b, &quot;text&quot;)]
+return &quot;&quot;.join(text_blocks) or &quot;(no summary)&quot;
+</code></pre>
+<p>一行写完属于炫技，可读性优先。</p>
 <hr />
-<h1 id="langpython-domainagent-type-sessions01">Lang/Python #Domain/Agent #Type/原理 #Session/s01</h1>
+<h1 id="langpython-domainagent-type-sessions04">Lang/Python #Domain/Agent #Type/原理 #Session/s04</h1>
 
 
 
@@ -4889,10 +5220,10 @@ block.input  == {&quot;command&quot;: &quot;ls&quot;}     # 传入参数
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
