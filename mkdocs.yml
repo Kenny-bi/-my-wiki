@@ -1,0 +1,38 @@
+site_name: Kenny's Wiki
+site_url: https://kenny-bi.github.io/my-wiki
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+nav:
+  - 首页: index.md
+  - Learn Claude Code:
+    - s01 - 逐行拆解: s01-逐行拆解.md
+    - s02 - 工具调度与Python语法: s02-工具调度与Python语法.md
+    - s03 - TodoWrite 与 Nag 提醒: s03-todo-write.md
+    - s04 - Subagent 子代理: s04-subagent.md
+    - s05 - Skill Loading: s05-skill-loading.md
